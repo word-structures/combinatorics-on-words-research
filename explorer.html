@@ -18,6 +18,23 @@
 
     * { box-sizing: border-box; max-width: 100%; }
 
+    /* EXPLORER-A11Y-1: skip link, visually hidden until focused. Scoped to
+       this new class only; nothing else on the page uses it. */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #fff;
+      color: #000;
+      padding: 8px 16px;
+      z-index: 1000;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+
     body { font-family: "Times New Roman", Times, serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 40px 20px; }
     .app { max-width: 1100px; margin: 0 auto; }
     h1, h2, h3 { font-weight: normal; color: var(--text-orange); margin-top: 0; }
@@ -35,7 +52,7 @@
 
     /* Mode tabs */
     .mode-tabs { display: flex; gap: 8px; margin-bottom: 30px; flex-wrap: wrap; }
-    .mode-tab { padding: 9px 16px; background: #f9f9f9; border: 1px solid var(--border); cursor: pointer; font-family: Arial, sans-serif; font-size: 0.85rem; transition: all 0.2s; border-radius: 4px; }
+    .mode-tab { padding: 9px 16px; background: #f9f9f9; border: 1px solid var(--border); cursor: pointer; font-family: Arial, sans-serif; font-size: 0.85rem; transition: all 0.2s; border-radius: 4px; text-decoration: none; color: inherit; display: inline-block; }
     .mode-tab:hover { background: #f0f0f0; }
     .mode-tab.active { background: #e0e0e0; font-weight: bold; border-color: #999; }
 
@@ -736,7 +753,9 @@
 </head>
 <body>
 
-<div class="app">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<main class="app" id="main">
   <h1>Abelian Square-Free Structures &mdash; Interactive Explorer</h1>
   <p class="intro-text">
     Visualizing the search for abelian square-free words. Over a three-letter alphabet {a,&thinsp;b,&thinsp;c},
@@ -754,28 +773,28 @@
     &middot; <a href="bridge_story_sandbox.html" style="color: #d35400;">The Bridge Story</a>
   </p>
 
-  <div class="mode-tabs">
-    <div class="mode-tab tab-cat-a active" data-mode="tutorial" id="tab-tutorial">What is an Abelian square?</div>
-    <div class="mode-tab tab-cat-b" data-mode="3letter" id="tab-3">1. Tree Search (3 letters)</div>
-    <div class="mode-tab tab-cat-b" data-mode="abc-lab" id="tab-abc">2. ABC Laboratory</div>
-    <div class="mode-tab tab-cat-c" data-mode="4letter" id="tab-4">3. Morphism g&#8328;&#8325; (4 letters)</div>
-    <div class="mode-tab tab-cat-b" data-mode="canvas" id="tab-canvas">4. 2D Walk</div>
-    <div class="mode-tab tab-cat-b" data-mode="audio" id="tab-audio">5. Sonification</div>
-    <div class="mode-tab tab-cat-b" data-mode="try-it" id="tab-tryit">6. Try It Yourself</div>
-    <div class="mode-tab tab-cat-a" data-mode="timeline" id="tab-timeline">7. Historical Timeline</div>
-    <div class="mode-tab tab-cat-c" data-mode="unfavorable" id="tab-unf">8. Unfavorable Factors</div>
-    <div class="mode-tab tab-cat-c" data-mode="microscope" id="tab-microscope">9. Morphism Microscope</div>
-    <div class="mode-tab tab-cat-a" data-mode="knowledge" id="tab-knowledge">10. Concept Graph</div>
-    <div class="mode-tab tab-cat-c" data-mode="morph-lab" id="tab-morph-lab">11. Morphism Lab</div>
-    <div class="mode-tab tab-cat-c" data-mode="heat-map" id="tab-heat-map">12. Heat Map</div>
-    <div class="mode-tab tab-cat-b" data-mode="snake" id="tab-snake">13. Abelisk Puzzle</div>
-    <div class="mode-tab tab-cat-c" data-mode="aa2fr" id="tab-aa2fr">14. AA2FR Extension Lab</div>
-    <div class="mode-tab tab-cat-a" data-mode="impact" id="tab-impact">15. Applications &amp; Impact</div>
-    <div class="mode-tab tab-cat-d" data-mode="validation" id="tab-validation">16. Validation Lab</div>
-    <div class="mode-tab tab-cat-b" data-mode="gallery" id="tab-gallery">17. Art &amp; Math Gallery</div>
-    <div class="mode-tab tab-cat-c" data-mode="gold-lab" id="tab-gold-lab">18. Seam Search &amp; Verification</div>
-    <div class="mode-tab tab-cat-d" data-mode="graveyard" id="tab-graveyard">19. The Graveyard</div>
-  </div>
+  <nav class="mode-tabs" aria-label="Explorer modules">
+    <a class="mode-tab tab-cat-a active" href="#tutorial" data-mode="tutorial" id="tab-tutorial" aria-current="page">What is an Abelian square?</a>
+    <a class="mode-tab tab-cat-b" href="#tree-search" data-mode="3letter" id="tab-3">1. Tree Search (3 letters)</a>
+    <a class="mode-tab tab-cat-b" href="#abc-lab" data-mode="abc-lab" id="tab-abc">2. ABC Laboratory</a>
+    <a class="mode-tab tab-cat-c" href="#morphism-g85" data-mode="4letter" id="tab-4">3. Morphism g&#8328;&#8325; (4 letters)</a>
+    <a class="mode-tab tab-cat-b" href="#2d-walk" data-mode="canvas" id="tab-canvas">4. 2D Walk</a>
+    <a class="mode-tab tab-cat-b" href="#sonification" data-mode="audio" id="tab-audio">5. Sonification</a>
+    <a class="mode-tab tab-cat-b" href="#try-it" data-mode="try-it" id="tab-tryit">6. Try It Yourself</a>
+    <a class="mode-tab tab-cat-a" href="#timeline" data-mode="timeline" id="tab-timeline">7. Historical Timeline</a>
+    <a class="mode-tab tab-cat-c" href="#unfavorable-factors" data-mode="unfavorable" id="tab-unf">8. Unfavorable Factors</a>
+    <a class="mode-tab tab-cat-c" href="#morphism-microscope" data-mode="microscope" id="tab-microscope">9. Morphism Microscope</a>
+    <a class="mode-tab tab-cat-a" href="#concept-graph" data-mode="knowledge" id="tab-knowledge">10. Concept Graph</a>
+    <a class="mode-tab tab-cat-c" href="#morphism-lab" data-mode="morph-lab" id="tab-morph-lab">11. Morphism Lab</a>
+    <a class="mode-tab tab-cat-c" href="#heat-map" data-mode="heat-map" id="tab-heat-map">12. Heat Map</a>
+    <a class="mode-tab tab-cat-b" href="#abelisk" data-mode="snake" id="tab-snake">13. Abelisk Puzzle</a>
+    <a class="mode-tab tab-cat-c" href="#aa2fr-extension" data-mode="aa2fr" id="tab-aa2fr">14. AA2FR Extension Lab</a>
+    <a class="mode-tab tab-cat-a" href="#applications" data-mode="impact" id="tab-impact">15. Applications &amp; Impact</a>
+    <a class="mode-tab tab-cat-d" href="#validation" data-mode="validation" id="tab-validation">16. Validation Lab</a>
+    <a class="mode-tab tab-cat-b" href="#gallery" data-mode="gallery" id="tab-gallery">17. Art &amp; Math Gallery</a>
+    <a class="mode-tab tab-cat-c" href="#seam-search" data-mode="gold-lab" id="tab-gold-lab">18. Seam Search &amp; Verification</a>
+    <a class="mode-tab tab-cat-d" href="#graveyard" data-mode="graveyard" id="tab-graveyard">19. The Graveyard</a>
+  </nav>
 
   <div class="controls">
     <button class="btn" id="btn-start">Start Search</button>
@@ -2893,7 +2912,7 @@
     <div class="log-container" id="log"></div>
   </div>
 
-</div>
+</main>
 
 <!--
   Embedded, machine-generated copy of claims.json. Regenerated by
@@ -4109,7 +4128,11 @@ function switchMode(newMode) {
   $('btn-pause').textContent = 'Pause';
   $('log').innerHTML = '';
 
-  document.querySelectorAll('.mode-tab').forEach(t => t.classList.toggle('active', t.dataset.mode === newMode));
+  document.querySelectorAll('.mode-tab').forEach(t => {
+    const isActive = t.dataset.mode === newMode;
+    t.classList.toggle('active', isActive);
+    if (isActive) t.setAttribute('aria-current', 'page'); else t.removeAttribute('aria-current');
+  });
   ['btn-start','btn-pause','btn-apply-morphism','btn-draw-canvas','lbl-canvas-anim','lbl-wrap-width','btn-run-abc'].forEach(id => {
     const el = $(id); if(el) el.classList.add('hidden');
   });
