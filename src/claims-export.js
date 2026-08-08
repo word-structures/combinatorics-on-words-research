@@ -30,12 +30,17 @@
  * this project keeps correcting. The ledger states what is quotable; this
  * module only checks and transports.
  *
- * As of 2026-07-31 this also syncs an embedded copy into explore.html's
- * <script id="claims-data"> block, so the page can bind figures and status
- * badges (data-claim-key / data-claim-status attributes) without a server or
- * fetch() -- opening the file directly still works, and the embedded copy
- * cannot silently drift because this script overwrites it every run and
- * check-claims-drift.js verifies it matches.
+ * As of 2026-07-31 this also syncs an embedded copy into the legacy Interactive
+ * Explorer's <script id="claims-data"> block, so the page can bind figures and
+ * status badges (data-claim-key / data-claim-status attributes) without a
+ * server or fetch() -- opening the file directly still works, and the
+ * embedded copy cannot silently drift because this script overwrites it every
+ * run and check-claims-drift.js verifies it matches.
+ *
+ * Re-pointed 2026-08-09 (EXPLORE-REDESIGN-2A): the legacy Explorer moved from
+ * explore.html to explorer.html, and explore.html became a small compatibility
+ * bridge that carries no claim bindings of its own. explorer.html is now the
+ * single canonical target for the embedded claims-data block.
  *
  * Usage:  node claims-export.js [--out claims.json] [--check]
  */
@@ -44,7 +49,7 @@ const fs = require('fs');
 const path = require('path');
 
 const LEDGER = path.join(__dirname, '..', 'MATH_CLAIMS.md');
-const EXPLORE_HTML = path.join(__dirname, '..', 'explore.html');
+const EXPLORER_HTML = path.join(__dirname, '..', 'explorer.html');
 const VALID_STATUS = ['PRIMARY', 'COMPUTED', 'INDIRECT', 'REJECTED'];
 
 // ---------------------------------------------------------------------------
@@ -166,14 +171,14 @@ function verifyHtmlBindings(html, data) {
   return issues;
 }
 
-/** Returns the explore.html text with the embedded claims-data block replaced
+/** Returns the explorer.html text with the embedded claims-data block replaced
  *  by a fresh export, or throws if the marker block is missing. */
 function syncedHtml(html, data) {
   if (!CLAIMS_SCRIPT_RE.test(html)) {
-    throw new Error('explore.html has no <script id="claims-data"> block to sync');
+    throw new Error('explorer.html has no <script id="claims-data"> block to sync');
   }
   const issues = verifyHtmlBindings(html, data);
-  if (issues.length) throw new Error('explore.html has dangling claim bindings:\n  ' + issues.join('\n  '));
+  if (issues.length) throw new Error('explorer.html has dangling claim bindings:\n  ' + issues.join('\n  '));
   return html.replace(CLAIMS_SCRIPT_RE, (_, open, _old, close) => open + JSON.stringify(data) + close);
 }
 
@@ -238,7 +243,7 @@ function runControls() {
   if (!refused) throw new Error('an invented figure was not refused; the check is not doing anything');
   notes.push('an invented figure is refused rather than exported');
 
-  // 5. explore.html's embedded copy must reference only real rows and keys.
+  // 5. explorer.html's embedded copy must reference only real rows and keys.
   //    This does not require the block to be in sync (main() does that); it
   //    only requires that nothing in it dangles.
   //
@@ -250,22 +255,26 @@ function runControls() {
   //    A vacuous success is worse than a failure here: it is an affirmative
   //    statement that a surface was checked. Both the missing file and the
   //    missing binding surface are now offences.
-  if (!fs.existsSync(EXPLORE_HTML)) {
-    throw new Error('explore.html is missing; it carries the embedded claims-data block this control verifies.');
+  //
+  //    Re-pointed 2026-08-09 (EXPLORE-REDESIGN-2A) from explore.html to
+  //    explorer.html: the legacy Explorer moved and the new explore.html
+  //    compatibility bridge carries no claim bindings of its own.
+  if (!fs.existsSync(EXPLORER_HTML)) {
+    throw new Error('explorer.html is missing; it carries the embedded claims-data block this control verifies.');
   }
-  const html = fs.readFileSync(EXPLORE_HTML, 'utf8');
+  const html = fs.readFileSync(EXPLORER_HTML, 'utf8');
   const statusBindings = (html.match(/data-claim-status="/g) || []).length;
   const keyBindings = (html.match(/data-claim-key="/g) || []).length;
   if (statusBindings === 0 || keyBindings === 0) {
     throw new Error(
-      `explore.html no longer carries the expected claim-binding surface ` +
+      `explorer.html no longer carries the expected claim-binding surface ` +
       `(data-claim-status: ${statusBindings}, data-claim-key: ${keyBindings}). ` +
       `Reporting "all resolve" against zero bindings would be a vacuous pass, so this is an offence.`
     );
   }
   const issues = verifyHtmlBindings(html, data);
-  if (issues.length) throw new Error('explore.html has dangling claim bindings:\n  ' + issues.join('\n  '));
-  notes.push(`explore.html's ${statusBindings + keyBindings} claim binding(s) (data-claim-status / data-claim-key) all resolve`);
+  if (issues.length) throw new Error('explorer.html has dangling claim bindings:\n  ' + issues.join('\n  '));
+  notes.push(`explorer.html's ${statusBindings + keyBindings} claim binding(s) (data-claim-status / data-claim-key) all resolve`);
 
   return { notes, data };
 }
@@ -301,14 +310,14 @@ function main() {
     fs.writeFileSync(out, JSON.stringify(data, null, 1));
     console.log(`\nwritten to ${path.basename(out)}`);
 
-    if (fs.existsSync(EXPLORE_HTML)) {
-      const html = fs.readFileSync(EXPLORE_HTML, 'utf8');
+    if (fs.existsSync(EXPLORER_HTML)) {
+      const html = fs.readFileSync(EXPLORER_HTML, 'utf8');
       const synced = syncedHtml(html, data);
       if (synced !== html) {
-        fs.writeFileSync(EXPLORE_HTML, synced);
-        console.log('explore.html claims-data block resynced');
+        fs.writeFileSync(EXPLORER_HTML, synced);
+        console.log('explorer.html claims-data block resynced');
       } else {
-        console.log('explore.html claims-data block already in sync');
+        console.log('explorer.html claims-data block already in sync');
       }
     }
   }

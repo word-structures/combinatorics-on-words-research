@@ -1542,14 +1542,18 @@ test("Non-uniform additive morphism scan: reproduces the uniform case; exhaustiv
 // ----------------------------------------------------
 // 40. CLAIMS-DATA HTML BINDING (claims-export.js, UI_UX_PLAN item 1)
 // ----------------------------------------------------
-test("explore.html's embedded claims-data block is in sync and every binding resolves", () => {
+test("explorer.html's embedded claims-data block is in sync and every binding resolves", () => {
   const ce = require('../src/claims-export.js');
   const fs = require("fs");
   const path = require("path");
 
   // Target moved 2026-08-08 (WEB-SWAP-1): the claims-data block travelled with
   // the explorer application from index.html to explore.html.
-  const htmlPath = path.join(__dirname, '..', 'explore.html');
+  // Target moved again 2026-08-09 (EXPLORE-REDESIGN-2A): the legacy explorer
+  // application (and its embedded claims-data block) moved from explore.html
+  // to explorer.html, and explore.html became a small compatibility bridge
+  // that carries no claim bindings of its own.
+  const htmlPath = path.join(__dirname, '..', 'explorer.html');
   const html = fs.readFileSync(htmlPath, "utf8");
   const { data } = ce.runControls();
 
@@ -1558,12 +1562,12 @@ test("explore.html's embedded claims-data block is in sync and every binding res
   // typed by hand" failure mode this mechanism exists to make impossible.
   const synced = ce.syncedHtml(html, data);
   assert.strictEqual(synced, html,
-    "explore.html's claims-data block is out of sync; run node claims-export.js");
+    "explorer.html's claims-data block is out of sync; run node claims-export.js");
 
   // At least one row-status binding and one figure-value binding must exist,
   // so this test cannot pass vacuously once bindings are removed by accident.
-  assert.ok(/data-claim-status="/.test(html), "no data-claim-status binding found in explore.html");
-  assert.ok(/data-claim-key="/.test(html), "no data-claim-key binding found in explore.html");
+  assert.ok(/data-claim-status="/.test(html), "no data-claim-status binding found in explorer.html");
+  assert.ok(/data-claim-key="/.test(html), "no data-claim-key binding found in explorer.html");
 
   // Every binding must resolve against the current ledger (dangling
   // references are refused, not silently ignored).

@@ -107,7 +107,8 @@ redesign it.
 | `learn.html` | live (WEB-LEARN-1) | *Teach me the actual mathematics.* |
 | `research.html` | live (WEB-RESEARCH-1) | *What do we know, and what is open?* |
 | Evidence page | planned next | *How do you know?* |
-| `explore.html` | live | The laboratory — here are the instruments. |
+| `explorer.html` | live | The laboratory — here are the instruments. |
+| `explore.html` | live (compatibility bridge) | Transitional route to the laboratory above. |
 | ABELISK | developing | Discover the structure yourself. |
 
 **Start Here is not a replacement for Learn.** The distinction is load-bearing:
