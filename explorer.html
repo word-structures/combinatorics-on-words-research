@@ -3008,7 +3008,21 @@ function cyclicPerm(s) {
   return s.split('').map(c => map[c]).join('');
 }
 const G85 = { a: G85_A, b: cyclicPerm(G85_A), c: cyclicPerm(cyclicPerm(G85_A)), d: cyclicPerm(cyclicPerm(cyclicPerm(G85_A))) };
+// g98 is stored as four explicit 98-letter images, not derived via cyclicPerm().
+// Verified 2026-08-08 (MORPHISM-G98-1) against V. Keränen's own supplied data:
+// applying cyclicPerm() (the forward permutation sigma, a->b->c->d->a, used
+// above for g85/g109) to G98_A does NOT reproduce G98_B or G98_D -- only
+// G98_C, by coincidence (sigma^2 and its inverse sigma^-2 are the same
+// double transposition on a 4-cycle). Keränen confirmed 2026-08-09 that the
+// images are instead related by the inverse cyclic permutation sigma^-1
+// (a->d->c->b->a): g(b) = sigma^-1(g(a)), g(c) = sigma^-2(g(a)),
+// g(d) = sigma^-3(g(a)). The images are exact and independent; do not
+// replace them with a permutation shortcut.
 const G98_A = "abcacdcbcdcadbdcbdbabcbdcacbabdbabcabdadcdadbdcbdbabdbcbacbcdbabdcdbdcacdbcbacbcdcacdcbdcdadbdcbca";
+const G98_B = "dabdbcbabcbdcacbacadabacbdbadacadabdacdcbcdcacbacadacabadbabcadacbcacbdbcabadbabcbdbcbacbcdcacbabd";
+const G98_C = "cdacabadabacbdbadbdcdadbacadcdbdcdacdbcbabcbdbadbdcdbdadcadabdcdbabdbacabdadcadabacabadbabcbdbadac";
+const G98_D = "bcdbdadcdadbacadcacbcdcadbdcbcacbcdbcabadabacadcacbcacdcbdcdacbcadacadbdacdcbdcdadbdadcadabacadcdb";
+const G98 = { a: G98_A, b: G98_B, c: G98_C, d: G98_D };
 const G109_A = "abcacdcbcdcadcdbdabcbadacdadbdcdbdabdbcbabcbdcbcadbdcdadcdbcbabcbdcbcacdcacbadabcbdcbcadbabcbabdbcdbdadbdcbca";
 const G109 = { a: G109_A, b: cyclicPerm(G109_A), c: cyclicPerm(cyclicPerm(G109_A)), d: cyclicPerm(cyclicPerm(cyclicPerm(G109_A))) };
 

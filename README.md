@@ -30,8 +30,15 @@ never the reverse.
 ### Project roles
 
 Word Structures was founded by Joonas Huhta and Veikko Keränen. Joonas Huhta
-leads the project and its technical development. Veikko Keränen provides
+leads the project and its technical development. Veikko Keränen contributes
+mathematical research, develops computational methods, and provides
 mathematical review.
+
+Word Structures is an open research project. Contributions are welcome from
+researchers, developers, educators, students, and curious independent
+contributors — no university or institutional affiliation is required. All
+research claims and public conclusions remain subject to the project's
+evidence, verification, and review process; see "Getting involved" below.
 
 AI may assist with search, drafting, and review throughout this project.
 People — currently the maintainer — retain authority over what is accepted as
