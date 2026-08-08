@@ -108,35 +108,41 @@ check("No Bitwise Left Shift (<<) in Web Worker Parikh Packing", () => {
 // into a pass, and an absent marker produced an empty slice that no regex can
 // ever match. A guard that cannot fail is worse than no guard, because it
 // reports safety.
+//
+// Target moved again 2026-08-09 (EXPLORE-REDESIGN-2A): the legacy explorer
+// application (and its Module 18 content) moved from explore.html to
+// explorer.html, and explore.html became a small compatibility bridge that
+// carries none of this content. The same discipline applies: this check must
+// target the file that actually carries Module 18, not the one that used to.
 check("No Emoji Characters in Module 18 UI & Citizen Science Dispatcher", () => {
-  const explorePath = path.join(path.join(__dirname, '..'), 'explore.html');
-  if (!fs.existsSync(explorePath)) {
-    throw new Error('explore.html is missing; it is the mandatory target of this check (the explorer application, formerly index.html).');
+  const explorerPath = path.join(path.join(__dirname, '..'), 'explorer.html');
+  if (!fs.existsSync(explorerPath)) {
+    throw new Error('explorer.html is missing; it is the mandatory target of this check (the explorer application, formerly explore.html, formerly index.html).');
   }
-  const exploreContent = fs.readFileSync(explorePath, 'utf8');
+  const explorerContent = fs.readFileSync(explorerPath, 'utf8');
 
   // Check HTML slice
-  const htmlStart = exploreContent.indexOf('id="view-gold-lab"');
+  const htmlStart = explorerContent.indexOf('id="view-gold-lab"');
   if (htmlStart === -1) {
-    throw new Error('explore.html no longer contains the Module 18 marker id="view-gold-lab"; this check would otherwise scan nothing and report PASS.');
+    throw new Error('explorer.html no longer contains the Module 18 marker id="view-gold-lab"; this check would otherwise scan nothing and report PASS.');
   }
-  const htmlEnd = exploreContent.indexOf('<!-- END TAB 18 -->', htmlStart);
-  const htmlSlice = exploreContent.slice(htmlStart, htmlEnd !== -1 ? htmlEnd : undefined);
+  const htmlEnd = explorerContent.indexOf('<!-- END TAB 18 -->', htmlStart);
+  const htmlSlice = explorerContent.slice(htmlStart, htmlEnd !== -1 ? htmlEnd : undefined);
 
   // Check JS slice
-  const jsStart = exploreContent.indexOf('// TAB 18: SEAM SEARCH');
+  const jsStart = explorerContent.indexOf('// TAB 18: SEAM SEARCH');
   if (jsStart === -1) {
-    throw new Error('explore.html no longer contains the Module 18 marker "// TAB 18: SEAM SEARCH"; this check would otherwise scan nothing and report PASS.');
+    throw new Error('explorer.html no longer contains the Module 18 marker "// TAB 18: SEAM SEARCH"; this check would otherwise scan nothing and report PASS.');
   }
-  const jsEnd = exploreContent.indexOf('// END TAB 18', jsStart);
-  const jsSlice = exploreContent.slice(jsStart, jsEnd !== -1 ? jsEnd : undefined);
+  const jsEnd = explorerContent.indexOf('// END TAB 18', jsStart);
+  const jsSlice = explorerContent.slice(jsStart, jsEnd !== -1 ? jsEnd : undefined);
 
   const combinedSlice = htmlSlice + "\n" + jsSlice;
 
   // Check for emojis (surrogate pairs or common symbols like 📡, ℹ, 🧬, 🔍, etc.)
   const emojiRegex = /[\uD800-\uDBFF][\uDC00-\uDFFF]|[\u2600-\u27BF]|[\u2300-\u23FF]|[\u2B50-\u2B55]/;
   if (emojiRegex.test(combinedSlice)) {
-    throw new Error("Module 18 HTML/JS in explore.html contains forbidden emoji or symbol characters in UI or issue reports! Must maintain serious scientific styling.");
+    throw new Error("Module 18 HTML/JS in explorer.html contains forbidden emoji or symbol characters in UI or issue reports! Must maintain serious scientific styling.");
   }
 });
 
@@ -281,8 +287,8 @@ check("No self-certifying verdict language on the public pages", () => {
       why: 'Graveyard Trap 18 warning the reader against exactly the verdict this check forbids; it shares a line with the entry above, and per-occurrence masking is what surfaced it' }
   ];
 
-  // explore.html added 2026-08-08 (WEB-SWAP-1): it is the explorer application,
-  // formerly index.html, and carries the Trap 18 material the allowlist exempts.
+  // explore.html added 2026-08-08 (WEB-SWAP-1): it was the explorer application,
+  // formerly index.html, and carried the Trap 18 material the allowlist exempts.
   // index.html stays on the list in its new role as the Word Structures homepage.
   // learn.html added 2026-08-08 (WEB-LEARN-1) in the same change that created
   // it, so the page has never existed as an unguarded public surface.
@@ -292,7 +298,16 @@ check("No self-certifying verdict language on the public pages", () => {
   // created it, so the page has never existed as an unguarded public surface.
   // evidence.html added 2026-08-08 (WEB-EVIDENCE-1) in the same change that
   // created it, so the page has never existed as an unguarded public surface.
-  const files = ['index.html', 'start.html', 'learn.html', 'research.html', 'evidence.html', 'explore.html', 'bridge_story_sandbox.html', 'word-checker.html'];
+  //
+  // explorer.html added 2026-08-09 (EXPLORE-REDESIGN-2A): the Trap 18 material
+  // the allowlist exempts moved here from explore.html, which became a small
+  // compatibility bridge and no longer carries it. explore.html stays on the
+  // list in its new role: it is still a publicly reachable page, even though
+  // it is now too small to contain anything this check would flag. Both files
+  // are covered rather than one swapped for the other, per the project's rule
+  // that a guard covering a public surface should keep covering it once that
+  // surface exists under a second name, not silently narrow to just one.
+  const files = ['index.html', 'start.html', 'learn.html', 'research.html', 'evidence.html', 'explore.html', 'explorer.html', 'bridge_story_sandbox.html', 'word-checker.html'];
   const offences = [];
   const used = new Set();
 
@@ -397,7 +412,12 @@ check("No raw LaTeX or broken entities in the public HTML markup", () => {
   // alone would have left the 745 KB explorer, where every one of the historical
   // entity failures actually occurred, unguarded. The old
   // `if (!fs.existsSync(p)) return;` was a silent pass and is gone.
-  for (const file of ['index.html', 'explore.html']) {
+  //
+  // Re-pointed 2026-08-09 (EXPLORE-REDESIGN-2A): the explorer application moved
+  // from explore.html to explorer.html, so it -- not the now-tiny compatibility
+  // bridge -- is where the 745 KB of historical entity-failure surface lives.
+  // explore.html stays covered too: it is a small file, but still a public one.
+  for (const file of ['index.html', 'explore.html', 'explorer.html']) {
   const p = path.join(path.join(__dirname, '..'), file);
   if (!fs.existsSync(p)) throw new Error(file + ' is missing; it is a mandatory target of this check.');
   const src = fs.readFileSync(p, 'utf8');
