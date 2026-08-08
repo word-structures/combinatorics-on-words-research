@@ -57,6 +57,34 @@ test("Morphism Integrity & Checksum Verification", () => {
   console.log(`       - g109 : ${res.checksums.g109}`);
 });
 
+test("g98 exact images match V. Keranen's owner-supplied data (MORPHISM-G98-1)", () => {
+  // Pinned literally, not re-derived from morphisms.js, so a future edit to
+  // G98 that still happens to pass length/checksum checks cannot silently
+  // drift from the source data Keranen supplied 2026-08-08. g98 is stored as
+  // four independent explicit images, not a cyclicPerm() shortcut: applying
+  // the forward permutation sigma (a->b->c->d->a) used by g85/g109 does not
+  // reproduce g(b) or g(d) from g(a). Keranen confirmed 2026-08-09 that the
+  // images are instead related by the inverse cyclic permutation sigma^-1
+  // (a->d->c->b->a): g(b) = sigma^-1(g(a)), g(c) = sigma^-2(g(a)),
+  // g(d) = sigma^-3(g(a)). (Forward sigma^2 happens to also reproduce g(c),
+  // since sigma^2 and sigma^-2 are the same double transposition on a
+  // 4-cycle -- a coincidence specific to c, not a second valid direction.)
+  // The four images below remain the pinned regression fixture regardless;
+  // the permutation relationship is documentation, not what this test checks.
+  const OWNER_SUPPLIED = {
+    a: "abcacdcbcdcadbdcbdbabcbdcacbabdbabcabdadcdadbdcbdbabdbcbacbcdbabdcdbdcacdbcbacbcdcacdcbdcdadbdcbca",
+    b: "dabdbcbabcbdcacbacadabacbdbadacadabdacdcbcdcacbacadacabadbabcadacbcacbdbcabadbabcbdbcbacbcdcacbabd",
+    c: "cdacabadabacbdbadbdcdadbacadcdbdcdacdbcbabcbdbadbdcdbdadcadabdcdbabdbacabdadcadabacabadbabcbdbadac",
+    d: "bcdbdadcdadbacadcacbcdcadbdcbcacbcdbcabadabacadcacbcacdcbdcdacbcadacadbdacdcbdcdadbdadcadabacadcdb"
+  };
+  for (const k of ['a', 'b', 'c', 'd']) {
+    assert.strictEqual(G98[k].length, 98, `g98(${k}) must have length 98`);
+    assert.strictEqual(G98[k], OWNER_SUPPLIED[k], `g98(${k}) must exactly equal the owner-supplied image`);
+  }
+  const images = ['a', 'b', 'c', 'd'].map(k => G98[k]);
+  assert.strictEqual(new Set(images).size, 4, "all four g98 images must be pairwise distinct");
+});
+
 // ----------------------------------------------------
 // 2. ABELIAN SQUARE DETECTION TESTS
 // ----------------------------------------------------
