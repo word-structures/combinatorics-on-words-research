@@ -2,22 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Explore — Word Structures</title>
-<meta name="description" content="The Interactive Explorer has moved to explorer.html.">
-</head>
-<body>
-
-<p>The Interactive Explorer has moved.</p>
-<p><a href="explorer.html">Full Interactive Explorer</a></p>
-
 <script>
 (function () {
   'use strict';
-  // Compatibility bridge only. The 20 slugs below are the exact legacy hash
-  // routes verified against explorer.html's MODE_TO_SLUG router. Unknown
-  // hashes are deliberately left unforwarded rather than guessed at, so this
-  // file never creates an undocumented routing contract.
+  // Legacy-hash compatibility only. The 20 slugs below are the exact routes
+  // verified against explorer.html's MODE_TO_SLUG router. This page is itself
+  // the current public Explore destination: a hash-less or unrecognised load
+  // stays here rather than forwarding anywhere. Runs inline, before the
+  // stylesheet, so a legacy-slug visitor never sees the landing page flash.
   var KNOWN_LEGACY_SLUGS = [
     'tutorial', 'tree-search', 'abc-lab', 'morphism-g85', '2d-walk',
     'sonification', 'try-it', 'timeline', 'unfavorable-factors',
@@ -26,20 +18,181 @@
     'seam-search', 'graveyard'
   ];
 
-  var rawHash = location.hash.replace(/^#/, '');
-  if (!rawHash) {
-    location.replace('explorer.html');
-    return;
+  function forwardIfLegacy() {
+    var rawHash = location.hash.replace(/^#/, '');
+    if (!rawHash) return;
+    var slug = decodeURIComponent(rawHash);
+    if (KNOWN_LEGACY_SLUGS.indexOf(slug) !== -1) {
+      location.replace('explorer.html' + location.hash);
+    }
+    // Unknown hash, or one of this page's own section ids (#paths, #deeper,
+    // #full-explorer): no forwarding. This page's section ids are chosen to
+    // never collide with the 20 legacy slugs above.
   }
 
-  var slug = decodeURIComponent(rawHash);
-  if (KNOWN_LEGACY_SLUGS.indexOf(slug) !== -1) {
-    location.replace('explorer.html' + location.hash);
-  }
-  // Unknown hash: stay on this page: the static text and link above remain
-  // visible instead of forwarding to an unverified destination.
+  forwardIfLegacy();
+  // The nav's own ABELISK link (explore.html#abelisk) is a same-document
+  // navigation when already on this page, so it only fires hashchange, not a
+  // fresh load -- this listener is what forwards that case too.
+  window.addEventListener('hashchange', forwardIfLegacy);
 })();
 </script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explore — Word Structures</title>
+<meta name="description" content="Try a word, watch a search, or turn a sequence of letters into something you can see — hands-on ways to explore abelian-square-free structure.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
 
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="index.html">
+      <img class="brand__mark brand__mark--logo" src="assets/word-structures-mark.png" width="28" height="28" alt="" aria-hidden="true">
+      <span class="brand__word">Word Structures</span>
+    </a>
+
+    <nav aria-label="Primary">
+      <details class="nav" data-nav open>
+        <summary class="nav__toggle">Menu</summary>
+        <ul class="nav__list">
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="explore.html" aria-current="page">Explore</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="evidence.html">Evidence</a></li>
+          <li><a href="explore.html#abelisk">ABELISK</a></li>
+        </ul>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 1. HERO -------------------------------------------------------------- -->
+  <section class="hero" id="hero">
+    <div class="wrap wrap--narrow">
+      <h1 class="hero__headline">Explore</h1>
+      <p class="hero__bridge">Try it. Change it. See the structure.</p>
+      <p class="lede stack-top">
+        Patterns become easier to understand when you can manipulate them.
+        Build a word, watch a search, or turn a sequence of letters into
+        something you can see.
+      </p>
+    </div>
+  </section>
+
+  <!-- 2. FOUR PRIMARY PATHWAYS ----------------------------------------------- -->
+  <section class="section section--rule" id="paths">
+    <div class="wrap">
+      <h2>Four ways to explore</h2>
+      <p class="lede">
+        Pick one. Each opens straight into the tool &mdash; nothing to set up,
+        nothing to install.
+      </p>
+
+      <ol class="pathways">
+        <li class="pathway">
+          <p class="pathway__num">01</p>
+          <h3 class="pathway__title"><a href="explorer.html#try-it">Try a word</a></h3>
+          <p class="pathway__desc">
+            Build with a, b and c, one letter at a time, and see what kinds
+            of repeated structure appear as the word grows.
+          </p>
+        </li>
+        <li class="pathway">
+          <p class="pathway__num">02</p>
+          <h3 class="pathway__title"><a href="explorer.html#tree-search">Watch the search</a></h3>
+          <p class="pathway__desc">
+            Watch a search branch through possible words, backing away when
+            the next step creates a pattern it is trying to avoid.
+          </p>
+        </li>
+        <li class="pathway">
+          <p class="pathway__num">03</p>
+          <h3 class="pathway__title"><a href="explorer.html#2d-walk">See the structure</a></h3>
+          <p class="pathway__desc">
+            Turn a sequence of letters into a path you can follow with your
+            eye. <a href="explorer.html#heat-map">Or compare two words side by side.</a>
+          </p>
+        </li>
+        <li class="pathway">
+          <p class="pathway__num">04</p>
+          <h3 class="pathway__title"><a href="explorer.html#abelisk">Discover through play</a></h3>
+          <p class="pathway__desc">
+            A puzzle built on the same idea: fill in the gaps while avoiding
+            a particular kind of repeated structure.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 3. DEEPER ROUTES -------------------------------------------------------- -->
+  <section class="section section--rule" id="deeper">
+    <div class="wrap wrap--narrow">
+      <h2>Go deeper</h2>
+
+      <div class="deeper-routes">
+        <div>
+          <h3>Inspect the machinery</h3>
+          <p>
+            Look inside the transformations and constructions used by the
+            research tools.
+          </p>
+          <ul class="routes">
+            <li><a href="research.html">Research</a></li>
+            <li><a href="explorer.html#morphism-microscope">Morphism Microscope</a></li>
+            <li><a href="explorer.html#morphism-lab">Morphism Lab</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Check the evidence</h3>
+          <p>
+            See how a result gets checked before it is stated here, and
+            inspect a live verification surface for yourself.
+          </p>
+          <ul class="routes">
+            <li><a href="evidence.html">Evidence</a></li>
+            <li><a href="explorer.html#validation">Validation Lab</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. FULL INTERACTIVE EXPLORER --------------------------------------------- -->
+  <section class="section section--rule full-explorer" id="full-explorer">
+    <div class="wrap wrap--narrow">
+      <h2>Full Interactive Explorer</h2>
+      <p class="lede">
+        Open the complete research and experimentation workspace.
+      </p>
+      <p><a class="btn" href="explorer.html">Open the Full Interactive Explorer</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="lockup">
+      <span class="brand__mark brand__mark--footer" aria-hidden="true"></span>
+      <span>
+        <span class="lockup__word">Word Structures</span>
+        <span class="lockup__tagline">Open Lab for Combinatorics on Words</span>
+      </span>
+    </div>
+    <ul class="site-footer__links">
+      <li><a href="https://github.com/word-structures/combinatorics-on-words-research/blob/main/CONTRIBUTING.md">Contribute</a></li>
+      <li><a href="https://github.com/word-structures/combinatorics-on-words-research/blob/main/CITATION.cff">Cite</a></li>
+      <li><a href="https://github.com/word-structures/combinatorics-on-words-research">GitHub</a></li>
+      <li><a href="https://github.com/word-structures/combinatorics-on-words-research/blob/main/LICENSE">Licence</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
 </body>
 </html>
