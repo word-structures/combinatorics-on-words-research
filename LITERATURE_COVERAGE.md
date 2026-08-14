@@ -54,6 +54,37 @@ Only these have been opened and searched. Everything else is unopened.
 | Keränen, *Suppression of Unfavourable Factors*, IMS 2006 | earlier | PDF (row 38) |
 | ACR 2004, *The Number of Ternary Words Avoiding Abelian Cubes* | earlier | row 48 |
 | Rao & Rosenfeld, "Avoidability of long k-abelian repetitions", Math. Comput. 85(302):3051–3060 (2016), arXiv:1507.02581 | 2026-08-01 | PDF, text extracted with `pdftotext -layout` (not an AI summary), Theorem 2 and the h2 morphism quoted directly (row 84) — this is Fici & Puzynina Theorem 65's reference [124], the source of the ternary 2-abelian construction |
+| Currie & Rampersad, *Fixed points avoiding Abelian k-powers*, JCTA 119(5):942–948 (2012), arXiv:1106.1842 | 2026-08-14 | **Listing page and abstract only.** The full text was **not** extracted: the only attempt returned an AI-mediated summary, which does not meet this section's standard. See the split-status note below |
+
+**On Currie & Rampersad (added 2026-08-14) — evidence status is split, and the
+two halves must not be merged.**
+
+**(A) Bibliographic identity and attribution: VERIFIED.** The record above is
+confirmed from the arXiv listing page, and the one-sentence abstract was read
+verbatim: *"We show that the problem of whether the fixed point of a morphism
+avoids Abelian k-powers is decidable under rather general conditions."* The
+attribution of the **template method** to this paper is confirmed from a
+*separate* primary source: the abstract of Eyidoğan, Göral & Tanısalı
+(arXiv:2605.20504), read verbatim on the same date, states *"Combining
+Dekking's result with the template method of Currie and Rampersad, we develop
+a sieve technique…"*. This matters here because the project's Rao–Rosenfeld
+Proposition 9/11 machinery (rows 30, 31, 45) sits downstream of that method.
+
+**(B) Internal content of the paper: UNVERIFIED** under this section's
+opened-source standard. The template definition, the ancestor computation and
+any finiteness argument have **not** been checked. The only full-text read was
+an AI-mediated extraction; `EPISTEMIC_DISCIPLINE.md` §1 warns by name against
+treating confident-sounding specifics from such a read as verified, and this
+section's own convention distinguishes text extraction from an AI summary. No
+definition, theorem number or lemma from this paper may be quoted or relied on
+until it is opened directly.
+
+**Consequence.** Currie & Rampersad and row 80's Parikh-difference condition
+belong to the same broad linear/Parikh algebraic family. **Any substantive
+comparison — including whether that paper does or does not subsume the
+project's own bounded finite-window formulation (`OPEN_RESEARCH_QUESTIONS.md`
+B22) — remains pending a direct source audit, and no novelty conclusion in
+either direction may be drawn from the present state of verification.**
 
 **Not opened:** Brown & Freedman, *"Arithmetic progressions in lacunary
 sets"*, Rocky Mountain J. Math. 17(3):587–596, 1987 — **the citation is now
