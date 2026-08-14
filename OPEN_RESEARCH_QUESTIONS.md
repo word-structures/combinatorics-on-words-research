@@ -416,6 +416,50 @@ changes**, not merely increase L.
 
 **Status:** Computed 2026-08-04. The 2107-letter word was verified using `word-anatomy.js`. It passes `aa2fr` (0 FORBID4 factors) and shows typical random-walk scaling. See MATH_CLAIMS.md row 108.
 
+### B22. Does the bounded L=5 Stage-B test set admit useful normalization and deduplication? (proposed 2026-08-14, pre-registered before any measurement)
+
+**This entry is a question and a pre-registration. It contains no answer and no finding.** The supporting reasoning below re-arranges definitions already in the canonical record; it asserts no new mathematics and changes nothing about rows 49, 80 or 82. It is written *before* the experiment exists so that the hypothesis, the failure conditions and the kill condition are fixed in advance rather than chosen after seeing results (`EPISTEMIC_DISCIPLINE.md` §8, §10).
+
+**Supporting reasoning — why the question is well-posed.** Stage B holds the source `S = h₆⁶(a)` (729 symbols) fixed and varies a uniform coding `g : Σ₆ → Σ₃⁵`, which is exactly 30 ternary variables `x[q][r]` (`q ∈ Σ₆`, `r ∈ {0,…,4}`). The coded word is therefore not an independent object: `W[i] = x[ S[⌊i/5⌋] ][ i mod 5 ]`, i.e. 30 variables replayed in a fixed known order. For a Stage-B window `(len, K)` — `6 ≤ K ≤ 40`, `2K ≤ len ≤ 3645`, comparing blocks `[len−2K, len−K)` and `[len−K, len)` — the Parikh difference is consequently a weighted indicator sum
+
+`Δ_ℓ(len,K) = Σ_{q,r} w_{len,K}(q,r) · [ x[q][r] = ℓ ]`,
+
+where the integer weights `w_{len,K}` depend only on `S`, `L`, `len` and `K`, and **never on the coding**. Since the two blocks have equal length, every weight vector satisfies `Σ_{q,r} w(q,r) = 0`; this is precisely why the canonical checker maintains prefix sums for only two of the three letters.
+
+**Setup arithmetic (consequences of the window convention, not measurements).** Under that convention there are `Σ_{K=6}^{40}(3645 − 2K + 1) = 126,000` windows, of which those with `len ≡ K ≡ 0 (mod 5)` — call these *block-aligned* — number `Σ_{j=2}^{8}(730 − 2j) = 5,040`.
+
+**Relation to rows 80 and 82.** Call a window *profile-only* when `w(q,r)` does not depend on `r`. In the block-aligned case this reduces to the same `M_g·W = 0` form used in row 80, with `W ∈ Z⁶` and `Σ_q W_q = 0`; and block-aligned ⟹ profile-only. Stage A therefore appears to correspond to the profile-only part of the Stage-B test set, with the order-sensitive remainder lying in the region row 82 showed admits no Parikh-level compression. **That correspondence is part of what this question asks the experiment to check; it is not asserted here as an equivalence, and no equivalence theorem is claimed in this document.** **This neither contradicts nor weakens row 82.** Row 82 concerns the *domain*: deciding non-aligned squares requires data that determines the coding strings themselves. The formulation above retains all 30 positions and attempts no such compression; the question is about redundancy in the *test set*. Domain compression and test-set compression are orthogonal axes and must not be conflated in either direction.
+
+**Question.** Under an explicitly stated sign-canonicalisation, how many *distinct* constraints do the 126,000 windows collapse to, how is multiplicity distributed, and is any concentration sufficient to be exploitable?
+
+**Hypothesis (not established, and deliberately not quantified).** The 126,000 raw Stage-B constraints may admit a substantially smaller exact normalized/deduplicated representation, with multiplicity concentrated rather than flat. **No target count is stated here on purpose:** the experiment must determine the number, and a pre-registration that anchored it to a figure carried over from exploratory work would invite the measurement to be read against that figure rather than reported on its own terms.
+
+**Candidate lemmas — derived, NOT independently verified, NOT to be cited as established:**
+
+- `K ≢ 0 (mod 5)` is never profile-only;
+- a window with `K ≡ 0 (mod 5)` and `len ≢ 0 (mod 5)` is profile-only iff `S[j] = S[j+m] = S[j+2m]`, where `m = K/5` and `j = ⌊(len−2K)/5⌋` — so **non-aligned profile-only windows may exist**, and whether any occur in `h₆⁶(a)` is unmeasured;
+- consequently, the set of distinct profile-only weight vectors coincides with the set of distinct block-aligned weight vectors.
+
+Each requires an independent check by a separate implementation path before any promotion. **A derivation and a classifier written in the same session share assumptions; if the `(q,r)` index map or the half-open window convention were misread, the same error would appear on both sides of the claimed equality and the check would pass vacuously** (`EPISTEMIC_DISCIPLINE.md` §5).
+
+- **Method:** compile all 126,000 weight vectors from `S`, `len` and `K`; measure distinct counts under a stated sign-canonicalisation, multiplicity, support sizes and coefficient magnitudes; classify profile-only vs order-sensitive; then require exact decision parity against the canonical Node Stage-B oracle on a deterministic coding sample, with mutation tests for non-vacuity. Estimated cost: under one minute on one core, under 100 MB.
+- **Non-circularity rule (binding on the candidate-lemma check):** profile-only must be detected by **direct equality of the five offset weights** `w(q,0) = … = w(q,4)` for each `q`. The derived modular characterization above **must not be reused anywhere in the classifier** — doing so would make the test circular. Set equality, not merely equal cardinality, must be asserted. An independent second path for the block-aligned side is available from `research/verification/stage-a-soundness/stagea_soundness.js`, whose `collectDiffs` produces the same vectors by a different derivation.
+- **Validation:** the block-aligned vectors are by construction a row-80-style difference set at `iterN = 6`, `mMax = 8`; producing them from the preserved checker first pre-registers the expected count before the census exists. Positive control: every weight vector must sum to zero. Non-vacuity: mutating one component of one vector must break both the set equality and the decision parity.
+- **Pre-registered failure conditions — fixed now, and NOT to be weakened after execution:**
+  - any weight vector with non-zero total weight ⇒ **FAIL** (mapping error);
+  - any decision, `K` or `pos` mismatch against the canonical Stage-B oracle ⇒ **FAIL**;
+  - any normalization that changes a Stage-B decision ⇒ **FAIL**;
+  - failure to distinguish the adversarial order-sensitive case — two codings with identical Parikh profiles but different intra-image orderings, exactly one of which is violated ⇒ **FAIL**;
+  - a deliberate single-component mutation that escapes detection ⇒ vacuous suite ⇒ **FAIL**.
+
+  A FAIL classifies the proposed reduction as failed. It is not to be tuned around, re-ordered, or special-cased.
+- **Expected ledger sentence:** *"Under ⟨stated sign-canonicalisation⟩, the 126,000 bounded Stage-B windows for `h₆⁶(a)`, `L=5`, `K ∈ [6,40]` collapse to exactly ⟨n⟩ distinct weighted-indicator constraints, of which ⟨p⟩ are profile-only; decision parity with the canonical checker is exact over ⟨sample⟩."* — `COMPUTED` (Level 1) only if every failure condition above is passed.
+- **Kill condition:** if the distinct-constraint count is close to 126,000, or multiplicity is flat with no concentration, the compression premise does not hold. Record the negative result and **do not build a solver**. Elegance is not a reason to continue.
+- **Scope discipline:** **no novelty claim** — Currie & Rampersad (2012) is the closest published relative and its internal machinery is not yet independently verified (see `LITERATURE_COVERAGE.md`); prior art must be reviewed before any novelty language. **No performance claim** — the existing streaming checker aborts early, so a compiled checker is not automatically faster, and no speedup may be asserted without whole-workload measurement.
+- **Programme:** `ROADMAP.md` WS-2 programme 2 (*Unified obstruction / Δ calculus*), recorded there as **hypothesis only**. This is its first concrete falsifiable experiment; it is **not** a new programme.
+- **H4 dependency: none** for the census and parity. Only measuring rejection coverage on real Stage-A survivor workloads needs contention-free machine time.
+- **Effort:** small. **Impact 2** if it only establishes the census counts; **4** if concentration supports profile-level bounded-UNSAT certificates, an evidence type the project does not currently have; **3 as a negative result**, since it would close the most concrete instance of the Δ-calculus line.
+
 ### B8. The frequency polygon — the joint distribution instead of the box (RESEARCH_ARCHITECT run 2026-07-30)
 
 **Question:** what is the exact polygon, in the simplex, of the container language's reachable frequency vectors (f_a, f_b, f_c)? Rows 51–52 give only the box [1/11, 3/4]³; the polygon tells us, for instance, whether f_a = 3/4 can occur simultaneously with f_b = 1/11. Method: direction-parametrized Karp (a linear functional's max mean-cycle = a supporting line); a finite set of directions gives an outer approximation that is already itself a valid necessary condition, and cycles that achieve it give interior points.
