@@ -272,6 +272,15 @@ function main() {
     survivors: survivorList
   };
   fs.mkdirSync(path.dirname(outFile), { recursive: true });
+  // KNOWN LIMIT (recorded 2026-08-14, no behavioural change made here).
+  // JSON.stringify builds the whole document as one JS string, so this line
+  // throws `RangeError: Invalid string length` once the survivor list is large
+  // enough to exceed V8's maximum string length. Reproduced at ~32.4 M
+  // survivors; the L=5 production configuration (mMax=120, iterN=9) stayed
+  // under the limit, so the recorded run was unaffected. Remedy if it ever
+  // trips: stream the survivors as NDJSON instead — `stageA.js` converts this
+  // file to NDJSON immediately afterwards anyway, so the monolithic JSON is
+  // not load-bearing.
   fs.writeFileSync(outFile, JSON.stringify(out));
   console.log(`written: ${outFile}`);
 }

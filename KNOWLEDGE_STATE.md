@@ -72,6 +72,14 @@ stability of the interval when the window grows 5 → 6 (52).
 
 **Additive squares:** alphabet sweep, 11 of 31 classes resolved (54).
 
+**A reduction now independently re-derived:** the block-aligned Parikh
+condition `M_g·d = 0` (row 80) was re-derived from scratch and checked
+against a separate string-level oracle, with 0 false rejections over
+exhaustive controls up to and including the full L=5 profile domain. Read
+the asymmetry with it: **elimination is sound, survival is not evidence of
+anything** (rows 80, 82). Row 80's own conclusion stands — the test
+saturates and does not prove S_large(4) empty.
+
 **An equivalence worth knowing:** Mäkelä's conjecture is equivalent to
 saying an aa2f word exists at every length (row 50). It follows that
 **a lower bound on the growth rate is not a sub-goal but the whole
