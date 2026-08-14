@@ -137,6 +137,7 @@ factor-complexity.js       p(n), tight growth-rate upper bounds
 rauzy-graph.js             Rauzy graphs, special factors, dead ends
 morphism-scan.js           exhaustive search of small morphisms (route a: fixed points)
 word-anatomy.js            record-word verification and anatomy
+abelian-core.js            browser-usable abelian-square detection core for Abelisk MVP; UMD-lite static-site browser contract (no ESM), convention separation (minK/maxK)
 unfavourable-factors.js    Keranen 2006: unfavourable factors, extendability depth
 h6-image-sweep.js          route c: uniform images of h6's fixed point to a 3-letter alphabet, L<=5
 sft-container.js           K in [2,5] container language: de Bruijn graph, SCC, frequency bounds
