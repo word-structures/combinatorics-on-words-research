@@ -1,0 +1,61 @@
+  <!-- ================================================
+       13. ABELIAN SNAKE
+       ================================================ -->
+  <div class="view-panel hidden" id="view-snake">
+    <div class="abelisk-wrapper">
+      <div id="loading-overlay" class="abelisk-loading-overlay">
+          <div class="loading-spinner" style="width:50px; height:50px; border:5px solid #e2e8f0; border-top-color:#3b82f6; border-radius:50%; animation:spin 1s linear infinite; margin-bottom:20px;"></div>
+          <p>Generating a unique puzzle...</p>
+      </div>
+
+      <div class="abelisk-header-section">
+          <div class="abelisk-mode-tabs">
+              <button id="tab-classic" class="abelisk-tab active" onclick="switchGameMode('classic')">Classic (Colors)</button>
+              <button id="tab-additive" class="abelisk-tab" onclick="switchGameMode('additive')">Research (Additive)</button>
+              <button id="tab-cipher" class="abelisk-tab" onclick="switchGameMode('cipher')">Cipher (Decrypt)</button>
+              <button id="tab-fractal" class="abelisk-tab" onclick="switchGameMode('fractal')">Fractal (Deep Cipher)</button>
+          </div>
+          
+          <h1>Abelisk</h1>
+          <div id="subtitle-classic" class="abelisk-subtitle">
+              A pure logic puzzle. Fill the empty holes so that <strong>no two adjacent segments of any length contain the exact same amount of each color</strong>.
+          </div>
+          <div id="subtitle-additive" class="abelisk-subtitle" style="display: none;">
+              <strong>Authentic Unsolved Mathematical Problem:</strong> In this mode, the alphabet is <strong>{0, 1, 2, 6}</strong>. Nobody in the world yet knows the maximum possible length of a sequence without two adjacent blocks having the exact same sum. We are in uncharted territory — break the record!
+          </div>
+          <div id="subtitle-cipher" class="abelisk-subtitle" style="display: none;">
+              <strong>Decrypt the Message:</strong> The unique logic puzzle acts as a decryption key. Solve the Abelian pattern to uncover the hidden phrase.
+          </div>
+          <div id="subtitle-fractal" class="abelisk-subtitle" style="display: none;">
+              <strong>The Master Cipher:</strong> This sequence is the fundamental 85-cell building block of the Abelian universe.<br>
+              <span style="color: #059669; font-weight: bold;">Decrypt the structure. Uncover the truth.</span>
+          </div>
+          
+          <div id="score-counter" class="abelisk-score-counter">LENGTH: 0</div>
+          <div id="difficulty-badge" class="abelisk-difficulty-badge" style="display: none;">Difficulty: Generating...</div>
+      </div>
+
+      <div class="abelisk-palette" id="palette"></div>
+
+      <div class="abelisk-container" id="container">
+          <div class="abelisk-sequence" id="sequence"></div>
+      </div>
+
+      <div class="abelisk-tools-panel">
+          <button id="notesToggleBtn" class="abelisk-tool-btn" onclick="toggleNotesMode()">✏️ Notes: OFF</button>
+          <button class="abelisk-tool-btn" onclick="resetGame()">↺ Reset</button>
+          <button id="newPuzzleBtn" class="abelisk-tool-btn primary" onclick="startNewGame(25)">✨ New Puzzle (25)</button>
+      </div>
+      
+      <div id="controls-info" class="controls-info" style="margin-top:20px; color:#64748b; text-align:center;">
+          Select a color from the palette, then click an empty cell to place it.<br>
+          Turn on <strong>Notes</strong> to draft candidates without committing.
+      </div>
+      
+      <div id="victory-overlay" class="abelisk-victory-overlay">
+          <h2 id="victory-title">PERFECT EQUILIBRIUM</h2>
+          <p id="victory-desc">You have successfully constructed an Abelian Square-Free sequence. The math holds strong.</p>
+          <button class="abelisk-tool-btn primary" onclick="resetGame()">Play Again</button>
+      </div>
+    </div>
+  </div>
