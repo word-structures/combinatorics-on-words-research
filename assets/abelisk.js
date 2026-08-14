@@ -186,10 +186,24 @@
     const level = window.AbeliskLevels[state.currentLevelIndex];
     if (!level) {
       appEl.innerHTML = `
-        <div class="wrap section">
+        <div class="wrap wrap--narrow section">
           <h2>Puzzle Complete</h2>
           <p class="lede">You have completed all current Abelisk teaching levels.</p>
-          <a href="explore.html" class="btn">Explore more tools</a>
+          
+          <ul class="ways" style="margin-top: 3rem;">
+            <li class="ways__item ways__item--learn">
+              <h3><a href="learn.html">Learn</a></h3>
+              <p>Learn the definition more formally.</p>
+            </li>
+            <li class="ways__item ways__item--explore">
+              <h3><a href="explore.html">Explore</a></h3>
+              <p>Explore the structures in the browser.</p>
+            </li>
+            <li class="ways__item ways__item--research">
+              <h3><a href="research.html">Research</a></h3>
+              <p>See the open research questions.</p>
+            </li>
+          </ul>
         </div>
       `;
       return;

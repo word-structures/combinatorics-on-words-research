@@ -14,7 +14,7 @@
     'tutorial', 'tree-search', 'abc-lab', 'morphism-g85', '2d-walk',
     'sonification', 'try-it', 'timeline', 'unfavorable-factors',
     'morphism-microscope', 'concept-graph', 'morphism-lab', 'heat-map',
-    'abelisk', 'aa2fr-extension', 'applications', 'validation', 'gallery',
+    'aa2fr-extension', 'applications', 'validation', 'gallery',
     'seam-search', 'graveyard'
   ];
 
@@ -22,6 +22,10 @@
     var rawHash = location.hash.replace(/^#/, '');
     if (!rawHash) return;
     var slug = decodeURIComponent(rawHash);
+    if (slug === 'abelisk') {
+      location.replace('abelisk.html');
+      return;
+    }
     if (KNOWN_LEGACY_SLUGS.indexOf(slug) !== -1) {
       location.replace('explorer.html' + location.hash);
     }
@@ -57,11 +61,12 @@
       <details class="nav" data-nav open>
         <summary class="nav__toggle">Menu</summary>
         <ul class="nav__list">
+          <li><a href="start.html">Start</a></li>
           <li><a href="learn.html">Learn</a></li>
-          <li><a href="explore.html" aria-current="page">Explore</a></li>
+          <li><a href="abelisk.html">Play</a></li>
+          <li><a href="explore.html">Explore</a></li>
           <li><a href="research.html">Research</a></li>
           <li><a href="evidence.html">Evidence</a></li>
-          <li><a href="explore.html#abelisk">ABELISK</a></li>
         </ul>
       </details>
     </nav>
@@ -119,7 +124,7 @@
         </li>
         <li class="pathway">
           <p class="pathway__num">04</p>
-          <h3 class="pathway__title"><a href="explorer.html#abelisk">Discover through play</a></h3>
+          <h3 class="pathway__title"><a href="abelisk.html">Play</a></h3>
           <p class="pathway__desc">
             A puzzle built on the same idea: fill in the gaps while avoiding
             a particular kind of repeated structure.
