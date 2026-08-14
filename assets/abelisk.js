@@ -62,7 +62,7 @@
       html = `
         <div class="wrap section">
           <div class="onboarding level-fade-in">
-            <h2 class="onboarding__title">Order vs Quantity</h2>
+            <h2 class="onboarding__title">The hidden echo</h2>
             <div class="onboarding__content">
               <p>Look at these two blocks:</p>
               <div class="onboarding__example">
@@ -74,10 +74,11 @@
                   <span class="g-cell g-cell--a">a</span>
                 </div>
               </div>
-              <p>The <strong>order</strong> of the letters is different.</p>
-              <p>But the <strong>quantity</strong> is exactly the same: both blocks contain one 'a' and one 'b'.</p>
+              <p>Read them and they look different: <strong>a b</strong>, then <strong>b a</strong>. The order has changed.</p>
+              <p>Count them and nothing has changed at all. Each block holds exactly one <strong>a</strong> and one <strong>b</strong>.</p>
+              <p>A repetition you cannot hear by reading &mdash; only by counting. Abelisk calls this a <strong>hidden echo</strong>.</p>
             </div>
-            <button class="btn" onclick="advanceOnboarding(2)">I see the matching quantities</button>
+            <button class="btn" onclick="advanceOnboarding(2)">I can see the hidden echo</button>
           </div>
         </div>
       `;
@@ -85,9 +86,10 @@
       html = `
         <div class="wrap section">
           <div class="onboarding level-fade-in">
-            <h2 class="onboarding__title">Identify the repetition</h2>
+            <h2 class="onboarding__title">Find the hidden echo</h2>
             <div class="onboarding__content">
-              <p>Which of these two pairs has matching letter counts?</p>
+              <p>One of these pairs is a hidden echo. Which one?</p>
+              <p>Count each block. The order does not matter &mdash; only how many of each letter.</p>
               
               <div class="onboarding__options">
                 <button class="onboarding-btn" onclick="handleIdentifyAnswer(this, false)">
@@ -113,7 +115,7 @@
       html = `
         <div class="wrap section">
           <div class="onboarding level-fade-in">
-            <h2 class="onboarding__title">Explain the rule</h2>
+            <h2 class="onboarding__title">What mathematicians call it</h2>
             <div class="onboarding__content">
               <div class="onboarding__example">
                 <div class="word-container">
@@ -122,7 +124,8 @@
                   <span class="g-cell g-cell--c">c</span><span class="g-cell g-cell--a">a</span><span class="g-cell g-cell--b">b</span>
                 </div>
               </div>
-              <p>Why do mathematicians call these two adjacent blocks an <strong>abelian square</strong>?</p>
+              <p>Abelisk calls this a <strong>hidden echo</strong>. Mathematicians call it an <strong>abelian square</strong>.</p>
+              <p>What makes these two adjacent blocks one?</p>
               
               <div class="onboarding__options">
                 <button class="onboarding-btn" onclick="handleExplainAnswer(this, false)">Because they start and end with different letters.</button>
@@ -187,8 +190,8 @@
     if (!level) {
       appEl.innerHTML = `
         <div class="wrap wrap--narrow section">
-          <h2>Puzzle Complete</h2>
-          <p class="lede">You have completed all current Abelisk teaching levels.</p>
+          <h2>You can see the hidden echoes now</h2>
+          <p class="lede">You have finished every teaching level in Abelisk.</p>
           
           <ul class="ways" style="margin-top: 3rem;">
             <li class="ways__item ways__item--learn">
@@ -294,7 +297,8 @@
     } else if (isLevelComplete) {
       html += `
         <div class="failure-panel" style="border-color: var(--green);">
-          <p class="failure-panel__header" style="color: var(--green);">Target reached!</p>
+          <p class="failure-panel__header" style="color: var(--green);">The pattern holds.</p>
+          <p>You extended the word without creating a forbidden hidden echo.</p>
           <button class="btn" onclick="nextLevel()">Continue</button>
         </div>
       `;
