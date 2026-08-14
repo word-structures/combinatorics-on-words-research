@@ -307,7 +307,9 @@ check("No self-certifying verdict language on the public pages", () => {
   // are covered rather than one swapped for the other, per the project's rule
   // that a guard covering a public surface should keep covering it once that
   // surface exists under a second name, not silently narrow to just one.
-  const files = ['index.html', 'start.html', 'learn.html', 'research.html', 'evidence.html', 'explore.html', 'explorer.html', 'bridge_story_sandbox.html', 'word-checker.html'];
+  // abelisk.html added 2026-08-14 (ABELISK-MVP-1) to ensure the new puzzle page
+  // does not leak self-certifying language.
+  const files = ['index.html', 'start.html', 'learn.html', 'research.html', 'evidence.html', 'explore.html', 'explorer.html', 'bridge_story_sandbox.html', 'word-checker.html', 'abelisk.html'];
   const offences = [];
   const used = new Set();
 
