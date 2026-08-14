@@ -1,0 +1,523 @@
+// =====================================================
+// 13. ABELISK PUZZLE (Replaces Abelian Snake)
+// =====================================================
+let gameMode = 'classic';
+        let FULL = [2,3,0,1,3,2,0,2,1,0,1,3,1,0,2,1,2,3,1,2,0,1,3,1,0];
+        let MASK = [2,3,0,1,3,2,0,2,1,0,-1,3,1,0,2,1,-1,-1,1,2,0,1,-1,1,-1];
+        let abeliskState = [...MASK];
+        let notes = Array(MASK.length).fill(null).map(() => new Set());
+        const ALPHABET = ['a', 'b', 'c', 'd'];
+        const ABELISK_COLORS = ['#f8fafc', '#3b82f6', '#f97316', '#22c55e'];
+        const ADDITIVE_NUMBERS = [0, 1, 2, 6];
+        const ADDITIVE_COLORS = ['#cbd5e1', '#94a3b8', '#64748b', '#475569'];
+        
+        const CIPHER_SHIFTS = [5, 11, 17, 23];
+        const CIPHER_PHRASES = [
+            "THE OWLS ARE NOT WHAT THEY SEEM",
+            "EVERY CIPHER HIDES A PATTERN",
+            "MATHEMATICS IS THE ART OF REASON",
+            "LOGIC WILL GET YOU FROM A TO B",
+            "NOT ALL THOSE WHO WANDER ARE LOST",
+            "SECRETS REQUIRE CAREFUL THOUGHT",
+            "TRUTH LIES BENEATH THE SURFACE",
+            "AN ELEGANT SOLUTION AWAITS YOU",
+            "THE QUICK BROWN FOX JUMPS",
+            "SILENCE IS A SOURCE OF GREAT STRENGTH",
+            "PATIENCE IS A VIRTUE IN PUZZLES",
+            "CHAOS IS MERELY UNSEEN ORDER"
+        ];
+        let currentPhrase = "";
+        let cipherText = [];
+        
+        const G85_MASK = [-1,1,-1,0,2,-1,-1,1,-1,-1,2,0,-1,2,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,2,-1,-1,-1,1,-1,3,2,-1,-1,-1,0,1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,0,-1,-1,1,-1,1,-1,2,-1,-1,-1,-1,-1,-1,-1,2,-1,3,-1,-1,-1,-1,-1,3,2,-1,2,-1];
+        const G85_FULL = [0,1,2,0,2,3,2,1,2,3,2,0,3,2,3,1,3,0,1,0,2,0,1,0,3,1,0,1,2,1,3,1,2,1,0,2,1,2,3,2,0,2,1,0,1,3,0,1,0,2,0,3,2,1,2,3,2,0,2,3,1,2,1,0,2,1,2,3,2,0,2,3,2,1,3,2,3,0,3,1,3,2,1,2,0];
+        const FRACTAL_PHRASE = "MATHEMATICS IS THE ALPHABET WITH WHICH GOD HAS WRITTEN THE UNIVERSE - GALILEO GALILEI";
+
+        let selectedColor = 0;
+        let notesMode = false;
+        const paletteEl = document.getElementById('palette');
+        const seqEl = document.getElementById('sequence');
+        let abeliskCells = [];
+
+        function renderPalette() {
+            paletteEl.innerHTML = '';
+            for (let i = 0; i < 4; i++) {
+                const btn = document.createElement('button');
+                btn.className = `abelisk-palette-btn ${i===selectedColor ? 'active' : ''}`;
+                if (gameMode === 'classic' || gameMode === 'cipher' || gameMode === 'fractal') {
+                    btn.style.backgroundColor = ABELISK_COLORS[i];
+                    btn.innerText = ALPHABET[i];
+                    btn.style.color = (i === 0) ? '#000' : '#fff';
+                } else {
+                    btn.style.backgroundColor = ADDITIVE_COLORS[i];
+                    btn.innerText = ADDITIVE_NUMBERS[i];
+                    btn.style.color = (i === 0) ? '#000' : '#fff';
+                }
+                btn.onclick = () => { selectedColor = i; renderPalette(); };
+                paletteEl.appendChild(btn);
+            }
+        }
+
+        function getDisplayedChar(index, colorIndex) {
+            let code = cipherText[index];
+            if (code < 65 || code > 90) return String.fromCharCode(code); // space or punctuation
+            if (colorIndex === -1) return String.fromCharCode(code);
+            let cipherOffset = code - 65;
+            let shift = CIPHER_SHIFTS[colorIndex];
+            let decodedOffset = (cipherOffset + shift) % 26;
+            return String.fromCharCode(decodedOffset + 65);
+        }
+
+        function render() {
+            if (gameMode === 'additive') {
+                let filled = abeliskState.filter(x => x !== -1).length;
+                document.getElementById('score-counter').innerText = `LENGTH: ${filled}`;
+            } else if (gameMode === 'fractal') {
+                let totalHoles = MASK.filter(x => x === -1).length;
+                let filledHoles = abeliskState.filter((val, idx) => MASK[idx] === -1 && val !== -1).length;
+                let percent = totalHoles > 0 ? Math.floor((filledHoles / totalHoles) * 100) : 100;
+                document.getElementById('score-counter').innerText = `PROGRESS: ${percent}%`;
+            }
+            for (let i = 0; i < abeliskState.length; i++) {
+                abeliskCells[i].innerHTML = '';
+                abeliskCells[i].className = 'abelisk-cell' + (MASK[i] !== -1 ? ' locked' : '');
+                abeliskCells[i].style.background = '';
+                
+                if (gameMode === 'cipher' || gameMode === 'fractal') {
+                    let displayedChar = getDisplayedChar(i, abeliskState[i]);
+                    if (abeliskState[i] !== -1) {
+                        abeliskCells[i].style.background = ABELISK_COLORS[abeliskState[i]];
+                        abeliskCells[i].innerText = displayedChar;
+                        abeliskCells[i].style.color = (abeliskState[i] === 0) ? '#000' : '#fff';
+                    } else {
+                        abeliskCells[i].innerText = displayedChar;
+                        abeliskCells[i].style.color = '#94a3b8'; // subtle color for encrypted text
+                    }
+                } else {
+                    if (abeliskState[i] !== -1) {
+                        let val = abeliskState[i];
+                        if (gameMode === 'classic') {
+                            abeliskCells[i].style.background = ABELISK_COLORS[val];
+                            abeliskCells[i].innerText = ALPHABET[val];
+                            abeliskCells[i].style.color = (val === 0) ? '#000' : '#fff';
+                        } else {
+                            abeliskCells[i].style.background = ADDITIVE_COLORS[val];
+                            abeliskCells[i].innerText = ADDITIVE_NUMBERS[val];
+                            abeliskCells[i].style.color = (val === 0) ? '#000' : '#fff';
+                        }
+                    } else if (notes[i].size > 0) {
+                        let grid = document.createElement('div');
+                        grid.className = 'abelisk-notes-grid';
+                        for (let c = 0; c < 4; c++) {
+                            if (notes[i].has(c)) {
+                                let noteDiv = document.createElement('div');
+                                noteDiv.className = 'abelisk-note-item';
+                                noteDiv.style.background = (gameMode === 'classic' ? ABELISK_COLORS[c] : ADDITIVE_COLORS[c]);
+                                noteDiv.innerText = (gameMode === 'classic' ? ALPHABET[c] : ADDITIVE_NUMBERS[c]);
+                                noteDiv.style.color = (c === 0) ? '#000' : '#fff';
+                                grid.appendChild(noteDiv);
+                            }
+                        }
+                        abeliskCells[i].appendChild(grid);
+                    }
+                }
+            }
+        }
+
+        function handleCellClick(index) {
+            if (MASK[index] !== -1) return;
+            if (notesMode) {
+                if (notes[index].has(selectedColor)) notes[index].delete(selectedColor);
+                else notes[index].add(selectedColor);
+            } else {
+                abeliskState[index] = (abeliskState[index] === selectedColor) ? -1 : selectedColor;
+                notes[index].clear();
+            }
+            render();
+            checkAbelianSquares();
+        }
+
+        function checkAbelianSquares() {
+            abeliskCells.forEach(c => { c.classList.remove('fracture'); c.removeAttribute('data-fracture-info'); });
+            
+            let foundFracture = false;
+            let N = abeliskState.length;
+            
+            // 1. Build prefix sums / counts in O(N)
+            let pA = new Int32Array(N + 1);
+            let pB = new Int32Array(N + 1);
+            let pC = new Int32Array(N + 1);
+            let pD = new Int32Array(N + 1);
+            let pSum = new Int32Array(N + 1);
+            
+            for (let i = 0; i < N; i++) {
+                pA[i + 1] = pA[i] + (abeliskState[i] === 0 ? 1 : 0);
+                pB[i + 1] = pB[i] + (abeliskState[i] === 1 ? 1 : 0);
+                pC[i + 1] = pC[i] + (abeliskState[i] === 2 ? 1 : 0);
+                pD[i + 1] = pD[i] + (abeliskState[i] === 3 ? 1 : 0);
+                pSum[i + 1] = pSum[i] + (abeliskState[i] !== -1 ? ADDITIVE_NUMBERS[abeliskState[i]] : 0);
+            }
+
+            // 2. Check all pairs using O(1) prefix queries
+            for (let i = 0; i < N - 1; i++) {
+                if (abeliskState[i] === -1) continue;
+                for (let len = 1; len <= Math.floor((N - i) / 2); len++) {
+                    // If any cell in the 2*len window is empty, we skip evaluating this specific square
+                    let hasEmpty = false;
+                    for (let j = 0; j < 2 * len; j++) {
+                        if (abeliskState[i + j] === -1) { hasEmpty = true; break; }
+                    }
+                    if (hasEmpty) continue;
+                    
+                    let match = false;
+                    if (gameMode === 'classic' || gameMode === 'cipher' || gameMode === 'fractal') {
+                        let da = (pA[i + len] - pA[i]) - (pA[i + 2 * len] - pA[i + len]);
+                        let db = (pB[i + len] - pB[i]) - (pB[i + 2 * len] - pB[i + len]);
+                        let dc = (pC[i + len] - pC[i]) - (pC[i + 2 * len] - pC[i + len]);
+                        let dd = (pD[i + len] - pD[i]) - (pD[i + 2 * len] - pD[i + len]);
+                        match = (da === 0 && db === 0 && dc === 0 && dd === 0);
+                    } else {
+                        let ds = (pSum[i + len] - pSum[i]) - (pSum[i + 2 * len] - pSum[i + len]);
+                        match = (ds === 0);
+                    }
+                    
+                    if (match) {
+                        foundFracture = true;
+                        for (let k = 0; k < 2 * len; k++) {
+                            abeliskCells[i + k].classList.add('fracture');
+                            abeliskCells[i + k].setAttribute('data-fracture-info', 'Echo found!');
+                        }
+                    }
+                }
+            }
+            
+            let allFilled = abeliskState.every(v => v !== -1);
+            if (allFilled && !foundFracture) {
+                document.getElementById('container').classList.add('abelisk-victory');
+                abeliskCells.forEach(c => c.classList.add('abelisk-victory-pulse'));
+                
+                let title = "PERFECT EQUILIBRIUM";
+                let desc = "You have successfully constructed an Abelian Square-Free sequence. The math holds strong.";
+                if (gameMode === 'cipher') {
+                    title = "MESSAGE DECRYPTED";
+                    desc = "You unlocked the hidden truth using pure logic.";
+                } else if (gameMode === 'fractal') {
+                    title = "STRUCTURE UNLOCKED";
+                    desc = "You have solved the Master Cipher. " + FRACTAL_PHRASE;
+                }
+                document.getElementById('victory-title').innerText = title;
+                document.getElementById('victory-desc').innerText = desc;
+                
+                setTimeout(() => {
+                    document.getElementById('victory-overlay').classList.add('visible');
+                }, 1000);
+            } else {
+                document.getElementById('container').classList.remove('abelisk-victory');
+                abeliskCells.forEach(c => c.classList.remove('abelisk-victory-pulse'));
+            }
+            
+            return foundFracture;
+        }
+
+        function switchGameMode(mode) {
+            gameMode = mode;
+            document.getElementById('tab-classic').classList.toggle('active', mode === 'classic');
+            document.getElementById('tab-additive').classList.toggle('active', mode === 'additive');
+            document.getElementById('tab-cipher').classList.toggle('active', mode === 'cipher');
+            document.getElementById('tab-fractal').classList.toggle('active', mode === 'fractal');
+            
+            document.getElementById('subtitle-classic').style.display = mode === 'classic' ? 'block' : 'none';
+            document.getElementById('subtitle-additive').style.display = mode === 'additive' ? 'block' : 'none';
+            document.getElementById('subtitle-cipher').style.display = mode === 'cipher' ? 'block' : 'none';
+            document.getElementById('subtitle-fractal').style.display = mode === 'fractal' ? 'block' : 'none';
+            
+            document.getElementById('score-counter').style.display = (mode === 'additive' || mode === 'fractal') ? 'block' : 'none';
+            document.getElementById('difficulty-badge').style.display = (mode === 'classic' || mode === 'cipher' || mode === 'fractal') ? 'block' : 'none';
+            
+            document.getElementById('newPuzzleBtn').style.display = (mode === 'classic' || mode === 'cipher') ? 'block' : 'none';
+            document.getElementById('notesToggleBtn').style.display = (mode === 'classic' || mode === 'cipher' || mode === 'fractal') ? 'flex' : 'none';
+            
+            if (mode === 'classic') startNewGame(25);
+            else if (mode === 'cipher') startNewGame();
+            else if (mode === 'fractal') startNewGame();
+            else startSandboxGame(50);
+            
+            renderPalette();
+        }
+
+        function startSandboxGame(size) {
+            MASK = Array(size).fill(-1);
+            abeliskState = [...MASK];
+            notes = Array(size).fill(null).map(() => new Set());
+            seqEl.innerHTML = '';
+            abeliskCells = [];
+            for (let i = 0; i < size; i++) {
+                let cell = document.createElement('div');
+                cell.className = 'abelisk-cell empty';
+                cell.onclick = () => handleCellClick(i);
+                seqEl.appendChild(cell);
+                abeliskCells.push(cell);
+            }
+            render();
+            renderPalette();
+        }
+
+        function toggleNotesMode() {
+            notesMode = !notesMode;
+            document.getElementById('notesToggleBtn').classList.toggle('active');
+            document.getElementById('notesToggleBtn').innerText = `✏️ Notes: ${notesMode ? 'ON' : 'OFF'}`;
+        }
+
+        function resetGame() {
+            abeliskState = [...MASK];
+            notes.forEach(n => n.clear());
+            render();
+            renderPalette();
+            checkAbelianSquares();
+        }
+
+        // --- PUZZLE GENERATOR LOGIC ---
+        function isAbelianSquareFree(seq) {
+            let end = seq.length - 1;
+            if (end < 1) return true;
+            for (let len = 1; len <= Math.floor((end + 1) / 2); len++) {
+                let counts = [0, 0, 0, 0];
+                for (let i = 0; i < len; i++) {
+                    counts[seq[end - i]]++;
+                    counts[seq[end - len - i]]--;
+                }
+                if (counts[0] === 0 && counts[1] === 0 && counts[2] === 0 && counts[3] === 0) return false;
+            }
+            return true;
+        }
+
+        function generateValidSequence(N) {
+            let seq = [];
+            function backtrack() {
+                if (seq.length === N) return true;
+                let colors = [0, 1, 2, 3];
+                for (let i = colors.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [colors[i], colors[j]] = [colors[j], colors[i]];
+                }
+                for (let c of colors) {
+                    seq.push(c);
+                    if (isAbelianSquareFree(seq)) {
+                        if (backtrack()) return true;
+                    }
+                    seq.pop();
+                }
+                return false;
+            }
+            backtrack();
+            return seq;
+        }
+
+        function isBoardValid(seq, changedIdx = -1) {
+            for (let i = 0; i < seq.length - 1; i++) {
+                if (seq[i] === -1) continue;
+                for (let len = 1; len <= Math.floor((seq.length - i) / 2); len++) {
+                    if (changedIdx !== -1 && (i > changedIdx || i + 2 * len - 1 < changedIdx)) continue;
+                    let hasEmpty = false;
+                    for (let j = 0; j < 2 * len; j++) {
+                        if (seq[i + j] === -1) { hasEmpty = true; break; }
+                    }
+                    if (hasEmpty) continue;
+                    let counts = [0, 0, 0, 0];
+                    for (let j = 0; j < len; j++) {
+                        counts[seq[i + len + j]]++;
+                        counts[seq[i + j]]--;
+                    }
+                    if (counts[0] === 0 && counts[1] === 0 && counts[2] === 0 && counts[3] === 0) return false;
+                }
+            }
+            return true;
+        }
+
+        function countSolutions(maskedSeq, maxSolutions = 2, timeoutMs = 2000) {
+            let solutions = 0;
+            let startTime = Date.now();
+            let timedOut = false;
+            
+            function solve(idx) {
+                if (solutions >= maxSolutions || timedOut) return;
+                if (Date.now() - startTime > timeoutMs) { timedOut = true; return; }
+                
+                if (idx === maskedSeq.length) {
+                    solutions++;
+                    return;
+                }
+                
+                if (maskedSeq[idx] !== -1) {
+                    solve(idx + 1);
+                } else {
+                    for (let c = 0; c < 4; c++) {
+                        maskedSeq[idx] = c;
+                        if (isBoardValid(maskedSeq, idx)) solve(idx + 1);
+                    }
+                    maskedSeq[idx] = -1;
+                }
+            }
+            solve(0);
+            return { solutions, timedOut };
+        }
+
+        function rateDifficulty(maskedSeq) {
+            let board = [...maskedSeq];
+            
+            function logicalDeduce(currentBoard, maxDepth) {
+                let changed = true;
+                while(changed) {
+                    changed = false;
+                    let holes = [];
+                    for(let i=0; i<currentBoard.length; i++) if(currentBoard[i]===-1) holes.push(i);
+                    if(holes.length === 0) return 'solved';
+                    
+                    for(let h of holes) {
+                        let validColors = [];
+                        for(let c=0; c<4; c++) {
+                            currentBoard[h] = c;
+                            if(isBoardValid(currentBoard, h)) {
+                                if (maxDepth === 0) {
+                                    validColors.push(c);
+                                } else {
+                                    let boardCopy = [...currentBoard];
+                                    if (logicalDeduce(boardCopy, maxDepth - 1) !== 'contradiction') {
+                                        validColors.push(c);
+                                    }
+                                }
+                            }
+                            currentBoard[h] = -1;
+                        }
+                        
+                        if (validColors.length === 0) return 'contradiction';
+                        if (validColors.length === 1) {
+                            currentBoard[h] = validColors[0];
+                            changed = true;
+                        }
+                    }
+                }
+                return currentBoard.indexOf(-1) === -1 ? 'solved' : 'stuck';
+            }
+            
+            if (logicalDeduce([...board], 0) === 'solved') return "Direct";
+            if (logicalDeduce([...board], 1) === 'solved') return "1-Lookahead";
+            return "Chain";
+        }
+
+        function generateCipher(solution, phrase) {
+            let cipher = [];
+            for (let i = 0; i < phrase.length; i++) {
+                let code = phrase.charCodeAt(i);
+                if (code >= 65 && code <= 90) { // A-Z
+                    let plainOffset = code - 65;
+                    let shift = CIPHER_SHIFTS[solution[i]];
+                    let cipherOffset = (plainOffset - shift + 26) % 26;
+                    cipher.push(cipherOffset + 65);
+                } else {
+                    cipher.push(code); // space or punctuation
+                }
+            }
+            return cipher;
+        }
+
+        function generatePuzzle(N) {
+            const fullSeq = generateValidSequence(N);
+            let maskedSeq = [...fullSeq];
+            
+            let indices = Array.from({length: N}, (_, i) => i);
+            for (let i = indices.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [indices[i], indices[j]] = [indices[j], indices[i]];
+            }
+            
+            for (let idx of indices) {
+                let temp = maskedSeq[idx];
+                maskedSeq[idx] = -1;
+                let result = countSolutions(maskedSeq);
+                if (result.timedOut || result.solutions !== 1) {
+                    maskedSeq[idx] = temp; // Put it back
+                }
+            }
+            let diff = rateDifficulty(maskedSeq);
+            return { fullSeq, maskedSeq, diff };
+        }
+
+        function startNewGame(size = 25) {
+            if (gameMode === 'fractal') {
+                FULL = G85_FULL;
+                MASK = [...G85_MASK];
+                cipherText = generateCipher(FULL, FRACTAL_PHRASE);
+                document.getElementById('difficulty-badge').innerText = "Difficulty: Master (85 abeliskCells)";
+                abeliskState = [...MASK];
+                notes = Array(MASK.length).fill(null).map(() => new Set());
+                seqEl.innerHTML = ''; abeliskCells = [];
+                for (let i = 0; i < abeliskState.length; i++) {
+                    let cell = document.createElement('div');
+                    cell.className = 'abelisk-cell' + (MASK[i] !== -1 ? ' locked' : '');
+                    cell.onclick = () => handleCellClick(i);
+                    seqEl.appendChild(cell); abeliskCells.push(cell);
+                }
+                document.getElementById('victory-overlay').classList.remove('visible');
+                document.getElementById('container').classList.remove('abelisk-victory');
+                render();
+                renderPalette();
+                checkAbelianSquares();
+                return;
+            }
+
+            document.getElementById('loading-overlay').classList.add('visible');
+            document.getElementById('difficulty-badge').innerText = "Difficulty: Generating...";
+            setTimeout(() => {
+                let actualSize = size;
+                if (gameMode === 'cipher') {
+                    currentPhrase = CIPHER_PHRASES[Math.floor(Math.random() * CIPHER_PHRASES.length)];
+                    actualSize = currentPhrase.length;
+                }
+                
+                const puz = generatePuzzle(actualSize);
+                FULL = puz.fullSeq;
+                MASK = puz.maskedSeq;
+                
+                if (gameMode === 'cipher') {
+                    cipherText = generateCipher(FULL, currentPhrase);
+                }
+                
+                document.getElementById('difficulty-badge').innerText = "Difficulty: " + puz.diff;
+                abeliskState = [...MASK];
+                notes = Array(MASK.length).fill(null).map(() => new Set());
+                seqEl.innerHTML = ''; abeliskCells = [];
+                for (let i = 0; i < abeliskState.length; i++) {
+                    let cell = document.createElement('div');
+                    cell.className = 'abelisk-cell' + (MASK[i] !== -1 ? ' locked' : '');
+                    cell.onclick = () => handleCellClick(i);
+                    seqEl.appendChild(cell); abeliskCells.push(cell);
+                }
+                document.getElementById('loading-overlay').classList.remove('visible');
+                document.getElementById('victory-overlay').classList.remove('visible');
+                document.getElementById('container').classList.remove('abelisk-victory');
+                abeliskCells.forEach(c => c.classList.remove('abelisk-victory-pulse'));
+                
+                render();
+                renderPalette();
+                checkAbelianSquares();
+            }, 100);
+        }
+
+        function toggleLetters() {
+            const body = document.body;
+            const btn = document.getElementById('modeToggleBtn');
+            body.classList.toggle('hide-letters');
+            if (body.classList.contains('hide-letters')) {
+                btn.innerText = "Show Letters";
+            } else {
+                btn.innerText = "Hide Letters";
+            }
+        }
+
+// Note: In index.html, we just start in fractal mode by default.
+function abeliskInit() {
+    gameMode = 'fractal';
+    startNewGame(85);
+}
+abeliskInit();
