@@ -1,0 +1,10 @@
+# Preservation artifacts — byte-exact fidelity is the point of this directory.
+#
+# Without this, core.autocrlf=true rewrites LF to CRLF on checkout, and a fresh
+# clone would produce files that do NOT hash to the SHA256 values documented in
+# README.md §6 and §7. -text disables all end-of-line conversion in both
+# directions, so what is checked out is byte-identical to what was preserved.
+#
+# Do not remove. Do not add files here that are meant to be editable.
+
+* -text
