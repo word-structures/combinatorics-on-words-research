@@ -64,6 +64,12 @@ Read this before writing to `MATH_CLAIMS.md`, `NEGATIVE_RESULTS.md`, or any tab-
 - The check must use a different code path than the one that produced the claim.
 - If a reported artifact (a word, a count) doesn't match on re-verification — including simple things like exact length — stop and resolve the discrepancy before writing anything down permanently.
 
+**Name the dimensions.** "Independent" is not a property a check either has or lacks; it is a list. State, for each re-verification, which of these actually differ from the original: **derivation** (the mathematical argument), **algorithm**, **data representation**, **input generation**, **language**, **runtime**, **author**. A check that shares the derivation is not independent evidence for the derivation, however different its code is.
+
+Two checks that share a conceptual error are not independent merely because they live in separate files, were written at different times, or were produced by different sessions. The shared component is exactly where the risk sits, so it is the component that must be named rather than the differing ones.
+
+**This project has already paid for this lesson once:** `NEGATIVE_RESULTS.md` §10 records a definition-level verifier that worked flawlessly and still did not check what it was meant to check — *"the independence axis was wrong, not the idea."* Listing the axes in advance is what would have caught it.
+
 ---
 
 ## 6. Self-Assessment Discipline
@@ -86,9 +92,37 @@ Read this before writing to `MATH_CLAIMS.md`, `NEGATIVE_RESULTS.md`, or any tab-
 - [ ] Was this number computed exhaustively, or extrapolated/estimated? Label which.
 - [ ] Was the reduction factor (e.g. a symmetry-based dedup) verified against the raw, unreduced computation at least once?
 - [ ] Does the claimed artifact (word, file, string) match its own stated metadata (length, mode, alphabet) on direct inspection?
+- [ ] Does the verifying script contain the expected value as a literal? If so it is a **drift detector, not verification** — independent confirmation requires a different derivation path. (A drift detector is worth having; it just must not be reported as a check of the value.)
 
 ---
 
 ## 9. One-Line Summary for New Sessions
 
 > Verify before citing. Scope before generalizing. A longer finite example is not a proof of anything infinite. Never let a restricted rule's result stand in for the general one. Re-check everything from scratch before it goes in the ledger. Report results in numbers, not adjectives.
+
+---
+
+## 10. Verification Boundary and Claim Boundary
+
+*Added after §9 deliberately: §9 is referenced elsewhere as "the one-line summary", so it keeps its number.*
+
+**Rule:** What the machine established and what the project states are two different boundaries. When they differ — and they almost always do — **write the gap down in the same place as the result**, not in a separate caveats document that can be read apart from it.
+
+The verification boundary is what a specific run actually decided, at the parameters it actually used. The claim boundary is the sentence the project is willing to defend. A result is only safe to record when both are stated and the distance between them is visible.
+
+**Recurring gap types.** Each of these has occurred in this project:
+
+| Verified | Often written as |
+|---|---|
+| a finite window of a word | a property of the infinite word |
+| a bounded parameter range (`K ∈ [6,40]`, `m ∈ [2,120]`) | all values of that parameter |
+| one fixed morphism family, one source morphism | arbitrary morphisms |
+| a sampled benchmark on one machine | a workload-independent speedup |
+| two implementations agreeing | the mathematics being proved |
+| no local citation found | the result being new |
+
+The first three are covered in detail by §2 (Scope Precision) and §3 (Finite Computation and Infinite Claims); the fourth by §7; the sixth by §1. This section does not restate them — it names the shared shape so the pattern is recognisable in cases the earlier sections do not anticipate.
+
+**The composition trap.** When two verified stages are combined, the claim's boundary is the *union* of their boundaries, not the tighter one. A live instance: the L=5 Route-C pipeline's Stage A examines the first **98,415** coded symbols while Stage B examines the first **3,645**. A combined statement's window is 98,415 — 27× larger than the number a reader would take from the Stage-B side alone. Nothing was wrong with either stage; the gap lives entirely in the join.
+
+**Practical test before recording anything:** write one sentence for what was verified and one for what is being claimed. If they are the same sentence, one of them is wrong.

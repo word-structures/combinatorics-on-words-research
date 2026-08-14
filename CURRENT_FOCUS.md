@@ -1,6 +1,6 @@
 # Current Focus
 
-**Updated:** 2026-08-07
+**Updated:** 2026-08-14
 **Review due:** 2026-09-06 (end of the bootstrap allocation window)
 **Full roadmap:** `ROADMAP.md` · **Research authority:** `NEXT_STEP.md`
 
@@ -41,6 +41,40 @@ This means no formally recorded implementation task is active. It does not mean 
 project is inactive: governance, documentation, and infrastructure work has merged
 since TASK-0001 under direct owner instruction rather than under a recorded successor
 implementation task. No successor implementation task has been selected or authorized.
+
+## Long-running computation in flight — descriptive, not an authorized epic
+
+**This is not an authorized epic and not a task.** It is recorded here so that a reader
+of this file alone learns that a large computation is occupying this machine, and does
+not start a conflicting or duplicate campaign.
+
+```text
+Name        L=5 Route-C full-family closure campaign ("H4")
+Location    C:\MSVC\L5_FULL_CLOSURE_CAMPAIGN_1\results_h4\   (outside this repository)
+State       IN FLIGHT — not complete
+Progress    read it from the campaign artifacts; deliberately not copied here
+Authority   results_h4\FINAL_AUDIT.txt — the only completion signal
+Claim       NONE, until that audit exists and independently passes
+```
+
+**No progress figure is recorded here on purpose.** A shard count is stale the moment it
+is written, and a stale count in a canonical file invites someone to reason from it. The
+campaign's own artifacts are the only current source; completion is signalled by the
+audit file, not by a count.
+
+**Partial progress is not a result.** A campaign that has not finished has decided nothing
+about the L=5 family: the shards not yet processed could contain a survivor, which would
+be a positive finding rather than an error. No `MATH_CLAIMS.md` row may cite this campaign
+until the campaign audit exists and independently passes. Row 49 is unaffected and must
+not be reworded on the strength of partial progress.
+
+**Naming hazard.** A file named `FINAL_AUDIT.txt` already exists elsewhere in the tree
+(`imported-artifacts\L5_FINAL_VERIFICATION_4\six_lane_results\`). That one is a
+**six-shard rehearsal** of the tooling and establishes nothing about the L=5 family. Only
+the campaign path above is authoritative.
+
+**This block needs a revisit when the campaign ends** — at that point the audit result,
+not a progress figure, is what belongs here.
 
 ---
 

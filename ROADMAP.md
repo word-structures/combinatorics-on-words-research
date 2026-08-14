@@ -105,6 +105,27 @@ irreversible rewrite.
 | B16 golden-control pilot | ready |
 | All D40-derived research | **blocked on OD-2** |
 
+**Research programmes recorded under WS-2.** Proposals, not authorized work and not
+results. **No programme below is an established result**, and none may claim novelty: the
+referenced bibliography was not located, so novelty risk is stated conservatively and is
+unadjudicated. The summaries here are self-contained; the longer working drafts they were
+condensed from are unpublished laboratory material and are deliberately not cited as an
+authority by this document.
+
+| # | Programme | Why it matters | Evidence today | First bounded experiment | Novelty risk | Depends on |
+|---|---|---|---|---|---|---|
+| 1 | Exhaustive finite morphism-family classification | the project's most mature concrete asset | row 49 (`COMPUTED`); **campaign pending** — see `CURRENT_FOCUS.md` | finish the running campaign | medium-high | campaign completion + independent audit |
+| 2 | Unified obstruction / Δ calculus | would replace case-by-case elimination with a finite obstruction basis | **hypothesis only** — surface resemblance; the one concrete instance is the Stage-A condition `M_g·d = 0` (row 80) | cluster `(K, pos)` from existing shard summaries; data already in hand | high | none (data exists) |
+| 3 | Proof-guided exact search / branch-death explanation | turns dead branches into explanations rather than pruning | mixed, mostly negative | gated | high | programme 2's first experiment |
+| 5 | Experimental algorithmics of exact word search | the project's strongest negative-result corpus | a bounded positive performance improvement with exact path parity has been independently evidenced; several other reported figures were **not** reproducible and are excluded | curate existing results | medium | none |
+
+**Programme 2 is a hypothesis, not a programme result.** The project's standing
+transfer warning applies to it directly: `NEGATIVE_RESULTS.md` §12 records a technique
+that worked dramatically in its own setting and lost in another. The one durable by-product
+available now is an *observation*, not a theorem: `M_g·d` is unchanged by adding a
+constant vector to every column of `M_g`, so the Stage-A test distinguishes codings only
+up to a global Parikh shift.
+
 ### WS-3 — Verification and research software
 
 **Why it matters:** it produces the Layer-4 checker that WS-1 and WS-2 both need.
@@ -118,6 +139,15 @@ irreversible rewrite.
 | Record registry with persistent IDs, checksums, AA2F/AA2FR separated | ready |
 | `REP` / `IND` level definitions (OD-12) | ready |
 | Java engine migration and v1.2 release | **deferred** — OD-13, org now exists; migration still needs its own bounded, separately approved task |
+
+**Research programmes recorded under WS-3.** Same status as the WS-2 table: proposals,
+not authorized work, not results, no novelty claim.
+
+| # | Programme | Why it matters | Evidence today | First bounded experiment | Novelty risk | Depends on |
+|---|---|---|---|---|---|---|
+| 4 | Computational proof / certificate protocol | what a computation must emit to be checkable without re-running it | partially in place already: per-shard hashes, frozen core fingerprint, golden fixtures, mutation tests | define a certificate for one kill (coding ID → `(K, pos)` witness) and check a sample without the C++ engine | high as general method; lower as a domain instantiation | none |
+| 7 | Negative-result memory as an active resource | can structured negative memory prevent repeated dead ends? | **the mechanism already exists** — `NEGATIVE_RESULTS.md` has permanent `§N` numbering and a finality taxonomy | track whether future sessions actually cite entries by number | medium-low as engineering | none |
+| 8 | Small formal kernels attached to large computation | a machine-checked predicate anchoring a very large search | none formal; the target is small — prefix-sum arithmetic over a ternary alphabet | formalise only "this prefix-sum test detects abelian squares with `K ∈ [6,40]`" | high | competes with programme 1 |
 
 ### WS-4 — Abelisk and pedagogy
 
@@ -143,6 +173,25 @@ irreversible rewrite.
 Standing rule: an AI-generated checker is not independent merely because it came from
 another session. Independence is argued in terms of code lineage, algorithmic
 independence, shared test data, shared assumptions, and model exposure.
+
+**Research programme 6 — verifier-grounded human/AI/verifier working architecture.**
+Recorded under WS-5 as a **research programme, not adopted as policy**. The question is
+whether deterministic verification plus persistent negative memory measurably improves
+AI-assisted mathematical research. The proposal originates in an unpublished working
+document whose architecture is explicitly **not** adopted here, and which this roadmap
+does not treat as an authority. What the project has taken from it is vocabulary only,
+already folded into `EPISTEMIC_DISCIPLINE.md` §5 and §10.
+
+**Hard constraint: n = 1.** One project, one owner, one AI lineage, no control arm. **No
+comparative effectiveness claim about AI-assisted research is supportable on this
+evidence**, and none may be made — including from individual episodes written up as
+laboratory records, which are not evaluations of methodology. Adjacent published work exists
+and has not been surveyed, so no novelty claim attaches either.
+
+| Item | State |
+|---|---|
+| Programme 6 — verifier-grounded discovery | **proposal only**; not policy; `n = 1` |
+| Whether the cheap process items catch real defects over one quarter | first bounded experiment; not started |
 
 ### WS-6 — Community and open participation
 

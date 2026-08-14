@@ -22,6 +22,8 @@ proposing anything.
 
 | Date | # | Final? | What collapsed | In one sentence |
 |---|---|---|---|---|
+| 2026-08-14 | [§24](#24-a-headline-aggregate-computed-somewhere-else-without-the-hand-off-being-recorded) | **CONTEXTUAL** | A pipeline script's own headline aggregate | `multinomial4`'s factorial table stops at `4!`, so at L=5 the Stage-A filter printed `NaN` for its total-codings line, and the figure actually used (3,316,540,933,500) came from a different script with the substitution recorded nowhere. |
+| 2026-08-04 | [§23](#23-route-b-intermediate-alphabet-mathematically-excluded-for-h_8) | **NECESSARY** | Route B (intermediate alphabet) for $h_8$ | $M_{h_8}$'s expanding subspace has dimension 4 and any ternary $M_g$ has kernel dimension $\ge 5$, so by Grassmann the intersection is non-trivial for *every* ternary $g$ — Prop 9's decision procedure is inapplicable to $h_8$ (independent verification still pending per the entry's own note). |
 | 2026-08-04 | [§22](#22-route-a-exhaustion-up-to-length-7-by-prefix-scan) | **BOUNDED** | Route A (3→3 non-uniform morphisms, max length 7) | Exhausted exactly: out of 493,848 pure non-uniform ternary morphisms with max length 7, all produce an abelian square of K >= 2 within the first 18 characters of the fixed point. |
 | 2026-08-01 | [§21](#21-a-certified-standalone-verifier-that-never-ran-the-verification) | **NECESSARY** / CONTEXTUAL | A standalone CLI's self-reported "Certified" banner | Three independent bugs (never loaded the morphism, a structurally-impossible default, an unpruned DFS) made a program print `[CERTIFIED]` for a computation it never ran; fixed same commit, but the module has produced no other result since |
 | 2026-08-01 | [§20](#20-spiral-dynamics-complex-eigenvalues-as-a-requirement-for-avoiding-abelian-squares) | **NECESSARY** | "Spiral dynamics": complex eigenvalues as a requirement | Prediction verified (g85 has −8±3i, h6 is real) but refuted by row 5: h6^ω(a) IS abelian-square-free with a purely real spectrum |
@@ -388,3 +390,42 @@ option, not attempted here).**
 - The $h_8$ hypothesis is fatally flawed for the template method. No finite parent set can be computed via Proposition 9 for any ternary mapping of $h_8^\omega(e)$.
 - This structural failure aligns with the empirical failure found by `scripts/h8-image-sweep.js`, which found 0 survivors for $L=2$.
 - **Finality: NECESSARY.** The exclusion is based on a mathematical proof (linear algebra), not bounded search. (Pending independent verification by Claude, as requested by the user, before fully closing this branch).
+
+## 24. A headline aggregate computed somewhere else, without the hand-off being recorded
+
+*Logged 2026-08-14. Engineering/methodological entry. Defect reproduced live against
+`scripts/parikh-block-filter.js`; see also `research/provenance/STAGE_A_L5_MANIFEST.md` §3.*
+
+**Hypothesis (implicit, never stated):** the Stage-A filter script
+`scripts/parikh-block-filter.js` reports its own accounting, so the total-codings
+figure printed alongside its survivor count is that script's own output.
+
+**Why it was shot down:**
+- The script's helper `multinomial4` carries the factorial table `[1, 1, 2, 6, 24]`
+  — `0!` through `4!`. At `L = 5` the lookup `fact[5]` is `undefined`, so the
+  multinomial evaluates to `NaN`.
+- Confirmed by direct call: `multinomial4([3,1,1]) → NaN`, and the L=5 run prints
+  `total concrete string codings ... : NaN`.
+- The figure the project actually uses, **3,316,540,933,500**, was produced by a
+  *different* script, `l5_accounting_and_strata.js`. That value is correct — it was
+  independently re-derived during the 2026-08-13 intake audit — but **the
+  substitution is recorded nowhere**: not in the filter script, not in a comment,
+  not in a log line.
+- Nothing was mathematically wrong. Elimination decisions and the survivor list are
+  unaffected, and the helper is correct for `L ≤ 4`, so the L=4 measurements in
+  `MATH_CLAIMS.md` rows 80 and 82 stand.
+
+**Conclusion:**
+- **The lesson is about provenance, not arithmetic.** When a pipeline's headline
+  aggregate is computed by a different program than the one that produced the data,
+  the hand-off must be written down at the point of substitution. Otherwise the
+  provenance silently forks, and the next reader — who sees a plausible number next
+  to a survivor count — has no way to tell that the two came from different places.
+- A visible `NaN` is the benign case: it fails loudly. The dangerous version of this
+  pattern is a broken aggregate that still prints a plausible number.
+- Compare §21, where a program announced `[CERTIFIED]` for work it never ran. Same
+  class: **a program's own output is not audited by any of the checks that guard
+  prose in this repository.**
+- **Finality: CONTEXTUAL.** The defect itself is a two-character fix (extend the
+  factorial table). The transfer warning — that an aggregate's origin must be
+  recorded where the substitution happens — is the part worth keeping.
