@@ -55,18 +55,24 @@
     }
   }
 
+  // Spaced letters read one at a time in a screen reader; an unspaced word
+  // is read as a single unintelligible token.
+  function spellOut(word) {
+    return word.split('').join(' ');
+  }
+
   function renderOnboarding() {
     let html = '';
     
     if (state.onboardingStep === 1) {
       html = `
         <div class="wrap section">
-          <div class="onboarding level-fade-in">
+          <div class="onboarding level-fade-in" id="onboarding-step" tabindex="-1">
             <h2 class="onboarding__title">The hidden echo</h2>
             <div class="onboarding__content">
               <p>Look at these two blocks:</p>
               <div class="onboarding__example">
-                <div class="word-container">
+                <div class="word-container" role="img" aria-label="Two blocks: a b, then b a.">
                   <span class="g-cell g-cell--a">a</span>
                   <span class="g-cell g-cell--b">b</span>
                   <span class="scaffold-marker"></span>
@@ -85,7 +91,7 @@
     } else if (state.onboardingStep === 2) {
       html = `
         <div class="wrap section">
-          <div class="onboarding level-fade-in">
+          <div class="onboarding level-fade-in" id="onboarding-step" tabindex="-1">
             <h2 class="onboarding__title">Find the hidden echo</h2>
             <div class="onboarding__content">
               <p>One of these pairs is a hidden echo. Which one?</p>
@@ -93,14 +99,14 @@
               
               <div class="onboarding__options">
                 <button class="onboarding-btn" onclick="handleIdentifyAnswer(this, false)">
-                  <div class="word-container">
+                  <div class="word-container" role="img" aria-label="Two blocks: a a, then a b.">
                     <span class="g-cell g-cell--a">a</span><span class="g-cell g-cell--a">a</span>
                     <span class="scaffold-marker"></span>
                     <span class="g-cell g-cell--a">a</span><span class="g-cell g-cell--b">b</span>
                   </div>
                 </button>
                 <button class="onboarding-btn" onclick="handleIdentifyAnswer(this, true)">
-                  <div class="word-container">
+                  <div class="word-container" role="img" aria-label="Two blocks: c b a, then a b c.">
                     <span class="g-cell g-cell--c">c</span><span class="g-cell g-cell--b">b</span><span class="g-cell g-cell--a">a</span>
                     <span class="scaffold-marker"></span>
                     <span class="g-cell g-cell--a">a</span><span class="g-cell g-cell--b">b</span><span class="g-cell g-cell--c">c</span>
@@ -114,11 +120,11 @@
     } else if (state.onboardingStep === 3) {
       html = `
         <div class="wrap section">
-          <div class="onboarding level-fade-in">
+          <div class="onboarding level-fade-in" id="onboarding-step" tabindex="-1">
             <h2 class="onboarding__title">What mathematicians call it</h2>
             <div class="onboarding__content">
               <div class="onboarding__example">
-                <div class="word-container">
+                <div class="word-container" role="img" aria-label="Two blocks: a b c, then c a b.">
                   <span class="g-cell g-cell--a">a</span><span class="g-cell g-cell--b">b</span><span class="g-cell g-cell--c">c</span>
                   <span class="scaffold-marker"></span>
                   <span class="g-cell g-cell--c">c</span><span class="g-cell g-cell--a">a</span><span class="g-cell g-cell--b">b</span>
@@ -147,9 +153,14 @@
       // Setup first level
       state.onboardingStep = 'complete';
       state.currentLevelIndex = 0;
+      setFocus('.choice-btn--a');
       loadLevel();
     } else {
       state.onboardingStep = step;
+      // The step's DOM is replaced wholesale, which drops focus to the body.
+      // Move it to the new step container so keyboard and screen-reader users
+      // continue from the new heading rather than from the top of the page.
+      setFocus('#onboarding-step');
       render();
     }
   };
@@ -160,6 +171,7 @@
       setTimeout(() => advanceOnboarding(3), 600);
     } else {
       btn.classList.add('is-incorrect');
+      announce("Not that one. Count each block again.");
       setTimeout(() => btn.classList.remove('is-incorrect'), 1000);
     }
   };
@@ -170,6 +182,7 @@
       setTimeout(() => advanceOnboarding('complete'), 600);
     } else {
       btn.classList.add('is-incorrect');
+      announce("Not that one. Try another answer.");
       setTimeout(() => btn.classList.remove('is-incorrect'), 1000);
     }
   };
@@ -178,18 +191,31 @@
 
   function loadLevel() {
     const level = window.AbeliskLevels[state.currentLevelIndex];
+    // Past the last level there is nothing to load: nextLevel() increments the
+    // index beyond the array, and reading startingWord off undefined threw a
+    // TypeError before renderGame() could reach its completion branch.
+    if (!level) {
+      state.extensionsMade = 0;
+      state.hintLevel = 0;
+      state.failure = null;
+      render();
+      return;
+    }
     state.currentWord = level.startingWord;
     state.extensionsMade = 0;
     state.hintLevel = 0;
     state.failure = null;
     render();
+    // A level change replaces the whole stage; without this the transition is
+    // silent to a screen reader.
+    announce(`Level ${state.currentLevelIndex + 1} of ${window.AbeliskLevels.length}: ${level.title}. Word so far: ${spellOut(state.currentWord)}.`);
   }
 
   function renderGame() {
     const level = window.AbeliskLevels[state.currentLevelIndex];
     if (!level) {
       appEl.innerHTML = `
-        <div class="wrap wrap--narrow section">
+        <div class="wrap wrap--narrow section" id="abelisk-complete" tabindex="-1">
           <h2>You can see the hidden echoes now</h2>
           <p class="lede">You have finished every teaching level in Abelisk.</p>
           
@@ -209,6 +235,11 @@
           </ul>
         </div>
       `;
+      // Past the last level there is no choice button to return to, so the
+      // focus target queued by nextLevel() would not resolve and focus would
+      // fall back to the document body.
+      setFocus('#abelisk-complete');
+      announce("You have finished every teaching level in Abelisk.");
       return;
     }
 
@@ -249,7 +280,13 @@
     // Render word
     const wordToRender = state.failure ? state.failure.attemptedWord : state.currentWord;
     
-    html += `<div class="word-container" aria-label="Current word: ${wordToRender}">`;
+    // role="img" is required for the aria-label to be honoured: on a plain div
+    // (role=generic) aria-label is prohibited by ARIA and dropped by screen
+    // readers, so the word was previously announced as bare unlabelled letters.
+    const wordLabel = state.failure
+      ? `Attempted word: ${spellOut(wordToRender)}`
+      : `Current word: ${spellOut(wordToRender)}`;
+    html += `<div class="word-container" role="img" aria-label="${wordLabel}">`;
     for (let i = 0; i < wordToRender.length; i++) {
       const char = wordToRender[i];
       let classes = `g-cell g-cell--${char}`;
@@ -490,9 +527,17 @@
 
   function announce(message) {
     const announcer = document.getElementById('a11y-announcer');
-    if (announcer) {
+    if (!announcer) return;
+    // Writing identical text into an aria-live region is not a change, so
+    // several screen readers stay silent. Two consecutive safe placements of
+    // the same letter produce the same string, so clear the region first and
+    // write in a later task to guarantee the mutation is observed. A timer is
+    // used rather than requestAnimationFrame, which never fires while the tab
+    // is hidden and would drop the announcement entirely.
+    announcer.textContent = '';
+    window.setTimeout(function() {
       announcer.textContent = message;
-    }
+    }, 60);
   }
 
   // Kickoff
