@@ -5,6 +5,25 @@
 
 ---
 
+> ## ⚠ THIS DOCUMENT PREDATES THE COMPLETION OF H4 — read `CURRENT_FOCUS.md` first
+>
+> **Banner added 2026-08-15. The body below is unchanged historical record.**
+>
+> `CURRENT_FOCUS.md` is authoritative wherever the two documents conflict.
+>
+> **Superseded for L=5.** This document's carried-over target *"Pin down L\* (L=5, L=6)"*
+> and its instruction *"Do not run the full L=5 or L=6 Parikh filter without measuring a
+> sample first"* are **superseded for L=5** by the completed H4 campaign, recorded as
+> `MATH_CLAIMS.md` **row 111** with its evidence in
+> `docs/evidence/h4-l5-full-closure-2026-08/`. The full L=5 computation has been run,
+> audited and independently reviewed: 0 survivors, bounded `COMPUTED` result.
+>
+> **`L = 6` remains open**, and the instruction to measure a sample before committing to a
+> full run still applies there. H4 says nothing about `L ≥ 6`; any suggestion that L=5's
+> outcome predicts L=6 is an exploratory hypothesis, not a result.
+>
+> Nothing else in this file is retracted by H4.
+
 # HANDOFF — 2026-08-04 (supersedes the sections below where they conflict)
 
 **Start here (copy verbatim into a new session):**

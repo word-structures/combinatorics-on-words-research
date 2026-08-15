@@ -97,6 +97,7 @@ exhausted. They stay closed.
 | The ternary abelian-square-free language ends at length 7 | exhaustive search | 1 |
 | **No** k-uniform ternary morphism, k ≤ 6, produces a Mäkelä fixed point | exhaustive sweep | 36 |
 | **Route (c):** no uniform map Σ₆ → Σ₃^L, L ≤ 5, produces a Mäkelä word from h₆'s fixed point | exhaustive sweep | 49 |
+| **Route (c) at L=5, full coding family:** all 243⁶ = 205,891,132,094,649 uniform codings eliminated by the two H4 preregistered finite tests; 0 survivors | two-stage exhaustive campaign (Parikh obstruction + exact prefix check) | 111 |
 | **Route (c) at L=6:** all 200,106 canonical codings avoiding K ∈ [2,5] also violate K ∈ [6,100] | locality-CSP + exhaustive escalation | 78, 79 |
 | **No coding at all** at L = 1, 2, 3 avoids the large periods, small window ignored (S_large(L) = 0) | exhaustive sweep | 79 |
 | No infinite [2,5]-free word exists over a two-letter sub-alphabet | cycle search in the container graph | 51 |
