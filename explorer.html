@@ -226,8 +226,8 @@
     /* =====================================================
        TIMELINE STYLES
        ===================================================== */
-    .timeline-wrap { padding: 20px 0; }
-    .timeline-track { position: relative; display: flex; align-items: flex-end; gap: 0; height: 280px; padding-bottom: 40px; }
+    .timeline-wrap { padding: 20px 0; overflow-x: auto; }
+    .timeline-track { position: relative; display: flex; align-items: flex-end; gap: 0; height: 280px; padding-bottom: 40px; min-width: max-content; }
     .timeline-track::after {
       content: '';
       position: absolute; bottom: 40px; left: 0; right: 0; height: 2px; background: #ccc;
@@ -497,7 +497,7 @@
     <button class="btn hidden" id="btn-run-abc">Run ABC Enumeration</button>
 
     <div class="speed-control" id="speed-wrap">
-      <label>Speed:</label>
+      <label for="speed-slider">Speed:</label>
       <input type="range" id="speed-slider" min="1" max="100" value="70">
     </div>
   </div>
@@ -664,7 +664,7 @@
     <div class="hint-box"><strong>What to listen for:</strong> Each chunk of 85 letters is one &ldquo;block&rdquo; of the morphism. Because the images of a, b, c, d are cyclic permutations of each other, all chunks contain exactly the same pitch classes (C, E, G, A &mdash; a C major 6th chord). The <em>rhythm</em> shifts block by block, but no rhythmic pattern ever repeats in the same way &mdash; that is the sonic signature of abelian square-freeness. Try chunk sizes of 1, 85, or 170 for different effects.</div>
 
     <div style="display:flex; gap:15px; align-items:center; font-family:Arial; font-size:0.9rem; margin-bottom:15px; flex-wrap:wrap;">
-      <label>Chunk size:</label>
+      <label for="audio-chunk-input">Chunk size:</label>
       <input type="number" id="audio-chunk-input" value="85" min="1" max="10000" style="width: 70px; padding: 4px;">
       <button class="btn" id="btn-audio-generate">Generate Tracks</button>
       <div class="audio-ui" id="audio-ui" style="margin:0; padding-left:20px; border-left:1px solid #ccc; flex:1;">
@@ -765,6 +765,7 @@
     <div class="unf-layout">
       <div class="unf-left">
         <div class="unf-input-row">
+          <label for="unf-input" class="sr-only">Enter word to extend (a,b,c,d)</label>
           <input type="text" class="unf-input" id="unf-input" placeholder="enter word (a,b,c,d)" maxlength="50" value="abcbdbcbacbdcdacbdac">
           <button class="btn" id="unf-run">Extend</button>
         </div>
@@ -885,10 +886,10 @@
       <div style="flex:1; min-width:300px; border:1px solid var(--border); padding:15px; border-radius:5px; background:#fff;">
         <h3 style="margin-top:0;">Morphism Definition</h3>
         <div style="display:flex; flex-direction:column; gap:10px; font-family:monospace;">
-          <div><label style="display:inline-block; width:40px; font-weight:bold; color:var(--letter-a);">a &rarr;</label> <input type="text" id="morph-input-a" style="width:calc(100% - 60px); padding:5px; font-family:monospace;" placeholder="e.g. abcd..."></div>
-          <div><label style="display:inline-block; width:40px; font-weight:bold; color:var(--letter-b);">b &rarr;</label> <input type="text" id="morph-input-b" style="width:calc(100% - 60px); padding:5px; font-family:monospace;" placeholder="e.g. dabc..."></div>
-          <div><label style="display:inline-block; width:40px; font-weight:bold; color:var(--letter-c);">c &rarr;</label> <input type="text" id="morph-input-c" style="width:calc(100% - 60px); padding:5px; font-family:monospace;" placeholder="e.g. cdab..."></div>
-          <div><label style="display:inline-block; width:40px; font-weight:bold; color:var(--letter-d);">d &rarr;</label> <input type="text" id="morph-input-d" style="width:calc(100% - 60px); padding:5px; font-family:monospace;" placeholder="e.g. bcda..."></div>
+          <div><label for="morph-input-a" style="display:inline-block; width:40px; font-weight:bold; color:var(--letter-a);">a &rarr;</label> <input type="text" id="morph-input-a" style="width:calc(100% - 60px); padding:5px; font-family:monospace;" placeholder="e.g. abcd..."></div>
+          <div><label for="morph-input-b" style="display:inline-block; width:40px; font-weight:bold; color:var(--letter-b);">b &rarr;</label> <input type="text" id="morph-input-b" style="width:calc(100% - 60px); padding:5px; font-family:monospace;" placeholder="e.g. dabc..."></div>
+          <div><label for="morph-input-c" style="display:inline-block; width:40px; font-weight:bold; color:var(--letter-c);">c &rarr;</label> <input type="text" id="morph-input-c" style="width:calc(100% - 60px); padding:5px; font-family:monospace;" placeholder="e.g. cdab..."></div>
+          <div><label for="morph-input-d" style="display:inline-block; width:40px; font-weight:bold; color:var(--letter-d);">d &rarr;</label> <input type="text" id="morph-input-d" style="width:calc(100% - 60px); padding:5px; font-family:monospace;" placeholder="e.g. bcda..."></div>
         </div>
         <button class="btn" id="btn-eval-morph" style="margin-top:15px; width:100%;">Evaluate Morphism</button>
       </div>
@@ -1012,7 +1013,7 @@
           <option value="aa2f">aa2f (period 1 allowed)</option>
           <option value="aa2fr" selected>aa2fr (aa2f + forbid4)</option>
         </select>
-        <label>Direction:</label>
+        <label for="aa2fr-dir">Direction:</label>
         <select id="aa2fr-dir" style="background:#fff; color:#333; border:1px solid #ccc; padding:6px; border-radius:4px; font-family:inherit;">
           <option value="right" selected>Extend to Right</option>
           <option value="left">Extend to Left</option>
@@ -1021,7 +1022,7 @@
           <input type="checkbox" id="aa2fr-pause-on-collision" checked>
           Pause on collision
         </label>
-        <label>Strategy:</label>
+        <label for="aa2fr-strategy">Strategy:</label>
         <select id="aa2fr-strategy" style="background:#fff; color:#333; border:1px solid #ccc; padding:6px; border-radius:4px; font-family:inherit;">
           <option value="fixed" selected>Fixed (a→b→c)</option>
           <option value="gavrilenko">Gavrilenko (Parikh Balance)</option>
@@ -1033,14 +1034,14 @@
           <option value="experiment">Experiment (Automated Runs)</option>
           <option value="discovery">Discovery (Parallel WorkerPool)</option>
         </select>
-        <label>Workers:</label>
+        <label for="aa2fr-worker-count">Workers:</label>
         <select id="aa2fr-worker-count" style="background:#fff; color:#333; border:1px solid #ccc; padding:6px; border-radius:4px; font-family:inherit;">
           <option value="1" selected>1</option>
           <option value="2">2</option>
           <option value="4">4</option>
           <option value="8">8</option>
         </select>
-        <label>AI Support:</label>
+        <label for="aa2fr-ai-level">AI Support:</label>
         <select id="aa2fr-ai-level" style="background:#fff; color:#333; border:1px solid #ccc; padding:6px; border-radius:4px; font-family:inherit;">
           <option value="observe" selected>Observe (Log Only)</option>
           <option value="assist">Assist (Deprioritize Traps)</option>
@@ -1048,7 +1049,7 @@
         </select>
       </div>
       <div style="margin-bottom: 12px; color: #333;">
-        <label>Base Word (editable):</label><br>
+        <label for="aa2fr-base-word">Base Word (editable):</label><br>
         <textarea id="aa2fr-base-word" style="width: 100%; height: 80px; background:#fff; color:#333; border:1px solid #ccc; font-family:monospace; padding:8px; margin-top:6px; border-radius:4px;" placeholder="Enter base word (e.g. 40 letters)..."></textarea>
       </div>
       <div>
@@ -1065,7 +1066,7 @@
         <button onclick="aa2frSaveToNotebook('path', aa2frState.wordArr.join(''), 1.0)" class="control-btn" style="background:#8a6d3b; color:#fff; border:none; border-radius:4px; padding:8px 16px; cursor:pointer; margin-left:16px;">📓 Save Path</button>
       </div>
       <div>
-        Speed: <input type="range" id="aa2fr-speed" min="1" max="100" value="50">
+        <label for="aa2fr-speed">Speed:</label> <input type="range" id="aa2fr-speed" min="1" max="100" value="50">
       </div>
     </div>
 
@@ -1208,15 +1209,15 @@
 
         <div style="display:flex; flex-wrap:wrap; gap:16px; align-items:center; margin-bottom:12px; font-size:0.75rem;">
           <div>
-            <label style="color:#7f8c8d; margin-right:4px;">Runs:</label>
+            <label for="aa2fr-exp-runs" style="color:#7f8c8d; margin-right:4px;">Runs:</label>
             <input type="number" id="aa2fr-exp-runs" value="10" min="1" max="1000" style="width:60px; padding:4px; border:1px solid #ddd; border-radius:4px;">
           </div>
           <div>
-            <label style="color:#7f8c8d; margin-right:4px;">Max Steps (Timeout):</label>
+            <label for="aa2fr-exp-steps" style="color:#7f8c8d; margin-right:4px;">Max Steps (Timeout):</label>
             <input type="number" id="aa2fr-exp-steps" value="50000" min="100" style="width:80px; padding:4px; border:1px solid #ddd; border-radius:4px;">
           </div>
           <div>
-            <label style="color:#7f8c8d; margin-right:4px;">Seed:</label>
+            <label for="aa2fr-exp-seed" style="color:#7f8c8d; margin-right:4px;">Seed:</label>
             <select id="aa2fr-exp-seed" style="padding:4px; border:1px solid #ddd; border-radius:4px;">
               <option value="random">Random (Length 5)</option>
               <option value="empty">Empty</option>
@@ -1614,7 +1615,7 @@
         <br><strong>L12 Test Suite:</strong> Compares models across 10 frozen, independent AA2FR-valid initial seeds (L=12), reporting realized candidate nodes, depth curves sampled every 1,000 nodes, and a detailed stacked rejection breakdown (<code>FORBID4 only</code>, <code>square only</code>, <code>both</code>, plus <code>minSquareK</code>).
       </p>
       <div style="margin-bottom: 12px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-        <label style="font-size:0.9rem; font-weight:bold; color:#444;">Node Budget:</label>
+        <label for="val-bench-steps" style="font-size:0.9rem; font-weight:bold; color:#444;">Node Budget:</label>
         <select id="val-bench-steps" style="padding:6px 10px; border-radius:4px; border:1px solid #ccc; font-size:0.9rem;">
           <option value="25000">25,000 nodes (Fast ~1s)</option>
           <option value="50000" selected>50,000 nodes (Standard ~2s)</option>
@@ -1637,13 +1638,13 @@
         <br><strong>2.5D Isometric Spiral Mode:</strong> Re-introduces the dominant linear growth eigenvalue (3) along the Z-axis, revealing how the fractal climbs as a continuous genomic helix.
       </p>
       <div style="margin-bottom: 12px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-        <label style="font-size:0.9rem; font-weight:bold; color:#444;">Prefix Length:</label>
+        <label for="val-rauzy-iters" style="font-size:0.9rem; font-weight:bold; color:#444;">Prefix Length:</label>
         <select id="val-rauzy-iters" style="padding:6px 10px; border-radius:4px; border:1px solid #ccc; font-size:0.9rem;">
           <option value="9">3&circ;9 = 19,683 letters (Fast)</option>
           <option value="10" selected>3&circ;10 = 59,049 letters (Standard)</option>
           <option value="11">3&circ;11 = 177,147 letters (High-Res Deep)</option>
         </select>
-        <label style="font-size:0.9rem; font-weight:bold; color:#444; margin-left:10px;">View Mode:</label>
+        <label for="val-rauzy-mode" style="font-size:0.9rem; font-weight:bold; color:#444; margin-left:10px;">View Mode:</label>
         <select id="val-rauzy-mode" style="padding:6px 10px; border-radius:4px; border:1px solid #ccc; font-size:0.9rem;" onchange="valRedrawRauzy()">
           <option value="2d" selected>2D Rauzy Projection (&plusmn;&radic;3 plane)</option>
           <option value="3d">2.5D Isometric Spiral (with Z-axis growth)</option>
@@ -1668,7 +1669,7 @@
         2. <em>Optical Density Normalization:</em> Because sector width is proportional to node count (360^&#8728; / N<sub>total</sub>), AA2FR sectors appear wider/calmer simply because there are fewer nodes (4,498 vs 11,950), an optical consequence of normalization rather than structural calmness.
       </div>
       <div style="margin-bottom: 12px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-        <label style="font-size:0.9rem; font-weight:bold; color:#444;">Exhaustive Depth:</label>
+        <label for="val-sunburst-depth" style="font-size:0.9rem; font-weight:bold; color:#444;">Exhaustive Depth:</label>
         <select id="val-sunburst-depth" style="padding:6px 10px; border-radius:4px; border:1px solid #ccc; font-size:0.9rem;">
           <option value="8">Depth L=8 (6,561 max nodes ~ instant)</option>
           <option value="9">Depth L=9 (19,683 max nodes ~ fast)</option>
@@ -1880,7 +1881,7 @@
         
         <!-- Pillar 1: Scientific Objective -->
         <div style="background:#fafbfc; border:1px solid #e1e8ed; border-radius:4px; padding:15px;">
-          <h4 style="margin:0 0 8px 0; font-family:'Georgia', serif; font-size:1.05rem; color:#1a1e24; border-bottom:1px solid #eaecee; padding-bottom:6px;">1. Scientific Objective</h4>
+          <h3 style="margin:0 0 8px 0; font-family:'Georgia', serif; font-size:1.05rem; color:#1a1e24; border-bottom:1px solid #eaecee; padding-bottom:6px;">1. Scientific Objective</h3>
           <p style="margin:0 0 10px 0;">
             In combinatorics on words, verifying abelian-square-freedom over infinite morphisms often stalls at <strong>block boundaries (seams)</strong>. When two abelian-square-free blocks U and V are concatenated, Parikh vector collisions frequently emerge across the seam U &middot; V.
           </p>
@@ -1891,7 +1892,7 @@
 
         <!-- Pillar 2: Core Mechanics &amp; Algorithms -->
         <div style="background:#fafbfc; border:1px solid #e1e8ed; border-radius:4px; padding:15px;">
-          <h4 style="margin:0 0 8px 0; font-family:'Georgia', serif; font-size:1.05rem; color:#1a1e24; border-bottom:1px solid #eaecee; padding-bottom:6px;">2. Core Mechanics &amp; Algorithms</h4>
+          <h3 style="margin:0 0 8px 0; font-family:'Georgia', serif; font-size:1.05rem; color:#1a1e24; border-bottom:1px solid #eaecee; padding-bottom:6px;">2. Core Mechanics &amp; Algorithms</h3>
           <p style="margin:0 0 10px 0;">
             To achieve high-throughput scanning (hundreds of thousands of nodes/sec in browser memory), the engine relies on three algorithmic optimizations:
           </p>
@@ -1904,7 +1905,7 @@
 
         <!-- Pillar 3: Operational Workflow &amp; Usage -->
         <div style="background:#fafbfc; border:1px solid #e1e8ed; border-radius:4px; padding:15px;">
-          <h4 style="margin:0 0 8px 0; font-family:'Georgia', serif; font-size:1.05rem; color:#1a1e24; border-bottom:1px solid #eaecee; padding-bottom:6px;">3. Operational Workflow &amp; Usage</h4>
+          <h3 style="margin:0 0 8px 0; font-family:'Georgia', serif; font-size:1.05rem; color:#1a1e24; border-bottom:1px solid #eaecee; padding-bottom:6px;">3. Operational Workflow &amp; Usage</h3>
           <p style="margin:0 0 10px 0;">
             Follow a disciplined 3-step epistemological protocol:
           </p>
@@ -1928,19 +1929,19 @@
         </div>
         
         <div style="padding:16px; border-bottom:1px solid #eaecee;">
-          <h4 style="margin:0 0 6px 0; font-family:'Georgia', serif; font-size:1.05rem; color:#1a1e24;">Replicate the known result</h4>
+          <h3 style="margin:0 0 6px 0; font-family:'Georgia', serif; font-size:1.05rem; color:#1a1e24;">Replicate the known result</h3>
           <p style="font-size:0.85rem; color:#666; margin:0 0 12px 0; line-height:1.5;">Confirms the search finds zero collisions at period 6 and above before it is trusted with anything new.</p>
           <button class="val-btn" id="btn-gold-p6" style="background:#1a1e24; color:#fff; padding:7px 18px; font-size:0.85rem; font-weight:600; border-radius:4px; border:none; cursor:pointer; width:auto; display:inline-block;" onclick="goldStartJob('p6')">Run</button>
         </div>
 
         <div style="padding:16px; border-bottom:1px solid #eaecee;">
-          <h4 style="margin:0 0 6px 0; font-family:'Georgia', serif; font-size:1.05rem; color:#1a1e24;">Search for seam bridges</h4>
+          <h3 style="margin:0 0 6px 0; font-family:'Georgia', serif; font-size:1.05rem; color:#1a1e24;">Search for seam bridges</h3>
           <p style="font-size:0.85rem; color:#666; margin:0 0 12px 0; line-height:1.5;">Looks for a short word that removes boundary collisions between two fixed blocks, for periods 2 through 4.</p>
           <button class="val-btn" id="btn-gold-weld" style="background:#1a1e24; color:#fff; padding:7px 18px; font-size:0.85rem; font-weight:600; border-radius:4px; border:none; cursor:pointer; width:auto; display:inline-block;" onclick="goldStartJob('weld')">Run</button>
         </div>
 
         <div style="padding:16px;">
-          <h4 style="margin:0 0 6px 0; font-family:'Georgia', serif; font-size:1.05rem; color:#1a1e24;">Negative control</h4>
+          <h3 style="margin:0 0 6px 0; font-family:'Georgia', serif; font-size:1.05rem; color:#1a1e24;">Negative control</h3>
           <p style="font-size:0.85rem; color:#666; margin:0 0 12px 0; line-height:1.5;">Exhaustively checks that no ternary word longer than 7 avoids all abelian squares. Confirms the search reports zero when zero is correct.</p>
           <button class="val-btn" id="btn-gold-neg" style="background:#1a1e24; color:#fff; padding:7px 18px; font-size:0.85rem; font-weight:600; border-radius:4px; border:none; cursor:pointer; width:auto; display:inline-block;" onclick="goldStartJob('neg')">Run</button>
         </div>
