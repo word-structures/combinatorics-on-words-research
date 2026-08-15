@@ -593,6 +593,77 @@ check("MATH_CLAIMS.md exports cleanly and every quotable figure traces to its ro
   }
 });
 
+// 6d. No unsupported epistemic framing on the public pages
+const EPISTEMIC_GUARDS = {
+  GLOBAL_KNOWLEDGE: /\b(nobody|no one)\s+(in\s+the\s+world\s+)?(yet\s+)?knows\b/i,
+  SELF_CERTIFYING: /\b(the math holds|proven by the UI|successfully (?:proved|constructed|verified|proven|established|found))\b/i,
+  RECORD_FRAMING: /\b(break the record|uncharted territory)\b/i
+};
+
+check("No unsupported epistemic framing on the public pages", () => {
+  const files = ['index.html', 'start.html', 'learn.html', 'research.html', 'evidence.html', 'explore.html', 'explorer.html', 'bridge_story_sandbox.html', 'word-checker.html', 'abelisk.html'];
+  const offences = [];
+
+  for (const f of files) {
+    const p = path.join(path.join(__dirname, '..'), f);
+    if (!fs.existsSync(p)) continue; // Missing mandatory files are already reported by check 6b
+    
+    const lines = fs.readFileSync(p, 'utf8').split(/\r?\n/);
+    lines.forEach((line, i) => {
+      let matched = null;
+      if (EPISTEMIC_GUARDS.GLOBAL_KNOWLEDGE.test(line)) matched = "GLOBAL_KNOWLEDGE";
+      else if (EPISTEMIC_GUARDS.SELF_CERTIFYING.test(line)) matched = "SELF_CERTIFYING";
+      else if (EPISTEMIC_GUARDS.RECORD_FRAMING.test(line)) matched = "RECORD_FRAMING";
+      
+      if (matched) {
+        offences.push(`${f}:${i + 1}  [${matched}]  ${line.trim().slice(0, 90)}`);
+      }
+    });
+  }
+
+  if (offences.length > 0) {
+    throw new Error(
+      `Public pages contain unsupported epistemic framing (global knowledge claims, ` +
+      `self-certifying verdicts, or unsupported research-record framing):\n       ` + offences.join('\n       ') +
+      `\n       Remove or tone down these phrases to adhere to the project's epistemic rules.`
+    );
+  }
+});
+
+// 6e. Permanent guard regex test
+check("Epistemic Guard Regex Validation", () => {
+  const positives = {
+    GLOBAL_KNOWLEDGE: ['Nobody in the world yet knows', 'no one knows'],
+    SELF_CERTIFYING: ['The math holds strong', 'proven by the UI', 'successfully constructed'],
+    RECORD_FRAMING: ['break the record', 'uncharted territory']
+  };
+
+  const negatives = [
+    'we do not know',
+    'nobody is here',
+    'the math is complex',
+    'break the loop',
+    'territory is uncharted'
+  ];
+
+  for (const [key, cases] of Object.entries(positives)) {
+    const regex = EPISTEMIC_GUARDS[key];
+    for (const text of cases) {
+      if (!regex.test(text)) {
+        throw new Error(`Guard ${key} failed to flag positive fixture: "${text}"`);
+      }
+    }
+  }
+
+  for (const text of negatives) {
+    for (const [key, regex] of Object.entries(EPISTEMIC_GUARDS)) {
+      if (regex.test(text)) {
+        throw new Error(`Guard ${key} incorrectly flagged negative fixture: "${text}"`);
+      }
+    }
+  }
+});
+
 // 7. Git Drift Check against HEAD (if in git repo)
 check("Git Drift Check against Last Commit (MATH_CLAIMS.md)", () => {
   try {
