@@ -1,0 +1,59 @@
+{
+  "package": "L5_FULL_CLOSURE_HARDENED_4",
+  "uploadedValidatedCoreSha256": {
+    "src/checker.cpp": "cebed1df82fb07111aacd1e8a519bd70f7a98e0fa926438b1f1755a216fc2b6a",
+    "src/checker.hpp": "4fce3fe64bea590cb3071a4b221f713db4f5f1493e20c2078977def1f6c42858",
+    "src/engine.cpp": "83c57f317e43f332440995929560c3dffa028b4d72b382e4fe8b54a3857ff798",
+    "src/engine.hpp": "6c6380f585d75ce6bf85172df049ea24ebbf75e97dc8f4ea92a4f0caa020d116",
+    "src/unranking.cpp": "786e9888ceb7b0f8286dec1d1c18e96a3f4ab748da013aa68ea5728750193a0f",
+    "src/unranking.hpp": "71f4bb199bdd47086d65ae034374af3e45606a8207f5d69c0f66cfda790f6c2f",
+    "src/stageb_types.hpp": "b1834dbc68d96834270c59135914b09925b60c8d8db5385d41e2e0a7821845cc",
+    "src/validation.cpp": "a0bef4e91c7d64591513f622f9acd3c7890265a533b5539221d56757b5b8adb2",
+    "src/validation.hpp": "97248cd53ab98a534084b730ba6df831f6036f8f09389056bf50a18ea8861491",
+    "src/sha256.cpp": "265c260fb9db2f45503197f66a0314aae7ae4521fc1871293be72be7f7151c8a",
+    "src/sha256.hpp": "410f2c5b20fe1f1256e75b122a4cb6326117f7ed4f55dc8933c89c22c794b168",
+    "src/vectors.hpp": "0bc79b89492e492bfbd827464feb10cad3aebb134b6bb70121f9c3fd45f1eb13",
+    "src/safe_3645.hpp": "5f46857244fc6169daff23e3092009228632d59a1051095662b16c3fe658c115",
+    "src/k40_control.hpp": "e32db0c8f2fc807a164d233288baad74125c2905ee0ce29aa6b316c0b0421dba"
+  },
+  "productionWrapperNote": "Validated mathematical core copied unchanged from user-uploaded l5_stageb_exact_engine.zip. src/main.cpp is replaced only to provide production campaign orchestration.",
+  "frozen": {
+    "stageASurvivorsSha256": "5d85138a0c432ae1ba59a6734326e431de5c417a5d7abcae31e6f8850da4eca1",
+    "stageAMetadataSha256": "304e0ac36a05577fcbf8e0c46845c2c5a305d3cbc5bb5776e095dbdd82b4f666",
+    "profileCount": "5153928",
+    "codingMass": "3316540933500",
+    "h6SourceRawBytesSha256": "02682f49e7b4980d5f310a917e9d0d7971cc8d9f71ef84e11a7e2df0023d77b0",
+    "KMin": 6,
+    "KMax": 40
+  },
+  "hardening": {
+    "incompleteShardRecovery": "If no valid .done marker exists, all shard tmp/final artifacts are deleted and the shard is recomputed from coding 0.",
+    "rehearsalScript": "RUN_CRASH_RESUME_REHEARSAL.ps1",
+    "mathematicalCoreChanged": false
+  },
+  "mathematicalCoreFingerprintSha256": "8ee27c558e1d8adbee3df437df36c321ac593d3b5ba3c52e637ffcff8bd42d8f",
+  "mathematicalCoreFilesSha256": {
+    "src/checker.cpp": "cebed1df82fb07111aacd1e8a519bd70f7a98e0fa926438b1f1755a216fc2b6a",
+    "src/checker.hpp": "4fce3fe64bea590cb3071a4b221f713db4f5f1493e20c2078977def1f6c42858",
+    "src/engine.cpp": "83c57f317e43f332440995929560c3dffa028b4d72b382e4fe8b54a3857ff798",
+    "src/engine.hpp": "6c6380f585d75ce6bf85172df049ea24ebbf75e97dc8f4ea92a4f0caa020d116",
+    "src/k40_control.hpp": "e32db0c8f2fc807a164d233288baad74125c2905ee0ce29aa6b316c0b0421dba",
+    "src/safe_3645.hpp": "5f46857244fc6169daff23e3092009228632d59a1051095662b16c3fe658c115",
+    "src/stageb_types.hpp": "b1834dbc68d96834270c59135914b09925b60c8d8db5385d41e2e0a7821845cc",
+    "src/unranking.cpp": "786e9888ceb7b0f8286dec1d1c18e96a3f4ab748da013aa68ea5728750193a0f",
+    "src/unranking.hpp": "71f4bb199bdd47086d65ae034374af3e45606a8207f5d69c0f66cfda790f6c2f",
+    "src/validation.cpp": "a0bef4e91c7d64591513f622f9acd3c7890265a533b5539221d56757b5b8adb2",
+    "src/validation.hpp": "97248cd53ab98a534084b730ba6df831f6036f8f09389056bf50a18ea8861491",
+    "src/vectors.hpp": "0bc79b89492e492bfbd827464feb10cad3aebb134b6bb70121f9c3fd45f1eb13"
+  },
+  "hardeningH4": {
+    "immediateSurvivorAlert": true,
+    "alertPersistence": "SURVIVOR_ALERTS.ndjson",
+    "chunkAccountingAssertions": true,
+    "workerOutputFlush": true,
+    "independentDecisionSamplesPerCompletedShard": 2,
+    "freshResultsDirectory": "results_h4",
+    "mixesEarlierH3Results": false,
+    "mathematicalCoreChanged": false
+  }
+}

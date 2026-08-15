@@ -1,0 +1,10 @@
+=== L5 FULL CLOSURE AUDIT ===
+classification      = FULL_CLOSURE_ZERO_SURVIVORS_PASS
+done shards         = 2219/2219
+completed profiles  = 5153928
+processed codings   = 3316540933500
+rejected            = 3316540933500
+survivors           = 0
+sample decisions    = 4438
+missing shards      = 0
+audit JSON          = C:\MSVC\L5_FULL_CLOSURE_CAMPAIGN_1\results_h4\FINAL_AUDIT.json
