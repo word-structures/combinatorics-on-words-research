@@ -1,0 +1,21 @@
+{
+  "format": "L5_FULL_CLOSURE_AUDIT_V1",
+  "auditedAt": "2026-08-15T06:10:04.255Z",
+  "mode": "full",
+  "classification": "FULL_CLOSURE_ZERO_SURVIVORS_PASS",
+  "planManifest": "C:\\MSVC\\L5_FULL_CLOSURE_CAMPAIGN_1\\plan\\campaign_plan.json",
+  "doneShards": 2219,
+  "missingShardCount": 0,
+  "missingShards": [],
+  "completedProfiles": "5153928",
+  "processed": "3316540933500",
+  "rejected": "3316540933500",
+  "survivors": "0",
+  "expectedProfiles": "5153928",
+  "expectedCodingMass": "3316540933500",
+  "independentSurvivorVerification": "all completed survivor records tied to their shard plan and rechecked from scratch in JavaScript",
+  "independentlyVerifiedSurvivors": "0",
+  "independentDecisionSamplesChecked": "4438",
+  "expectedCoreFingerprintSha256": "8ee27c558e1d8adbee3df437df36c321ac593d3b5ba3c52e637ffcff8bd42d8f",
+  "verifiedSurvivorFile": "C:\\MSVC\\L5_FULL_CLOSURE_CAMPAIGN_1\\results_h4\\SURVIVORS_VERIFIED.ndjson"
+}
