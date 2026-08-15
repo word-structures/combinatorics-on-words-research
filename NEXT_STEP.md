@@ -1,4 +1,34 @@
-# Next Step
+# NEXT STEP
+
+## Current research phase — 2026-08-15
+
+Primary objective:
+STRUCTURAL UNDERSTANDING
+
+Optimization status:
+- FORBID4 safe-sleep optimization cycle is closed.
+- Both the timing-wheel and flat-deadline C++ implementations failed the measured deep-seed whole-search performance gate.
+- Do not restart record-hunter micro-optimization without a new, mathematically decisive reason.
+
+Primary next experiment:
+- Measure S_large(4) and S_large(5) under the existing canonical definition.
+
+Parallel flagship probe:
+- Small-n E_k(n) extendability / finite-lookahead stabilization census.
+- An observed finite plateau is NOT by itself a proof of E_k = E_infinity.
+
+Do not:
+- launch the full Route-C L=6 exhaustive campaign;
+- restart safe-sleep / scheduler / JS-vs-C++ optimization;
+- treat record length as the primary research objective.
+
+Canonical direction:
+- See docs/research/RESEARCH_DIRECTION_RESET_2026-08-15.md
+- See docs/research/FORBID4_SAFE_SLEEP_CLOSURE.md
+
+---
+
+## Previous handoffs / open backlog / historical notes
 
 **Updated:** 2026-08-04 (CEGIS Route A Architecture finalized)
 **Read first:** `KNOWLEDGE_STATE.md`, `RESEARCH_CONTEXT.md`, `AGENTS.md`.
