@@ -170,7 +170,7 @@ Unblocked, bounded, and falsifiable today.
 | E1 | Does prefix-path arithmetic-progression detection agree exhaustively with Parikh-block detection? | No dictionary, no unopened literature, no long search; produces a structurally different detector = Layer-4 candidate |
 | E2 | Does a crossing-only join verifier agree with full verification? | Follows E1; Gate A for the whole Cut-and-Certify line |
 | B16 | Does the already-resolved row-99 result fit the conjecture record model without creating a second truth source? | Process test on a settled result; failure is informative |
-| CEGIS Route A | *(current-work authority — `NEXT_STEP.md` 2026-08-04)* | Owner-designated research priority; unchanged by this bootstrap |
+| Seam / Large-Scale Blocker | *(current research direction — `CURRENT_FOCUS.md`)* | Owner-designated research priority; supersedes historical CEGIS Route A. |
 
 ---
 
