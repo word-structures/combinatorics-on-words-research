@@ -4,7 +4,7 @@
 **Created:** 2026-08-06 (Wave 4)
 **Authority:** `docs/program/PROGRAM_MAP.md`, `docs/program/OWNER_DECISIONS_REQUIRED.md`
 **Current focus:** `CURRENT_FOCUS.md`
-**Research authority:** `NEXT_STEP.md` — unchanged by this roadmap
+**Research authority:** `CURRENT_FOCUS.md`
 
 This roadmap organizes work into six parallel workstreams with work-in-progress
 limits. It does **not** activate every plan. Twelve of fifteen intake plans remain
@@ -31,8 +31,6 @@ These bind every workstream and are not negotiable within the roadmap.
 8   motor accessibility is an active requirement
 9   pedagogical effectiveness is currently an untested hypothesis
 10  Java COW Backtracker v1.2 is the reference version
-11  CEGIS Route A remains the current research authority unless the owner
-    explicitly changes NEXT_STEP.md
 ```
 
 ---
@@ -93,15 +91,14 @@ irreversible rewrite.
 
 ### WS-2 — Mathematical research
 
-**Authority:** `NEXT_STEP.md`. This roadmap does not reprioritize research.
+**Authority:** `CURRENT_FOCUS.md`. This roadmap does not reprioritize research.
 
 | Item | State |
 |---|---|
-| CEGIS Route A (`docs/plans/CEGIS_ROUTE_A_ARCHITECTURE.md`) | **current research authority** |
 | Route A length-7 exhaustion independent verification | carried over |
 | Route B (h8) algebraic exclusion verification | carried over |
-| Pin down L\* at L=5, L=6 | carried over; measure a sample first |
-| Cut-and-Certify E1 → E2 | ready; Gate A for its line |
+| Cut-and-Certify E1 -> E2 | ready; Gate A for its line |
+| Stage-B test structure and constraints (B22) | preregistered |
 | B16 golden-control pilot | ready |
 | All D40-derived research | **blocked on OD-2** |
 

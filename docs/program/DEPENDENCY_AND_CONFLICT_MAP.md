@@ -161,7 +161,7 @@ May proceed in parallel; no cross-blocking.
 
 ```text
 repository safety and rights      OD-1, OD-2, denylist CI, artifact inventory
-mathematical research            CEGIS Route A (current authority), Cut-and-Certify E1/E2
+mathematical research            Seam / Large-Scale Blocker (CURRENT_FOCUS.md), Cut-and-Certify E1/E2
 verification and research SW     TASK-GOV, Layer-4 verifier, record registry
 Abelisk and pedagogy             v3 first sprint, tutorial MVP 1
 AI evaluation                    provenance labels, contamination ledger, incident log

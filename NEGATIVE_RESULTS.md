@@ -429,3 +429,47 @@ figure printed alongside its survivor count is that script's own output.
 - **Finality: CONTEXTUAL.** The defect itself is a two-character fix (extend the
   factorial table). The transfer warning — that an aggregate's origin must be
   recorded where the substitution happens — is the part worth keeping.
+
+## 25. G005 "Three Periods Suffice" (Extinction Obstruction Width)
+
+*Logged 2026-08-16. See `docs/evidence/structural-2026-08-15/verify_g005.js`.*
+
+**Hypothesis:** At most three half-length scales $K$ suffice to explain every finite extinction. Formally: for every doomed $w$ and every $t \ge \delta(w)+1$, $h(w,t) \le 3$.
+
+**Why it was shot down:**
+- The exact finite witness is $w = \texttt{abacccaaacbc}$ with extension length $t = 4$.
+- The word is an immediate dead end at depth 3, so $\delta(w) = 3$. The required condition $t \ge \delta(w)+1$ holds for $t=4$.
+- The compressed first-failure-prefix verifier proves equivalence to literal enumeration of all 81 full futures because every length-4 future has a unique shortest invalid prefix, $W_w(u)$ depends only on that first-failure prefix, and multiplicity of identical hyperedges does not affect the transversal number.
+- The transversal number of the obstruction hypergraph for this word is exactly 7, i.e., $h(w,4) = 7$.
+- Every period $K \in \{2,3,4,5,6,7,8\}$ is indispensable, with a singleton witness set for at least one future branch.
+- This refutes the universal claim.
+
+**Conclusion:**
+- Exact verification path: Evaluated first-failure witnesses over all 81 futures of length 4 in `docs/evidence/structural-2026-08-15/verify_g005.js` (output `docs/evidence/structural-2026-08-15/verify_g005.out`).
+- **Structural residue:** Extinction Width $\eta(w)$ (defined as $h(w,\delta(w)+1)$) remains an OPEN project question, not a claim. Here $\eta(w)=7$.
+- **Novelty:** NOT CLAIMED.
+- **Finality:** NECESSARY.
+
+## 26. G006 Obstruction Hall Property (including G006-L Local Hall)
+
+*Logged 2026-08-16. See `docs/evidence/structural-2026-08-15/probe_tail_chase.out`, `docs/evidence/structural-2026-08-15/probe_local_hall.out`.*
+
+**Hypothesis:** The subsets of required obstruction scales $R_i$ along a complete forced corridor satisfy Hall's Marriage Condition ($\left| \bigcup_{i \in I} R_i \right| \ge |I|$ for all $I$). G006-L proposed this for local/censored forced runs.
+
+**Why it was shot down:**
+- The exact finite witness is $W = \texttt{abccaabacbbaaabbbaa}$. The forced corridor naturally terminates at length 19.
+- The forced-state blocker sets are:
+  - $R_0 = \{2,7\}$
+  - $R_1 = \{2,7\}$
+  - $R_2 = \{3,6\}$
+  - $R_3 = \{2,4,5\}$
+  - $R_4 = \{2,6,7\}$
+  - $R_5 = \{3,7\}$
+- The Hall-deficient subset is $I = \{0,1,2,4,5\}$ with union $\{2,3,6,7\}$. The size is $4 < 5$, violating Hall's condition.
+- The same witness refutes both the complete-only and local Hall variants.
+- This witness DOES NOT refute Prefix Scale Credit.
+
+**Conclusion:**
+- **Structural residue:** Chronology matters; Hall was strictly stronger than Prefix Scale Credit.
+- **Novelty:** NOT CLAIMED.
+- **Finality:** NECESSARY.

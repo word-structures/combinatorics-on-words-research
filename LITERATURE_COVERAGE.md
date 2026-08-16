@@ -45,6 +45,7 @@ Only these have been opened and searched. Everything else is unopened.
 
 | Source | Opened | How |
 |---|---|---|
+| Petrova & Shur, "Branching Densities of Cube-Free and Square-Free Words", Algorithms 14(4):126 (2021) | 2026-08-16 | PRIMARY FULL TEXT READ. Record only source-supported ordinary-power content: fixed vs branching positions; small/big period split; ternary square-free branching density >= 223/868; square-free large-period fixing density <= 2/h, attributed by PS2021 to PS2015 Lemma 5; small-period regular approximation + minimum-mean-cycle / Karp; large-period arguments depend on ordinary word-period rigidity. NO AA2F TRANSFER ESTABLISHED. |
 | Fici & Puzynina, *Abelian Combinatorics on Words: a Survey*, arXiv:2207.09937 | 2026-07-28, 2026-07-30 | ar5iv + PDF, text extracted and searched |
 | Rao & Rosenfeld, arXiv:1511.05875 (= SIAM 32(4), DOI `10.1137/17M1149377`) | 2026-07-28 | ar5iv; DOI verified against Crossref 2026-07-30 (row 23) |
 | Cassaigne, Currie, Schaeffer & Shallit, arXiv:1106.5204 | 2026-07-30 | abstract + ar5iv full text |
@@ -124,12 +125,23 @@ search terms — the same bar section 5 sets.
 
 ---
 
+
+### 2c. Secondary / partially traced / inaccessible
+
+| Source | Status |
+|---|---|
+| Currie & Shelton 2003 | bibliographically solid statement; proof text inaccessible |
+| Currie 1995 | full text inaccessible |
+| Shelton & Soni 1982 | current full-text route access-blocked |
+| Carpi 1998 | abstract / statement only; four-letter result; no ternary aa2f transfer |
+
 ## 3. Coverage table
 
 The **"Space"** column states exactly what has been swept, not just yes/no.
 
 | # | Research question | Found in opened sources | Space the literature covers | Project's own work | More needed |
 |---|---|---|---|---|---|
+| 16 | ordinary ternary square-free fixed/branching theory vs aa2f blocker / seam programme | **yes** (Petrova & Shur 2021) | known analogy: fixed state ↔ blocker-labelled forced state; possible transferable machinery: small-period automaton / minimum-mean-cycle architecture. Load-bearing failure: pointwise equality, Fine-Wilf, Lyndon-Schützenberger word equations. | none | **yes** — find an Abelian replacement for large-period rigidity / density control. |
 | 1 | Ternary abelian-square-free language, exhaustive | **yes** (Fici & Puzynina Prop. 17) | all ternary words, all lengths | row 1, independently reproduced | no |
 | 2 | Avoiding abelian squares with 4 letters | **yes** (Keränen, Dekking) | constructions, no exhaustive sweep | rows 3, 40 | no |
 | 3 | Mäkelä's conjecture, K ∈ [2,5] | **open** (Fici & Puzynina Conj. 20; R&R Problem 1) | — | rows 4, 7b, 49, 51, 52, 62, 78 | **yes, main goal** |

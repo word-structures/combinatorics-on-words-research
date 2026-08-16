@@ -34,3 +34,39 @@ Classify every new or untracked file Claude has created or touched as one of:
   report it and wait rather than guessing.
 
 Report every proposed new root-level file explicitly, before creating it.
+
+## RESEARCH STATE CHANGE CHECK
+
+Before declaring a research session closed, ask whether it produced:
+
+- exact refutation
+- derived result
+- primary source opened / access route died
+- formalized question
+- priority change
+- claim-boundary correction
+- permanent evidence
+- new mathematical capability / representation
+
+If none:
+close with no canonical update.
+
+If any:
+every triggered canonical consequence must be one of:
+
+- UPDATED NOW
+- PROPOSED FOR HUMAN APPROVAL
+- PENDING WITH A NAMED BLOCKER
+
+before the session is CLOSED.
+
+Never automatic:
+
+- proved
+- literature novelty
+- flagship-objective change
+- major compute allocation
+- quantifier widening
+
+WRITE-THROUGH V0 TRIAL:
+review after 3 state-changing research sessions.
