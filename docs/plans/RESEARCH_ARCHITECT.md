@@ -56,6 +56,15 @@ premisseistä on muuttunut.
 5. **Kustannus mitataan ennen kuin luvataan:** jokaisen työmääräarvion on
    nimettävä pieni esimittaus joka validoi arvion (malli: L=5 ajettiin vasta
    kun L=4:n symbolimäärä oli mitattu).
+6. **Mathematical strategy** voi olla: CONSTRUCTION, OBSTRUCTION, REPRESENTATION / ALGEBRAIC LEVERAGE, DECISION / REDUCTION, STRUCTURAL UNDERSTANDING. Yleinen työkalujen rakentaminen ei ole strategia.
+7. **Pakollinen virtaus:** MATHEMATICAL QUESTION -> MISSING CAPABILITY -> BUILD SMALLEST CAPABILITY -> ANSWER OR FALSIFY QUESTION.
+8. **Tilan päivitys:** Tilaa muuttava tapahtuma **talletetaan**
+   heti kun se syntyy (todiste, provenienssi, lähteen avaustieto).
+   Ennen session sulkemista jokainen kanoninen seuraus reititetään:
+   **PÄIVITETTY / EHDOTETTU HYVÄKSYTTÄVÄKSI / ODOTTAA
+   (nimetty este)**. Tulkinta, Garden-status ja prioriteetti
+   viimeistellään session lopussa.
+
 
 ## 4. Tulostemuoto — jokaisesta ehdotuksesta, ei poikkeuksia
 

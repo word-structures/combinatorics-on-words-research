@@ -126,3 +126,9 @@ The first three are covered in detail by §2 (Scope Precision) and §3 (Finite C
 **The composition trap.** When two verified stages are combined, the claim's boundary is the *union* of their boundaries, not the tighter one. A live instance: the L=5 Route-C pipeline's Stage A examines the first **98,415** coded symbols while Stage B examines the first **3,645**. A combined statement's window is 98,415 — 27× larger than the number a reader would take from the Stage-B side alone. Nothing was wrong with either stage; the gap lives entirely in the join.
 
 **Practical test before recording anything:** write one sentence for what was verified and one for what is being claimed. If they are the same sentence, one of them is wrong.
+
+---
+
+## 11. Immediate Capture vs. Claim Acceptance
+
+**Rule:** Canonicalization (capturing a result in the repository) is part of doing the research, but claim acceptance remains a separate human-gated review decision. Immediate capture does not imply claim acceptance.
