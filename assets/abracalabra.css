@@ -423,6 +423,72 @@
   outline-offset: 2px;
 }
 
+
+/* --- Rule Plate --------------------------------------------------------- */
+.ab-rule-plate {
+  margin: 0 0 1.5rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 4px solid var(--ab-edge);
+  background: var(--ab-ground-soft);
+  font-size: 0.9375rem;
+}
+.ab-rule-plate--floor { border-left-color: var(--ab-glow); }
+.ab-rule-plate--none { border-left-color: var(--ab-onDark-soft); }
+.ab-rule-plate--threshold { border-left-color: var(--red); }
+
+.ab-rule-plate__head {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ab-onDark-soft);
+  margin-bottom: 0.5rem;
+}
+.ab-rule-plate__row { margin-bottom: 0.25rem; }
+.ab-rule-plate__term { color: var(--ab-onDark-soft); }
+
+/* --- Append Builder (Scene 5) ------------------------------------------- */
+.ab-append { margin: 1.5rem 0; }
+.ab-append__word { margin-bottom: 1rem; min-height: 2.25rem; }
+.ab-append__controls { margin-top: 1rem; }
+.ab-frontier { margin: 1.5rem 0; padding: 1rem; background: var(--ab-card); border-radius: 3px; }
+.ab-frontier__label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ab-onDark-soft); margin-bottom: 0.75rem; }
+.ab-frontier__branches { display: flex; flex-direction: column; gap: 0.75rem; }
+.ab-frontier__branch { display: flex; align-items: center; gap: 0.75rem; }
+.ab-frontier__status { font-size: 0.875rem; color: var(--ab-onDark-soft); }
+.ab-frontier__branch.is-legal .ab-frontier__status { color: var(--green); }
+.ab-frontier__witness { margin-left: auto; }
+.ab-append__stats { margin-top: 2rem; font-family: var(--serif); font-size: 1.125rem; }
+
+/* --- Machine Profile (Scene 6a) ----------------------------------------- */
+.ab-machine-profile { margin: 1.5rem 0; }
+.ab-profile-table { width: 100%; max-width: 16rem; border-collapse: collapse; }
+.ab-profile-table th { text-align: left; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ab-onDark-soft); padding: 0.5rem 0; border-bottom: 1px solid var(--ab-edge); }
+.ab-profile-table td { padding: 0.5rem 0; border-bottom: 1px solid var(--ab-card-sunk); font-variant-numeric: tabular-nums; }
+.ab-profile-table tr:last-child td { border-bottom: none; }
+
+/* --- Reason Steps (Scene 6b) -------------------------------------------- */
+.ab-reason-step { margin: 1.5rem 0; }
+.ab-reason-q { font-weight: 600; margin-bottom: 0.75rem; }
+.ab-reason-a { margin-top: 0.5rem; color: var(--green); border-left: 2px solid var(--green); padding-left: 0.75rem; }
+
+/* --- Cliff -------------------------------------------------------------- */
+.ab-cliff { margin: 2rem 0; }
+.ab-cliff__walls { display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 1.5rem; }
+.ab-cliff__wall { flex: 1 1 12rem; background: var(--ab-card); padding: 1.25rem; border-radius: 3px; }
+.ab-cliff__label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ab-onDark-soft); margin: 0 0 1rem; line-height: 1.4; }
+.ab-cliff__empty { font-size: 3rem; text-align: center; color: var(--ab-card-sunk); margin: 2rem 0; font-family: var(--serif); }
+.ab-cliff__note { font-size: 0.8125rem; color: var(--ab-onDark-soft); text-align: center; }
+.ab-cliff__chart { display: flex; align-items: flex-end; gap: 0.4rem; height: 14rem; padding-top: 1.5rem; }
+.ab-cliff__bar-container { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 0.25rem; height: 100%; }
+.ab-cliff__bar { width: 100%; background: var(--ab-glow); min-height: 1px; border-radius: 1px 1px 0 0; }
+.ab-cliff__val { font-size: 0.75rem; font-variant-numeric: tabular-nums; line-height: 1; margin-bottom: 0.25rem; }
+.ab-cliff__len { font-size: 0.625rem; color: var(--ab-onDark-soft); }
+
+/* --- Handoff ------------------------------------------------------------ */
+.ab-handoff { margin: 3rem 0 2rem; padding-top: 2rem; border-top: 1px solid var(--ab-edge); }
+.ab-handoff__stanza { margin: 1.5rem 0; font-family: var(--serif); font-size: 1.25rem; line-height: 1.6; color: var(--ab-glow); }
+.ab-handoff__conclusion { font-family: var(--serif); font-size: 1.25rem; margin-bottom: 2rem; }
+
 /* --- Reduced motion ----------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {

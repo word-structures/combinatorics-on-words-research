@@ -17,7 +17,7 @@
  * shapes diverge, which is what stops the Finnish delivery silently rotting.
  *
  * This is deliberately a plain nested object, not an i18n framework. The
- * whole product is four scenes on a static page.
+ * whole product is seven scenes on a static page.
  *
  * Placeholders are `{name}` and are substituted by `fmt()` in abracalabra.js.
  * No string here carries mathematical authority: every number a player sees
@@ -36,6 +36,7 @@
         productName: 'abracalabra',
         tagline: 'Four doors. Four kinds of evidence.',
         chamberOf: 'Door {n} of {total}',
+        chamberPart: 'Door {n} of {total} · Part {part} of {parts}',
         restart: 'Start again',
         restartConfirm: 'Start again from the first door?',
         restartYes: 'Yes, start again',
@@ -49,13 +50,23 @@
         privacyNote: 'Nothing you do here is saved or sent anywhere.'
       },
 
-      // The four acts. Each line is shown only AFTER the act is completed,
+      // The acts. Each line is shown only AFTER the act is completed,
       // so the vocabulary is earned rather than taught up front.
       acts: {
-        FIND:  { name: 'FOUND',  line: 'One example is enough to show that something exists.' },
-        BREAK: { name: 'BROKEN', line: 'One counterexample brings down a claim about every case.' },
-        MAP:   { name: 'MAPPED', line: 'Every case accounted for — not just the ones you thought of.' },
-        KNOW:  { name: 'KNOWN',  line: 'An empty answer, and the reason it is empty.' }
+        FIND:    { name: 'FOUND',  line: 'One example is enough to show that something exists.' },
+        BREAK:   { name: 'BROKEN', line: 'One counterexample brings down a claim about every case.' },
+        MAP:     { name: 'MAPPED', line: 'Every case accounted for — not just the ones you thought of.' },
+        KNOW:    { name: 'KNOWN',  line: 'An empty answer, and the reason it is empty.' },
+        MACHINE: { name: 'THE MACHINE CHECKED THEM ALL', line: 'The same logical shape, different hands.' },
+        REASON:  { name: 'I KNOW WHY', line: 'Sixteen checks, or two sentences. The reason does not need the list.' }
+      },
+
+      rulePlate: {
+        label: 'Rule',
+        symbols: 'Symbols',
+        'looking-for-echoes': 'Looking for: echoes with blocks of 2 or more',
+        'no-rule': 'Nothing forbidden — we are counting',
+        'strict-rule': 'Forbidden: every echo, even {example}'
       },
 
       opening: {
@@ -193,13 +204,107 @@
           successLines: [
             'There are sixteen words of four symbols over a and b.',
             'You have accounted for all sixteen.',
-            'Under this door’s rule, none of them works.'
+            'Under this door\u2019s rule, none of them works.'
           ],
           successConclusion: 'So there is no such word of four symbols here. Not "we did not find one". There is not one.',
           bounded: 'This says nothing about longer words, other symbols, or other rules.'
+        },
+
+        'third-symbol': {
+          title: 'The Third Symbol',
+          intro: 'The same strict rule. But now there are three symbols instead of two.',
+          transition: 'One more symbol?',
+          prompt: 'Build a word, one symbol at a time. The rule has not changed: every echo is forbidden.',
+          help: 'Choose a symbol to add to the end of the word.',
+          currentWord: 'Your word',
+          frontier: 'Next symbol',
+          frontierLegal: '{letter} — no echo',
+          frontierDead: '{letter} — echo at {from}–{to}',
+          frontierAllDead: 'No symbol can be added without creating an echo.',
+          restartWord: 'Start a new word',
+          longest: 'Longest: {n}',
+          chasePrompt: 'Can you reach length 7?',
+          reachedSeven: 'Length 7.',
+          hitWall: 'Every path ends. None of them reaches 8.',
+          hitWallQuestion: 'You cannot check every path yourself. But a machine can.',
+          toMachine: 'Let the machine try'
+        },
+
+        'counting-machine': {
+          title: 'The Counting Machine',
+          subtitle: 'Part 1 of 2',
+          intro: 'You tried. You reached length 7. You could not reach 8.',
+          ask: 'I can check every one. Shall I?',
+          runBtn: 'Let the machine check',
+          running: 'Checking length {n}…',
+          profileLabel: 'Words that survive',
+          lengthLabel: 'length',
+          countLabel: 'survivors',
+          done: 'Done.',
+          doneBody: 'The machine checked {total} words. Every word of every length up to 8, over three symbols.',
+          comparison: 'In the Empty Door, you covered sixteen words by hand. Here the machine covered {total}.',
+          sameShape: 'Same logical shape. Different hands.',
+          evidenceCard: 'THE MACHINE CHECKED THEM ALL'
+        },
+
+        'shorter-reason': {
+          title: 'The Shorter Reason',
+          subtitle: 'Part 2 of 2',
+          intro: 'Back to two symbols. Same strict rule.',
+          recall: 'In the Empty Door, you checked all sixteen words of length 4. None survived.',
+          question: 'Can you say why none of your sixteen worked — without checking all sixteen?',
+          step1q: 'Under this rule, can two neighbouring symbols be equal?',
+          step1a: 'No — aa or bb would be an echo.',
+          step1b: 'Yes — doubles are allowed.',
+          step1wrong: 'Under this rule, even aa counts as an echo. Two equal neighbours are forbidden.',
+          step1right: 'Right. No two neighbours can be equal.',
+          step2q: 'If no two neighbours can be equal, what must the word do?',
+          step2a: 'It must alternate between a and b.',
+          step2b: 'It can still use any pattern.',
+          step2wrong: 'With only two symbols and no two neighbours equal, each symbol must differ from the one before it. That is alternation.',
+          step2right: 'Yes. With only two symbols, the word must alternate: a b a b… or b a b a…',
+          step3q: 'Which words of length 4 alternate between a and b?',
+          step3a: 'abab and baba',
+          step3b: 'abab, baba, abba, and baab',
+          step3wrong: 'abba has two neighbouring b\'s, and baab has two neighbouring a\'s. Only strict alternation survives.',
+          step3right: 'Exactly two: abab and baba.',
+          step4q: 'Look at abab. Look at baba. Do they have an echo?',
+          step4a: 'Yes — both contain ab|ab or ba|ba as an echo.',
+          step4b: 'No — the letters are all different.',
+          step4wrong: 'In abab: the first two symbols are ab, the next two are ab. Same letters, same counts. That is an echo with blocks of 2.',
+          step4right: 'Both do. abab contains ab|ab. baba contains ba|ba. Both are echoes with blocks of length 2.',
+          conclusion: 'So: the rule forces alternation. Only two words alternate. Both contain an echo. No list was needed.',
+          evidenceCard: 'I KNOW WHY',
+          evidenceLine: 'Two sentences, not sixteen checks.',
+          bounded: 'This argument covers length 4 over {a,b} under this rule. It says nothing about longer words or more symbols.'
         }
       },
 
+      cliff: {
+        title: 'The Cliff',
+        wall1label: '2 symbols · every echo counts',
+        wall2label: '3 symbols · every echo counts',
+        wall3label: '3 symbols · doubles allowed',
+        lengthAxis: 'length',
+        countAxis: 'survivors',
+        wall3empty: '?',
+        wall3note: 'This wall is intentionally empty.'
+      },
+
+      handoff: {
+        body1: 'You have learned more than how to find echoes.',
+        body2: 'You found one. You broke a claim. You checked every case. You let a machine check more. Then you found a reason that needed no list at all.',
+        body3: 'Two symbols: it ends.',
+        body4: 'Three symbols: it ends later.',
+        body5: 'One wall is still empty.',
+        body6: 'That question is next door.',
+        abelisk: 'Play Abelisk',
+        learn: 'Read the mathematics',
+        again: 'Walk the doors again'
+      },
+
+      // Legacy outro kept for structural compatibility; the cliff/handoff
+      // view is now the real ending.
       outro: {
         title: 'Beyond',
         body1: 'Change the rule and the answer changes. Next door, in Abelisk, two identical symbols side by side are allowed — and words go a good deal further before they fail.',
@@ -219,6 +324,7 @@
         productName: 'abracalabra',
         tagline: 'Neljä ovea. Neljä erilaista todistetta.',
         chamberOf: 'Ovi {n} / {total}',
+        chamberPart: 'Ovi {n} / {total} · Osa {part} / {parts}',
         restart: 'Aloita alusta',
         restartConfirm: 'Aloitetaanko ensimmäiseltä ovelta?',
         restartYes: 'Kyllä, alusta',
@@ -233,10 +339,20 @@
       },
 
       acts: {
-        FIND:  { name: 'LÖYTYI',    line: 'Yksi esimerkki riittää osoittamaan, että jokin on olemassa.' },
-        BREAK: { name: 'MURTUI',    line: 'Yksi vastaesimerkki kaataa väitteen, joka koski kaikkia tapauksia.' },
-        MAP:   { name: 'KARTOITETTU', line: 'Jokainen tapaus käyty läpi — ei vain ne, jotka tulivat mieleen.' },
-        KNOW:  { name: 'TIEDETÄÄN', line: 'Tyhjä vastaus, ja syy siihen miksi se on tyhjä.' }
+        FIND:    { name: 'LÖYTYI',    line: 'Yksi esimerkki riittää osoittamaan, että jokin on olemassa.' },
+        BREAK:   { name: 'MURTUI',    line: 'Yksi vastaesimerkki kaataa väitteen, joka koski kaikkia tapauksia.' },
+        MAP:     { name: 'KARTOITETTU', line: 'Jokainen tapaus käyty läpi — ei vain ne, jotka tulivat mieleen.' },
+        KNOW:    { name: 'TIEDETÄÄN', line: 'Tyhjä vastaus, ja syy siihen miksi se on tyhjä.' },
+        MACHINE: { name: 'KONE TARKISTI NE KAIKKI', line: 'Sama looginen muoto, eri kädet.' },
+        REASON:  { name: 'TIEDÄN MIKSI', line: 'Kuusitoista tarkistusta tai kaksi lausetta. Syy ei tarvitse koko listaa.' }
+      },
+
+      rulePlate: {
+        label: 'Sääntö',
+        symbols: 'Merkit',
+        'looking-for-echoes': 'Etsitään: kaikuja, joiden lohkot ovat vähintään 2 merkkiä',
+        'no-rule': 'Mitään ei kielletä — lasketaan',
+        'strict-rule': 'Kielletty: jokainen kaiku, myös {example}'
       },
 
       opening: {
@@ -375,7 +491,99 @@
           ],
           successConclusion: 'Siis tällaista neljän merkin sanaa ei täällä ole. Ei niin, että "emme löytäneet". Sitä ei ole.',
           bounded: 'Tämä ei sano mitään pidemmistä sanoista, muista merkeistä tai muista säännöistä.'
+        },
+
+        'third-symbol': {
+          title: 'Kolmas merkki',
+          intro: 'Sama tiukka sääntö. Mutta nyt merkkejä on kolme kahden sijaan.',
+          transition: 'Yksi merkki lisää?',
+          prompt: 'Rakenna sana, yksi merkki kerrallaan. Sääntö ei ole muuttunut: jokainen kaiku on kielletty.',
+          help: 'Valitse merkki lisättäväksi sanan loppuun.',
+          currentWord: 'Sanasi',
+          frontier: 'Seuraava merkki',
+          frontierLegal: '{letter} — ei kaikua',
+          frontierDead: '{letter} — kaiku kohdassa {from}–{to}',
+          frontierAllDead: 'Mikään merkki ei käy ilman kaikua.',
+          restartWord: 'Aloita uusi sana',
+          longest: 'Pisin: {n}',
+          chasePrompt: 'Pääsetkö pituuteen 7?',
+          reachedSeven: 'Pituus 7.',
+          hitWall: 'Jokainen polku päättyy. Mikään ei yllä kahdeksaan.',
+          hitWallQuestion: 'Et voi itse tarkistaa jokaista polkua. Mutta kone voi.',
+          toMachine: 'Anna koneen kokeilla'
+        },
+
+        'counting-machine': {
+          title: 'Laskukone',
+          subtitle: 'Osa 1 / 2',
+          intro: 'Yritit. Pääsit pituuteen 7. Et päässyt kahdeksaan.',
+          ask: 'Voin tarkistaa jokaisen. Annetaanko minun?',
+          runBtn: 'Anna koneen tarkistaa',
+          running: 'Tarkistetaan pituutta {n}…',
+          profileLabel: 'Selvinneet sanat',
+          lengthLabel: 'pituus',
+          countLabel: 'selvinneistä',
+          done: 'Valmis.',
+          doneBody: 'Kone tarkisti {total} sanaa. Jokaisen sanan jokaiselta pituudelta kahdeksaan saakka, kolmella merkillä.',
+          comparison: 'Tyhjän oven takana kävit läpi kuusitoista sanaa käsin. Täällä kone kävi läpi {total}.',
+          sameShape: 'Sama looginen muoto. Eri kädet.',
+          evidenceCard: 'KONE TARKISTI NE KAIKKI'
+        },
+
+        'shorter-reason': {
+          title: 'Lyhyempi syy',
+          subtitle: 'Osa 2 / 2',
+          intro: 'Takaisin kahteen merkkiin. Sama tiukka sääntö.',
+          recall: 'Tyhjän oven takana tarkistit kaikki kuusitoista neljän merkin sanaa. Yksikään ei selvinnyt.',
+          question: 'Voitko sanoa miksi yksikään kuudestatoista ei toiminut — tarkistamatta niitä kaikkia?',
+          step1q: 'Voivatko tällä säännöllä kaksi vierekkäistä merkkiä olla samoja?',
+          step1a: 'Eivät — aa tai bb olisi kaiku.',
+          step1b: 'Kyllä — tuplat ovat sallittuja.',
+          step1wrong: 'Tällä säännöllä myös aa on kaiku. Kaksi samaa merkkiä vierekkäin on kielletty.',
+          step1right: 'Oikein. Kaksi vierekkäistä merkkiä eivät voi olla samoja.',
+          step2q: 'Jos kaksi vierekkäistä merkkiä eivät voi olla samoja, mitä sanan täytyy tehdä?',
+          step2a: 'Sen täytyy vuorotella a:n ja b:n välillä.',
+          step2b: 'Se voi silti käyttää mitä tahansa järjestystä.',
+          step2wrong: 'Kahdella merkillä, kun vierekkäiset eivät saa olla samoja, jokaisen merkin on erottava edellisestä. Se on vuorottelua.',
+          step2right: 'Niin. Kahdella merkillä sanan täytyy vuorotella: a b a b… tai b a b a…',
+          step3q: 'Mitkä neljän merkin sanat vuorottelevat a:n ja b:n välillä?',
+          step3a: 'abab ja baba',
+          step3b: 'abab, baba, abba ja baab',
+          step3wrong: 'Sanassa abba on kaksi vierekkäistä b:tä ja sanassa baab kaksi vierekkäistä a:ta. Vain tiukka vuorottelu selviytyy.',
+          step3right: 'Tasan kaksi: abab ja baba.',
+          step4q: 'Katso sanaa abab. Katso sanaa baba. Onko niissä kaiku?',
+          step4a: 'Kyllä — molemmissa on ab|ab tai ba|ba kaikuna.',
+          step4b: 'Ei — kirjaimet ovat kaikki erilaisia.',
+          step4wrong: 'Sanassa abab: kaksi ensimmäistä merkkiä ovat ab, kaksi seuraavaa ovat ab. Samat kirjaimet, samat määrät. Se on kaiku, jonka lohkot ovat 2 merkkiä pitkiä.',
+          step4right: 'Molemmissa on. Sanassa abab on ab|ab. Sanassa baba on ba|ba. Molemmat ovat kaikuja, joiden lohkot ovat 2 merkkiä pitkiä.',
+          conclusion: 'Siis: sääntö pakottaa vuorottelun. Vain kaksi sanaa vuorottelee. Molemmissa on kaiku. Listaa ei tarvittu.',
+          evidenceCard: 'TIEDÄN MIKSI',
+          evidenceLine: 'Kaksi lausetta, ei kuuttatoista tarkistusta.',
+          bounded: 'Tämä perustelu kattaa pituuden 4 merkeillä {a,b} tällä säännöllä. Se ei sano mitään pidemmistä sanoista tai useammista merkeistä.'
         }
+      },
+
+      cliff: {
+        title: 'Jyrkänne',
+        wall1label: '2 merkkiä · jokainen kaiku lasketaan',
+        wall2label: '3 merkkiä · jokainen kaiku lasketaan',
+        wall3label: '3 merkkiä · tuplat sallittu',
+        lengthAxis: 'pituus',
+        countAxis: 'selvinneitä',
+        wall3empty: '?',
+        wall3note: 'Tämä seinä on tarkoituksella tyhjä.'
+      },
+
+      handoff: {
+        body1: 'Olet oppinut muutakin kuin löytämään kaikuja.',
+        body2: 'Löysit yhden. Kumosit väitteen. Tarkistit kaikki tapaukset. Annoit koneen tarkistaa suuremman joukon. Lopuksi löysit syyn, joka ei tarvinnut koko listaa.',
+        body3: 'Kahdella merkillä tie päättyy.',
+        body4: 'Kolmella se jatkuu pidemmälle.',
+        body5: 'Yksi seinä on vielä tyhjä.',
+        body6: 'Se kysymys odottaa seuraavan oven takana.',
+        abelisk: 'Pelaa Abeliskiä',
+        learn: 'Lue matematiikasta',
+        again: 'Kulje ovet uudelleen'
       },
 
       outro: {

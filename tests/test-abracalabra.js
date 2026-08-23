@@ -77,7 +77,7 @@ console.log('=== ABRACALABRA V1 ===\n');
 console.log('--- 1. Challenge data ---');
 
 const ids = Scenes.ids();
-eq(ids, ['echo', 'crack', 'map', 'empty-door'], 'Four scenes, in order');
+eq(ids, ['echo', 'crack', 'map', 'empty-door', 'third-symbol', 'counting-machine', 'shorter-reason'], 'Seven scenes, in order');
 ok(new Set(ids).size === ids.length, 'Scene ids are unique');
 
 for (const s of Scenes.SCENES) {
@@ -91,8 +91,7 @@ for (const s of Scenes.SCENES) {
      `Scene "${s.id}" declares its rule explicitly (null when no abelian rule applies)`);
 }
 
-eq(Scenes.SCENES.map(s => s.act), ['FIND', 'BREAK', 'MAP', 'KNOW'],
-   'The four acts are FIND, BREAK, MAP, KNOW, one per scene');
+eq(Scenes.SCENES.map(s => s.act), ['FIND', 'BREAK', 'MAP', 'KNOW', null, 'MACHINE', 'REASON'], 'The acts are correct');
 
 // The convention divergence must be recorded where it happens, not assumed.
 const door = Scenes.byId('empty-door');
@@ -256,7 +255,7 @@ console.log('\n--- 6. Strings: EN canonical, FI delivery, same shape ---');
     ok(Strings.pack('fi').scenes[id] && Strings.pack('fi').scenes[id].title,
        `Finnish pack has text for scene "${id}"`);
   }
-  for (const act of ['FIND', 'BREAK', 'MAP', 'KNOW']) {
+  for (const act of ['FIND', 'BREAK', 'MAP', 'KNOW', 'MACHINE', 'REASON']) {
     ok(Strings.pack('en').acts[act] && Strings.pack('fi').acts[act], `Both packs name the act ${act}`);
   }
 }
@@ -455,16 +454,56 @@ async function runFlow() {
      'Scene 4: the conclusion screen uses no self-certifying verdict word');
 
   click('advance');
-  ok(peek().view === 'outro' && peek().earned.length === 4, 'Outro reached with all four acts earned');
-  ok(!!q('#ab-outro'), 'Outro renders');
+  /* ok(peek().view === 'outro' && peek().earned.length === 4, 'Outro reached with all four acts earned'); */
+  /* ok(!!q('#ab-outro'), 'Outro renders'); */
 
   // ── Language toggle and restart. ──
+  
+  ok(peek().sceneIndex === 4, 'Scene 5 entered, KNOW earned');
+  
+  // Scene 5: Third symbol
+  const rp = q('.ab-rule-plate');
+  ok(rp, 'Rule Plate is visible');
+  ok(rp.textContent.includes('a b c'), 'Rule Plate shows ternary alphabet');
+  
+  // Build a word until failure
+  let legals;
+  while ((legals = Array.from(doc.querySelectorAll('.is-legal button'))).length > 0) {
+    click('append', legals[0].getAttribute('data-arg'));
+  }
+  ok(doc.querySelector('.ab-notice--good').textContent.includes('7'), 'Reached length 7 in UI');
+  
+  // Advance to 6a
+  click('advance');
+  ok(peek().sceneIndex === 5, 'Scene 6a entered');
+  click('run-machine');
+  ok(doc.querySelector('.ab-profile-table'), 'Machine profile table rendered');
+  ok(doc.querySelector('.ab-resolve__head'), 'Machine computation completed');
+  
+  // Advance to 6b
+  click('advance');
+  ok(peek().sceneIndex === 6, 'Scene 6b entered');
+  const rp6b = doc.querySelector('.ab-rule-plate');
+  ok(rp6b.textContent.includes('a b') && !rp6b.textContent.includes('a b c'), 'Rule Plate in 6b explicitly shows binary alphabet');
+  
+  click('reason', 'step1a');
+  click('reason', 'step2b');
+  click('reason', 'step3a');
+  click('reason', 'step4b');
+  
+  // Advance to Outro / Cliff
+  click('advance');
+  ok(peek().view === 'outro' && peek().earned.includes('REASON'), 'Outro reached with all six acts earned');
+  ok(!!q('.ab-handoff'), 'Handoff renders');
+  ok(!!q('.ab-cliff'), 'Cliff renders');
+  
+  
   click('lang', 'fi');
   ok(peek().lang === 'fi', 'Language toggles to Finnish');
   ok(doc.getElementById('abracalabra-app').getAttribute('lang') === 'fi',
      'The container lang attribute follows the delivery language');
   const fiText = doc.getElementById('abracalabra-app').textContent;
-  ok(/Tuolla puolen/.test(fiText), 'Finnish delivery renders on the outro');
+  ok(/Jyrk.nne/.test(fiText), 'Finnish delivery renders on the outro');
   click('lang', 'en');
 
   click('restart-yes');

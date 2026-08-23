@@ -60,6 +60,12 @@
         return { slots: ['', '', '', ''], tried: [], notice: null, phase: 'try',
                  parents: {}, covered: {}, whyAsked: false, whyWrong: false,
                  finalWrong: null };
+      case 'third-symbol':
+        return { word: '', longest: 0, phase: 'build' };
+      case 'counting-machine':
+        return { phase: 'ask', checked: 0, profile: null };
+      case 'shorter-reason':
+        return { step: 1, wrong: null };
       default:
         return {};
     }
@@ -793,15 +799,156 @@
 
   function currentScene() { return SCENES.SCENES[state.sceneIndex]; }
 
+  
+  function renderThirdSymbol(scene) {
+    var s = state.scene;
+    var out = '';
+    out += '<p class="ab-intro">' + esc(t('scenes', scene.id, 'intro')) + '</p>';
+    if (scene.id === 'third-symbol' && s.word.length === 0) {
+      out += '<p class="ab-prompt">' + esc(t('scenes', scene.id, 'prompt')) + '</p>';
+    }
+
+    out += '<div class="ab-append">';
+    out += '<div class="ab-append__word" aria-label="' + esc(spell(s.word)) + '">' + wordCells(s.word) + '</div>';
+    
+    var branches = AC.branchMask(s.word, scene.alphabet, scene.rule.minK, scene.rule.maxK || undefined);
+    out += '<div class="ab-frontier">';
+    out += '<div class="ab-frontier__label">' + esc(t('scenes', scene.id, 'frontier')) + '</div>';
+    out += '<div class="ab-frontier__branches">';
+    
+    var anyAlive = false;
+    branches.forEach(function(b) {
+      out += '<div class="ab-frontier__branch' + (b.allowed ? ' is-legal' : ' is-dead') + '">';
+      if (b.allowed) {
+        anyAlive = true;
+        out += '<button type="button" class="ab-btn ab-key ab-key--' + b.letter + '" data-act="append" data-arg="' + b.letter + '">' + b.letter + '</button>';
+        out += '<span class="ab-frontier__status">' + esc(fmt(t('scenes', scene.id, 'frontierLegal'), { letter: b.letter })) + '</span>';
+      } else {
+        out += '<button type="button" class="ab-btn ab-key ab-key--' + b.letter + '" disabled>' + b.letter + '</button>';
+        var v = b.violation;
+        out += '<span class="ab-frontier__status"><span aria-hidden="true">×</span> ' + 
+          esc(fmt(t('scenes', scene.id, 'frontierDead'), { letter: b.letter, from: v.pos + 1, to: v.pos + 2*v.K })) + '</span>';
+      }
+      out += '</div>';
+    });
+    out += '</div></div>';
+    
+    if (!anyAlive) {
+      out += noticeBox(t('scenes', scene.id, 'frontierAllDead'), 'attempt');
+    }
+    
+    out += '<div class="ab-append__controls">';
+    if (s.word.length > 0) {
+      out += '<button type="button" class="ab-btn ab-btn--quiet" data-act="clear-word">' + esc(t('scenes', scene.id, 'restartWord')) + '</button>';
+    }
+    out += '</div></div>';
+
+    out += '<div class="ab-append__stats">';
+    out += '<p>' + esc(fmt(t('scenes', scene.id, 'longest'), { n: s.longest })) + '</p>';
+    if (s.longest >= 6 && s.longest < 7) {
+      out += '<p>' + esc(t('scenes', scene.id, 'chasePrompt')) + '</p>';
+    }
+    if (s.longest >= 7) {
+      out += '<p class="ab-notice ab-notice--good">' + esc(t('scenes', scene.id, 'reachedSeven')) + '</p>';
+      if (!anyAlive) {
+        out += '<p class="ab-notice">' + esc(t('scenes', scene.id, 'hitWall')) + '</p>';
+        out += '<p>' + esc(t('scenes', scene.id, 'hitWallQuestion')) + '</p>';
+        out += '<button type="button" class="ab-btn" data-act="advance">' + esc(t('scenes', scene.id, 'toMachine')) + '</button>';
+      }
+    }
+    out += '</div>';
+    return out;
+  }
+
+  function renderCountingMachine(scene) {
+    var s = state.scene;
+    var out = '';
+    out += '<p class="ab-intro">' + esc(t('scenes', scene.id, 'intro')) + '</p>';
+
+    if (s.phase === 'ask') {
+      out += '<p class="ab-prompt">' + esc(t('scenes', scene.id, 'ask')) + '</p>';
+      out += '<button type="button" class="ab-btn" data-act="run-machine">' + esc(t('scenes', scene.id, 'runBtn')) + '</button>';
+    } else if (s.phase === 'running') {
+      out += '<p class="ab-notice">' + esc(fmt(t('scenes', scene.id, 'running'), { n: s.checked })) + '</p>';
+    } else if (s.phase === 'done') {
+      out += '<div class="ab-machine-profile">';
+      out += '<table class="ab-profile-table">';
+      out += '<thead><tr><th>' + esc(t('scenes', scene.id, 'lengthLabel')) + '</th><th>' + esc(t('scenes', scene.id, 'countLabel')) + '</th></tr></thead><tbody>';
+      s.profile.forEach(function(count, idx) {
+        out += '<tr><td>' + (idx + 1) + '</td><td>' + count + '</td></tr>';
+      });
+      out += '</tbody></table></div>';
+      
+      out += '<div class="ab-resolve">';
+      out += '<p class="ab-resolve__head">' + esc(t('scenes', scene.id, 'done')) + '</p>';
+      out += '<p>' + esc(fmt(t('scenes', scene.id, 'doneBody'), { total: 9840 })) + '</p>';
+      out += '<p>' + esc(fmt(t('scenes', scene.id, 'comparison'), { total: 9840 })) + '</p>';
+      out += '<p class="ab-conclusion">' + esc(t('scenes', scene.id, 'sameShape')) + '</p>';
+      out += '</div>';
+      out += actCard('MACHINE');
+      out += '<button type="button" class="ab-btn" data-act="advance">' + esc(t('ui', 'continue')) + '</button>';
+    }
+    return out;
+  }
+
+  function renderReasonStep(scene, num, qKey, aKey, bKey, correctKey) {
+    var s = state.scene;
+    var out = '<div class="ab-reason-step ab-reason-step--' + num + '">';
+    out += '<p class="ab-reason-q">' + esc(t('scenes', scene.id, qKey)) + '</p>';
+    if (s.step === num) {
+      out += '<div class="ab-options">';
+      out += '<button type="button" class="ab-opt" data-act="reason" data-arg="' + aKey + '">' + esc(t('scenes', scene.id, aKey)) + '</button>';
+      out += '<button type="button" class="ab-opt" data-act="reason" data-arg="' + bKey + '">' + esc(t('scenes', scene.id, bKey)) + '</button>';
+      out += '</div>';
+      if (s.wrong) {
+        out += noticeBox(t('scenes', scene.id, s.wrong), 'error');
+      }
+    } else if (s.step > num) {
+      out += '<p class="ab-reason-a">' + esc(t('scenes', scene.id, correctKey)) + '</p>';
+    }
+    out += '</div>';
+    return out;
+  }
+
+  function renderShorterReason(scene) {
+    var s = state.scene;
+    var out = '';
+    out += '<p class="ab-intro">' + esc(t('scenes', scene.id, 'intro')) + '</p>';
+    out += '<p>' + esc(t('scenes', scene.id, 'recall')) + '</p>';
+    out += '<p class="ab-prompt">' + esc(t('scenes', scene.id, 'question')) + '</p>';
+
+    var steps = scene.truth.steps;
+    if (s.step >= 1) out += renderReasonStep(scene, 1, 'step1q', 'step1a', 'step1b', steps[0].correctAnswer);
+    if (s.step >= 2) out += renderReasonStep(scene, 2, 'step2q', 'step2a', 'step2b', steps[1].correctAnswer);
+    if (s.step >= 3) out += renderReasonStep(scene, 3, 'step3q', 'step3a', 'step3b', steps[2].correctAnswer);
+    if (s.step >= 4) out += renderReasonStep(scene, 4, 'step4q', 'step4a', 'step4b', steps[3].correctAnswer);
+    
+    if (s.step > 4) {
+      out += '<div class="ab-resolve ab-resolve--final">';
+      out += '<p class="ab-conclusion">' + esc(t('scenes', scene.id, 'conclusion')) + '</p>';
+      out += '<p class="ab-bounded">' + esc(t('scenes', scene.id, 'bounded')) + '</p>';
+      out += '</div>';
+      out += actCard('REASON');
+      out += '<button type="button" class="ab-btn" data-act="advance">' + esc(t('ui', 'continue')) + '</button>';
+    }
+    return out;
+  }
+
   function renderShell(inner, opts) {
     opts = opts || {};
     var out = '<div class="ab-shell">';
     out += '<div class="ab-topbar">';
     out += '<span class="ab-brand">' + esc(t('ui', 'productName')) + '</span>';
+    
     if (opts.chamber) {
-      out += '<span class="ab-chapter">' + esc(fmt(t('ui', 'chamberOf'),
-        { n: state.sceneIndex + 1, total: SCENES.SCENES.length })) + '</span>';
+      var scene = SCENES.SCENES[state.sceneIndex];
+      var d = scene && scene.doorInfo ? scene.doorInfo : { door: state.sceneIndex + 1, totalDoors: SCENES.SCENES.length };
+      var str = d.part ? 
+        fmt(t('ui', 'chamberPart'), { n: d.door, total: d.totalDoors, part: d.part, parts: d.totalParts }) : 
+        fmt(t('ui', 'chamberOf'), { n: d.door, total: d.totalDoors });
+      out += '<span class="ab-chapter">' + esc(str) + '</span>';
     }
+    
     out += '<span class="ab-topbar__spacer"></span>';
     out += '<span class="ab-lang" role="group" aria-label="' + esc(t('ui', 'languageLabel')) + '">';
     STRINGS.codes().forEach(function(code) {
@@ -815,24 +962,24 @@
     }
     out += '</div>';
 
-    if (state.confirmRestart) {
-      out += '<div class="ab-resolve" id="ab-confirm" tabindex="-1"><p>' + esc(t('ui', 'restartConfirm')) + '</p>' +
-        '<div class="ab-options">' +
-        '<button type="button" class="ab-opt" data-act="restart-yes">' + esc(t('ui', 'restartYes')) + '</button>' +
-        '<button type="button" class="ab-opt" data-act="restart-no">' + esc(t('ui', 'restartNo')) + '</button>' +
-        '</div></div>';
+    if (opts.title) {
+      out += '<h1 class="ab-title" id="ab-title" tabindex="-1">' + esc(opts.title) + '</h1>';
     }
 
     if (opts.chamber) {
-      out += '<h2 class="ab-title" id="ab-title" tabindex="-1">' + esc(opts.title) + '</h2>';
-      out += '<ol class="ab-earned" aria-label="' + esc(t('ui', 'howDoYouKnow')) + '">';
-      state.earned.forEach(function(a) {
-        out += '<li class="ab-earned__item">' + esc(t('acts', a, 'name')) + '</li>';
-      });
-      out += '</ol>';
+      var scene = SCENES.SCENES[state.sceneIndex];
+      if (scene && scene.rulePlate) {
+        var rp = scene.rulePlate;
+        out += '<div class="ab-rule-plate ab-rule-plate--' + rp.mode.toLowerCase() + '">';
+        out += '<div class="ab-rule-plate__head">' + esc(t('rulePlate', 'label')) + '</div>';
+        out += '<div class="ab-rule-plate__body">';
+        out += '<div class="ab-rule-plate__row"><span class="ab-rule-plate__term">' + esc(t('rulePlate', 'symbols')) + ':</span> ' + esc(rp.alphabet.join(' ')) + '</div>';
+        out += '<div class="ab-rule-plate__row"><span class="ab-rule-plate__term">' + esc(t('rulePlate', 'label')) + ':</span> ' + esc(t('rulePlate', rp.description, { example: rp.alphabet[0] + rp.alphabet[0] })) + '</div>';
+        out += '</div></div>';
+      }
     }
+
     out += inner;
-    out += '<p class="ab-privacy">' + esc(t('ui', 'privacyNote')) + '</p>';
     out += '</div>';
     return out;
   }
@@ -848,23 +995,54 @@
   }
 
   function renderOutro() {
-    var inner = '<div class="ab-outro" id="ab-outro" tabindex="-1">' +
-      '<h2 class="ab-title">' + esc(t('outro', 'title')) + '</h2>' +
-      '<p>' + esc(t('outro', 'body1')) + '</p>' +
-      '<p>' + esc(t('outro', 'body2')) + '</p>' +
-      '<p class="ab-bounded">' + esc(t('outro', 'body3')) + '</p>' +
-      '<ol class="ab-earned ab-earned--full">';
-    state.earned.forEach(function(a) {
-      inner += '<li class="ab-earned__item"><strong>' + esc(t('acts', a, 'name')) + '</strong> ' +
-        esc(t('acts', a, 'line')) + '</li>';
+    var out = '';
+    var cliff = SCENES.CLIFF;
+    
+    out += '<div class="ab-cliff">';
+    out += '<h2 class="ab-title">' + esc(t('cliff', 'title')) + '</h2>';
+    out += '<div class="ab-cliff__walls">';
+    
+    cliff.walls.forEach(function(w, i) {
+      out += '<div class="ab-cliff__wall">';
+      out += '<h3 class="ab-cliff__label">' + esc(t('cliff', 'wall' + (i+1) + 'label')) + '</h3>';
+      
+      if (!w.profile) {
+        out += '<div class="ab-cliff__empty">' + esc(t('cliff', 'wall3empty')) + '</div>';
+        out += '<p class="ab-cliff__note">' + esc(t('cliff', 'wall3note')) + '</p>';
+      } else {
+        out += '<div class="ab-cliff__chart">';
+        var maxVal = Math.max.apply(null, w.profile);
+        w.profile.forEach(function(val, lenIdx) {
+          var pct = maxVal > 0 ? (val / 30) * 100 : 0; 
+          out += '<div class="ab-cliff__bar-container">';
+          out += '<div class="ab-cliff__bar" style="height: clamp(1px, ' + pct + '%, 12rem);" aria-hidden="true"></div>';
+          out += '<div class="ab-cliff__val" aria-label="length ' + (lenIdx+1) + ': ' + val + '">' + val + '</div>';
+          out += '<div class="ab-cliff__len">' + (lenIdx+1) + '</div>';
+          out += '</div>';
+        });
+        out += '</div>';
+      }
+      out += '</div>';
     });
-    inner += '</ol>' +
-      '<p class="ab-outlinks">' +
-      '<a class="ab-btn" href="abelisk.html">' + esc(t('outro', 'abelisk')) + '</a> ' +
-      '<a class="ab-btn ab-btn--quiet" href="learn.html">' + esc(t('outro', 'learn')) + '</a> ' +
-      '<button type="button" class="ab-btn ab-btn--quiet" data-act="restart-yes">' + esc(t('outro', 'again')) + '</button>' +
-      '</p></div>';
-    return renderShell(inner, {});
+    out += '</div></div>';
+
+    out += '<div class="ab-handoff">';
+    out += '<p>' + esc(t('handoff', 'body1')) + '</p>';
+    out += '<p>' + esc(t('handoff', 'body2')) + '</p>';
+    out += '<p class="ab-handoff__stanza">';
+    out += '<span>' + esc(t('handoff', 'body3')) + '</span><br>';
+    out += '<span>' + esc(t('handoff', 'body4')) + '</span><br>';
+    out += '<span>' + esc(t('handoff', 'body5')) + '</span>';
+    out += '</p>';
+    out += '<p class="ab-handoff__conclusion">' + esc(t('handoff', 'body6')) + '</p>';
+    
+    out += '<p class="ab-outlinks">';
+    out += '<a class="ab-btn" href="abelisk.html">' + esc(t('handoff', 'abelisk')) + '</a> ';
+    out += '<a class="ab-btn ab-btn--quiet" href="learn.html">' + esc(t('handoff', 'learn')) + '</a> ';
+    out += '<button type="button" class="ab-btn ab-btn--quiet" data-act="restart-yes">' + esc(t('handoff', 'again')) + '</button>';
+    out += '</p></div>';
+    
+    return renderShell(out, { chamber: false, title: t('cliff', 'title') });
   }
 
   function render() {
@@ -881,7 +1059,14 @@
       if (scene.id === 'echo') body = renderEcho(scene);
       else if (scene.id === 'crack') body = renderCrack(scene);
       else if (scene.id === 'map') body = renderMap(scene);
-      else body = renderEmptyDoor(scene);
+      else if (scene.id === 'empty-door') body = renderEmptyDoor(scene);
+      else if (scene.id === 'third-symbol') body = renderThirdSymbol(scene);
+      else if (scene.id === 'counting-machine') body = renderCountingMachine(scene);
+      else if (scene.id === 'shorter-reason') body = renderShorterReason(scene);
+      
+      var subtitle = scene.doorInfo && scene.doorInfo.part ? 
+        ' · ' + esc(t('scenes', scene.id, 'subtitle')) : '';
+        
       appEl.innerHTML = renderShell(body, { chamber: true, title: t('scenes', scene.id, 'title') });
     }
     restoreFocus();
@@ -1014,8 +1199,56 @@
         emptyDoorNode(arg); break;
       case 'why':
         emptyDoorWhy(arg); break;
-      case 'final':
-        emptyDoorFinal(arg); break;
+      case 'final': emptyDoorFinal(arg); break;
+
+      case 'append':
+        s.word += arg;
+        if (s.word.length > s.longest) s.longest = s.word.length;
+        break;
+      case 'clear-word':
+        s.word = '';
+        break;
+      case 'run-machine':
+        s.phase = 'running';
+        s.checked = 0;
+        // Do it sync, it's fast enough, but split into phases so state updates.
+        // We can just fake async by doing it immediately and re-rendering.
+        // Wait, machine is genuinely derived! We must calculate the profile live.
+        var prof = [0,0,0,0,0,0,0,0];
+        var alpha = ['a','b','c'];
+        var queue = [''];
+        while (queue.length > 0) {
+          var w = queue.shift();
+          if (w.length > 0) prof[w.length - 1]++;
+          if (w.length < 8) {
+            var mask = AC.branchMask(w, alpha, 1, undefined);
+            for (var i = 0; i < mask.length; i++) {
+              if (mask[i].allowed) queue.push(w + mask[i].letter);
+            }
+          }
+        }
+        s.profile = prof;
+        s.phase = 'done';
+        break;
+      case 'reason':
+        var steps = SCENES.byId('shorter-reason').truth.steps;
+        var stepData = steps[s.step - 1];
+        if (arg !== steps[s.step - 1].correctAnswer) {
+           // We map the answer keys to what they result in
+           if (arg.endsWith('a') || arg.endsWith('b')) {
+             if (arg === 'step1b') s.wrong = 'step1wrong';
+             else if (arg === 'step2a') s.wrong = 'step2wrong';
+             else if (arg === 'step3b') s.wrong = 'step3wrong';
+             else if (arg === 'step4a') s.wrong = 'step4wrong';
+             else {
+               // they clicked the correct button but we need to advance
+               s.wrong = null;
+               s.step++;
+             }
+           }
+        }
+        break;
+
       default:
         return;
     }
