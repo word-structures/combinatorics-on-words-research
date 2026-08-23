@@ -4,6 +4,7 @@ const path = require('path');
 const rootDir = path.join(__dirname, '..');
 const publicPages = [
   'index.html',
+  'abracalabra.html',
   'start.html',
   'learn.html',
   'explore.html',
@@ -48,11 +49,18 @@ publicPages.forEach(page => {
 // 4. index.html Abelisk CTA targets abelisk.html
 if (contents['index.html']) {
   assert(contents['index.html'].includes('href="abelisk.html">Enter the Abelisk</a>'), 'index.html Abelisk CTA targets abelisk.html');
+  assert(contents['index.html'].includes('href="abracalabra.html">Start here</a>'), 'index.html Start CTA targets abracalabra.html');
 }
 
 // 5. start.html Abelisk CTA targets abelisk.html
 if (contents['start.html']) {
   assert(contents['start.html'].includes('href="abelisk.html">Play</a>'), 'start.html Abelisk CTA targets abelisk.html');
+}
+
+// 5a. abracalabra.js handoff targets abelisk.html
+if (contents['abracalabra.html']) {
+  const jsContent = fs.readFileSync(path.join(rootDir, 'assets', 'abracalabra.js'), 'utf8');
+  assert(jsContent.includes('href="abelisk.html"'), 'abracalabra.js handoff targets abelisk.html');
 }
 
 // 6. learn.html has the intended Play bridge
