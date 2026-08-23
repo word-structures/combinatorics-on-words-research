@@ -1,0 +1,445 @@
+/* ==========================================================================
+   abracalabra — child-facing chambers below the Abelisk
+   --------------------------------------------------------------------------
+   A small extension of the Word Structures design system in assets/site.css.
+   It defines NOTHING that assets/abelisk.css defines: every selector here is
+   prefixed `ab-`, so the two products cannot affect one another even if a
+   page ever loaded both.
+
+   Identity: same letter colours as Abelisk (so a child recognises the world),
+   but set on a darker, warmer ground — an archive rather than a classroom.
+
+   Accessibility floor held here:
+     - every interactive target is at least 44x44 CSS px;
+     - no state is carried by colour alone (each coloured state also carries a
+       glyph or a word);
+     - focus is always visible;
+     - reduced motion removes movement without removing information;
+     - the layout reflows to a single column below 40rem and never requires
+       horizontal scrolling.
+   ========================================================================== */
+
+.abracalabra-app {
+  --ab-ground:      #101c33;
+  --ab-ground-soft: #182740;
+  --ab-card:        #f7f4ec;
+  --ab-card-sunk:   #ece7db;
+  --ab-ink:         #10203c;
+  --ab-ink-soft:    #4d5a72;
+  --ab-onDark:      #e9edf5;
+  --ab-onDark-soft: #a7b3ca;
+  --ab-edge:        #2e3f5e;
+  --ab-glow:        #d9a441;   /* the artefact's own light */
+
+  background: var(--ab-ground);
+  color: var(--ab-onDark);
+  min-height: 70vh;
+  padding-block: clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.ab-shell {
+  width: min(58rem, 100% - 2rem);
+  margin-inline: auto;
+}
+
+/* --- Top bar ------------------------------------------------------------ */
+
+.ab-topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--ab-edge);
+  margin-bottom: 2rem;
+}
+.ab-topbar__spacer { flex: 1 1 auto; }
+
+.ab-brand {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+  color: var(--ab-glow);
+}
+
+.ab-chapter {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ab-onDark-soft);
+}
+
+.ab-lang { display: inline-flex; gap: 0.25rem; }
+
+/* --- Type --------------------------------------------------------------- */
+
+.ab-title {
+  font-family: var(--serif);
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  line-height: 1.1;
+  margin: 0 0 1.5rem;
+  color: var(--ab-onDark);
+}
+
+.abracalabra-app p { max-width: 46ch; line-height: 1.6; }
+
+.ab-intro   { color: var(--ab-onDark-soft); }
+.ab-prompt  { font-size: 1.125rem; color: var(--ab-onDark); }
+.ab-prompt--lock { font-size: 1.25rem; font-family: var(--serif); }
+.ab-rule {
+  font-size: 0.9375rem;
+  color: var(--ab-onDark-soft);
+  border-left: 2px solid var(--ab-edge);
+  padding-left: 0.75rem;
+}
+.ab-rule--warn { border-left-color: var(--ab-glow); }
+.ab-naming  { color: var(--ab-onDark-soft); font-style: italic; }
+.ab-bounded { color: var(--ab-onDark-soft); font-size: 0.9375rem; }
+.ab-privacy {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ab-edge);
+  font-size: 0.8125rem;
+  color: var(--ab-onDark-soft);
+}
+
+.ab-claim {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  background: var(--ab-ground-soft);
+  border: 1px solid var(--ab-edge);
+  border-left: 4px solid var(--ab-glow);
+  font-family: var(--serif);
+  font-size: clamp(1rem, 2.6vw, 1.25rem);
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+}
+.ab-claim.is-cracked { border-left-style: dashed; opacity: 0.65; text-decoration: line-through; }
+.ab-claim--repaired  { border-left-color: var(--green); }
+.ab-claim--rule      { border-left-color: var(--red); }
+
+/* --- Letter cells (shared visual grammar with Abelisk, own selectors) ---- */
+
+.ab-cell {
+  display: inline-grid;
+  place-items: center;
+  width: clamp(2.25rem, 7vw, 3rem);
+  height: clamp(2.25rem, 7vw, 3rem);
+  border-radius: 2px;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(1.125rem, 3.5vw, 1.5rem);
+  color: #fff;
+  border: 2px solid transparent;
+}
+.ab-cell--a { background: var(--blue); }
+.ab-cell--b { background: var(--yellow); color: var(--navy); }
+.ab-cell--c { background: var(--green); }
+
+.ab-strip, .ab-slots, .ab-half__cells, .ab-word {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.ab-strip { margin: 1.5rem 0; gap: 0.4rem; }
+
+.ab-stripcell { cursor: pointer; min-width: 44px; min-height: 44px; }
+.ab-stripcell.is-selected { border-color: var(--ab-glow); box-shadow: 0 0 0 3px rgba(217,164,65,0.35); }
+.ab-stripcell.is-anchor   { border-color: var(--ab-onDark); border-style: dashed; }
+
+/* --- Slot builder ------------------------------------------------------- */
+
+.ab-build { margin: 1.5rem 0; }
+.ab-slots { align-items: center; margin-bottom: 1rem; }
+
+.ab-slot { cursor: pointer; min-width: 44px; min-height: 44px; }
+.ab-slot--empty {
+  display: inline-grid;
+  place-items: center;
+  width: clamp(2.25rem, 7vw, 3rem);
+  height: clamp(2.25rem, 7vw, 3rem);
+  background: var(--ab-ground-soft);
+  border: 2px dashed var(--ab-edge);
+  border-radius: 2px;
+  color: var(--ab-onDark-soft);
+  font-size: 1.25rem;
+}
+
+.ab-divider {
+  width: 3px;
+  align-self: stretch;
+  min-height: 2.25rem;
+  background: var(--ab-glow);
+  margin-inline: 0.35rem;
+}
+
+.ab-keys { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+
+.ab-key {
+  min-width: 48px;
+  min-height: 48px;
+  border: none;
+  border-radius: 4px;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1.375rem;
+  color: #fff;
+  cursor: pointer;
+}
+.ab-key--a { background: var(--blue); }
+.ab-key--b { background: var(--yellow); color: var(--navy); }
+.ab-key--c { background: var(--green); }
+
+/* --- Buttons ------------------------------------------------------------ */
+
+.ab-btn {
+  display: inline-block;
+  min-height: 44px;
+  padding: 0.6rem 1.1rem;
+  background: var(--ab-glow);
+  color: var(--ab-ink);
+  border: 1px solid var(--ab-glow);
+  border-radius: 3px;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.ab-btn--big { font-size: 1.125rem; padding: 0.85rem 1.6rem; margin-top: 1.5rem; }
+.ab-btn--quiet {
+  background: transparent;
+  color: var(--ab-onDark);
+  border-color: var(--ab-edge);
+  font-weight: 500;
+}
+.ab-btn--quiet.is-on {
+  border-color: var(--ab-glow);
+  color: var(--ab-glow);
+}
+/* `is-on` is also carried by aria-pressed, so the state is never colour-only. */
+.ab-btn--quiet.is-on::before { content: "\2713\00a0"; }
+
+.ab-options { display: flex; flex-direction: column; gap: 0.6rem; margin: 1rem 0; }
+.ab-opt {
+  min-height: 48px;
+  text-align: left;
+  padding: 0.85rem 1rem;
+  background: var(--ab-card);
+  color: var(--ab-ink);
+  border: 1px solid var(--ab-card-sunk);
+  border-radius: 3px;
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.45;
+  cursor: pointer;
+}
+.ab-opt:hover { border-color: var(--ab-glow); }
+
+/* --- Inventories and halves --------------------------------------------- */
+
+.ab-halves {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  background: var(--ab-ground-soft);
+  border: 1px solid var(--ab-edge);
+}
+.ab-half { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.ab-inv {
+  background: var(--ab-card);
+  color: var(--ab-ink);
+  padding: 0.6rem 0.75rem;
+  border-radius: 3px;
+}
+.ab-inv__label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ab-ink-soft);
+  margin-bottom: 0.4rem;
+}
+.ab-inv__rows { display: flex; gap: 0.75rem; }
+.ab-inv__row { display: inline-flex; align-items: center; gap: 0.3rem; }
+.ab-inv__sym { width: 1.5rem; height: 1.5rem; font-size: 0.875rem; }
+.ab-inv__n { font-variant-numeric: tabular-nums; font-weight: 700; }
+
+/* --- Notices: three distinct kinds, never one generic "wrong" ------------ */
+
+.ab-notice {
+  margin: 1rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 4px solid var(--ab-edge);
+  background: var(--ab-ground-soft);
+  font-size: 1rem;
+}
+/* A single candidate that did not work. Not an error, not a result. */
+.ab-notice--attempt { border-left-color: var(--ab-onDark-soft); }
+.ab-notice--attempt::before { content: "\00b7\00a0"; font-weight: 700; }
+/* Something the child established. */
+.ab-notice--good { border-left-color: var(--green); }
+.ab-notice--good::before { content: "\2713\00a0"; font-weight: 700; }
+/* The interface could not act, e.g. an unfilled slot. */
+.ab-notice--error { border-left-color: var(--red); }
+.ab-notice--error::before { content: "\0021\00a0"; font-weight: 700; }
+
+/* --- Resolutions -------------------------------------------------------- */
+
+.ab-resolve {
+  margin: 1.75rem 0;
+  padding: 1.5rem;
+  background: var(--ab-card);
+  color: var(--ab-ink);
+  border-radius: 3px;
+}
+.ab-resolve p { color: var(--ab-ink-soft); }
+.ab-resolve__head {
+  font-family: var(--serif);
+  font-size: 1.375rem;
+  color: var(--ab-ink) !important;
+  margin: 0 0 0.75rem;
+}
+.ab-resolve--final { border-top: 4px solid var(--ab-glow); }
+.ab-line { margin: 0.35rem 0; }
+.ab-conclusion {
+  margin-top: 1rem;
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  color: var(--ab-ink) !important;
+}
+
+/* --- Earned acts -------------------------------------------------------- */
+
+.ab-earned { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin: 0 0 2rem; }
+.ab-earned__item {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--ab-glow);
+  color: var(--ab-glow);
+  border-radius: 2px;
+}
+.ab-earned--full { flex-direction: column; gap: 0.75rem; margin-top: 2rem; }
+.ab-earned--full .ab-earned__item { border: none; color: var(--ab-onDark-soft); font-size: 1rem; letter-spacing: normal; padding: 0; }
+.ab-earned--full strong { color: var(--ab-glow); letter-spacing: 0.12em; margin-right: 0.5rem; }
+
+.ab-act {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid var(--ab-glow);
+  background: var(--ab-ground-soft);
+}
+.ab-act__name { font-size: 0.875rem; letter-spacing: 0.18em; color: var(--ab-glow); margin: 0 0 0.5rem; }
+.ab-act__line { font-family: var(--serif); font-size: 1.125rem; margin: 0 0 1.25rem; }
+
+/* --- Wall / map --------------------------------------------------------- */
+
+.ab-wall { margin: 1.5rem 0; }
+.ab-wall__label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ab-onDark-soft);
+}
+.ab-wall__count { text-transform: none; letter-spacing: normal; }
+
+.ab-sort { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-bottom: 1rem; }
+.ab-sort__label { font-size: 0.8125rem; color: var(--ab-onDark-soft); margin-right: 0.25rem; }
+
+.ab-group { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.6rem; }
+.ab-group__key {
+  min-width: 2rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--ab-edge);
+  color: var(--ab-onDark-soft);
+  font-weight: 700;
+  text-align: center;
+}
+.ab-group__words { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.ab-word { gap: 0.15rem; }
+.ab-word .ab-cell { width: 1.75rem; height: 1.75rem; font-size: 0.9375rem; }
+
+.ab-numrow { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.ab-num {
+  min-height: 44px;
+  width: 7rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.125rem;
+  border: 1px solid var(--ab-card-sunk);
+  border-radius: 3px;
+}
+.ab-guide { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
+.ab-guide > span { flex: 1 1 16rem; }
+
+/* --- Scene 4 tree ------------------------------------------------------- */
+
+.ab-tree { margin: 1.5rem 0; }
+.ab-coverage {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--ab-glow);
+  color: var(--ab-glow);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.9375rem;
+  margin-bottom: 1rem;
+}
+
+.ab-node {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--ab-edge);
+}
+.ab-node.is-dead { opacity: 0.72; }
+.ab-node__state { font-size: 0.875rem; color: var(--ab-onDark-soft); }
+.ab-node__state[data-state="dead"] { color: var(--ab-onDark-soft); }
+.ab-node__state[data-state="live"] { color: var(--ab-glow); }
+
+.ab-children { flex: 1 1 100%; display: flex; flex-wrap: wrap; gap: 1rem; padding-left: 1.5rem; border-left: 2px solid var(--ab-edge); }
+.ab-child { display: flex; align-items: center; gap: 0.5rem; }
+
+.ab-tried { margin: 1.5rem 0; }
+.ab-tried ul { list-style: none; padding: 0; margin: 0.5rem 0 0; }
+.ab-tried li { display: flex; align-items: center; gap: 0.6rem; padding: 0.3rem 0; }
+.ab-tried__why { font-size: 0.875rem; color: var(--ab-onDark-soft); }
+
+/* --- Opening / outro ---------------------------------------------------- */
+
+.ab-opening { padding: clamp(2rem, 8vw, 5rem) 0; }
+.ab-opening__lede { font-family: var(--serif); font-size: clamp(1.375rem, 4vw, 2rem); line-height: 1.3; }
+.ab-opening__tagline { color: var(--ab-glow); letter-spacing: 0.06em; }
+.ab-outlinks { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; max-width: none; }
+
+/* --- Focus -------------------------------------------------------------- */
+
+.abracalabra-app :focus-visible {
+  outline: 3px solid var(--ab-glow);
+  outline-offset: 2px;
+}
+
+/* --- Reduced motion ----------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .abracalabra-app *,
+  .abracalabra-app *::before,
+  .abracalabra-app *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* --- Narrow screens ----------------------------------------------------- */
+
+@media (max-width: 40rem) {
+  .ab-halves { flex-direction: column; gap: 1rem; }
+  .ab-children { padding-left: 0.75rem; }
+  .ab-node { align-items: flex-start; }
+  .ab-group { flex-direction: column; gap: 0.4rem; }
+}
