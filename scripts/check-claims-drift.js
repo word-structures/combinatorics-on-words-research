@@ -309,7 +309,11 @@ check("No self-certifying verdict language on the public pages", () => {
   // surface exists under a second name, not silently narrow to just one.
   // abelisk.html added 2026-08-14 (ABELISK-MVP-1) to ensure the new puzzle page
   // does not leak self-certifying language.
-  const files = ['index.html', 'start.html', 'learn.html', 'research.html', 'evidence.html', 'explore.html', 'explorer.html', 'bridge_story_sandbox.html', 'word-checker.html', 'abelisk.html'];
+  // abracalabra.html added 2026-08-23 (ABRACALABRA-V1-1): a new child-facing
+  // public page whose "Empty Door" scene states a mathematical claim in UI
+  // text (row 113), so it needs the same guard every other public page has
+  // had since it was created — never added unguarded.
+  const files = ['index.html', 'start.html', 'learn.html', 'research.html', 'evidence.html', 'explore.html', 'explorer.html', 'bridge_story_sandbox.html', 'word-checker.html', 'abelisk.html', 'abracalabra.html'];
   const offences = [];
   const used = new Set();
 
@@ -601,7 +605,10 @@ const EPISTEMIC_GUARDS = {
 };
 
 check("No unsupported epistemic framing on the public pages", () => {
-  const files = ['index.html', 'start.html', 'learn.html', 'research.html', 'evidence.html', 'explore.html', 'explorer.html', 'bridge_story_sandbox.html', 'word-checker.html', 'abelisk.html'];
+  // abracalabra.html added 2026-08-23 (ABRACALABRA-V1-1), same reasoning as
+  // the drift-drift-check-6b guard above: it is a public page with UI text
+  // stating a mathematical claim (the Empty Door scene, row 113).
+  const files = ['index.html', 'start.html', 'learn.html', 'research.html', 'evidence.html', 'explore.html', 'explorer.html', 'bridge_story_sandbox.html', 'word-checker.html', 'abelisk.html', 'abracalabra.html'];
   const offences = [];
 
   for (const f of files) {
