@@ -230,6 +230,56 @@ console.log('\n--- 5. Scene 4 (The Empty Door): bounded non-existence, both path
      'Any mention of the infinite case is a disclaimer, not a claim');
 }
 
+
+console.log('\n--- 5a. Third Symbol & Counting Machine (Ternary Strict) ---');
+
+const ts = Scenes.byId('third-symbol');
+ok(ts.rule.minK === 1, 'Third Symbol declares minK = 1');
+ok(ts.alphabet.join('') === 'abc', 'Third Symbol uses ternary alphabet');
+
+// Path B check for ternary
+const expectedTernaryProfile = [3, 6, 12, 18, 30, 30, 18, 0];
+const pathBTernaryProfile = [];
+let tCount = 0;
+for (let n = 1; n <= 8; n++) {
+  const space = indepSpace(['a','b','c'], n);
+  const survivors = space.filter(w => !indepHasEcho(w, 1));
+  pathBTernaryProfile.push(survivors.length);
+  tCount += space.length;
+}
+eq(pathBTernaryProfile, expectedTernaryProfile, 'Path B ternary strict profile matches expected: ' + expectedTernaryProfile.join(','));
+eq(tCount, 9840, 'Total ternary words checked matches 9840');
+eq(ts.truth.survivorProfile, expectedTernaryProfile, 'Truth object ternary profile is correct');
+eq(ts.truth.longestSurvivorLength, 7, 'Longest survivor is 7');
+eq(ts.truth.survivorsAtLength7, 18, '18 survivors at length 7');
+eq(ts.truth.noSurvivorsAtLength8, true, 'Zero survivors at length 8');
+
+// Path A / B parity check
+const pathATernaryProfile = [];
+for (let n = 1; n <= 8; n++) {
+  const space = indepSpace(['a','b','c'], n); // we just reuse space generation
+  const survivors = space.filter(w => {
+    return AbelianCore.checkWord(w, 1, undefined, ['a','b','c']).valid;
+  });
+  pathATernaryProfile.push(survivors.length);
+}
+eq(pathATernaryProfile, pathBTernaryProfile, 'Path A and Path B agree exhaustively up to length 8 for ternary strict');
+
+console.log('\n--- 5b. Shorter Reason (Binary Strict) ---');
+const sr = Scenes.byId('shorter-reason');
+ok(sr.rule.minK === 1, 'Shorter Reason declares minK = 1');
+ok(sr.alphabet.join('') === 'ab', 'Shorter Reason uses binary alphabet');
+ok(sr.truth.binaryStrictProfile.join(',') === '2,2,2,0', 'Binary strict profile is 2,2,2,0');
+
+// Path B check for binary
+const pathBBinaryProfile = [];
+for (let n = 1; n <= 4; n++) {
+  const space = indepSpace(['a','b'], n);
+  const survivors = space.filter(w => !indepHasEcho(w, 1));
+  pathBBinaryProfile.push(survivors.length);
+}
+eq(pathBBinaryProfile, [2, 2, 2, 0], 'Path B binary strict profile matches 2,2,2,0');
+
 console.log('\n--- 6. Strings: EN canonical, FI delivery, same shape ---');
 {
   function shape(o, prefix, acc) {
