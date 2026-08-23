@@ -473,3 +473,30 @@ figure printed alongside its survivor count is that script's own output.
 - **Structural residue:** Chronology matters; Hall was strictly stronger than Prefix Scale Credit.
 - **Novelty:** NOT CLAIMED.
 - **Finality:** NECESSARY.
+
+## 27. Route-C L=6 combined-filter closure: no coding survives both tests
+
+*Logged 2026-08-17. See `MATH_CLAIMS.md` row 112 and the evidence capsule
+`docs/research/evidence/l6-route-c-closure-2026-08/`.*
+
+**Hypothesis:** some uniform coding `g : Σ₆ → Σ₃⁶` applied to `h₆^ω(a)` yields an
+infinite aa2f word, giving Mäkelä's conjecture by Route C at `L = 6`.
+
+**Why it was shot down:**
+- The small-window condition (`K ∈ [2,5]`) is decided exactly by locality: such a
+  square spans at most 10 image symbols, hence lies inside `g(u)` for one of the 22
+  length-3 factors of `h₆^ω(a)`. Exactly 1,200,636 concrete codings (200,106
+  S₃-canonical classes) satisfy it.
+- Stage-A eliminates 1,200,288 of them by the exact kernel condition `M_g·d = 0`,
+  each elimination exhibiting a block-aligned abelian square with `K = 6m ≥ 6`.
+- The remaining 348 codings each receive an explicitly exhibited string-level
+  abelian square with `K ∈ [6,10]`, ending at or before image position 34.
+- Combined survivors: 0.
+
+**Conclusion:**
+- `S_small(6) ∩ S_large(6) = ∅`. No uniform `L=6` coding of `h₆` yields an aa2f word.
+- **Explicit boundary:** this does **not** prove `S_large(6) = ∅`, does **not** change
+  `L*` (still `{6,…,10}`), extends to **neither** `L ≥ 7` **nor** non-uniform codings,
+  and does not bear on Mäkelä's conjecture itself. No `L=6 → L=7` inference exists.
+- **Novelty:** NOT CLAIMED.
+- **Finality: BOUNDED COMPUTED.** Exhaustive and exact over the uniform `L=6` family.
