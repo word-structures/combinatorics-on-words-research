@@ -1,0 +1,64 @@
+\section{Symmetry and reversal orbits}
+\label{app:D}
+
+The quantities below are produced and checked by the same package-local script
+\texttt{verify\_scissor\_and\_symmetry.js}; the orbit representatives and the
+reversal pairing are written to \texttt{symmetry\_orbits\_certificate.json}.
+No external data file is read.
+
+\subsection*{\texorpdfstring{\(S_3\)}{S3} action on the pool}
+
+The alphabet group \(S_3\) acts on the memory-9 window graph by permuting
+letters, and this action preserves the \((3,1,1)\) boundary pool. The 132 pool
+transitions decompose into \textbf{22 orbits, every one of size 6}; both facts
+are checked, and closure of the action on the pool is asserted by the script
+(it raises an error otherwise).
+
+Restricting deletions to unions of whole orbits gives a vertex-cover problem
+on the 22-vertex quotient conflict graph. Exhaustive search over all
+\(2^{22}\) orbit subsets yields
+
+\[
+\text{minimum }=17\text{ orbits}=17\times6=102\text{ transitions},
+\qquad
+\#\{\text{optima}\}=8 .
+\]
+
+The \(S_3\)-invariant optimum therefore attains the same value 102 as the
+unrestricted optimum of Appendix~\ref{app:C}; symmetry costs nothing here.
+
+\subsection*{Reversal}
+
+Reversal is a directed \emph{anti}-automorphism: an edge \(u\to v\) is carried
+to \(\operatorname{rev}(v)\to\operatorname{rev}(u)\). It therefore exchanges
+\(E_{\rm in}\) and \(E_{\rm out}\), and no orbit can be fixed by it. The script
+checks that the induced map on orbits is an involution and that the 22 orbits
+form \textbf{11 reversal pairs}.
+
+Requiring the deletion set to be invariant under \(S_3\) \emph{and} reversal
+means selecting whole reversal pairs. Exhaustive search over all \(2^{11}\)
+selections yields
+
+\[
+\text{minimum }=9\text{ reversal pairs}=18\text{ orbits}=108\text{ transitions},
+\qquad
+\#\{\text{optima}\}=2 .
+\]
+
+\subsection*{What changes and what does not}
+
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+constraint & unit of choice & minimum transitions & optima \\
+\midrule
+none & single transition & 102 & --- \\
+\(S_3\)-invariant & orbit (6 transitions) & 102 & 8 \\
+\(S_3\) and reversal & reversal pair (12 transitions) & 108 & 2 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Imposing reversal symmetry \emph{raises} the deletion cost from 102 to 108
+while \emph{reducing} the number of independent choices from eight optima to
+two. The two effects run in opposite directions and should not be conflated.
