@@ -1,0 +1,90 @@
+\section{Reproducibility and provenance}
+\label{app:E}
+
+This appendix records, for each machine-supported quantity, what artifact
+supports it and at what provenance level. Provenance levels are used in a
+deliberately restrictive sense:
+
+\begin{description}
+\item[\textsc{Package-local, re-executed}] the script ships in this package,
+      reads no external file, and was re-run during preparation of this
+      package; its output is included verbatim.
+\item[\textsc{Reconstructed}] the script ships in this package, but no
+      upstream original could be located, so byte-for-byte historical identity
+      with the code that first produced the numbers cannot be established.
+\item[\textsc{Copied, hash differs}] an upstream file of the same name was
+      located, but its SHA-256 differs from the packaged copy; the packaged
+      copy is therefore a variant, not a faithful archive.
+\item[\textsc{Independent re-derivation}] the quantity was recomputed during
+      refereeing by a separately written implementation.
+\end{description}
+
+\begin{center}
+\begin{tabular}{p{0.36\textwidth}p{0.30\textwidth}p{0.26\textwidth}}
+\toprule
+Quantity & Artifact & Provenance level \\
+\midrule
+Boundary counts, \(|E(H)|\), \(\nu(H)=\tau(H)=102\), restricted pool
+decomposition, \(S_3\) and reversal optima (Appendices~\ref{app:C},
+\ref{app:D})
+& \texttt{verify\_scissor\_and\_symmetry.js}; output in
+\texttt{VERIFIER\_OUTPUT.txt}; certificates in the two JSON files
+& \textsc{Package-local, re-executed} \\
+\addlinespace
+Period and lattice certificates, \(h=2,\ldots,6\) (Appendix~\ref{app:A})
+& walks printed in full in Appendix~\ref{app:A}
+& \textsc{Independent re-derivation}; every walk re-checked edge by edge \\
+\addlinespace
+Raw, valid, essential state counts (Table~\ref{tab:counts})
+& \texttt{evidence/sft-container.js}
+& \textsc{Copied, hash differs} \\
+\addlinespace
+Perron roots \(\lambda_h\) and variance rates \(a_h\) (Table~\ref{tab:ah})
+& \texttt{evidence/spectral\_certifier.js}
+& \textsc{Reconstructed}; values independently re-derived by two methods \\
+\addlinespace
+\(K=5\) ablation constants (Table~\ref{tab:ablation})
+& \texttt{evidence/ablation\_certifier.js}
+& \textsc{Reconstructed} \\
+\addlinespace
+Finite-\(n\) controls for \(h=2,3,4,5\) (Table~\ref{tab:h5})
+& \texttt{evidence/independent\_dp.js}
+& \textsc{Reconstructed} \\
+\addlinespace
+Finite-\(n\) data for \(h=6\) (Table~\ref{tab:h6}) and the correction audit
+& \texttt{evidence/exact\_h6\_collision\_dp.js}
+& \textsc{Copied, hash differs}; all five denominators
+\textsc{Independent re-derivation} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Hash record}
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+file & packaged SHA-256 (first 16) & upstream SHA-256 (first 16) \\
+\midrule
+\texttt{sft-container.js} & \texttt{def436906535ca12} & \texttt{6dcf2a08252eba0b} \\
+\texttt{exact\_h6\_collision\_dp.js} & \texttt{cada95990b11f3e9} & \texttt{bcaf8eabff09877e} \\
+\texttt{spectral\_certifier.js} & \texttt{dfccc7c75ebf506c} & not located \\
+\texttt{ablation\_certifier.js} & \texttt{3f7e8aa9530187c7} & not located \\
+\texttt{independent\_dp.js} & \texttt{6802da24fa551d31} & not located \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+For the two files with a located upstream, the hashes differ; we therefore do
+not assert that the packaged copy is the code that originally produced the
+reported numbers. For the three files with no located upstream, no historical
+provenance claim is made at all. This is why the load-bearing quantities of
+Appendices~\ref{app:A}, \ref{app:C} and~\ref{app:D}, and all five \(h=6\)
+denominators, were re-derived independently rather than inherited.
+
+\subsection*{Reporting incident}
+
+The \(h=6\) reporting-only defect described in Appendix~\ref{app:B} is
+retained here rather than silently repaired: the earlier prose report quoted
+absolute counts that did not correspond to the preserved raw output, while the
+\(nR_n\) ratios were unaffected. The correction is recorded, not overwritten.

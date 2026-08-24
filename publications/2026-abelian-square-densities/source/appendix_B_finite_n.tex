@@ -1,0 +1,55 @@
+\section{Finite-\texorpdfstring{\(n\)}{n} validation and evidence levels}
+\label{app:B}
+
+Finite-\(n\) dynamic programming validates the theorem-derived constants; it
+does not prove them. This appendix records exactly which quantities received
+which kind of check.
+
+\subsection*{\texorpdfstring{\(h=2,3,4\)}{h=2,3,4}}
+
+Independent all-language finite-\(n\) computations, followed by second-order
+Richardson extrapolation of \(nR_n^{(h)}\), agree with the spectral constants
+to approximately \(0.003\%\) (\(h=2\)), \(0.009\%\) (\(h=3\)) and \(0.012\%\)
+(\(h=4\)).
+
+\subsection*{\texorpdfstring{\(h=5\)}{h=5}}
+
+The all-language series is given in Table~\ref{tab:h5}. It approaches \(C_5\)
+slowly: at \(n=60\) the value \(nR_n^{(5)}=0.7099965\) lies approximately
+\(7.3\%\) below \(C_5=0.7655366150\ldots\). A second-order Richardson
+extrapolation of the same series lies approximately \(0.13\%\) from \(C_5\).
+We therefore do \emph{not} claim that the finite-\(n\) series reproduces the
+constant directly; it is consistent with it after extrapolation.
+
+An earlier series was accidentally computed on the essential core only. The
+values in Table~\ref{tab:h5} are the corrected all-language control and must
+not be conflated with the core-only sequence.
+
+\subsection*{\texorpdfstring{\(h=6\)}{h=6}: the reporting-only defect and its evidence levels}
+
+For \(h=6\), an earlier prose table reported absolute counts that did not
+correspond to the preserved raw output of the collision dynamic program. A
+subsequent arithmetic and provenance audit established that this was a
+reporting-only defect, and the evidence separates into three distinct levels.
+First, all five denominators \(|L_6\cap\Sigma^{2n}|\) for
+\(n=12,20,30,40,50\) were independently reproduced by a separate exact
+arbitrary-precision language-count dynamic program. Second, the collision
+numerators for \(n=12,20,30\) were independently reproduced by a separate
+arbitrary-precision implementation. Third, for \(n=40\) and \(n=50\) the
+numerators were \textbf{not} recomputed by a second independent
+implementation; instead the raw computation was audited for arithmetic storage
+safety, the largest observed typed-array cell being \(2\,182\,364\,991\,314\),
+far below the \(\mathtt{BigUint64Array}\) bound
+\(2^{64}-1=18\,446\,744\,073\,709\,551\,615\), so no wraparound can have
+occurred. All five reported values of \(nR_n^{(6)}\) are internally consistent
+with the preserved raw counts as exact rationals, and the ratios reported
+before the correction were unchanged by it. We make no claim that the
+\(n=40,50\) numerators received a second independent computation.
+
+A small-\(n\) brute-force control over \(\Sigma^{\le 13}\) and a regression of
+the same pipeline against the previously validated \(h=5\) all-language series
+both pass.
+
+The verified raw values are reproduced in Table~\ref{tab:h6}. The correction
+affects only the earlier prose report, not the theorem and not the raw
+\(h=6\) validation data.
