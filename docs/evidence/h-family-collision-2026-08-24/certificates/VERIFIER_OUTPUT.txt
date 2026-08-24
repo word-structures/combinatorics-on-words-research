@@ -1,0 +1,39 @@
+APPENDIX C -- excursion cover certificate
+  PASS  memory-9 valid states                          got 3114  expected 3114
+  PASS  L4 edges (all overlaps)                        got 6300  expected 6300
+  PASS  CORE size                                      got 2844  expected 2844
+  PASS  LOST size                                      got 270  expected 270
+  PASS  LOST-internal edges (L4)                       got 216  expected 216
+  PASS  |E_in|                                         got 180  expected 180
+  PASS  |E_out|                                        got 180  expected 180
+  PASS  total boundary                                 got 360  expected 360
+  PASS  |E(H)|                                         got 366  expected 366
+  PASS  maximum matching nu(H)                         got 102  expected 102
+  PASS  minimum vertex cover tau(H)                    got 102  expected 102
+  PASS  cover leaves no H-edge uncovered               got 0  expected 0
+  PASS  matching is disjoint and valid                 got true  expected true
+APPENDIX C -- restricted (3,1,1) pool
+  PASS  pool size                                      got 132  expected 132
+  PASS  H-edges with no pool endpoint (infeasible)     got 0  expected 0
+  PASS  forced (partner outside pool)                  got 84  expected 84
+  PASS  residual components                            got 18  expected 18
+  PASS  all residual components are K2                 got true  expected true
+  PASS  residual edges                                 got 18  expected 18
+  PASS  redundant pool transitions                     got 12  expected 12
+  PASS  restricted minimum = forced + residual         got 102  expected 102
+APPENDIX D -- symmetry
+  PASS  S3 orbits on the pool                          got 22  expected 22
+  PASS  all orbit sizes equal 6                        got [6]  expected [6]
+  PASS  minimum S3 orbits                              got 17  expected 17
+  PASS  minimum S3 transitions (17*6)                  got 102  expected 102
+  PASS  number of S3 optima                            got 8  expected 8
+  PASS  reversal is an involution on orbits            got true  expected true
+  PASS  reversal pairs                                 got 11  expected 11
+  PASS  minimum reversal pairs                         got 9  expected 9
+  PASS  minimum orbits under S3+reversal               got 18  expected 18
+  PASS  minimum transitions under S3+reversal          got 108  expected 108
+  PASS  number of S3+reversal optima                   got 2  expected 2
+
+ALL CHECKS PASS
+
+wrote excursion_cover_certificate.json and symmetry_orbits_certificate.json

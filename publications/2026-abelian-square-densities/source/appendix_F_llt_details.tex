@@ -1,0 +1,184 @@
+\section{Local limit theorem details}
+\label{app:F}
+
+Throughout, \(M_h(\theta)\) denotes the Fourier-tilted transfer matrix of the
+synchronized product chain on \(E_h\times E_h\): for a product edge
+\(E=\bigl((x,y)\to(x',y')\bigr)\) carrying the rank-two increment
+\(g(E)=\eta(y\to y')-\eta(x'\to x)\) of Section~\ref{sec:fold}, we set
+\(M_h(\theta)_{(x,y),(x',y')}=e^{i\langle\theta,g(E)\rangle}\) when \(E\) is an
+edge and \(0\) otherwise. Thus \(M_h(0)\) is the adjacency matrix of the
+product graph, which is primitive by Proposition~\ref{prop:graph}(5); write
+\(\varrho=\rho(M_h(0))\).
+
+\subsection{Wielandt equality and the lattice obstruction}
+
+\begin{lemma}
+\label{lem:F1}
+For every \(\theta\in[-\pi,\pi)^2\) with \(\theta\neq0\) we have
+\(\rho(M_h(\theta))<\varrho\).
+\end{lemma}
+
+\begin{proof}
+Entrywise \(|M_h(\theta)|=M_h(0)\), so \(\rho(M_h(\theta))\le\varrho\).
+Suppose equality holds. Since \(M_h(0)\) is primitive, Wielandt's theorem
+yields \(\varphi\in\mathbb R\) and a diagonal unitary \(D\) with
+\(M_h(\theta)=e^{i\varphi}DM_h(0)D^{-1}\); equivalently there is
+\(\psi:E_h\times E_h\to\mathbb R/2\pi\mathbb Z\) with
+\[
+\langle\theta,g(E)\rangle\equiv\varphi+\psi(u')-\psi(u)\pmod{2\pi}
+\]
+for every product edge \(E=(u\to u')\). Summing along a closed product walk
+\(W\) of length \(L\), the coboundary telescopes, leaving
+\begin{equation}\label{eq:F1cocycle}
+\Bigl\langle\theta,\ \textstyle\sum_{E\in W}g(E)\Bigr\rangle\equiv L\varphi
+\pmod{2\pi}.
+\end{equation}
+
+Let \(c_1,c_2,c_3\) be the three equal-length closed walks of length \(L\) at
+the common root \(z_0\) recorded for this \(h\) in Appendix~\ref{app:A}. For
+each pair \((i,j)\) let \(W_{ij}\) be the closed product walk at
+\((z_0,z_0)\) that traverses \(c_i\) backwards in the first coordinate and
+\(c_j\) forwards in the second. Then \(W_{ij}\) has length \(L\) and, by the
+definition of \(g\),
+\[
+\sum_{E\in W_{ij}}g(E)=\Psi(c_j)-\Psi(c_i),
+\]
+the projected Parikh difference. Taking \(i=j\) makes the left-hand side of
+\eqref{eq:F1cocycle} zero, whence \(L\varphi\equiv0\pmod{2\pi}\); the constant
+\(\varphi\) is thereby eliminated with no separate argument. Substituting this
+back into \eqref{eq:F1cocycle} for general \(i,j\) gives
+\[
+\bigl\langle\theta,\ \Psi(c_j)-\Psi(c_i)\bigr\rangle\equiv0\pmod{2\pi}.
+\]
+In particular \(\langle\theta,d_1\rangle\equiv\langle\theta,d_2\rangle\equiv0\)
+for \(d_1=\Psi(c_2)-\Psi(c_1)\) and \(d_2=\Psi(c_3)-\Psi(c_1)\).
+
+This is the only point at which the covolume of the certificate is used.
+Appendix~\ref{app:A} records \(\det[d_1\ d_2]=\pm1\), so \(\{d_1,d_2\}\) is a
+\(\mathbb Z\)-basis of \(\mathbb Z^2\); had the determinant been some \(q\)
+with \(|q|>1\), the conclusion below would only give
+\(\theta\in(2\pi/q)\mathbb Z^2\) and nontrivial characters would survive.
+Unimodularity gives \(\langle\theta,v\rangle\equiv0\pmod{2\pi}\) for every
+\(v\in\mathbb Z^2\), hence for \(v=e_1,e_2\), so \(\theta\in2\pi\mathbb Z^2\),
+i.e.\ \(\theta=0\) in \([-\pi,\pi)^2\) --- a contradiction.
+\end{proof}
+
+\subsection{Uniform spectral decay away from \texorpdfstring{\(\theta=0\)}{theta=0}}
+
+\begin{lemma}
+\label{lem:F2}
+For every \(\delta>0\) there exist \(\lambda_\delta<\varrho\) and
+\(Q<\infty\) with
+\[
+\|M_h(\theta)^N\|\le Q\,\lambda_\delta^{\,N}
+\qquad\text{for all }N\ge0\text{ and all }\theta\in K_\delta
+:=\{\delta\le\|\theta\|_\infty\le\pi\}.
+\]
+\end{lemma}
+
+\begin{proof}
+The entries of \(M_h(\theta)\) are trigonometric polynomials, so
+\(\theta\mapsto M_h(\theta)\) is continuous; in fixed finite dimension the
+roots of the characteristic polynomial depend continuously on the entries, so
+\(\theta\mapsto\rho(M_h(\theta))\) is continuous. By Lemma~\ref{lem:F1} it is
+strictly less than \(\varrho\) at every point of the compact set
+\(K_\delta\), hence
+\[
+\lambda'_\delta:=\max_{\theta\in K_\delta}\rho(M_h(\theta))<\varrho .
+\]
+A pointwise Gelfand estimate would not suffice here, since its implied
+constant depends on \(\theta\). Fix \(\lambda_\delta\) with
+\(\lambda'_\delta<\lambda_\delta<\varrho\) and let
+\(C_\delta=\{z:|z|=\lambda_\delta\}\). For
+\((z,\theta)\in C_\delta\times K_\delta\) we have
+\(z\notin\operatorname{spec}(M_h(\theta))\), so the resolvent
+\(R(z,\theta)=(zI-M_h(\theta))^{-1}\) exists; matrix inversion is continuous
+where defined, so \((z,\theta)\mapsto\|R(z,\theta)\|\) is continuous on the
+compact set \(C_\delta\times K_\delta\) and
+\[
+Q_0:=\sup_{C_\delta\times K_\delta}\|R(z,\theta)\|<\infty .
+\]
+Since the whole spectrum of \(M_h(\theta)\) lies strictly inside
+\(C_\delta\), the holomorphic functional calculus gives
+\(M_h(\theta)^N=\frac{1}{2\pi i}\oint_{C_\delta}z^NR(z,\theta)\,dz\), whence
+\[
+\|M_h(\theta)^N\|\le\frac{1}{2\pi}\cdot2\pi\lambda_\delta\cdot
+\lambda_\delta^{\,N}\,Q_0=Q\,\lambda_\delta^{\,N},
+\qquad Q:=Q_0\lambda_\delta,
+\]
+uniformly on \(K_\delta\).
+\end{proof}
+
+\subsection{Uniformity in endpoints, bounded displacement and lengths \texorpdfstring{\(N+r\)}{N+r}}
+
+\begin{proposition}
+\label{prop:F3}
+Fix \(r_0\in\mathbb N\) and a finite \(V\subset\mathbb Z^2\). Let
+\(\mathcal N_N(\alpha,\omega;v)\) be the number of length-\(N\) product paths
+from \(\alpha\) to \(\omega\) with \(\sum_E g(E)=v\), and let
+\(\mathcal W_N(\alpha,\omega)=(M_h(0)^N)_{\alpha,\omega}\). Then
+\[
+\mathcal N_{N+r}(\alpha,\omega;v)
+=\mathcal W_{N+r}(\alpha,\omega)\,
+\frac{1}{2\pi N\sqrt{\det\Sigma_{D,h}}}\,\bigl(1+o(1)\bigr),
+\]
+where the \(o(1)\) is uniform simultaneously over all state pairs
+\((\alpha,\omega)\), all \(v\in V\), and all integers \(|r|\le r_0\).
+\end{proposition}
+
+\begin{proof}
+Fourier inversion on \(\mathbb Z^2\) is exact:
+\[
+\mathcal N_{N+r}(\alpha,\omega;v)=\frac1{(2\pi)^2}
+\int_{[-\pi,\pi]^2}e^{-i\langle\theta,v\rangle}
+\bigl(M_h(\theta)^{N+r}\bigr)_{\alpha,\omega}\,d\theta .
+\]
+Split at \(\|\theta\|_\infty=\delta\). On \(K_\delta\), Lemma~\ref{lem:F2}
+bounds the integrand by \(Q\lambda_\delta^{N+r}\) with
+\(\lambda_\delta<\varrho\); this bound involves neither \(\alpha,\omega\) nor
+\(v\), so that contribution is \(O(\lambda_\delta^{N})=o(\varrho^{N}/N)\)
+uniformly in all three parameters.
+
+Near the origin, \(M_h(0)\) is primitive, so \(\varrho\) is a simple isolated
+eigenvalue. By analytic perturbation theory there are \(\delta_0>0\), an
+analytic simple eigenvalue \(\varrho(\theta)\) and an analytic rank-one
+spectral projection \(\Pi(\theta)\) on \(\|\theta\|_\infty<\delta_0\), with the
+remaining spectrum inside \(\{|z|\le\varrho''\}\) for some
+\(\varrho''<\varrho\); hence
+\(M_h(\theta)^{N+r}=\varrho(\theta)^{N+r}\Pi(\theta)+O((\varrho'')^{N+r})\)
+uniformly. Write \(\varrho(\theta)=\varrho\,e^{p(\theta)}\) with \(p\)
+analytic and \(p(0)=0\). By Lemma~\ref{lem:cov2} and the \(S_3\) letter
+frequencies \((1/3,1/3,1/3)\) the drift vanishes, so \(\nabla p(0)=0\) and
+\(p(\theta)=-\tfrac12\theta^{\!\top}\Sigma_{D,h}\theta+O(\|\theta\|^3)\).
+
+Substituting \(\theta=\phi/\sqrt N\) and using \(\nabla p(0)=0\),
+\[
+\varrho(\theta)^{N}=\varrho^{N}
+\exp\bigl(-\tfrac12\phi^{\!\top}\Sigma_{D,h}\phi\bigr)(1+o(1)),
+\]
+and \(\Pi(\theta)\to\Pi(0)\). Gaussian integration produces the factor
+\((2\pi N)^{-1}(\det\Sigma_{D,h})^{-1/2}\).
+
+The three uniformities are now read off. \emph{Endpoints:} there are finitely
+many pairs \((\alpha,\omega)\) and the dependence enters only through the entry
+\(\Pi(\theta)_{\alpha,\omega}\), so the maximum of finitely many \(o(1)\)
+terms is \(o(1)\). \emph{Displacement:} \(v\) enters only through
+\(e^{-i\langle\theta,v\rangle}=e^{-i\langle\phi,v\rangle/\sqrt N}\), and
+\(\bigl|e^{-i\langle\phi,v\rangle/\sqrt N}-1\bigr|\le\|\phi\|\,\|v\|/\sqrt N\),
+which is uniform over the fixed finite set \(V\). \emph{Length:}
+\(\varrho(\theta)^{N+r}=\varrho(\theta)^{N}\varrho(\theta)^{r}\) and
+\(\varrho(\theta)^{r}\to\varrho^{r}\) uniformly for \(|r|\le r_0\), while
+\((2\pi(N+r))^{-1}=(2\pi N)^{-1}(1+O(1/N))\).
+\end{proof}
+
+\begin{remark}
+This is exactly the form consumed by Lemma~\ref{lem:boundary}. After peeling,
+at most \(D_h\) edges are removed at each end, so the surviving core portion
+has length \(N-r\) with \(0\le r\le 2D_h\); its endpoints are the finitely many
+core states at which the path enters and leaves \(E_h\); and by
+Lemma~\ref{lem:fold} the required displacement is \(\beta\) adjusted by the
+Parikh contribution of the peeled edges, so it lies in the fixed finite set
+\(\{v:\|v\|_\infty\le m+2D_h\}\). The resulting relative error is therefore a
+single \(o(1)\) independent of the term, and since every term of the identity
+of Lemma~\ref{lem:pathid} is non-negative, summation preserves it.
+\end{remark}
