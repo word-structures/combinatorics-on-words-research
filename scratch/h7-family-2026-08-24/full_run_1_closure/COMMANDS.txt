@@ -1,0 +1,6 @@
+node scratch/h7-family-2026-08-24/full_run_1_closure/audit_edges.js
+node scratch/h7-family-2026-08-24/full_run_1_closure/cert_verify.js
+node scratch/h7-family-2026-08-24/full_run_1_closure/lat_verify.js
+node scratch/h7-family-2026-08-24/full_run_1_closure/spec_verify.js
+node scratch/h7-family-2026-08-24/full_run_1_closure/a7_closure.js
+node scratch/h7-family-2026-08-24/full_run_1_closure/c7_closure.js

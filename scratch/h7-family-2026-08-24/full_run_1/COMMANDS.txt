@@ -1,0 +1,4 @@
+node scratch/h7-family-2026-08-24/edge_audit.js
+node scratch/h7-family-2026-08-24/graph_counts.js
+node scratch/h7-family-2026-08-24/period_lattice.js
+node scratch/h7-family-2026-08-24/spectral.js

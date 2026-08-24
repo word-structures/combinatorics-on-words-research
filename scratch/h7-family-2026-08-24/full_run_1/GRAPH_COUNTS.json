@@ -1,0 +1,11 @@
+{
+  "raw_states": 1594323,
+  "valid_states": 37698,
+  "full_edges": 67746,
+  "number_of_sccs": 4723,
+  "dominant_scc_count": 1,
+  "essential_states": 32976,
+  "lost_states": 4722,
+  "lost_fraction": 0.12525863441031354,
+  "essential_edges": 58968
+}

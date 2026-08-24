@@ -1,0 +1,32 @@
+{
+  "A7_METHOD_A": 0.08282382651727833,
+  "A7_METHOD_B": 0.08282382649986539,
+  "MAX_PAIRWISE_DIFF": 2.529122744565626e-11,
+  "ERROR_ESTIMATE": 2.529122744565626e-11,
+  "METHOD_A_DETAILS": {
+    "centering_check": 4.052314039881821e-15,
+    "stationarity_residual": 2.2768245622195593e-18,
+    "convergence_criterion": 1e-13,
+    "solver_residual": 8.704148513061227e-14,
+    "solver_iterations": 199,
+    "S3_covariance_matrix": [
+      [
+        0.08282382651727833,
+        -0.041411913258639514
+      ],
+      [
+        -0.04141191325863952,
+        0.08282382651727922
+      ]
+    ],
+    "S3_residual": 1.2351231148954867e-15,
+    "symbol_frequencies_drift": 4.052314039881821e-15
+  },
+  "METHOD_B_DETAILS": {
+    "var_2000": 166.23865332984133,
+    "var_4000": 331.88630638015456,
+    "var_6000": 497.53395937988535,
+    "baseline_2000_4000": 0.08282382652515662,
+    "baseline_4000_6000": 0.08282382649986539
+  }
+}

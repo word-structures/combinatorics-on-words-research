@@ -1,0 +1,33 @@
+# Exploratory Profile-Response Analysis (h=2...7)
+
+**Date:** 2026-08-24
+**Status:** POST-HOC / EXPLORATORY
+
+**CRITICAL EPISTEMIC WARNING:** The observations in this document were discovered *after* the h=7 computation was completed and F4 was triggered. They are post-hoc diagnoses, not preregistered predictions. They serve to motivate a future out-of-sample test at h=8.
+
+## 1. Parry-Weighted Edge Mass vs. Variance Response
+
+The total Parry-weighted edge mass `q_h` of the deleted transitions tracks the entropy drop well, yielding ratios `Δlog(λ) / q_h ≈ 0.927, 0.884, 0.911`. *(Correction: Prior exploratory notes incorrectly printed these ratios as `q_h / Δlog(λ)`).*
+
+However, `q_h` fails to explain the variance response `a_h`. The infinitesimal variance response per unit of Parry mass collapses (`0.923 → 0.650 → 0.323`). Therefore, total Parry-weighted loss is an insufficient mechanism for `C_h`.
+
+## 2. Half-Parikh Profile Decomposition (The 14/14 Sign Pattern)
+
+Decomposing the deleted edges by the half-Parikh profile of the forbidden Abelian square reveals a sharp, systematic sign cancellation. Across all 14 admissible profiles from h=2 to h=7, computing the hard-deletion response for each class individually yields:
+
+- **6/6 of the most-balanced profiles INCREASE `a`** (i.e. reduce C)
+- **8/8 of the imbalanced profiles DECREASE `a`** (i.e. inflate C)
+
+This pattern may help account for the damped growth of C_7: for h=7, the most-balanced profile (3,2,2) dominates the deleted Parry mass (56.2%), providing an upward contribution to `a_7` that offsets the imbalanced profiles.
+
+*(Correction on edge counts: Prior notes cited 924 deleted edges for the 5→6 transition, whereas the full count is 936. This discrepancy is resolved: exactly 936 deleted edges occur in the full valid state space, while 924 edges are deleted strictly from within the essential SCC of the old system. Both counts are fully reproducible.)*
+
+## 3. Important Theoretical Caveats
+
+While the 14/14 hard-deletion sign pattern holds empirically for h=2...7, two critical counterexamples forbid generalizing the phenomenon too broadly:
+
+### A. h=4 refutes infinitesimal-to-macroscopic sign preservation
+At h=4, the sole admissible profile is (2,1,1) — perfectly balanced. Its infinitesimal linear response is negative (`a'(0) < 0`), yet a full hard deletion ultimately yields an increase in `a` (`a_{deleted} > a_{before}`). Thus, h=4 serves as a strict counterexample to predicting the hard-deletion sign from the infinitesimal linear response `∂_t a(0) > 0`. This establishes the following supported fact: the infinitesimal response does not in general determine the finite hard-deletion response sign in the observed family.
+
+### B. h=2 refutes additivity ("Balanced dampens amplification")
+At h=2, both the balanced (1,1,0) and imbalanced (2,0,0) classes individually obey the sign rule. However, combining them does not simply add their effects. The interaction term is large and negative, meaning that the full deletion pushes `C` *higher* than the imbalanced class alone. Therefore, the hypothesis that "the balanced class dampens amplification" is not a universal additive law. The clean structural claim must be strictly restricted to the **per-class hard deletion sign**, not the net macroscopic sum.
