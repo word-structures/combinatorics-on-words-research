@@ -1,0 +1,10 @@
+{
+  "populationConcrete": 1200636,
+  "populationCanonical": 200106,
+  "stageAEliminated": 1200288,
+  "residueCount": 348,
+  "residueSha256": "15c89ab72a8d8a2ebc782884e308b195454188d30da2dd87c554889a7189e18f",
+  "kRange": [6, 10],
+  "maxDeathEndPosition": 34,
+  "serializationConvention": "The residue hash is computed over the string concatenation of the 348 36-character codings, where each coding string represents the consecutive 6-character target images of the source alphabet ordered alphabetically (a, b, c, d, e, f). The codings are sorted lexicographically, joined by newline characters (\\n), and terminated with a final newline."
+}

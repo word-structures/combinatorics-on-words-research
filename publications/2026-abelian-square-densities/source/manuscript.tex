@@ -1,0 +1,930 @@
+% Abelian-square densities under bounded local avoidance
+% v0.6.1 -- transcribed by hand from MANUSCRIPT_DRAFT_v0.5.md (authoritative text).
+% No automated Markdown-to-TeX conversion was used.
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref,graphicx}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{Abelian-square densities under bounded local avoidance:\\ a non-monotone ternary family}
+\author{Joonas Huhta \\ Word Structures project \\ wordstructures.org $\cdot$ Finland}
+\date{2026-08-24}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let \(L_h\) be the ternary words containing no Abelian square of half-length \(K\in\{2,\ldots,h\}\); half-length \(1\) is permitted, so \(aa,bb,cc\) remain allowed. We ask how often a word of \(L_h\) is \emph{itself} an Abelian square. Let \(R_n^{(h)}\) be the fraction of words in \(L_h\cap\Sigma^{2n}\) whose two halves have equal Parikh vector. For each \(h\in\{2,\ldots,6\}\) we prove
+\[
+R_n^{(h)}\sim C_h/n,
+\qquad
+C_h=\frac{1}{2\sqrt3\,\pi\,a_h},
+\]
+where \(a_h\) is the asymptotic variance rate of one letter count under the measure of maximal entropy on \(L_h\). The proof folds the event into a rank-two additive functional of a finite Markov chain, certifies a unimodular product lattice by explicit equal-length cycles, and shows that transient window states cancel exactly between numerator and denominator.
+
+Every \(C_h\) exceeds the free ternary value \(3\sqrt3/(4\pi)\): within this family, bounded local avoidance raises the leading density of long Abelian squares. The dependence on \(h\) is not monotone---the effect weakens for \(h=2,3,4\) and grows at \(h=5,6\). The first increase occurs at the same cutoff as the first loss of recurrent states, and a \(K=5\) ablation identifies a single half-Parikh transition class associated with both.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+An Abelian square is a word \(UV\) with equal-length consecutive halves satisfying
+\[
+\Psi(U)=\Psi(V),
+\]
+where
+\[
+\Psi(w)=\bigl(|w|_a,|w|_b,|w|_c\bigr)
+\]
+is the Parikh vector.
+
+Fix the ternary alphabet
+\[
+\Sigma=\{a,b,c\}.
+\]
+For \(h\ge2\), define
+\[
+L_h
+=
+\left\{
+w\in\Sigma^*:
+w\text{ contains no Abelian square of half-length }K\in\{2,\ldots,h\}
+\right\}.
+\]
+The half-length \(K=1\) is deliberately excluded from the forbidden set: this matches the M\"akel\"a formulation motivating these finite-cutoff languages, in which the trivial Abelian squares \(aa,bb,cc\) are allowed.
+
+Our basic question has a simple form:
+
+\begin{quote}
+\textbf{Among words that avoid all Abelian squares of half-length at most \(h\), how often is the entire word itself a longer Abelian square?}
+\end{quote}
+
+For \(XY\in L_h\cap\Sigma^{2n}\), \(|X|=|Y|=n\), set
+\begin{equation}\label{eq:Rn}
+R_n^{(h)}
+=
+\frac{
+\#\{XY\in L_h\cap\Sigma^{2n}:\Psi(X)=\Psi(Y)\}
+}{
+|L_h\cap\Sigma^{2n}|
+}.
+\end{equation}
+Thus \(R_n^{(h)}\) is literally the density of half-length-\(n\) Abelian squares inside the bounded-avoidance language \(L_h\).
+
+The corresponding unrestricted problem is the natural external benchmark studied by Richmond and Shallit~\cite{Richmond2009}. Independently of that attribution, the free ternary multinomial model gives the leading constant
+\[
+C_{\rm free}
+=
+\frac{3\sqrt3}{4\pi}
+=
+0.413496\ldots.
+\]
+The exact normalization against the published Richmond--Shallit~\cite{Richmond2009} asymptotic is kept as a separate literature check rather than assumed here.
+Our main result gives the constrained constants for the first five nontrivial cutoffs:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{rrr}
+\toprule
+\(h\) & \(C_h\) & \(C_h/C_{\rm free}\) \\
+\midrule
+2 & 0.616760 & 1.4916 \\
+3 & 0.599007 & 1.4486 \\
+4 & 0.569265 & 1.3767 \\
+5 & 0.765537 & 1.8514 \\
+6 & 0.996661 & 2.4103 \\
+\bottomrule
+\end{tabular}
+\caption{The certified family of leading constants.}
+\label{tab:family}
+\end{table}
+
+Hence every bounded-avoidance language in the certified family has a larger leading density of long Abelian squares than the free language, but the effect is not monotone:
+\[
+\boxed{C_2>C_3>C_4<C_5<C_6.}
+\]
+
+The first increase occurs at \(h=5\), which is also the first cutoff where the canonical window presentation loses recurrent states. The timing alone is only a finite-family structural fact. The stronger evidence comes from a \(K=5\) ablation: among the three newly rejected half-Parikh classes, type \((3,1,1)\) is the only one incident with the lost states, deleting it alone produces the final recurrent core, and its isolated collision constant is already essentially the full \(L_5\) value. The effects of the three classes are not additive.
+
+The paper therefore has one main story:
+\[
+\text{non-monotone family}
+\quad\longrightarrow\quad
+\text{turn at }h=5
+\quad\longrightarrow\quad
+\text{anatomy of that turn}.
+\]
+
+The local-limit machinery itself is classical~\cite{Bertoni2003,Goldwurm2023,Herve2010}. Our contribution is the bounded-Abelian-avoidance application, the explicit family of leading constants, the non-monotone cutoff dependence, and the exact finite-state structure at the first upturn.
+
+The work is motivated by the ternary Abelian-square avoidance question associated with M\"akel\"a; see Rao and Rosenfeld~\cite{Rao2018} for the closest positive avoidance result. Every fully avoiding infinite word would lie in every \(L_h\), but nothing proved here implies that such a word exists or settles the full conjecture.
+
+\subsection*{Contributions}
+
+\begin{enumerate}
+\item \textbf{Family asymptotic.} For each \(h\in\{2,\ldots,6\}\),
+\[
+R_n^{(h)}\sim C_h/n
+\]
+with an explicit leading constant.
+\item \textbf{Non-monotone cutoff dependence.} All five \(C_h\) exceed \(C_{\rm free}\), but the amplification weakens through \(h=4\) before increasing at \(h=5,6\).
+\item \textbf{A quantitative \(K=5\) ablation and exact core-isolation theorem.} The \((3,1,1)\) transition class is tied to the first recurrent-state loss and the dominant change in \(C\); isolating the surviving core is an exact bipartite vertex-cover problem with minimum \(102\).
+\end{enumerate}
+
+\section{Bounded-avoidance languages and window presentations}
+\label{sec:windows}
+
+Set
+\[
+m=2h-1.
+\]
+A \textbf{valid state} is a ternary word of length \(m\) containing no Abelian square of half-length \(2,\ldots,h-1\). There is an edge
+\[
+u\longrightarrow v
+\]
+when the two windows overlap in \(m-1\) letters and appending the new letter does not create an Abelian square of half-length \(h\).
+
+For every \(n\ge m\), words of \(L_h\cap\Sigma^n\) correspond bijectively to a choice of initial valid state together with a path of \(n-m\) edges in this graph. If \(A_h^{\rm full}\) denotes the full valid-state adjacency matrix, then
+\begin{equation}\label{eq:pathword}
+\boxed{
+|L_h\cap\Sigma^n|
+=
+\mathbf1^T(A_h^{\rm full})^{\,n-m}\mathbf1.
+}
+\end{equation}
+
+Starting from the valid graph, iteratively delete any state whose current in-degree or out-degree is zero. A state that survives is called \textbf{essential}. Equivalently, in a finite graph it can occur on a bi-infinite admissible path.
+
+The raw, valid, and essential counts are:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{rrrrrr}
+\toprule
+\(h\) & \(m\) & raw \(3^m\) & valid & essential & essential edges \\
+\midrule
+2 & 3 & 27 & 27 & 27 & 66 \\
+3 & 5 & 243 & 162 & 162 & 360 \\
+4 & 7 & 2187 & 786 & 786 & 1572 \\
+5 & 9 & 19683 & 3114 & 2844 & 5418 \\
+6 & 11 & 177147 & 11070 & 10128 & 18774 \\
+\bottomrule
+\end{tabular}
+\caption{Raw, valid and essential state counts of the memory-\(m\) window presentation.}
+\label{tab:counts}
+\end{table}
+
+\begin{proposition}[Certified graph hypotheses]
+\label{prop:graph}
+For every \(h\in\{2,\ldots,6\}\):
+\begin{enumerate}
+\item the essential graph has a unique dominant strongly connected component;
+\item that component has graph period \(1\);
+\item the projected equal-length cycle Parikh-difference lattice is all of \(\mathbb Z^2\);
+\item the associated covariance is nondegenerate;
+\item the synchronized product of the time-reversed and forward core chains is primitive.
+\end{enumerate}
+\end{proposition}
+
+The period and lattice claims are certified by explicit closed walks. In particular, for each \(h\), three equal-length closed walks at a common root have projected Parikh differences containing a unimodular pair. Item 5 follows because the forward and time-reversed core chains are primitive; the product of two primitive finite transition matrices is primitive as well.
+
+The explicit roots, return lengths, cycles, Parikh vectors, and determinants are recorded in Appendix~A.
+
+\begin{remark}[Why the non-essential part is acyclic]
+\label{rem:acyclic}
+Every vertex on a directed cycle has in-degree and out-degree at least \(1\) along that cycle at every stage of the pruning. Such a vertex can therefore never be deleted. Hence every directed cycle lies in the essential set, and the non-essential part of the valid graph is necessarily a DAG.
+
+For \(h=2,3,4\) there is no non-essential part. For the full \(L_5\) presentation its longest directed path has \(D_5=3\) edges; for \(L_6\), \(D_6=5\).
+\end{remark}
+
+\section{Parry measure and the scalar variance \texorpdfstring{\(a_h\)}{a\_h}}
+\label{sec:parry}
+
+Let \(A_h\) be the adjacency matrix of the unique dominant essential component, with Perron root \(\lambda_h\) and positive right and left Perron vectors \(r_h,\ell_h\). The measure of maximal entropy is the Parry chain
+\[
+P_h(i,j)
+=
+\frac{(A_h)_{ij}r_h(j)}{\lambda_h r_h(i)}.
+\]
+
+The \(S_3\)-symmetry of the language forces stationary letter frequencies
+\[
+(1/3,1/3,1/3).
+\]
+
+Project the centered Parikh increment to two coordinates. Let \(\Sigma_h\) be its asymptotic covariance.
+
+\begin{lemma}[\(S_3\)-equivariant covariance]
+\label{lem:s3cov}
+For every \(h\in\{2,\ldots,6\}\),
+\[
+\Sigma_h
+=
+a_h
+\begin{pmatrix}
+1&-\frac12\\
+-\frac12&1
+\end{pmatrix}
+\]
+for some \(a_h>0\).
+\end{lemma}
+
+\begin{proof}
+The zero-sum Parikh subspace is the irreducible two-dimensional standard representation of \(S_3\). The asymptotic covariance commutes with the \(S_3\)-action and is therefore scalar on that representation. Writing the scalar operator in the coordinates \((a,b)\) gives the stated matrix.
+\end{proof}
+
+Consequently,
+\[
+\det\Sigma_h=\frac34a_h^2.
+\]
+
+The values used in this paper are:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{rrr}
+\toprule
+\(h\) & \(\lambda_h\) & \(a_h\) \\
+\midrule
+2 & 2.4511095375 & 0.1489852192 \\
+3 & 2.2288029013 & 0.1534007516 \\
+4 & 2.0666349657 & 0.1614154912 \\
+5 & 1.9441605457 & 0.1200310311 \\
+6 & 1.8483339782 & 0.0921960033 \\
+\bottomrule
+\end{tabular}
+\caption{Perron roots and scalar Parikh variance rates.}
+\label{tab:ah}
+\end{table}
+
+These values were obtained by a Green--Kubo/Poisson computation and independently checked by exact-moment dynamic programming. The displayed precision is intentionally shorter than the raw numerical output.
+
+\section{Folding a long Abelian square}
+\label{sec:fold}
+
+Let
+\[
+w=w_0w_1\cdots w_{2n-1}\in L_h,
+\qquad
+X=w_0\cdots w_{n-1},
+\qquad
+Y=w_n\cdots w_{2n-1},
+\]
+and let
+\[
+Z_t=w_t\cdots w_{t+m-1}
+\]
+be the memory-\(m\) window.
+
+Write
+\[
+N=n-m.
+\]
+The fold starts at the diagonal product state
+\[
+(Z_N,Z_N).
+\]
+
+Let \(\eta(u\to v)\in\mathbb Z^2\) be the projected Parikh vector of the new letter emitted by the forward edge \(u\to v\). For \(j=0,\ldots,N-1\), pair
+\begin{itemize}
+\item the left edge \(Z_{N-1-j}\to Z_{N-j}\), traversed backwards, and
+\item the right edge \(Z_{N+j}\to Z_{N+j+1}\), traversed forwards.
+\end{itemize}
+
+Define the product increment
+\[
+g_j
+=
+\eta(Z_{N+j}\to Z_{N+j+1})
+-
+\eta(Z_{N-1-j}\to Z_{N-j}).
+\]
+
+\begin{lemma}[Exact fold identity]
+\label{lem:fold}
+With
+\[
+\beta
+=
+\Psi(Z_{2n-m})-\Psi(Z_0)
+\]
+projected to the same two coordinates,
+\[
+\boxed{
+\Psi(Y)-\Psi(X)
+=
+\sum_{j=0}^{N-1}g_j+\beta.
+}
+\]
+Moreover,
+\[
+\|\beta\|_\infty\le m.
+\]
+\end{lemma}
+
+\begin{proof}
+The paired edges account for
+\[
+w_m,\ldots,w_{n-1}
+\]
+on the left and
+\[
+w_n,\ldots,w_{2n-m-1}
+\]
+on the right. The only unpaired letters are the first \(m\) letters and the final \(m\) letters, whose Parikh difference is exactly
+\[
+\Psi(Z_{2n-m})-\Psi(Z_0).
+\]
+Summing the paired right-minus-left emissions and the boundary term gives \(\Psi(Y)-\Psi(X)\). Each state has length \(m\), giving the uniform bound.
+\end{proof}
+
+\begin{lemma}[Covariance doubling]
+\label{lem:cov2}
+Let \(\Sigma_{D,h}\) be the asymptotic covariance of the folded difference observable. Then
+\[
+\boxed{\Sigma_{D,h}=2\Sigma_h.}
+\]
+\end{lemma}
+
+\begin{proof}
+Condition on the center state \(Z_N=z\). Let \(S_N^+\) be the centered projected Parikh sum to the right of the center and \(S_N^-\) the corresponding sum on the left, read backwards. Given \(z\), the two are independent by the Markov property. The backward chain is the time reversal of the Parry chain, so it has the same asymptotic covariance:
+\[
+\operatorname{Cov}(S_N^\pm\mid z)
+=
+N\Sigma_h+O(1)
+\]
+uniformly over the finitely many center states.
+
+Because the observable is centered at the stationary mean and the finite primitive chain forgets its initial state geometrically fast,
+\[
+\mathbb E[S_N^\pm\mid z]=O(1)
+\]
+uniformly in \(z\). The law of total covariance therefore gives
+\[
+\operatorname{Cov}(S_N^+-S_N^-)
+=
+2N\Sigma_h+O(1).
+\]
+Divide by \(N\) and let \(N\to\infty\).
+\end{proof}
+
+The same matrix \(\Sigma_{D,h}\) is the Hessian covariance appearing in the logarithm of the leading eigenvalue of the Fourier-tilted product transfer matrix introduced below; this is the standard Markov-additive covariance/pressure identification~\cite{Herve2010}.
+
+\section{Endpoint-uniform LLT for the product chain}
+\label{sec:llt}
+
+The fold evolves on the product of the time-reversed left chain and the forward right chain. Let
+\[
+M_h(\theta)
+\]
+denote the Fourier-tilted product transfer matrix for the rank-two increment \(g\).
+
+The analytic input needed here is an endpoint-uniform lattice local limit theorem. Uniformly over product-chain endpoints, bounded target displacements \(v\in\mathbb Z^2\), and lengths \(N+O(1)\),
+\begin{equation}\label{eq:llt}
+\mathcal N_N(\alpha,\omega;v)
+=
+\mathcal W_N(\alpha,\omega)
+\frac{1}{2\pi N\sqrt{\det\Sigma_{D,h}}}
+(1+o(1)),
+\end{equation}
+where \(\mathcal W_N\) is the unconstrained product-path weight/count for those endpoints. The full finite-state proof is given in Appendix~F.
+
+\subsection*{Product-lattice certificate}
+
+The lattice hypothesis for the product observable follows directly from Proposition~\ref{prop:graph}. Let
+\[
+\ell_1,\ell_2,\ell_3
+\]
+be equal-length closed walks at a common single-chain root \(z_0\), with two unimodular projected Parikh differences. Pair the reversal of \(\ell_i\) on the left with \(\ell_j\) on the right. This is a product-chain cycle at \((z_0,z_0)\) whose \(g\)-sum is
+\[
+\Psi(\ell_j)-\Psi(\ell_i).
+\]
+Choosing \(i=j\) gives \(0\), while appropriate choices of \(i,j\) give the same unimodular pair certified in Proposition~\ref{prop:graph}. Hence the product observable has full lattice span \(\mathbb Z^2\).
+
+\subsection*{Spectral proof scheme}
+
+For completeness, the finite-state proof uses:
+\begin{enumerate}
+\item Fourier inversion on \(\mathbb Z^2\);
+\item spectral decay of \(M_h(\theta)\) away from \(\theta=0\);
+\item analytic perturbation of the simple leading eigenvalue near \(0\);
+\item zero drift from the \(1/3\) stationary frequencies;
+\item quadratic term \(\Sigma_{D,h}\);
+\item the product-lattice certificate above to rule out nontrivial peripheral characters.
+\end{enumerate}
+
+This yields the displayed LLT uniformly in the finitely many endpoints and bounded displacements needed after transient peeling.
+
+These are the standard finite-state Fourier/spectral steps; the project-specific work is the verification of primitivity, zero drift, nondegenerate covariance, full product lattice, and the endpoint-uniform bounded-displacement regime. The manuscript does not rely on a novelty claim for the LLT itself.
+
+\section{Transient cancellation and the main theorem}
+\label{sec:cancellation}
+
+For this section only, write
+\begin{itemize}
+\item \(E_h\) for the dominant essential component of the full \(L_h\) presentation, and
+\item \(T_h\) for the non-essential states of that same \(L_h\) graph.
+\end{itemize}
+
+This notation is \textbf{not} the CORE/LOST partition used later for the \(L_4\) scissor problem.
+
+By Remark~\ref{rem:acyclic}, \(T_h\) is a DAG. A path in the full \(L_h\) graph can meet \(T_h\) only in a bounded prefix or suffix. Indeed, a genuine
+\[
+E_h\to T_h\to E_h
+\]
+excursion would place the traversed \(T_h\)-vertices on a directed cycle, contradicting non-essentiality.
+
+\begin{lemma}[Exact full-path identity]
+\label{lem:pathid}
+For every \(n\ge m\), with \(N=n-m\),
+\[
+\boxed{
+\sum_{z,s,u,e}
+\bigl((A_h^{\rm full})^N\bigr)_{s,z}
+\bigl((A_h^{\rm full})^N\bigr)_{z,u}
+\bigl((A_h^{\rm full})^m\bigr)_{u,e}
+=
+\mathbf1^T(A_h^{\rm full})^{2n-m}\mathbf1
+=
+|L_h\cap\Sigma^{2n}|.
+}
+\]
+\end{lemma}
+
+\begin{proof}
+This is pure path algebra. Splitting a length-\((2N+m)\) full-graph path after \(N\) and \(2N\) edges is a bijection with the triples counted on the left. Since \(2N+m=2n-m\), the path-word bijection~\eqref{eq:pathword} of Section~\ref{sec:windows} gives the last equality.
+\end{proof}
+
+\begin{lemma}[Leading boundary factor]
+\label{lem:boundary}
+For \(h\in\{2,\ldots,6\}\), the leading all-language boundary multiplier in the folded LLT is
+\[
+\boxed{B_h=1.}
+\]
+\end{lemma}
+
+\begin{proof}
+For \(h=2,3,4\), \(T_h=\varnothing\), so no transient peeling is needed.
+
+For \(h=5,6\), let \(D_h\) be the maximum path length in \(T_h\), with
+\[
+D_5=3,\qquad D_6=5.
+\]
+Consider one term in the exact decomposition of Lemma~\ref{lem:pathid}. By Lemma~\ref{lem:fold}, its endpoint pair determines one required displacement,
+\[
+v=\Psi(Z_0)-\Psi(Z_{2n-m}),
+\qquad
+\|v\|_\infty\le m.
+\]
+Peel any transient prefix and suffix. At most \(D_h\) edges are removed at either end, so the remaining synchronized product path lies in the core, has length
+\[
+N-O(1),
+\]
+and its required displacement differs from \(v\) by only \(O(1)\). Thus the bounded-displacement hypothesis of Section~\ref{sec:llt} applies uniformly.
+
+Apply the endpoint-uniform product-chain LLT~\eqref{eq:llt} to this peeled core term. Uniformity in endpoints, in bounded displacement, and in lengths \(N+O(1)\) gives the same leading density
+\[
+D_N
+=
+\frac{1}{2\pi N\sqrt{\det\Sigma_{D,h}}}
+\]
+with a relative error \(o(1)\) uniform over all endpoint configurations.
+
+Thus each nonnegative term in the exact full-path decomposition equals its unconstrained path multiplicity times
+\[
+D_N(1+o(1)),
+\]
+with one uniform relative error. Summing preserves the relative \(o(1)\). Lemma~\ref{lem:pathid} then gives
+\[
+\text{numerator}
+=
+D_N\,|L_h\cap\Sigma^{2n}|(1+o(1)).
+\]
+Therefore \(B_h=1\).
+\end{proof}
+
+The uniqueness of the dominant SCC is used here to obtain one common asymptotic density. With two dominant components carrying the same Perron root, different covariance data could prevent a single factor from being extracted uniformly.
+
+\begin{theorem}[Abelian-square density in the certified family]
+\label{thm:main}
+For every
+\[
+h\in\{2,3,4,5,6\},
+\]
+\[
+\boxed{
+R_n^{(h)}
+\sim
+\frac{C_h}{n},
+\qquad
+C_h
+=
+\frac{1}{4\pi\sqrt{\det\Sigma_h}}
+=
+\frac{1}{2\sqrt3\,\pi\,a_h}.
+}
+\]
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:graph} the synchronized product process is primitive, and the product-lattice certificate of Section~\ref{sec:llt} gives full lattice span. Lemma~\ref{lem:fold} folds the equal-Parikh event into a bounded-displacement rank-two additive event. Lemma~\ref{lem:cov2} gives
+\[
+\Sigma_{D,h}=2\Sigma_h.
+\]
+The endpoint-uniform product LLT at synchronized length
+\[
+N=n-m
+\]
+therefore contributes
+\[
+\frac{1}{2\pi N\sqrt{\det(2\Sigma_h)}}.
+\]
+Lemma~\ref{lem:boundary} gives boundary factor \(1\). Since
+\[
+\frac1N=\frac1n(1+o(1)),
+\]
+we obtain
+\[
+R_n^{(h)}
+\sim
+\frac{1}{4\pi n\sqrt{\det\Sigma_h}}.
+\]
+Finally \(\det\Sigma_h=3a_h^2/4\).
+\end{proof}
+
+\begin{corollary}[Free-language comparison]
+\label{cor:free}
+For the unrestricted ternary language,
+\[
+a_{\rm free}=\frac29,
+\qquad
+C_{\rm free}=\frac{3\sqrt3}{4\pi}.
+\]
+Hence
+\[
+\boxed{
+\frac{C_h}{C_{\rm free}}
+=
+\frac{2/9}{a_h}
+}
+\]
+for every \(h\in\{2,\ldots,6\}\). In particular,
+\[
+C_h>C_{\rm free}
+\]
+throughout the certified family.
+\end{corollary}
+
+\begin{corollary}[Non-monotonicity]
+\label{cor:nonmono}
+\[
+\boxed{
+C_2>C_3>C_4<C_5<C_6.
+}
+\]
+\end{corollary}
+
+The first increase occurs at \(h=5\), the same cutoff at which valid and essential state counts first differ. No general causal law is claimed.
+
+\begin{remark}[Unrestricted benchmark]
+\label{rem:benchmark}
+The free-language constant \(C_{\rm free}=3\sqrt3/(4\pi)\) is obtained directly from the unrestricted ternary multinomial model and is reproduced by the same covariance formula with \(a_{\rm free}=2/9\). Richmond and Shallit's~\cite{Richmond2009} unrestricted Abelian-square enumeration is therefore the natural published benchmark. Matching the precise normalization of their stated asymptotic to the present \(R_n\)-notation is a literature-verification step, not an assumption used in Theorem~\ref{thm:main}.
+\end{remark}
+
+\section{Anatomy of the \texorpdfstring{\(h=4\to5\)}{h=4 to 5} turn}
+\label{sec:anatomy}
+
+We now switch to a \textbf{different graph object}: the common-memory-\(9\) presentation of \(L_4\), used to ask which newly rejected \(K=5\) transitions isolate the eventual \(L_5\) core.
+
+To prevent confusion with Section~\ref{sec:cancellation}, write
+\begin{itemize}
+\item \(\mathrm{CORE}\) for the \(2844\)-state set that survives the full \(K=5\) restriction;
+\item \(\mathrm{LOST}=V(L_4)\setminus\mathrm{CORE}\) for the \(270\)-state complement.
+\end{itemize}
+
+In the pre-deletion \(L_4\) graph, every LOST state is both reachable from CORE and able to return to CORE. Thus CORE\(\to\)LOST\(\to\)CORE excursions are exactly the phenomenon studied here. This is the opposite of the transient geometry of \(T_h\) in the already-essentialized \(L_h\) graph of Section~\ref{sec:cancellation}.
+
+The newly rejected \(K=5\) transitions split by half-Parikh type:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrrrr}
+\toprule
+type & total & CORE\(\to\)CORE & CORE\(\to\)LOST & LOST\(\to\)CORE & LOST\(\to\)LOST \\
+\midrule
+\((2,2,1)\) & 222 & 222 & 0 & 0 & 0 \\
+\((3,1,1)\) & 216 & 72 & 66 & 66 & 12 \\
+\((3,2,0)\) & 12 & 12 & 0 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\caption{Census of the \(K=5\) rejected transitions by half-Parikh type.}
+\label{tab:census}
+\end{table}
+
+Only \((3,1,1)\) is incident with LOST.
+
+\subsection*{\texorpdfstring{\(K=5\)}{K=5} ablations}
+
+Let \(G_{320}\), \(G_{311}\), and \(G_{221}\) denote the common-memory graphs obtained by deleting only the indicated half-Parikh class.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrr}
+\toprule
+graph & essential & edges & \(C\) \\
+\midrule
+\(L_4\) & 3114 & 6300 & 0.569265 \\
+\(G_{320}\) & 3114 & 6288 & 0.587243 \\
+\(G_{311}\) & 2844 & 5652 & 0.768856 \\
+\(G_{221}\) & 3114 & 6078 & 0.514383 \\
+\(L_5\) & 2844 & 5418 & 0.765537 \\
+\bottomrule
+\end{tabular}
+\caption{Single-class \(K=5\) ablations in the common memory-\(9\) presentation.}
+\label{tab:ablation}
+\end{table}
+
+Deleting only \((3,1,1)\) produces the same essential state set as the full \(K=5\) restriction.
+
+Define
+\[
+\Delta_{320}=C(G_{320})-C(L_4)=+0.0179785\ldots,
+\]
+\[
+\Delta_{311}=C(G_{311})-C(L_4)=+0.1995914\ldots,
+\]
+and
+\[
+\Delta_{221}=C(G_{221})-C(L_4)=-0.0548822\ldots.
+\]
+The full change is
+\[
+\Delta_{\rm full}
+=
+C(L_5)-C(L_4)
+=
+0.1962719\ldots.
+\]
+
+The single-class changes sum to
+\[
+0.1626876\ldots,
+\]
+so the interaction term
+\[
+\boxed{
+\Delta_{\rm int}
+=
+\Delta_{\rm full}
+-
+(\Delta_{320}+\Delta_{311}+\Delta_{221})
+=
++0.0335843\ldots
+}
+\]
+is nonzero. In particular, the \((2,2,1)\) class alone moves the constant in the opposite direction from the dominant \((3,1,1)\) change.
+
+Also,
+\[
+\frac{\Delta_{311}}{\Delta_{\rm full}}
+=
+1.016913\ldots.
+\]
+This ratio is descriptive, not an additive attribution of cause. The safe conclusion is that the \((3,1,1)\) ablation is associated with both the entire recurrent-state loss and a collision-constant change slightly larger than the full \(K=5\) change, while the remaining deletions and their interactions partially offset it.
+
+The induced LOST graph in the pre-deletion \(L_4\) graph is acyclic, with \(216\) internal edges and longest directed path \(5\) edges. After the full \(K=5\) deletion, the non-essential \(L_5\) subgraph instead has \(204\) internal edges and longest path \(3\). These are different graphs.
+
+\section{Excursion cover and the exact scissor}
+\label{sec:scissor}
+
+Let
+\[
+E_{\rm in}
+=
+E\cap(\mathrm{CORE}\times\mathrm{LOST}),
+\qquad
+E_{\rm out}
+=
+E\cap(\mathrm{LOST}\times\mathrm{CORE}).
+\]
+The full boundary has
+\[
+|E_{\rm in}|=|E_{\rm out}|=180.
+\]
+
+Construct a bipartite conflict graph \(H\) whose left vertices are \(E_{\rm in}\) and right vertices are \(E_{\rm out}\). Join \(e\in E_{\rm in}\) to \(f\in E_{\rm out}\) whenever
+\[
+\operatorname{head}(e)
+\leadsto
+\operatorname{tail}(f)
+\]
+inside the induced LOST graph, allowing the empty path.
+
+A vertex of \(H\) therefore represents a boundary \textbf{transition} of the original automaton.
+
+\begin{proposition}[Excursion-cover equivalence]
+\label{prop:excursion}
+Let \(G\) be a finite directed graph, let \(C^\star\) induce a strongly connected subgraph containing a directed cycle, and let \(T^\star=V(G)\setminus C^\star\) induce an acyclic subgraph. Let \(E_{\rm in}\) and \(E_{\rm out}\) be \textbf{all} boundary edges between \(C^\star\) and \(T^\star\), and form \(H\) as above.
+
+For
+\[
+S\subseteq E_{\rm in}\cup E_{\rm out},
+\]
+\[
+\boxed{
+\mathrm{Ess}(G-S)=C^\star
+\iff
+S\text{ is a vertex cover of }H.
+}
+\]
+\end{proposition}
+
+\begin{proof}
+Suppose \(S\) covers \(H\). If a vertex of \(T^\star\) were both reachable from \(C^\star\) and able to return to \(C^\star\) in \(G-S\), there would be a surviving entry edge \(e\), a surviving exit edge \(f\), and an internal \(T^\star\)-path connecting them. Then \(e\) and \(f\) would form an uncovered edge of \(H\), contradiction. Since \(G[T^\star]\) is acyclic, no vertex of \(T^\star\) can remain essential. The subgraph induced by \(C^\star\) is untouched because only boundary edges are deleted.
+
+Conversely, if \(S\) is not a vertex cover, some adjacent entry \(e\) and exit \(f\) both survive. Their adjacency gives an internal \(T^\star\)-path. Strong connectivity of \(C^\star\) closes this excursion through \(C^\star\) into a recurrent directed walk, making every vertex on the \(T^\star\)-segment essential. Hence the essential set is strictly larger than \(C^\star\).
+\end{proof}
+
+By K\H{o}nig's theorem,
+\[
+\tau(H)=\nu(H).
+\]
+
+For the \(K=5\) scissor graph,
+\[
+|V_L(H)|=|V_R(H)|=180,
+\qquad
+|E(H)|=366,
+\]
+and explicit matching and cover certificates (Appendix~C) give
+\[
+\boxed{\tau(H)=\nu(H)=102.}
+\]
+
+\subsection*{Restricted \texorpdfstring{\((3,1,1)\)}{(3,1,1)} deletion pool}
+
+Only
+\[
+66+66=132
+\]
+of the \(360\) full CORE-LOST boundary transitions belong to the \(K=5\)-rejected \((3,1,1)\) pool. Restricting deletions to this pool is therefore a \textbf{vertex-cover problem with forbidden vertices}, not literally the unrestricted setting of Proposition~\ref{prop:excursion}.
+
+Nevertheless the restricted optimum remains \(102\). A human-readable certificate is
+\[
+\boxed{84+18=102}.
+\]
+Here \(84\) pool transitions are forced because their conflict partner lies outside the deletable pool. After removing them, the residual conflict graph contains \(18\) disjoint copies of \(K_2\), each requiring exactly one of its two conflict-graph vertices. Since each conflict-graph vertex represents a boundary transition, these contribute exactly \(18\) further deletions.
+
+Twelve remaining pool transitions are redundant for minimum covers: they are not isolated in \(H\), but every excursion incident with them is already broken by forced deletions.
+
+\subsection*{Symmetry refinements}
+
+Under \(S_3\) invariance the optimum is \(17\) transition-orbits, i.e.\ \(102\) transitions. Under \(S_3\) plus reversal invariance the minimum is \(9\) reversal pairs, i.e.\ \(108\) transitions. Detailed orbit enumeration and counts of optimal solutions are given in Appendix~D.
+
+\section{Numerical validation and reproducibility}
+\label{sec:numerics}
+
+Finite-\(n\) dynamic programming is used only as an independent check of the theorem-derived constants.
+
+For \(h=2,3,4\), independent all-language finite-\(n\) computations and second-order extrapolations agree with the spectral constants to approximately \(0.003\%\), \(0.009\%\), and \(0.012\%\), respectively.
+
+For \(h=5\), the corrected all-language values include:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{rr}
+\toprule
+\(n\) & \(nR_n^{(5)}\) \\
+\midrule
+20 & 0.6066545 \\
+30 & 0.6583281 \\
+40 & 0.6833348 \\
+50 & 0.6992042 \\
+60 & 0.7099965 \\
+\bottomrule
+\end{tabular}
+\caption{All-language finite-\(n\) control for \(h=5\).}
+\label{tab:h5}
+\end{table}
+
+\noindent with theorem constant
+\[
+C_5=0.7655366150\ldots.
+\]
+At \(n=60\) the finite-\(n\) value \(0.7099965\) is approximately \(7.3\%\) below \(C_5\); a second-order Richardson extrapolation of the same series lies approximately \(0.13\%\) from \(C_5\). Finite-\(n\) data validate, but do not prove, the asymptotic.
+
+A previous series was accidentally core-only; the values above are the corrected all-language control.
+
+\subsection*{\texorpdfstring{\(h=6\)}{h=6} finite-\texorpdfstring{\(n\)}{n} validation}
+
+The theorem-derived value
+\[
+C_6=0.9966608746\ldots
+\]
+rests on the independently certified graph, lattice, covariance, and local-limit derivation. Finite-\(n\) data are used only as an independent numerical check. The full evidence-level breakdown for \(h=6\) is given in Appendix~B.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{rrrr}
+\toprule
+\(n\) & \(|L_6\cap\Sigma^{2n}|\) & collisions & \(nR_n^{(6)}\) \\
+\midrule
+12 & 32,264,706 & 1,482,864 & 0.5515118594 \\
+20 & 598,401,288,060 & 19,842,060,168 & 0.6631690327 \\
+30 & 129,601,490,959,197,930 & 3,289,168,271,775,816 & 0.7613727853 \\
+40 & 28,068,484,992,703,808,552,340 & 570,703,655,838,606,639,024 & 0.8133016883 \\
+50 & 6,078,940,846,562,758,147,891,532,058 & 102,845,141,999,403,991,617,566,730 & 0.8459133309 \\
+\bottomrule
+\end{tabular}
+\caption{Verified raw all-language finite-\(n\) values for \(h=6\).}
+\label{tab:h6}
+\end{table}
+
+\subsection*{Reproducibility}
+
+Reproducibility materials comprise the graph builders, SCC and graph-period certificates, explicit single- and product-lattice witnesses, two independent covariance calculations, all-language finite-\(n\) controls, \(K=5\) ablation and cover certificates, symmetry calculations, and source hashes/commands/environments. The preserved \(h=6\) reporting defect and its arithmetic correction audit are included with these materials. Appendix~E records the provenance level of each item.
+
+\section{Discussion, relation to M\"akel\"a, and open questions}
+\label{sec:discussion}
+
+The family gives two simultaneous facts:
+\[
+C_h>C_{\rm free}
+\qquad(h=2,\ldots,6),
+\]
+yet
+\[
+C_2>C_3>C_4<C_5<C_6.
+\]
+Thus bounded local avoidance makes long Abelian squares more common than in the free language throughout the certified family, but increasing the cutoff does not increase that effect monotonically.
+
+The identity
+\[
+\frac{C_h}{C_{\rm free}}
+=
+\frac{2/9}{a_h}
+\]
+shows that the phenomenon is exactly controlled by the scalar asymptotic Parikh variance.
+
+At \(h=5\), the first upturn occurs at the same cutoff as the first valid-to-essential state loss. The ablation goes further than this timing coincidence: the \((3,1,1)\) class is the only new rejection class incident with LOST, deleting it alone produces the final core, and its isolated \(C\)-shift dominates the observed change. Because the ablations are non-additive, we do not claim a general causal law.
+
+The Perron roots decrease with \(h\),
+\[
+2.4511,\ 2.2288,\ 2.0666,\ 1.9442,\ 1.8483,
+\]
+while the collision constants do not. Entropy reduction and concentration of the Parikh distribution therefore need not move in lockstep.
+
+\subsection*{Relation to M\"akel\"a's problem}
+
+Every infinite ternary word avoiding all nontrivial Abelian squares would lie in every finite cutoff language \(L_h\). Rao and Rosenfeld~\cite{Rao2018} established the closest positive avoidance result, for sufficiently large periods. The present results describe necessary finite-window containers, but they do not prove:
+\begin{itemize}
+\item existence of an infinite word surviving every cutoff;
+\item convergence of the finite-cutoff Parry measures;
+\item a positive growth rate for the full infinite-avoidance language;
+\item a proof or disproof of M\"akel\"a's conjecture.
+\end{itemize}
+
+\subsection*{Related work and novelty boundary}
+
+Richmond and Shallit~\cite{Richmond2009} provide the direct unrestricted Abelian-square enumeration benchmark. General symbol-count central and local limit theorems for regular languages are treated by Bertoni et al.~\cite{Bertoni2003} and later work~\cite{Goldwurm2023}; multidimensional spectral Markov methods are standard~\cite{Herve2010}. Directional counting for regular languages is developed by Grigorchuk and Quint~\cite{Grigorchuk2026}. Repetition-free language literature~\cite{Shur2012,Petrova2021} supplies the surrounding growth and avoidance context.
+
+The paper does \textbf{not} claim a new general local-limit theorem. At the present audit stage the strongest safe novelty wording remains:
+
+\begin{quote}
+We are not aware of a previous asymptotic enumeration of adjacent Abelian-square collisions inside a finite-type language defined by bounded Abelian-square avoidance.
+\end{quote}
+
+Before submission, the citation audit should verify the exact normalization of the published Richmond--Shallit~\cite{Richmond2009} asymptotic against the present \(R_n\)-notation and complete the final citation-neighborhood search.
+
+\subsection*{Open questions}
+
+The present paper leaves outside its theorem package:
+\begin{enumerate}
+\item the behavior of \(C_h\) for \(h\ge7\);
+\item whether later recurrent-core losses accompany sharp changes in \(a_h\);
+\item whether analogous scissor structures recur at later cutoffs;
+\item second-order terms in \(R_n^{(h)}\);
+\item larger alphabets and non-adjacent blocks.
+\end{enumerate}
+
+No \(h=7\) computation is needed before the present manuscript is stabilized.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\appendix
+\input{appendix_A_certificates.tex}
+\input{appendix_B_finite_n.tex}
+\input{appendix_C_scissor_certificates.tex}
+\input{appendix_D_symmetry.tex}
+\input{appendix_E_reproducibility.tex}
+\input{appendix_F_llt_details.tex}
+
+\end{document}

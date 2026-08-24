@@ -1,0 +1,149 @@
+{
+ "generated": "2026-08-24",
+ "s3Orbits": 22,
+ "orbitSizes": [
+  6
+ ],
+ "minS3Orbits": 17,
+ "minS3Transitions": 102,
+ "s3Optima": 8,
+ "reversalPairs": 11,
+ "minReversalPairs": 9,
+ "minReversalOrbits": 18,
+ "minReversalTransitions": 108,
+ "reversalOptima": 2,
+ "orbitRepresentatives": [
+  {
+   "orbit": 0,
+   "size": 6,
+   "reversalPartner": 16,
+   "representative": "in  aaabcbaaa -> aabcbaaac"
+  },
+  {
+   "orbit": 1,
+   "size": 6,
+   "reversalPartner": 13,
+   "representative": "in  abbbcabbc -> bbbcabbcb"
+  },
+  {
+   "orbit": 2,
+   "size": 6,
+   "reversalPartner": 17,
+   "representative": "in  abbbcbabb -> bbbcbabbc"
+  },
+  {
+   "orbit": 3,
+   "size": 6,
+   "reversalPartner": 15,
+   "representative": "in  abbbcbabc -> bbbcbabcb"
+  },
+  {
+   "orbit": 4,
+   "size": 6,
+   "reversalPartner": 11,
+   "representative": "in  abbbcbacb -> bbbcbacbb"
+  },
+  {
+   "orbit": 5,
+   "size": 6,
+   "reversalPartner": 20,
+   "representative": "in  abbbcbbab -> bbbcbbabc"
+  },
+  {
+   "orbit": 6,
+   "size": 6,
+   "reversalPartner": 19,
+   "representative": "in  abbbcbbac -> bbbcbbacb"
+  },
+  {
+   "orbit": 7,
+   "size": 6,
+   "reversalPartner": 21,
+   "representative": "in  abbbcbbba -> bbbcbbbac"
+  },
+  {
+   "orbit": 8,
+   "size": 6,
+   "reversalPartner": 12,
+   "representative": "in  abbcbabbc -> bbcbabbcb"
+  },
+  {
+   "orbit": 9,
+   "size": 6,
+   "reversalPartner": 14,
+   "representative": "in  abbcbbabc -> bbcbbabcb"
+  },
+  {
+   "orbit": 10,
+   "size": 6,
+   "reversalPartner": 18,
+   "representative": "in  abbcbbbac -> bbcbbbacb"
+  },
+  {
+   "orbit": 11,
+   "size": 6,
+   "reversalPartner": 4,
+   "representative": "out aabcabaaa -> abcabaaac"
+  },
+  {
+   "orbit": 12,
+   "size": 6,
+   "reversalPartner": 8,
+   "representative": "out abaacabaa -> baacabaac"
+  },
+  {
+   "orbit": 13,
+   "size": 6,
+   "reversalPartner": 1,
+   "representative": "out abaacbaaa -> baacbaaac"
+  },
+  {
+   "orbit": 14,
+   "size": 6,
+   "reversalPartner": 9,
+   "representative": "out abacaabaa -> bacaabaac"
+  },
+  {
+   "orbit": 15,
+   "size": 6,
+   "reversalPartner": 3,
+   "representative": "out abacabaaa -> bacabaaac"
+  },
+  {
+   "orbit": 16,
+   "size": 6,
+   "reversalPartner": 0,
+   "representative": "out abbbcacbb -> bbbcacbbb"
+  },
+  {
+   "orbit": 17,
+   "size": 6,
+   "reversalPartner": 2,
+   "representative": "out abbcbabbb -> bbcbabbbc"
+  },
+  {
+   "orbit": 18,
+   "size": 6,
+   "reversalPartner": 10,
+   "representative": "out abcaaabaa -> bcaaabaac"
+  },
+  {
+   "orbit": 19,
+   "size": 6,
+   "reversalPartner": 6,
+   "representative": "out abcaabaaa -> bcaabaaac"
+  },
+  {
+   "orbit": 20,
+   "size": 6,
+   "reversalPartner": 5,
+   "representative": "out abcbbabbb -> bcbbabbbc"
+  },
+  {
+   "orbit": 21,
+   "size": 6,
+   "reversalPartner": 7,
+   "representative": "out abcccaccc -> bcccacccb"
+  }
+ ]
+}

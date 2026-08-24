@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>abracalabra — Word Structures</title>
+<meta name="description" content="abracalabra: four doors below the Abelisk, each opening for a different kind of evidence.">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/abracalabra.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="index.html">
+      <img class="brand__mark brand__mark--logo" src="assets/word-structures-mark.png" width="28" height="28" alt="" aria-hidden="true">
+      <span class="brand__word">Word Structures</span>
+    </a>
+
+    <nav aria-label="Primary">
+      <details class="nav" data-nav open>
+        <summary class="nav__toggle">Menu</summary>
+        <ul class="nav__list">
+          <li><a href="start.html">Start</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="abelisk.html">Play</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="evidence.html">Evidence</a></li>
+        </ul>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <h1 class="sr-only">abracalabra</h1>
+
+  <!--
+    data-default-lang sets the CONTENT default only (Finnish, for the
+    classroom pilot). The surrounding page chrome (nav, footer, this
+    loading message) stays English, matching the page's own <html lang>
+    and the site-wide English canonical policy — the two are deliberately
+    read from different attributes so a content-language decision can
+    never accidentally change the page's own declared language.
+  -->
+  <div id="abracalabra-app" class="abracalabra-app" lang="en" data-default-lang="fi">
+    <div class="ab-shell">
+      <p>Loading abracalabra…</p>
+    </div>
+  </div>
+
+  <div id="ab-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="lockup">
+      <span class="brand__mark brand__mark--footer" aria-hidden="true"></span>
+      <span>
+        <span class="lockup__word">Word Structures</span>
+        <span class="lockup__tagline">Open Lab for Combinatorics on Words</span>
+      </span>
+    </div>
+    <ul class="site-footer__links">
+      <li><a href="https://github.com/word-structures/combinatorics-on-words-research/blob/main/CONTRIBUTING.md">Contribute</a></li>
+      <li><a href="https://github.com/word-structures/combinatorics-on-words-research/blob/main/CITATION.cff">Cite</a></li>
+      <li><a href="https://github.com/word-structures/combinatorics-on-words-research">GitHub</a></li>
+      <li><a href="https://github.com/word-structures/combinatorics-on-words-research/blob/main/LICENSE">Licence</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+<!-- AbelianCore: the only mathematical authority on this page. -->
+<script src="src/abelian-core.js" defer></script>
+<!-- Challenge specification: alphabets, rules, bounds, expected truths. -->
+<script src="assets/abracalabra-scenes.js" defer></script>
+<!-- Child-facing text: English canonical, Finnish delivery. -->
+<script src="assets/abracalabra-strings.js" defer></script>
+<!-- State, rendering, interaction. -->
+<script src="assets/abracalabra.js" defer></script>
+</body>
+</html>
