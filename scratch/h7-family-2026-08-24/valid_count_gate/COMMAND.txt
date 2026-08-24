@@ -1,0 +1,1 @@
+node -e "console.log(require('./src/sft-container.js').buildContainer(7).states.length)"

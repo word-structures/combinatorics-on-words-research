@@ -1,0 +1,61 @@
+{
+  "root_word": "aaabaaacaaabb",
+  "length": 19,
+  "walks": [
+    {
+      "walk_str": "cbacccaaabaaacaaabb",
+      "valid_transitions": true,
+      "returns_to_root": true,
+      "closed": true,
+      "parikh": [
+        10,
+        4,
+        5
+      ]
+    },
+    {
+      "walk_str": "bcabccaaabaaacaaabb",
+      "valid_transitions": true,
+      "returns_to_root": true,
+      "closed": true,
+      "parikh": [
+        10,
+        5,
+        4
+      ]
+    },
+    {
+      "walk_str": "baacccaaabaaacaaabb",
+      "valid_transitions": true,
+      "returns_to_root": true,
+      "closed": true,
+      "parikh": [
+        11,
+        4,
+        4
+      ]
+    }
+  ],
+  "projected_differences": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "matrix": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "signed_determinant": -1,
+  "absolute_determinant": 1
+}

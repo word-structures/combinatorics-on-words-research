@@ -1,0 +1,21 @@
+{
+  "root_word": "aaabaaacaaabb",
+  "walks": [
+    {
+      "walk_str": "ccaaabaaacaaabb",
+      "length": 15,
+      "valid_transitions": true,
+      "returns_to_root": true,
+      "closed": true
+    },
+    {
+      "walk_str": "cccaaabaaacaaabb",
+      "length": 16,
+      "valid_transitions": true,
+      "returns_to_root": true,
+      "closed": true
+    }
+  ],
+  "period_conclusion": 1,
+  "gcd": 1
+}
