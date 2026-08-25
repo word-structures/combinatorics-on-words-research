@@ -49,7 +49,7 @@ the mathematical ones, and several are non-obvious:
   negative only has to skip part of the space silently. A project whose
   output is overwhelmingly negative results is therefore exposed in
   exactly one direction — hence the standing requirement for positive
-  controls (`CURRENT_FOCUS.md` Step 2).
+  controls (`docs/archive/NEXT_STEP_HISTORICAL_2026-08.md` Step 2).
 - **An AI proposes plausible ideas far faster than it can check them.**
   `NEGATIVE_RESULTS.md` §15 records the pattern: the same underlying
   error returns under new names until someone states the kill condition
@@ -78,7 +78,7 @@ transferable part.
 | 1 | **`AGENTS.md`** / `CLAUDE.md` | The claims protocol. **Mandatory.** Cite before code, two verification levels, language calibration, human approval before commit when claims change |
 | 2 | **`MATH_CLAIMS.md`** | **The sole authority for every mathematical claim.** 118 rows. No claim may appear anywhere without a row here |
 | 3 | **`OPEN_RESEARCH_QUESTIONS.md`** | Open problems, in three parts: A literature (with sources), B the project's own computable questions, **C formulations that measure the implementation, not the mathematics**. D is a rejection register with reasons |
-| 4 | **`CURRENT_FOCUS.md`** | Where to continue and why. What is not worth doing |
+| 4 | **`CURRENT_FOCUS.md`** | The SINGULAR current research-direction authority. What is actively authorized right now. |
 | 5 | `docs/plans/PROJECT_ARCHITECTURE.md` | The app's structure, tab routing |
 | 6 | `NEGATIVE_RESULTS.md` | What has been tried and did not work |
 | 7 | **`LITERATURE_COVERAGE.md`** | **What the literature covers and what it does not, and which search space has been swept.** Read before building a new computation line — it prevents redoing the same work |
@@ -151,7 +151,7 @@ additive-morphism-scan.js  additive squares: exhaustive search of uniform morphi
 additive-nonuniform-morphism-scan.js  same, non-uniform length profiles 1..4, regression to uniform
 additive-affine-decision.js  decision procedure for affine morphisms (Theorem 2.4, row 72), ported and validated
 h6-additive-image-sweep.js  B13: additive analogue of route (c); h6 fixed, uniform codings of length L, all K>=1 (row 77)
-s_large_csp.js             bounded-Kmax CSP attack on S_large(L) (Step 1, CURRENT_FOCUS.md); validated at L=3, did not finish at L=4
+s_large_csp.js             bounded-Kmax CSP attack on S_large(L) (Step 1, docs/archive/NEXT_STEP_HISTORICAL_2026-08.md); validated at L=3, did not finish at L=4
 parikh-block-filter.js     S_large(L)'s block-aligned Parikh reduction (row 80/82): M_g.d = 0, meet-in-the-middle survivor search, g3 positive control
 step1_string_level.js      Step 1's fifth attempt: string-level abelian-square drop oracle seeded by parikh-block-filter.js's survivors, not a fresh raw search
 theorem65-positive-control.js  Step 2's rebuilt positive control: h2 applied once to g85 (row 84/85), the shape Theorem 65 actually describes
@@ -240,7 +240,7 @@ These have recurred and caused retractions:
 ## 6. The working method this project has earned
 
 **Eleven times** in this work a plausible generalization turned out to be
-wrong only once it was run. The list is in `CURRENT_FOCUS.md`. None of them
+wrong only once it was run. The list is in `docs/archive/NEXT_STEP_HISTORICAL_2026-08.md`. None of them
 would have failed a visual inspection.
 
 Three rules follow from that:
@@ -259,5 +259,4 @@ again.
 
 ## 7. Next step
 
-See **`CURRENT_FOCUS.md`** — it is up to date and contains a concrete
-starting point.
+See **`CURRENT_FOCUS.md`** — the singular current research-direction authority.

@@ -1,53 +1,287 @@
 # Claude Research Intake: Profile-Response Mechanism (2026-08-27)
 
-## A. Exact Repository State & Frozen Baseline
+## A. Exact repository state
 
-The repository's canonical claim baseline has just advanced substantially:
-- PR #54 is merged.
-- The h=7 preregistered experiment is closed.
-- The h=7 result is MIXED.
-- The audited h=2,...,7 profile universe is now closed as a finite computational family (the profile-response baseline).
-- The profile response shows a 15-case sign split of hard-deletion asymptotic variance exactly aligned with the minimum-B profile classification.
-- Canonical main: \72e9403239712bc6813b66fc77c014bb793a51ea\ (or subsequent doc updates).
+canonical pre-doc-sync main:
+`72e9403239712bc6813b66fc77c014bb793a51ea`
 
-## B. Theoretical Synthesis
+PR #54:
+merged
 
-We need to formalize the mechanism driving the h=2...7 finite-family sign split without claiming B is the causal driver.
-The mechanism sequence is conceptualized as:
+profile-response evidence path:
+`research/verification/profile-response-h2-h7-2026-08-25/`
 
-\profile v -> local composition geometry / S3 invariants + pattern overlap / return / correlation structure -> perturbed Perron-Parry dynamics -> Green-Kubo / asymptotic-variance response -> sign(delta_a)\
+(The documentation-sync branch is later than that frozen scientific baseline and does not change `MATH_CLAIMS.md`).
 
-We want to resolve the tension between the algebraic structural property (B(v)) and the dynamical temporal correlation structure of the perturbed automaton.
+## B. Frozen scientific baseline
 
-## C. Literature Map
+Profile count vector for h=2..7:
 
-The following literature leads are queued for a strict primary-source audit:
-- B�na, Maga & Richey (2026) (One forbidden word / letter-frequency response)
-- Guibas-Odlyzko (Correlation-polynomial tradition)
-- Goulden-Jackson (Cluster method)
-- Parry / Perron (Measure foundations)
-- Cheriyath / Agarwal / Tikekar (Work on holes / escape / correlation)
-- Chandgotia-Marcus-Richey-Wu (One-pattern SFT work)
-- Markov/pressure/Poisson/Green-Kubo (Sensitivity literature)
-- Drazin/group-inverse (Sensitivity)
-- Multivariate pattern correlation/cumulant literature
+`[2,2,1,3,3,4]`
 
-**Novelty Status**: NOT_ESTABLISHED. The broad methodology is known; the exact 15-case finite sign split is what we are investigating.
+Total profile classes:
 
-## D. Precise Tasks for Claude
+`15`
 
-1. **Theoretical Derivations**: Formulate the Green-Kubo / asymptotic-variance response for the perturbed Perron-Parry dynamics over the known finite family.
-2. **S3 Invariants Analysis**: Analyze the local composition geometry and how S3 invariants intersect with the pattern overlap/correlation structure.
-3. **Mechanism Experiments**: Propose bounded experiments on the existing h=2...7 finite family to discriminate whether B(v) is causal or merely a proxy for the dynamical overlap structure.
+Profiles:
 
-## E. HARD SCIENTIFIC CONSTRAINTS
+**h2:**
+`(1,1,0)`
+`(2,0,0)`
 
-- **DO NOT** claim B(v) is the causal driver without explicit mathematical derivation.
-- **DO NOT** extrapolate the 15-case finite family observation to an arbitrary universal bound.
-- **NO h=8 COMPUTATION**.
-  - **H8_RUN = NO**
-  - **H8_BLINDNESS_BREACH = NO**
+**h3:**
+`(1,1,1)`
+`(2,1,0)`
 
-## F. End State
+**h4:**
+`(2,1,1)`
 
-Claude must produce a documented, bounded experiment or a formal derivation that explains the h=2...7 profile response within the stated theoretical framework, adhering strictly to the epistemic constraints.
+**h5:**
+`(2,2,1)`
+`(3,1,1)`
+`(3,2,0)`
+
+**h6:**
+`(2,2,2)`
+`(3,2,1)`
+`(4,1,1)`
+
+**h7:**
+`(3,2,2)`
+`(3,3,1)`
+`(4,2,1)`
+`(5,1,1)`
+
+Canonical imbalance:
+
+```
+B(v) = sum_i (v_i - h/3)^2
+     = [3 sum_i v_i^2 - h^2] / 3
+```
+
+Finite-family observation:
+
+- all 6/6 minimum-B classes have `delta_a > 0`
+- all 9/9 other classes have `delta_a < 0`
+
+Scope:
+- finite h=2..7 family only
+- computational observation
+- not universal
+- not causal
+- novelty NOT_ESTABLISHED
+
+## C. h=7 frozen prereg result
+
+valid = `37,698`
+essential = `32,976`
+lambda = `1.7776384757456016`
+a ≈ `0.082823826517`
+C = `1.1094410038856453`
+
+Preregistered outcome:
+MIXED
+
+P1/P2/P5/P6 confirmed
+P3/P4 out of range
+F4 triggered
+
+Do not promote h=7 into the published h=2..6 family.
+
+## D. Correction provenance
+
+Explicitly distinguish:
+
+**RUN2:**
+REJECTED
+
+Reasons include:
+- wrong asymptotic variance formula
+- weak SCC ranking
+- hard-coded SUCCESS
+- governance breach
+- novelty overclaim
+
+**RUN3B:**
+SUPERSEDED due to q_v target-index bug
+
+**RUN3C:**
+corrected numerical baseline
+
+**RUN3D2:**
+helper computeB used the wrong normalized scalar
+`(3 sum v_i^2 - h^2)/(2h(h-1))`
+
+Important:
+this scalar is a positive fixed-h multiple of canonical B, so minimum-profile classification was unaffected, but it must not be reused quantitatively.
+
+## E. Correct asymptotic-variance formula
+
+```
+sigma^2 = 2 <f,g>_pi - <f,f>_pi
+```
+where
+```
+(I - P + Pi) g = f
+```
+Equivalent form:
+```
+sigma^2 = <f,f>_pi + 2 <f, P g>_pi
+```
+
+## F. RUN3C verification baseline
+
+variance formula PASS
+edge-equivalence mismatches = `0`
+profile classification mismatches = `0`
+q_v Q1/Q2 diff = `0`
+q partition residual = `0`
+
+unique graph dominance PASS
+minimum dominance margin = `0.002841`
+
+h5 profile (3,1,1):
+- infinite
+- one cyclic SCC
+- unique dominant SCC
+- period 1
+- lambda ≈ `1.25841`
+
+Method A/B:
+max diff = `3.12e-13`
+
+delta A/B:
+max diff = `4.01e-13`
+
+Method C:
+original RUN3C tested 38 cases
+max |A-C| = `1.45e-7`
+epsilon spread = `3.11e-8`
+
+IMPORTANT durable-package distinction:
+the durable promoted verification package retains only 6 pressure-curvature spot-check artifacts.
+
+Do NOT collapse:
+38 original tested cases
+vs
+6 durable retained checks
+
+## G. Presentation invariance
+
+RUN3C tested h3 presentation invariance numerically for:
+
+`lambda`
+`a`
+`C`
+
+Observed differences approximately:
+
+lambda diff = `0`
+a diff = `2.11e-14`
+C diff = `1.80e-8`
+
+BUT the durable certificate promoted in the canonical package restricts its claim to:
+
+`PRESENTATION_INVARIANCE_SCOPE = SPECTRAL_RADIUS_ONLY`
+
+Do not broaden the durable claim.
+
+## H. Current theoretical synthesis
+
+**ESTABLISHED / DERIVED**
+**COMPUTED OBSERVATIONS**
+**HYPOTHESES**
+
+Current mechanism sketch:
+```text
+profile v
+   ->
+local composition geometry / S3 invariants
+   +
+temporal overlap / return / correlation structure
+   ->
+perturbed Perron-Parry chain
+   ->
+Green-Kubo / asymptotic-variance response
+   ->
+sign(delta_a)
+```
+
+Candidate S3 invariants / quantities include:
+
+`B(v)`
+`J(v) = product_i(v_i - h/3)`
+
+Current interpretation:
+B classifies the observed sign split perfectly over the 15-case family, but B is NOT yet established as causal.
+
+The dynamical response may depend on quantities such as:
+
+`T_v`
+`D_v`
+`eta_v`
+`tau_v`
+`Theta_v`
+
+(If these definitions are not durable, they are candidate notation requiring audit).
+
+## I. Literature status
+
+**DIRECTLY OPENED PRIMARY SOURCES**
+vs
+**AUDIT-QUEUE / RESEARCH-REPORT LEADS**
+
+The audit queue should include:
+
+- Bóna, Maga & Richey 2026
+- Guibas-Odlyzko correlation-polynomial literature
+- Goulden-Jackson cluster method
+- Parry/Perron measure foundations
+- Cheriyath / Agarwal / Tikekar
+- Chandgotia / Marcus / Richey / Wu
+- Markov pressure / Poisson / Green-Kubo sensitivity
+- Drazin / group inverse
+- multivariate pattern correlation / cumulant literature
+
+Novelty remains:
+NOT_ESTABLISHED
+
+Do not promote research-report leads to verified primary literature.
+
+## J. Exact Claude tasks
+
+Claude should NOT merely summarize. Ask for independent derivation and adversarial checking.
+
+Tasks:
+
+1. Independently derive the full-shift / unconstrained local composition response.
+2. Determine exactly where B(v) enters and whether the first local composition term is proportional to B(v).
+3. Analyze the role of the cubic S3 invariant J(v).
+4. Independently derive the constrained asymptotic-variance response using Perron/Parry perturbation + Poisson/group-inverse/Green-Kubo methods.
+5. Derive or identify a pattern-overlap / correlation-matrix formulation of the same response.
+6. Determine whether the two formulations are mathematically equivalent.
+7. Attempt to construct a decomposition of the form:
+   `response(v) = local_term_h(v) + correlation_term(v)`
+   or a more precise alternative.
+8. Red-team the hypothesis: "B is causal" and search for reasons why B may only be a proxy for overlap dynamics.
+9. Look specifically for a theorem strategy where a discrete B-gap plus a uniform bound on the correlation correction forces the sign.
+10. Propose the smallest PREDECLARED h=2..7 mechanism experiment that can discriminate competing explanations.
+11. Do NOT inspect, enumerate, construct, simulate, infer empirical data from, or otherwise compute h=8.
+
+## K. Required Claude output
+
+Require:
+
+- theorem / lemma candidates
+- assumptions written explicitly
+- derivations
+- exact points where proof fails
+- possible counterexamples
+- literature dependencies
+- source gaps
+- candidate mechanism decomposition
+- smallest discriminating preregistered experiment
+- explicit red-team section
+- no novelty claim
+- no h8 computation
+- no repo mutation

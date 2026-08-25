@@ -1,6 +1,6 @@
 # Current Focus
 
-**Updated:** 2026-08-16 (Structural direction reset)
+**Updated:** 2026-08-25
 **Review due:** 2026-09-06 (end of the bootstrap allocation window)
 **Full roadmap:** `ROADMAP.md`
 **Research authority:** This document is the SINGULAR current research-direction authority.
@@ -9,7 +9,9 @@
 
 ## CURRENT RESEARCH DIRECTION
 
-**Overarching Mathematical Goal:** Mäkelä's conjecture (the existence of an abelian-square-free ternary word via a uniform morphism applied to a symmetric fixed point).
+**Overarching Mathematical Goal:** Mäkelä's conjecture asks whether there exists an infinite ternary word whose only Abelian squares are the trivial length-2 squares aa, bb, cc (equivalently, avoiding Abelian squares of half-length K >= 2).
+
+(Uniform morphic images applied to a symmetric fixed point represent one specific attack route toward this conjecture.)
 
 ### The Profile-Response Mechanism
 
