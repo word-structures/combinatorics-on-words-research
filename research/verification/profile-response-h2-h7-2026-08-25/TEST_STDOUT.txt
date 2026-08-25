@@ -1,0 +1,160 @@
+=== STARTING AA2FR AUTOMATED REGRESSION TEST SUITE ===
+
+       Verified Checksums:
+       - h6   : 914e2f31
+       - g3   : 428a0fcd
+       - g85  : 2d49c2ad
+       - g98  : b876e62f
+       - g109 : c28e3e9d
+[PASS] Morphism Integrity & Checksum Verification
+[PASS] g98 exact images match V. Keranen's owner-supplied data (MORPHISM-G98-1)
+[PASS] Abelian Square Detection Logic
+[PASS] Ternary Abelian-Square-Free Exhaustive Bound (Len <= 7)
+[PASS] FORBID4 Symmetry & Reversal Closure
+[PASS] Rao & Rosenfeld 34 Unique Abelian Squares in g3(h6^6(a))
+[PASS] MATH_CLAIMS.md Integrity & Canonical Bounds Verification
+[PASS] ParikhFenwickTree O(log N) Dynamic Backtracking & Bridge-Welding Verification
+[PASS] RecursiveParikhOracle Base-k Matrix Descent vs Int32Array Static Scanner
+[PASS] Bridge-Welding Seam Surgery Verification
+[PASS] p6-Replication Harness (Rao & Rosenfeld Threshold Verification)
+[PASS] Negative Control Calibration (Ternary Cutoff Verification)
+       h6 spectrum      : {3, +-sqrt(3), 0, 0, 0}  (char poly x^3(x-3)(x^2-3))
+       h6 frequencies   : all exactly 1/6
+       g3(h6^w(a))      : a=1/3, b=17/60, c=23/60  [EXACT]
+[PASS] Perron-Frobenius Exact Frequencies & Characteristic Polynomial
+[PASS] Citation Guard: h6/g3 construction is not attributed to arXiv:1507.02581
+       h6, g3 verbatim vs arXiv:1511.05875 Sec 5.4 : IDENTICAL
+       h6, g3 vs Fici & Puzynina digit relabelling  : IDENTICAL
+       theorem numbering  Thm 4 / Thm 9 / Thm 10    : corrected
+[PASS] Primary Source Audit: h6/g3 verbatim vs arXiv:1511.05875 Sec 5.4
+       rho_1..5  : 109/180, 13/36, 41/180, 29/180, 2/45   [EXACT]
+       rho_K = 0 exactly for K = 6..20 (complete factor sets, not a prefix)
+       distinct squares: 34 total, longest length 10       [EXACT]
+[PASS] Exact Factor Statistics: rho_K and the 34-square census
+       dim E_e(M_h) = 3, dim ker(M_g) = 3, intersection = 0
+       Q^6 = E_e(M_h) (+) ker(M_g)  -> Proposition 9 applies to (h6, g3)
+[PASS] Rao & Rosenfeld Proposition 9 preconditions hold for (h6, g3)
+       invariant factors [1,1,10] -> [Z^3 : im(M_g)] = 10
+       forced by 10-uniformity; image = {v : v_a+v_b+v_c = 0 mod 10}
+       Lambda = full integer kernel, 3 generators
+[PASS] Smith normal form: g3 image lattice has index 10 in Z^3
+       J = diag(3, sqrt(3), -sqrt(3)) (+) J_2(0) (+) J_1(0)   [EXACT]
+       splitting field Q(sqrt(3)); M*P = P*J verified exactly
+[PASS] Jordan form of M_h over Q(sqrt(3)): defective at 0, blocks 2 + 1
+       asf3: p(6)=30, p(7)=18, p(8)=0   (independent of runNegativeControlTest)
+       aa2f: still non-empty at n=14 where asf3 is already dead
+       g3(h6^w): linear, first differences in [6,8], not constant
+[PASS] Factor complexity: ternary cutoff reproduced, construction is linear
+       contracting blocks nilpotent -> Neumann series is a finite sum
+       c = 8/3 (indices 3,4) and 2/3 (index 5)   [EXACT]
+       respected by 21 825 scanned factors
+[PASS] Proposition 5 bounds: c = 8/3 and 2/3, respected by actual factors
+       c = [1/2, sqrt(3)/3, 7/3+4sqrt(3)/3, 8/3, 8/3, 2/3]   [EXACT]
+       box contains 125,931 integer vectors; zero vector present
+[PASS] Ancestor box: Prop 5 + Prop 6 bounds confine ancestors to 125,931 vectors
+       rank(M_h) = 4, dim ker = 2 (geometric, not algebraic)
+       |Par(t_0)| = 21,237   |Anc(t_0)| = 116,578, closed in 3 rounds
+       this is Anc, NOT Ranc - realizability is not yet decided
+[PASS] getParents: |Par(t_0)| = 21237, ancestor closure closes at 116578
+       negative control: 7 squares detected, 4 non-squares rejected
+       Proposition 8 bound s = 34 = Delta + 2*delta + 3
+       full procedure: 0 strict realizations -> h6^w(a) abelian-square-free
+[PASS] Decision procedure re-derives Theorem 4: h6^w(a) is abelian-square-free
+       construction: every right-special factor is 2-special for n >= 8
+       strongly connected at every order; Cassaigne verified independently
+       dead ends first appear at length 9: aa2f 48/48, aa2fr 36/36
+[PASS] Rauzy graphs: binary branching, Cassaigne, and the length-9 dead ends
+       exhaustive over uniform morphisms, k = 2..5, up to S3 relabelling
+       longest surviving prefixes: 9, 16, 23, 29 - none reaches the cap
+[PASS] No uniform ternary morphism with k <= 5 avoids abelian squares of period >= 2
+       (record word files not present - skipped)
+[PASS] Record words verify as aa2f; FORBID4 is a heuristic, not a rule
+       Proposition 11 target set: 24 non-zero + zero = 25 templates
+       Theorem 6 run separately: |S| = 116,598, s = 34, 0 realizations
+       (node decide-phi-squares.js reproduces it in about 20 seconds)
+[PASS] Proposition 11 target set, and Theorem 6 re-derived
+       four letters, full a-2-freeness: first unfavourable at length 8
+       n=8: 48 proven unfavourable, 24 candidates for Keranen's question
+       ternary depth-0 case agrees with row 35
+[PASS] Unfavourable factors exist over four letters, first at length 8
+       L=1: 122 classes, 0 survive; L=2: 0 survive; latest deaths at symbols 13 / 34
+       L=3: 35 classes avoid K in [2,5]; all violate K in [6,100] by symbol 36; all have g(a)=g(b)
+       (L=4 and L=5 are exercised by the module run, MATH_CLAIMS row 49)
+[PASS] Route (c) sweep: uniform images of h6^w(a), L <= 3 - deaths, survivors and their large-K collapse
+       3114 states, essential 2844, one SCC (5418 edges)
+       every letter frequency limit point in [1/11, 3/4]; intervals S3-symmetric
+       no binary tail; container n=15 count 159,006 > aa2f 120,084
+[PASS] Container SFT: 3114 states, one SCC of 2844, letter frequencies in [1/11, 3/4], no binary tail
+       11070 states, essential 10128, one SCC (18774 edges)
+       interval [1/11, 3/4] unchanged from K in [2,5] although the language shrinks
+       sandwich at n=15: 120,084 <= 128,940 <= 159,006
+[PASS] Container SFT, K in [2,6]: language shrinks, frequency interval stays [1/11, 3/4]
+       ternary control reproduces row 1 (longest 7, 18 words of length 7)
+       31 affine classes on 4 letters with span <= 8; canonical form affine-invariant
+       {0,1,2,3}: search exhausted, longest 50, witness + affine + BFS all agree
+[PASS] Additive sweep: three-layer verification, ternary control ties to row 1, {0,1,2,3} exhausts at 50
+       bound verified on 400 directly computed prefixes; oracle keeps longest 50
+       search nodes 751156 -> 8976 with the verdict unchanged
+       affine transfer reproduces the table exactly at zero search cost
+[PASS] Extension tables: bound is sound, oracle preserves the verdict, table transfers affinely
+       iterative walk matches recursive exactly (751156 nodes, longest 50)
+       9 chained slices reproduce the unsplit run node for node
+       PARTIAL and cap-limited runs decide nothing but still verify their witness
+[PASS] Resumable runs: split budgets reproduce an unsplit run exactly; PARTIAL decides nothing
+       affine keying exact for reflections, scalings, shifts and negations
+       library hit and affine sibling both cost 0 search nodes and match a direct build
+       a single altered entry is caught by the checksum
+[PASS] Table library: affine keying is exact, a hit costs no search, tampering is refused
+       117 rows parsed; 11 quotable figures, each traced to its row
+       invented figures and REJECTED rows are both refused
+[PASS] Ledger exports cleanly; a figure not in its row cannot be published
+       single letters unavoidable; 1017 longer factor classes all avoidable
+       avoidable verdicts carry an explicit avoiding cycle
+[PASS] Container unavoidable factors: only single letters, none of length 2..9
+       k=2..4 exhaustive over {0,1,2,5}: no morphism reaches the prefix cap
+       agrees with additive-sweep.js's definitional checker; K=1 case verified separately
+[PASS] Additive morphism scan: agrees with additive-sweep.js; k<=4 exhaustive negative on {0,1,2,5}
+       uniform profiles (k,k,k,k) reproduce additive-morphism-scan.js exactly for k=2,3
+       54 length profiles at maxlen=3 over {0,1,2,5}: all tested, none survive
+[PASS] Non-uniform additive morphism scan: reproduces the uniform case; exhaustive negative to maxlen=3
+       9 status binding(s), 1 figure binding(s), all resolve; embedded block matches a fresh export
+[PASS] explorer.html's embedded claims-data block is in sync and every binding resolves
+       L=1,2,3 exhaustive, zero survivors; clean-image counts 4/12/36 as independently derived
+       equal-sum coding dies at symbol 4 — the abelian enabler is the additive blocker (row 71)
+[PASS] Additive route (c): h6 codings are exhaustively negative at L=1,2,3
+
+=== TEST SUITE SUMMARY: 42 PASSED, 0 FAILED ===
+🎉 ALL TESTS PASSED SUCCESSFULLY!
+=== ABELIAN-CORE PARITY & CORRECTNESS TESTS ===
+
+[PASS] Positive: 'aa' is a K=1 abelian square
+[PASS] Positive: 'abba' contains a K=1 abelian square at pos 1 (bb) when minK=1
+[PASS] Positive: 'abba' contains a K=2 abelian square at pos 0 when minK=2
+[PASS] Positive: 'abab' contains a K=2 abelian square
+[PASS] Positive: 'abcacbca' contains abelian squares
+[PASS] Negative: 'a' is abelian-square-free
+[PASS] Negative: 'cbcacbc' is abelian-square-free (length 7)
+[PASS] Negative: empty word is abelian-square-free
+[PASS] Convention: default minK is 2
+[PASS] Convention: checkWord uses the convention correctly
+[PASS] findAllAbelianSquares finds squares at multiple K values
+[PASS] checkSuffix returns appendedLetter and appendedIndex
+[PASS] branchMask assumes valid base prefix and tests suffixes
+[PASS] branchMask with explicit alphabet fills zero counts
+       88,573 ternary words checked up to length 10, 0 mismatches
+[PASS] Bounded ternary parity sweep: exhaustive up to length 10
+       Fixed seed: 123456789
+       Generated words: 5000
+       Length range: 20..80
+       Max K theoretically reachable: 40
+       Max K actually observed: 7
+       Exercised K > 5: true
+       Runtime: 116ms
+[PASS] Longer-K Parity Evidence: Seeded pseudo-random ternary words
+       Targeted K cases verified: 6, 10, 20, 40
+[PASS] Longer-K Parity Evidence: Targeted deterministic high-K cases
+[PASS] Browser contract: plain script creates window.AbelianCore and NO bare globals
+       Mutation: 'parikhEqual off-by-one' injected exactly once, expected test failure occurred in child process, files cleaned up.
+[PASS] Non-vacuity: Genuine child-process mutation test
+
+=== ABELIAN-CORE RESULTS: 19 passed, 0 failed ===

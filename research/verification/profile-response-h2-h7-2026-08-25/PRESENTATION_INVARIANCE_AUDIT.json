@@ -1,0 +1,9 @@
+[
+  {
+    "model": "h=3 L_2",
+    "length_3_states": 27,
+    "length_5_states": 162,
+    "length_3_lambda": 3,
+    "length_5_lambda": 2.4511095374721545
+  }
+]
