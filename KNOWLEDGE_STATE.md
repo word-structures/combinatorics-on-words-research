@@ -94,6 +94,8 @@ exhausted. They stay closed.
 
 | What is closed | Kind of proof | Row |
 |---|---|---|
+| **h=7 preregistered experiment** | exhaustive search / derivation | — (MIXED outcome) |
+| **h=2...7 profile response** | exhaustive finite family observation (15 cases) | — |
 | The ternary abelian-square-free language ends at length 7 | exhaustive search | 1 |
 | **No** k-uniform ternary morphism, k ≤ 6, produces a Mäkelä fixed point | exhaustive sweep | 36 |
 | **Route (c):** no uniform map Σ₆ → Σ₃^L, L ≤ 5, produces a Mäkelä word from h₆'s fixed point | exhaustive sweep | 49 |

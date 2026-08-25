@@ -135,6 +135,26 @@ search terms — the same bar section 5 sets.
 | Shelton & Soni 1982 | current full-text route access-blocked |
 | Carpi 1998 | abstract / statement only; four-letter result; no ternary aa2f transfer |
 
+
+## 2d. Targeted primary-source audit queue (Profile-Response Mechanism)
+
+**NOVELTY_STATUS = NOT_ESTABLISHED**
+The broad methodology of computing asymptotic variance / sensitivity in Markov chains and shifts of finite type is known. The exact 15-case finite sign split for h=2...7 hard deletions has not yet been established as novel.
+
+The following literature leads were identified during the profile-response research intake, but **have not yet been opened under this repository's strict verification standard**. They must be opened and audited before any novelty claim is made.
+
+| Lead / Tradition | Topic / Relevance | Status |
+|---|---|---|
+| B�na, Maga & Richey (2026) | One forbidden word / letter-frequency response | **AUDIT-QUEUE** |
+| Guibas-Odlyzko | Correlation-polynomial tradition | **AUDIT-QUEUE** |
+| Goulden-Jackson | Cluster method | **AUDIT-QUEUE** |
+| Parry / Perron | Measure foundations | **AUDIT-QUEUE** |
+| Cheriyath / Agarwal / Tikekar | Work on holes / escape / correlation | **AUDIT-QUEUE** |
+| Chandgotia-Marcus-Richey-Wu | One-pattern SFT work | **AUDIT-QUEUE** |
+| Markov / pressure / Poisson / Green-Kubo | Sensitivity literature | **AUDIT-QUEUE** |
+| Drazin / group-inverse | Sensitivity and generalized inverses | **AUDIT-QUEUE** |
+| Multivariate pattern correlation | Cumulant literature | **AUDIT-QUEUE** |
+
 ## 3. Coverage table
 
 The **"Space"** column states exactly what has been swept, not just yes/no.
