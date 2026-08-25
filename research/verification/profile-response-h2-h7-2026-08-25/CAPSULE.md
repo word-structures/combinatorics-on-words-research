@@ -55,7 +55,7 @@ Using canonical B(v) = sum_i (v_i - h/3)^2, the 15 occurring profile classes div
     independent moment-growth computation.
 - Method C:
     pressure-curvature spot checks using the selected audited cases.
-    (Exact computed case count from final durable verification: 6).
+    (RUN3C originally computed 38 cases with max |A-C| ~ 1.45e-7 and max epsilon-scale spread ~ 3.11e-8, while this final durable verification selectively retains 6 pressure-curvature spot-check artifacts.)
 - q_v:
     two independently implemented computations agree within the recorded numerical tolerance; and
     profile q_v masses partition the direct total deleted-edge Parry mass within the recorded numerical tolerance.
@@ -68,7 +68,7 @@ Using canonical B(v) = sum_i (v_i - h/3)^2, the 15 occurring profile classes div
     period = 1
 
 ## Presentation Invariance
-PRESENTATION_INVARIANCE_SCOPE = SPECTRAL_RADIUS_ONLY
+RUN3C originally tested presentation invariance with lambda diff = 0, a diff ~ 2.11e-14, and C diff ~ 1.80e-8. However, the durable certificate promoted here restricts its scope:\nPRESENTATION_INVARIANCE_SCOPE = SPECTRAL_RADIUS_ONLY
 
 ## Historical Corrections
 RUN2:
