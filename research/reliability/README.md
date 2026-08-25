@@ -1,4 +1,4 @@
-﻿# Reliability Engine v0.1
+# Reliability Engine v0.1
 
 ## What it is
 A small mathematics-specific research assurance overlay for tracking epistemic discipline and structural failures.
@@ -34,3 +34,10 @@ h=8 is a protected holdout. No operations in this directory shall compute, const
 - Claim Assurance Record
 - Artifact Freshness / derivation closure
 - Optional Run Attestation
+
+### Actors Semantics
+
+The ctors field records roles materially involved in the episode. It is NOT a blame or causal-attribution field. Detection responsibility belongs in detection_layer.
+### Evidence Anchor Note
+
+Failure Ledger entries are historical assertions and must be reviewable against preserved repository artifacts / Git history. preserved_artifacts does not mean that every historical state is stored as a current working-tree file; Git history may contain the relevant before/after evidence.

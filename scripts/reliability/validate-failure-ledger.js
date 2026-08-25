@@ -1,9 +1,14 @@
 const fs = require('fs');
 
+class ValidationError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'ValidationError';
+  }
+}
+
 function fail(msg) {
-  console.error('RELIABILITY FAILURE LEDGER INVALID\n');
-  console.error(msg);
-  process.exit(1);
+  throw new ValidationError(msg);
 }
 
 function validateLedger(filePath, requireDesignSetOnly = true) {
@@ -198,14 +203,24 @@ for (let i = 0; i < args.length; i++) {
 
 // Only execute if not required by another module (for testing)
 if (require.main === module) {
-  validateLedger(filePath, requireDesignSetOnly);
-  console.log('RELIABILITY FAILURE LEDGER');
-  console.log('PASS  schema_version 0.1');
-  console.log('PASS  ' + JSON.parse(fs.readFileSync(filePath)).failures.length + ' failure records');
-  console.log('PASS  unique failure IDs');
-  console.log('PASS  dataset roles');
-  console.log('PASS  artifact hash syntax');
-  console.log('\nALL FAILURE LEDGER CHECKS PASSED');
+  try {
+    validateLedger(filePath, requireDesignSetOnly);
+    console.log('RELIABILITY FAILURE LEDGER');
+    console.log('PASS  schema_version 0.1');
+    console.log('PASS  ' + JSON.parse(fs.readFileSync(filePath)).failures.length + ' failure records');
+    console.log('PASS  unique failure IDs');
+    console.log('PASS  dataset roles');
+    console.log('PASS  artifact hash syntax');
+    console.log('\nALL FAILURE LEDGER CHECKS PASSED');
+  } catch (err) {
+    if (err.name === 'ValidationError') {
+      console.error('RELIABILITY FAILURE LEDGER INVALID\n');
+      console.error(err.message);
+      process.exitCode = 1;
+    } else {
+      throw err;
+    }
+  }
 }
 
-module.exports = { validateLedger };
+module.exports = { validateLedger, ValidationError };

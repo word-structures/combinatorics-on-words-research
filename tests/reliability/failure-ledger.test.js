@@ -9,20 +9,21 @@ let errors = 0;
 function test(name, data, expectFail, allowEval = false) {
   const file = path.join(tmpDir, 'test.json');
   fs.writeFileSync(file, typeof data === 'string' ? data : JSON.stringify(data));
-  let oldExit = process.exit;
   let oldError = console.error;
   
   let failed = false;
-  process.exit = (code) => { if (code !== 0) failed = true; };
   console.error = () => {}; // suppress errors
   
   try {
     validateLedger(file, !allowEval);
   } catch (e) {
-    failed = true;
+    if (e.name === 'ValidationError' || e instanceof SyntaxError) {
+      failed = true;
+    } else {
+      throw e;
+    }
   }
   
-  process.exit = oldExit;
   console.error = oldError;
   
   if (failed !== expectFail) {
@@ -32,6 +33,40 @@ function test(name, data, expectFail, allowEval = false) {
     console.log('Test passed: ' + name);
   }
 }
+
+// -------------------------------------------------------------------
+// SCHEMA/RUNTIME CONTRACT TESTS
+// -------------------------------------------------------------------
+const schemaPath = path.join(__dirname, '../../research/reliability/schemas/failure-ledger.schema.json');
+const schemaStr = fs.readFileSync(schemaPath, 'utf8');
+const schema = JSON.parse(schemaStr);
+const failureProps = schema.properties.failures.items.properties;
+
+const idRegex = new RegExp(failureProps.failure_id.pattern);
+if (idRegex.test("FL-005") !== true) { console.error('Schema test failed: idRegex should accept FL-005'); errors++; }
+if (idRegex.test("FL-05") !== false) { console.error('Schema test failed: idRegex should reject FL-05'); errors++; }
+console.log('Test passed: Schema failure_id regex');
+
+const dateRegex = new RegExp(failureProps.date.pattern);
+if (dateRegex.test("2026-08-25") !== true) { console.error('Schema test failed: dateRegex should accept 2026-08-25'); errors++; }
+if (dateRegex.test("25-08-2026") !== false) { console.error('Schema test failed: dateRegex should reject 25-08-2026'); errors++; }
+if (dateRegex.test("2026-08-25T10:00") !== false) { console.error('Schema test failed: dateRegex should reject with time'); errors++; }
+console.log('Test passed: Schema date regex');
+
+const schemaActors = failureProps.actors.items.enum;
+const expectedActors = ["human", "AI", "tool", "system"];
+if (schemaActors.length !== expectedActors.length || !expectedActors.every(a => schemaActors.includes(a))) {
+  console.error('Schema test failed: actors enum mismatch'); errors++;
+}
+console.log('Test passed: Schema actors enum');
+
+const schemaRoles = failureProps.dataset_role.enum;
+const expectedRoles = ["ENGINE_DESIGN_SET", "ENGINE_EVAL_SET"];
+if (schemaRoles.length !== expectedRoles.length || !expectedRoles.every(r => schemaRoles.includes(r))) {
+  console.error('Schema test failed: dataset_role enum mismatch'); errors++;
+}
+console.log('Test passed: Schema dataset_role enum');
+// -------------------------------------------------------------------
 
 const baseRecord = {
   failure_id: 'FL-999',
@@ -111,11 +146,16 @@ fs.rmSync(tmpDir, { recursive: true, force: true });
 // T1 real committed ledger passes
 const realLedgerPath = path.join(__dirname, '../../research/reliability/failure-ledger.json');
 if (fs.existsSync(realLedgerPath)) {
-  let oldExit = process.exit;
   let failed = false;
-  process.exit = (code) => { if (code !== 0) failed = true; };
-  try { validateLedger(realLedgerPath, true); } catch (e) { failed = true; }
-  process.exit = oldExit;
+  try {
+    validateLedger(realLedgerPath, true);
+  } catch (e) {
+    if (e.name === 'ValidationError' || e instanceof SyntaxError) {
+      failed = true;
+    } else {
+      throw e;
+    }
+  }
   if (failed) {
     console.error('T1 Real ledger failed validation');
     errors++;
