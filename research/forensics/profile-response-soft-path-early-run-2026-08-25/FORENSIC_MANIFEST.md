@@ -87,3 +87,14 @@ The run cannot be reproduced from Git commit d91a90ecd33aa33f0ebe87479b8f7a37de5
 - **SHA256:** 4267A8EACB4B2B216F8520FA8CF68A274A57DA9E1B47196E1E287CBF7FD0B43E
 - **Size:** 18307 bytes
 
+
+## FORENSIC ADDENDUM
+
+**DERIVED_PRESENTATION_STATUS = CORRUPTED / NON-EVIDENTIARY**
+**CANDIDATE FAILURE MODE = STALE_OR_CORRUPTED_DERIVED_PRESENTATION**
+
+- SOFT_PATH_RESULTS.md is preserved for historical provenance only;
+- it contains failed template interpolation (e.g., ${item.h}, ${item.profile}, ${point.eps});
+- its method description is inaccurate for the executed campaign;
+- scientific values must be read from soft_path_campaign_results.json, not from SOFT_PATH_RESULTS.md;
+- the raw JSON and raw execution log remain the primary campaign evidence.
