@@ -3,11 +3,16 @@
 ## OVERVIEW
 
 **RUN_STATUS = UNREGISTERED_EXPLORATORY_RUN**
-**GATE_EVENT = GATE_BYPASS / PREMATURE_CONFIRMATORY_EXECUTION**
-**H8_RUN = NO**
-**H8_BLINDNESS_BREACH = NO**
+**GATE_EVENT = PREMATURE_EXECUTION / HUMAN_AUTHORIZATION_BEFORE_PREREGISTRATION_FREEZE**
 
-Campaign execution began before the previously required preregistration/authorization freeze. The exact initiating interaction has not been forensically verified.
+- HUMAN_AUTHORIZATION = YES
+- PREREGISTRATION_COMPLETE = NO
+- CONFIRMATORY_STATUS = NO
+- EXPLORATORY_STATUS = YES
+- H8_RUN = NO
+- H8_BLINDNESS_BREACH = NO
+
+The human research owner explicitly authorized the computation out of curiosity before the planned preregistration protocol had been frozen. Because explicit permission to compute is not equivalent to a completed preregistration, the run remains strictly an unregistered exploratory run. This distinction serves as a process-design lesson for the project, separating operational permission from scientific protocol closure.
 
 ## SCIENTIFIC OBSERVATION
 **Sign crossing observed on the sampled epsilon grid.**
@@ -81,3 +86,4 @@ The run cannot be reproduced from Git commit d91a90ecd33aa33f0ebe87479b8f7a37de5
 - **Forensic Path:** SOFT_PATH_RESULTS.md
 - **SHA256:** 4267A8EACB4B2B216F8520FA8CF68A274A57DA9E1B47196E1E287CBF7FD0B43E
 - **Size:** 18307 bytes
+
