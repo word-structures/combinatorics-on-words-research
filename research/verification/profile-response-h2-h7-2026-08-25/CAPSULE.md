@@ -2,7 +2,7 @@
 
 This capsule preserves a bounded finite-family computational observation of the profile-class response to hard-deletion transitions L_{h-1} -> L_h for h=2,...,7. This is an internally audited computational evidence package and establishes results for h=2...7 only.
 
-NOVELTY_STATUS = NOT_ESTABLISHED. 
+NOVELTY_STATUS = NOT_ESTABLISHED.
 (No universal law, proof for arbitrary h, predicting h8, or claims that B dominates universally are established by this finite data).
 
 ## Canonical Profile Universe
@@ -68,7 +68,8 @@ Using canonical B(v) = sum_i (v_i - h/3)^2, the 15 occurring profile classes div
     period = 1
 
 ## Presentation Invariance
-RUN3C originally tested presentation invariance with lambda diff = 0, a diff ~ 2.11e-14, and C diff ~ 1.80e-8. However, the durable certificate promoted here restricts its scope:\nPRESENTATION_INVARIANCE_SCOPE = SPECTRAL_RADIUS_ONLY
+RUN3C originally tested presentation invariance with lambda diff = 0, a diff ~ 2.11e-14, and C diff ~ 1.80e-8. However, the durable certificate promoted here restricts its scope:
+PRESENTATION_INVARIANCE_SCOPE = SPECTRAL_RADIUS_ONLY
 
 ## Historical Corrections
 RUN2:
