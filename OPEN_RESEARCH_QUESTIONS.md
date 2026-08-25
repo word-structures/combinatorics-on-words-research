@@ -418,6 +418,8 @@ changes**, not merely increase L.
 
 ### B22. Does the bounded L=5 Stage-B test set admit useful normalization and deduplication? (proposed 2026-08-14, pre-registered before any measurement)
 
+**STATUS: PREREGISTERED / NOT EXECUTED**
+
 **This entry is a question and a pre-registration. It contains no answer and no finding.** The supporting reasoning below re-arranges definitions already in the canonical record; it asserts no new mathematics and changes nothing about rows 49, 80 or 82. It is written *before* the experiment exists so that the hypothesis, the failure conditions and the kill condition are fixed in advance rather than chosen after seeing results (`EPISTEMIC_DISCIPLINE.md` §8, §10).
 
 **Supporting reasoning — why the question is well-posed.** Stage B holds the source `S = h₆⁶(a)` (729 symbols) fixed and varies a uniform coding `g : Σ₆ → Σ₃⁵`, which is exactly 30 ternary variables `x[q][r]` (`q ∈ Σ₆`, `r ∈ {0,…,4}`). The coded word is therefore not an independent object: `W[i] = x[ S[⌊i/5⌋] ][ i mod 5 ]`, i.e. 30 variables replayed in a fixed known order. For a Stage-B window `(len, K)` — `6 ≤ K ≤ 40`, `2K ≤ len ≤ 3645`, comparing blocks `[len−2K, len−K)` and `[len−K, len)` — the Parikh difference is consequently a weighted indicator sum
@@ -603,3 +605,24 @@ This replaces the earlier "observed ratio" as the headline figure, of which it h
 ---
 
 *Addition guide: a literature problem goes into section A only with a citation and a source. The project's own question goes into section B only if it has an invariant formulation. If the formulation depends on search order, it belongs in section C. New ideas are produced by `RESEARCH_ARCHITECT.md`'s procedure — every proposal must have a validation plan, an expected ledger-sentence form, and kill conditions before it is entered here.*
+
+
+### B23. The Profile-Response Mechanism (The h=2...7 finite-family sign split)
+
+**Status:** ACTIVE CURRENT FOCUS
+
+**Primary Question:**
+Can the observed h=2,...,7 finite-family sign split be explained by a predeclared combination of:
+- local composition / S3 invariants
+- overlap / return / correlation statistics
+- Perron-Parry perturbation
+- Green-Kubo / asymptotic-variance response?
+
+**Secondary theoretical question:**
+Do the resolvent/group-inverse and pattern-automaton/correlation-matrix formulations compute the same response object?
+
+**Constraints:**
+- **Finite family only**: 15 cases.
+- **B causality not established**: Do not claim B(v) is the causal driver without explicit mathematical derivation.
+- **Novelty not established**: Do not claim novelty for this broad response method.
+- **No h=8 computation**: H8_RUN = NO and H8_BLINDNESS_BREACH = NO.

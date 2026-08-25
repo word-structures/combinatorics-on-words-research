@@ -1,6 +1,6 @@
 # Current Focus
 
-**Updated:** 2026-08-16 (Structural direction reset)
+**Updated:** 2026-08-25
 **Review due:** 2026-09-06 (end of the bootstrap allocation window)
 **Full roadmap:** `ROADMAP.md`
 **Research authority:** This document is the SINGULAR current research-direction authority.
@@ -9,28 +9,48 @@
 
 ## CURRENT RESEARCH DIRECTION
 
-### Steering Block
+**Overarching Mathematical Goal:** Mäkelä's conjecture asks whether there exists an infinite ternary word whose only Abelian squares are the trivial length-2 squares aa, bb, cc (equivalently, avoiding Abelian squares of half-length K >= 2).
 
-* **PRIMARY RESEARCH QUESTION**: Can two legal aa2f pieces be joined so that only seam-crossing Abelian squares require control, and can the large-scale seam obstruction be bounded or made sparse enough to support construction?
+(Uniform morphic images applied to a symmetric fixed point represent one specific attack route toward this conjecture.)
+
+### The Profile-Response Mechanism
+
+The canonical claim baseline has advanced substantially. The h=7 preregistered experiment is closed with a MIXED result, and the audited h=2,...,7 profile universe is now closed as a finite computational family.
+
+* **PRIMARY RESEARCH QUESTION**: Why, in the audited finite h=2,...,7 profile family, does the sign of the hard-deletion asymptotic-variance response split exactly between the minimum-B profiles and all remaining profiles?
+* **MECHANISM FRAMEWORK**:
+  ```text
+  profile v
+      ->
+  local composition geometry / S3 invariants
+      +
+  pattern overlap / return / correlation structure
+      ->
+  perturbed Perron-Parry dynamics
+      ->
+  Green-Kubo / asymptotic-variance response
+      ->
+  sign(delta_a)
+  ```
 * **ACTIVE TENSIONS** (max 3):
-  1. Second-difference invariance makes every non-seam-crossing window safe under deletion/splicing, but seam-crossing K are unbounded.
-  2. Ordinary square-free theory controls large periods by density decay (Petrova-Shur) rather than K <= F; the aa2f setting lacks Fine-Wilf / Lyndon-Schützenberger rigidity.
-  3. Chronology appears essential: Hall/arbitrary-subset structure is false, while Prefix Scale Credit survives only bounded tests.
-* **NEXT HIGH-INFORMATION ACTION**: Formalize the finitely falsifiable large-scale blocker-density target, including its exact denominator, eligible positions, boundary correction, and quantifier domain, before running the kill probe.
-* **DECISION**: KILL
-* **DEPRIORITIZED**: G006/Hall rescue, G004 theorem hunt, larger Prefix Scale Credit census, FORBID4 safe-sleep optimization
-* **LAST STATE-CHANGING EVENT**: Petrova-Shur 2021 primary full text read and proof-mechanism comparison: ordinary large-period control relies on literal-period rigidity that does not directly survive Parikh equality.
+  1. B(v) gives a striking 15/15 finite-family classification for the sign split, but it is an algebraic composition property.
+  2. The actual asymptotic variance response is dynamically generated and should depend on temporal overlap/correlation structure.
+  3. The structural formulation (resolvent/group-inverse) must be theoretically reconciled with the dynamical (pattern-correlation/automaton) formulation.
+* **NEXT HIGH-INFORMATION ACTION**: A PREDECLARED h=2,...,7 mechanism experiment or derivation to discriminate whether B is causal or merely a proxy for overlap dynamics. (Do NOT compute h=8).
+* **DECISION**: HOLD h=8. The next high-information action must be mechanism-focused on the existing finite family.
+* **CRITICAL CONSTRAINT**: Do NOT state that B causes the sign. The novelty of the 15-case split is NOT_ESTABLISHED.
 
 ### CRITICAL CLAIM BOUNDARY
 
-A finite aa2f record word need not be a prefix of an infinite aa2f word.
+A finite computational observation over h=2,...,7 does not establish a universal law for arbitrary h, nor does it predict h=8.
 
-Therefore non-decay measured on a finite record word cannot by itself refute a theorem quantified only over infinite aa2f paths.
+Therefore, no inference from the 15-case sign split to arbitrary bounds or structural causation is authorized without an explicit mathematical derivation or a new preregistered empirical test.
 
-No measurement is authorized until we decide whether the target is:
-A. a universal FINITE statement over finite aa2f words,
-or
-B. an INFINITE-PATH statement.
+Explicitly:
+- **H8_RUN = NO**
+- **H8_BLINDNESS_BREACH = NO**
+
+h=8 may only begin after a separate preregistration is committed.
 
 ---
 
@@ -61,54 +81,22 @@ permission to use, publish, remove, or redistribute the dataset. Its status rema
 `RIGHTS_AND_PROVENANCE_UNRESOLVED` until the owner resolves OD-2 on the evidence the
 task produced.
 
-## H4 — completed, promoted, no longer active work
+## Closed Epics
 
-```text
-Name        L=5 Route-C full-family closure campaign ("H4")
-Raw corpus  C:\MSVC\L5_FULL_CLOSURE_CAMPAIGN_1\results_h4\   (outside this repository)
-State       COMPLETE — audited, independently reviewed, merged
-Evidence    docs/evidence/h4-l5-full-closure-2026-08/        (in this repository)
-Claim       MATH_CLAIMS.md row 111 — COMPUTED (Level 1), bounded
-Result      2219/2219 shards, 0 missing, 0 duplicate, 0 survivors
-```
+### H7 Preregistered Experiment
+- **State**: COMPLETE — audited and closed.
+- **Result**: MIXED. See the canonical evidence package for the exact bounded claims.
 
-**What the result is.** Every uniform coding `g : Σ_6 -> Σ_3^5` — all `243^6` of them — is
-eliminated by at least one of two preregistered finite tests: Stage A's block-aligned
-Parikh obstruction from `h_6^9(a)` (`m \in [2,120]`, `K = 5m \in [10,600]`, first 98,415 coded
-symbols), or Stage B's exact check (`K \in [6,40]`, first 3,645 coded symbols of
-`g(h_6^5(a))`). Stage A retained 5,153,928 profiles = 3,316,540,933,500 codings; Stage B
-processed all of them and found 0 survivors.
-
-**What it is not.** It is a *finite*, Route-C, L=5 result. It does **not** establish
-Mäkelä's conjecture, and does not cover non-uniform morphisms, `L > 6`, all ternary
-constructions, or source morphisms other than `h_6`. The combined window is **98,415**
-coded symbols, not 3,645 — Stage A's window is 27x larger (`EPISTEMIC_DISCIPLINE.md` §10).
-
-**Accepted provenance caveats — still open operational facts, not scientific failures:**
-
-```text
-per-shard executable identity   not recorded; same-binary identity across the
-                                campaign's resumes is not reconstructible per-shard
-real-survivor validation path   never naturally exercised (0 survivors); only a
-                                synthetic alert self-test exercised that path
-Stage-A artifact durability     no second physical backup yet (single physical disk)
-```
-
-**Naming hazard — still live.** A file named `FINAL_AUDIT.txt` also exists at
-`imported-artifacts\L5_FINAL_VERIFICATION_4\six_lane_results\`. That one is a **six-shard
-rehearsal** of the tooling and establishes nothing about the L=5 family. Only the campaign
-path above, and the merged evidence package, are authoritative.
-
-**Not promoted, and not to be promoted without new work:** the idea that shallow L=5 kills
-would imply anything about L=6 is an **exploratory hypothesis only**. A kill-depth
-measurement remains a possible *separate* future exploration over aggregate distributions
-on a stratified sample.
+### H4 — Route-C full-family closure
+- **State**: COMPLETE — audited, independently reviewed, merged.
+- **Evidence**: `docs/evidence/h4-l5-full-closure-2026-08/`
 
 ---
 
 ## Do not start
 
 ```text
+Any h=8 computation                     H8_BLINDNESS_BREACH = NO
 Git-history remediation                 OD-1 — separate decision, six prerequisites
 Any D40 compilation, audit, or search   OD-2 — status RIGHTS_AND_PROVENANCE_UNRESOLVED
 Removal of the dataset from the tree    OD-2 — TASK-0001's output now exists; the
