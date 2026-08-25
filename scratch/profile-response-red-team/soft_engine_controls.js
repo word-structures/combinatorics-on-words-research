@@ -1,4 +1,4 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 const { tarjanSCC } = require('../../src/sft-container.js');
 const { buildSoftContainer, getOrbit } = require('./soft_penalty_engine.js');
 
@@ -350,7 +350,7 @@ for (let c of controls) {
   const delta_soft = C.res100.a_GK - C.res0.a_GK;
   
   results.push({
-    control: \`h=\${c.h} (\${c.profile})\`,
+    control: "h=" + c.h + " (" + c.profile + ")",
     eps0: C.res0,
     eps100: C.res100,
     hard: C.resHard,
@@ -364,3 +364,4 @@ for (let c of controls) {
 }
 
 fs.writeFileSync('soft_test_out.json', JSON.stringify(results, null, 2));
+
