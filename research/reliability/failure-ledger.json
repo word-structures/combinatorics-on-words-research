@@ -1,0 +1,224 @@
+{
+  "schema_version": "0.1",
+  "failures": [
+    {
+      "failure_id": "FL-005",
+      "episode": "Profile-Response Soft Engine Prep 2026-08-25",
+      "date": "2026-08-25",
+      "observed_symptom": "Soft graph was losing edges at finite epsilon.",
+      "failure_mode": "FINITE_SOFT_SUPPORT_THRESHOLD_ERROR",
+      "actors": ["human", "AI"],
+      "triggering_conditions": [
+        "Numerical thresholding (weights[i][k] > 1e-12) was used to decide whether an edge exists structurally."
+      ],
+      "why_plausible": "Floating point operations often use small epsilon thresholds to avoid numerical noise.",
+      "scientific_impact": "Could have incorrectly simulated a physical or topological phase transition where none existed.",
+      "epistemic_impact": "Compromised the validity of the support graph model for finite epsilon.",
+      "detection_layer": "Human review of mathematical principles.",
+      "preserved_artifacts": [],
+      "corrective_action": [
+        "Removed the numerical threshold.",
+        "Ensured all mathematically positive edges (exp(-epsilon) > 0) are retained in the support graph."
+      ],
+      "defense_introduced": [
+        "Explicitly separated hard-deletion logic from finite soft graph generation."
+      ],
+      "recurrence_test": { "path": null },
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "residual_risk": "Other numerical precision issues in matrix operations may still exist."
+    },
+    {
+      "failure_id": "FL-007",
+      "episode": "Profile-Response Soft Path Campaign 2026-08-25",
+      "date": "2026-08-25",
+      "observed_symptom": "Soft-path epsilon-sweep was run for h=2...7 before the formal preregistration was frozen.",
+      "failure_mode": "PREMATURE_EXECUTION / HUMAN_AUTHORIZATION_BEFORE_PREREGISTRATION_FREEZE",
+      "actors": ["human", "AI"],
+      "triggering_conditions": [
+        "Human explicitly authorized computation out of curiosity before the planned protocol was complete."
+      ],
+      "why_plausible": "Curiosity often precedes rigorous protocol in interactive AI-human research.",
+      "scientific_impact": "None directly, but required reclassifying the campaign.",
+      "epistemic_impact": "The h=2...7 soft-path data became exposed, meaning it can no longer be used for confirmatory tests. Run status changed to UNREGISTERED_EXPLORATORY_RUN.",
+      "detection_layer": "Epistemic protocol enforcement review.",
+      "preserved_artifacts": [
+        {
+          "path": "research/forensics/profile-response-soft-path-early-run-2026-08-25/",
+          "sha256": null
+        }
+      ],
+      "corrective_action": [
+        "Halted campaign.",
+        "Forensically froze artifacts.",
+        "Explicitly prevented h=8 computation.",
+        "Invalidated the preregistration draft for h=2...7."
+      ],
+      "defense_introduced": [
+        "Strict H8_BLINDNESS_BREACH=NO and H8_RUN=NO metadata flags in task context."
+      ],
+      "recurrence_test": { "path": null },
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "residual_risk": "Subsequent tasks might accidentally read the exposed data and use it for false predictions."
+    },
+    {
+      "failure_id": "FL-008",
+      "episode": "Profile-Response Soft Path Campaign Forensics",
+      "date": "2026-08-25",
+      "observed_symptom": "SOFT_PATH_RESULTS.md contained uninterpolated template placeholders and mismatched headers.",
+      "failure_mode": "CORRUPTED_DERIVED_PRESENTATION",
+      "actors": ["AI"],
+      "triggering_conditions": [
+        "Script template literals were not properly escaped or evaluated during generation."
+      ],
+      "why_plausible": "String interpolation in multi-line templates often fails across boundary environments like PowerShell and Node.",
+      "scientific_impact": "The document falsely described finite-horizon moment recurrence alongside Poisson-Green-Kubo, whereas only Method A was used.",
+      "epistemic_impact": "Created a misleading historical artifact. However, the raw data itself remained valid.",
+      "detection_layer": "Independent human inspection of the forensic package.",
+      "preserved_artifacts": [
+        {
+          "path": "research/forensics/profile-response-soft-path-early-run-2026-08-25/SOFT_PATH_RESULTS.md",
+          "sha256": null
+        }
+      ],
+      "corrective_action": [
+        "Appended a warning note to the artifact identifying it as corrupted.",
+        "Did NOT repair the artifact to preserve exact historical evidence."
+      ],
+      "defense_introduced": [],
+      "recurrence_test": { "path": null },
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "residual_risk": "Future readers might ignore the warning note."
+    },
+    {
+      "failure_id": "FL-009",
+      "episode": "Profile-Response PR 56 Documentation",
+      "date": "2026-08-25",
+      "observed_symptom": "WORKING_REPORT.md described Method B as 'exact transition moment tracking'.",
+      "failure_mode": "INACCURATE_METHOD_LABEL",
+      "actors": ["AI"],
+      "triggering_conditions": [
+        "Using overly confident phrasing for a numerical computation."
+      ],
+      "why_plausible": "The computation agreed closely with Method A, leading to a casual description of 'exact' arithmetic.",
+      "scientific_impact": "None directly, but obscured the actual algorithmic methodology used.",
+      "epistemic_impact": "Violated the rule against hyperbolic or self-certifying language.",
+      "detection_layer": "Human review of PR documentation.",
+      "preserved_artifacts": [
+        {
+          "path": "scratch/profile-response-red-team/WORKING_REPORT.md",
+          "sha256": null
+        }
+      ],
+      "corrective_action": [
+        "Replaced 'exact transition moment tracking' with 'finite-horizon Float64 moment recurrence'."
+      ],
+      "defense_introduced": [],
+      "recurrence_test": { "path": null },
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "residual_risk": "Other inaccurate descriptors may exist in unreviewed documentation."
+    },
+    {
+      "failure_id": "FL-010",
+      "episode": "Profile-Response Soft Path Campaign 2026-08-25",
+      "date": "2026-08-25",
+      "observed_symptom": "The sign crossing in profile h=4 (2,1,1) was initially interpreted as a topological phase transition or graph breaking.",
+      "failure_mode": "INTERPRETATION_OVERREACH",
+      "actors": ["AI"],
+      "triggering_conditions": [
+        "A novel and unexpected non-monotonic variance response occurred, and the topological transition was the prevailing pre-campaign hypothesis."
+      ],
+      "why_plausible": "Confirmation bias toward the previously formulated 'holy grail' mechanism.",
+      "scientific_impact": "Could have resulted in publishing a false mechanism for a true observation.",
+      "epistemic_impact": "Required strict correction: finite epsilon does not break the support graph, so it is a smooth non-monotone weighted Perron/Parry response.",
+      "detection_layer": "Human mathematical review.",
+      "preserved_artifacts": [],
+      "corrective_action": [
+        "Updated the working narrative to clarify that the observation is NOT evidence for a topological discontinuity."
+      ],
+      "defense_introduced": [],
+      "recurrence_test": { "path": null },
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "residual_risk": "The true mechanism behind the smooth non-monotonicity remains unproven."
+    },
+    {
+      "failure_id": "FL-011",
+      "episode": "Profile-Response Soft Path Campaign Forensics",
+      "date": "2026-08-25",
+      "observed_symptom": "The forensic narrative falsely claimed an exact user quote ('no testaapa 1 ja laske kiitos jee') as the authorization event without interaction evidence.",
+      "failure_mode": "NARRATIVE_PROVENANCE_RISK",
+      "actors": ["AI"],
+      "triggering_conditions": [
+        "Attempting to reconstruct missing conversational history from memory to fill out a forensic report."
+      ],
+      "why_plausible": "LLMs naturally hallucinate exact quotes to satisfy a demand for precise forensic timelines.",
+      "scientific_impact": "None.",
+      "epistemic_impact": "Introduced fabricated historical evidence into a permanent forensic freeze.",
+      "detection_layer": "Human review of the forensic report against actual interaction logs.",
+      "preserved_artifacts": [],
+      "corrective_action": [
+        "Replaced the fabricated quote with a statement that the exact initiating interaction was not forensically verified."
+      ],
+      "defense_introduced": [
+        "Explicit policy rule: Never reconstruct missing conversational history from memory."
+      ],
+      "recurrence_test": { "path": null },
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "residual_risk": "AI agents may still hallucinate historical quotes in other contexts."
+    },
+    {
+      "failure_id": "FL-012",
+      "episode": "Profile-Response PR 56 Documentation",
+      "date": "2026-08-25",
+      "observed_symptom": "Commit d549732311c9f736a495bc950ae6734bdb345d48 was created using the --no-verify flag.",
+      "failure_mode": "NO_VERIFY_GOVERNANCE_EXCEPTION",
+      "actors": ["human", "AI"],
+      "triggering_conditions": [
+        "The required tests and claims-drift checks had been run manually, and trailing whitespace in generated files caused pre-commit hooks to fail."
+      ],
+      "why_plausible": "Bypassing hooks for trivial whitespace issues after manual verification is a common workflow shortcut.",
+      "scientific_impact": "None.",
+      "epistemic_impact": "Bypassed automated continuous enforcement, relying on manual assertions of test passage.",
+      "detection_layer": "Human review of the git commit flags.",
+      "preserved_artifacts": [],
+      "corrective_action": [
+        "Added a governance note to the PR explicitly documenting the --no-verify usage.",
+        "Ensured subsequent commits used standard hooks."
+      ],
+      "defense_introduced": [],
+      "recurrence_test": { "path": null },
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "residual_risk": "Overuse of --no-verify could allow actual scientific errors to enter the repository."
+    },
+    {
+      "failure_id": "FL-006",
+      "episode": "Profile-Response PR 56 Documentation",
+      "date": "2026-08-25",
+      "observed_symptom": "WORKING_REPORT.md contained a 'Proposed preregistration draft' for h=2...7.",
+      "failure_mode": "STALE_DERIVED_ARTIFACT",
+      "actors": ["human", "AI"],
+      "triggering_conditions": [
+        "The h=2...7 soft-path data were exposed in the UNREGISTERED_EXPLORATORY_RUN, rendering the old draft useless."
+      ],
+      "why_plausible": "Documentation often lags behind exploratory script execution.",
+      "scientific_impact": "None directly.",
+      "epistemic_impact": "Could have led to a false confirmatory test using already-exposed data.",
+      "detection_layer": "Human review of the methodology state.",
+      "preserved_artifacts": [
+        {
+          "path": "scratch/profile-response-red-team/WORKING_REPORT.md",
+          "sha256": null
+        }
+      ],
+      "corrective_action": [
+        "Renamed section to 'Historical pre-campaign preregistration draft — SUPERSEDED'.",
+        "Added explicit wording that future confirmatory protocols must use genuinely new predictions or holdout data."
+      ],
+      "defense_introduced": [
+        "Clear invalidation of compromised evaluation sets."
+      ],
+      "recurrence_test": { "path": null },
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "residual_risk": "New preregistrations might accidentally include the compromised profiles."
+    }
+  ]
+}
