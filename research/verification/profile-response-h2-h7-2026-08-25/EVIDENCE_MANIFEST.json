@@ -1,0 +1,180 @@
+{
+  "QV_INDEPENDENT_AUDIT.json": {
+    "classification": "DIRECT_DURABLE_COPY",
+    "canonical_path": "QV_INDEPENDENT_AUDIT.json",
+    "durable_source_path": "scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/QV_INDEPENDENT_AUDIT.json",
+    "source_sha256": "95b7ae930d5b2c94a17031ebbf67f8eaa6321fb6db07ac0675e72318c5ab3249",
+    "canonical_sha256": "95b7ae930d5b2c94a17031ebbf67f8eaa6321fb6db07ac0675e72318c5ab3249",
+    "byte_identical": true
+  },
+  "Q_PARTITION_AUDIT.json": {
+    "classification": "DIRECT_DURABLE_COPY",
+    "canonical_path": "Q_PARTITION_AUDIT.json",
+    "durable_source_path": "scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/Q_PARTITION_FINAL_AUDIT.json",
+    "source_sha256": "c89e363fa7ab05601249c1b309673dbe4f215fe4eff772b2695a476526fee69a",
+    "canonical_sha256": "c89e363fa7ab05601249c1b309673dbe4f215fe4eff772b2695a476526fee69a",
+    "byte_identical": true
+  },
+  "VARIANCE_AB_AUDIT.json": {
+    "classification": "DIRECT_DURABLE_COPY",
+    "canonical_path": "VARIANCE_AB_AUDIT.json",
+    "durable_source_path": "scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/VARIANCE_AB_FINAL_AUDIT.json",
+    "source_sha256": "7449ab8237df2b1c7392063804334cbe16ccbc5ec112b822864abd2095aa332d",
+    "canonical_sha256": "7449ab8237df2b1c7392063804334cbe16ccbc5ec112b822864abd2095aa332d",
+    "byte_identical": true
+  },
+  "PRESSURE_CURVATURE_AUDIT.json": {
+    "classification": "DIRECT_DURABLE_COPY",
+    "canonical_path": "PRESSURE_CURVATURE_AUDIT.json",
+    "durable_source_path": "scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/PRESSURE_CURVATURE_FINAL_AUDIT.json",
+    "source_sha256": "fd0d4c3543f317522e95a6beae0ca727ff193c6e46e07aa0f46a3c3dc0ea9f0a",
+    "canonical_sha256": "fd0d4c3543f317522e95a6beae0ca727ff193c6e46e07aa0f46a3c3dc0ea9f0a",
+    "byte_identical": true
+  },
+  "GRAPH_COMPONENT_AUDIT.json": {
+    "classification": "DIRECT_DURABLE_COPY",
+    "canonical_path": "GRAPH_COMPONENT_AUDIT.json",
+    "durable_source_path": "scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/ALL_GRAPH_DOMINANCE_FINAL_AUDIT.json",
+    "source_sha256": "77286dbb4e2a724ae478782b95cd3962e802da946b9fac00ab761711926d8e6e",
+    "canonical_sha256": "77286dbb4e2a724ae478782b95cd3962e802da946b9fac00ab761711926d8e6e",
+    "byte_identical": true
+  },
+  "H5_311_SPECTRAL_CERTIFICATE.json": {
+    "classification": "DIRECT_DURABLE_COPY",
+    "canonical_path": "H5_311_SPECTRAL_CERTIFICATE.json",
+    "durable_source_path": "scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/H5_311_FINAL_SPECTRAL_CERTIFICATE.json",
+    "source_sha256": "b0c71bee03d6b944e5a0c35cda414a1a6e9ae139e7cbe5a2c56dc57dba3dac46",
+    "canonical_sha256": "b0c71bee03d6b944e5a0c35cda414a1a6e9ae139e7cbe5a2c56dc57dba3dac46",
+    "byte_identical": true
+  },
+  "PERIOD_AUDIT.json": {
+    "classification": "DIRECT_DURABLE_COPY",
+    "canonical_path": "PERIOD_AUDIT.json",
+    "durable_source_path": "scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/PERIOD_FINAL_AUDIT.json",
+    "source_sha256": "02c388fe6ac4c241a29723ca9b8da4d1c31cfe198d8a7dd1ebd29d20e57d5f78",
+    "canonical_sha256": "02c388fe6ac4c241a29723ca9b8da4d1c31cfe198d8a7dd1ebd29d20e57d5f78",
+    "byte_identical": true
+  },
+  "PRESENTATION_INVARIANCE_AUDIT.json": {
+    "classification": "DIRECT_DURABLE_COPY",
+    "canonical_path": "PRESENTATION_INVARIANCE_AUDIT.json",
+    "durable_source_path": "scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/PRESENTATION_INVARIANCE_FINAL_AUDIT.json",
+    "source_sha256": "47f17b7cfcec7e22b7f69811485ca300de7ca46d9692b5f88e97790ff40f4203",
+    "canonical_sha256": "47f17b7cfcec7e22b7f69811485ca300de7ca46d9692b5f88e97790ff40f4203",
+    "byte_identical": true
+  },
+  "DIRECT_WORD_PROFILE_ENUMERATION.json": {
+    "classification": "DIRECT_DURABLE_COPY",
+    "canonical_path": "DIRECT_WORD_PROFILE_ENUMERATION.json",
+    "durable_source_path": "scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/DIRECT_WORD_PROFILE_ENUMERATION.json",
+    "source_sha256": "79139de15f042610cc2801aa6801d19ac2a7ce9c957d950ba1b61087e76c652c",
+    "canonical_sha256": "79139de15f042610cc2801aa6801d19ac2a7ce9c957d950ba1b61087e76c652c",
+    "byte_identical": true
+  },
+  "GRAPH_EDGE_PROFILE_ENUMERATION.json": {
+    "classification": "DIRECT_DURABLE_COPY",
+    "canonical_path": "GRAPH_EDGE_PROFILE_ENUMERATION.json",
+    "durable_source_path": "scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/GRAPH_EDGE_PROFILE_ENUMERATION.json",
+    "source_sha256": "403dbd1851a3f3154591e03a8a483f348e20717121015ecd723c8ea5d3c6b05f",
+    "canonical_sha256": "403dbd1851a3f3154591e03a8a483f348e20717121015ecd723c8ea5d3c6b05f",
+    "byte_identical": true
+  },
+  "PROFILE_SET_COMPARISON.json": {
+    "classification": "DIRECT_DURABLE_COPY",
+    "canonical_path": "PROFILE_SET_COMPARISON.json",
+    "durable_source_path": "scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/PROFILE_SET_COMPARISON_FINAL.json",
+    "source_sha256": "b78a5a494ad7e8531568eec2ac3e98810a6cb7c32e91c68df31695f0edbb53ea",
+    "canonical_sha256": "b78a5a494ad7e8531568eec2ac3e98810a6cb7c32e91c68df31695f0edbb53ea",
+    "byte_identical": true
+  },
+  "REPRODUCIBILITY_AUDIT.json": {
+    "classification": "DIRECT_DURABLE_COPY",
+    "canonical_path": "REPRODUCIBILITY_AUDIT.json",
+    "durable_source_path": "scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/REPRODUCIBILITY_FINAL_AUDIT.json",
+    "source_sha256": "c545de9561483d19fe006ed007bfe366e7d014e919d4e4deead1906efb9aec5e",
+    "canonical_sha256": "c545de9561483d19fe006ed007bfe366e7d014e919d4e4deead1906efb9aec5e",
+    "byte_identical": true
+  },
+  "TEST_RESULTS.json": {
+    "classification": "DIRECT_DURABLE_COPY",
+    "canonical_path": "TEST_RESULTS.json",
+    "durable_source_path": "scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/TEST_RESULTS_FINAL.json",
+    "source_sha256": "3d59b1db6fe9054e1c48440215148f47dfa2fef08c66290455ab0801a16f196f",
+    "canonical_sha256": "3d59b1db6fe9054e1c48440215148f47dfa2fef08c66290455ab0801a16f196f",
+    "byte_identical": true
+  },
+  "TEST_STDOUT.txt": {
+    "classification": "DIRECT_DURABLE_COPY",
+    "canonical_path": "TEST_STDOUT.txt",
+    "durable_source_path": "scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/TEST_STDOUT_FINAL.txt",
+    "source_sha256": "1eb5b443ede3318b15031a9aa187538e1fd68ed5ca76eab3c70263c3f6e1ddf0",
+    "canonical_sha256": "1eb5b443ede3318b15031a9aa187538e1fd68ed5ca76eab3c70263c3f6e1ddf0",
+    "byte_identical": true
+  },
+  "TEST_STDERR.txt": {
+    "classification": "DIRECT_DURABLE_COPY",
+    "canonical_path": "TEST_STDERR.txt",
+    "durable_source_path": "scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/TEST_STDERR_FINAL.txt",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "canonical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "byte_identical": true
+  },
+  "PROFILE_BASELINE.json": {
+    "classification": "TRANSFORMED_CANONICAL_DATA",
+    "canonical_path": "PROFILE_BASELINE.json",
+    "durable_source_path": "scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/PROFILE_BASELINE_RUN3C_RECOVERED.json and VARIANCE_AB_FINAL_AUDIT.json",
+    "source_sha256": "N/A",
+    "canonical_sha256": "4352d611ebd70165164cec79816cb6254e6245306f0fe3a25f90cb4beb100e9c",
+    "byte_identical": false,
+    "transformation": "schema-normalized deterministic derivation"
+  },
+  "PROFILE_BASELINE.csv": {
+    "classification": "TRANSFORMED_CANONICAL_DATA",
+    "canonical_path": "PROFILE_BASELINE.csv",
+    "durable_source_path": "scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/PROFILE_BASELINE_RUN3C_RECOVERED.json and VARIANCE_AB_FINAL_AUDIT.json",
+    "source_sha256": "N/A",
+    "canonical_sha256": "d9da758b1b9cafa284b7f9d372b397bce92af07bcdbed8f3190d86c7714df235",
+    "byte_identical": false,
+    "transformation": "schema-normalized deterministic derivation"
+  },
+  "CAPSULE.md": {
+    "classification": "GENERATED_PACKAGING_METADATA",
+    "canonical_path": "CAPSULE.md",
+    "durable_source_path": "NEW",
+    "source_sha256": "N/A",
+    "canonical_sha256": "c08a91a41e3b70f3a585efe54bf64b19916d0bcd127ef20c55630eda09e4c23f",
+    "byte_identical": false
+  },
+  "PROFILE_BASELINE_SCHEMA_AUDIT.json": {
+    "classification": "GENERATED_PACKAGING_METADATA",
+    "canonical_path": "PROFILE_BASELINE_SCHEMA_AUDIT.json",
+    "durable_source_path": "NEW",
+    "source_sha256": "N/A",
+    "canonical_sha256": "0728ac65125d24c277e8eb7b7313412ca30a7a642585a878aacbe6dfc4375d32",
+    "byte_identical": false
+  },
+  "PROFILE_SIGN_CERTIFICATE.json": {
+    "classification": "GENERATED_PACKAGING_METADATA",
+    "canonical_path": "PROFILE_SIGN_CERTIFICATE.json",
+    "durable_source_path": "NEW",
+    "source_sha256": "N/A",
+    "canonical_sha256": "7b3bb0a1b61bf5fa3e9ffdc0119634ad1722d2cb0725b8be586269dfa5f9d25f",
+    "byte_identical": false
+  },
+  "REPRODUCIBILITY_PACKAGING_CHECK.json": {
+    "classification": "GENERATED_PACKAGING_METADATA",
+    "canonical_path": "REPRODUCIBILITY_PACKAGING_CHECK.json",
+    "durable_source_path": "NEW",
+    "source_sha256": "N/A",
+    "canonical_sha256": "5c69eec04261570e88384245674b00affd9e1d60a9b54d5c55539f9d4a8abdda",
+    "byte_identical": false
+  },
+  "FILE_INTEGRITY_PACKAGING_CHECK.json": {
+    "classification": "GENERATED_PACKAGING_METADATA",
+    "canonical_path": "FILE_INTEGRITY_PACKAGING_CHECK.json",
+    "durable_source_path": "NEW",
+    "source_sha256": "N/A",
+    "canonical_sha256": "92e07d3ee40c7f766d7251bce501fdf38a1afde27dae1c1fccec333303565ddc",
+    "byte_identical": false
+  }
+}

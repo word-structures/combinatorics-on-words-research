@@ -1,0 +1,11 @@
+{
+  "row_count": 15,
+  "duplicate_count": 0,
+  "csv_only_keys": 0,
+  "json_only_keys": 0,
+  "field_mismatch_count": 0,
+  "max_numeric_difference": 0,
+  "undefined_value_count": 0,
+  "max_delta_A_reconstruction_difference": 0,
+  "status": "PASS"
+}

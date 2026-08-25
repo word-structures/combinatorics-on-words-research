@@ -1,0 +1,13 @@
+{
+  "files_only_in_A": 0,
+  "files_only_in_B": 0,
+  "selected_files": [
+    "PROFILE_BASELINE_RUN3C_RECOVERED.csv",
+    "PROFILE_BASELINE_RUN3C_RECOVERED.json",
+    "QV_INDEPENDENT_AUDIT.json",
+    "VARIANCE_AB_FINAL_AUDIT.json"
+  ],
+  "selected_file_mismatches": 0,
+  "status": "PASS",
+  "claim_scope": "SELECTED_PRIMARY_OUTPUTS_BYTE_IDENTICAL"
+}

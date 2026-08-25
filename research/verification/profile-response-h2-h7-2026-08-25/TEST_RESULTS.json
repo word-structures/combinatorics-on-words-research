@@ -1,0 +1,10 @@
+{
+  "test_js": {
+    "exit_code": 0,
+    "command": "node tests/test.js"
+  },
+  "test_abelian": {
+    "exit_code": 0,
+    "command": "node tests/test-abelian-core.js"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "number_of_cyclic_sccs": 1,
+  "spectral_radii": [
+    2.0087207929944597
+  ],
+  "infinite_path_exists": true,
+  "H5_311_LANGUAGE": "INFINITE",
+  "asymptotic_variance_defined": true
+}
