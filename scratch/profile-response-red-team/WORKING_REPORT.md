@@ -1,4 +1,4 @@
-# PROFILE-RESPONSE MECHANISM: COMPUTATIONAL RED-TEAM PREPARATION
+﻿# PROFILE-RESPONSE MECHANISM: COMPUTATIONAL RED-TEAM PREPARATION
 **Date:** 2026-08-25
 **Status:** WORKING REPORT / POST-HOC AUDIT / NOT A CAMPAIGN
 
@@ -74,7 +74,7 @@ For $R_v = \Delta_A / q_v$ and $R'_v = \Delta_B / q_v$ versus $S(v)$:
 - Instead of strictly removing edges forming an Abelian square of half-length $h$ with profile $v$, we preserve them with a parametric weight multiplier $\exp(-\epsilon)$.
 - Finite soft graphs explicitly retain ALL mathematically positive edges without thresholding.
 - The hard-deletion system is constructed separately by explicit edge removal, rather than by weight thresholding.
-- Method A (Poisson/Green-Kubo) and Method B (Finite-horizon moment recurrence) share the EXACT same container graph construction, stationary Perron chain logic, and soft edge weights. The boundary of independence lies strictly at the variance evaluation step (resolvent iteration versus exact transition moment tracking over 4000 steps).
+- Method A (Poisson/Green-Kubo) and Method B (Finite-horizon moment recurrence) share the EXACT same container graph construction, stationary Perron chain logic, and soft edge weights. The boundary of independence lies strictly at the variance evaluation step (resolvent iteration versus finite-horizon Float64 moment recurrence over 4000 steps).
 
 ## E. Soft-Engine Controls & Component Audit
 
@@ -158,10 +158,13 @@ Mean raw observable $E[I(isA)]$ at $\epsilon=100$: 0.33333333. Center residual: 
 - **Unique Dominant SCC?** true
 - **Period of Dominant SCC:** 1
 
-## F. Proposed preregistration draft
+## F. Historical pre-campaign preregistration draft — SUPERSEDED
+
+This draft can no longer serve as a preregistration because the h=2...7 soft-path data were exposed in the subsequently preserved UNREGISTERED_EXPLORATORY_RUN. Any future confirmatory protocol must test genuinely new predictions, independent verification questions, or untouched holdout data.
 ### DRAFT: Soft-Penalty Profile Response ($h \in [2, 7]$)
 **Question:** For each of the 15 frozen $h=2...7$ profiles, does $a_v(\epsilon) - a_v(0)$ strictly change sign as $\epsilon$ increases from $0$ to $\infty$?
-**Setup:** Compute $a_v(\epsilon)$ for a fixed grid (e.g. $\epsilon \in \{0, 0.1, 1, 10, 100\}$) using the validated soft-engine. 
+**Setup:** Compute $a_v(\epsilon)$ for a fixed grid (e.g. $\epsilon \in \{0, 0.1, 1, 10, 100\}$) using the validated soft-engine.
 
 ## G. Explicit statement that no h=8 computation occurred
 **I explicitly confirm that no $h=8$ computation occurred during this audit.**
+
