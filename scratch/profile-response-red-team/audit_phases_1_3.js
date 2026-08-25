@@ -53,6 +53,25 @@ for (let item of data) {
   diagnostic_results.push({ h, profile: item.profile, R_v, R_v_prime, S: S_v });
 }
 
+function getRanks(values) {
+  const sorted = values.map((val, idx) => ({ val, idx })).sort((a, b) => a.val - b.val);
+  const ranks = new Array(values.length);
+  let i = 0;
+  while (i < sorted.length) {
+    let j = i;
+    while (j < sorted.length && Math.abs(sorted[j].val - sorted[i].val) < 1e-12) {
+      j++;
+    }
+    const rankSum = ((i + 1) + j) * (j - i) / 2;
+    const avgRank = rankSum / (j - i);
+    for (let k = i; k < j; k++) {
+      ranks[sorted[k].idx] = avgRank;
+    }
+    i = j;
+  }
+  return ranks;
+}
+
 function computeStats(arr, R_key) {
   const n = arr.length;
   const mean_S = arr.reduce((a, b) => a + b.S, 0) / n;
@@ -68,15 +87,32 @@ function computeStats(arr, R_key) {
   const intercept = mean_R - slope * mean_S;
   const R2 = (cov * cov) / (var_S * var_R);
   
-  const s_sorted = [...arr].map((x,i)=>({...x, idx:i})).sort((a,b)=>a.S - b.S);
-  const r_sorted = [...arr].map((x,i)=>({...x, idx:i})).sort((a,b)=>a[R_key] - b[R_key]);
-  let rank_S = new Array(n), rank_R = new Array(n);
-  s_sorted.forEach((x, i) => rank_S[x.idx] = i);
-  r_sorted.forEach((x, i) => rank_R[x.idx] = i);
-  let d2 = 0;
-  for(let i=0; i<n; i++) d2 += (rank_S[i] - rank_R[i])**2;
-  const spearman = 1 - (6 * d2) / (n * (n*n - 1));
+  const rank_S = getRanks(arr.map(x => x.S));
+  const rank_R = getRanks(arr.map(x => x[R_key]));
   
+  const mean_rank_S = rank_S.reduce((a,b)=>a+b,0)/n;
+  const mean_rank_R = rank_R.reduce((a,b)=>a+b,0)/n;
+  let cov_rank = 0, var_rank_S = 0, var_rank_R = 0;
+  for (let i = 0; i < n; i++) {
+    cov_rank += (rank_S[i] - mean_rank_S) * (rank_R[i] - mean_rank_R);
+    var_rank_S += (rank_S[i] - mean_rank_S)**2;
+    var_rank_R += (rank_R[i] - mean_rank_R)**2;
+  }
+  const spearman = cov_rank / Math.sqrt(var_rank_S * var_rank_R);
+  
+  let residuals = [];
+  for(let i=0; i<n; i++) {
+    const fitted = slope * arr[i].S + intercept;
+    residuals.push({
+      h: arr[i].h,
+      profile: arr[i].profile,
+      S: arr[i].S,
+      R_v: arr[i][R_key],
+      fitted,
+      residual: arr[i][R_key] - fitted
+    });
+  }
+
   let loo = [];
   for(let i=0; i<n; i++) {
     const loo_arr = arr.filter((_, idx) => idx !== i);
@@ -90,7 +126,7 @@ function computeStats(arr, R_key) {
     loo.push({ profile: arr[i].profile, excluded_h: arr[i].h, loo_slope: c / v_S });
   }
 
-  return { pearson, spearman, slope, intercept, R2, loo };
+  return { pearson, spearman, slope, intercept, R2, loo, residuals };
 }
 
 const stats_A = computeStats(diagnostic_results, 'R_v');
