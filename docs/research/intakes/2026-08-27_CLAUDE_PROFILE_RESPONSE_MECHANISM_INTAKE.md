@@ -188,9 +188,16 @@ Do not broaden the durable claim.
 
 ## H. Current theoretical synthesis
 
-**ESTABLISHED / DERIVED**
-**COMPUTED OBSERVATIONS**
-**HYPOTHESES**
+### H1. Established / derived
+(Currently empty; mechanism is computed or hypothesized, not mathematically proven).
+
+### H2. Computed observations
+- 15-profile finite family (h=2...7)
+- 6/6 minimum-B profiles have delta_a > 0
+- 9/9 remaining profiles have delta_a < 0
+- verified RUN3C numerical facts
+
+### H3. Hypotheses / mechanism candidates
 
 Current mechanism sketch:
 ```text
@@ -227,9 +234,10 @@ The dynamical response may depend on quantities such as:
 
 ## I. Literature status
 
-**DIRECTLY OPENED PRIMARY SOURCES**
-vs
-**AUDIT-QUEUE / RESEARCH-REPORT LEADS**
+### I1. Directly opened / repository-verified primary sources
+(Currently empty for the profile-response mechanism).
+
+### I2. Audit queue / research-report leads
 
 The audit queue should include:
 

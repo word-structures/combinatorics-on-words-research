@@ -145,7 +145,7 @@ The following literature leads were identified during the profile-response resea
 
 | Lead / Tradition | Topic / Relevance | Status |
 |---|---|---|
-| B�na, Maga & Richey (2026) | One forbidden word / letter-frequency response | **AUDIT-QUEUE** |
+| Bóna, Maga & Richey (2026) | One forbidden word / letter-frequency response | **AUDIT-QUEUE** |
 | Guibas-Odlyzko | Correlation-polynomial tradition | **AUDIT-QUEUE** |
 | Goulden-Jackson | Cluster method | **AUDIT-QUEUE** |
 | Parry / Perron | Measure foundations | **AUDIT-QUEUE** |

@@ -418,8 +418,7 @@ changes**, not merely increase L.
 
 ### B22. Does the bounded L=5 Stage-B test set admit useful normalization and deduplication? (proposed 2026-08-14, pre-registered before any measurement)
 
-**STATUS: CLOSED / COMPLETED**
-This preregistered experiment has been fully executed and closed. (See the canonical evidence package at `research/verification/profile-response-h2-h7-2026-08-25/` for the MIXED outcome of the h=7 closure).
+**STATUS: PREREGISTERED / NOT EXECUTED**
 
 **This entry is a question and a pre-registration. It contains no answer and no finding.** The supporting reasoning below re-arranges definitions already in the canonical record; it asserts no new mathematics and changes nothing about rows 49, 80 or 82. It is written *before* the experiment exists so that the hypothesis, the failure conditions and the kill condition are fixed in advance rather than chosen after seeing results (`EPISTEMIC_DISCIPLINE.md` §8, §10).
 

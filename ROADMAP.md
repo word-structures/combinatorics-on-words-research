@@ -98,7 +98,7 @@ irreversible rewrite.
 | Route A length-7 exhaustion independent verification | carried over |
 | Route B (h8) algebraic exclusion verification | **BLOCKED** — H8_BLINDNESS_BREACH=NO |
 | Cut-and-Certify E1 -> E2 | ready; Gate A for its line |
-| Stage-B test structure and constraints (B22) | **CLOSED** — h7 / PR #54 merged |
+| Stage-B test structure and constraints (B22) | **PREREGISTERED / NOT EXECUTED** |
 | B16 golden-control pilot | ready |
 | All D40-derived research | **blocked on OD-2** |
 
@@ -111,7 +111,7 @@ authority by this document.
 
 | # | Programme | Why it matters | Evidence today | First bounded experiment | Novelty risk | Depends on |
 |---|---|---|---|---|---|---|
-| 1 | Exhaustive finite morphism-family classification | the project's most mature concrete asset | rows 49, 111, 114 (`COMPUTED`); **CLOSED** — H4 / PR #54 merged | closed | medium-high | — |
+| 1 | Exhaustive finite morphism-family classification | the project's most mature concrete asset | rows 49, 111 (`COMPUTED`); **CLOSED** — H4 closure merged | closed | medium-high | — |
 | 2 | Unified obstruction / Δ calculus | would replace case-by-case elimination with a finite obstruction basis | **hypothesis only** — surface resemblance; the one concrete instance is the Stage-A condition `M_g·d = 0` (row 80) | cluster `(K, pos)` from existing shard summaries; data already in hand | high | none (data exists) |
 | 3 | Proof-guided exact search / branch-death explanation | turns dead branches into explanations rather than pruning | mixed, mostly negative | gated | high | programme 2's first experiment |
 | 5 | Experimental algorithmics of exact word search | the project's strongest negative-result corpus | a bounded positive performance improvement with exact path parity has been independently evidenced; several other reported figures were **not** reproducible and are excluded | curate existing results | medium | none |

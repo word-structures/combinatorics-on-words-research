@@ -96,7 +96,7 @@ exhausted. They stay closed.
 The h=2...7 finite family is exhausted and closed as a computational dataset. However, the sign-mechanism interpretation itself is NOT proven, and no universal law is closed.
 
 **Important Epistemic Note on the h=7 Experiment:**
-The h=7 preregistered experiment is closed with a MIXED outcome. It does not have a standalone MATH_CLAIMS row; it is backed directly by the canonical evidence package at `research/verification/profile-response-h2-h7-2026-08-25/`.
+The h=7 preregistered experiment is closed with a MIXED outcome. It does not have a standalone MATH_CLAIMS row; it is backed directly by the canonical evidence package at `docs/research/H7_OUTCOME_2026-08-24.md`.
 
 | What is closed | Kind of proof | Row |
 |---|---|---|
