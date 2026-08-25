@@ -1,5 +1,8 @@
 const fs = require('fs');
 
+const VALID_ACTORS = Object.freeze(["human", "AI", "tool", "system"]);
+const VALID_DATASET_ROLES = Object.freeze(["ENGINE_DESIGN_SET", "ENGINE_EVAL_SET"]);
+
 class ValidationError extends Error {
   constructor(message) {
     super(message);
@@ -101,9 +104,8 @@ function validateLedger(filePath, requireDesignSetOnly = true) {
     if (!Array.isArray(f.actors) || f.actors.length === 0) {
       fail(id + ':\n  field: actors\n  reason: must be a non-empty array');
     }
-    const validActors = ['human', 'AI', 'tool', 'system'];
     for (const a of f.actors) {
-      if (!validActors.includes(a)) {
+      if (!VALID_ACTORS.includes(a)) {
         fail(id + ':\n  field: actors\n  reason: unknown actor \"' + a + '\"');
       }
     }
@@ -178,7 +180,7 @@ function validateLedger(filePath, requireDesignSetOnly = true) {
     }
 
     // Dataset role
-    if (f.dataset_role !== 'ENGINE_DESIGN_SET' && f.dataset_role !== 'ENGINE_EVAL_SET') {
+    if (!VALID_DATASET_ROLES.includes(f.dataset_role)) {
       fail(id + ':\n  field: dataset_role\n  reason: must be ENGINE_DESIGN_SET or ENGINE_EVAL_SET');
     }
     if (requireDesignSetOnly && f.dataset_role !== 'ENGINE_DESIGN_SET') {
@@ -223,4 +225,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { validateLedger, ValidationError };
+module.exports = { validateLedger, ValidationError, VALID_ACTORS, VALID_DATASET_ROLES };

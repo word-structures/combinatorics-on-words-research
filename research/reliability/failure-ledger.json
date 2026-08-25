@@ -7,7 +7,10 @@
       "date": "2026-08-25",
       "observed_symptom": "Soft graph was losing edges at finite epsilon.",
       "failure_mode": "FINITE_SOFT_SUPPORT_THRESHOLD_ERROR",
-      "actors": ["human", "AI"],
+      "actors": [
+        "human",
+        "AI"
+      ],
       "triggering_conditions": [
         "Numerical thresholding (weights[i][k] > 1e-12) was used to decide whether an edge exists structurally."
       ],
@@ -23,7 +26,9 @@
       "defense_introduced": [
         "Explicitly separated hard-deletion logic from finite soft graph generation."
       ],
-      "recurrence_test": { "path": null },
+      "recurrence_test": {
+        "path": null
+      },
       "dataset_role": "ENGINE_DESIGN_SET",
       "residual_risk": "Other numerical precision issues in matrix operations may still exist."
     },
@@ -33,7 +38,10 @@
       "date": "2026-08-25",
       "observed_symptom": "The h=2...7 preregistration draft remained presented as usable after its data had been exposed.",
       "failure_mode": "HOLDOUT_EXPOSURE_INVALIDATION_NOT_PROPAGATED",
-      "actors": ["human", "AI"],
+      "actors": [
+        "human",
+        "AI"
+      ],
       "triggering_conditions": [
         "The h=2...7 soft-path data were exposed in the UNREGISTERED_EXPLORATORY_RUN, rendering the old draft useless."
       ],
@@ -48,13 +56,15 @@
         }
       ],
       "corrective_action": [
-        "Renamed section to 'Historical pre-campaign preregistration draft — SUPERSEDED'.",
+        "Renamed section to 'Historical pre-campaign preregistration draft â€” SUPERSEDED'.",
         "Added explicit wording that future confirmatory protocols must use genuinely new predictions or holdout data."
       ],
       "defense_introduced": [
         "Clear invalidation of compromised evaluation sets."
       ],
-      "recurrence_test": { "path": null },
+      "recurrence_test": {
+        "path": null
+      },
       "dataset_role": "ENGINE_DESIGN_SET",
       "residual_risk": "New preregistrations might accidentally include the compromised profiles."
     },
@@ -64,7 +74,10 @@
       "date": "2026-08-25",
       "observed_symptom": "Soft-path epsilon-sweep was run for h=2...7 before the formal preregistration was frozen.",
       "failure_mode": "PREMATURE_EXECUTION / HUMAN_AUTHORIZATION_BEFORE_PREREGISTRATION_FREEZE",
-      "actors": ["human", "AI"],
+      "actors": [
+        "human",
+        "AI"
+      ],
       "triggering_conditions": [
         "Execution was triggered manually before the formal preregistration freeze was completed."
       ],
@@ -88,7 +101,9 @@
       "defense_introduced": [
         "Strict H8_BLINDNESS_BREACH=NO and H8_RUN=NO metadata flags in task context."
       ],
-      "recurrence_test": { "path": null },
+      "recurrence_test": {
+        "path": null
+      },
       "dataset_role": "ENGINE_DESIGN_SET",
       "residual_risk": "Subsequent tasks might accidentally read the exposed data and use it for false predictions."
     },
@@ -98,7 +113,9 @@
       "date": "2026-08-25",
       "observed_symptom": "SOFT_PATH_RESULTS.md contained uninterpolated template placeholders and mismatched headers.",
       "failure_mode": "CORRUPTED_DERIVED_PRESENTATION",
-      "actors": ["AI"],
+      "actors": [
+        "AI"
+      ],
       "triggering_conditions": [
         "The formatter literally contained escaped interpolation sequences such as ${item.h}, ${item.profile}, ${point.eps}."
       ],
@@ -117,7 +134,9 @@
         "Did NOT repair the artifact to preserve exact historical evidence."
       ],
       "defense_introduced": [],
-      "recurrence_test": { "path": null },
+      "recurrence_test": {
+        "path": null
+      },
       "dataset_role": "ENGINE_DESIGN_SET",
       "residual_risk": "Future readers might ignore the warning note."
     },
@@ -127,11 +146,13 @@
       "date": "2026-08-25",
       "observed_symptom": "WORKING_REPORT.md described Method B as 'exact transition moment tracking'.",
       "failure_mode": "INACCURATE_METHOD_LABEL",
-      "actors": ["AI"],
+      "actors": [
+        "AI"
+      ],
       "triggering_conditions": [
         "Using overly confident phrasing for a numerical computation."
       ],
-      "why_plausible": "The computation agreed closely with Method A, leading to a descriptive label 'exact' instead of its strict algorithmic definition.",
+      "why_plausible": "The implementation used a finite-horizon Float64 recurrence whose results numerically agreed closely with Method A, but the presentation label did not distinguish numerical recurrence from exact arithmetic.",
       "scientific_impact": "None directly, but obscured the actual algorithmic methodology used.",
       "epistemic_impact": "Violated the rule against hyperbolic or self-certifying language.",
       "detection_layer": "Human review of PR documentation.",
@@ -145,32 +166,11 @@
         "Replaced 'exact transition moment tracking' with 'finite-horizon Float64 moment recurrence'."
       ],
       "defense_introduced": [],
-      "recurrence_test": { "path": null },
+      "recurrence_test": {
+        "path": null
+      },
       "dataset_role": "ENGINE_DESIGN_SET",
       "residual_risk": "Other inaccurate descriptors may exist in unreviewed documentation."
-    },
-    {
-      "failure_id": "FL-010",
-      "episode": "Profile-Response Soft Path Campaign 2026-08-25",
-      "date": "2026-08-25",
-      "observed_symptom": "The sign crossing in profile h=4 (2,1,1) was initially interpreted as a topological phase transition or graph breaking.",
-      "failure_mode": "INTERPRETATION_OVERREACH",
-      "actors": ["AI"],
-      "triggering_conditions": [
-        "A novel and unexpected non-monotonic variance response occurred, and a topological phase transition had been previously hypothesized as a candidate mechanism."
-      ],
-      "why_plausible": "A topological phase transition had been previously hypothesized as a candidate mechanism for any non-monotonicity.",
-      "scientific_impact": "Could have resulted in publishing a false mechanism for a true observation.",
-      "epistemic_impact": "Required strict correction: finite epsilon does not break the support graph, so it is a smooth non-monotone weighted Perron/Parry response.",
-      "detection_layer": "Human mathematical review.",
-      "preserved_artifacts": [],
-      "corrective_action": [
-        "Updated the working narrative to clarify that the observation is NOT evidence for a topological discontinuity."
-      ],
-      "defense_introduced": [],
-      "recurrence_test": { "path": null },
-      "dataset_role": "ENGINE_DESIGN_SET",
-      "residual_risk": "The true mechanism behind the smooth non-monotonicity remains unproven."
     },
     {
       "failure_id": "FL-012",
@@ -178,7 +178,10 @@
       "date": "2026-08-25",
       "observed_symptom": "Commit d549732311c9f736a495bc950ae6734bdb345d48 was created using the --no-verify flag.",
       "failure_mode": "NO_VERIFY_GOVERNANCE_EXCEPTION",
-      "actors": ["human", "AI"],
+      "actors": [
+        "human",
+        "AI"
+      ],
       "triggering_conditions": [
         "The commit command explicitly used --no-verify after the required checks had already been run manually."
       ],
@@ -192,7 +195,9 @@
         "Ensured subsequent commits used standard hooks."
       ],
       "defense_introduced": [],
-      "recurrence_test": { "path": null },
+      "recurrence_test": {
+        "path": null
+      },
       "dataset_role": "ENGINE_DESIGN_SET",
       "residual_risk": "Overuse of --no-verify could allow actual scientific errors to enter the repository."
     },
@@ -202,7 +207,9 @@
       "date": "2026-08-25",
       "observed_symptom": "WORKING_REPORT.md reported old Spearman 0.9714 while corrected audit results contained tie-corrected 0.9758316305187079; soft_test_out.json represented older component/support behavior after engine controls had been repaired.",
       "failure_mode": "STALE_DERIVED_ARTIFACT",
-      "actors": ["AI"],
+      "actors": [
+        "AI"
+      ],
       "triggering_conditions": [
         "Code was repaired but the derived artifacts dependent on that code were not synchronously regenerated before review."
       ],
@@ -215,9 +222,11 @@
         "Regenerated and synchronized derived artifacts from repaired code."
       ],
       "defense_introduced": [
-        "Mandatory pre-commit checklist includes manual review of derived artifacts."
+        "Existing repository policy requires inspection of modified and untracked files before commit."
       ],
-      "recurrence_test": { "path": null },
+      "recurrence_test": {
+        "path": null
+      },
       "dataset_role": "ENGINE_DESIGN_SET",
       "residual_risk": "Future artifacts might still drift if Artifact Freshness CI is not implemented."
     },
@@ -227,7 +236,9 @@
       "date": "2026-08-25",
       "observed_symptom": "The v0.1 JSON Schema encoded over-escaped failure_id/date regex patterns while the custom Node validator encoded the intended regex semantics.",
       "failure_mode": "SCHEMA_VALIDATOR_CONTRACT_DIVERGENCE",
-      "actors": ["AI"],
+      "actors": [
+        "AI"
+      ],
       "triggering_conditions": [
         "Multiple escaping layers while generating JSON through PowerShell.",
         "Regression tests exercised the custom validator but did not inspect the durable JSON Schema patterns."
@@ -244,9 +255,75 @@
       "defense_introduced": [
         "Schema/runtime contract regression tests."
       ],
-      "recurrence_test": { "path": "tests/reliability/failure-ledger.test.js" },
+      "recurrence_test": {
+        "path": "tests/reliability/failure-ledger.test.js"
+      },
       "dataset_role": "ENGINE_DESIGN_SET",
       "residual_risk": "Other unexercised schema constraints could diverge from the runtime validator."
+    },
+    {
+      "observed_symptom": "A temporary helper, scratch/repair_script.js, was committed even though PR A's declared file scope excluded it.",
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "epistemic_impact": "The reported exact changed-file scope disagreed with the actual Git tree, demonstrating that a narrative final report is not sufficient evidence for scope closure.",
+      "scientific_impact": "None.",
+      "episode": "Reliability Engine v0.1 PR A Repair",
+      "defense_introduced": [
+        "explicit base...HEAD file-list audit before PR creation"
+      ],
+      "preserved_artifacts": [],
+      "why_plausible": "Executing a blanket git add . captures untracked temporary files if they match no ignore rules.",
+      "recurrence_test": {
+        "path": null
+      },
+      "date": "2026-08-25",
+      "triggering_conditions": [
+        "temporary helper was created inside repository scratch/",
+        "staging used git add .",
+        "final report enumerated only five intended files and failed to detect the sixth committed file."
+      ],
+      "corrective_action": [
+        "remove the helper in this additive commit",
+        "verify changed-file scope from Git, not from intended file list"
+      ],
+      "residual_risk": "Scratch files might still be accidentally committed if git add . is used without review.",
+      "actors": [
+        "human",
+        "AI"
+      ],
+      "failure_mode": "UNINTENDED_SCRATCH_ARTIFACT_COMMIT",
+      "detection_layer": "Independent Git-tree comparison.",
+      "failure_id": "FL-015"
+    },
+    {
+      "observed_symptom": "README contained malformed path rendering and a U+0007 control character in the word actors after a scripted PowerShell edit.",
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "epistemic_impact": "The final report claimed README repair had succeeded although the committed presentation remained corrupted.",
+      "scientific_impact": "None.",
+      "episode": "Reliability Engine v0.1 PR A Repair",
+      "defense_introduced": [
+        "direct artifact-content inspection after scripted documentation edits"
+      ],
+      "preserved_artifacts": [],
+      "why_plausible": "PowerShell strings interpret certain sequences differently than raw text, often injecting control characters or escaping literals unexpectedly.",
+      "recurrence_test": {
+        "path": null
+      },
+      "date": "2026-08-25",
+      "triggering_conditions": [
+        "documentation text containing backticks/backslashes was generated through an escaping-sensitive PowerShell string",
+        "validation did not inspect final rendered/literal README contents"
+      ],
+      "corrective_action": [
+        "rewrite README as clean literal UTF-8",
+        "inspect resulting content/control characters"
+      ],
+      "residual_risk": "Future edits might still inject control characters if not written as literal UTF-8.",
+      "actors": [
+        "AI"
+      ],
+      "failure_mode": "DOCUMENTATION_ESCAPE_CORRUPTION",
+      "detection_layer": "Independent direct inspection of the committed README.",
+      "failure_id": "FL-016"
     }
   ]
 }

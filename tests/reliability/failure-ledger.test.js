@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { validateLedger } = require('../../scripts/reliability/validate-failure-ledger.js');
+const { validateLedger, VALID_ACTORS, VALID_DATASET_ROLES } = require('../../scripts/reliability/validate-failure-ledger.js');
 
 const tmpDir = path.join(__dirname, 'tmp_ledger_tests');
 if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir);
@@ -54,15 +54,13 @@ if (dateRegex.test("2026-08-25T10:00") !== false) { console.error('Schema test f
 console.log('Test passed: Schema date regex');
 
 const schemaActors = failureProps.actors.items.enum;
-const expectedActors = ["human", "AI", "tool", "system"];
-if (schemaActors.length !== expectedActors.length || !expectedActors.every(a => schemaActors.includes(a))) {
+if (schemaActors.length !== VALID_ACTORS.length || !VALID_ACTORS.every(a => schemaActors.includes(a))) {
   console.error('Schema test failed: actors enum mismatch'); errors++;
 }
 console.log('Test passed: Schema actors enum');
 
 const schemaRoles = failureProps.dataset_role.enum;
-const expectedRoles = ["ENGINE_DESIGN_SET", "ENGINE_EVAL_SET"];
-if (schemaRoles.length !== expectedRoles.length || !expectedRoles.every(r => schemaRoles.includes(r))) {
+if (schemaRoles.length !== VALID_DATASET_ROLES.length || !VALID_DATASET_ROLES.every(r => schemaRoles.includes(r))) {
   console.error('Schema test failed: dataset_role enum mismatch'); errors++;
 }
 console.log('Test passed: Schema dataset_role enum');
