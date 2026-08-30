@@ -132,3 +132,27 @@ The first three are covered in detail by §2 (Scope Precision) and §3 (Finite C
 ## 11. Immediate Capture vs. Claim Acceptance
 
 **Rule:** Canonicalization (capturing a result in the repository) is part of doing the research, but claim acceptance remains a separate human-gated review decision. Immediate capture does not imply claim acceptance.
+
+
+---
+
+## 12. The Artifact Boundary
+
+*§10 separates what a computation verified from what the project claims. This section adds one more boundary, on a different axis: what the **source** says and what the **reader receives** are not the same object.*
+
+**Rule:** A source-level check is not evidence about the delivered artifact. Verify the artifact in the form the reader gets it.
+
+**Why this matters:** the Paper 4 preprint v1.0 → v1.1 audit found the mathematics closed, correct, and unchanged — and the title page still wrong (the author block omitted the project identity entirely), and the nineteen-family table still splitting across a page boundary, so that a table asserting "exactly nineteen" displayed eighteen rows and then one. Neither defect is *in* any claim, so no claim-level check could ever have seen them.
+
+**The symmetric error is worse, and this project made it.** Working from `pdftotext -layout` output, that same audit reported five defects — missing `κ`, `≥` and minus glyphs in a figure; overprinted figure labels; three misaligned tables — and **every one was false**. A text extractor infers reading order from glyph coordinates, so it manufactures precisely the appearances (column drift, collided baselines, glyphs silently dropped for want of a `ToUnicode` map) that a layout defect would produce. *The proxy's failure modes were isomorphic to the defect being hunted.* Five suspected defects, five disproofs, one rendered page each.
+
+Add to §10's table of recurring gaps:
+
+| Verified | Often written as |
+|---|---|
+| the source is correct | the delivered artifact is correct |
+| a proxy view of the artifact | the artifact |
+
+**Practical test:** before recording a defect in a delivered artifact, name the observation you actually made. If the answer is "a tool's textual rendering of it" rather than "the artifact as a reader sees it", you have located a candidate, not established a defect.
+
+**Corollary — record the disproofs.** A suspicion investigated and found empty is a result, and it costs as much to obtain the second time as the first. Write it down with its disproof. See `AGENTS.md`, "Artifact and release protocol", rules 1 and 4.
