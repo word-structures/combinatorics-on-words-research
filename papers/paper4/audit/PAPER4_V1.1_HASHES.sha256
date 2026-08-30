@@ -1,0 +1,37 @@
+# Paper 4 — preprint PDF v1.1 provenance manifest
+# Generated 2026-08-30 (calendar date; the manuscript retains its frozen date of 29 August 2026).
+# Algorithm: SHA-256. Format: <hash>  <name>
+#
+# Every hash below was computed from the file actually used in, or produced by,
+# the v1.1 build. No hash in this file is quoted from an external record.
+
+# --- frozen scientific source (input, unchanged content) ---
+a2886a45643faa47d1f4d78e66058b15338c324dff3b9839cb707dcf0fd3d608  PAPER4_PREPRINT_v1.0_2026-08-29.md
+
+# --- v1.1 source (frozen source + 3 non-mathematical edits) ---
+71b185e10e2014ad3b88c1789695eea1a5434089121d0ee221269ab16b85995e  PAPER4_PREPRINT_v1.1_2026-08-29.md
+
+# --- figures included by the manuscript (both byte-identical to v1.0) ---
+a30848771422f9f5464858af2fbe07720584a6b9893e2045eeaa3c36c69fb8ec  FIG1_SIX_CARRY_DOMAINS.pdf
+7f060236de6082db3cb0bef359dac89afc74c320fb959fd46855b532e36c2186  FIG3_FIRST_HIT_PREFIX_TREE.pdf
+
+# --- output ---
+bad59a391fe81aef370c296cc03f2515abbad58faf5f2d8f2b056d08b3cd1bd8  PAPER4_PREPRINT_v1.1_2026-08-29.pdf
+
+# --- predecessor, retained unmodified for comparison ---
+63c15d33da8573bc9f25f08ef046910efb6f47c3a25538f85cd2c7423c9b9df8  PAPER4_PREPRINT_v1.0_2026-08-29.pdf
+
+# NOT INCLUDED, and deliberately so:
+#   FIG2_SUPPORT_COMPILER_PIPELINE.pdf is not referenced by the canonical
+#   manuscript source and is not part of either preprint.
+#
+# Build command (from the directory holding the source and the two figures):
+#   pandoc PAPER4_PREPRINT_v1.1_2026-08-29.md \
+#          -f markdown+tex_math_single_backslash \
+#          -o PAPER4_PREPRINT_v1.1_2026-08-29.pdf \
+#          --pdf-engine=pdflatex
+#
+# Build environment: pandoc 3.11; MiKTeX-pdfTeX 4.23 (MiKTeX 25.12).
+# The `-f markdown+tex_math_single_backslash` flag is required: the source uses
+# \( \) and \[ \] math delimiters, which pandoc's default markdown reader does
+# not recognise.
