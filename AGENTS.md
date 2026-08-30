@@ -88,3 +88,29 @@
 5. **UNVERIFIABLE HISTORICAL PROVENANCE NEVER EDITS CONTENT:** if a stated historical hash cannot be located, that is a record-keeping gap. It does not license rewriting scientific text, and it does not block release. Anchor provenance **forward** — hashes computed now, from the files actually used now. Motivating case: the stated consolidated Paper 4 manuscript hash `6df6d6a7…` was not found anywhere on disk, while the stated v1.0 PDF hash verified exactly; because the manuscript asserts no hash of its own, nothing required correction.
 
 6. **A NUMBER THAT GATES A DECISION MUST HAVE AN EXACT ROUTE:** no floating-point result may change a claim's status — least of all to a negative — without confirmation by an exact or symbolic computation. Motivating near-miss: a QR iteration reported the subdominant eigenvalue of the `h6` incidence matrix as `0`, which would have killed a research line as "bounded discrepancy"; the exact characteristic polynomial `x³(x−3)(x²−3)` gives `√3`, independently corroborated by `trace = 3` and `rank = 4` (see `MATH_CLAIMS.md` row 115).
+
+## Human comprehension and visual exposition (mandatory for every manuscript)
+
+*The protocols above govern whether a result is **true** and whether the delivered artifact is **correct**. This section governs whether a mathematician outside the discovery context can **use** it. Full protocol: `docs/research/HUMAN_READABILITY_AND_VISUAL_EXPOSITION_PROTOCOL.md`. Gate integration: `docs/research/PAPER_LIFECYCLE.md` Stage 6H, Stage 7, Stage 8. This rule exists because Paper 4 passed every gate the project had and an external mathematician still reported that the setup and terminology were harder to enter than necessary — the authors met `carry domain`, `support family`, `unresolved role`, `affine target` and `mask` one at a time over months; the reader meets all five on page two.*
+
+1. **NOUN BEFORE SYMBOL:** the reader must know what an object *is* before it is given `σ`, `Δ`, `Q`, `κ` or any other symbol.
+
+2. **MOTIVATE BEFORE DEFINE:** state the problem a concept solves before the concept exists. A formal definition is never a concept's first appearance.
+
+3. **ONE RUNNING EXAMPLE PER CENTRAL MECHANISM:** at least one concrete object survives several sections and grows more abstract with the exposition. Isolated examples do not satisfy this.
+
+4. **PAPER-AND-PENCIL WITNESS:** every computer-assisted headline carries a human-scale instance a reader can check without running anything. Exhaustive computation is not replaced; its *semantics* is made inspectable.
+
+5. **REPRESENTATIONAL BRIDGE:** central mechanisms are supported across concrete, visual, algebraic and structural views, and the reader can move between them **in both directions**. Picture-to-equation without equation-to-picture means the views are not yet integrated.
+
+6. **FIGURES ANSWER QUESTIONS:** no decorative figures. Every symbol in a figure uses the same glyph as the text, labels sit next to what they label, and each caption states what is shown, what to notice, and what it does **not** prove.
+
+7. **SYMBOLIC PROOF ≠ FINITE VALIDATION:** exposition must not blur the boundary that the claims protocol and `EPISTEMIC_DISCIPLINE.md` §3 keep apart.
+
+8. **EVERY LARGE NUMBER NEEDS A NOUN AND A NON-INTERPRETATION:** say what it counts or dimensions, and what it does not imply. `218298 → 2691 → 2689 → 1179` is not a result until every arrow carries an operation and every number carries a noun.
+
+9. **READER REFEREE:** Stage 7 includes a fourth referee who is outside the discovery context and must *paraphrase* the paper back, not approve it. A mis-paraphrase by a competent reader is an exposition defect even when the definition is formally correct. Template: `docs/research/READABILITY_REFEREE_TEMPLATE.md`.
+
+10. **NO AI-ONLY SEMANTICS:** an AI may assist comprehension, but the conceptual bridges must be **in the paper**. An AI can reconstruct a missing bridge from filenames, code, prior sessions and project memory; a reader cannot. If the bridge exists only when an AI supplies it, it is not written yet.
+
+*Scope limit: these are exposition rules informed by adjacent research, not a theorem about how mathematicians read. Picturability is not a truth criterion and not every theorem needs a figure — every important abstraction needs a **traceability route**, which may be a figure, a table, a worked example, a contrast case, or a hand-checkable calculation.*
