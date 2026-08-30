@@ -19,17 +19,30 @@ Copy-Item "..\figures\FIG3_FIRST_HIT_PREFIX_TREE.pdf" -Destination "$BuildDir\"
 Push-Location $BuildDir
 
 Write-Host "Running pandoc..."
-pandoc "PAPER4_PREPRINT_v1.1_2026-08-29.md" -f markdown+tex_math_single_backslash -o "PAPER4_PREPRINT_v1.1_2026-08-29.pdf" --pdf-engine=pdflatex
+# Capture output and exit code carefully
+$process = Start-Process -FilePath "pandoc" -ArgumentList "PAPER4_PREPRINT_v1.1_2026-08-29.md", "-f", "markdown+tex_math_single_backslash", "-o", "PAPER4_PREPRINT_v1.1_2026-08-29.pdf", "--pdf-engine=pdflatex" -Wait -NoNewWindow -PassThru
 
-if ($LASTEXITCODE -eq 0 -or (Test-Path "PAPER4_PREPRINT_v1.1_2026-08-29.pdf")) {
-    Write-Host "Build succeeded."
+if ($process.ExitCode -ne 0) {
+    Write-Error "Build failed: pandoc returned exit code $($process.ExitCode)."
     Pop-Location
-    Copy-Item "$BuildDir\PAPER4_PREPRINT_v1.1_2026-08-29.pdf" -Destination $OutputFile -Force
-    Write-Host "PDF copied to $OutputFile"
-} else {
-    Write-Host "Build failed."
+    Remove-Item -Recurse -Force $BuildDir
     Pop-Location
+    exit 1
 }
+
+if (-not (Test-Path "PAPER4_PREPRINT_v1.1_2026-08-29.pdf")) {
+    Write-Error "Build failed: PDF file was not generated."
+    Pop-Location
+    Remove-Item -Recurse -Force $BuildDir
+    Pop-Location
+    exit 1
+}
+
+Write-Host "Build succeeded."
+Pop-Location
+Copy-Item "$BuildDir\PAPER4_PREPRINT_v1.1_2026-08-29.pdf" -Destination $OutputFile -Force
+Write-Host "PDF copied to $OutputFile"
 
 Remove-Item -Recurse -Force $BuildDir
 Pop-Location
+exit 0
