@@ -24,7 +24,7 @@ For every L ≥ 5, with exactly one unresolved source role:
 * `audit/`: The submission audit report and hash manifest.
 
 ## Reproduction
-To reproduce the PDF, navigate to `build/` and run `.\build_paper4.ps1` (requires Pandoc 3.11 and MiKTeX-pdfTeX 4.23). 
+To reproduce the PDF, navigate to `build/` and run `.\build_paper4.ps1` (requires Pandoc 3.11 and MiKTeX-pdfTeX 4.23).
 To reproduce the computational claims, refer to the manifest in `reproducibility/PAPER4_REPRODUCIBILITY_MANIFEST_2026-08-29.json` and execute the scripts in the `reproducibility/` directory.
 
 ## Version history

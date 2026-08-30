@@ -20,5 +20,5 @@ This directory contains the frozen replay and verification package for Paper 4.
 * **Expected outputs:** Compare the stdout of each command to the corresponding file in `expected/`.
 
 ## Scientific Scope
-The all-L >= 5 theorem is proved symbolically. 
+The all-L >= 5 theorem is proved symbolically.
 Finite replay (the scripts here) is validation/falsification evidence, not the proof premise itself.
