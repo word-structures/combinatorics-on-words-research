@@ -92,8 +92,15 @@ problem.**
 These are not estimates but finite computations whose search tree has been
 exhausted. They stay closed.
 
+**Important Epistemic Note on the Profile-Response Baseline (Row 114):**
+The h=2...7 finite family is exhausted and closed as a computational dataset. However, the sign-mechanism interpretation itself is NOT proven, and no universal law is closed.
+
+**Important Epistemic Note on the h=7 Experiment:**
+The h=7 preregistered experiment is closed with a MIXED outcome. It does not have a standalone MATH_CLAIMS row; it is backed directly by the canonical evidence package at `docs/research/H7_OUTCOME_2026-08-24.md`.
+
 | What is closed | Kind of proof | Row |
 |---|---|---|
+| **h=2...7 profile-response baseline** | exhausted finite family (15 cases) | 114 |
 | The ternary abelian-square-free language ends at length 7 | exhaustive search | 1 |
 | **No** k-uniform ternary morphism, k ≤ 6, produces a Mäkelä fixed point | exhaustive sweep | 36 |
 | **Route (c):** no uniform map Σ₆ → Σ₃^L, L ≤ 5, produces a Mäkelä word from h₆'s fixed point | exhaustive sweep | 49 |
