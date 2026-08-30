@@ -8,10 +8,10 @@
 
 The mathematical claims in Theorem 5.1 (Theorem A) explicitly cover the domain bounds (6 physical carry domains), the physical occurrence pattern bounds (34 realizable patterns), and the stable equivalent classes of the unresolved-support sets (19 families).
 - The proof properly isolates the q=0 versus q>=1 bounds.
-- The 6 physical carry domains completely exhaust the allowable combinations of c_0, c_1.
+- The q=0 / q>=1 split together with the carry geometry yields the six physical domains.
 - The 34 realizable domain/mask patterns logically bound the cutpoints when considering the possible equality combinations among macro block bounds.
 - The quotient yields exactly 19 complete support families for L>=5, proved symbolically without relying strictly on the finite length-40 search.
-- The proof makes an exact equivalence mapping that correctly identifies the minimal representation of constraints, ensuring L>=5 stability. 
+- The quotient contains exactly 19 classes under equality of complete reduced unresolved-support sets. No broader automaton-minimality or representation-minimality claim is made.
 - Finite testing validates the theoretical counts, but is correctly not cited as a replacement for the proof.
 - No false empirical assumptions or unstated assumptions were detected.
 
