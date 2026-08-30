@@ -37,9 +37,9 @@ entirely correct.
 > If two different block histories allow exactly the same continuations right
 > now, can they still have different numbers of legal continuations later?
 
-The answer is yes, the project has an exact witness for it, and that witness is
-the whole paper in miniature. Every abstraction afterwards earns its place by
-being needed to answer this question precisely.
+The manuscript should answer this question using a concrete certified witness.
+A candidate witness exists in the research checkpoint, but it may enter the
+canonical manuscript only after promotion to MATH_CLAIMS.md.
 
 ---
 
@@ -60,41 +60,35 @@ Witness categories follow
 `HUMAN_READABILITY_AND_VISUAL_EXPOSITION_PROTOCOL.md` §5. They are not
 interchangeable, and category 3 is never called checkable by hand.
 
-### W1 — same present, different future
+### W1 SLOT — same-present/different-future witness
 
-*Candidate source:* `P6_Q2_PERSISTENT_FRINGE_INJECTION_CERT_v0.1_2026-08-30.json`
+*Status:* UNPROMOTED — DO NOT CITE AS FINDING
+*Candidate artifact:* `P6_Q2_PERSISTENT_FRINGE_INJECTION_CERT_v0.1_2026-08-30.json`
 (checkpoint v2.3, untracked)
 
-Two block histories differing in a single interior character, whose legal
-next-block sets coincide while their continuation counts separate at a stated
-finite horizon.
-
-- **Category 1 — human-inspectable semantic witness.** The reader sees both
-  literal histories, the one differing character, and what "same legal
-  continuations" means on a concrete object. This is what makes the opening
-  question real.
-- **Category 3 for the claim itself.** Equality of the legal sets and the
-  divergence of the counts are *machine-certified*. The paper presents them with
-  the certificate and replay command, never as something the reader verifies.
-
-This is Figure 3 and the paper's motivating fact.
-
-### W2 — count-equivalent but not equitable
-
-*Candidate source:* `P6_Q2_COUNT_VS_EQUITABLE_COUNTEREXAMPLE_CERT_v0.1_2026-08-30.json`
-(checkpoint v2.3, untracked)
-
-A pair of states whose continuation counts agree at every horizon and whose
-transition structure nevertheless differs.
+Required exposition role: show two literal histories, their current legal
+responses, and a later divergence.
+Candidate research artifact exists; exact properties remain claim-ledger
+promotion pending.
 
 - **Category 1** for the two literal histories.
-- **Category 3, unavoidably**, for the equivalence: all-horizon agreement is
-  established by exact computation over a finite range plus a Cayley–Hamilton
-  forcing argument. **This is not a paper-and-pencil verification** and must
-  never be presented as one.
+- **Category 3** for their later divergence.
 
-This is Figure 4, and it is why the transition-state count and the count-state
-count are different numbers.
+This is Figure 3, and it is intended to prove that current response is inadequate.
+
+### W2 — count-equivalent/non-equitable contrast
+
+*Status:* UNPROMOTED — DO NOT CITE AS FINDING
+*Candidate artifact:* `P6_Q2_COUNT_VS_EQUITABLE_COUNTEREXAMPLE_CERT_v0.1_2026-08-30.json`
+(checkpoint v2.3, untracked)
+
+Required exposition role: demonstrate why transition equivalence and future count equivalence differ.
+Candidate research artifact exists; all-horizon equivalence remains claim-ledger promotion pending.
+
+- **Category 1** for the two literal histories.
+- **Category 3, unavoidably**, for the equivalence: all-horizon agreement would require exact computation over a finite range plus a Cayley-Hamilton forcing argument. **This is not a paper-and-pencil verification** and must never be presented as one.
+
+This is Figure 4, and it is intended to show why the transition-state count and the count-state count are different numbers.
 
 ### W3 — the toy linear dependence
 
@@ -209,49 +203,33 @@ than a technical escalation.
 
 ## 7. The failure ladder
 
-Selected motivation, not chronology. Each rung is a real project result and each
-must be shown by its smallest witness:
+The final manuscript should use only those no-go rungs that have been promoted
+to MATH_CLAIMS.md before drafting.
 
-```
-current response alone            fails   (W1)
-  -> finite response trees        fail
-    -> bisimulation               fails    (W2)
-      -> static obstruction signatures fail
-        -> partition refinement   fails structurally
-          -> signed linear semantics becomes necessary
-```
+candidate simpler representation
+  |
+  | if registered no-go result establishes insufficiency
+  v
+next representation
+  ...
+
+For example:
+current response alone
+  -> finite response trees
+    -> bisimulation
+      -> static obstruction signatures
+        -> partition refinement
+          -> signed linear semantics
 
 Include only the rungs that logically force the next concept. This is the
 project's falsification culture used as exposition, which is what
 `NEGATIVE_RESULTS.md` is for.
 
----
+## 8. Governance Fence
 
-## 8. What this plan deliberately does not headline
-
-The 2026-08-30 adversarial audit of checkpoint v2.3 found that the
-"four recency-gauged block profiles + one adjacency bit" result is **exactly
-certified but not canonical**: an equally simple descriptor — four length-4
-windows anchored at offset 0 of the stored suffix, with no adjacency bit —
-attains the same exact full and persistent ranks over five primes. The
-audit also confirmed that profile-only incompleteness is *not* established,
-because modular rank bounds rational rank only from below.
-
-Therefore Paper 6 must **not** be architected around the one-bit result or
-around the `S_2` fragment-activation narrative until:
-
-1. an exact rational upper bound for the profile-only measurement exists
-   (one explicit integer kernel witness suffices); and
-2. the descriptor-invariance question is settled — which windowings attain full
-   rank, and what the successful ones have in common.
-
-The exact semantic hierarchy, together with its transient/persistent split, W1 and
-W2 are the assets that survived the audit intact. This plan is built on those.
-
-Audit report: `scratch/claude-intake/paper6/_audit_2026-08-30/`
-(untracked; promote only if the owner wants it in history).
-
----
+Architecture must not be built around any descriptor-specific claim until that
+claim is promoted to MATH_CLAIMS.md. Research-checkpoint candidates remain
+outside the canonical exposition plan.
 
 ## 9. Stage 6H checklist for Paper 6
 
