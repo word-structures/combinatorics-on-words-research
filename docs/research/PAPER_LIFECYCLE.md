@@ -122,11 +122,12 @@ found here back-routes to Stage 2.
 Full protocol:
 `docs/research/HUMAN_READABILITY_AND_VISUAL_EXPOSITION_PROTOCOL.md`.
 
-**Why this sub-gate exists.** Paper 4 passed Gates 0–9 — mathematical audit,
-hostile referee, reproducibility, artifact closure — and an external
-mathematician still reported that the setup and terminology were harder to enter
-than necessary. Correctness and usability are independent axes; only the first
-had a gate.
+**Why this sub-gate exists.** Paper 4 had passed all technical gates through
+Stage 8 — mathematical audit, independent kill, novelty kill, reproducibility,
+manuscript architecture, hostile referee, artifact closure — with only Stage 9
+owner promotion outstanding, and an external mathematician still reported that
+the setup and terminology were harder to enter than necessary. Correctness and
+usability are independent axes; only the first had a gate.
 
 **Gate conditions.**
 
@@ -140,8 +141,14 @@ had a gate.
 4. **Representational bridge.** Each central mechanism has enough coverage
    across concrete / visual / algebraic / structural views that a reader can
    move between them in both directions.
-5. **Paper-and-pencil witness.** Every computer-assisted headline has a
-   human-scale instance a reader can check without running anything.
+5. **Human-scale witness, with its status stated.** Every computer-assisted
+   headline has a human-scale instance, labelled as one of: *human-inspectable
+   semantic witness* (the reader sees what the objects mean), *paper-and-pencil
+   verifiable witness* (the reader can check the small claim manually), or
+   *machine-certified exact witness* (concrete and readable, exact claim resting
+   on a reproducible certificate). **A machine-certified witness is never
+   described as checkable by hand.** The conceptual core of a result should
+   normally reach the second category even when the full theorem cannot.
 6. **Boundary made visible.** At least one non-example, near miss, or
    counterexample to the tempting stronger claim.
 7. **Numbers have nouns.** Every large number states what it counts or

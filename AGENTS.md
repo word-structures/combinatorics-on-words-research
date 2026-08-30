@@ -91,7 +91,7 @@
 
 ## Human comprehension and visual exposition (mandatory for every manuscript)
 
-*The protocols above govern whether a result is **true** and whether the delivered artifact is **correct**. This section governs whether a mathematician outside the discovery context can **use** it. Full protocol: `docs/research/HUMAN_READABILITY_AND_VISUAL_EXPOSITION_PROTOCOL.md`. Gate integration: `docs/research/PAPER_LIFECYCLE.md` Stage 6H, Stage 7, Stage 8. This rule exists because Paper 4 passed every gate the project had and an external mathematician still reported that the setup and terminology were harder to enter than necessary — the authors met `carry domain`, `support family`, `unresolved role`, `affine target` and `mask` one at a time over months; the reader meets all five on page two.*
+*The protocols above govern whether a result is **true** and whether the delivered artifact is **correct**. This section governs whether a mathematician outside the discovery context can **use** it. Full protocol: `docs/research/HUMAN_READABILITY_AND_VISUAL_EXPOSITION_PROTOCOL.md`. Gate integration: `docs/research/PAPER_LIFECYCLE.md` Stage 6H, Stage 7, Stage 8. This rule exists because Paper 4 had passed all technical gates through Stage 8, with only Stage 9 owner promotion outstanding, and an external mathematician still reported that the setup and terminology were harder to enter than necessary — the authors met `carry domain`, `support family`, `unresolved role`, `affine target` and `mask` one at a time over months; the reader meets all five on page two.*
 
 1. **NOUN BEFORE SYMBOL:** the reader must know what an object *is* before it is given `σ`, `Δ`, `Q`, `κ` or any other symbol.
 

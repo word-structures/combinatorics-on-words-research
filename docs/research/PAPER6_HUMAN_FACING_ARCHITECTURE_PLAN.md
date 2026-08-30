@@ -30,7 +30,7 @@ entirely correct.
 
 ## 2. The opening
 
-**Do not open with** `218298 → 2691 → 2689 → 1179`.
+**Do not open with** the four-number semantic chain (raw histories -> transition states -> count states -> future-space dimension).
 
 **Open with a question a mathematician can hold in their head:**
 
@@ -45,57 +45,70 @@ being needed to answer this question precisely.
 
 ## 3. Running witnesses
 
-These are real objects from the frozen `v2.3` checkpoint, re-verified during the
-2026-08-30 adversarial audit. Provenance must be preserved when they are used.
+**Claim-ledger status.** `MATH_CLAIMS.md` currently holds **no row** for any
+Paper 6 object. Under `AGENTS.md` rule 7 the ledger has exclusive rights over
+mathematical and empirical findings, so this plan states the *role* each witness
+plays in the exposition and **does not restate its exact values as canonical
+findings**. The exact material stays in the untracked checkpoint and audit
+directories named below.
+
+> Each witness below is a **candidate certified witness — claim-ledger promotion
+> pending**. Before any of it enters a manuscript, the underlying result must
+> first receive a `MATH_CLAIMS.md` row, and the manuscript must cite that row.
+
+Witness categories follow
+`HUMAN_READABILITY_AND_VISUAL_EXPOSITION_PROTOCOL.md` §5. They are not
+interchangeable, and category 3 is never called checkable by hand.
 
 ### W1 — same present, different future
 
-*Source:* `P6_Q2_PERSISTENT_FRINGE_INJECTION_CERT_v0.1_2026-08-30.json`
+*Candidate source:* `P6_Q2_PERSISTENT_FRINGE_INJECTION_CERT_v0.1_2026-08-30.json`
+(checkpoint v2.3, untracked)
 
-```
-A = aaabaaacaaabbbcabccca      (equitable class 28)
-B = aaabaaacaaabbbcbaccca      (equitable class 47)
-```
+Two block histories differing in a single interior character, whose legal
+next-block sets coincide while their continuation counts separate at a stated
+finite horizon.
 
-The two histories differ in **one interior character**. Their legal next-block
-sets are *exactly equal* — the certificate records
-`exact_legal_set_equal: true`, with 55 commonly forbidden blocks and no unique
-fringe on either side. Yet their continuation counts diverge:
+- **Category 1 — human-inspectable semantic witness.** The reader sees both
+  literal histories, the one differing character, and what "same legal
+  continuations" means on a concrete object. This is what makes the opening
+  question real.
+- **Category 3 for the claim itself.** Equality of the legal sets and the
+  divergence of the counts are *machine-certified*. The paper presents them with
+  the certificate and replay command, never as something the reader verifies.
 
-| horizon | from A | from B |
-|---|---:|---:|
-| 12 | 6 867 627 | 8 737 466 |
-| 13 | 25 468 722 | 32 446 851 |
-| 14 | 94 642 975 | 120 488 590 |
-
-This is Figure 3 and it is the paper's motivating fact. It is checkable by hand
-at the level that matters: the reader can see the single differing character and
-the identical legal sets.
+This is Figure 3 and the paper's motivating fact.
 
 ### W2 — count-equivalent but not equitable
 
-*Source:* `P6_Q2_COUNT_VS_EQUITABLE_COUNTEREXAMPLE_CERT_v0.1_2026-08-30.json`
+*Candidate source:* `P6_Q2_COUNT_VS_EQUITABLE_COUNTEREXAMPLE_CERT_v0.1_2026-08-30.json`
+(checkpoint v2.3, untracked)
 
-```
-A = aaabaaacabcbbbabcccab      (equitable class 224, 54 raw histories)
-B = aaabacccbabbbcbaaacb       (equitable class 1021, 102 raw histories)
-```
+A pair of states whose continuation counts agree at every horizon and whose
+transition structure nevertheless differs.
 
-Identical continuation counts at **every** horizon — the prefix
-`1, 5, 24, 108, 313, 1337, 4565, 17383, 63060, 237827, 879007, 3281006`
-agrees, verified exactly for `n = 0…2690` and then forced for all `n` by
-Cayley–Hamilton on the 2691-dimensional quotient. Their outgoing multiplicities
-into count classes nevertheless differ, so they are *not* equitable.
+- **Category 1** for the two literal histories.
+- **Category 3, unavoidably**, for the equivalence: all-horizon agreement is
+  established by exact computation over a finite range plus a Cayley–Hamilton
+  forcing argument. **This is not a paper-and-pencil verification** and must
+  never be presented as one.
 
-This is Figure 4, and it is why `2691` and `2689` are different numbers.
+This is Figure 4, and it is why the transition-state count and the count-state
+count are different numbers.
 
 ### W3 — the toy linear dependence
 
 Three states with future-count functions `f1`, `f2`, `f3 = f1 + f2`. Three
-distinct states; a two-dimensional span. Written on half a page, by hand.
+distinct states; a two-dimensional span.
 
-This is Figure 6, and it must appear **before** any Krylov space. It is the
-entire intuition for `2689 ≠ 1179`.
+- **Category 2 — genuine paper-and-pencil verifiable witness.** Half a page, no
+  certificate, no project data. The reader checks it completely.
+
+This is Figure 6 and it must appear **before** any Krylov space. It is the whole
+intuition for why the number of count states and the dimension of the future
+space differ — carried entirely by a witness the reader can verify unaided.
+W3 is the reason the result becomes intelligible; W1 and W2 are the reason it is
+true.
 
 ---
 
@@ -109,11 +122,11 @@ Specifications, not drawings. Each states the question it answers.
 | F2 | What can happen next? | The legal next-block fan-out from one state |
 | F3 | **Can present agreement hide future divergence?** | W1: identical legal sets, diverging counts |
 | F4 | What is the difference between the two equivalences? | W2: same counts at every horizon, different transition structure |
-| F5 | What are the four numbers? | `218298 → 2691 → 2689 → 1179`, **with a noun on every node and an operation on every arrow** |
-| F6 | Why is 2689 not 1179? | W3: `f3 = f1 + f2` |
+| F5 | What are the four numbers? | the semantic chain, **with a noun on every node and an operation on every arrow**; the literal values are supplied from the promoted ledger row, not from this plan |
+| F6 | Why is the count-state total larger than the future dimension? | W3: `f3 = f1 + f2` |
 | F7 | What is a signed response defect? | The successor-difference diagram (below), then the algebra |
 | F8 | Why can't refinement fix this? | A true count-equivalent pair already separated by the structural partition; refinement cannot recreate a lost merge |
-| F9 | What is `1179 = 12 + 1167`? | Transient zero-root sector against persistent sector |
+| F9 | How does the future space split? | transient zero-root sector against persistent sector |
 | F10 | Where is this going? | Structural observables → signed combinations → invariant future space |
 
 **F7 must be drawn before `Δ = (e_s − e_t)Q` is written**, and the equation must
@@ -137,9 +150,10 @@ state s                              state t
 > Put one unit of mass at `s`, subtract one unit at `t`, apply one transition
 > step. The result records how their successor distributions differ.
 
-**F5 caption must carry the non-interpretation**: rank 1179 means all statewise
-future-count sequences lie in a 1179-dimensional rational space; it does *not*
-mean there are 1179 count-equivalence classes — there are 2689.
+**F5 caption must carry the non-interpretation**: the rank says that all
+statewise future-count sequences lie in a rational space of that dimension; it
+does *not* say that the number of count-equivalence classes equals it. Those are
+different numbers, and the caption must say so.
 
 ---
 
@@ -219,7 +233,7 @@ The 2026-08-30 adversarial audit of checkpoint v2.3 found that the
 "four recency-gauged block profiles + one adjacency bit" result is **exactly
 certified but not canonical**: an equally simple descriptor — four length-4
 windows anchored at offset 0 of the stored suffix, with no adjacency bit —
-attains the same exact rank `1179/1179` and `1167/1167` over five primes. The
+attains the same exact full and persistent ranks over five primes. The
 audit also confirmed that profile-only incompleteness is *not* established,
 because modular rank bounds rational rank only from below.
 
@@ -231,7 +245,7 @@ around the `S_2` fragment-activation narrative until:
 2. the descriptor-invariance question is settled — which windowings attain full
    rank, and what the successful ones have in common.
 
-The exact semantic hierarchy `218298 → 2691 → 2689 → 1179 = 12 + 1167`, W1 and
+The exact semantic hierarchy, together with its transient/persistent split, W1 and
 W2 are the assets that survived the audit intact. This plan is built on those.
 
 Audit report: `scratch/claude-intake/paper6/_audit_2026-08-30/`
@@ -245,12 +259,14 @@ Audit report: `scratch/claude-intake/paper6/_audit_2026-08-30/`
 |---|---|
 | reader declared | pending draft |
 | motivation precedes formalism | planned, §5 order |
-| running example | **have it** — W1, extended by W2 |
+| running example | candidate — W1, extended by W2; ledger promotion pending |
 | representational bridge | planned, F1–F10 |
-| paper-and-pencil witness | **have it** — W3 for the rank result; W1/W2 are hand-inspectable |
-| boundary / non-example | **have it** — W2 is the non-example for "same counts implies same structure" |
+| human-scale witness, status stated | candidate — W3 is category 2 (paper-and-pencil verifiable); W1 and W2 are category 1 for the objects and **category 3 for their claims** |
+| boundary / non-example | candidate — W2 is the non-example for "same counts implies same structure"; ledger promotion pending |
 | numbers have nouns | required in F5 caption |
 | outsider route, no AI-only semantics | to be tested by the Stage 7 reader referee |
 
-Six of eight are already answerable from existing certified material. The
-missing two are drafting work, not research.
+Six of eight conditions already have candidate material; the remaining two are
+drafting work. **None of the six closes until the underlying results receive
+`MATH_CLAIMS.md` rows** — Stage 6H cannot close ahead of Gate 1, and this plan
+does not attempt to.
