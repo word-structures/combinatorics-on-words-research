@@ -74,7 +74,7 @@ promotion pending.
 - **Category 1** for the two literal histories.
 - **Category 3** for their later divergence.
 
-This is Figure 3, and it is intended to prove that current response is inadequate.
+This is Figure 3. Its planned exposition role is to prove that current response is inadequate, once a corresponding MATH_CLAIMS.md result has been promoted.
 
 ### W2 — count-equivalent/non-equitable contrast
 
@@ -88,7 +88,7 @@ Candidate research artifact exists; all-horizon equivalence remains claim-ledger
 - **Category 1** for the two literal histories.
 - **Category 3, unavoidably**, for the equivalence: all-horizon agreement would require exact computation over a finite range plus a Cayley-Hamilton forcing argument. **This is not a paper-and-pencil verification** and must never be presented as one.
 
-This is Figure 4, and it is intended to show why the transition-state count and the count-state count are different numbers.
+This is Figure 4. Its planned exposition role is to show why the transition-state count and the count-state count are different numbers, once a corresponding MATH_CLAIMS.md result has been promoted.
 
 ### W3 — the toy linear dependence
 
@@ -101,8 +101,7 @@ distinct states; a two-dimensional span.
 This is Figure 6 and it must appear **before** any Krylov space. It is the whole
 intuition for why the number of count states and the dimension of the future
 space differ — carried entirely by a witness the reader can verify unaided.
-W3 is the reason the result becomes intelligible; W1 and W2 are the reason it is
-true.
+W3 is the reason the result becomes intelligible; W1 and W2 are the planned witnesses to establish its truth.
 
 ---
 
@@ -114,12 +113,12 @@ Specifications, not drawings. Each states the question it answers.
 |---|---|---|
 | F1 | What is a state? | A literal block history with the retained suffix marked; show that the memory is a sliding window of `2K−1` characters, not a whole word |
 | F2 | What can happen next? | The legal next-block fan-out from one state |
-| F3 | **Can present agreement hide future divergence?** | W1: identical legal sets, diverging counts |
-| F4 | What is the difference between the two equivalences? | W2: same counts at every horizon, different transition structure |
+| F3 | **Can present agreement hide future divergence?** | W1: candidate contrast — identical legal sets, diverging counts (exact witness pending ledger promotion) |
+| F4 | What is the difference between the two equivalences? | W2: candidate contrast — same counts at every horizon, different transition structure (exact witness pending ledger promotion) |
 | F5 | What are the four numbers? | the semantic chain, **with a noun on every node and an operation on every arrow**; the literal values are supplied from the promoted ledger row, not from this plan |
 | F6 | Why is the count-state total larger than the future dimension? | W3: `f3 = f1 + f2` |
 | F7 | What is a signed response defect? | The successor-difference diagram (below), then the algebra |
-| F8 | Why can't refinement fix this? | A true count-equivalent pair already separated by the structural partition; refinement cannot recreate a lost merge |
+| F8 | Why can't refinement fix this? | Planned exposition role: demonstrate a count-equivalent pair already separated by the structural partition; refinement cannot recreate a lost merge (exact witness pending ledger promotion) |
 | F9 | How does the future space split? | transient zero-root sector against persistent sector |
 | F10 | Where is this going? | Structural observables → signed combinations → invariant future space |
 
