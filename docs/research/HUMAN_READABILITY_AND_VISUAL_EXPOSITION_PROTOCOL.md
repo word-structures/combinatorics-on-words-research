@@ -13,10 +13,11 @@ exposition". Gate integration lives in `docs/research/PAPER_LIFECYCLE.md`
 
 ## 1. Why this exists
 
-Paper 4 passed every gate the project had — mathematical audit, hostile
-referee, reproducibility, artifact closure — and an external mathematician
-still reported that the setup and terminology were harder to enter than
-necessary.
+Paper 4 had passed all technical gates through Stage 8 — mathematical audit,
+independent kill, novelty kill, reproducibility, manuscript architecture,
+hostile referee, artifact closure — with only Stage 9 owner promotion
+outstanding, and an external mathematician still reported that the setup and
+terminology were harder to enter than necessary.
 
 That is not a contradiction. It is a predictable asymmetry:
 
@@ -120,21 +121,38 @@ Qualify them: *equitable state*, *count state*, *support family*,
 
 ---
 
-## 5. Paper-and-pencil witness
+## 5. Witnesses — and three kinds that must never be conflated
 
-> **If a key mechanism is real, show the smallest instance a reader can check by
-> hand.**
+> **Every headline needs a human-scale semantic route, and its exact epistemic
+> status must stay visible.**
 
-This does not replace exhaustive computation. It makes the *semantics* of the
-computation inspectable.
+The requirement is *not* that a computer-assisted result be re-provable by hand.
+Conflating the two is the fastest way to overclaim. Three distinct things:
 
-| result type | required witness |
-|---|---|
-| a classification | one raw object, carried through to its class step by step |
-| a quotient | two raw states that merge, and a near pair that does not |
-| a recurrence | a few terms, and one recurrence equation verified by hand |
-| a rank / dimension result | a tiny analogue first |
-| a no-go / counterexample | the smallest failing instance, in full |
+| # | Category | What the reader can actually do | Honest phrasing |
+|---|---|---|---|
+| 1 | **Human-inspectable semantic witness** | see what the object and the mechanism *mean* on a concrete instance | "here is what the objects are" |
+| 2 | **Paper-and-pencil verifiable witness** | check the stated small claim manually, start to finish | "the reader can verify this by hand" |
+| 3 | **Machine-certified exact witness** | read and understand the object; the exact claim rests on a reproducible computation or certificate | "concrete and readable; the exact statement is machine-certified — see the replay command" |
+
+**Category 3 is never described as "checkable by hand".** If a witness is
+concrete and readable but its claim was established by computation, say so in
+the same sentence that presents it. The certificate is the evidence; the witness
+is the route to understanding what the certificate is about.
+
+Every computer-assisted headline needs at least category 1. Category 2 is
+strongly preferred for the *conceptual core* of a result — the toy analogue that
+explains why the machinery is needed — and is often available there even when the
+full theorem is far out of hand reach.
+
+| result type | required witness | typical category |
+|---|---|---|
+| a classification | one raw object, carried through to its class step by step | 1, often 2 |
+| a quotient | two raw states that merge, and a near pair that does not | 1 or 3 |
+| a recurrence | a few terms, and one recurrence equation verified by hand | 2 |
+| a rank / dimension result | a tiny analogue first; then the real statement | 2 for the analogue, 3 for the result |
+| a no-go / counterexample | the smallest failing instance, in full | 1 or 2 |
+| an all-horizon or exhaustive equivalence | the pair shown literally; equality itself certified | **3, always** |
 
 **Worked instance of the rule.** Before writing `2689 count states -> 1179
 linear dimensions`, show three future-count functions with
@@ -333,25 +351,34 @@ Two further limits, stated so they are not lost:
 
 ### Design-basis reading
 
-Bibliographic metadata for every item below was verified against the Crossref
-DOI registry on 2026-08-30. **The full texts were not consulted in this
-session**, so no claim in this protocol rests on their contents beyond their
-titles and evident subject matter. They are listed as the tradition this
-protocol draws on, not as evidence for any of its rules.
+Verification is recorded in `docs/research/HUMAN_READABILITY_SOURCE_LEDGER.md`,
+with the passage, the date opened, and the scope caveat for each item.
+
+Only three sources were opened in the verification session, and **only those
+three carry a rule mapping**:
 
 | Source | DOI | Informs |
 |---|---|---|
-| Ainsworth, S. (2006). *DeFT: A conceptual framework for considering learning with multiple representations.* Learning and Instruction 16(3), 183–198. | 10.1016/j.learninstruc.2006.03.001 | §3 CVAS |
-| Duval, R. (2006). *A Cognitive Analysis of Problems of Comprehension in a Learning of Mathematics.* Educational Studies in Mathematics 61(1–2), 103–131. | 10.1007/s10649-006-0400-z | §3 CVAS |
-| Arcavi, A. (2003). *The role of visual representations in the learning of mathematics.* Educational Studies in Mathematics 52(3), 215–241. | 10.1023/A:1024312321077 | §6 figures |
-| Sweller, J., & Cooper, G. (1985). *The Use of Worked Examples as a Substitute for Problem Solving in Learning Algebra.* Cognition and Instruction 2(1), 59–89. | 10.1207/s1532690xci0201_3 | §5 witnesses |
-| Atkinson, R., Derry, S., Renkl, A., & Wortham, D. (2000). *Learning from Examples: Instructional Principles from the Worked Examples Research.* Review of Educational Research 70(2), 181–214. | 10.3102/00346543070002181 | §5 witnesses |
-| Chandler, P., & Sweller, J. (1991). *Cognitive Load Theory and the Format of Instruction.* Cognition and Instruction 8(4), 293–332. | 10.1207/s1532690xci0804_2 | §6 direct labelling |
-| Kalyuga, S., Ayres, P., Chandler, P., & Sweller, J. (2003). *The Expertise Reversal Effect.* Educational Psychologist 38(1), 23–31. | 10.1207/S15326985EP3801_4 | §8 layered orientation |
-| Nathan, M., & Petrosino, A. (2003). *Expert Blind Spot Among Preservice Teachers.* American Educational Research Journal 40(4), 905–928. | 10.3102/00028312040004905 | §14 reader referee |
-| Inglis, M., & Alcock, L. (2012). *Expert and Novice Approaches to Reading Mathematical Proofs.* Journal for Research in Mathematics Education 43(4), 358–390. | 10.5951/jresematheduc.43.4.0358 | §7 proof maps |
-| Rittle-Johnson, B., & Star, J. (2007). *Does comparing solution methods facilitate conceptual and procedural knowledge?* Journal of Educational Psychology 99(3), 561–574. | 10.1037/0022-0663.99.3.561 | §4 contrast pairs |
-| Mayer, R. (2008). *Applying the science of learning: Evidence-based principles for the design of multimedia instruction.* American Psychologist 63(8), 760–769. | 10.1037/0003-066X.63.8.760 | §6 captions |
+| Atkinson, R., Derry, S., Renkl, A., & Wortham, D. (2000). *Learning from Examples: Instructional Principles from the Worked Examples Research.* Review of Educational Research 70(2), 181–214. | 10.3102/00346543070002181 | §5 — an example *system*, not isolated examples |
+| Nathan, M., & Petrosino, A. (2003). *Expert Blind Spot Among Preservice Teachers.* American Educational Research Journal 40(4), 905–928. | 10.3102/00028312040004905 | §14 — why a reader outside the discovery context is needed at all |
+| Inglis, M., & Alcock, L. (2012). *Expert and Novice Approaches to Reading Mathematical Proofs.* Journal for Research in Mathematics Education 43(4), 358–390. | 10.5951/jresematheduc.43.4.0358 | §7 — name the implicit warrant; §14 — competent readers do diverge |
+
+Eight further works (Ainsworth 2006; Duval 2006; Arcavi 2003; Sweller & Cooper
+1985; Chandler & Sweller 1991; Kalyuga et al. 2003; Rittle-Johnson & Star 2007;
+Mayer 2008) had their bibliographic metadata confirmed but **their texts could
+not be opened** — publisher pages returned authentication redirects or HTTP 403.
+They are listed in the ledger as contextual reading with **no rule mapping**.
+Halmos 1970 and Watson & Mason 2005 have no verified record at all.
+
+**Crossref metadata is not content verification.** A source that appears only in
+the ledger's unverified table may not be cited in support of any rule until it
+has actually been opened.
+
+The three verified items concern learners, preservice teachers, and proof
+validation behaviour. None of them is about writing research papers in
+combinatorics, and none of this protocol's rules rests on them: the rules come
+from a concrete project failure, and the literature records the adjacent
+tradition.
 
 Two further works are commonly cited in this area and are **not** listed above
 because no DOI record was verified in this session: Halmos, *How to Write
