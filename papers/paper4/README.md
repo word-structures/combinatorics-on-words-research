@@ -1,8 +1,9 @@
-﻿# Exact Carry Geometry for Abelian-Square Constraints under Partial Uniform Block Assignment
+# Exact Carry Geometry for Abelian-Square Constraints under Partial Uniform Block Assignment
 
 **Author:** Joonas Huhta
 **Project:** Word Structures project (wordstructures.org · Finland)
-**Status:** Preprint v1.1 — submission-ready
+**Status:** Preprint v1.1 — released from this repository 2026-08-31. Not submitted to a journal, not peer reviewed, no DOI, not on arXiv.
+**Reader-facing entry:** [`publications/2026-exact-carry-geometry/`](../../publications/2026-exact-carry-geometry/README.md) — this directory remains canonical.
 
 ## Main result
 For every L ≥ 5, with exactly one unresolved source role:
