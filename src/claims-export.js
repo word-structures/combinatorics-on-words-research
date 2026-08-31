@@ -50,7 +50,13 @@ const path = require('path');
 
 const LEDGER = path.join(__dirname, '..', 'MATH_CLAIMS.md');
 const EXPLORER_HTML = path.join(__dirname, '..', 'explorer.html');
-const VALID_STATUS = ['PRIMARY', 'COMPUTED', 'INDIRECT', 'REJECTED'];
+// Order is precedence: parseLedger resolves a row with
+// VALID_STATUS.find(s => statusCell.includes(s)), a substring test, so an
+// earlier token wins when a cell mentions two. DERIVED is appended last and
+// deliberately: adding it reclassifies no existing row (verified over all 119
+// rows -- zero status cells even mention it). See EPISTEMIC_DISCIPLINE.md
+// Sec. 15; the token is a rescued proposal and no row uses it yet.
+const VALID_STATUS = ['PRIMARY', 'COMPUTED', 'INDIRECT', 'REJECTED', 'DERIVED'];
 
 // ---------------------------------------------------------------------------
 // Parsing

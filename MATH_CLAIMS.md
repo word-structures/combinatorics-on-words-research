@@ -4,6 +4,7 @@
 >
 > Vahvistustilat:
 > - `PRIMARY` / `LEVEL_2_VERIFIED_SOURCE` = tarkistettu suoraan alkuperäisestä lähteestä (paperi/LaTeX/lähdekoodiarkisto)
+> - `DERIVED` / `LEVEL_1P_INTERNAL_PROOF` = sisäisesti todistettu, toistettava johto; ei ulkoista lähdettä. **Ehdotettu 2026-08-31, ks. `EPISTEMIC_DISCIPLINE.md` §15 — yksikään rivi ei vielä käytä tätä tilaa.** Se sijoittuu `COMPUTED`:n ja `PRIMARY`:n väliin: vahvempi kuin äärellinen laskennallinen tarkistus, heikompi kuin ulkoisesta lähteestä varmennettu. **Ei sisällä uutuusväitettä eikä ulkoista varmennusta.**
 > - `COMPUTED` / `LEVEL_1_INTERNAL_CHECKSUM` = vahvistettu laskennallisesti tässä projektissa, ei ulkoista lähdetarkistusta
 > - `INDIRECT` = yhdenmukainen tunnetun tuloksen kanssa, ei suoraan lähteestä tarkistettu
 > - `REJECTED` = aiemmin esitetty, todettu vääräksi/tukemattomaksi — pidetään näkyvissä ETTEI kukaan yritä lisätä uudelleen

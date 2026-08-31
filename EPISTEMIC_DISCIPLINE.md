@@ -227,3 +227,34 @@ If two selections have different semantics, they never share an informal name. T
 > if `x ∈ S` and `x → y` is legal, then `y ∈ S`.
 
 Restricting to a visually natural subset can change the dynamics. Where closure fails, an induced subgraph silently deletes legal continuations, so it answers a **different mathematical question** — often one that looks like the intended one and returns plausible numbers. Either use a closed system, justify the restriction mathematically, or state explicitly that the induced subsystem has different semantics. Do not report a closure check as done when what was checked is that the subset *looks* natural.
+
+---
+
+## 15. `DERIVED` / Level 1P Internal Proof Status
+
+> **STATUS: PROPOSAL, RESCUED 2026-08-31 — NOT YET OWNER-ACCEPTED.**
+> The token is declared in the ledger's vocabulary and accepted by the parser,
+> and **no ledger row uses it.** Reclassifying any existing row is a separate
+> decision that this section does not make. See "What this proposal does not
+> settle" below.
+
+**Rule:** mathematical derivations that are internally proved but lack external source verification use the `DERIVED` (`LEVEL_1P_INTERNAL_PROOF`) status. To qualify:
+
+- a complete, written derivation must exist;
+- all assumptions and quantifiers must be explicit;
+- the derivation must be reproducible without relying on the discovering AI's hidden reasoning;
+- independent re-derivation or hostile proof audit remains required before stronger promotion;
+- this status carries **no** literature-novelty implication;
+- this status carries **no** external-verification implication.
+
+**The gap it addresses.** The truth axis (§13) asks *by what route is this established*, and until now it offered one internal answer: `COMPUTED`, defined as verified computationally in this project. That single token spans two genuinely different things — a finite window checked by machine, and an exact algebraic derivation that decides a question outright. The ledger has been compensating for this in prose. Row 17 interrupts itself to say the quality differs from other Level 1 rows, *"tämä ei ole äärellisen ikkunan empiirinen havainto vaan eksakti algebrallinen johto"*; row 20 opens with the same disclaimer; row 99 describes *"a short, exact linear-algebra proof"* while carrying `COMPUTED`. When rows have to explain in free text that their status understates them, the status vocabulary is missing a value.
+
+`DERIVED` sits between `COMPUTED` and `PRIMARY` on that axis: stronger than a finite computational check, weaker than a claim verified against an external source. It is **not** a claim of novelty, importance, or generality — those are separate axes (§13), and a `DERIVED` row's `NOVELTY_STATUS` remains `NOT_ESTABLISHED` exactly as before.
+
+**What this proposal does not settle**, and what an owner decision must:
+
+1. **Which rows, if any, move.** 56 of the ledger's `COMPUTED` rows mention an exact derivation or proof in their text. That is a *candidate* set discovered by keyword, not a reviewed one. Migrating rows is per-row evidence work under `AGENTS.md` rule 1, not a bulk relabelling — and a bulk relabelling is precisely the operation rule 8 warns destroys calibration.
+2. **Whether `LEVEL_1P` is the right name.** It is chosen to sort between Level 1 and Level 2 and reads as a patch on a numbering scheme rather than a concept. `DERIVED` alone may be the better public token.
+3. **Whether a proved derivation should instead raise the *mechanism* axis.** `PROVED MECHANISM` already exists there. If a row's proof explains *why* rather than establishing *that*, it may belong on that axis instead — and some rows will legitimately want both.
+
+Until those are decided, the correct reading of this section is: the gap is real and attested by the ledger's own prose; the remedy is drafted; nothing has been reclassified.
