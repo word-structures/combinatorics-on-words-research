@@ -1,0 +1,329 @@
+{
+  "schema_version": "0.1",
+  "failures": [
+    {
+      "failure_id": "FL-005",
+      "episode": "Profile-Response Soft Engine Prep 2026-08-25",
+      "date": "2026-08-25",
+      "observed_symptom": "Soft graph was losing edges at finite epsilon.",
+      "failure_mode": "FINITE_SOFT_SUPPORT_THRESHOLD_ERROR",
+      "actors": [
+        "human",
+        "AI"
+      ],
+      "triggering_conditions": [
+        "Numerical thresholding (weights[i][k] > 1e-12) was used to decide whether an edge exists structurally."
+      ],
+      "why_plausible": "Floating point operations often use small epsilon thresholds to avoid numerical noise.",
+      "scientific_impact": "Could have incorrectly simulated a physical or topological phase transition where none existed.",
+      "epistemic_impact": "Compromised the validity of the support graph model for finite epsilon.",
+      "detection_layer": "Human review of mathematical principles.",
+      "preserved_artifacts": [],
+      "corrective_action": [
+        "Removed the numerical threshold.",
+        "Ensured all mathematically positive edges (exp(-epsilon) > 0) are retained in the support graph."
+      ],
+      "defense_introduced": [
+        "Explicitly separated hard-deletion logic from finite soft graph generation."
+      ],
+      "recurrence_test": {
+        "path": null
+      },
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "residual_risk": "Other numerical precision issues in matrix operations may still exist."
+    },
+    {
+      "failure_id": "FL-006",
+      "episode": "Profile-Response PR 56 Documentation",
+      "date": "2026-08-25",
+      "observed_symptom": "The h=2...7 preregistration draft remained presented as usable after its data had been exposed.",
+      "failure_mode": "HOLDOUT_EXPOSURE_INVALIDATION_NOT_PROPAGATED",
+      "actors": [
+        "human",
+        "AI"
+      ],
+      "triggering_conditions": [
+        "The h=2...7 soft-path data were exposed in the UNREGISTERED_EXPLORATORY_RUN, rendering the old draft useless."
+      ],
+      "why_plausible": "Documentation often lags behind exploratory script execution.",
+      "scientific_impact": "None directly.",
+      "epistemic_impact": "Could have led to a false confirmatory test using already-exposed data.",
+      "detection_layer": "Human review of the methodology state.",
+      "preserved_artifacts": [
+        {
+          "path": "scratch/profile-response-red-team/WORKING_REPORT.md",
+          "sha256": null
+        }
+      ],
+      "corrective_action": [
+        "Renamed section to 'Historical pre-campaign preregistration draft â€” SUPERSEDED'.",
+        "Added explicit wording that future confirmatory protocols must use genuinely new predictions or holdout data."
+      ],
+      "defense_introduced": [
+        "Clear invalidation of compromised evaluation sets."
+      ],
+      "recurrence_test": {
+        "path": null
+      },
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "residual_risk": "New preregistrations might accidentally include the compromised profiles."
+    },
+    {
+      "failure_id": "FL-007",
+      "episode": "Profile-Response Soft Path Campaign 2026-08-25",
+      "date": "2026-08-25",
+      "observed_symptom": "Soft-path epsilon-sweep was run for h=2...7 before the formal preregistration was frozen.",
+      "failure_mode": "PREMATURE_EXECUTION / HUMAN_AUTHORIZATION_BEFORE_PREREGISTRATION_FREEZE",
+      "actors": [
+        "human",
+        "AI"
+      ],
+      "triggering_conditions": [
+        "Execution was triggered manually before the formal preregistration freeze was completed."
+      ],
+      "why_plausible": "Interactive analysis workflows can easily bypass formal protocol steps.",
+      "scientific_impact": "None directly, but required reclassifying the campaign.",
+      "epistemic_impact": "The h=2...7 soft-path data became exposed, meaning it can no longer be used for confirmatory tests. Run status changed to UNREGISTERED_EXPLORATORY_RUN.",
+      "detection_layer": "Epistemic protocol enforcement review.",
+      "preserved_artifacts": [
+        {
+          "path": "research/forensics/profile-response-soft-path-early-run-2026-08-25/",
+          "sha256": null
+        }
+      ],
+      "corrective_action": [
+        "Reclassified the completed run as UNREGISTERED_EXPLORATORY_RUN.",
+        "Prohibited its use as pristine confirmatory evidence.",
+        "Forensically preserved the executed campaign and provenance.",
+        "Preserved h=8 as an untouched holdout.",
+        "Marked the old h=2...7 preregistration draft superseded."
+      ],
+      "defense_introduced": [
+        "Strict H8_BLINDNESS_BREACH=NO and H8_RUN=NO metadata flags in task context."
+      ],
+      "recurrence_test": {
+        "path": null
+      },
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "residual_risk": "Subsequent tasks might accidentally read the exposed data and use it for false predictions."
+    },
+    {
+      "failure_id": "FL-008",
+      "episode": "Profile-Response Soft Path Campaign Forensics",
+      "date": "2026-08-25",
+      "observed_symptom": "SOFT_PATH_RESULTS.md contained uninterpolated template placeholders and mismatched headers.",
+      "failure_mode": "CORRUPTED_DERIVED_PRESENTATION",
+      "actors": [
+        "AI"
+      ],
+      "triggering_conditions": [
+        "The formatter literally contained escaped interpolation sequences such as ${item.h}, ${item.profile}, ${point.eps}."
+      ],
+      "why_plausible": "String interpolation syntax was escaped instead of evaluated during generation.",
+      "scientific_impact": "The document falsely described finite-horizon moment recurrence alongside Poisson-Green-Kubo, whereas only Method A was used.",
+      "epistemic_impact": "Created a misleading historical artifact. However, the raw data itself remained valid.",
+      "detection_layer": "Independent human inspection of the forensic package.",
+      "preserved_artifacts": [
+        {
+          "path": "research/forensics/profile-response-soft-path-early-run-2026-08-25/SOFT_PATH_RESULTS.md",
+          "sha256": null
+        }
+      ],
+      "corrective_action": [
+        "Appended a warning note to the artifact identifying it as corrupted.",
+        "Did NOT repair the artifact to preserve exact historical evidence."
+      ],
+      "defense_introduced": [],
+      "recurrence_test": {
+        "path": null
+      },
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "residual_risk": "Future readers might ignore the warning note."
+    },
+    {
+      "failure_id": "FL-009",
+      "episode": "Profile-Response PR 56 Documentation",
+      "date": "2026-08-25",
+      "observed_symptom": "WORKING_REPORT.md described Method B as 'exact transition moment tracking'.",
+      "failure_mode": "INACCURATE_METHOD_LABEL",
+      "actors": [
+        "AI"
+      ],
+      "triggering_conditions": [
+        "Using overly confident phrasing for a numerical computation."
+      ],
+      "why_plausible": "The implementation used a finite-horizon Float64 recurrence whose results numerically agreed closely with Method A, but the presentation label did not distinguish numerical recurrence from exact arithmetic.",
+      "scientific_impact": "None directly, but obscured the actual algorithmic methodology used.",
+      "epistemic_impact": "Violated the rule against hyperbolic or self-certifying language.",
+      "detection_layer": "Human review of PR documentation.",
+      "preserved_artifacts": [
+        {
+          "path": "scratch/profile-response-red-team/WORKING_REPORT.md",
+          "sha256": null
+        }
+      ],
+      "corrective_action": [
+        "Replaced 'exact transition moment tracking' with 'finite-horizon Float64 moment recurrence'."
+      ],
+      "defense_introduced": [],
+      "recurrence_test": {
+        "path": null
+      },
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "residual_risk": "Other inaccurate descriptors may exist in unreviewed documentation."
+    },
+    {
+      "failure_id": "FL-012",
+      "episode": "Profile-Response PR 56 Documentation",
+      "date": "2026-08-25",
+      "observed_symptom": "Commit d549732311c9f736a495bc950ae6734bdb345d48 was created using the --no-verify flag.",
+      "failure_mode": "NO_VERIFY_GOVERNANCE_EXCEPTION",
+      "actors": [
+        "human",
+        "AI"
+      ],
+      "triggering_conditions": [
+        "The commit command explicitly used --no-verify after the required checks had already been run manually."
+      ],
+      "why_plausible": "Manual completion of the required checks can make hook execution appear redundant, but the reason for bypassing the hook was not preserved as independent evidence.",
+      "scientific_impact": "No scientific error is established by this event.",
+      "epistemic_impact": "Automated enforcement was bypassed for that commit; subsequent CI and manual checks provided separate evidence, but do not make --no-verify standard procedure.",
+      "detection_layer": "Human review of the git commit flags.",
+      "preserved_artifacts": [],
+      "corrective_action": [
+        "Added a governance note to the PR explicitly documenting the --no-verify usage.",
+        "Ensured subsequent commits used standard hooks."
+      ],
+      "defense_introduced": [],
+      "recurrence_test": {
+        "path": null
+      },
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "residual_risk": "Overuse of --no-verify could allow actual scientific errors to enter the repository."
+    },
+    {
+      "failure_id": "FL-013",
+      "episode": "Profile-Response Soft Engine Prep / PR #56",
+      "date": "2026-08-25",
+      "observed_symptom": "WORKING_REPORT.md reported old Spearman 0.9714 while corrected audit results contained tie-corrected 0.9758316305187079; soft_test_out.json represented older component/support behavior after engine controls had been repaired.",
+      "failure_mode": "STALE_DERIVED_ARTIFACT",
+      "actors": [
+        "AI"
+      ],
+      "triggering_conditions": [
+        "Code was repaired but the derived artifacts dependent on that code were not synchronously regenerated before review."
+      ],
+      "why_plausible": "Manually regenerating multiple disjoint documentation and result files is error-prone and easily forgotten.",
+      "scientific_impact": "No canonical mathematical claim was shown false by this presentation drift.",
+      "epistemic_impact": "Code, results, and presentation were temporarily inconsistent and could have misled review.",
+      "detection_layer": "Independent human inspection of PR artifacts.",
+      "preserved_artifacts": [],
+      "corrective_action": [
+        "Regenerated and synchronized derived artifacts from repaired code."
+      ],
+      "defense_introduced": [
+        "Existing repository policy requires inspection of modified and untracked files before commit."
+      ],
+      "recurrence_test": {
+        "path": null
+      },
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "residual_risk": "Future artifacts might still drift if Artifact Freshness CI is not implemented."
+    },
+    {
+      "failure_id": "FL-014",
+      "episode": "Reliability Engine v0.1 PR A Validation",
+      "date": "2026-08-25",
+      "observed_symptom": "The v0.1 JSON Schema encoded over-escaped failure_id/date regex patterns while the custom Node validator encoded the intended regex semantics.",
+      "failure_mode": "SCHEMA_VALIDATOR_CONTRACT_DIVERGENCE",
+      "actors": [
+        "AI"
+      ],
+      "triggering_conditions": [
+        "Multiple escaping layers while generating JSON through PowerShell.",
+        "Regression tests exercised the custom validator but did not inspect the durable JSON Schema patterns."
+      ],
+      "why_plausible": "JSON strings containing regex backslashes require precise escaping, which can be altered by intermediate shell environments.",
+      "scientific_impact": "None.",
+      "epistemic_impact": "The declared durable data contract and runtime validator disagreed; a future standards-based schema validator could reject data that the custom validator accepted.",
+      "detection_layer": "Independent pre-PR audit.",
+      "preserved_artifacts": [],
+      "corrective_action": [
+        "Fixed schema regex encoding.",
+        "Added schema/runtime contract regression tests."
+      ],
+      "defense_introduced": [
+        "Schema/runtime contract regression tests."
+      ],
+      "recurrence_test": {
+        "path": "tests/reliability/failure-ledger.test.js"
+      },
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "residual_risk": "Other unexercised schema constraints could diverge from the runtime validator."
+    },
+    {
+      "observed_symptom": "A temporary helper, scratch/repair_script.js, was committed even though PR A's declared file scope excluded it.",
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "epistemic_impact": "The reported exact changed-file scope disagreed with the actual Git tree, demonstrating that a narrative final report is not sufficient evidence for scope closure.",
+      "scientific_impact": "None.",
+      "episode": "Reliability Engine v0.1 PR A Repair",
+      "defense_introduced": [
+        "explicit base...HEAD file-list audit before PR creation"
+      ],
+      "preserved_artifacts": [],
+      "why_plausible": "Executing a blanket git add . captures untracked temporary files if they match no ignore rules.",
+      "recurrence_test": {
+        "path": null
+      },
+      "date": "2026-08-25",
+      "triggering_conditions": [
+        "temporary helper was created inside repository scratch/",
+        "staging used git add .",
+        "final report enumerated only five intended files and failed to detect the sixth committed file."
+      ],
+      "corrective_action": [
+        "remove the helper in this additive commit",
+        "verify changed-file scope from Git, not from intended file list"
+      ],
+      "residual_risk": "Scratch files might still be accidentally committed if git add . is used without review.",
+      "actors": [
+        "human",
+        "AI"
+      ],
+      "failure_mode": "UNINTENDED_SCRATCH_ARTIFACT_COMMIT",
+      "detection_layer": "Independent Git-tree comparison.",
+      "failure_id": "FL-015"
+    },
+    {
+      "observed_symptom": "README contained malformed path rendering and a U+0007 control character in the word actors after a scripted PowerShell edit.",
+      "dataset_role": "ENGINE_DESIGN_SET",
+      "epistemic_impact": "The final report claimed README repair had succeeded although the committed presentation remained corrupted.",
+      "scientific_impact": "None.",
+      "episode": "Reliability Engine v0.1 PR A Repair",
+      "defense_introduced": [
+        "direct artifact-content inspection after scripted documentation edits"
+      ],
+      "preserved_artifacts": [],
+      "why_plausible": "PowerShell strings interpret certain sequences differently than raw text, often injecting control characters or escaping literals unexpectedly.",
+      "recurrence_test": {
+        "path": null
+      },
+      "date": "2026-08-25",
+      "triggering_conditions": [
+        "documentation text containing backticks/backslashes was generated through an escaping-sensitive PowerShell string",
+        "validation did not inspect final rendered/literal README contents"
+      ],
+      "corrective_action": [
+        "rewrite README as clean literal UTF-8",
+        "inspect resulting content/control characters"
+      ],
+      "residual_risk": "Future edits might still inject control characters if not written as literal UTF-8.",
+      "actors": [
+        "AI"
+      ],
+      "failure_mode": "DOCUMENTATION_ESCAPE_CORRUPTION",
+      "detection_layer": "Independent direct inspection of the committed README.",
+      "failure_id": "FL-016"
+    }
+  ]
+}
