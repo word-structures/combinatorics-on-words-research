@@ -53,7 +53,7 @@ A gate is never skipped. It is closed either as passed, or explicitly as
 | 6H | **Human Comprehension** | whether an outsider can follow the story | see §3.5 | manuscript, reader-friction ledger |
 | 7 | Hostile Referee | content defects | specialist / proof / computational / **reader** referees each return ACCEPT–MINOR–MAJOR–REJECT | referee report |
 | 8 | **Artifact Closure** | the delivered object | see §3 | submission audit + hash manifest |
-| 9 | Owner Promotion | release | owner decision; hashes frozen; non-claims explicit | Git history, release note |
+| 9 | Owner Promotion | release | owner decision; hashes frozen; non-claims explicit; **and for a publicly promoted paper, publication-catalogue closure (§3.7)** | Git history, release note, `publications/` entry |
 
 Stage 8 is the gate this project did not have. It is described in full below.
 Stage 6H is a **sub-gate of Stage 6**, not a tenth gate: the numbering of Gates
@@ -247,6 +247,45 @@ non-English, be inaccessible, or have influenced model training with no
 recoverable attribution. The strongest permitted sentence has the form *"to the
 best of our knowledge, within the documented search scope …"*, and the scope is
 stated rather than implied. There is no status called `PROVED NOVEL`.
+
+---
+
+## 3.7 Gate 9 — publication-catalogue closure
+
+Applies **only to a paper the owner promotes publicly**, and only at Gate 9.
+A paper that is promoted internally, withdrawn, or held closes this condition
+as `NOT APPLICABLE — because …` like any other.
+
+**Condition.** For a publicly promoted paper, a reader-facing entry exists in
+the publication catalogue and resolves to the canonical paper artifact and the
+relevant reproducibility material.
+
+The two directories are not competing sources of truth:
+
+```
+papers/paperN/    the canonical project-owned package — manuscript, figures,
+                  build, audit, reproducibility. Owns the paper.
+publications/     the reader-facing catalogue — one entry per released paper,
+                  each pointing back at the package that owns it.
+```
+
+Where the two disagree, the canonical package wins and the catalogue entry is
+corrected. A catalogue entry never holds a second editable manuscript source;
+a stable PDF may be copied there byte-for-byte so a reader can open the paper
+without navigating the research tree.
+
+**This condition belongs to Gate 9 and nowhere earlier.** Discovery, Claim
+Freeze, Proof Closure and manuscript work create no publication directory —
+the order is *research architecture → canonical package → owner promotion →
+catalogue closure*, and pulling it forward would put a release surface in
+front of results that may never be released.
+
+**Why it exists.** Paper 4 reached Gate 9 with a complete canonical package
+and no reader-facing entry, while the catalogue listed one other paper. A
+reader arriving at `publications/` would have concluded the project had
+released one paper, not two. Nothing was wrong in the package, and nothing was
+wrong in the catalogue; the defect lived entirely in the fact that no gate
+owned the join.
 
 ---
 
