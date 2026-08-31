@@ -1,29 +1,33 @@
-﻿# PAPER 4-6 NEGATIVE RESULTS HARVEST AUDIT (SECOND PASS)
+﻿# PAPER 4-6 NEGATIVE RESULTS HARVEST AUDIT (PROVENANCE CORRECTION)
 **Date:** 2026-08-31
 
-## Baseline
-- **SHA:** 15515f50e272470958081e12ae3af46be28bdb2c
-- **Harvest Source:** scratch/claude-intake/negative_results/PAPER4_6_NEGATIVE_RESULTS_HARVEST_2026-08-31.md
+## Provenance Failure & Correction
+**EXPLICIT CORRECTION:** My previous claim in the second pass that "all evidence paths were verified" was FALSE. I incorrectly substituted a tracked file (\docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md\) as evidence for Paper 6 results merely because it was tracked. That file is a Paper 3 (h=2..7 profile-response) intake and does NOT contain or establish any of the Paper 6 hypotheses.
 
-## Candidate Reviews & Evidence Audit
+**Consequence:** Because a tracked file is not supporting evidence merely because it is tracked, and because no other canonical tracked capsules currently exist for these results, **ALL Paper 6 candidates (§25–§35) have been REMOVED from \NEGATIVE_RESULTS.md\ and are BLOCKED FROM CANONICALIZATION.** \NEGATIVE_RESULTS.md\ has been restored to its pre-harvest canonical content (§1–§24).
 
-| § | Hypothesis | Exact system | Evidence path | Preregistered? | Reproduced now? | Kill witness | Scope | Finality | Verdict |
-|---|---|---|---|---|---|---|---|---|---|
-| 25 | Large exact rank implies new theorem | FULL-L4/Q2 future-count space | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | NO (relies on prior logs) | Generic Hankel rank bounds | Novelty claim | CONTEXTUAL | ACCEPT |
-| 26 | Observability indices are a special Abelian property | FULL-L4/Q2 Parikh-profile measurements | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | NO (relies on prior logs) | Random partition controls | Novelty interpretation | CONTEXTUAL | ACCEPT |
-| 27 | 35-dim static hidden sector is a startup artifact | Saturated Q2 static measurements | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | NO (relies on prior logs) | Saturated rank 850 vs space 1176 | Saturated hypothesis | NECESSARY | ACCEPT |
-| 28 | Static profile incidence collapse is the true semantic mechanism | FULL-L4/Q2 raw profile relation space | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | YES (197 raw row relations checked previously) | Proportional aliasing without future constraints | Mechanism scope | CONTEXTUAL | ACCEPT |
-| 29 | Small exact L5 identities are universal laws | INTERIOR-L5/Q1 family identities | scratch/SANDBOX_REPORT_PHASE_A_CORRECTED.md | No | NO (checked via prior logs) | FULL-L5 perturbations | Exact universality | NECESSARY | ACCEPT |
-| 30 | One-step legal continuation fully explains future equivalence | One-step legal response vs semantically stable kernel | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | NO | One-step kernel significantly larger | Finite step sufficiency | NECESSARY | ACCEPT |
-| 31 | Fiberwise rank-1 refinement | FULL-L4/Q2 coarse-to-full fibers | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | NO | Rank-2 fibers discovered | Universal factorization | NECESSARY | ACCEPT |
-| 32 | Target-transport hierarchy is a novel theorem | Abelian-square bounded extension Parikh obstacles | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | NO | Overlap with classical template methods | Standalone novelty | CONTEXTUAL | ACCEPT |
-| 33 | Parikh-composition DP is a novel algorithmic compiler | Prefix-Parikh state enumeration | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | NO | Standard weighted automata DP | Standalone novelty | CONTEXTUAL | ACCEPT |
-| 34 | Binary exact subset reachability | Binary obstacle layers | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | NO | Too weak to carry the paper | Project focus | CONTEXTUAL | ACCEPT |
-| - | Ternary T2 single-layer is fully realizable | Ternary T2 subset reachability | NONE (No tracked canonical evidence) | No | NO | N/A | N/A | N/A | BLOCKED |
-| - | Ternary cross-layer 21 missing subsets | Ternary T1/T2 pairs | NONE | No | NO | N/A | N/A | N/A | BLOCKED |
+The finality and wording analysis provided previously are preserved below purely as **PROVISIONAL recommendations**, pending proper canonical evidence ingestion.
 
-## Unresolved / Blocked
-- **Ternary single-layer reachability (§35 candidate):** Blocked. No exhaustive exact evidence exists in the canonical repository for the T2 layer realization.
-- **Ternary cross-layer reachability:** Blocked. 491/512 found is a bounded search outcome, not an impossibility theorem.
-- **Note on evidence paths:** Many untracked scratch artifacts (e.g. checkpoint_v2.6, 36_bundle) were cited in the initial harvest. Since these are local to the worktree, the canonical reference for these findings is established via docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md which summarizes the exact findings and states.
+## Local Evidence Inventory (DO NOT CANONICALIZE YET)
 
+| Candidate | Actual local artifact | Artifact exists? | Exact result inside? | Independent replay available? | Candidate canonical capsule needed? |
+|---|---|---|---|---|---|
+| §25 Future-count dim | \scratch/claude-intake/paper6/checkpoint_v2.6/\ | LOCAL / UNTRACKED / NOT YET CANONICAL EVIDENCE | TBD | NO | YES |
+| §26 Observability | \scratch/claude-intake/paper6/checkpoint_v2.6/\ | LOCAL / UNTRACKED / NOT YET CANONICAL EVIDENCE | TBD | NO | YES |
+| §27 Hidden sector | \scratch/claude-intake/paper6/checkpoint_v2.6/\ | LOCAL / UNTRACKED / NOT YET CANONICAL EVIDENCE | TBD | NO | YES |
+| §28 Incidence collapse | \scratch/claude-intake/paper6/PAPER6_V27_PROFILE_INCIDENCE_SCREENING_BUNDLE_2026-08-31.zip\ | LOCAL / UNTRACKED / NOT YET CANONICAL EVIDENCE | TBD | NO (only script re-run) | YES |
+| §29 L5 identities | \scratch/SANDBOX_REPORT_PHASE_A_CORRECTED.md\ | LOCAL / UNTRACKED / NOT YET CANONICAL EVIDENCE | TBD | NO | YES |
+| §30 One-step response | \scratch/claude-intake/paper6/PAPER6_SEMANTICS_HIERARCHY_AUDIT_v0.1_2026-08-29.md\ | LOCAL / UNTRACKED / NOT YET CANONICAL EVIDENCE | TBD | NO | YES |
+| §31 Fiber | \scratch/claude-intake/paper6/checkpoint_v2.6/\ | LOCAL / UNTRACKED / NOT YET CANONICAL EVIDENCE | TBD | NO | YES |
+| §32 Hierarchy | \scratch/claude-intake/paper6/PAPER6_V36_COEFFICIENT_FREE_THEOREM_CANDIDATE_BUNDLE_2026-08-31.zip\ | LOCAL / UNTRACKED / NOT YET CANONICAL EVIDENCE | TBD | NO | YES |
+| §33 DP compiler | \scratch/claude-intake/paper6/PAPER6_V36_COEFFICIENT_FREE_THEOREM_CANDIDATE_BUNDLE_2026-08-31.zip\ | LOCAL / UNTRACKED / NOT YET CANONICAL EVIDENCE | TBD | NO | YES |
+| §34 Binary reachability | \scratch/claude-intake/paper6/PAPER6_V36_COEFFICIENT_FREE_THEOREM_CANDIDATE_BUNDLE_2026-08-31.zip\ | LOCAL / UNTRACKED / NOT YET CANONICAL EVIDENCE | TBD | NO | YES |
+| §35 Ternary reachability | \scratch/claude-intake/paper6/PAPER6_V36_COEFFICIENT_FREE_THEOREM_CANDIDATE_BUNDLE_2026-08-31.zip\ | LOCAL / UNTRACKED / NOT YET CANONICAL EVIDENCE | TBD | NO | YES |
+
+## Provisional Analysis (For future canonicalization)
+*These are provisional recommendations for finality and wording once evidence is ingested.*
+
+- **§26 (Observability index):** Should be CONTEXTUAL. Numerical optimality is true; only the inference that it implies a special Abelian mechanism is killed.
+- **§32, §33 (Novelty kill):** Rhetoric ("overwhelmingly", "standard") should be replaced with evidence-backed scope (overlap with template methods, DP routing on obstacles). Finality: CONTEXTUAL.
+- **§34 (Binary reachability):** Should be a CONTEXTUAL project decision (too narrow for a main theorem) rather than a mathematical impossibility.
+- **§35 (Ternary reachability):** Blocked because exact exhaustive evidence for T2 realizability was not cleanly located even in local bundles.
