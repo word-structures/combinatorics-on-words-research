@@ -117,7 +117,7 @@
 
 3. **ONE RUNNING EXAMPLE PER CENTRAL MECHANISM:** at least one concrete object survives several sections and grows more abstract with the exposition. Isolated examples do not satisfy this.
 
-4. **PAPER-AND-PENCIL WITNESS:** every computer-assisted headline carries a human-scale instance a reader can check without running anything. Exhaustive computation is not replaced; its *semantics* is made inspectable.
+4. **HUMAN-SCALE WITNESS, WITH ITS CATEGORY STATED:** every computer-assisted headline carries a human-scale witness or traceability object, and the witness's epistemic category is explicit — *human-inspectable semantic witness* (the reader sees what the objects mean), *paper-and-pencil verifiable witness* (the reader can check the small claim by hand), or *machine-certified exact witness* (concrete and readable, with the exact claim resting on a reproducible certificate). **A machine-certified witness is never described as checkable by hand.** Exhaustive computation is not replaced; its *semantics* is made inspectable. The conceptual core of a result should normally reach the second category even where the full theorem cannot. Categories and their use: `docs/research/HUMAN_READABILITY_AND_VISUAL_EXPOSITION_PROTOCOL.md`; gate: `PAPER_LIFECYCLE.md` Stage 6H, condition 5.
 
 5. **REPRESENTATIONAL BRIDGE:** central mechanisms are supported across concrete, visual, algebraic and structural views, and the reader can move between them **in both directions**. Picture-to-equation without equation-to-picture means the views are not yet integrated.
 

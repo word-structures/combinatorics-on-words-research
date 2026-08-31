@@ -4,7 +4,7 @@
 
 Joonas Huhta
 Word Structures project
-wordstructures.org · Finland
+wordstructures.org Â· Finland
 
 ## Read the paper
 
@@ -43,7 +43,7 @@ Every C_h in this family exceeds the unrestricted ternary benchmark.
 - no general monotonicity theorem;
 - no phase-transition theorem;
 - no general causal law;
-- no implication proving Mäkelä;
+- no implication proving MÃ¤kelÃ¤;
 - certified family only h=2,...,6.
 
 ## Verify this paper

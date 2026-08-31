@@ -102,7 +102,11 @@ on 2026-07-30:
   that warning structural, not just prose
 - `docs/plans/` — **living plans**: `SANALAB_PLAN`, `UI_UX_PLAN`,
   `SKILLS_PLAN`, `RESEARCH_ARCHITECT`, `PROJECT_ARCHITECTURE`
-- `papers/` (formerly `latest/`) — literature, gitignored
+- `papers/paperN/` — canonical project-owned paper packages, tracked.
+  `papers/` also holds local third-party literature (formerly `latest/`),
+  which stays gitignored and is never redistributed
+- `publications/` — the reader-facing publication catalogue, one entry per
+  released paper, each pointing back at the canonical package
 - `datasets/` — record words, gitignored. The code looks them up via
   `word-anatomy.js`'s `resolveDataFile()`, which also checks the root, so
   an old clone still works

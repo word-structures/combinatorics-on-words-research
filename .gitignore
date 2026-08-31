@@ -4,13 +4,38 @@
 datasets/keranen_*.txt
 keranen_*.txt
 
-# Copyrighted/third-party materials. Cited in MATH_CLAIMS.md by identifier,
-# never redistributed. Whole folder ignored (2026-07-31, after history rewrite
-# purged 4 previously tracked non-PDF files that slipped past the old
-# papers/*.pdf-only rule).
-papers/
+# `papers/` holds two different kinds of thing, and they must not share a rule.
+#
+#   papers/<anything>      LOCAL third-party literature. Copyrighted, cited in
+#                          MATH_CLAIMS.md by identifier, never redistributed
+#                          from this repository. Ignored.
+#   papers/paperN/         a PROJECT-OWNED canonical paper package (manuscript,
+#                          figures, audit, reproducibility). Repository content.
+#
+# Until 2026-08-31 a blanket `papers/` rule covered both. papers/paper4/ was
+# tracked only by grandfathering -- git ignores untracked files, not tracked
+# ones -- so the rule silently would have swallowed papers/paper5/ and every
+# package after it. Ignore everything directly under papers/, then re-include
+# the numbered project-owned directories.
+#
+# The trailing slash on the exceptions is load-bearing: it matches directories
+# only, so a third-party file whose name happens to start with "paper" (say
+# papers/paper1992_survey.pdf) can never be re-included by it. The digit class
+# is a second guard on the same point.
+papers/*
+!papers/paper[0-9]*/
+!papers/paper[0-9]*/**
+
 latest/*.pdf
+
+# PDFs are ignored by default, because third-party literature arrives as PDF.
+# The exceptions are the project's own canonical and reader-facing artifacts,
+# and they must come after the general rule to take effect -- a later pattern
+# wins. Without them a project-owned paper PDF would be invisible to git while
+# looking perfectly present on disk.
 *.pdf
+!papers/paper[0-9]*/**/*.pdf
+!publications/**/*.pdf
 
 # Personal research notes and correspondence, not for redistribution.
 teoria/

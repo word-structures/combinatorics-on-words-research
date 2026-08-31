@@ -1,4 +1,4 @@
-﻿# Paper 4: Exact Carry Geometry for Abelian-Square Constraints under Partial Uniform Block Assignment
+# Paper 4: Exact Carry Geometry for Abelian-Square Constraints under Partial Uniform Block Assignment
 
 **Thesis:** The paper classifies the carry geometry of Abelian-square constraints in an L-uniform coding with exactly one unresolved source role.
 
@@ -34,7 +34,16 @@
 | 6 | Manuscript Architecture | **PASS** | papers/paper4/manuscript/PAPER4_PREPRINT_v1.1_2026-08-29.md |
 | 7 | Hostile Referee | **PASS** | papers/paper4/audit/PAPER4_GATE_7_HOSTILE_REFEREE_REPORT.md |
 | 8 | Artifact Closure | **PASS** | papers/paper4/audit/PAPER4_V1.1_SUBMISSION_AUDIT.md |
-| 9 | Owner Promotion | **PENDING OWNER PROMOTION** | Awaiting owner merge and release. |
+| 9 | Owner Promotion | **PASS** | Owner-authorized repository publication promotion, 2026-08-31; reader-facing publication catalogue entry added at `publications/2026-exact-carry-geometry/`. Hashes frozen and unchanged; non-claims explicit above. |
 
 **Remaining blockers:**
-- Gate 9 owner promotion only.
+- None. All ten gates are closed.
+
+**What "promoted" means here, exactly:** the paper is released as a preprint
+from this repository and listed in its publication catalogue. It has **not**
+been submitted to a journal, peer reviewed, assigned a DOI, or deposited on
+arXiv. No external acceptance of any kind is claimed.
+
+**Reader-facing entry:** `publications/2026-exact-carry-geometry/README.md`.
+The canonical package remains this directory; where the two disagree, this one
+wins.
