@@ -125,6 +125,14 @@ docs/           program governance (docs/program/), task specifications
                 planning papers (docs/historical/ — do not rely on these),
                 and an archive of retired root-level files kept for
                 provenance (docs/archive/)
+papers/         canonical project-owned paper packages, one per paper under
+                papers/paperN/ — manuscript, figures, build, audit and
+                reproducibility material for that paper. Local third-party
+                literature also sits under papers/ and is ignored by git;
+                see "Sources and rights" below
+publications/   the reader-facing publication catalogue: one entry per
+                released paper, each pointing at the canonical package that
+                owns it, plus the stable PDF a reader downloads
 research/       written research output and dataset provenance records
 datasets/       record-word data — see "Sources and rights" below
 .github/        CI workflow configuration, plus the structured issue forms
@@ -155,7 +163,7 @@ recent version) and a browser are enough.
 ```bash
 git clone https://github.com/word-structures/combinatorics-on-words-research.git
 cd combinatorics-on-words-research
-node tests/test.js                 # mathematical regression tests (41 as of this writing)
+node tests/test.js                 # mathematical regression suite
 node scripts/check-claims-drift.js # guard over claims, citations and UI text
 node scripts/install-git-hooks.js  # optional: makes both of the above run automatically
                                     # on every commit (skipped/blocked appropriately) --
@@ -201,7 +209,10 @@ Three rules follow, and they apply to AI assistants as much as to people:
 3. **An unjustified dead code branch is a trap for whoever comes next.**
 
 AI does not produce mathematical truth here. It helps search, assess and
-challenge — the proof always comes from executed, verified computation.
+challenge; AI output is never accepted as mathematical evidence by itself.
+A claim must rest on a proof, an exact derivation, a certificate,
+reproducible computation, or other explicitly documented evidence
+appropriate to that claim — and the evidence is named, not implied.
 
 **Language.** All documentation, code comments and commit messages are written
 in English, so that the work stays legible to the international research
@@ -255,8 +266,11 @@ Two different citations are useful here, and they point to different things:
 
 Every cited work is recorded in `MATH_CLAIMS.md` with a DOI or arXiv
 identifier; citation does not imply redistribution of the source itself, and
-literature under `papers/` (gitignored) is not redistributed from this
-repository.
+third-party literature is not redistributed from this repository. A local
+copy of a cited paper may sit under `papers/` in a working clone: those files
+are ignored by git and never enter this repository's history. The
+project-owned paper packages under `papers/paperN/` are a different thing
+entirely — they are this repository's own content, and they are tracked.
 
 One dataset file under `datasets/` is currently tracked in this repository
 and is attributed, in the repository's own documentation, to an external
