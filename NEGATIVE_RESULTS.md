@@ -22,16 +22,15 @@ proposing anything.
 
 | Date | # | Final? | What collapsed | In one sentence |
 |---|---|---|---|---|
-| 2026-08-31 | [§35](#35-ternary-single-layer-reachability-mimicking-binary-restriction) | **NECESSARY** | Direct ternary subset restriction | Ternary T2 layer is fully realizable, falsifying a direct analogue to binary restriction. |
-| 2026-08-31 | [§34](#34-binary-obstacle-layer-reachability-as-paper-6-main-theorem) | **CONTEXTUAL** | Binary exact subset reachability | The result is exact but mathematically too weak to carry the paper. |
-| 2026-08-31 | [§33](#33-polynomial-parikh-dp-extension-compiler-as-a-novel-algorithm) | **CONTEXTUAL** | The Parikh-composition DP | It is standard weighted-automata/DP on commutative paths. |
-| 2026-08-31 | [§32](#32-bounded-parikh-obstacle-hierarchy-as-a-novel-theorem-by-itself) | **CONTEXTUAL** | Target-transport hierarchy novelty | Heavily subsumed by classical Abelian template / Parikh boundary correction literature. |
+| 2026-08-31 | [§34](#34-binary-obstacle-layer-reachability-as-paper-6-main-theorem) | **CONTEXTUAL** | Binary exact subset reachability | The reachability is mathematically exact but not currently selected as the Paper 6 theorem core. |
+| 2026-08-31 | [§33](#33-polynomial-parikh-dp-extension-compiler-as-a-novel-algorithm) | **CONTEXTUAL** | The Parikh-composition DP | Once the finite obstacle formulation is given, the dynamic-programming step is generic and by itself does not establish standalone algorithmic novelty. |
+| 2026-08-31 | [§32](#32-bounded-parikh-obstacle-hierarchy-as-a-novel-theorem-by-itself) | **CONTEXTUAL** | Target-transport hierarchy novelty | The second-difference boundary-correction ingredients overlap substantially with established template/ancestor methods; standalone novelty was not established. |
 | 2026-08-31 | [§31](#31-local-coarse-to-fine-fiber-proportionality) | **NECESSARY** | Fiberwise rank-1 refinement | FULL-L4/Q2 produced rank-2 fibers, breaking local factorization. |
 | 2026-08-31 | [§30](#30-one-step-response-aliasing-as-the-mechanism) | **NECESSARY** | One-step legal continuation | One-step kernel is much larger than the true semantic future-equivalence kernel. |
 | 2026-08-31 | [§29](#29-small-exact-l5-identities-as-a-universal-law) | **NECESSARY** | Simple exact local relations | Perturbations and FULL-L5 broke the universality of INTERIOR-L5/Q1 identities. |
-| 2026-08-31 | [§28](#28-profile-incidence-rank-collapse-as-the-direct-semantic-mechanism) | **CONTEXTUAL** | Static profile incidence collapse | Collapse is real, but explained largely by structural dead states/aliasing, not deep future semantics. |
+| 2026-08-31 | [§28](#28-profile-incidence-rank-collapse-as-the-direct-semantic-mechanism) | **CONTEXTUAL** | Static profile incidence collapse | Collapse is real (e.g. 197 raw profile proportional relations), but explained largely by structural aliasing, not deep future semantics. |
 | 2026-08-31 | [§27](#27-the-35-dimensional-static-hidden-sector-as-a-startup-artifact) | **NECESSARY** | Startup phase explaining hidden rank | Saturated Q2 measurements showed an even larger rank deficiency (326 dims). |
-| 2026-08-31 | [§26](#26-near-optimal-space-time-observability) | **NECESSARY** | Observability indices as Abelian-special | Killed by generic random partition controls showing similar linear-algebraic bounds. |
+| 2026-08-31 | [§26](#26-near-optimal-space-time-observability) | **CONTEXTUAL** | Observability indices as Abelian-special | Generic linear algebra bounds achieve these indices, making this unviable as a standalone Abelian structural theorem. |
 | 2026-08-31 | [§25](#25-future-count-dimension-as-the-theorem-core) | **CONTEXTUAL** | Large exact rank implies new theorem | Dimension bounds are generic Hankel-rank/observability consequences. |
 | 2026-08-14 | [§24](#24-a-headline-aggregate-computed-somewhere-else-without-the-hand-off-being-recorded) | **CONTEXTUAL** | A pipeline script's own headline aggregate | `multinomial4`'s factorial table stops at `4!`, so at L=5 the Stage-A filter printed `NaN` for its total-codings line, and the figure actually used (3,316,540,933,500) came from a different script with the substitution recorded nowhere. |
 | 2026-08-04 | [§23](#23-route-b-intermediate-alphabet-mathematically-excluded-for-h_8) | **NECESSARY** | Route B (intermediate alphabet) for $h_8$ | $M_{h_8}$'s expanding subspace has dimension 4 and any ternary $M_g$ has kernel dimension $\ge 5$, so by Grassmann the intersection is non-trivial for *every* ternary $g$ — Prop 9's decision procedure is inapplicable to $h_8$ (independent verification still pending per the entry's own note). |
@@ -513,9 +512,11 @@ infinite aa2f word, giving Mäkelä's conjecture by Route C at `L = 6`.
 - **Finality: BOUNDED COMPUTED.** Exhaustive and exact over the uniform `L=6` family.
 
 
+
+
 ## 25. Future-count dimension as the theorem core
 
-**Hypothesis:** An exact finite-state future-count model producing a highly nontrivial rational future space dimension is a central structural theorem.
+**Hypothesis:** An exact finite-state future-count model producing a highly nontrivial rational future space dimension (e.g. FULL-L4/Q2) is a central structural theorem.
 
 **Test / attack:** Evaluate whether the rank phenomenon implies a new combinatorial constraint.
 
@@ -525,23 +526,23 @@ infinite aa2f word, giving Mäkelä's conjecture by Route C at `L = 6`.
 
 **Finality:** CONTEXTUAL
 
-**Evidence:** `scratch/claude-intake/paper6/checkpoint_v2.6/`
+**Evidence:** `docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md`
 
 **Do not retry as:** A claim that a large exact state-space dimension alone constitutes a new combinatorial theorem on words.
 
 ## 26. Near-optimal space-time observability
 
-**Hypothesis:** The extremely efficient space-time observability indices of Parikh-profile measurements are a special structural property of the Abelian system.
+**Hypothesis:** The extremely efficient space-time observability indices of FULL-L4/Q2 Parikh-profile measurements prove a special structural property of the Abelian system.
 
-**Test / attack:** Compare the observed indices to generic row-count lower bounds and random covectors/partitions.
+**Test / attack:** Compare the observed indices to generic row-count lower bounds and random partition controls.
 
-**Why it failed or was insufficient:** The apparent optimality largely matches generic linear algebra predictions once the number of measurement rows is factored in.
+**Why it failed or was insufficient:** The apparent optimality largely matches generic linear algebra predictions once the number of measurement rows is factored in, killing the special Abelian novelty interpretation.
 
 **What remains true:** The Abelian system does achieve these indices, making it computationally tractable.
 
-**Finality:** NECESSARY
+**Finality:** CONTEXTUAL
 
-**Evidence:** Random control results in `scratch/claude-intake/paper6/checkpoint_v2.6/`
+**Evidence:** `docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md`
 
 **Do not retry as:** A novelty claim about Abelian structure based purely on optimal linear-algebraic index bounds.
 
@@ -551,13 +552,13 @@ infinite aa2f word, giving Mäkelä's conjecture by Route C at `L = 6`.
 
 **Test / attack:** Remove the startup sequence entirely and measure saturated/persistent subsystems.
 
-**Why it failed or was insufficient:** The saturated subsystem exhibited an even more profound rank deficiency (326 hidden dimensions).
+**Why it failed or was insufficient:** The saturated subsystem exhibited an even more profound rank deficiency (rank 850 vs space 1176, or 326 hidden dimensions).
 
 **What remains true:** The original 35-dimensional deficiency and the saturated 326-dimensional deficiency are both exact mathematical realities.
 
 **Finality:** NECESSARY
 
-**Evidence:** `scratch/claude-intake/paper6/checkpoint_v2.6/`
+**Evidence:** `docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md`
 
 **Do not retry as:** An assumption that static rank deficiencies can be "cleaned up" by simply ignoring early history blocks.
 
@@ -565,15 +566,15 @@ infinite aa2f word, giving Mäkelä's conjecture by Route C at `L = 6`.
 
 **Hypothesis:** The large rank collapse in the profile-to-state incidence matrix provides the direct underlying semantic law of future equivalence.
 
-**Test / attack:** Decompose the relation space and analyze dead states and exact local aliasing.
+**Test / attack:** Decompose the raw profile relation space and analyze dead states and exact local aliasing.
 
-**Why it failed or was insufficient:** The incidence collapse is heavily driven by structural dead states and rational proportional aliasing (e.g., 197 two-row relations) rather than universally deep language-theoretic future equivalence.
+**Why it failed or was insufficient:** The incidence collapse is heavily driven by structural dead states and rational proportional aliasing (exactly 197 two-row raw proportional relations found) rather than universally deep language-theoretic future equivalence.
 
-**What remains true:** The incidence matrix accurately measures the constrained subspace of the dynamic system.
+**What remains true:** The raw incidence matrix accurately measures the constrained subspace of the dynamic system.
 
 **Finality:** CONTEXTUAL
 
-**Evidence:** `P6_Q2_PROFILE_ONLY_ROW_RELATIONS_RECONSTRUCTED` analysis.
+**Evidence:** `docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md`
 
 **Do not retry as:** A claim that static incidence rank collapse is identical to true right-context equivalence.
 
@@ -589,7 +590,7 @@ infinite aa2f word, giving Mäkelä's conjecture by Route C at `L = 6`.
 
 **Finality:** NECESSARY
 
-**Evidence:** `scratch/SANDBOX_REPORT_PHASE_A_CORRECTED.md` and Phase B transfer checks.
+**Evidence:** `scratch/SANDBOX_REPORT_PHASE_A_CORRECTED.md`
 
 **Do not retry as:** A claim that a beautiful finite identity found at one length universally generalizes without explicit boundary-repair proofs.
 
@@ -605,7 +606,7 @@ infinite aa2f word, giving Mäkelä's conjecture by Route C at `L = 6`.
 
 **Finality:** NECESSARY
 
-**Evidence:** `scratch/claude-intake/paper6/checkpoint_v2.6/` response kernel measurements.
+**Evidence:** `docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md`
 
 **Do not retry as:** A theorem that one-step future behavior implies infinite future equivalence.
 
@@ -621,7 +622,7 @@ infinite aa2f word, giving Mäkelä's conjecture by Route C at `L = 6`.
 
 **Finality:** NECESSARY
 
-**Evidence:** `scratch/claude-intake/paper6/checkpoint_v2.6/` fiber rank logs.
+**Evidence:** `docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md`
 
 **Do not retry as:** A universal local rank-1 factorization hypothesis.
 
@@ -631,13 +632,13 @@ infinite aa2f word, giving Mäkelä's conjecture by Route C at `L = 6`.
 
 **Test / attack:** Adversarial novelty kill against combinatorial literature.
 
-**Why it failed or was insufficient:** The core machinery overlaps overwhelmingly with classical Abelian-template methods and Parikh boundary corrections (e.g., Carpi, Currie, Rao-Rosenfeld).
+**Why it failed or was insufficient:** The second-difference / Parikh boundary-correction ingredients overlap substantially with established template/ancestor methods; standalone novelty for this formulation was therefore not established.
 
 **What remains true:** The mathematical identities and derivations of the target hierarchy are perfectly correct and algorithmically valid.
 
 **Finality:** CONTEXTUAL
 
-**Evidence:** `PAPER6_V36_COEFFICIENT_FREE_THEOREM_CANDIDATE_BUNDLE_2026-08-31.zip`
+**Evidence:** `docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md`
 
 **Do not retry as:** A primary claim of novelty for Paper 6 without shifting the focus to its dynamic state-space/observability implications.
 
@@ -647,13 +648,13 @@ infinite aa2f word, giving Mäkelä's conjecture by Route C at `L = 6`.
 
 **Test / attack:** Adversarial novelty kill against formal languages literature.
 
-**Why it failed or was insufficient:** The compiler is standard weighted-automata/dynamic programming applied to commutative path counting.
+**Why it failed or was insufficient:** Once the finite obstacle formulation is given, the dynamic-programming step is generic and by itself does not establish standalone algorithmic novelty.
 
 **What remains true:** The polynomial bound on prefix-Parikh states for fixed alphabet size is exactly correct.
 
 **Finality:** CONTEXTUAL
 
-**Evidence:** `PAPER6_V36_COEFFICIENT_FREE_THEOREM_CANDIDATE_BUNDLE_2026-08-31.zip`
+**Evidence:** `docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md`
 
 **Do not retry as:** A standalone algorithmic breakthrough independent of the specific Abelian target setup.
 
@@ -661,30 +662,14 @@ infinite aa2f word, giving Mäkelä's conjecture by Route C at `L = 6`.
 
 **Hypothesis:** The exact binary subset reachability restriction provides a strong enough main theorem for Paper 6.
 
-**Test / attack:** Importance and scope kill.
+**Test / attack:** Editorial/project impact kill.
 
-**Why it failed or was insufficient:** While exact, it is too narrow and specific to carry a major paper compared to the project's broader Abelian-square goals.
+**Why it failed or was insufficient:** Binary reachability is exact, but not currently selected as the Paper 6 theorem core due to its limited scope compared to the broader Abelian-square framework.
 
 **What remains true:** The reachability restriction, subset enumeration, and Fibonacci-type subset-counting sequences are mathematically proven.
 
 **Finality:** CONTEXTUAL
 
-**Evidence:** `PAPER6_V36_COEFFICIENT_FREE_THEOREM_CANDIDATE_BUNDLE_2026-08-31.zip`
+**Evidence:** `docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md`
 
 **Do not retry as:** The central capstone result for the Paper 6 research arc.
-
-## 35. Ternary single-layer reachability mimicking binary restriction
-
-**Hypothesis:** The ternary case will exhibit a single-layer target subset restriction directly analogous to the binary case.
-
-**Test / attack:** Exhaustive subset realizability testing for the smallest ternary layer.
-
-**Why it failed or was insufficient:** The test found that absolutely every possible subset was realizable on the T2 layer.
-
-**What remains true:** Ternary reachability is strictly richer and less constrained at the single-layer level.
-
-**Finality:** NECESSARY
-
-**Evidence:** `PAPER6_V36_COEFFICIENT_FREE_THEOREM_CANDIDATE_BUNDLE_2026-08-31.zip`
-
-**Do not retry as:** A hypothesis that ternary alphabet obstacles directly mimic binary reachability bounds.

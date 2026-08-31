@@ -1,29 +1,29 @@
-﻿# PAPER 4-6 NEGATIVE RESULTS HARVEST AUDIT
+﻿# PAPER 4-6 NEGATIVE RESULTS HARVEST AUDIT (SECOND PASS)
 **Date:** 2026-08-31
 
 ## Baseline
-- **SHA:** f6f16ce04319844f0d5ace2968f62e095a8e6362
+- **SHA:** 15515f50e272470958081e12ae3af46be28bdb2c
 - **Harvest Source:** scratch/claude-intake/negative_results/PAPER4_6_NEGATIVE_RESULTS_HARVEST_2026-08-31.md
-- **Evidence Searched:** Worktree sandbox reports (Phase A/B, AFE Cutset), Claude-intake Paper 6 checkpoints (v2.6, v3.5, v3.6 bundle), True Grid randomizations, Observability Index comparisons, Novelty kill reports.
 
-## Candidate Reviews
+## Candidate Reviews & Evidence Audit
 
-| Candidate | Proposed Hypothesis | Audit Decision | Finality | Canonicalize? |
-|-----------|---------------------|----------------|----------|---------------|
-| 5.1 Future-count dimension | Large exact rank implies new combinatorial theorem | Accepted. Subsumed by linear algebra/Hankel rank. | CONTEXTUAL | Yes (§25) |
-| 5.2 Near-optimal observability | Observability indices are a special Abelian property | Accepted. Killed by random partition controls. | NECESSARY | Yes (§26) |
-| 5.3 35-dim static hidden sector | Startup/transient artifact | Accepted. Saturated Q2 rank deficiency is even larger (326 dims). | NECESSARY | Yes (§27) |
-| 5.4 Profile-incidence collapse | Static profile incidence provides the full direct mechanism | Accepted. Collapse is real but semantic explanation was too strong. | CONTEXTUAL | Yes (§28) |
-| 5.6 Small L5 identities | Simple exact relations generalize to universal obstruction laws | Accepted. Perturbations and FULL-L5 broke the universality. | NECESSARY | Yes (§29) |
-| 5.7 One-step response aliasing | One-step legal continuation fully explains future equivalence | Accepted. One-step kernel is much larger than the true semantic kernel. | NECESSARY | Yes (§30) |
-| 5.9 Local coarse-to-fine | Fiberwise rank-1 refinement | Accepted. FULL-L4/Q2 produced rank-2 fibers. | NECESSARY | Yes (§31) |
-| 5.11 Bounded Parikh hierarchy | Novel combinatorial theorem in itself | Accepted. Novelty demoted due to classical parent-template literature. | CONTEXTUAL | Yes (§32) |
-| 5.12 Polynomial Parikh-DP | Novel algorithmic compiler | Accepted. Standard weighted-automata/DP on commutative paths. | CONTEXTUAL | Yes (§33) |
-| 5.13 Binary obstacle reachability | Sufficiently strong Paper 6 main theorem | Accepted. Result is exact but impact is too small. | CONTEXTUAL | Yes (§34) |
-| 5.14 Ternary single-layer | Ternary restricts subsets like binary | Accepted. Completely falsified; T2 layer is fully realizable. | NECESSARY | Yes (§35) |
-| 5.15 Ternary cross-layer | 21 missing subsets implies impossibility | Rejected/Blocked. Not found != impossible. | N/A | No |
+| § | Hypothesis | Exact system | Evidence path | Preregistered? | Reproduced now? | Kill witness | Scope | Finality | Verdict |
+|---|---|---|---|---|---|---|---|---|---|
+| 25 | Large exact rank implies new theorem | FULL-L4/Q2 future-count space | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | NO (relies on prior logs) | Generic Hankel rank bounds | Novelty claim | CONTEXTUAL | ACCEPT |
+| 26 | Observability indices are a special Abelian property | FULL-L4/Q2 Parikh-profile measurements | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | NO (relies on prior logs) | Random partition controls | Novelty interpretation | CONTEXTUAL | ACCEPT |
+| 27 | 35-dim static hidden sector is a startup artifact | Saturated Q2 static measurements | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | NO (relies on prior logs) | Saturated rank 850 vs space 1176 | Saturated hypothesis | NECESSARY | ACCEPT |
+| 28 | Static profile incidence collapse is the true semantic mechanism | FULL-L4/Q2 raw profile relation space | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | YES (197 raw row relations checked previously) | Proportional aliasing without future constraints | Mechanism scope | CONTEXTUAL | ACCEPT |
+| 29 | Small exact L5 identities are universal laws | INTERIOR-L5/Q1 family identities | scratch/SANDBOX_REPORT_PHASE_A_CORRECTED.md | No | NO (checked via prior logs) | FULL-L5 perturbations | Exact universality | NECESSARY | ACCEPT |
+| 30 | One-step legal continuation fully explains future equivalence | One-step legal response vs semantically stable kernel | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | NO | One-step kernel significantly larger | Finite step sufficiency | NECESSARY | ACCEPT |
+| 31 | Fiberwise rank-1 refinement | FULL-L4/Q2 coarse-to-full fibers | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | NO | Rank-2 fibers discovered | Universal factorization | NECESSARY | ACCEPT |
+| 32 | Target-transport hierarchy is a novel theorem | Abelian-square bounded extension Parikh obstacles | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | NO | Overlap with classical template methods | Standalone novelty | CONTEXTUAL | ACCEPT |
+| 33 | Parikh-composition DP is a novel algorithmic compiler | Prefix-Parikh state enumeration | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | NO | Standard weighted automata DP | Standalone novelty | CONTEXTUAL | ACCEPT |
+| 34 | Binary exact subset reachability | Binary obstacle layers | docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md | No | NO | Too weak to carry the paper | Project focus | CONTEXTUAL | ACCEPT |
+| - | Ternary T2 single-layer is fully realizable | Ternary T2 subset reachability | NONE (No tracked canonical evidence) | No | NO | N/A | N/A | N/A | BLOCKED |
+| - | Ternary cross-layer 21 missing subsets | Ternary T1/T2 pairs | NONE | No | NO | N/A | N/A | N/A | BLOCKED |
 
 ## Unresolved / Blocked
-- **5.15 (Ternary cross-layer reachability):** Explicitly excluded from canonicalization. Bounded search exhaustion (491/512) does not support a necessary mathematical impossibility result.
-- **5.5 & 5.8 & 5.10:** Merged or omitted for clarity. 5.10 (True-grid rank neutrality) is subsumed by the random controls lesson in 5.2. 5.5/5.8 are variations of the semantic/one-step mechanism failures logged in 5.4 and 5.7.
+- **Ternary single-layer reachability (§35 candidate):** Blocked. No exhaustive exact evidence exists in the canonical repository for the T2 layer realization.
+- **Ternary cross-layer reachability:** Blocked. 491/512 found is a bounded search outcome, not an impossibility theorem.
+- **Note on evidence paths:** Many untracked scratch artifacts (e.g. checkpoint_v2.6, 36_bundle) were cited in the initial harvest. Since these are local to the worktree, the canonical reference for these findings is established via docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md which summarizes the exact findings and states.
 
