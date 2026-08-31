@@ -64,9 +64,13 @@ Read this before writing to `MATH_CLAIMS.md`, `NEGATIVE_RESULTS.md`, or any tab-
 - The check must use a different code path than the one that produced the claim.
 - If a reported artifact (a word, a count) doesn't match on re-verification — including simple things like exact length — stop and resolve the discrepancy before writing anything down permanently.
 
-**Name the dimensions.** "Independent" is not a property a check either has or lacks; it is a list. State, for each re-verification, which of these actually differ from the original: **derivation** (the mathematical argument), **algorithm**, **data representation**, **input generation**, **language**, **runtime**, **author**. A check that shares the derivation is not independent evidence for the derivation, however different its code is.
+**Name the dimensions.** "Independent" is not a property a check either has or lacks; it is a list. State, for each re-verification, which of these actually differ from the original: **derivation** (the mathematical argument), **algorithm**, **data representation**, **input generation**, **language**, **runtime**, **author**, **model/vendor**, **source corpus**, **human reviewer**. A check that shares the derivation is not independent evidence for the derivation, however different its code is.
 
 Two checks that share a conceptual error are not independent merely because they live in separate files, were written at different times, or were produced by different sessions. The shared component is exactly where the risk sits, so it is the component that must be named rather than the differing ones.
+
+**AI plurality is not independence.** A second AI analysis is not automatically an independent verification channel. Neither is another prompt to the same model, another session, a related model working from the same artifacts, several agents reusing the same search vocabulary, nor several vendors whose training corpora and source dependencies may be correlated. Different vendors are not perfectly independent either: the correlation is *unmeasured*, not *absent*, and an unmeasured correlation cannot be reported as an axis that differs. Treat an AI channel as **corroboration** until at least one non-model axis genuinely differs. AI plurality may increase robustness; it does not by itself establish epistemic independence.
+
+This project has already miscounted on exactly this axis: `MATH_CLAIMS.md` row 6c described a *"fourfold verification"* in which one of the four channels was another AI's analysis of the same artifacts. Corrected 2026-08-31 — the mathematical content of the row was not touched, only the classification of the channel.
 
 **This project has already paid for this lesson once:** `NEGATIVE_RESULTS.md` §10 records a definition-level verifier that worked flawlessly and still did not check what it was meant to check — *"the independence axis was wrong, not the idea."* Listing the axes in advance is what would have caught it.
 
@@ -132,3 +136,94 @@ The first three are covered in detail by §2 (Scope Precision) and §3 (Finite C
 ## 11. Immediate Capture vs. Claim Acceptance
 
 **Rule:** Canonicalization (capturing a result in the repository) is part of doing the research, but claim acceptance remains a separate human-gated review decision. Immediate capture does not imply claim acceptance.
+
+
+---
+
+## 12. The Artifact Boundary
+
+*§10 separates what a computation verified from what the project claims. This section adds one more boundary, on a different axis: what the **source** says and what the **reader receives** are not the same object.*
+
+**Rule:** A source-level check is not evidence about the delivered artifact. Verify the artifact in the form the reader gets it.
+
+**Why this matters:** the Paper 4 preprint v1.0 → v1.1 audit found the mathematics closed, correct, and unchanged — and the title page still wrong (the author block omitted the project identity entirely), and the nineteen-family table still splitting across a page boundary, so that a table asserting "exactly nineteen" displayed eighteen rows and then one. Neither defect is *in* any claim, so no claim-level check could ever have seen them.
+
+**The symmetric error is worse, and this project made it.** Working from `pdftotext -layout` output, that same audit reported five defects — missing `κ`, `≥` and minus glyphs in a figure; overprinted figure labels; three misaligned tables — and **every one was false**. A text extractor infers reading order from glyph coordinates, so it manufactures precisely the appearances (column drift, collided baselines, glyphs silently dropped for want of a `ToUnicode` map) that a layout defect would produce. *The proxy's failure modes were isomorphic to the defect being hunted.* Five suspected defects, five disproofs, one rendered page each.
+
+Add to §10's table of recurring gaps:
+
+| Verified | Often written as |
+|---|---|
+| the source is correct | the delivered artifact is correct |
+| a proxy view of the artifact | the artifact |
+
+**Practical test:** before recording a defect in a delivered artifact, name the observation you actually made. If the answer is "a tool's textual rendering of it" rather than "the artifact as a reader sees it", you have located a candidate, not established a defect.
+
+**Corollary — record the disproofs.** A suspicion investigated and found empty is a result, and it costs as much to obtain the second time as the first. Write it down with its disproof. See `AGENTS.md`, "Artifact and release protocol", rules 1 and 4.
+
+---
+
+## 13. The Axes Are Separate
+
+*§10 and §12 each separate one pair of boundaries. This section states the general shape: **truth, mechanism, generality, importance and novelty are different axes, and none of them is evidence for another.***
+
+**Rule:** never let a result's standing on one axis silently raise its standing on another.
+
+| Axis | Question | Where its status lives |
+|---|---|---|
+| **Truth / evidence** | Is the statement established, and by what route? | `MATH_CLAIMS.md`, status column (`PRIMARY` / `COMPUTED` / `INDIRECT` / `REJECTED`) |
+| **Mechanism** | Do we know *why* the phenomenon occurs? | `MATH_CLAIMS.md`, mechanism-status column (§14 below, and the ledger's own preamble) |
+| **Generality** | Does it survive beyond the instance it was fitted to? | the claim sentence itself — §2 requires the bounded parameter to be *in* the sentence; `PAPER_LIFECYCLE.md` Gate 2 owns it for a paper |
+| **Importance** | Does it answer a question someone was asking? | no status field, deliberately: it is an editorial judgement, and a status field would invite self-scoring (§6) |
+| **Novelty** | What is the documented state of prior-art review? | `LITERATURE_COVERAGE.md`, `NOVELTY_STATUS` |
+
+**Inferences that are not permitted:**
+
+- an exact computation does not establish a mechanism;
+- a mechanism surviving in two instances does not make it a theorem;
+- a theorem is not thereby novel;
+- a novel result is not thereby important;
+- an attractive, simple or well-narrated interpretation is not thereby true;
+- a result becoming *harder* to narrate does not make it less true.
+
+**The mechanism axis moves independently of the truth axis, in both directions.** A mechanism may be demoted without demoting the exact fact underneath it, and this is the normal outcome of a successful kill test, not a failure of the research:
+
+> The fact survived; the mechanism did not.
+
+When a mechanism fails: keep the exact fact at its existing truth status, mark the mechanism `FALSIFIED` in the ledger, write the negative result to `NEGATIVE_RESULTS.md` with its scope parameters per §2, and **do not rewrite the surrounding prose so that the failed interpretation was never held.** A story with no visible demotions is not a story of uninterrupted progress; it is a story someone has been editing.
+
+Avoid *"the mechanism was mostly right"* unless a precise surviving subclaim is stated. After survival, prefer *survived the registered kill test*, *independently reproduced*, *replicated in a second instance*, *now merits a general proof attempt* — and reserve *theorem* for after the proof.
+
+---
+
+## 14. Object Identity and Closure
+
+*Many serious computational failures in this project's field are not arithmetic errors. They are **semantic object mismatches**: the number is computed correctly, for a different object than the one being discussed.*
+
+**Rule — every decision-gating number carries a mathematical noun.** Before a number is compared, interpreted, or allowed to change a claim's status, record which exact object it belongs to.
+
+Bad:
+
+> `rank = 55`
+
+Better:
+
+> the rational rank of *[precisely named matrix]* restricted to *[precisely named state selection]*
+
+Distinctions that must not be collapsed under one informal label:
+
+- raw states vs. quotient states;
+- a raw recurrent core vs. the raw members represented by recurrent quotient classes;
+- an induced subgraph vs. a closed subsystem;
+- a startup / mixed regime vs. a saturated regime;
+- a weighted quotient vs. the literal-state system;
+- the full future vs. the persistent future;
+- transition equivalence vs. future-count equivalence.
+
+If two selections have different semantics, they never share an informal name. This is a research-validity rule, not an exposition rule: `AGENTS.md`'s "every large number needs a noun" governs how a number is *presented* to a reader, and this section governs whether the number may be *interpreted* at all.
+
+**Rule — closure is checked, not assumed.** If a restricted subset `S` is used as a standalone dynamical or counting system, verify closure:
+
+> if `x ∈ S` and `x → y` is legal, then `y ∈ S`.
+
+Restricting to a visually natural subset can change the dynamics. Where closure fails, an induced subgraph silently deletes legal continuations, so it answers a **different mathematical question** — often one that looks like the intended one and returns plausible numbers. Either use a closed system, justify the restriction mathematically, or state explicitly that the induced subsystem has different semantics. Do not report a closure check as done when what was checked is that the subset *looks* natural.
