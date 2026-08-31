@@ -19,5 +19,5 @@ Released papers, most recent first:
   Word Structures project
   2026
 
-Both are preprints released from this repository. Neither has been submitted
-to a journal, peer reviewed, assigned a DOI, or deposited on arXiv.
+Both are preprints released from this repository. See each paper's own entry
+for its current publication and evidence status.
