@@ -108,7 +108,12 @@ Java engine migration                   OD-13 — approved target; the Word Stru
                                         organization now exists, but migration still
                                         requires its own bounded, separately approved
                                         task
-Editing AGENTS.md                       TASK-GOV is a candidate, not approved
+Editing AGENTS.md                       TASK-GOV is a candidate, not approved.
+                                        One bounded exception, owner-authorized
+                                        2026-08-31: the adversarial mechanism and
+                                        novelty governance integration. That
+                                        authorization is spent; it does not
+                                        reopen AGENTS.md for anything else.
 Any pedagogy pilot                      transfer task not yet designed
 The 85-cell Master puzzle               conditional on g85 verification
 Restoring mechanics from Abelisk v2 or the foundation document

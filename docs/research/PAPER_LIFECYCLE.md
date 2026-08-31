@@ -43,11 +43,11 @@ A gate is never skipped. It is closed either as passed, or explicitly as
 
 | # | Gate | Owns | Exit condition | Evidence lives in |
 |---|---|---|---|---|
-| 0 | Discovery | finding mathematics, mechanisms, counterexamples | a candidate theorem or exact question fits in one paragraph, **and** the cheapest measurement that could kill the direction has been named and run | `scratch/`, `NEGATIVE_RESULTS.md` |
+| 0 | Discovery | finding mathematics, mechanisms, counterexamples | a candidate theorem or exact question fits in one paragraph, **and** the cheapest measurement that could kill the direction has been named and run, **and** any mechanism now steering the work carries a written kill criterion recorded before its supporting experiments (§3.6) | `scratch/`, `NEGATIVE_RESULTS.md` |
 | 1 | Claim Freeze | what exactly is being claimed | another agent can state precisely what would refute it | `MATH_CLAIMS.md` |
 | 2 | Proof Closure | the derivation | every theorem-level claim is proved or explicitly downgraded; no "remaining cases analogous" without a stated symmetry | `MATH_CLAIMS.md`, proof artifact |
-| 3 | Independent Kill | adversarial re-derivation | counterexample frozen, or independent PASS **with its independence axes named** per `EPISTEMIC_DISCIPLINE.md` §5 | audit report |
-| 4 | Novelty Kill | prior art | highest-risk primary sources read or explicitly unresolved; strongest *safe* novelty sentence written; known machinery disclaimed | `LITERATURE_COVERAGE.md` |
+| 3 | Independent Kill | adversarial re-derivation | counterexample frozen, or independent PASS **with its independence axes named** per `EPISTEMIC_DISCIPLINE.md` §5; **and** for any claim reading a linear-algebraic phenomenon as special structure, a matched-control attack run or its irrelevance written down (§3.6) | audit report |
+| 4 | Novelty Kill | prior art | highest-risk primary sources read or explicitly unresolved; **subsumption attack run** (§3.6); strongest *safe* novelty sentence written with its residual risk; known machinery disclaimed | `LITERATURE_COVERAGE.md` |
 | 5 | Reproducibility | computational headlines | a fresh researcher reproduces every computer-assisted headline with no hidden local state; no cap silently means UNSAT | evidence capsule under `docs/research/evidence/` |
 | 6 | Manuscript Architecture | the story | abstract, introduction, theorem hierarchy and section plan tell one story; chronology and dead ends removed; **and Stage 6H closes** | manuscript |
 | 6H | **Human Comprehension** | whether an outsider can follow the story | see §3.5 | manuscript, reader-friction ledger |
@@ -166,6 +166,90 @@ only exists when an AI supplies it, the bridge is not in the paper.
 
 ---
 
+## 3.6 The three adversarial attacks (Gates 0, 3 and 4)
+
+These strengthen three existing gates. **No gate is renumbered and no gate is
+added**; each attack is an exit condition on the gate that already owns the
+question. Governing rules: `AGENTS.md`, "Adversarial mechanism and novelty
+discipline"; `EPISTEMIC_DISCIPLINE.md` §13.
+
+### Gate 0 — falsifier before supporting story
+
+A mechanism that is steering the work — choosing the next experiment, naming a
+section, or explaining a phenomenon in the manuscript — must carry a **written
+kill criterion, recorded before the experiments whose purpose is to support
+it**. The criterion has to be concrete enough to fail: name the observation
+that would end the mechanism, not the observation that would please it.
+
+The register is the mechanism-status column in `MATH_CLAIMS.md`: a mechanism
+may not be recorded as `HYPOTHESIS` without its kill criterion existing.
+
+This condition is **conditional, not universal**. Exploratory notes,
+half-formed patterns and one-afternoon probes do not preregister anything. The
+obligation begins when a mechanism starts steering something.
+
+### Gate 3 — matched controls against genericity
+
+Rank, dimension, observability, recovery, compression, partition and spectral
+phenomena frequently arise generically. Where a claim reads such a phenomenon
+as *special structure*, Gate 3 requires **either**:
+
+- **A.** a matched-control attack was run — a random partition with the same
+  family-size distribution, matched row/column dimensions, a scrambled
+  descriptor, generic linear measurements, or an alternative natural
+  descriptor; **or**
+- **B.** a written reason why genericity is not a competing explanation for
+  this particular claim.
+
+The control must be matched to the claim actually being made; a control that
+differs from the structured object on some *other* axis tests nothing. The
+distinction the gate enforces is between
+
+> the structured object has property X
+
+and
+
+> the structure is what causes X,
+
+which are the same sentence in ordinary prose and different claims in
+mathematics. If matched controls also have X, the second sentence has no
+support left, however exact the measurement of X was.
+
+Note what this gate does **not** touch: a matched control that reproduces the
+phenomenon demotes the *interpretation*, never the measurement. The exact
+numbers keep their verification status.
+
+### Gate 4 — the subsumption attack
+
+Novelty Kill is adversarial, and the difference from an ordinary literature
+search is the direction of the question. Do not only ask *"can related work be
+found?"* Ask:
+
+> **Assume this result is already known. Find the strongest known theorem that
+> would subsume it.**
+
+For a potentially important theorem, an appropriate subset of: exact-formulation
+search; synonym and terminology translation; mathematical-equivalence search;
+stronger-theorem / subsumption search; adjacent-field search; bibliography
+chaining forwards and backwards; primary-source opening; an independent
+adversarial reviewer; and human field review where the claim is high-impact and
+review is feasible.
+
+Search **mathematical structure, not only project terminology**. A result
+stated in this project's vocabulary may exist in another field under a name
+nobody here would search for.
+
+**Passing Gate 4 reduces prior-art risk. It does not establish historical
+priority**, and the gate never issues a verdict that says it does. Prior art
+may use different terminology, sit in another field, appear only as a
+corollary, be buried inside a proof, be poorly indexed, be old or
+non-English, be inaccessible, or have influenced model training with no
+recoverable attribution. The strongest permitted sentence has the form *"to the
+best of our knowledge, within the documented search scope …"*, and the scope is
+stated rather than implied. There is no status called `PROVED NOVEL`.
+
+---
+
 ## 4. Re-entry and invalidation
 
 Returning to a stage invalidates the downstream gates that depended on it — and
@@ -221,7 +305,9 @@ caught it.
 
 Independence is reported using the axes of `EPISTEMIC_DISCIPLINE.md` §5 —
 derivation, algorithm, data representation, input generation, language,
-runtime, author — never as a binary.
+runtime, author, model/vendor, source corpus, human reviewer — never as a
+binary. A second AI reading the same artifacts is corroboration, not an
+independent adversary: at least one non-model axis must differ.
 
 ---
 

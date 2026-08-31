@@ -227,3 +227,76 @@ terms recorded**. The "Found" column accepts only three values:
 **There is no fourth value, "does not exist."** If someone wants to claim
 that, it requires an exhaustive search, and none has been done in this
 project.
+
+---
+
+## 6. Novelty status
+
+*This section formalises the `NOVELTY_STATUS` token already used in §2d. It
+adds a vocabulary and a default; it does not create a second ledger.
+`MATH_CLAIMS.md` remains the claim authority, this file remains the prior-art
+authority, and novelty is tracked here because it is a statement about the
+literature, not about the mathematics.*
+
+**Every potentially novel result originating in this project starts at
+`NOVELTY_STATUS = NOT_ESTABLISHED`**, and stays there until an adversarial
+review is documented here. The default is not pessimism; it is the only status
+the evidence supports before anyone has looked.
+
+| Value | Meaning |
+|---|---|
+| `NOT_ESTABLISHED` | **the default.** No adversarial prior-art review is documented. Nothing may be called new. |
+| `UNDER_REVIEW` | a review is in progress; the search scope so far is recorded, and the queue of unopened leads is visible (§2d is exactly this state) |
+| `REVIEWED_RESIDUAL_RISK` | an adversarial review is documented, including a subsumption attack, with its search scope stated and its residual risk acknowledged |
+
+**There is no value meaning "proved novel", for the same reason §5 has no
+value meaning "does not exist."** Historical priority is not a property this
+project's resources can establish.
+
+### What does not move the status
+
+- model confidence;
+- the absence of a citation;
+- a model failing to recall a source;
+- several AI systems agreeing that a result is new — correlated models are not
+  independent witnesses to provenance (`EPISTEMIC_DISCIPLINE.md` §5);
+- a derivation carried out in the current session, which says nothing about
+  whether the result was in prior literature or in training data;
+- correctness of any kind. A fully proved theorem may be a rediscovery.
+
+The failure mode here is **unrecoverable provenance, not deception**: a model
+may reconstruct prior mathematical structure with no traceable source. The
+correct sentence is *"provenance is not recoverable"*, never *"the source was
+concealed"*.
+
+### The subsumption attack
+
+An adversarial review asks the question in the harder direction. Not *"can
+related work be found?"* but:
+
+> **Assume this result is already known. Find the strongest known theorem that
+> would subsume it.**
+
+Search mathematical structure, not only this project's terminology: exact
+formulation, synonyms and translated terminology, equivalent formulations,
+stronger theorems, adjacent fields, bibliography chaining in both directions,
+and primary sources actually opened. Procedure and gate integration:
+`docs/research/PAPER_LIFECYCLE.md` §3.6, Gate 4.
+
+### Residual risk is recorded, not implied
+
+Reaching `REVIEWED_RESIDUAL_RISK` reduces prior-art risk and does not eliminate
+it. Prior art may use different terminology, sit in an adjacent field, appear
+only as a corollary, be buried inside a proof, be poorly indexed, be old or
+non-English, be inaccessible, or have influenced model training without
+recoverable attribution.
+
+The strongest permitted phrasing is *"to the best of our knowledge, within the
+documented search scope …"*, with the scope stated in the sentence rather than
+left to the reader — the same discipline §1 already applies to
+*"checked in source X"* versus *"not in the literature"*.
+
+**This section changes no existing entry's status.** Promoting a source from
+`INDIRECT`, or opening anything in the §2d audit queue, is separate evidence
+work governed by `AGENTS.md` rule 1 (*cite before you code*), and may not be
+done from memory.
