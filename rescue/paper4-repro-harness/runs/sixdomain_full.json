@@ -1,0 +1,447 @@
+{
+ "byL": [
+  {
+   "L": 2,
+   "patterns": 34,
+   "families": 9
+  },
+  {
+   "L": 3,
+   "patterns": 34,
+   "families": 15
+  },
+  {
+   "L": 4,
+   "patterns": 34,
+   "families": 19
+  },
+  {
+   "L": 5,
+   "patterns": 34,
+   "families": 19
+  },
+  {
+   "L": 6,
+   "patterns": 34,
+   "families": 19
+  },
+  {
+   "L": 7,
+   "patterns": 34,
+   "families": 19
+  },
+  {
+   "L": 8,
+   "patterns": 34,
+   "families": 19
+  },
+  {
+   "L": 9,
+   "patterns": 34,
+   "families": 19
+  },
+  {
+   "L": 10,
+   "patterns": 34,
+   "families": 19
+  },
+  {
+   "L": 12,
+   "patterns": 34,
+   "families": 19
+  },
+  {
+   "L": 20,
+   "patterns": 34,
+   "families": 19
+  },
+  {
+   "L": 40,
+   "patterns": 34,
+   "families": 19
+  }
+ ],
+ "cardFailures": [],
+ "distinctnessFailures": [],
+ "separation": {
+  "shape": 643,
+  "card": 252,
+  "both": 8681
+ },
+ "table": [
+  {
+   "patternId": 1,
+   "domain": "Zs",
+   "roleMask": "000",
+   "supportSize": 1,
+   "classId": 1,
+   "className": "E",
+   "shapeSpectrum": "E",
+   "maxArity": 0,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 2,
+   "domain": "Zs",
+   "roleMask": "111",
+   "supportSize": 342,
+   "classId": 2,
+   "className": "Zs-A",
+   "shapeSpectrum": "-2,1;1,-2,1",
+   "maxArity": 3,
+   "containsEmpty": false
+  },
+  {
+   "patternId": 3,
+   "domain": "Pt",
+   "roleMask": "000",
+   "supportSize": 1,
+   "classId": 1,
+   "className": "E",
+   "shapeSpectrum": "E",
+   "maxArity": 0,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 4,
+   "domain": "Pt",
+   "roleMask": "001",
+   "supportSize": 39,
+   "classId": 3,
+   "className": "P-O",
+   "shapeSpectrum": "1;E",
+   "maxArity": 1,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 5,
+   "domain": "Pt",
+   "roleMask": "110",
+   "supportSize": 399,
+   "classId": 4,
+   "className": "Pt-M",
+   "shapeSpectrum": "-2;1,-2",
+   "maxArity": 2,
+   "containsEmpty": false
+  },
+  {
+   "patternId": 6,
+   "domain": "Pt",
+   "roleMask": "111",
+   "supportSize": 210,
+   "classId": 5,
+   "className": "P-A",
+   "shapeSpectrum": "-2;1,-2;1,1,-2;2,-2",
+   "maxArity": 3,
+   "containsEmpty": false
+  },
+  {
+   "patternId": 7,
+   "domain": "Mt",
+   "roleMask": "000",
+   "supportSize": 1,
+   "classId": 1,
+   "className": "E",
+   "shapeSpectrum": "E",
+   "maxArity": 0,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 8,
+   "domain": "Mt",
+   "roleMask": "011",
+   "supportSize": 399,
+   "classId": 6,
+   "className": "Mt-M",
+   "shapeSpectrum": "-2,1;1",
+   "maxArity": 2,
+   "containsEmpty": false
+  },
+  {
+   "patternId": 9,
+   "domain": "Mt",
+   "roleMask": "100",
+   "supportSize": 39,
+   "classId": 7,
+   "className": "M-O",
+   "shapeSpectrum": "1",
+   "maxArity": 1,
+   "containsEmpty": false
+  },
+  {
+   "patternId": 10,
+   "domain": "Mt",
+   "roleMask": "111",
+   "supportSize": 210,
+   "classId": 8,
+   "className": "M-A",
+   "shapeSpectrum": "-2,1,1;-2,2;1,1;2",
+   "maxArity": 3,
+   "containsEmpty": false
+  },
+  {
+   "patternId": 11,
+   "domain": "Z",
+   "roleMask": "000",
+   "supportSize": 1,
+   "classId": 1,
+   "className": "E",
+   "shapeSpectrum": "E",
+   "maxArity": 0,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 12,
+   "domain": "Z",
+   "roleMask": "001",
+   "supportSize": 40,
+   "classId": 9,
+   "className": "Z-O",
+   "shapeSpectrum": "1;E",
+   "maxArity": 1,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 13,
+   "domain": "Z",
+   "roleMask": "010",
+   "supportSize": 40,
+   "classId": 10,
+   "className": "Z-C",
+   "shapeSpectrum": "-2;E",
+   "maxArity": 1,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 14,
+   "domain": "Z",
+   "roleMask": "011",
+   "supportSize": 800,
+   "classId": 11,
+   "className": "Z-M",
+   "shapeSpectrum": "-1;-2;-2,1;1,-2;E",
+   "maxArity": 2,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 15,
+   "domain": "Z",
+   "roleMask": "100",
+   "supportSize": 40,
+   "classId": 9,
+   "className": "Z-O",
+   "shapeSpectrum": "1;E",
+   "maxArity": 1,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 16,
+   "domain": "Z",
+   "roleMask": "101",
+   "supportSize": 420,
+   "classId": 12,
+   "className": "Z-OO",
+   "shapeSpectrum": "1;1,1;2;E",
+   "maxArity": 2,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 17,
+   "domain": "Z",
+   "roleMask": "110",
+   "supportSize": 800,
+   "classId": 11,
+   "className": "Z-M",
+   "shapeSpectrum": "-1;-2;-2,1;1,-2;E",
+   "maxArity": 2,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 18,
+   "domain": "Z",
+   "roleMask": "111",
+   "supportSize": 381,
+   "classId": 13,
+   "className": "Z-A",
+   "shapeSpectrum": "-2,1;1,-2,1;E",
+   "maxArity": 3,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 19,
+   "domain": "P",
+   "roleMask": "000",
+   "supportSize": 1,
+   "classId": 1,
+   "className": "E",
+   "shapeSpectrum": "E",
+   "maxArity": 0,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 20,
+   "domain": "P",
+   "roleMask": "001",
+   "supportSize": 39,
+   "classId": 3,
+   "className": "P-O",
+   "shapeSpectrum": "1;E",
+   "maxArity": 1,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 21,
+   "domain": "P",
+   "roleMask": "010",
+   "supportSize": 20,
+   "classId": 14,
+   "className": "P-C",
+   "shapeSpectrum": "-2",
+   "maxArity": 1,
+   "containsEmpty": false
+  },
+  {
+   "patternId": 22,
+   "domain": "P",
+   "roleMask": "011",
+   "supportSize": 400,
+   "classId": 15,
+   "className": "P-M",
+   "shapeSpectrum": "-2;1,-2",
+   "maxArity": 2,
+   "containsEmpty": false
+  },
+  {
+   "patternId": 23,
+   "domain": "P",
+   "roleMask": "100",
+   "supportSize": 39,
+   "classId": 3,
+   "className": "P-O",
+   "shapeSpectrum": "1;E",
+   "maxArity": 1,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 24,
+   "domain": "P",
+   "roleMask": "101",
+   "supportSize": 210,
+   "classId": 16,
+   "className": "P-OO",
+   "shapeSpectrum": "1;1,1;2;E",
+   "maxArity": 2,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 25,
+   "domain": "P",
+   "roleMask": "110",
+   "supportSize": 400,
+   "classId": 15,
+   "className": "P-M",
+   "shapeSpectrum": "-2;1,-2",
+   "maxArity": 2,
+   "containsEmpty": false
+  },
+  {
+   "patternId": 26,
+   "domain": "P",
+   "roleMask": "111",
+   "supportSize": 210,
+   "classId": 5,
+   "className": "P-A",
+   "shapeSpectrum": "-2;1,-2;1,1,-2;2,-2",
+   "maxArity": 3,
+   "containsEmpty": false
+  },
+  {
+   "patternId": 27,
+   "domain": "M",
+   "roleMask": "000",
+   "supportSize": 1,
+   "classId": 1,
+   "className": "E",
+   "shapeSpectrum": "E",
+   "maxArity": 0,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 28,
+   "domain": "M",
+   "roleMask": "001",
+   "supportSize": 39,
+   "classId": 7,
+   "className": "M-O",
+   "shapeSpectrum": "1",
+   "maxArity": 1,
+   "containsEmpty": false
+  },
+  {
+   "patternId": 29,
+   "domain": "M",
+   "roleMask": "010",
+   "supportSize": 20,
+   "classId": 17,
+   "className": "M-C",
+   "shapeSpectrum": "-2;E",
+   "maxArity": 1,
+   "containsEmpty": true
+  },
+  {
+   "patternId": 30,
+   "domain": "M",
+   "roleMask": "011",
+   "supportSize": 400,
+   "classId": 18,
+   "className": "M-M",
+   "shapeSpectrum": "-2,1;1",
+   "maxArity": 2,
+   "containsEmpty": false
+  },
+  {
+   "patternId": 31,
+   "domain": "M",
+   "roleMask": "100",
+   "supportSize": 39,
+   "classId": 7,
+   "className": "M-O",
+   "shapeSpectrum": "1",
+   "maxArity": 1,
+   "containsEmpty": false
+  },
+  {
+   "patternId": 32,
+   "domain": "M",
+   "roleMask": "101",
+   "supportSize": 210,
+   "classId": 19,
+   "className": "M-OO",
+   "shapeSpectrum": "1,1;2",
+   "maxArity": 2,
+   "containsEmpty": false
+  },
+  {
+   "patternId": 33,
+   "domain": "M",
+   "roleMask": "110",
+   "supportSize": 400,
+   "classId": 18,
+   "className": "M-M",
+   "shapeSpectrum": "-2,1;1",
+   "maxArity": 2,
+   "containsEmpty": false
+  },
+  {
+   "patternId": 34,
+   "domain": "M",
+   "roleMask": "111",
+   "supportSize": 210,
+   "classId": 8,
+   "className": "M-A",
+   "shapeSpectrum": "-2,1,1;-2,2;1,1;2",
+   "maxArity": 3,
+   "containsEmpty": false
+  }
+ ]
+}
