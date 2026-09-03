@@ -1,0 +1,11 @@
+Claim,Status,Classification
+"Shift-1 overlap forces identical boundary characters",PROVED,PAPER 3 THEOREM
+"Contact density d1(v) = 1/3 + B(v)/h^2",PROVED,PAPER 3 THEOREM
+"Shift-2 classification restricts out-degree to <= 2",PROVED,PAPER 3 THEOREM
+"Type-II same-orbit condition is v_i = v_j + 1",PROVED,PAPER 3 THEOREM
+"d2(v) reduces to B, J, U",PROVED,PAPER 3 THEOREM
+"z - 1 = z^3 phi_v(z,t)",PROVED,PAPER 3 LEMMA
+"Curvature identity eta_v = - z_v^2 phi_tt / (D_v F_z)",PROVED,PAPER 3 LEMMA
+"Xi_v is an exact analytical remainder, not tautological",PROVED,PAPER 3 THEOREM
+"Finite-depth certifier produces rigorous interval",PROVED,COMPUTATIONAL TOOL
+"Positive hard response requires Xi_v",PROVED,HYPOTHESIS CONFIRMED

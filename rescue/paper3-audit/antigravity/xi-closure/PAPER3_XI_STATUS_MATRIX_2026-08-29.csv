@@ -1,0 +1,9 @@
+Claim,Source,Reproduced?,Matches?,Notes
+"Exact definitions of eta_v, B(v), Xi_v frozen",XI_CURRENT_CLAIM_FREEZE_2026-08-29.md,Yes,Yes,"Definitions mathematically recorded."
+"-4/3 B(v) exact O1 derivation",PHASE_A_DERIVATION.md,Yes,No,"Exact operator trace yields h-dependent polynomials. -4/3 B(v) rejected as exact identity under raw conventions."
+"Xi_v defined independently without subtraction",PAPER3_XI_EXACT_DECOMPOSITION_2026-08-29.md,Yes,Yes,"Resolvent split into A_v and E_v completely bypasses subtraction."
+"Short-contact reducible to B, J, U",PAPER3_XI_EXACT_DECOMPOSITION_2026-08-29.md,Yes,Yes,"Nilpotent graph guarantees exact finite polynomial evaluation."
+"Delayed returns and certified tail E_phi",PAPER3_XI_EXACT_DECOMPOSITION_2026-08-29.md,Yes,Yes,"F9 perturbation bound applies directly to truncated E_v."
+"Sign Criterion from structural evaluation",PAPER3_XI_SIGN_CRITERION_2026-08-29.md,Yes,Yes,"Explicit rigorous interval guarantees hard positive response bounds."
+"Necessity of Type-II / O2 for positivity",PAPER3_XI_SIGN_CRITERION_2026-08-29.md,Yes,Yes,"O1 alone produces negative structural variance penalty. O2 / U(v) provides the required positive counterbalance."
+
