@@ -1,0 +1,1 @@
+Generator stdout was output to the background task console and was not explicitly redirected to a file. RAW_STDOUT_STATUS = NOT_CAPTURED.

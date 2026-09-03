@@ -1,0 +1,236 @@
+[
+ {
+  "A": "ccaaabaaacaaabbbccabbcbbbaaabbbccabbccca",
+  "E": "ccbbbabbbcbbbaacaaabaacbbbcccbbaaacccaab",
+  "F": "cbabbcccaaabaaacabbcbbbaaacaaabaaaccbaac",
+  "minK": 42
+ },
+ {
+  "A": "ccaaabaaacaaabbbccabbcbbbaaabbbccabbccca",
+  "E": "ccbbbabbbcbbbaaacaaabacbbbcccbbaaacccaab",
+  "F": "cbabbcccaaabaaacabbcbbbaaacaaabaaaccbaac",
+  "minK": 42
+ },
+ {
+  "A": "ccaaabaaacaaabbbccabbcbbbaaabbbccabbccca",
+  "E": "ccbbbabbbcbbbaaabbcaccbbbaaabccaaacccaab",
+  "F": "cbabbcccaaabaaacabbcbbbaaacaaabaaaccbaac",
+  "minK": 44
+ },
+ {
+  "A": "ccaaabaaacaaabbbccabbcbbbaaabbbccabbccca",
+  "E": "ccbbbabbbcbbbaacaaabaacbbbcccbbaaacccaab",
+  "F": "cbabbcccaaabaacaabbcbbbaaacaaabaaaccbaac",
+  "minK": 42
+ },
+ {
+  "A": "ccaaabaaacaaabbbccabbcbbbaaabbbccabbccca",
+  "E": "ccbbbabbbcbbbaaacaaabacbbbcccbbaaacccaab",
+  "F": "cbabbcccaaabaacaabbcbbbaaacaaabaaaccbaac",
+  "minK": 42
+ },
+ {
+  "A": "ccaaabaaacaaabbbccabbcbbbaaabbbccabbccca",
+  "E": "ccbbbabbbcbbbaaabbcaccbbbaaabccaaacccaab",
+  "F": "cbabbcccaaabaacaabbcbbbaaacaaabaaaccbaac",
+  "minK": 44
+ },
+ {
+  "A": "ccaaabaaacaaabbbcbbaccbbbabbbcbaaacbccca",
+  "E": "ccbbbabbbcbbbaacaaabaacbbbcccbbaaacccaab",
+  "F": "cbabbcccaaabacaaabbcbbbaaacaaabaaaccbaac",
+  "minK": 41
+ },
+ {
+  "A": "ccaaabaaacaaabbbcbbaccbbbabbbcbaaacbccca",
+  "E": "ccbbbabbbcbbbaaacaaabacbbbcccbbaaacccaab",
+  "F": "cbabbcccaaabacaaabbcbbbaaacaaabaaaccbaac",
+  "minK": 41
+ },
+ {
+  "A": "ccaaabaaacaaabbbcbbaccbbbabbbcbaaacbccca",
+  "E": "ccbbbabbbcbbbaaabbcaccbbbaaabccaaacccaab",
+  "F": "cbabbcccaaabacaaabbcbbbaaacaaabaaaccbaac",
+  "minK": 44
+ },
+ {
+  "A": "ccaaabaaacaaabbbccabbcbbbaaabbbccabbccca",
+  "E": "ccbbbabbbcbbbaacaaabaacbbbcccbbaaacccaab",
+  "F": "cbabbcccaaabacaaabbcbbbaaacaaabaaaccbaac",
+  "minK": 42
+ },
+ {
+  "A": "ccaaabaaacaaabbbccabbcbbbaaabbbccabbccca",
+  "E": "ccbbbabbbcbbbaaacaaabacbbbcccbbaaacccaab",
+  "F": "cbabbcccaaabacaaabbcbbbaaacaaabaaaccbaac",
+  "minK": 42
+ },
+ {
+  "A": "ccaaabaaacaaabbbccabbcbbbaaabbbccabbccca",
+  "E": "ccbbbabbbcbbbaaabbcaccbbbaaabccaaacccaab",
+  "F": "cbabbcccaaabacaaabbcbbbaaacaaabaaaccbaac",
+  "minK": 44
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccabcccaaac",
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaacaa",
+  "F": "cbbabbbcaaabaacccbbaaacccaaabaaacaaabbca",
+  "minK": 42
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccabcccaaac",
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaaaca",
+  "F": "cbbabbbcaaabaacccbbaaacccaaabaaacaaabbca",
+  "minK": 42
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccacbccaaac",
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaacaa",
+  "F": "cbbabbbcaaabaacccbbaaacccaaabaaacaaabbca",
+  "minK": 42
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccacbccaaac",
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaaaca",
+  "F": "cbbabbbcaaabaacccbbaaacccaaabaaacaaabbca",
+  "minK": 42
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccaccbcaaac",
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaacaa",
+  "F": "cbbabbbcaaabaacccbbaaacccaaabaaacaaabbca",
+  "minK": 42
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccaccbcaaac",
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaaaca",
+  "F": "cbbabbbcaaabaacccbbaaacccaaabaaacaaabbca",
+  "minK": 42
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccacccbaaac",
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaacaa",
+  "F": "cbbabbbcaaabaacccbbaaacccaaabaaacaaabbca",
+  "minK": 42
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccacccbaaac",
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaaaca",
+  "F": "cbbabbbcaaabaacccbbaaacccaaabaaacaaabbca",
+  "minK": 42
+ },
+ {
+  "A": "ccaaabaaacaaabbbcbbaccbbbabbbcbaaacbccca",
+  "E": "ccbbbabbbcbbbaacaaabaacbbbcccbbaaacccaab",
+  "F": "cbbabcccaaabacaaabbcbbbaaacaaabaaaccbaac",
+  "minK": 41
+ },
+ {
+  "A": "ccaaabaaacaaabbbcbbaccbbbabbbcbaaacbccca",
+  "E": "ccbbbabbbcbbbaaacaaabacbbbcccbbaaacccaab",
+  "F": "cbbabcccaaabacaaabbcbbbaaacaaabaaaccbaac",
+  "minK": 41
+ },
+ {
+  "A": "ccaaabaaacaaabbbcbbaccbbbabbbcbaaacbccca",
+  "E": "ccbbbabbbcbbbaaabbcaccbbbaaabccaaacccaab",
+  "F": "cbbabcccaaabacaaabbcbbbaaacaaabaaaccbaac",
+  "minK": 44
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccabcccaaac",
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaacaa",
+  "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca",
+  "minK": 42
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccabcccaaac",
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaaaca",
+  "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca",
+  "minK": 42
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccacbccaaac",
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaacaa",
+  "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca",
+  "minK": 42
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccacbccaaac",
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaaaca",
+  "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca",
+  "minK": 42
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccaccbcaaac",
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaacaa",
+  "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca",
+  "minK": 42
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccaccbcaaac",
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaaaca",
+  "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca",
+  "minK": 42
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccacccbaaac",
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaacaa",
+  "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca",
+  "minK": 42
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccacccbaaac",
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaaaca",
+  "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca",
+  "minK": 42
+ },
+ {
+  "A": "bcccaaabaaacaaabbbcbbbabbbcccabcaaabbcac",
+  "E": "aaaccbcaabbbcbbbabbbcccbacccaabaaacbbbab",
+  "F": "ccbcaaaccbbbaaacaabccaaabaaacaaabbbaacbb",
+  "minK": 42
+ },
+ {
+  "A": "bcccaaabaaacaaabbbcbbbabbbcccabcaaabbcac",
+  "E": "aaaccbcaabbbcbbbabbbcccbacccaaabaacbbbab",
+  "F": "ccbcaaaccbbbaaacaabccaaabaaacaaabbbaacbb",
+  "minK": 42
+ },
+ {
+  "A": "bcccaaabaaacaaabbbcbbbabbbcccabcaaabbcac",
+  "E": "aaaccbbbabbbcbbbaaccbacaaabbbaacbbbccacc",
+  "F": "ccbcaaaccbbbaaacaabccaaabaaacaaabbbaacbb",
+  "minK": 45
+ },
+ {
+  "A": "bcccaaabaaacaaabbbcbbbabbbcccabcaaabbcac",
+  "E": "aaaccbbbabbbcbbbaaccbacaaabbbaacbbbcaccc",
+  "F": "ccbcaaaccbbbaaacaabccaaabaaacaaabbbaacbb",
+  "minK": 45
+ },
+ {
+  "A": "bcccaaabaaacaaabbbcbbbabbbcccbacaaabbcac",
+  "E": "aaaccbcaabbbcbbbabbbcccbacccaabaaacbbbab",
+  "F": "ccbcaaaccbbbaaacaabccaaabaaacaaabbbaacbb",
+  "minK": 42
+ },
+ {
+  "A": "bcccaaabaaacaaabbbcbbbabbbcccbacaaabbcac",
+  "E": "aaaccbcaabbbcbbbabbbcccbacccaaabaacbbbab",
+  "F": "ccbcaaaccbbbaaacaabccaaabaaacaaabbbaacbb",
+  "minK": 42
+ },
+ {
+  "A": "bcccaaabaaacaaabbbcbbbabbbcccbacaaabbcac",
+  "E": "aaaccbbbabbbcbbbaaccbacaaabbbaacbbbccacc",
+  "F": "ccbcaaaccbbbaaacaabccaaabaaacaaabbbaacbb",
+  "minK": 45
+ },
+ {
+  "A": "bcccaaabaaacaaabbbcbbbabbbcccbacaaabbcac",
+  "E": "aaaccbbbabbbcbbbaaccbacaaabbbaacbbbcaccc",
+  "F": "ccbcaaaccbbbaaacaabccaaabaaacaaabbbaacbb",
+  "minK": 45
+ }
+]

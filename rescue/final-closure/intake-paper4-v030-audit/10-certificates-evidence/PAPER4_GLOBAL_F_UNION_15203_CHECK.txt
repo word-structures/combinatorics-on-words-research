@@ -1,0 +1,8 @@
+old_union_14728=14728
+meta150_new=475
+intersection=0
+new_union=15203
+meta150_AF_pairs=367
+meta150_ABDEF_hits=0
+STATUS=PASS
+sha256=3a04cf23e4a61533e694cbbd5f0de6a48925dbd62113f58b0ce19855c6164175

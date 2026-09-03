@@ -1,0 +1,12 @@
+PAPER4 GLOBAL F UNION 38118 CHECK
+base_33118=33118
+fresh10_F=5000
+intersection=0
+fresh10_AF_positive_F=22
+fresh10_AF_pairs=64
+fresh10_AF_cleanroom=64/64_PASS
+fresh10_ABDEF_hits=0
+fresh10_ABDEF_caps=0
+new_union=38118
+STATUS=PASS
+sha256=ea82395a9f7a471045f53622280ab1b95d55788a50fde761c36e05f1622ef764

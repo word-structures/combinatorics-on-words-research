@@ -1,0 +1,25 @@
+A. Paper 3 short-contact identities, all labeled profiles h=2..7
+  PASS: 116 labeled profiles
+  No h=8 evaluated.
+
+B. h6 exact structural data
+  charpoly(M_h6) = lambda**3*(lambda - 3)*(lambda**2 - 3)
+  bigram set stabilized by iteration 4: 14 pairs
+  ac ad af bc bd cb ce dc df ea eb fa fb fe
+
+C. g3 incidence and length-40 affine lift
+  M_g3 =
+Matrix([[5, 1, 0, 2, 3, 9], [4, 2, 4, 0, 6, 1], [1, 7, 6, 8, 1, 0]])
+  M_40 =
+Matrix([[15, 11, 10, 12, 13, 19], [14, 12, 14, 10, 16, 11], [11, 17, 16, 18, 11, 10]])
+  PASS: same RREF, hence same kernel
+  length-40 role profiles:
+    a: (15, 14, 11)
+    b: (11, 12, 17)
+    c: (10, 14, 16)
+    d: (12, 10, 18)
+    e: (13, 16, 11)
+    f: (19, 11, 10)
+  PASS: mutual nullspace inclusion checked exactly
+
+ALL V3 STRUCTURAL CHECKS PASS

@@ -1,0 +1,22 @@
+{
+ "runId": "afexRX",
+ "kind": "exposure-matched R (population RX): AF_EXISTS over a per-E quota",
+ "population": "RX",
+ "preregSha": "bca2780f881ac23c9057d204f2e4cbc85f67945afd758bb9ef5abbe1e8d3463c",
+ "quota": 5000,
+ "afNodeCap": 5000000,
+ "afRecheckCap": 2000000000,
+ "bcdNodeCap": 20000000,
+ "gateVersion": "subset-cover-2026-08-28/h6/L40/AF=faf,K<=60;AEF=eafea+fafea,K<=100",
+ "eSeed": 7788,
+ "ePoolSize": 60,
+ "codeSha": {
+  "gate": "387f469c14dfb063a56d10b178beaab3846eccd57f4ef0c50b9f6f60cfb60458",
+  "solver": "4b551d225a0642ab1be394777ef7115db92e98ac52320c89b2ed964012131652",
+  "stages": "e99564c5f124dff5dcdc9c0d8e64d782e7339526bba81b66decf5b53de2fc5f8",
+  "runner": "0cac8541db4e9114e51c6be58da0aa12c48ae98c0f4ef12e38deb626c27587de"
+ },
+ "host": "LAPTOP-0GD87QVT",
+ "startedUtc": "2026-08-28T15:56:47.302Z",
+ "status": "RUNNING"
+}

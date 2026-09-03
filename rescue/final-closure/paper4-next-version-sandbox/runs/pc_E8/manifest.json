@@ -1,0 +1,65 @@
+{
+ "runId": "pc_E8",
+ "kind": "joint E->A->F search for K<=40-clean AEF triples",
+ "gateVersion": "subset-cover-2026-08-28/h6/L40/AF=faf,K<=60;AEF=eafea+fafea,K<=100",
+ "seed": 1,
+ "numERequested": 1,
+ "aCapPerE": 500000000,
+ "fCapPerEA": 500000000,
+ "fixedE": "ccbbbabbbcbbbaacaaabaacbbbcccbbaaacccaab",
+ "profiles": {
+  "A": [
+   15,
+   14,
+   11
+  ],
+  "E": [
+   13,
+   16,
+   11
+  ],
+  "F": [
+   19,
+   11,
+   10
+  ]
+ },
+ "searchDomain": "E: seeded DFS over Parikh(13,16,11) abelian-square-free K<=20. A: DFS over Parikh(15,14,11) pruned incrementally on E.A (K<=40), node cap 500000000 per E. F: DFS over Parikh(19,11,10) pruned incrementally on E.A.F (K<=40), node cap 500000000 per (E,A). Acceptance: H(faf) clean K<=60 AND H(eafea),H(fafea) clean K<=40.",
+ "acceptance": {
+  "completeAF_K": [
+   2,
+   60
+  ],
+  "aefK40": [
+   2,
+   40
+  ],
+  "covers": {
+   "AF": [
+    "faf"
+   ],
+   "AEF": [
+    "eafea",
+    "fafea"
+   ]
+  }
+ },
+ "codeSha": {
+  "gate": "387f469c14dfb063a56d10b178beaab3846eccd57f4ef0c50b9f6f60cfb60458",
+  "runner": "2a378f66a35e32c812c24b2be5f6c61bf6d6e3437d5cf7940dae8e14a4accc6c",
+  "persist": "1ffd17df484a31e73550864e88f21f5209f00488650e637cb42d5f6f342ef45a",
+  "rng": "2e363e2ba644bf844fa4e08e80b561fd30f3f1bc8f26887294a2b359b42010c3"
+ },
+ "host": "LAPTOP-0GD87QVT",
+ "startedUtc": "2026-08-28T06:48:49.142Z",
+ "status": "COMPLETED",
+ "finishedUtc": "2026-08-28T06:50:08.225Z",
+ "summary": {
+  "eExamined": 1,
+  "eDuplicates": 0,
+  "aefK40Hits": 5,
+  "notInCanonical39": 0,
+  "strictDisjointTriples": 0,
+  "seconds": 79.1
+ }
+}

@@ -1,0 +1,15 @@
+formulation,source_attacked,source_obtained,exact_locus,relation,evidence,residual_risk
+second-difference prefix algebra psi(x_{j+1})-2psi(x_j)+psi(x_{j-1}),Carpi 1993 IJAC 3(2) 151-168,NO (paywalled),condition C1-C3,EXACT MATCH,already disclaimed as prior art in manuscript section 16,none - manuscript claims no novelty here
+carry curvature delta = c1-c0 in {-1,0,+1},Carpi 1993 condition C3 parameter delta_j in {0 1},NO (paywalled; 2026 restatement PDF failed to extract),C3,UNRESOLVED,secondary reports indicate C3 carries an integer parameter delta_j in {0,1},HIGH - single blocking item; read pp.151-168 directly
+six carry domains Zs Pt Mt Z P M,"Carpi; Currie-Rampersad; Rao-Rosenfeld; Eyidogan et al; mechanical-word lit",partial,n/a,NO MATCH FOUND,no source classifies cutpoint positions across constant-length blocks by carry pair,moderate - absence not provable
+34 realizable role/domain patterns,same set,partial,n/a,NO MATCH FOUND,no finite catalogue of support patterns located in any source,moderate
+34 -> 19 support-family quotient,same set,partial,n/a,NO MATCH FOUND,no equivalence-class collapse of support sets located,moderate
+nineteen closed family cardinalities,same set,partial,n/a,NO MATCH FOUND,no cardinality formulas of this type located,moderate
+occurrence-support classification under partial morphism assignment,partial-word / CSP / automata quotient literature,partial,n/a,NO MATCH FOUND,searches over partial-assignment constraint compilation returned nothing equivalent,moderate
+template/parent/ancestor machinery with boundary corrections,Currie-Rampersad 2012 JCTA 119(5) 942-948,YES (arXiv 1106.1842 full PDF),k-templates and parent relation,SAME ALGEBRA DIFFERENT THEOREM,fetched: general decidability framework; explicitly no cutpoint case-split; no Euclidean carries; no support catalogue,none
+arithmetic progressions in prefix data / sieve,Eyidogan-Goral-Tanisali 2026 arXiv:2605.20504v2,YES (arXiv abs+PDF),whole paper,ADJACENT ONLY,fetched: no coefficient-support classification; no carries; no 6/34/19 counts; collision is terminological,LOW - cleared directly
+six-letter core h6 and projected long-period framework,Rao-Rosenfeld 2018 SIDMA 32(4) 2381-2397,NO (not fetched this session),construction of h6 and g3,ADJACENT ONLY,manuscript already positions itself as building on this,none - ancestry acknowledged
+staged prefix algorithms in abelian-square-free construction,Keranen 2002/2003/2010,NO,unverified,ADJACENT ONLY,v0.33 correctly REMOVED the uncited bullet rather than guess metadata,none
+rational rotation / carry sequence / mechanical words,Sturmian and Christoffel literature,partial,n/a,KNOWN PRIOR ART,manuscript already disclaims mechanical-word carries as classical,none
+first-hit prefix cuts / frontier state quotient / weighted counting DAG,generic CSP and automata literature,partial,n/a,KNOWN PRIOR ART,v0.33 section 16 explicitly disclaims these as generic,none
+finite subset-factor gate theorem,general combinatorics on words,n/a,n/a,LIKELY FOLKLORE,five-line proof; infrastructure not contribution,none - should be demoted to a lemma

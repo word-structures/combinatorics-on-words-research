@@ -1,0 +1,2 @@
+node tests/test.js
+node tests/test-abelian-core.js

@@ -1,0 +1,28 @@
+{
+ "runId": "afex_R",
+ "kind": "exact AF_EXISTS(A) over a delimited deterministic subpopulation",
+ "population": "R",
+ "distinctATotal": 260798,
+ "subpopulation": "first 20000 distinct A in persisted enumeration order",
+ "nodeCapPerA": 5000000,
+ "gateVersion": "subset-cover-2026-08-28/h6/L40/AF=faf,K<=60;AEF=eafea+fafea,K<=100",
+ "codeSha": {
+  "gate": "387f469c14dfb063a56d10b178beaab3846eccd57f4ef0c50b9f6f60cfb60458",
+  "solver": "4b551d225a0642ab1be394777ef7115db92e98ac52320c89b2ed964012131652",
+  "runner": "53e6a5a7a09b24476fd4b0955c53f768b8b87c28a31cf015a20400e359d14677"
+ },
+ "host": "LAPTOP-0GD87QVT",
+ "startedUtc": "2026-08-28T09:05:52.527Z",
+ "status": "COMPLETED",
+ "finishedUtc": "2026-08-28T09:19:20.223Z",
+ "summary": {
+  "population": "R",
+  "evaluated": 20000,
+  "afPositive": 14,
+  "afNegative": 19986,
+  "capped": 0,
+  "allExhaustive": true,
+  "meanNodes": 63979,
+  "seconds": 807.7
+ }
+}

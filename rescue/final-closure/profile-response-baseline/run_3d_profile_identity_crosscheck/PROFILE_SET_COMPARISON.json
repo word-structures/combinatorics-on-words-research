@@ -1,0 +1,32 @@
+{
+  "ENUMERATOR_A_B_MATCH": true,
+  "ENUMERATOR_A_C_MATCH": true,
+  "ENUMERATOR_B_C_MATCH": true,
+  "H2_PROFILES": [
+    "1,1,0",
+    "2,0,0"
+  ],
+  "H3_PROFILES": [
+    "1,1,1",
+    "2,1,0"
+  ],
+  "H4_PROFILES": [
+    "2,1,1"
+  ],
+  "H5_PROFILES": [
+    "2,2,1",
+    "3,1,1",
+    "3,2,0"
+  ],
+  "H6_PROFILES": [
+    "2,2,2",
+    "3,2,1",
+    "4,1,1"
+  ],
+  "H7_PROFILES": [
+    "3,2,2",
+    "3,3,1",
+    "4,2,1",
+    "5,1,1"
+  ]
+}

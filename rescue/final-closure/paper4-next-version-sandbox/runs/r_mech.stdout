@@ -1,0 +1,59 @@
+{
+ "E_sha": "933c0dee15dd32a3",
+ "A_sha": "8dfaaf7687802e0f",
+ "activeSignatures": 1560,
+ "bothConstrainSameForm": 1160,
+ "midpointSignatures": 400,
+ "full": {
+  "sat": false,
+  "deathDepth": 35,
+  "capped": false,
+  "nodes": 154255
+ },
+ "withoutMidpointSignatures": {
+  "sat": false,
+  "deathDepth": 35,
+  "capped": false
+ },
+ "FAFtargetsOnly": {
+  "sat": true,
+  "deathDepth": null,
+  "capped": false
+ },
+ "AFEtargetsOnly": {
+  "sat": true,
+  "deathDepth": null,
+  "capped": false
+ },
+ "secs": 17.2
+}
+{
+ "E_sha": "933c0dee15dd32a3",
+ "A_sha": "2a3ec65a1945021b",
+ "activeSignatures": 1560,
+ "bothConstrainSameForm": 1160,
+ "midpointSignatures": 400,
+ "full": {
+  "sat": false,
+  "deathDepth": 35,
+  "capped": false,
+  "nodes": 153895
+ },
+ "withoutMidpointSignatures": {
+  "sat": false,
+  "deathDepth": 35,
+  "capped": false
+ },
+ "FAFtargetsOnly": {
+  "sat": true,
+  "deathDepth": null,
+  "capped": false
+ },
+ "AFEtargetsOnly": {
+  "sat": true,
+  "deathDepth": null,
+  "capped": false
+ },
+ "secs": 14.7
+}
+persisted -> runs/R_mechanism_probes.json

@@ -1,0 +1,74 @@
+[
+  {
+    "k": 1,
+    "A": null,
+    "nodes": 126,
+    "E": "abbbaaaccbbbcabbcccaaaccbbaaabbbacbbbcca"
+  },
+  {
+    "k": 2,
+    "A": null,
+    "nodes": 695,
+    "E": "abbbacbbbcccacbbbaaaccbaacaaabbbacbbbcca"
+  },
+  {
+    "k": 3,
+    "A": null,
+    "nodes": 137,
+    "E": "abbbacbbbcccbbaacbccaaabacaaabbbacbbbcca"
+  },
+  {
+    "k": 4,
+    "A": null,
+    "nodes": 41,
+    "E": "abbbcbabbbcccbbaacccabaaacaaabbbacbbbcca"
+  },
+  {
+    "k": 5,
+    "A": null,
+    "nodes": 41,
+    "E": "abbbcbabbbcccbbaacccaabaacaaabbbacbbbcca"
+  },
+  {
+    "k": 6,
+    "A": null,
+    "nodes": 41,
+    "E": "abbbcbabbbcccbbaacccaaabacaaabbbacbbbcca"
+  },
+  {
+    "k": 7,
+    "A": null,
+    "nodes": 40,
+    "E": "abbbcbbabbcccbbaacccabaaacaaabbbacbbbcca"
+  },
+  {
+    "k": 8,
+    "A": null,
+    "nodes": 40,
+    "E": "abbbcbbabbcccbbaacccaabaacaaabbbacbbbcca"
+  },
+  {
+    "k": 9,
+    "A": null,
+    "nodes": 40,
+    "E": "abbbcbbabbcccbbaacccaaabacaaabbbacbbbcca"
+  },
+  {
+    "k": 10,
+    "A": null,
+    "nodes": 40,
+    "E": "abbbcbbbabcccbbaacccabaaacaaabbbacbbbcca"
+  },
+  {
+    "k": 11,
+    "A": null,
+    "nodes": 40,
+    "E": "abbbcbbbabcccbbaacccaabaacaaabbbacbbbcca"
+  },
+  {
+    "k": 12,
+    "A": null,
+    "nodes": 40,
+    "E": "abbbcbbbabcccbbaacccaaabacaaabbbacbbbcca"
+  }
+]

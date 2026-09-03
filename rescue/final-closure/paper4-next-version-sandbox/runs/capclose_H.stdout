@@ -1,0 +1,25 @@
+  idx 14086: lowNodes=5000001 -> AF-negative (nodes 6419336)
+  idx 22833: lowNodes=5000001 -> AF-negative (nodes 6319126)
+  idx 23715: lowNodes=5000001 -> AF-negative (nodes 5547809)
+  idx 23718: lowNodes=5000001 -> AF-negative (nodes 5941094)
+  idx 48718: lowNodes=5000001 -> AF-negative (nodes 6389910)
+  idx 70214: lowNodes=5000001 -> AF-negative (nodes 5249005)
+  idx 70234: lowNodes=5000001 -> AF-negative (nodes 5226719)
+  idx 70244: lowNodes=5000001 -> AF-negative (nodes 5195437)
+  idx 70254: lowNodes=5000001 -> AF-negative (nodes 5184619)
+  idx 70258: lowNodes=5000001 -> AF-negative (nodes 5155083)
+  idx 70353: lowNodes=5000001 -> AF-negative (nodes 5108329)
+  idx 70357: lowNodes=5000001 -> AF-negative (nodes 5081319)
+  idx 70678: lowNodes=5000001 -> AF-negative (nodes 5637544)
+  idx 70703: lowNodes=5000001 -> AF-negative (nodes 5616009)
+  idx 70713: lowNodes=5000001 -> AF-negative (nodes 5581833)
+  idx 70717: lowNodes=5000001 -> AF-negative (nodes 5508895)
+{
+ "population": "H",
+ "scanned": 72454,
+ "cappedFound": 16,
+ "resolvedAFpositive": 0,
+ "resolvedAFnegative": 16,
+ "stillCapped": 0,
+ "seconds": 4371.8
+}

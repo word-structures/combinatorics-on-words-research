@@ -1,0 +1,73 @@
+{
+ "runId": "freshE_exh_s7788",
+ "kind": "fresh non-canonical E -> exhaustive A -> exhaustive F (full cap accounting)",
+ "gateVersion": "subset-cover-2026-08-28/h6/L40/AF=faf,K<=60;AEF=eafea+fafea,K<=100",
+ "seed": 7788,
+ "numERequested": 60,
+ "aCap": 40000000,
+ "fCap": 40000000,
+ "profiles": {
+  "A": [
+   15,
+   14,
+   11
+  ],
+  "E": [
+   13,
+   16,
+   11
+  ],
+  "F": [
+   19,
+   11,
+   10
+  ]
+ },
+ "searchDomain": "E: seeded DFS over Parikh(13,16,11), abelian-square-free K<=20, rejected if in the canonical 9. A: ENTIRE Parikh(15,14,11) class, pruned on E.A (K<=40). F: ENTIRE Parikh(19,11,10) class, pruned on E.A.F (K<=40).",
+ "acceptance": {
+  "completeAF_K": [
+   2,
+   60
+  ],
+  "aefK40": [
+   2,
+   40
+  ],
+  "covers": {
+   "AF": [
+    "faf"
+   ],
+   "AEF": [
+    "eafea",
+    "fafea"
+   ]
+  }
+ },
+ "capAccounting": "aCapped recorded per E; fCapEvents counted globally and per E; exhaustive iff both are zero",
+ "codeSha": {
+  "gate": "387f469c14dfb063a56d10b178beaab3846eccd57f4ef0c50b9f6f60cfb60458",
+  "runner": "b6594f86239927637426bf995a02688c3c0bc2dc459aba22d998aef10dab0c81",
+  "persist": "1ffd17df484a31e73550864e88f21f5209f00488650e637cb42d5f6f342ef45a",
+  "rng": "2e363e2ba644bf844fa4e08e80b561fd30f3f1bc8f26887294a2b359b42010c3"
+ },
+ "host": "LAPTOP-0GD87QVT",
+ "startedUtc": "2026-08-28T05:25:25.219Z",
+ "status": "COMPLETED",
+ "finishedUtc": "2026-08-28T05:43:41.917Z",
+ "summary": {
+  "eExamined": 60,
+  "eDuplicates": 0,
+  "eCanonicalSkipped": 0,
+  "aefK40Hits": 0,
+  "notInCanonical39": 0,
+  "strictDisjointTriples": 0,
+  "eWithACapped": 0,
+  "fLevelCapEvents": 0,
+  "maxANodes": 3489981,
+  "maxFNodes": 4368791,
+  "aCap": 40000000,
+  "fCap": 40000000,
+  "exhaustiveOverFullAandFProfileClasses": true,
+  "seconds": 1096.7
+ }
+}

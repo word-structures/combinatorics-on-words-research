@@ -1,0 +1,26 @@
+{
+ "runId": "capclose_H",
+ "kind": "POST-HOC closure of Report-7 capped A words",
+ "population": "H",
+ "note": "Report-7 primary result is unchanged; capped cases were correctly excluded from its denominators.",
+ "scan": "same deterministic prefix, indices 0..72453, low cap 5000000",
+ "closureCap": 2000000000,
+ "codeSha": {
+  "gate": "387f469c14dfb063a56d10b178beaab3846eccd57f4ef0c50b9f6f60cfb60458",
+  "solver": "4b551d225a0642ab1be394777ef7115db92e98ac52320c89b2ed964012131652",
+  "runner": "1a5e4c07a9f0e8725703010b026c64e699474fe17984b93921037acf383127b6"
+ },
+ "host": "LAPTOP-0GD87QVT",
+ "startedUtc": "2026-08-28T11:53:47.675Z",
+ "status": "COMPLETED",
+ "finishedUtc": "2026-08-28T13:06:39.499Z",
+ "summary": {
+  "population": "H",
+  "scanned": 72454,
+  "cappedFound": 16,
+  "resolvedAFpositive": 0,
+  "resolvedAFnegative": 16,
+  "stillCapped": 0,
+  "seconds": 4371.8
+ }
+}

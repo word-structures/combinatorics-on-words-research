@@ -1,0 +1,12 @@
+base_32126=32126
+A36_meta700_new=992
+intersection=0
+AF_positive_F=38
+AF_pairs=139
+AF_cleanroom=139/139_PASS
+ABDEF_closed_pairs=139
+ABDEF_hits=0
+ABDEF_caps=0
+new_union=33118
+STATUS=PASS
+sha256=5f408647978018de0392326942d7e0dbabe7e2bcb8b6f87657edf33749c058b6

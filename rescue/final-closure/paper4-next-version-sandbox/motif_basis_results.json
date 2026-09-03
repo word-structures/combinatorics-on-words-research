@@ -1,0 +1,540 @@
+{
+ "A_completeness": {
+  "casesTested": 2952,
+  "masksWithUncoveredSignatures": 2448,
+  "smallest": [
+   {
+    "L": 3,
+    "N": 2,
+    "nX": 2,
+    "B": [
+     0,
+     1
+    ],
+    "missing": [
+     "-2*x1+1*x2",
+     "1*x1+-2*x2",
+     "1*x1+1*x2"
+    ],
+    "missingCount": 3
+   },
+   {
+    "L": 3,
+    "N": 3,
+    "nX": 2,
+    "B": [
+     0,
+     1
+    ],
+    "missing": [
+     "-1*x1",
+     "-1*x2",
+     "-2*x1+1*x2",
+     "1*x1+-2*x2",
+     "1*x1+1*x2"
+    ],
+    "missingCount": 5
+   },
+   {
+    "L": 3,
+    "N": 3,
+    "nX": 2,
+    "B": [
+     1,
+     2
+    ],
+    "missing": [
+     "-1*x1",
+     "-1*x2",
+     "-2*x1+1*x2",
+     "1*x1+-2*x2",
+     "1*x1+1*x2"
+    ],
+    "missingCount": 5
+   },
+   {
+    "L": 3,
+    "N": 3,
+    "nX": 3,
+    "B": [
+     0,
+     1,
+     2
+    ],
+    "missing": [
+     "-2*x1+1*x2",
+     "1*x1+-2*x2"
+    ],
+    "missingCount": 2
+   },
+   {
+    "L": 3,
+    "N": 4,
+    "nX": 2,
+    "B": [
+     0,
+     2
+    ],
+    "missing": [
+     "-2*x1+1*x2"
+    ],
+    "missingCount": 1
+   },
+   {
+    "L": 3,
+    "N": 4,
+    "nX": 2,
+    "B": [
+     1,
+     3
+    ],
+    "missing": [
+     "1*x1+-2*x2"
+    ],
+    "missingCount": 1
+   }
+  ]
+ },
+ "A2_escaping_shapes": [
+  {
+   "shape": "2,-2",
+   "occurrences": 510,
+   "example": "2*x1+-2*x3",
+   "mask": {
+    "L": 4,
+    "N": 2,
+    "B": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "shape": "2",
+   "occurrences": 75,
+   "example": "2*x2",
+   "mask": {
+    "L": 4,
+    "N": 2,
+    "B": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "shape": "-2,2",
+   "occurrences": 510,
+   "example": "-2*x1+2*x3",
+   "mask": {
+    "L": 4,
+    "N": 2,
+    "B": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "shape": "1,-2",
+   "occurrences": 4257,
+   "example": "1*x2+-2*x3",
+   "mask": {
+    "L": 4,
+    "N": 2,
+    "B": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "shape": "1,1",
+   "occurrences": 435,
+   "example": "1*x1+1*x3",
+   "mask": {
+    "L": 4,
+    "N": 2,
+    "B": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "shape": "-2,1",
+   "occurrences": 4257,
+   "example": "-2*x1+1*x2",
+   "mask": {
+    "L": 4,
+    "N": 2,
+    "B": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "shape": "-1",
+   "occurrences": 4851,
+   "example": "-1*x1",
+   "mask": {
+    "L": 4,
+    "N": 3,
+    "B": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "shape": "1,1,-2",
+   "occurrences": 1360,
+   "example": "1*x1+1*x2+-2*x4",
+   "mask": {
+    "L": 5,
+    "N": 2,
+    "B": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "shape": "-2,1,1",
+   "occurrences": 1360,
+   "example": "-2*x1+1*x3+1*x4",
+   "mask": {
+    "L": 5,
+    "N": 2,
+    "B": [
+     0,
+     1
+    ]
+   }
+  }
+ ],
+ "A3_frozen_counterexample": {
+  "L": 3,
+  "N": 2,
+  "blocks": 2,
+  "X_positions": [
+   0,
+   1
+  ],
+  "nX": 2,
+  "s": 0,
+  "K": 2,
+  "signature": "1*x1+-2*x2",
+  "contributingCuts": "12",
+  "distinctXcopies": 2,
+  "cuts": [
+   {
+    "q": 0,
+    "t": 0,
+    "b": 0,
+    "i": 0
+   },
+   {
+    "q": 1,
+    "t": 2,
+    "b": 0,
+    "i": 2
+   },
+   {
+    "q": 2,
+    "t": 4,
+    "b": 1,
+    "i": 1
+   }
+  ],
+  "inOneCopyGen": false,
+  "inOuterPairGen": false,
+  "inCurvGen": false,
+  "CurvB": []
+ },
+ "B_redundancy": {
+  "L": 10,
+  "sizes": {
+   "oneCopy": 83,
+   "C0": 16,
+   "Cplus": 10,
+   "Cminus": 10,
+   "midpoint": 25
+  },
+  "oneCopy_cap_C0": 9,
+  "oneCopy_cap_Cplus": 0,
+  "oneCopy_cap_Cminus": 0,
+  "oneCopy_cap_midpoint": 0,
+  "midpoint_cap_C0": 0,
+  "midpoint_cap_Cplus": 0,
+  "midpoint_cap_Cminus": 0,
+  "note": "oneCopy 3-cut AP motifs are a proper subset of C0 (same delta=0 law, K-bounded)"
+ },
+ "C_minimality": {
+  "oneCopy": {
+   "mask": {
+    "L": 8,
+    "N": 4,
+    "B": [
+     0
+    ]
+   },
+   "skeleton": 29,
+   "lostIfRemoved": 28,
+   "sample": [
+    "-2*x2+1*x4",
+    "1*x1+-2*x3+1*x5",
+    "1*x2+-2*x4+1*x6",
+    "1*x3+-2*x5+1*x7"
+   ]
+  },
+  "outerPair": {
+   "mask": {
+    "L": 8,
+    "N": 4,
+    "B": [
+     0,
+     2
+    ]
+   },
+   "skeleton": 58,
+   "lostIfRemoved": 17,
+   "sample": [
+    "1*x1+1*x7",
+    "1*x1+1*x5",
+    "1*x2+1*x6",
+    "1*x3+1*x7"
+   ]
+  },
+  "AP_delta0": {
+   "mask": {
+    "L": 8,
+    "N": 6,
+    "B": [
+     0,
+     2,
+     4
+    ]
+   },
+   "skeleton": 64,
+   "lostIfRemoved": 2,
+   "sample": [
+    "-2*x1+1*x2",
+    "1*x6+-2*x7"
+   ]
+  },
+  "irregular_delta1": {
+   "mask": {
+    "L": 8,
+    "N": 6,
+    "B": [
+     0,
+     2,
+     5
+    ]
+   },
+   "skeleton": 90,
+   "lostIfRemoved": 19,
+   "sample": [
+    "-2*x1+1*x2",
+    "-2*x2+1*x3",
+    "-2*x3+1*x4",
+    "-2*x4+1*x5"
+   ]
+  }
+ },
+ "D_shape_catalogue": [
+  {
+   "shape": "1",
+   "windows": 93252,
+   "example": "1*x2",
+   "firstSeen": {
+    "L": 4,
+    "N": 2,
+    "B": [
+     0
+    ]
+   },
+   "cuts": "0",
+   "copies": 1
+  },
+  {
+   "shape": "EMPTY",
+   "windows": 88080,
+   "example": "",
+   "firstSeen": {
+    "L": 4,
+    "N": 2,
+    "B": [
+     0
+    ]
+   },
+   "cuts": "",
+   "copies": 0
+  },
+  {
+   "shape": "-2",
+   "windows": 38360,
+   "example": "-2*x2",
+   "firstSeen": {
+    "L": 4,
+    "N": 2,
+    "B": [
+     0
+    ]
+   },
+   "cuts": "1",
+   "copies": 1
+  },
+  {
+   "shape": "1,-2",
+   "windows": 38114,
+   "example": "1*x1+-2*x3",
+   "firstSeen": {
+    "L": 4,
+    "N": 2,
+    "B": [
+     0
+    ]
+   },
+   "cuts": "01",
+   "copies": 1
+  },
+  {
+   "shape": "-2,1",
+   "windows": 38114,
+   "example": "-2*x1+1*x3",
+   "firstSeen": {
+    "L": 4,
+    "N": 2,
+    "B": [
+     1
+    ]
+   },
+   "cuts": "12",
+   "copies": 1
+  },
+  {
+   "shape": "1,1",
+   "windows": 23892,
+   "example": "1*x1+1*x3",
+   "firstSeen": {
+    "L": 4,
+    "N": 2,
+    "B": [
+     0,
+     1
+    ]
+   },
+   "cuts": "02",
+   "copies": 2
+  },
+  {
+   "shape": "1,-2,1",
+   "windows": 20540,
+   "example": "1*x1+-2*x2+1*x3",
+   "firstSeen": {
+    "L": 4,
+    "N": 3,
+    "B": [
+     0,
+     1,
+     2
+    ]
+   },
+   "cuts": "012",
+   "copies": 3
+  },
+  {
+   "shape": "1,1,-2",
+   "windows": 10260,
+   "example": "1*x1+1*x2+-2*x4",
+   "firstSeen": {
+    "L": 5,
+    "N": 2,
+    "B": [
+     0,
+     1
+    ]
+   },
+   "cuts": "012",
+   "copies": 2
+  },
+  {
+   "shape": "-2,1,1",
+   "windows": 10260,
+   "example": "-2*x1+1*x3+1*x4",
+   "firstSeen": {
+    "L": 5,
+    "N": 2,
+    "B": [
+     0,
+     1
+    ]
+   },
+   "cuts": "012",
+   "copies": 2
+  },
+  {
+   "shape": "-1",
+   "windows": 7176,
+   "example": "-1*x1",
+   "firstSeen": {
+    "L": 4,
+    "N": 3,
+    "B": [
+     0,
+     1
+    ]
+   },
+   "cuts": "01",
+   "copies": 2
+  },
+  {
+   "shape": "2",
+   "windows": 5280,
+   "example": "2*x2",
+   "firstSeen": {
+    "L": 4,
+    "N": 2,
+    "B": [
+     0,
+     1
+    ]
+   },
+   "cuts": "02",
+   "copies": 2
+  },
+  {
+   "shape": "2,-2",
+   "windows": 1710,
+   "example": "2*x1+-2*x3",
+   "firstSeen": {
+    "L": 4,
+    "N": 2,
+    "B": [
+     0,
+     1
+    ]
+   },
+   "cuts": "012",
+   "copies": 2
+  },
+  {
+   "shape": "-2,2",
+   "windows": 1710,
+   "example": "-2*x1+2*x3",
+   "firstSeen": {
+    "L": 4,
+    "N": 2,
+    "B": [
+     0,
+     1
+    ]
+   },
+   "cuts": "012",
+   "copies": 2
+  }
+ ]
+}

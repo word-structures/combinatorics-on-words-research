@@ -1,0 +1,142 @@
+[
+  {
+    "j": 24,
+    "F": "aaabacccbccaabcaaaccbbabbcbbbaaacaaabaaa",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 7327527,
+    "A": null
+  },
+  {
+    "j": 82,
+    "F": "aaacabaaaccbccacbbbccaaabbcabbbaaacaaaba",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 6829818,
+    "A": null
+  },
+  {
+    "j": 337,
+    "F": "aacaabbbcbbbabbbccaaacccaabccaaabaaacaaa",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 13686906,
+    "A": null
+  },
+  {
+    "j": 375,
+    "F": "aacabcccbbbccaaabbcaabbbaaacaaabaaaccbaa",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 6151710,
+    "A": null
+  },
+  {
+    "j": 406,
+    "F": "aacbbbccacbccaabaaacaabbcbbbaaacaaabaaac",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 5669805,
+    "A": null
+  },
+  {
+    "j": 447,
+    "F": "aaccbcaccbbbccaaabaacaabbcbbbaaacaaabaaa",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 5841489,
+    "A": null
+  },
+  {
+    "j": 470,
+    "F": "aacccbcacbbabbbcaaabaacccabbbaaacaaabaaa",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 13163934,
+    "A": null
+  },
+  {
+    "j": 472,
+    "F": "aacccbccabbcbbbaaacaaabaaaccbaacaaabbbaa",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 5147117,
+    "A": null
+  },
+  {
+    "j": 551,
+    "F": "abacaaabbbaaaccbbbabbcccbaacccaaabaaacaa",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 7079164,
+    "A": null
+  },
+  {
+    "j": 664,
+    "F": "abbbcbacbcccaaacbaaabbbaacccaaabaaacaaab",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 7064926,
+    "A": null
+  },
+  {
+    "j": 675,
+    "F": "abbbcbbbaaabccacbbaaaccbaacccaaabaaacaaa",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 6311241,
+    "A": null
+  },
+  {
+    "j": 679,
+    "F": "abbbccabcccbbaaacaabbbaaacccaaabaaacaaab",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 7324372,
+    "A": null
+  },
+  {
+    "j": 686,
+    "F": "abbbcccacbacaaabbcbacccaaabaaacaaabbbaaa",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 12055267,
+    "A": null
+  },
+  {
+    "j": 693,
+    "F": "abbcaaacbcccacbbbacaabccaaabaaacaaabbbaa",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 7247725,
+    "A": null
+  },
+  {
+    "j": 715,
+    "F": "abbcaccbccaaacbbaaabbbaacbbaaacaaabaaacc",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 9892527,
+    "A": null
+  },
+  {
+    "j": 717,
+    "F": "abbcacccbcccaaacbbaaabbbaacbbaaacaaabaaa",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 6584282,
+    "A": null
+  },
+  {
+    "j": 746,
+    "F": "abbccabcccaaabacaaabbcbbbaaacaaabaaaccba",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 7061428,
+    "A": null
+  },
+  {
+    "j": 753,
+    "F": "abbccaccbcccaaabaaacaaabbcaabbbaaabbcaaa",
+    "status": "CAP",
+    "nodes": 20000001,
+    "A": null
+  },
+  {
+    "j": 759,
+    "F": "abbcccabbbaacaabaaaccbcccaaabaaacaaabbba",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 8752647,
+    "A": null
+  },
+  {
+    "j": 790,
+    "F": "abcabaaacabccaabbbacccbccaaabaaacaaabbba",
+    "status": "EXHAUSTED_NO_HIT",
+    "nodes": 8388412,
+    "A": null
+  }
+]

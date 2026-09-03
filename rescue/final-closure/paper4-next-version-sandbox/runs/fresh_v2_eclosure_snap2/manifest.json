@@ -1,0 +1,40 @@
+{
+ "runId": "fresh_v2_eclosure_snap2",
+ "kind": "exhaustive-E-closure",
+ "gateVersion": "subset-cover-2026-08-28/h6/L40/AF=faf,K<=60;AEF=eafea+fafea,K<=100",
+ "inputPairsFile": "fresh_v2_af_snapshot2.json",
+ "inputPairsCount": 5,
+ "inputPairsSha": "28b42d2c11b375fef9612ffbfa2ad11a93b446b0853d52f244242bb6dcfe2e8b",
+ "eProfile": [
+  13,
+  16,
+  11
+ ],
+ "aefCover": [
+  "eafea",
+  "fafea"
+ ],
+ "aefKmax": [
+  100,
+  100
+ ],
+ "eDomain": "ALL words of length 40 with Parikh profile (13,16,11) -- full profile class, no sampling",
+ "method": "DFS on H(fafea)=F.A.F.E.A with incremental abelian-square pruning (squares ending at each new position, K<=100); H(eafea)=E.A.F.E.A verified in full at completion",
+ "nodeCapPerPair": 200000000,
+ "codeSha": {
+  "gate": "387f469c14dfb063a56d10b178beaab3846eccd57f4ef0c50b9f6f60cfb60458",
+  "runner": "98a28639b13d0d646df85239c74c7a2bba1dc4f489e6d8bf348159b2b3f82e30"
+ },
+ "host": "LAPTOP-0GD87QVT",
+ "startedUtc": "2026-08-28T04:35:45.633Z",
+ "status": "COMPLETED",
+ "finishedUtc": "2026-08-28T04:35:45.673Z",
+ "summary": {
+  "pairs": 5,
+  "totalENodes": 2433,
+  "totalCompleteE": 10,
+  "completeAefHits": 0,
+  "anyPairCapped": false,
+  "exhaustiveOverFullEProfileClass": true
+ }
+}

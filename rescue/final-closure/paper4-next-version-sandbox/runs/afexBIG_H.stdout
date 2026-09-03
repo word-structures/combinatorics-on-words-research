@@ -1,0 +1,10 @@
+{
+ "population": "H",
+ "evaluated": 72454,
+ "afPositive": 202,
+ "afNegative": 72236,
+ "capped": 16,
+ "allExhaustive": false,
+ "meanNodes": 79255,
+ "seconds": 3054.9
+}

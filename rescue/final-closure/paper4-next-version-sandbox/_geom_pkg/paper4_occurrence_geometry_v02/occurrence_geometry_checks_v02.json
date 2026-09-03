@@ -1,0 +1,39 @@
+{
+  "compiler": {
+    "cases": 744,
+    "failures": []
+  },
+  "triple_curvature": {
+    "cases": 1467,
+    "failures": []
+  },
+  "curvature_counts": {
+    "L": "4..100",
+    "failures": [],
+    "disjointness_failures": []
+  },
+  "midpoint_routing": {
+    "cases": 4914,
+    "failures": []
+  },
+  "AP_three_distinct_saturation": {
+    "cases": 255,
+    "failures": []
+  },
+  "same_ambient_counterexample": {
+    "base_support": 141,
+    "irregular_support": 151,
+    "new": 10,
+    "lost": 0,
+    "new_equals_Cplus": true,
+    "Cplus_size": 10,
+    "curvature": 1
+  },
+  "FAF_L40": {
+    "bridge_supports": 400,
+    "expected": 400,
+    "C0": 361,
+    "Cplus": 190,
+    "Cminus": 190
+  }
+}

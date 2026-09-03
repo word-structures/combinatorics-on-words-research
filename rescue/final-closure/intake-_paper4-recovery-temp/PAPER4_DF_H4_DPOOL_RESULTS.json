@@ -1,0 +1,20 @@
+[
+  {
+    "core": 1,
+    "sec": 0.241,
+    "stdout": "POOL 8\nK2 TESTED 516 PASS 3\nK3 TESTED 23928 PASS 114\nK4 TESTED 622461 PASS 2113\n",
+    "count": 8
+  },
+  {
+    "core": 2,
+    "sec": 0.253,
+    "stdout": "POOL 7\nK2 TESTED 516 PASS 3\nK3 TESTED 23928 PASS 114\nK4 TESTED 622461 PASS 2112\n",
+    "count": 7
+  },
+  {
+    "core": 3,
+    "sec": 0.237,
+    "stdout": "POOL 7\nK2 TESTED 516 PASS 4\nK3 TESTED 23928 PASS 152\nK4 TESTED 622461 PASS 2814\n",
+    "count": 7
+  }
+]

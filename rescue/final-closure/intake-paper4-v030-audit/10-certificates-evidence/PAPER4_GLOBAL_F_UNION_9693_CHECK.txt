@@ -1,0 +1,10 @@
+PAPER4 GLOBAL F UNION 9693 CHECK
+old_union_5151=5151
+directA_seed300=300
+directA_population4242=4242
+old_intersect_300=0
+old_intersect_4242=0
+seed300_intersect_4242=0
+final_union=9693
+STATUS=PASS
+sha256=a8bd7d9801dd814f3bd885e1960d524ab2cdaff8f9c94b5fc1ffe32799d172f7

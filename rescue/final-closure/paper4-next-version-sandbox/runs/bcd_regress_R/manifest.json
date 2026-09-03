@@ -1,0 +1,27 @@
+{
+ "runId": "bcd_regress_R",
+ "kind": "stages B/C/D on AF-positive A",
+ "population": "R",
+ "afPositiveA": 14,
+ "nodeCap": 20000000,
+ "unit": "(E,A) pairs whose A is AF-positive",
+ "codeSha": {
+  "gate": "387f469c14dfb063a56d10b178beaab3846eccd57f4ef0c50b9f6f60cfb60458",
+  "afe": "bd6964a90e5d570ca97dcbd786a73f37c67e776d7c6b588fc264295f1d768b0f",
+  "runner": "e99564c5f124dff5dcdc9c0d8e64d782e7339526bba81b66decf5b53de2fc5f8"
+ },
+ "host": "LAPTOP-0GD87QVT",
+ "startedUtc": "2026-08-28T10:53:07.303Z",
+ "status": "COMPLETED",
+ "finishedUtc": "2026-08-28T10:53:25.026Z",
+ "summary": {
+  "population": "R",
+  "afPositiveA": 14,
+  "pairs": 14,
+  "AFE_EXISTS": 1,
+  "AF_AND_AFE_EXISTS": 0,
+  "P40": 0,
+  "capped": 0,
+  "allExhaustive": true
+ }
+}

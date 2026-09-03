@@ -1,0 +1,137 @@
+{
+ "P1_T3_modulo_empty": {
+  "cases": 1134,
+  "failuresWithEmpty": 567,
+  "failuresWithoutEmpty": 0,
+  "sample": []
+ },
+ "P2_AP_saturation_modulo_empty": {
+  "cases": 252,
+  "failures": 0,
+  "sample": []
+ },
+ "P3_empty_signature_windows": {
+  "masksWithEmptyT3Window": 148,
+  "allSuchMasksContainMacroAP": true,
+  "sample": [
+   {
+    "L": 4,
+    "N": 3,
+    "B": [
+     0,
+     1,
+     2
+    ],
+    "emptyWindows": 3,
+    "example": {
+     "s": 1,
+     "K": 4
+    },
+    "hasAP": true
+   },
+   {
+    "L": 4,
+    "N": 4,
+    "B": [
+     0,
+     1,
+     2
+    ],
+    "emptyWindows": 3,
+    "example": {
+     "s": 1,
+     "K": 4
+    },
+    "hasAP": true
+   },
+   {
+    "L": 4,
+    "N": 4,
+    "B": [
+     1,
+     2,
+     3
+    ],
+    "emptyWindows": 3,
+    "example": {
+     "s": 5,
+     "K": 4
+    },
+    "hasAP": true
+   },
+   {
+    "L": 4,
+    "N": 4,
+    "B": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "emptyWindows": 6,
+    "example": {
+     "s": 1,
+     "K": 4
+    },
+    "hasAP": true
+   },
+   {
+    "L": 4,
+    "N": 5,
+    "B": [
+     0,
+     1,
+     2
+    ],
+    "emptyWindows": 3,
+    "example": {
+     "s": 1,
+     "K": 4
+    },
+    "hasAP": true
+   },
+   {
+    "L": 4,
+    "N": 5,
+    "B": [
+     1,
+     2,
+     3
+    ],
+    "emptyWindows": 3,
+    "example": {
+     "s": 5,
+     "K": 4
+    },
+    "hasAP": true
+   }
+  ]
+ },
+ "P4_Kcap": {
+  "AFE_K40": 1161,
+  "AFE_K60": 1161,
+  "AFE_saturatesAt40": true,
+  "FAF_K40": 1561,
+  "FAF_K60": 1561,
+  "FAF_saturatesAt40": true,
+  "excess_K60": 400,
+  "excess_gateMixed": 400
+ },
+ "P5_randomized_stress": {
+  "cases": 382,
+  "failures": 0,
+  "sample": []
+ },
+ "P6_largeL_counts": {
+  "tested": [
+   101,
+   128,
+   199,
+   200,
+   256,
+   401,
+   512
+  ],
+  "failures": []
+ }
+}

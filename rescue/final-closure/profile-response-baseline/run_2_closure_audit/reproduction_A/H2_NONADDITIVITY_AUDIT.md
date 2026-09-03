@@ -1,0 +1,3 @@
+# H2 NONADDITIVITY
+interaction_a = -0.05294910461181013
+relative_to_full = 0.7229829515531923

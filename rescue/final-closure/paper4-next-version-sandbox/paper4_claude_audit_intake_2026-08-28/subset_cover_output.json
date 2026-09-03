@@ -1,0 +1,79 @@
+{
+  "factor_complexity_p1_to_p20": {
+    "1": 6,
+    "10": 74,
+    "11": 82,
+    "12": 90,
+    "13": 98,
+    "14": 106,
+    "15": 112,
+    "16": 118,
+    "17": 124,
+    "18": 130,
+    "19": 138,
+    "2": 14,
+    "20": 146,
+    "3": 22,
+    "4": 30,
+    "5": 38,
+    "6": 44,
+    "7": 52,
+    "8": 60,
+    "9": 66
+  },
+  "morphism": {
+    "a": "ace",
+    "b": "adf",
+    "c": "bdf",
+    "d": "bdc",
+    "e": "afe",
+    "f": "bce"
+  },
+  "subset_gates": [
+    {
+      "cover_lengths": [
+        3
+      ],
+      "exact_maximal_factor_cover": [
+        "faf"
+      ],
+      "max_S_only_macro_length": 3,
+      "name": "AF",
+      "natural_complete_half_period_ceiling_at_L40": 60,
+      "no_S_only_factor_at_length": 4,
+      "symbols": "af"
+    },
+    {
+      "cover_lengths": [
+        5,
+        5
+      ],
+      "exact_maximal_factor_cover": [
+        "eafea",
+        "fafea"
+      ],
+      "max_S_only_macro_length": 5,
+      "name": "AEF",
+      "natural_complete_half_period_ceiling_at_L40": 100,
+      "no_S_only_factor_at_length": 6,
+      "symbols": "aef"
+    },
+    {
+      "cover_lengths": [
+        5,
+        13,
+        17
+      ],
+      "exact_maximal_factor_cover": [
+        "eafea",
+        "bdfadfbdfafea",
+        "ebdfafeadfbdfafea"
+      ],
+      "max_S_only_macro_length": 17,
+      "name": "NO_C_ABDEF",
+      "natural_complete_half_period_ceiling_at_L40": 340,
+      "no_S_only_factor_at_length": 18,
+      "symbols": "abdef"
+    }
+  ]
+}

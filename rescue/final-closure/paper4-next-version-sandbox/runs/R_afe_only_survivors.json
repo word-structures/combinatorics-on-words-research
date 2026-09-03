@@ -1,0 +1,16 @@
+[
+ {
+  "E_sha": "933c0dee15dd32a3",
+  "A_sha": "8dfaaf7687802e0f",
+  "completeAF_count": 1,
+  "afeCleanAmongThem": 0,
+  "afeWitnessIgnoringAF": "6703cacd805b9958"
+ },
+ {
+  "E_sha": "933c0dee15dd32a3",
+  "A_sha": "2a3ec65a1945021b",
+  "completeAF_count": 1,
+  "afeCleanAmongThem": 0,
+  "afeWitnessIgnoringAF": "6703cacd805b9958"
+ }
+]

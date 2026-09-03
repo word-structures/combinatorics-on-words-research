@@ -1,0 +1,137 @@
+[
+  {
+    "chunk": 1,
+    "global_lo": 1,
+    "global_hi": 50,
+    "status": "DONE",
+    "sec": 26.429,
+    "summary": "SUMMARY PAIRS 50 HITS 0 CAPS 0 E_NODES 83077044 E_COMPLETE 546042 B_NODES 0 B_COMPLETE 0 D_NODES 0 D_COMPLETE 0",
+    "abfe_count": 0
+  },
+  {
+    "chunk": 2,
+    "global_lo": 51,
+    "global_hi": 100,
+    "status": "DONE",
+    "sec": 14.342,
+    "summary": "SUMMARY PAIRS 50 HITS 0 CAPS 0 E_NODES 75815352 E_COMPLETE 421025 B_NODES 0 B_COMPLETE 0 D_NODES 0 D_COMPLETE 0",
+    "abfe_count": 0
+  },
+  {
+    "chunk": 3,
+    "global_lo": 101,
+    "global_hi": 150,
+    "status": "DONE",
+    "sec": 19.037,
+    "summary": "SUMMARY PAIRS 50 HITS 0 CAPS 0 E_NODES 53171464 E_COMPLETE 166583 B_NODES 0 B_COMPLETE 0 D_NODES 0 D_COMPLETE 0",
+    "abfe_count": 0
+  },
+  {
+    "chunk": 4,
+    "global_lo": 151,
+    "global_hi": 200,
+    "status": "TIMEOUT",
+    "sec": 45,
+    "summary": "",
+    "abfe_count": null
+  },
+  {
+    "chunk": 5,
+    "global_lo": 201,
+    "global_hi": 250,
+    "status": "DONE",
+    "sec": 24.568,
+    "summary": "SUMMARY PAIRS 50 HITS 0 CAPS 0 E_NODES 62929790 E_COMPLETE 548662 B_NODES 0 B_COMPLETE 0 D_NODES 0 D_COMPLETE 0",
+    "abfe_count": 0
+  },
+  {
+    "chunk": 6,
+    "global_lo": 251,
+    "global_hi": 300,
+    "status": "DONE",
+    "sec": 24.929,
+    "summary": "SUMMARY PAIRS 50 HITS 0 CAPS 0 E_NODES 125653465 E_COMPLETE 1600285 B_NODES 0 B_COMPLETE 0 D_NODES 0 D_COMPLETE 0",
+    "abfe_count": 0
+  },
+  {
+    "chunk": 7,
+    "global_lo": 301,
+    "global_hi": 350,
+    "status": "DONE",
+    "sec": 0.026,
+    "summary": "SUMMARY PAIRS 50 HITS 0 CAPS 0 E_NODES 98693 E_COMPLETE 0 B_NODES 0 B_COMPLETE 0 D_NODES 0 D_COMPLETE 0",
+    "abfe_count": 0
+  },
+  {
+    "chunk": 8,
+    "global_lo": 351,
+    "global_hi": 400,
+    "status": "DONE",
+    "sec": 0.024,
+    "summary": "SUMMARY PAIRS 50 HITS 0 CAPS 0 E_NODES 101820 E_COMPLETE 0 B_NODES 0 B_COMPLETE 0 D_NODES 0 D_COMPLETE 0",
+    "abfe_count": 0
+  },
+  {
+    "chunk": 9,
+    "global_lo": 401,
+    "global_hi": 450,
+    "status": "DONE",
+    "sec": 0.552,
+    "summary": "SUMMARY PAIRS 50 HITS 0 CAPS 0 E_NODES 1645509 E_COMPLETE 3118 B_NODES 0 B_COMPLETE 0 D_NODES 0 D_COMPLETE 0",
+    "abfe_count": 0
+  },
+  {
+    "chunk": 10,
+    "global_lo": 451,
+    "global_hi": 500,
+    "status": "DONE",
+    "sec": 0.197,
+    "summary": "SUMMARY PAIRS 50 HITS 0 CAPS 0 E_NODES 486742 E_COMPLETE 156 B_NODES 0 B_COMPLETE 0 D_NODES 0 D_COMPLETE 0",
+    "abfe_count": 0
+  },
+  {
+    "chunk": 11,
+    "global_lo": 501,
+    "global_hi": 550,
+    "status": "DONE",
+    "sec": 31.327,
+    "summary": "SUMMARY PAIRS 50 HITS 0 CAPS 0 E_NODES 115417688 E_COMPLETE 1728827 B_NODES 102908 B_COMPLETE 3288 D_NODES 33817 D_COMPLETE 300",
+    "abfe_count": 3288
+  },
+  {
+    "chunk": 12,
+    "global_lo": 551,
+    "global_hi": 600,
+    "status": "DONE",
+    "sec": 42.531,
+    "summary": "SUMMARY PAIRS 50 HITS 0 CAPS 0 E_NODES 305129931 E_COMPLETE 4535676 B_NODES 291410 B_COMPLETE 4738 D_NODES 12656 D_COMPLETE 0",
+    "abfe_count": 4738
+  },
+  {
+    "chunk": 13,
+    "global_lo": 601,
+    "global_hi": 650,
+    "status": "DONE",
+    "sec": 5.869,
+    "summary": "SUMMARY PAIRS 50 HITS 0 CAPS 0 E_NODES 16749715 E_COMPLETE 38379 B_NODES 266232 B_COMPLETE 3948 D_NODES 11236 D_COMPLETE 0",
+    "abfe_count": 3948
+  },
+  {
+    "chunk": 14,
+    "global_lo": 651,
+    "global_hi": 700,
+    "status": "DONE",
+    "sec": 8.013,
+    "summary": "SUMMARY PAIRS 50 HITS 0 CAPS 0 E_NODES 53180787 E_COMPLETE 716282 B_NODES 193006 B_COMPLETE 2292 D_NODES 26398 D_COMPLETE 0",
+    "abfe_count": 2292
+  },
+  {
+    "chunk": 15,
+    "global_lo": 701,
+    "global_hi": 702,
+    "status": "DONE",
+    "sec": 0.227,
+    "summary": "SUMMARY PAIRS 2 HITS 0 CAPS 0 E_NODES 679507 E_COMPLETE 1358 B_NODES 0 B_COMPLETE 0 D_NODES 0 D_COMPLETE 0",
+    "abfe_count": 0
+  }
+]

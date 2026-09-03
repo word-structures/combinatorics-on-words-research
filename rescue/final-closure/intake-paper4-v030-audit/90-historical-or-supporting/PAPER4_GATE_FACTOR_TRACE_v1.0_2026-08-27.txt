@@ -1,0 +1,40 @@
+PAPER4 GATE -> h6 FACTOR TRACE
+
+[AF]
+af: PASS
+fa: PASS
+faf: PASS
+
+[AFD]
+ad: PASS
+df: PASS
+adf: PASS
+dfa: PASS
+fad: PASS
+
+[ABCF]
+fb: PASS
+ac: PASS
+bc: PASS
+cb: PASS
+cbc: PASS
+
+[FULL_D]
+ad: PASS
+bd: PASS
+dc: PASS
+df: PASS
+adf: PASS
+bdc: PASS
+bdf: PASS
+cbd: PASS
+dcb: PASS
+dfa: PASS
+dfb: PASS
+fad: PASS
+fbd: PASS
+
+[HISTORICAL_EXTRA]
+bcb: ABSENT_AS_EXPECTED
+
+STATUS=ALL_CURRENT_PRUNING_CONTEXTS_ARE_ACTUAL_h6_FACTORS

@@ -1,0 +1,9 @@
+base_20672=20672
+dactive14=14
+boundary100=100
+base_inter_dactive=0
+base_inter_boundary=0
+dactive_inter_boundary=0
+new_union=20786
+STATUS=PASS
+sha256=8aa7a6d17a27471517f90b78d1ebcabe82269ac0511326b94c35aedda5bb7d03

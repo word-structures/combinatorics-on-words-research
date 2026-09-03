@@ -1,0 +1,704 @@
+[
+ {
+  "id": "44daa453d4c0fdade0d705e9b320bff24bda079513ac9f2782efad0d2464e282",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 44,
+  "k": 44,
+  "cover": "eafea",
+  "offset": 21,
+  "kMod40": 4,
+  "startPhase": 21,
+  "startBlock": 0,
+  "halfParikh": [
+   18,
+   14,
+   12
+  ],
+  "witnessHash": "73e217a52673a05c9bedafd6b3dc8a9f"
+ },
+ {
+  "id": "0a631d88744ea99fb9ec84c01f9e2a7df4e1b4ee1d36fa09df65cefdd3c7401d",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 24,
+  "kMod40": 2,
+  "startPhase": 24,
+  "startBlock": 0,
+  "halfParikh": [
+   16,
+   14,
+   12
+  ],
+  "witnessHash": "c33262ad5ecae9d2eb84d181b48505fe"
+ },
+ {
+  "id": "1956385f65c658bc0ae70b484ab939fd95881caef116698b0534bf004bb54592",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 24,
+  "kMod40": 2,
+  "startPhase": 24,
+  "startBlock": 0,
+  "halfParikh": [
+   16,
+   14,
+   12
+  ],
+  "witnessHash": "c33262ad5ecae9d2eb84d181b48505fe"
+ },
+ {
+  "id": "7d6e4c442f333f9cb6a33eac2512d520c3e8d40fb84a97a0963fabc7eb6a694f",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 44,
+  "k": 44,
+  "cover": "eafea",
+  "offset": 21,
+  "kMod40": 4,
+  "startPhase": 21,
+  "startBlock": 0,
+  "halfParikh": [
+   18,
+   14,
+   12
+  ],
+  "witnessHash": "79d9858a06fef307e0502581fc2254e8"
+ },
+ {
+  "id": "86938c6d02aa2c01b207e2f7b3cd423f6cf7989519e2a0b3115e4f60d8707b61",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 24,
+  "kMod40": 2,
+  "startPhase": 24,
+  "startBlock": 0,
+  "halfParikh": [
+   16,
+   14,
+   12
+  ],
+  "witnessHash": "c9e82b204d4ebae0b0844aca6e2d0aa5"
+ },
+ {
+  "id": "05fc9f2cb4e9975c09ac8b00af3dac2147974bc0fec10c9d9f133232549b6068",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 24,
+  "kMod40": 2,
+  "startPhase": 24,
+  "startBlock": 0,
+  "halfParikh": [
+   16,
+   14,
+   12
+  ],
+  "witnessHash": "c9e82b204d4ebae0b0844aca6e2d0aa5"
+ },
+ {
+  "id": "087410b12b4bd3875aadb608b06228e1f49d9a930e2343c654b4d6a404abf93e",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 44,
+  "k": 44,
+  "cover": "eafea",
+  "offset": 21,
+  "kMod40": 4,
+  "startPhase": 21,
+  "startBlock": 0,
+  "halfParikh": [
+   18,
+   14,
+   12
+  ],
+  "witnessHash": "3adbac35f42c004a6483f8aba2467340"
+ },
+ {
+  "id": "8ca890df3db8a638802fda0e7f8355d280884f68957f8001c59dfa4a6a749853",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 41,
+  "k": 41,
+  "cover": "eafea",
+  "offset": 26,
+  "kMod40": 1,
+  "startPhase": 26,
+  "startBlock": 0,
+  "halfParikh": [
+   16,
+   13,
+   12
+  ],
+  "witnessHash": "1cf894db5a1c1a8d566ddf1bdc478fc6"
+ },
+ {
+  "id": "4f538ab0d3908b67cc09c2dcfb0581cc86148010924e30cfbc2eaadac0eb9c3d",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 41,
+  "k": 41,
+  "cover": "eafea",
+  "offset": 26,
+  "kMod40": 1,
+  "startPhase": 26,
+  "startBlock": 0,
+  "halfParikh": [
+   16,
+   13,
+   12
+  ],
+  "witnessHash": "1cf894db5a1c1a8d566ddf1bdc478fc6"
+ },
+ {
+  "id": "eedab03774bc02895d29cee48299bf2f26dca0bd0c683a584c5fa82bfcd221da",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 44,
+  "k": 44,
+  "cover": "eafea",
+  "offset": 21,
+  "kMod40": 4,
+  "startPhase": 21,
+  "startBlock": 0,
+  "halfParikh": [
+   18,
+   14,
+   12
+  ],
+  "witnessHash": "761293f156601ed624aff84fd7ee1f5d"
+ },
+ {
+  "id": "822c7f84a0a5f9f22d0f16b634a57f6004729377ef225f6f692e6f734de9f120",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 24,
+  "kMod40": 2,
+  "startPhase": 24,
+  "startBlock": 0,
+  "halfParikh": [
+   16,
+   14,
+   12
+  ],
+  "witnessHash": "d07c722dc47391065b2a6141c2e1e058"
+ },
+ {
+  "id": "bfe4f4d0f73c0c79eca63c72569bb5750ae8469553f2e82c937462d1f0df30b8",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 24,
+  "kMod40": 2,
+  "startPhase": 24,
+  "startBlock": 0,
+  "halfParikh": [
+   16,
+   14,
+   12
+  ],
+  "witnessHash": "d07c722dc47391065b2a6141c2e1e058"
+ },
+ {
+  "id": "dffcc13bf23153e4763a605f4c37d8c498b931efb984f43670f208277178b3d4",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 11,
+  "kMod40": 2,
+  "startPhase": 11,
+  "startBlock": 0,
+  "halfParikh": [
+   15,
+   16,
+   11
+  ],
+  "witnessHash": "484e195dd9b2b20eb55d591c32851ac0"
+ },
+ {
+  "id": "c30102edf24a556dcd72f99349bcc4df8f5c56c953a7ca380e638c6d86131c0f",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 11,
+  "kMod40": 2,
+  "startPhase": 11,
+  "startBlock": 0,
+  "halfParikh": [
+   15,
+   16,
+   11
+  ],
+  "witnessHash": "4338943ed5bfeb54f2a2954fe5b87092"
+ },
+ {
+  "id": "67b30452950af52ebe6dca57c11dd39690e33f4949e9d4f78204dc4a2abc96d5",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 11,
+  "kMod40": 2,
+  "startPhase": 11,
+  "startBlock": 0,
+  "halfParikh": [
+   15,
+   16,
+   11
+  ],
+  "witnessHash": "d3b80619d8ec3b78860ff44704b141bf"
+ },
+ {
+  "id": "2fcd791c628822f9dc255163bb2f7b5bfa26ea809df1db1aac78fab2f02a8ff7",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 11,
+  "kMod40": 2,
+  "startPhase": 11,
+  "startBlock": 0,
+  "halfParikh": [
+   15,
+   16,
+   11
+  ],
+  "witnessHash": "d41284c30ac4437f24c19a0dfc20f401"
+ },
+ {
+  "id": "aebd8c090738eb44e23390b303073c1e54b803955e1ea9be0a47fab334bf4efb",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 11,
+  "kMod40": 2,
+  "startPhase": 11,
+  "startBlock": 0,
+  "halfParikh": [
+   15,
+   16,
+   11
+  ],
+  "witnessHash": "b810ef9ee6a684c3b2fcc40c5c41f45b"
+ },
+ {
+  "id": "291fc1b973a28ec982fed18a424ece8d9dadc5dbcd5d0a6356f03af215e1012a",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 11,
+  "kMod40": 2,
+  "startPhase": 11,
+  "startBlock": 0,
+  "halfParikh": [
+   15,
+   16,
+   11
+  ],
+  "witnessHash": "3dfae13116649b56bb44e889ad621772"
+ },
+ {
+  "id": "cc170d3eac36638cde133169b3bdf11577abafe0820bb72e4efa8f4037193850",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 11,
+  "kMod40": 2,
+  "startPhase": 11,
+  "startBlock": 0,
+  "halfParikh": [
+   15,
+   16,
+   11
+  ],
+  "witnessHash": "d7363497840cbe28fc3dadfa99fba18b"
+ },
+ {
+  "id": "fc85a7161f9a36a8ade318dc2a5979dfe44f5c79ec1c50655754debfd2f6e78c",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 11,
+  "kMod40": 2,
+  "startPhase": 11,
+  "startBlock": 0,
+  "halfParikh": [
+   15,
+   16,
+   11
+  ],
+  "witnessHash": "13e1f79024802c330f4b9af1619eee62"
+ },
+ {
+  "id": "d2e6d76afe4451e522540507f1e0f789935cffda138895423bd34430bc412668",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 44,
+  "k": 44,
+  "cover": "eafea",
+  "offset": 21,
+  "kMod40": 4,
+  "startPhase": 21,
+  "startBlock": 0,
+  "halfParikh": [
+   18,
+   14,
+   12
+  ],
+  "witnessHash": "2c48e6cdcda3e3e4bbdaa19473ab7bf6"
+ },
+ {
+  "id": "4cd3385d11f05ce8a62e411dd131afc08a3247454feee538ab629e4df3b38fb8",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 41,
+  "k": 41,
+  "cover": "eafea",
+  "offset": 26,
+  "kMod40": 1,
+  "startPhase": 26,
+  "startBlock": 0,
+  "halfParikh": [
+   16,
+   13,
+   12
+  ],
+  "witnessHash": "6cafbe41d95935a6178f8b5e8d90216d"
+ },
+ {
+  "id": "be6ce4b2b7257b65d8c3cd1b6fa6e518f2bc200b755e13e557475f3e2a5e1841",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 41,
+  "k": 41,
+  "cover": "eafea",
+  "offset": 26,
+  "kMod40": 1,
+  "startPhase": 26,
+  "startBlock": 0,
+  "halfParikh": [
+   16,
+   13,
+   12
+  ],
+  "witnessHash": "6cafbe41d95935a6178f8b5e8d90216d"
+ },
+ {
+  "id": "ebb4a66785bf6718630c2fcefe3cfe280d1dd7de04a3c0d084b84c28cb43eb9f",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 11,
+  "kMod40": 2,
+  "startPhase": 11,
+  "startBlock": 0,
+  "halfParikh": [
+   15,
+   16,
+   11
+  ],
+  "witnessHash": "f8469892458b79d7076e2ef1865aaf86"
+ },
+ {
+  "id": "8df6779a8136c151835c8eef1c1a194249d871c47e38a9159fccf49a7925b750",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 11,
+  "kMod40": 2,
+  "startPhase": 11,
+  "startBlock": 0,
+  "halfParikh": [
+   15,
+   16,
+   11
+  ],
+  "witnessHash": "614b09564c1ebbaaa328393d5807fb58"
+ },
+ {
+  "id": "bec36c697b4f43303dae91352a7ad55a9cfd43cfcdd765e2ab16bf8426857c41",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 11,
+  "kMod40": 2,
+  "startPhase": 11,
+  "startBlock": 0,
+  "halfParikh": [
+   15,
+   16,
+   11
+  ],
+  "witnessHash": "da20451b62f10f7299cf4637716b973c"
+ },
+ {
+  "id": "0944f15774cbedd5458b3d8cab8b6be7a102c4da2bcbe96ca182004e4322b606",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 11,
+  "kMod40": 2,
+  "startPhase": 11,
+  "startBlock": 0,
+  "halfParikh": [
+   15,
+   16,
+   11
+  ],
+  "witnessHash": "d1dd003172cd9a39fe2b084566ab1cf1"
+ },
+ {
+  "id": "94c522eeb7df15ca8278039ac7fbd21e276ef8fb68692f7daacf849e43597313",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 11,
+  "kMod40": 2,
+  "startPhase": 11,
+  "startBlock": 0,
+  "halfParikh": [
+   15,
+   16,
+   11
+  ],
+  "witnessHash": "0ad135d9a5c91d059211174480a50909"
+ },
+ {
+  "id": "c11bd490ddea5294ba2e1726ffa0f5ff3277a7aa472eeb0025b14139b05ddacb",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 11,
+  "kMod40": 2,
+  "startPhase": 11,
+  "startBlock": 0,
+  "halfParikh": [
+   15,
+   16,
+   11
+  ],
+  "witnessHash": "16341c9ad111904c99d0193f4e2edf48"
+ },
+ {
+  "id": "d554e6b965b49b862f6e4c43259b17d399de917a0d017b3f4d73fdf8e881b89a",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 11,
+  "kMod40": 2,
+  "startPhase": 11,
+  "startBlock": 0,
+  "halfParikh": [
+   15,
+   16,
+   11
+  ],
+  "witnessHash": "eb3a38f40e0b141f19cdbef740914cb9"
+ },
+ {
+  "id": "78b93e2ca68bc0a743616f2e71f573b18f9ce70ec9db3791134e492acef3d44f",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 11,
+  "kMod40": 2,
+  "startPhase": 11,
+  "startBlock": 0,
+  "halfParikh": [
+   15,
+   16,
+   11
+  ],
+  "witnessHash": "eb1cd503b0c3e5f26ee45ea0f99ac185"
+ },
+ {
+  "id": "600fd08b5b17721cfb917f19e59a2d80fbd3e478d062a9943479fb235f06462e",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 45,
+  "k": 45,
+  "cover": "eafea",
+  "offset": 7,
+  "kMod40": 5,
+  "startPhase": 7,
+  "startBlock": 0,
+  "halfParikh": [
+   16,
+   16,
+   13
+  ],
+  "witnessHash": "de9bd420134d0e93ea49e79c0d483ba7"
+ },
+ {
+  "id": "ffb1b2bfdd4e92b82a3bf9f9f1a4018f79aa0a877f5e014984d4e5d2a4a84305",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 45,
+  "k": 45,
+  "cover": "eafea",
+  "offset": 7,
+  "kMod40": 5,
+  "startPhase": 7,
+  "startBlock": 0,
+  "halfParikh": [
+   16,
+   16,
+   13
+  ],
+  "witnessHash": "4ef2ccf44b91f8c362277634ab91cfca"
+ },
+ {
+  "id": "458e998eb23849dae0097f380d8ce7936a459e5c8c821908d32689b01f29dfa0",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 10,
+  "kMod40": 2,
+  "startPhase": 10,
+  "startBlock": 0,
+  "halfParikh": [
+   14,
+   16,
+   12
+  ],
+  "witnessHash": "9a95844c7452864e8af368a0ae0c11b9"
+ },
+ {
+  "id": "85b1e51a6771726854ac5c6c09fbde4258c33d42f6e0e88aaf600b60f70e240a",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 10,
+  "kMod40": 2,
+  "startPhase": 10,
+  "startBlock": 0,
+  "halfParikh": [
+   14,
+   16,
+   12
+  ],
+  "witnessHash": "5668edbe419151f85cc79d31ba170dcf"
+ },
+ {
+  "id": "b4e9c90de514f82f5605af8db7031e8522a836d02fad30b84448d695231411ec",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 45,
+  "k": 45,
+  "cover": "eafea",
+  "offset": 7,
+  "kMod40": 5,
+  "startPhase": 7,
+  "startBlock": 0,
+  "halfParikh": [
+   16,
+   16,
+   13
+  ],
+  "witnessHash": "a41e401f2014e24f2670d38bfd84b996"
+ },
+ {
+  "id": "d601136fb19b764b980cd96a19b1eae6c454e5d617b17641d4778d0656d8b357",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 45,
+  "k": 45,
+  "cover": "eafea",
+  "offset": 7,
+  "kMod40": 5,
+  "startPhase": 7,
+  "startBlock": 0,
+  "halfParikh": [
+   16,
+   16,
+   13
+  ],
+  "witnessHash": "022432848d46b2242d634d27832f6f67"
+ },
+ {
+  "id": "b4450162328a83430f27fe3553fb3b9571cc2dfbab43c9187be2072127d5074c",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 10,
+  "kMod40": 2,
+  "startPhase": 10,
+  "startBlock": 0,
+  "halfParikh": [
+   14,
+   16,
+   12
+  ],
+  "witnessHash": "fa4a04f7bcdf8c57a9e8f2fdc053d4af"
+ },
+ {
+  "id": "3f57393fb82fed24d62403dec981339f8816a0a9a3b7504b3a2b7f88d7177fe3",
+  "src": "CANONICAL39",
+  "overlap": null,
+  "firstBadK": 42,
+  "k": 42,
+  "cover": "eafea",
+  "offset": 10,
+  "kMod40": 2,
+  "startPhase": 10,
+  "startBlock": 0,
+  "halfParikh": [
+   14,
+   16,
+   12
+  ],
+  "witnessHash": "b94b93169605c45d75a5bb908a48cd74"
+ }
+]

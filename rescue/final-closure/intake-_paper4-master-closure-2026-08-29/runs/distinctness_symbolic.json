@@ -1,0 +1,1047 @@
+{
+ "rows": [
+  {
+   "a": "E",
+   "b": "Zs-A",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "E",
+   "b": "Z-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "E",
+   "b": "Z-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "E",
+   "b": "Z-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "E",
+   "b": "Z-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "E",
+   "b": "Z-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "E",
+   "b": "P-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "E",
+   "b": "P-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "E",
+   "b": "P-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "E",
+   "b": "P-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "E",
+   "b": "P-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "E",
+   "b": "Pt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "E",
+   "b": "M-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "E",
+   "b": "M-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "E",
+   "b": "M-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "E",
+   "b": "M-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "E",
+   "b": "M-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "E",
+   "b": "Mt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Zs-A",
+   "b": "Z-O",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "Zs-A",
+   "b": "Z-C",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "Zs-A",
+   "b": "Z-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Zs-A",
+   "b": "Z-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Zs-A",
+   "b": "Z-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Zs-A",
+   "b": "P-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Zs-A",
+   "b": "P-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Zs-A",
+   "b": "P-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Zs-A",
+   "b": "P-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Zs-A",
+   "b": "P-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Zs-A",
+   "b": "Pt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Zs-A",
+   "b": "M-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Zs-A",
+   "b": "M-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Zs-A",
+   "b": "M-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Zs-A",
+   "b": "M-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Zs-A",
+   "b": "M-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Zs-A",
+   "b": "Mt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-O",
+   "b": "Z-C",
+   "sameCardinalityAllL": true,
+   "separator": "has unary +1"
+  },
+  {
+   "a": "Z-O",
+   "b": "Z-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-O",
+   "b": "Z-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-O",
+   "b": "Z-A",
+   "sameCardinalityAllL": false,
+   "separator": "max arity"
+  },
+  {
+   "a": "Z-O",
+   "b": "P-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-O",
+   "b": "P-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-O",
+   "b": "P-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-O",
+   "b": "P-OO",
+   "sameCardinalityAllL": false,
+   "separator": "max arity"
+  },
+  {
+   "a": "Z-O",
+   "b": "P-A",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "Z-O",
+   "b": "Pt-M",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "Z-O",
+   "b": "M-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-O",
+   "b": "M-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-O",
+   "b": "M-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-O",
+   "b": "M-OO",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "Z-O",
+   "b": "M-A",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "Z-O",
+   "b": "Mt-M",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "Z-C",
+   "b": "Z-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-C",
+   "b": "Z-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-C",
+   "b": "Z-A",
+   "sameCardinalityAllL": false,
+   "separator": "max arity"
+  },
+  {
+   "a": "Z-C",
+   "b": "P-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-C",
+   "b": "P-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-C",
+   "b": "P-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-C",
+   "b": "P-OO",
+   "sameCardinalityAllL": false,
+   "separator": "max arity"
+  },
+  {
+   "a": "Z-C",
+   "b": "P-A",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "Z-C",
+   "b": "Pt-M",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "Z-C",
+   "b": "M-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-C",
+   "b": "M-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-C",
+   "b": "M-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-C",
+   "b": "M-OO",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "Z-C",
+   "b": "M-A",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "Z-C",
+   "b": "Mt-M",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "Z-M",
+   "b": "Z-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-M",
+   "b": "Z-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-M",
+   "b": "P-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-M",
+   "b": "P-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-M",
+   "b": "P-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-M",
+   "b": "P-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-M",
+   "b": "P-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-M",
+   "b": "Pt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-M",
+   "b": "M-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-M",
+   "b": "M-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-M",
+   "b": "M-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-M",
+   "b": "M-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-M",
+   "b": "M-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-M",
+   "b": "Mt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-OO",
+   "b": "Z-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-OO",
+   "b": "P-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-OO",
+   "b": "P-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-OO",
+   "b": "P-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-OO",
+   "b": "P-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-OO",
+   "b": "P-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-OO",
+   "b": "Pt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-OO",
+   "b": "M-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-OO",
+   "b": "M-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-OO",
+   "b": "M-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-OO",
+   "b": "M-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-OO",
+   "b": "M-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-OO",
+   "b": "Mt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-A",
+   "b": "P-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-A",
+   "b": "P-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-A",
+   "b": "P-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-A",
+   "b": "P-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-A",
+   "b": "P-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-A",
+   "b": "Pt-M",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "Z-A",
+   "b": "M-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-A",
+   "b": "M-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-A",
+   "b": "M-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-A",
+   "b": "M-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-A",
+   "b": "M-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Z-A",
+   "b": "Mt-M",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "P-O",
+   "b": "P-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-O",
+   "b": "P-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-O",
+   "b": "P-OO",
+   "sameCardinalityAllL": false,
+   "separator": "max arity"
+  },
+  {
+   "a": "P-O",
+   "b": "P-A",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "P-O",
+   "b": "Pt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-O",
+   "b": "M-O",
+   "sameCardinalityAllL": true,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "P-O",
+   "b": "M-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-O",
+   "b": "M-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-O",
+   "b": "M-OO",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "P-O",
+   "b": "M-A",
+   "sameCardinalityAllL": false,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "P-O",
+   "b": "Mt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-C",
+   "b": "P-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-C",
+   "b": "P-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-C",
+   "b": "P-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-C",
+   "b": "Pt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-C",
+   "b": "M-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-C",
+   "b": "M-C",
+   "sameCardinalityAllL": true,
+   "separator": "contains empty signature"
+  },
+  {
+   "a": "P-C",
+   "b": "M-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-C",
+   "b": "M-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-C",
+   "b": "M-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-C",
+   "b": "Mt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-M",
+   "b": "P-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-M",
+   "b": "P-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-M",
+   "b": "Pt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-M",
+   "b": "M-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-M",
+   "b": "M-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-M",
+   "b": "M-M",
+   "sameCardinalityAllL": true,
+   "separator": "has unary +1"
+  },
+  {
+   "a": "P-M",
+   "b": "M-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-M",
+   "b": "M-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-M",
+   "b": "Mt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-OO",
+   "b": "P-A",
+   "sameCardinalityAllL": true,
+   "separator": "max arity"
+  },
+  {
+   "a": "P-OO",
+   "b": "Pt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-OO",
+   "b": "M-O",
+   "sameCardinalityAllL": false,
+   "separator": "max arity"
+  },
+  {
+   "a": "P-OO",
+   "b": "M-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-OO",
+   "b": "M-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-OO",
+   "b": "M-OO",
+   "sameCardinalityAllL": true,
+   "separator": "has unary +1"
+  },
+  {
+   "a": "P-OO",
+   "b": "M-A",
+   "sameCardinalityAllL": true,
+   "separator": "max arity"
+  },
+  {
+   "a": "P-OO",
+   "b": "Mt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-A",
+   "b": "Pt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-A",
+   "b": "M-O",
+   "sameCardinalityAllL": false,
+   "separator": "max arity"
+  },
+  {
+   "a": "P-A",
+   "b": "M-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-A",
+   "b": "M-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "P-A",
+   "b": "M-OO",
+   "sameCardinalityAllL": true,
+   "separator": "max arity"
+  },
+  {
+   "a": "P-A",
+   "b": "M-A",
+   "sameCardinalityAllL": true,
+   "separator": "shape spectrum"
+  },
+  {
+   "a": "P-A",
+   "b": "Mt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Pt-M",
+   "b": "M-O",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Pt-M",
+   "b": "M-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Pt-M",
+   "b": "M-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Pt-M",
+   "b": "M-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Pt-M",
+   "b": "M-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "Pt-M",
+   "b": "Mt-M",
+   "sameCardinalityAllL": true,
+   "separator": "has unary +1"
+  },
+  {
+   "a": "M-O",
+   "b": "M-C",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "M-O",
+   "b": "M-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "M-O",
+   "b": "M-OO",
+   "sameCardinalityAllL": false,
+   "separator": "max arity"
+  },
+  {
+   "a": "M-O",
+   "b": "M-A",
+   "sameCardinalityAllL": false,
+   "separator": "max arity"
+  },
+  {
+   "a": "M-O",
+   "b": "Mt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "M-C",
+   "b": "M-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "M-C",
+   "b": "M-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "M-C",
+   "b": "M-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "M-C",
+   "b": "Mt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "M-M",
+   "b": "M-OO",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "M-M",
+   "b": "M-A",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "M-M",
+   "b": "Mt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "M-OO",
+   "b": "M-A",
+   "sameCardinalityAllL": true,
+   "separator": "max arity"
+  },
+  {
+   "a": "M-OO",
+   "b": "Mt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  },
+  {
+   "a": "M-A",
+   "b": "Mt-M",
+   "sameCardinalityAllL": false,
+   "separator": "cardinality"
+  }
+ ],
+ "unresolved": [],
+ "facts": {
+  "P has no point with v=0": true,
+  "M has no point with u=0 or w=0": true,
+  "Z attains u=v=w=0": true,
+  "M attains v=0": true,
+  "P attains w=0": true,
+  "P has u,w <= L-2": true,
+  "M has v <= floor(L/2)-1": true
+ },
+ "bySep": {
+  "contains empty signature": 20,
+  "cardinality": 133,
+  "has unary +1": 4,
+  "max arity": 13,
+  "shape spectrum": 1
+ }
+}

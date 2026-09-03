@@ -1,0 +1,16 @@
+version_v0.30=PASS
+38118=PASS
+abfe14266=PASS
+abfe_population_chain=PASS
+aef_exists=PASS
+no_aef_open_phrase=PASS
+bdf36=PASS
+dlocal74=PASS
+defgrid800=PASS
+incomplete_guard=PASS
+abdef_open=PASS
+breakthrough_trigger=PASS
+global_open=PASS
+novelty_guarded=PASS
+OVERALL=PASS
+sha256=94e64367e7e4424102a6efa3d3ef328f2cc23b38e8be563f799e8fc1df62d416

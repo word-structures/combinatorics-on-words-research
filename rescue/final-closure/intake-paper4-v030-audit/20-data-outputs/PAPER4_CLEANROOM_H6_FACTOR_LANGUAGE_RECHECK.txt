@@ -1,0 +1,11 @@
+PAPER4 CLEAN-ROOM h6 FACTOR-LANGUAGE RECHECK
+ITERATE_LENGTH=6561
+B2_COUNT=14
+B2=ac ad af bc bd cb ce dc df ea eb fa fb fe
+B3_COUNT=22
+B3=ace adf afe bce bdc bdf cbc cbd cea ceb dcb dfa dfb eac ead eaf ebc ebd fad faf fbd fea
+B2_CLOSURE_UNDER_h=PASS
+B3_GENERATION_FROM_B2_CLOSURE=PASS
+ALL_B2_OCCUR=PASS
+ALL_B3_OCCUR=PASS
+STATUS=EXACT_FACTOR_LANGUAGE_CERTIFIED

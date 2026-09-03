@@ -1,0 +1,86 @@
+{
+  "h_values": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "edge_equivalence_mismatch": 0,
+  "profile_classification_mismatch": 0,
+  "q_partition_residuals": {
+    "2": 0,
+    "3": 5.551115123125783e-17,
+    "4": 0,
+    "5": 1.1102230246251565e-16,
+    "6": 2.7755575615628914e-17,
+    "7": 6.245004513516506e-17
+  },
+  "per_h_stats": {
+    "2": {
+      "mOld_a": -0.2222222222222223,
+      "mNew_a": -0.2954592252498303
+    },
+    "3": {
+      "mOld_a": -0.29545922524986135,
+      "mNew_a": -0.2910436928598524
+    },
+    "4": {
+      "mOld_a": -0.29104369285985204,
+      "mNew_a": -0.28302895323949284
+    },
+    "5": {
+      "mOld_a": -0.28302895323949273,
+      "mNew_a": -0.32441341335815244
+    },
+    "6": {
+      "mOld_a": -0.3244134133581541,
+      "mNew_a": -0.3522484411903419
+    },
+    "7": {
+      "mOld_a": -0.3522484411903505,
+      "mNew_a": -0.3616206179271832
+    }
+  },
+  "max_scc_perron_residual": 0,
+  "unique_dominant_scc_status": "YES",
+  "max_right_perron_residual": 2.7533531010703882e-14,
+  "max_left_perron_residual": 2.7533531010703882e-14,
+  "max_parry_row_sum_residual": 1.5210055437364645e-14,
+  "max_parry_stationarity_residual": 4.163336342344337e-17,
+  "max_poisson_residual": 1.3474388271816906e-11,
+  "max_method_B_slope_spread": 2.0286824997661768e-10,
+  "max_a_method_disagreement": 0.4444444446430749,
+  "profile_sign_unresolved": "NO",
+  "max_lambda_presentation_diff": 0,
+  "max_a_presentation_diff": 0,
+  "max_C_presentation_diff": 0,
+  "rhoA_mono": {
+    "2": "STRICTLY_DECREASING",
+    "3": "STRICTLY_DECREASING",
+    "4": "NOT_TESTABLE_SINGLE_PROFILE",
+    "5": "STRICTLY_DECREASING",
+    "6": "STRICTLY_DECREASING",
+    "7": "STRICTLY_DECREASING"
+  },
+  "h2_int": -0.05294910461181013,
+  "h2_rel_full": 0.7229829515531923,
+  "most_balanced_positive": 6,
+  "other_negative": 9,
+  "most_balanced_zero": 0,
+  "most_balanced_negative": 0,
+  "other_positive": 0,
+  "other_zero": 0,
+  "actual_total_profile_classes": 15,
+  "prof_h": {
+    "2": 2,
+    "3": 2,
+    "4": 1,
+    "5": 3,
+    "6": 3,
+    "7": 4
+  },
+  "hist_count": "INCORRECT_COUNT",
+  "hist_sign": "CONFIRMED_AFTER_CORRECTION"
+}

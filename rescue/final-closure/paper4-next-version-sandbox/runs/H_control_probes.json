@@ -1,0 +1,210 @@
+[
+ {
+  "label": "H_POSITIVE",
+  "E_sha": "bbbbf8344484b388",
+  "A_sha": "77b6a08e535d6dd5",
+  "activeSignatures": 1560,
+  "bothConstrainSameForm": 1160,
+  "midpointSignatures": 400,
+  "full": {
+   "sat": true,
+   "deathDepth": null,
+   "nodes": 2868,
+   "capped": false
+  },
+  "withoutMidpoints": {
+   "sat": true,
+   "deathDepth": null
+  },
+  "FAFonly": {
+   "sat": true,
+   "deathDepth": null
+  },
+  "AFEonly": {
+   "sat": true,
+   "deathDepth": null
+  }
+ },
+ {
+  "label": "H_POSITIVE",
+  "E_sha": "9c4fdf00facdbbc2",
+  "A_sha": "77b6a08e535d6dd5",
+  "activeSignatures": 1560,
+  "bothConstrainSameForm": 1160,
+  "midpointSignatures": 400,
+  "full": {
+   "sat": true,
+   "deathDepth": null,
+   "nodes": 2868,
+   "capped": false
+  },
+  "withoutMidpoints": {
+   "sat": true,
+   "deathDepth": null
+  },
+  "FAFonly": {
+   "sat": true,
+   "deathDepth": null
+  },
+  "AFEonly": {
+   "sat": true,
+   "deathDepth": null
+  }
+ },
+ {
+  "label": "H_POSITIVE",
+  "E_sha": "6928cbc8f9892669",
+  "A_sha": "77b6a08e535d6dd5",
+  "activeSignatures": 1560,
+  "bothConstrainSameForm": 1160,
+  "midpointSignatures": 400,
+  "full": {
+   "sat": true,
+   "deathDepth": null,
+   "nodes": 2925,
+   "capped": false
+  },
+  "withoutMidpoints": {
+   "sat": true,
+   "deathDepth": null
+  },
+  "FAFonly": {
+   "sat": true,
+   "deathDepth": null
+  },
+  "AFEonly": {
+   "sat": true,
+   "deathDepth": null
+  }
+ },
+ {
+  "label": "H_POSITIVE",
+  "E_sha": "ace3c9297a31653a",
+  "A_sha": "77b6a08e535d6dd5",
+  "activeSignatures": 1560,
+  "bothConstrainSameForm": 1160,
+  "midpointSignatures": 400,
+  "full": {
+   "sat": true,
+   "deathDepth": null,
+   "nodes": 2925,
+   "capped": false
+  },
+  "withoutMidpoints": {
+   "sat": true,
+   "deathDepth": null
+  },
+  "FAFonly": {
+   "sat": true,
+   "deathDepth": null
+  },
+  "AFEonly": {
+   "sat": true,
+   "deathDepth": null
+  }
+ },
+ {
+  "label": "H_AFEonly_NEGATIVE",
+  "E_sha": "bbbbf8344484b388",
+  "A_sha": "3c206f1d7cff6e1d",
+  "activeSignatures": 1560,
+  "bothConstrainSameForm": 1160,
+  "midpointSignatures": 400,
+  "full": {
+   "sat": false,
+   "deathDepth": 32,
+   "nodes": 7622,
+   "capped": false
+  },
+  "withoutMidpoints": {
+   "sat": false,
+   "deathDepth": 32
+  },
+  "FAFonly": {
+   "sat": true,
+   "deathDepth": null
+  },
+  "AFEonly": {
+   "sat": true,
+   "deathDepth": null
+  }
+ },
+ {
+  "label": "H_AFEonly_NEGATIVE",
+  "E_sha": "9c4fdf00facdbbc2",
+  "A_sha": "3c206f1d7cff6e1d",
+  "activeSignatures": 1560,
+  "bothConstrainSameForm": 1160,
+  "midpointSignatures": 400,
+  "full": {
+   "sat": false,
+   "deathDepth": 32,
+   "nodes": 7637,
+   "capped": false
+  },
+  "withoutMidpoints": {
+   "sat": false,
+   "deathDepth": 32
+  },
+  "FAFonly": {
+   "sat": true,
+   "deathDepth": null
+  },
+  "AFEonly": {
+   "sat": true,
+   "deathDepth": null
+  }
+ },
+ {
+  "label": "H_AFEonly_NEGATIVE",
+  "E_sha": "bbbbf8344484b388",
+  "A_sha": "e346254b991d999f",
+  "activeSignatures": 1560,
+  "bothConstrainSameForm": 1160,
+  "midpointSignatures": 400,
+  "full": {
+   "sat": false,
+   "deathDepth": 32,
+   "nodes": 9855,
+   "capped": false
+  },
+  "withoutMidpoints": {
+   "sat": false,
+   "deathDepth": 32
+  },
+  "FAFonly": {
+   "sat": true,
+   "deathDepth": null
+  },
+  "AFEonly": {
+   "sat": true,
+   "deathDepth": null
+  }
+ },
+ {
+  "label": "H_AFEonly_NEGATIVE",
+  "E_sha": "9c4fdf00facdbbc2",
+  "A_sha": "e346254b991d999f",
+  "activeSignatures": 1560,
+  "bothConstrainSameForm": 1160,
+  "midpointSignatures": 400,
+  "full": {
+   "sat": false,
+   "deathDepth": 32,
+   "nodes": 9877,
+   "capped": false
+  },
+  "withoutMidpoints": {
+   "sat": false,
+   "deathDepth": 32
+  },
+  "FAFonly": {
+   "sat": true,
+   "deathDepth": null
+  },
+  "AFEonly": {
+   "sat": true,
+   "deathDepth": null
+  }
+ }
+]

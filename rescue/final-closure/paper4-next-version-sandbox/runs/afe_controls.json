@@ -1,0 +1,158 @@
+{
+ "controls": [
+  {
+   "id": "C1_AFEpos_jointpos",
+   "eIndex": 0,
+   "A_sha": "77b6a08e535d6dd5",
+   "primaryAFE": true,
+   "joint": true,
+   "secondaryAFE": true,
+   "match": true,
+   "nodes": 5353,
+   "arity0Windows": 724,
+   "deadAFE": false,
+   "literal": {
+    "profileOK": true,
+    "clean": true,
+    "detail": {
+     "clean": true
+    }
+   }
+  },
+  {
+   "id": "C1_AFEpos_jointpos",
+   "eIndex": 0,
+   "A_sha": "cf966ab94ee29131",
+   "primaryAFE": true,
+   "joint": true,
+   "secondaryAFE": true,
+   "match": true,
+   "nodes": 12610,
+   "arity0Windows": 724,
+   "deadAFE": false,
+   "literal": {
+    "profileOK": true,
+    "clean": true,
+    "detail": {
+     "clean": true
+    }
+   }
+  },
+  {
+   "id": "C1_AFEpos_jointpos",
+   "eIndex": 0,
+   "A_sha": "5d4bcd51df51d9d7",
+   "primaryAFE": true,
+   "joint": true,
+   "secondaryAFE": true,
+   "match": true,
+   "nodes": 50740,
+   "arity0Windows": 724,
+   "deadAFE": false,
+   "literal": {
+    "profileOK": true,
+    "clean": true,
+    "detail": {
+     "clean": true
+    }
+   }
+  },
+  {
+   "id": "C2_AFEneg",
+   "eIndex": 0,
+   "A_sha": "1d73299bd17892a7",
+   "primaryAFE": false,
+   "joint": false,
+   "secondaryAFE": false,
+   "match": true,
+   "nodes": 149632,
+   "arity0Windows": 724,
+   "deadAFE": false,
+   "literal": null
+  },
+  {
+   "id": "C2_AFEneg",
+   "eIndex": 0,
+   "A_sha": "52a2380311e27878",
+   "primaryAFE": false,
+   "joint": false,
+   "secondaryAFE": false,
+   "match": true,
+   "nodes": 18221,
+   "arity0Windows": 724,
+   "deadAFE": false,
+   "literal": null
+  },
+  {
+   "id": "C2_AFEneg",
+   "eIndex": 0,
+   "A_sha": "acc86ac7904a6532",
+   "primaryAFE": false,
+   "joint": false,
+   "secondaryAFE": false,
+   "match": true,
+   "nodes": 13089,
+   "arity0Windows": 724,
+   "deadAFE": false,
+   "literal": null
+  },
+  {
+   "id": "C4_AFEpos_jointNEG",
+   "eIndex": 0,
+   "A_sha": "3c206f1d7cff6e1d",
+   "primaryAFE": true,
+   "joint": false,
+   "secondaryAFE": true,
+   "match": true,
+   "nodes": 181860,
+   "arity0Windows": 724,
+   "deadAFE": false,
+   "literal": {
+    "profileOK": true,
+    "clean": true,
+    "detail": {
+     "clean": true
+    }
+   }
+  },
+  {
+   "id": "C4_AFEpos_jointNEG",
+   "eIndex": 0,
+   "A_sha": "e346254b991d999f",
+   "primaryAFE": true,
+   "joint": false,
+   "secondaryAFE": true,
+   "match": true,
+   "nodes": 166296,
+   "arity0Windows": 724,
+   "deadAFE": false,
+   "literal": {
+    "profileOK": true,
+    "clean": true,
+    "detail": {
+     "clean": true
+    }
+   }
+  },
+  {
+   "id": "C4_AFEpos_jointNEG",
+   "eIndex": 0,
+   "A_sha": "f5496bdf42bf1061",
+   "primaryAFE": true,
+   "joint": false,
+   "secondaryAFE": true,
+   "match": true,
+   "nodes": 198355,
+   "arity0Windows": 724,
+   "deadAFE": false,
+   "literal": {
+    "profileOK": true,
+    "clean": true,
+    "detail": {
+     "clean": true
+    }
+   }
+  }
+ ],
+ "failures": 0
+}

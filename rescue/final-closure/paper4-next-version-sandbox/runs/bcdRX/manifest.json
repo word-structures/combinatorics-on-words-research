@@ -1,0 +1,30 @@
+{
+ "runId": "bcdRX",
+ "kind": "stages B/C/D on RX AF-positive (E,A) pairs",
+ "population": "RX",
+ "preregSha": "bca2780f881ac23c9057d204f2e4cbc85f67945afd758bb9ef5abbe1e8d3463c",
+ "nodeCap": 20000000,
+ "unit": "(E,A) pairs whose A is AF-positive",
+ "afPositivePairs": 137,
+ "codeSha": {
+  "gate": "387f469c14dfb063a56d10b178beaab3846eccd57f4ef0c50b9f6f60cfb60458",
+  "stages": "e99564c5f124dff5dcdc9c0d8e64d782e7339526bba81b66decf5b53de2fc5f8",
+  "runner": "26e01f6b195a0fa7d15309a0ff6f6f818079f53d028936e94c2c00ee486c57a4"
+ },
+ "host": "LAPTOP-0GD87QVT",
+ "startedUtc": "2026-08-28T20:48:15.834Z",
+ "status": "COMPLETED",
+ "finishedUtc": "2026-08-28T20:49:20.024Z",
+ "summary": {
+  "population": "RX",
+  "afPositivePairs": 137,
+  "AFE_EXISTS": 0,
+  "AF_AND_AFE_EXISTS": 0,
+  "P40": 0,
+  "capped": 0,
+  "allExhaustive": true,
+  "stopConditionFired": false,
+  "frozenTriples": 0,
+  "seconds": 64.2
+ }
+}

@@ -1,0 +1,625 @@
+{
+ "selectionRuleSha": "c3a570a1c26ac24fd495b9961a4d4d4215e62cded97fab64aabf32a081db5518",
+ "cases": [
+  {
+   "label": "RX_DEEPEST",
+   "population": "RX",
+   "eIndex": 48,
+   "rank": 1,
+   "A_sha": "b35fbd91f5265728",
+   "note": "deathDepth 37",
+   "E_sha": "aa0a5e18e16b3d9c",
+   "staticControls": {
+    "activeSignatures": 1560,
+    "sharedSignatures": 1160,
+    "collidingSignatures": 803,
+    "collidingTargetValues": 1140
+   },
+   "solve": {
+    "sat": false,
+    "nodes": 10720,
+    "capped": false,
+    "deathDepth": 37,
+    "totalExtinctionNodes": 2960,
+    "distinctKillers": 381,
+    "killerArity": {
+     "1": 1193,
+     "2": 2686,
+     "3": 12878
+    },
+    "rejectionFamily": {
+     "fafOnly": 690,
+     "afeOnly": 310,
+     "bothSameValue": 15757
+    },
+    "extinctionByDepth": [
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     1,
+     1,
+     2,
+     6,
+     5,
+     12,
+     16,
+     28,
+     24,
+     21,
+     92,
+     21,
+     64,
+     55,
+     96,
+     107,
+     207,
+     298,
+     261,
+     481,
+     430,
+     145,
+     390,
+     72,
+     122,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "prefixStateBeforeFinalExtinction": {
+     "depth": 37,
+     "prefix": "ccaaaccbaaabbcbaacccaaabaaacaaabbcaab",
+     "prefixParikh": [
+      19,
+      8,
+      10
+     ],
+     "remainingProfile": [
+      0,
+      3,
+      0
+     ],
+     "kills": [
+      {
+       "letter": "b",
+       "sig": "1*x36+-2*x38",
+       "value": "-19,-11,-10",
+       "arity": 2,
+       "inFAF": true,
+       "inAFE": true,
+       "fafTargets": 1,
+       "afeTargets": 1
+      }
+     ]
+    },
+    "topKillers": [
+     {
+      "sig": "1*x27+-2*x29+1*x31",
+      "rejections": 636,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x26+-2*x28+1*x30",
+      "rejections": 590,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x24+-2*x26+1*x28",
+      "rejections": 520,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x25+-2*x27+1*x29",
+      "rejections": 499,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x23+-2*x25+1*x27",
+      "rejections": 455,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x28+-2*x30+1*x32",
+      "rejections": 380,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x22+-2*x24+1*x26",
+      "rejections": 348,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x20+-2*x22+1*x24",
+      "rejections": 226,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x21+-2*x23+1*x25",
+      "rejections": 226,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x28",
+      "rejections": 222,
+      "arity": 1,
+      "fafTargets": 18,
+      "afeTargets": 17
+     }
+    ],
+    "topTargetValues": [
+     {
+      "value": "0,0,0",
+      "kills": 12927
+     },
+     {
+      "value": "7,11,6",
+      "kills": 454
+     },
+     {
+      "value": "7,10,6",
+      "kills": 367
+     },
+     {
+      "value": "6,9,6",
+      "kills": 356
+     },
+     {
+      "value": "6,10,6",
+      "kills": 244
+     },
+     {
+      "value": "13,10,9",
+      "kills": 165
+     }
+    ]
+   }
+  },
+  {
+   "label": "H_POSITIVE",
+   "population": "H",
+   "eIndex": 0,
+   "rank": 2063,
+   "A_sha": "77b6a08e535d6dd5",
+   "note": "AF_AND_AFE true",
+   "E_sha": "bbbbf8344484b388",
+   "staticControls": {
+    "activeSignatures": 1560,
+    "sharedSignatures": 1160,
+    "collidingSignatures": 788,
+    "collidingTargetValues": 1133
+   },
+   "solve": {
+    "sat": true,
+    "nodes": 2868,
+    "capped": false,
+    "deathDepth": null,
+    "totalExtinctionNodes": 736,
+    "distinctKillers": 312,
+    "killerArity": {
+     "1": 1045,
+     "2": 397,
+     "3": 3502
+    },
+    "rejectionFamily": {
+     "fafOnly": 510,
+     "afeOnly": 34,
+     "bothSameValue": 4400
+    },
+    "extinctionByDepth": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     2,
+     3,
+     3,
+     3,
+     12,
+     4,
+     9,
+     14,
+     12,
+     14,
+     24,
+     8,
+     38,
+     15,
+     26,
+     87,
+     51,
+     93,
+     61,
+     34,
+     68,
+     82,
+     64,
+     3,
+     3,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "prefixStateBeforeFinalExtinction": {
+     "depth": 33,
+     "prefix": "bcbbaaabcaaaccbbaacbcccaaacbacaaa",
+     "prefixParikh": [
+      15,
+      8,
+      10
+     ],
+     "remainingProfile": [
+      4,
+      3,
+      0
+     ],
+     "kills": [
+      {
+       "letter": "a",
+       "sig": "1*x30+-2*x32+1*x34",
+       "value": "0,0,0",
+       "arity": 3,
+       "inFAF": true,
+       "inAFE": true,
+       "fafTargets": 1,
+       "afeTargets": 1
+      },
+      {
+       "letter": "b",
+       "sig": "1*x24+-2*x29+1*x34",
+       "value": "0,0,0",
+       "arity": 3,
+       "inFAF": true,
+       "inAFE": true,
+       "fafTargets": 1,
+       "afeTargets": 1
+      }
+     ]
+    },
+    "topKillers": [
+     {
+      "sig": "1*x24",
+      "rejections": 162,
+      "arity": 1,
+      "fafTargets": 18,
+      "afeTargets": 17
+     },
+     {
+      "sig": "1*x22+-2*x24+1*x26",
+      "rejections": 153,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x21+-2*x23+1*x25",
+      "rejections": 142,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x20+-2*x22+1*x24",
+      "rejections": 127,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x30",
+      "rejections": 120,
+      "arity": 1,
+      "fafTargets": 19,
+      "afeTargets": 15
+     },
+     {
+      "sig": "1*x19+-2*x21+1*x23",
+      "rejections": 116,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x23+-2*x25+1*x27",
+      "rejections": 102,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x17+-2*x19+1*x21",
+      "rejections": 100,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x26",
+      "rejections": 94,
+      "arity": 1,
+      "fafTargets": 17,
+      "afeTargets": 15
+     },
+     {
+      "sig": "1*x29",
+      "rejections": 89,
+      "arity": 1,
+      "fafTargets": 17,
+      "afeTargets": 16
+     }
+    ],
+    "topTargetValues": [
+     {
+      "value": "0,0,0",
+      "kills": 3544
+     },
+     {
+      "value": "10,10,10",
+      "kills": 90
+     },
+     {
+      "value": "10,7,9",
+      "kills": 68
+     },
+     {
+      "value": "1,2,0",
+      "kills": 58
+     },
+     {
+      "value": "9,8,7",
+      "kills": 58
+     },
+     {
+      "value": "10,8,9",
+      "kills": 56
+     }
+    ]
+   }
+  },
+  {
+   "label": "H_NEGATIVE",
+   "population": "H",
+   "eIndex": 0,
+   "rank": 44,
+   "A_sha": "3c206f1d7cff6e1d",
+   "note": "AF-positive, AF_AND_AFE false",
+   "E_sha": "bbbbf8344484b388",
+   "staticControls": {
+    "activeSignatures": 1560,
+    "sharedSignatures": 1160,
+    "collidingSignatures": 780,
+    "collidingTargetValues": 1135
+   },
+   "solve": {
+    "sat": false,
+    "nodes": 7622,
+    "capped": false,
+    "deathDepth": 32,
+    "totalExtinctionNodes": 2084,
+    "distinctKillers": 414,
+    "killerArity": {
+     "1": 2984,
+     "2": 1612,
+     "3": 9830
+    },
+    "rejectionFamily": {
+     "fafOnly": 2897,
+     "afeOnly": 247,
+     "bothSameValue": 11282
+    },
+    "extinctionByDepth": [
+     0,
+     0,
+     0,
+     0,
+     2,
+     0,
+     1,
+     0,
+     2,
+     0,
+     7,
+     14,
+     21,
+     49,
+     16,
+     57,
+     29,
+     81,
+     62,
+     64,
+     107,
+     145,
+     118,
+     293,
+     246,
+     283,
+     132,
+     101,
+     99,
+     90,
+     36,
+     13,
+     16,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "prefixStateBeforeFinalExtinction": {
+     "depth": 32,
+     "prefix": "accbbaaccbacaaabaaaccbaacccaaaba",
+     "prefixParikh": [
+      16,
+      6,
+      10
+     ],
+     "remainingProfile": [
+      3,
+      5,
+      0
+     ],
+     "kills": [
+      {
+       "letter": "a",
+       "sig": "1*x33",
+       "value": "17,6,10",
+       "arity": 1,
+       "inFAF": true,
+       "inAFE": false,
+       "fafTargets": 17,
+       "afeTargets": 15
+      },
+      {
+       "letter": "b",
+       "sig": "1*x29+-2*x31+1*x33",
+       "value": "0,0,0",
+       "arity": 3,
+       "inFAF": true,
+       "inAFE": true,
+       "fafTargets": 1,
+       "afeTargets": 1
+      }
+     ]
+    },
+    "topKillers": [
+     {
+      "sig": "1*x20+-2*x22+1*x24",
+      "rejections": 510,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x24",
+      "rejections": 476,
+      "arity": 1,
+      "fafTargets": 21,
+      "afeTargets": 19
+     },
+     {
+      "sig": "1*x25",
+      "rejections": 459,
+      "arity": 1,
+      "fafTargets": 17,
+      "afeTargets": 18
+     },
+     {
+      "sig": "1*x21+-2*x23+1*x25",
+      "rejections": 435,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x19+-2*x21+1*x23",
+      "rejections": 400,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x26",
+      "rejections": 367,
+      "arity": 1,
+      "fafTargets": 19,
+      "afeTargets": 17
+     },
+     {
+      "sig": "1*x18+-2*x20+1*x22",
+      "rejections": 346,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x17+-2*x19+1*x21",
+      "rejections": 331,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x22+-2*x24+1*x26",
+      "rejections": 291,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     },
+     {
+      "sig": "1*x16+-2*x18+1*x20",
+      "rejections": 258,
+      "arity": 3,
+      "fafTargets": 1,
+      "afeTargets": 1
+     }
+    ],
+    "topTargetValues": [
+     {
+      "value": "0,0,0",
+      "kills": 10002
+     },
+     {
+      "value": "9,8,8",
+      "kills": 258
+     },
+     {
+      "value": "-19,-12,-11",
+      "kills": 182
+     },
+     {
+      "value": "11,5,8",
+      "kills": 180
+     },
+     {
+      "value": "9,6,9",
+      "kills": 171
+     },
+     {
+      "value": "10,8,8",
+      "kills": 155
+     }
+    ]
+   }
+  }
+ ]
+}

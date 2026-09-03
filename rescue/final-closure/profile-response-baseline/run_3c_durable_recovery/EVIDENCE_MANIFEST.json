@@ -1,0 +1,210 @@
+{
+  "ALL_GRAPH_DOMINANCE_FINAL_AUDIT.json": {
+    "path": "ALL_GRAPH_DOMINANCE_FINAL_AUDIT.json",
+    "sha256": "77286dbb4e2a724ae478782b95cd3962e802da946b9fac00ab761711926d8e6e",
+    "size_bytes": 2537,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "COMMANDS.txt": {
+    "path": "COMMANDS.txt",
+    "sha256": "499117ba797c92e43c76164193eaebe547a23148739267fd65364fe0d4b96594",
+    "size_bytes": 51,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "DIRECT_WORD_PROFILE_ENUMERATION.json": {
+    "path": "DIRECT_WORD_PROFILE_ENUMERATION.json",
+    "sha256": "79139de15f042610cc2801aa6801d19ac2a7ce9c957d950ba1b61087e76c652c",
+    "size_bytes": 12229,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "EXECUTION_NOTE.txt": {
+    "path": "EXECUTION_NOTE.txt",
+    "sha256": "31fa75cbef0f2bcda2ce991af79317dd7e7e4c8964b38baf0d3d2406781354c1",
+    "size_bytes": 137,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "generate_run3c.js": {
+    "path": "generate_run3c.js",
+    "sha256": "b8c32938e9c05167a7839a1b3b912f99277278b656cc4138f09bfc1b653e088e",
+    "size_bytes": 13366,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "GRAPH_EDGE_PROFILE_ENUMERATION.json": {
+    "path": "GRAPH_EDGE_PROFILE_ENUMERATION.json",
+    "sha256": "403dbd1851a3f3154591e03a8a483f348e20717121015ecd723c8ea5d3c6b05f",
+    "size_bytes": 275,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "H5_311_FINAL_SPECTRAL_CERTIFICATE.json": {
+    "path": "H5_311_FINAL_SPECTRAL_CERTIFICATE.json",
+    "sha256": "b0c71bee03d6b944e5a0c35cda414a1a6e9ae139e7cbe5a2c56dc57dba3dac46",
+    "size_bytes": 186,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "PERIOD_FINAL_AUDIT.json": {
+    "path": "PERIOD_FINAL_AUDIT.json",
+    "sha256": "02c388fe6ac4c241a29723ca9b8da4d1c31cfe198d8a7dd1ebd29d20e57d5f78",
+    "size_bytes": 1271,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "PRESENTATION_INVARIANCE_FINAL_AUDIT.json": {
+    "path": "PRESENTATION_INVARIANCE_FINAL_AUDIT.json",
+    "sha256": "47f17b7cfcec7e22b7f69811485ca300de7ca46d9692b5f88e97790ff40f4203",
+    "size_bytes": 158,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "PRESSURE_CURVATURE_FINAL_AUDIT.json": {
+    "path": "PRESSURE_CURVATURE_FINAL_AUDIT.json",
+    "sha256": "fd0d4c3543f317522e95a6beae0ca727ff193c6e46e07aa0f46a3c3dc0ea9f0a",
+    "size_bytes": 2523,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "PROFILE_BASELINE_RUN3C_RECOVERED.csv": {
+    "path": "PROFILE_BASELINE_RUN3C_RECOVERED.csv",
+    "sha256": "414fac31fb459830dfd6be320557857e8cc964a4c2879dbca4ef8730ee53bb0e",
+    "size_bytes": 1728,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "PROFILE_BASELINE_RUN3C_RECOVERED.json": {
+    "path": "PROFILE_BASELINE_RUN3C_RECOVERED.json",
+    "sha256": "3b2686c771a291df45f07dcdef2cffee5b74f07ecbdb981c520c853a6d5422c9",
+    "size_bytes": 3127,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "PROFILE_SCOPE_COMPARISON_FINAL.json": {
+    "path": "PROFILE_SCOPE_COMPARISON_FINAL.json",
+    "sha256": "595f7313a3be219628e8c1f612c56c2b2decb500fd30f8c7a38c3fb0b6be3496",
+    "size_bytes": 270,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "PROFILE_SET_COMPARISON_FINAL.json": {
+    "path": "PROFILE_SET_COMPARISON_FINAL.json",
+    "sha256": "b78a5a494ad7e8531568eec2ac3e98810a6cb7c32e91c68df31695f0edbb53ea",
+    "size_bytes": 386,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "PROFILE_SIGN_FINAL_CERTIFICATE.json": {
+    "path": "PROFILE_SIGN_FINAL_CERTIFICATE.json",
+    "sha256": "9f02a1b10ad9078a22951b9e3e9a088d97f4cc03b93defd522264819b7dad2b2",
+    "size_bytes": 204,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "QV_INDEPENDENT_AUDIT.json": {
+    "path": "QV_INDEPENDENT_AUDIT.json",
+    "sha256": "95b7ae930d5b2c94a17031ebbf67f8eaa6321fb6db07ac0675e72318c5ab3249",
+    "size_bytes": 2050,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "Q_PARTITION_FINAL_AUDIT.json": {
+    "path": "Q_PARTITION_FINAL_AUDIT.json",
+    "sha256": "c89e363fa7ab05601249c1b309673dbe4f215fe4eff772b2695a476526fee69a",
+    "size_bytes": 575,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "REPRODUCIBILITY_FINAL_AUDIT.json": {
+    "path": "REPRODUCIBILITY_FINAL_AUDIT.json",
+    "sha256": "c545de9561483d19fe006ed007bfe366e7d014e919d4e4deead1906efb9aec5e",
+    "size_bytes": 109,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "RUN3C_ACTUAL_PROFILE_ROWS_FINAL_AUDIT.json": {
+    "path": "RUN3C_ACTUAL_PROFILE_ROWS_FINAL_AUDIT.json",
+    "sha256": "2565185902c9a2edf9c6589a1f83372aa12bd05ce9b5efcc76f8d069e3edf1cd",
+    "size_bytes": 1684,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "TEST_RESULTS_FINAL.json": {
+    "path": "TEST_RESULTS_FINAL.json",
+    "sha256": "3d59b1db6fe9054e1c48440215148f47dfa2fef08c66290455ab0801a16f196f",
+    "size_bytes": 172,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "TEST_STDERR_FINAL.txt": {
+    "path": "TEST_STDERR_FINAL.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size_bytes": 0,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "TEST_STDOUT_FINAL.txt": {
+    "path": "TEST_STDOUT_FINAL.txt",
+    "sha256": "1eb5b443ede3318b15031a9aa187538e1fd68ed5ca76eab3c70263c3f6e1ddf0",
+    "size_bytes": 10374,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "utils.js": {
+    "path": "utils.js",
+    "sha256": "5dc0125ff9d2013df63dda521ddbfa0806858eeb0a24368682b3e3c8c9230d0c",
+    "size_bytes": 8494,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "VARIANCE_AB_FINAL_AUDIT.json": {
+    "path": "VARIANCE_AB_FINAL_AUDIT.json",
+    "sha256": "7449ab8237df2b1c7392063804334cbe16ccbc5ec112b822864abd2095aa332d",
+    "size_bytes": 5213,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "VERIFICATION_RESULTS.json": {
+    "path": "VERIFICATION_RESULTS.json",
+    "sha256": "08acf042e2173c2463e533af2d10e804f6987a8e8ae99bb6e985026809ea8d7e",
+    "size_bytes": 553,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  },
+  "verify_durable_evidence.js": {
+    "path": "verify_durable_evidence.js",
+    "sha256": "9bff9d758726bd86861964618aec4b1130df4ce95535893981b089cf5fd7ed60",
+    "size_bytes": 4346,
+    "role": "durable_evidence",
+    "generated_by": "run_3c_durable_recovery",
+    "evidence_level": "LEVEL_1_INTERNAL_CHECKSUM"
+  }
+}

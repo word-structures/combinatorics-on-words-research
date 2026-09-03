@@ -1,0 +1,7 @@
+A_COUNT 279
+FOUND NO
+BEST 7
+COMPLETE_F 1975141
+NODES 163509138
+A aaaccbaaacaabbcabbbaaabbcaccbbabbbcacccb
+F cccaabaacaaabbcbbbaaabbcccaaabaacbbaaaca

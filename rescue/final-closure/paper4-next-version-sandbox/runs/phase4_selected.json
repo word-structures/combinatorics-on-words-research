@@ -1,0 +1,30 @@
+{
+ "selectionRuleSha": "c3a570a1c26ac24fd495b9961a4d4d4215e62cded97fab64aabf32a081db5518",
+ "branch": "R2 (no RX AF_AND_AFE-positive exists; deepest-surviving RX case selected)",
+ "cases": [
+  {
+   "label": "RX_DEEPEST",
+   "population": "RX",
+   "eIndex": 48,
+   "rank": 1,
+   "A_sha": "b35fbd91f5265728",
+   "note": "deathDepth 37"
+  },
+  {
+   "label": "H_POSITIVE",
+   "population": "H",
+   "eIndex": 0,
+   "rank": 2063,
+   "A_sha": "77b6a08e535d6dd5",
+   "note": "AF_AND_AFE true"
+  },
+  {
+   "label": "H_NEGATIVE",
+   "population": "H",
+   "eIndex": 0,
+   "rank": 44,
+   "A_sha": "3c206f1d7cff6e1d",
+   "note": "AF-positive, AF_AND_AFE false"
+  }
+ ]
+}

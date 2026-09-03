@@ -1,0 +1,253 @@
+[
+ {
+  "E": "aaaccbbbabbbcbbbaaccbacaaabbbaaccbbbaccc",
+  "seeds": [
+   0
+  ],
+  "id": "c09b1d6eab0583dd"
+ },
+ {
+  "E": "aaaccbbbabbbcbbbaaccbacaaabbbaacbbbccacc",
+  "seeds": [
+   0,
+   "SEED1"
+  ],
+  "id": "9c4fdf00facdbbc2"
+ },
+ {
+  "E": "aaaccbbbabbbcbbbaaccbacaaabbbaaccbbbcacc",
+  "seeds": [
+   1
+  ],
+  "id": "430f72d45b710934"
+ },
+ {
+  "E": "aaaccbbbabbbcbbbaaccbacaaabbbaacbbbcaccc",
+  "seeds": [
+   "SEED0",
+   1
+  ],
+  "id": "bbbbf8344484b388"
+ },
+ {
+  "E": "baaccbcaabbbcbbbabbbcccbacccaaabaacbbbaa",
+  "seeds": [
+   2
+  ],
+  "id": "de642b143a3bdeae"
+ },
+ {
+  "E": "abaccbcaabbbcbbbabbbcccbacccaaabaacbbbaa",
+  "seeds": [
+   2
+  ],
+  "id": "477523804bcafbab"
+ },
+ {
+  "E": "aacccbaaabbbcbbbabbbcccbacccaaabaacbbbab",
+  "seeds": [
+   2
+  ],
+  "id": "48980fa335855c18"
+ },
+ {
+  "E": "aaaccbaaabbbcbbbabbbcccbacccaaabaccbbbab",
+  "seeds": [
+   2
+  ],
+  "id": "cfd58624ca7cddf2"
+ },
+ {
+  "E": "aaaccbcaabbbcbbbabbbcccbacccaabaaacbbbab",
+  "seeds": [
+   2,
+   "SEED3"
+  ],
+  "id": "ace3c9297a31653a"
+ },
+ {
+  "E": "aaaccbcaabbbcbbbabbbcccbacccaaabaacbbabb",
+  "seeds": [
+   2
+  ],
+  "id": "32712e4f2d5f7d75"
+ },
+ {
+  "E": "baaccbcaabbbcbbbabbbcccbacccaabaaacbbbaa",
+  "seeds": [
+   3
+  ],
+  "id": "3984cad8d943efdf"
+ },
+ {
+  "E": "abaccbcaabbbcbbbabbbcccbacccaabaaacbbbaa",
+  "seeds": [
+   3
+  ],
+  "id": "a0f264285068d7c4"
+ },
+ {
+  "E": "aacccbaaabbbcbbbabbbcccbacccaabaaacbbbab",
+  "seeds": [
+   3
+  ],
+  "id": "d32b3bf6ee7918a4"
+ },
+ {
+  "E": "aaaccbcaabbbcbbbabbbcccbacccaaabaacbbbab",
+  "seeds": [
+   "SEED2",
+   3
+  ],
+  "id": "6928cbc8f9892669"
+ },
+ {
+  "E": "aaaccbcaabbbcbbbabbbcccbacccaabaaacbbabb",
+  "seeds": [
+   3
+  ],
+  "id": "a0a4013643953c5e"
+ },
+ {
+  "E": "aabaacccbbbabbcaabbbcbbbabbbcccaccbaaaca",
+  "seeds": [
+   4
+  ],
+  "id": "ce6b9dfe99f20941"
+ },
+ {
+  "E": "aaabacccbbbabbcaabbbcbbbabbbcccaccbaaaca",
+  "seeds": [
+   4
+  ],
+  "id": "a783013b8a101c2d"
+ },
+ {
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaacaa",
+  "seeds": [
+   4,
+   "SEED5"
+  ],
+  "id": "8302b3d44bc71de8"
+ },
+ {
+  "E": "aabaacccbbbabbcaabbbcbbbabbbcccaccbaacaa",
+  "seeds": [
+   5
+  ],
+  "id": "eb3f64bacb3726b8"
+ },
+ {
+  "E": "aaabacccbbbabbcaabbbcbbbabbbcccaccbaacaa",
+  "seeds": [
+   5
+  ],
+  "id": "188b80f3a158e061"
+ },
+ {
+  "E": "abaaacccbbbabbcaabbbcbbbabbbcccaccbaaaca",
+  "seeds": [
+   "SEED4",
+   5
+  ],
+  "id": "ab152988deea9d99"
+ },
+ {
+  "E": "ccbbbabbbcbbbaaabbccacbbbaaabccaaacccaab",
+  "seeds": [
+   6
+  ],
+  "id": "4583fda0edae0609"
+ },
+ {
+  "E": "ccbbbabbbcbbbaaabbcccabbbaaabccaaacccaab",
+  "seeds": [
+   6
+  ],
+  "id": "b2c9e13a7e4ad5ff"
+ },
+ {
+  "E": "ccbbbabbbcbbbaaabbcaccbbbaaabccaaacccbaa",
+  "seeds": [
+   6
+  ],
+  "id": "b9b9dcc32c8c5e8d"
+ },
+ {
+  "E": "ccbbbabbbcbbbaaabbcaccbbbaaabccaaacccaba",
+  "seeds": [
+   6
+  ],
+  "id": "3a66ed9528323e7f"
+ },
+ {
+  "E": "ccbbbabbbcbbbaaacaaabacbbbcccabaaacccabb",
+  "seeds": [
+   7
+  ],
+  "id": "4019ccc8b87b7508"
+ },
+ {
+  "E": "ccbbbabbbcbbbaaacaaabacbbbcccbbaacccaaab",
+  "seeds": [
+   7
+  ],
+  "id": "48dffb1a284b9094"
+ },
+ {
+  "E": "ccbbbabbbcbbbaaacaaabacbbbcccbbaaaccbaac",
+  "seeds": [
+   7
+  ],
+  "id": "321f562734c0676c"
+ },
+ {
+  "E": "ccbbbabbbcbbbaaacaaabacbbbcccbbaaacccbaa",
+  "seeds": [
+   7
+  ],
+  "id": "9cf8c68c365d2a9f"
+ },
+ {
+  "E": "ccbbbabbbcbbbaaacaaabacbbbcccbbaaacccaba",
+  "seeds": [
+   7
+  ],
+  "id": "db5c4ce0d6d75eee"
+ },
+ {
+  "E": "ccbbbabbbcbbbaacaaabaacbbbcccabaaacccabb",
+  "seeds": [
+   8
+  ],
+  "id": "15ae0185ab4e6923"
+ },
+ {
+  "E": "ccbbbabbbcbbbaacaaabaacbbbcccbbaacccaaab",
+  "seeds": [
+   8
+  ],
+  "id": "8fa12c4b02286289"
+ },
+ {
+  "E": "ccbbbabbbcbbbaacaaabaacbbbcccbbaaaccbaac",
+  "seeds": [
+   8
+  ],
+  "id": "ad25b21a2091e864"
+ },
+ {
+  "E": "ccbbbabbbcbbbaacaaabaacbbbcccbbaaacccbaa",
+  "seeds": [
+   8
+  ],
+  "id": "81cb8b87e4b36eb7"
+ },
+ {
+  "E": "ccbbbabbbcbbbaacaaabaacbbbcccbbaaacccaba",
+  "seeds": [
+   8
+  ],
+  "id": "d1f2d339864c1bbe"
+ }
+]

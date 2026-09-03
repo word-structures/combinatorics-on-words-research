@@ -1,0 +1,20 @@
+{
+  "carry_identity": {
+    "cases": 397728,
+    "failures": []
+  },
+  "mechanical_period_balance": {
+    "cases": 16179,
+    "failures": []
+  },
+  "curvature_chain": {
+    "cases": 15145,
+    "failures": []
+  },
+  "branch_map": {
+    "00": 0,
+    "01": 1,
+    "10": -1,
+    "11": 0
+  }
+}

@@ -1,0 +1,12 @@
+[
+ {
+  "name": "periodic_A",
+  "A": "abcabcabcabcabcabcabcabcabcabcabcabcabca",
+  "F": "cbabbcccaaabaaacabbcbbbaaacaaabaaaccbaac"
+ },
+ {
+  "name": "wrong_profile_A",
+  "A": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "F": "cbabbcccaaabaaacabbcbbbaaacaaabaaaccbaac"
+ }
+]

@@ -1,0 +1,10 @@
+version v0.27: PASS
+abstract 20786: PASS
+section 8.39: PASS
+section 8.40: PASS
+near31: PASS
+search trigger ABDEF: PASS
+global open: PASS
+novelty guarded: PASS
+no solution claim: PASS
+OVERALL=PASS

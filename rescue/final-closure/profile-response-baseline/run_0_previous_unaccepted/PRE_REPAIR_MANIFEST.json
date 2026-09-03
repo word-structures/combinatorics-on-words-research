@@ -1,0 +1,38 @@
+{
+  "status": "UNACCEPTED_BASELINE",
+  "reason": "profile classification and numerical methodology require audit",
+  "PREEXISTING_TEMPORARY_FILES": [
+    {
+      "name": "generate_report.js",
+      "sha256": "13068c7ff905109964e3a60e0cdc045e083805290a0f01206b85838f632e4bd5"
+    },
+    {
+      "name": "hash_gen.js",
+      "sha256": "4356a57bdc6c47a2ed78c64c54bfad054e2d36d931cc6e2f1d6cfb4be3481d20"
+    },
+    {
+      "name": "test_b.js",
+      "sha256": "e5295397deb29be1224daac55101460830eaf1f229a6736942eaf5917850e7bf"
+    },
+    {
+      "name": "test_g.js",
+      "sha256": "714894eaf3603f36d4ff0dc73dcee34222ef53529ebc62e85d18181c0baae19a"
+    },
+    {
+      "name": "test_generic.js",
+      "sha256": "ccdbb6617473bb9bd5878a28eaa86b38be3528bb3dab47fe3647088e05a0db0c"
+    },
+    {
+      "name": "test_generic2.js",
+      "sha256": "0d1a0200b277e26557ab21db82d4f07b509797df566a959b21b79a2b67952d59"
+    },
+    {
+      "name": "test_generic3.js",
+      "sha256": "fafeb7faa508236d4964cdf569db31624919717129e7869859705482d2079842"
+    },
+    {
+      "name": "test_k1.js",
+      "sha256": "6d5bcb3b6c3b730eaa95087077b2f0fbb3982ad0566bbeedfe42ceb5a8746b64"
+    }
+  ]
+}

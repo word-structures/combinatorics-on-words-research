@@ -1,0 +1,15 @@
+PAPER4 INDEPENDENT PYTHON REPLAY — 4-STATE COMPONENT
+
+seed=ccaccbaaacaabbcccaaacbabbbcbbbaacbbaaabb
+component_size=4
+component_sha256=cea772ba5a4361969b1a59f852badd8769677ac8417079ce06fad9ba561e48db
+af_modules=12
+af_sha256=169e1583984e34e41ceee131065f6d643bcd7303d47b872ff9e320868d6f1182
+afd_survivors=0
+status=INDEPENDENT_REPLAY_PASS
+
+Per-A AF counts:
+cacccbaaacaabbcccaaacbabbbcbbbaacbbaaabb 1
+cacccbaacaaabbcccaaacbabbbcbbbaacbbaaabb 1
+ccaccbaaacaabbcccaaacbabbbcbbbaacbbaaabb 5
+ccaccbaacaaabbcccaaacbabbbcbbbaacbbaaabb 5

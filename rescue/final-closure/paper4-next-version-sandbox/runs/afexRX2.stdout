@@ -1,0 +1,74 @@
+E[0] sha=933c0dee15dd32a3 trials=5000 (AT QUOTA) afPositive=4 unresolved=0  [cum 4/5000, 2.3 min]
+E[1] sha=c5506da45232262b trials=0 afPositive=0 unresolved=0  [cum 4/5000, 2.3 min]
+E[2] sha=78b931d493fa7c77 trials=11 afPositive=1 unresolved=0  [cum 5/5011, 2.3 min]
+E[3] sha=55fba47495bbc5f1 trials=0 afPositive=0 unresolved=0  [cum 5/5011, 2.3 min]
+E[4] sha=9af5d597cf22cb18 trials=0 afPositive=0 unresolved=0  [cum 5/5011, 2.3 min]
+E[5] sha=7db02ed72cb33a1e trials=4065 afPositive=0 unresolved=0  [cum 5/9076, 3.8 min]
+E[6] sha=51fd9dbe6886e359 trials=1927 afPositive=0 unresolved=0  [cum 5/11003, 4.9 min]
+E[7] sha=e91090b576714d66 trials=5000 (AT QUOTA) afPositive=0 unresolved=0  [cum 5/16003, 5.8 min]
+E[8] sha=8ebb128d16a42b63 trials=0 afPositive=0 unresolved=0  [cum 5/16003, 5.8 min]
+E[9] sha=e9e746eac90a3329 trials=0 afPositive=0 unresolved=0  [cum 5/16003, 5.8 min]
+E[10] sha=562c6a11ca517018 trials=1491 afPositive=0 unresolved=0  [cum 5/17494, 7.1 min]
+E[11] sha=3e4f12738a9e1b8c trials=5000 (AT QUOTA) afPositive=2 unresolved=0  [cum 7/22494, 8.7 min]
+E[12] sha=9d2f56443248130b trials=5000 (AT QUOTA) afPositive=11 unresolved=0  [cum 18/27494, 11.4 min]
+E[13] sha=d06e3efb6534f4cd trials=13 afPositive=0 unresolved=0  [cum 18/27507, 11.4 min]
+E[14] sha=12c64f1d5e526fa4 trials=98 afPositive=0 unresolved=0  [cum 18/27605, 11.4 min]
+E[15] sha=ce57c1e4d13298d7 trials=0 afPositive=0 unresolved=0  [cum 18/27605, 11.4 min]
+E[16] sha=784160adb6796dd5 trials=0 afPositive=0 unresolved=0  [cum 18/27605, 11.4 min]
+E[17] sha=07b7fa26c2a77f0e trials=2475 afPositive=1 unresolved=0  [cum 19/30080, 13.4 min]
+E[18] sha=dcfafc85d2b79a7a trials=4 afPositive=0 unresolved=0  [cum 19/30084, 13.4 min]
+E[19] sha=42cd7d58aa4555a7 trials=1522 afPositive=2 unresolved=0  [cum 21/31606, 14.8 min]
+E[20] sha=0c7fdabf66d58dcb trials=0 afPositive=0 unresolved=0  [cum 21/31606, 14.8 min]
+E[21] sha=97a3935b0f4f4475 trials=0 afPositive=0 unresolved=0  [cum 21/31606, 14.8 min]
+E[22] sha=e2e24409a6d8875a trials=5000 (AT QUOTA) afPositive=5 unresolved=0  [cum 26/36606, 17.3 min]
+E[23] sha=66c5b748009a1ef8 trials=0 afPositive=0 unresolved=0  [cum 26/36606, 17.3 min]
+E[24] sha=63ff2611e92cb64a trials=0 afPositive=0 unresolved=0  [cum 26/36606, 17.3 min]
+E[25] sha=2f1fb11e6a92dac6 trials=41 afPositive=0 unresolved=0  [cum 26/36647, 17.4 min]
+E[26] sha=076970b2cd35a731 trials=0 afPositive=0 unresolved=0  [cum 26/36647, 17.4 min]
+E[27] sha=a686963d684b952d trials=5000 (AT QUOTA) afPositive=5 unresolved=0  [cum 31/41647, 19.8 min]
+E[28] sha=2f07cd8ad269f404 trials=5000 (AT QUOTA) afPositive=0 unresolved=0  [cum 31/46647, 22.9 min]
+E[29] sha=ba6c36cc7e9efcdf trials=0 afPositive=0 unresolved=0  [cum 31/46647, 22.9 min]
+E[30] sha=d958dded1994fdcc trials=30 afPositive=0 unresolved=0  [cum 31/46677, 22.9 min]
+E[31] sha=931bf12deb935f15 trials=5000 (AT QUOTA) afPositive=1 unresolved=0  [cum 32/51677, 23.7 min]
+E[32] sha=28c6dce3a2467655 trials=2097 afPositive=0 unresolved=0  [cum 32/53774, 24.9 min]
+E[33] sha=11d824bedfbf5e22 trials=6 afPositive=1 unresolved=0  [cum 33/53780, 24.9 min]
+E[34] sha=bc027520114e88ac trials=1258 afPositive=2 unresolved=0  [cum 35/55038, 26.3 min]
+E[35] sha=37232a4320c321db trials=0 afPositive=0 unresolved=0  [cum 35/55038, 26.3 min]
+E[36] sha=ac1345e3a6a0dfdf trials=712 afPositive=6 unresolved=0  [cum 41/55750, 27.0 min]
+E[37] sha=9d5446717bb17391 trials=12 afPositive=0 unresolved=0  [cum 41/55762, 27.0 min]
+E[38] sha=63b8df81a580e9cd trials=0 afPositive=0 unresolved=0  [cum 41/55762, 27.0 min]
+E[39] sha=35381f3e7d33d03c trials=12 afPositive=0 unresolved=0  [cum 41/55774, 27.0 min]
+E[40] sha=4fc190db56246099 trials=0 afPositive=0 unresolved=0  [cum 41/55774, 27.0 min]
+E[41] sha=ee2ec6d424be6529 trials=0 afPositive=0 unresolved=0  [cum 41/55774, 27.0 min]
+E[42] sha=9e4bbd58dc17c367 trials=586 afPositive=0 unresolved=0  [cum 41/56360, 27.3 min]
+E[43] sha=85002405208a23ce trials=0 afPositive=0 unresolved=0  [cum 41/56360, 27.3 min]
+E[44] sha=27b3b1631588dcbd trials=1318 afPositive=8 unresolved=0  [cum 49/57678, 27.7 min]
+E[45] sha=67d4c97e3733a2fa trials=0 afPositive=0 unresolved=0  [cum 49/57678, 27.7 min]
+E[46] sha=d0fe3e67528b71c8 trials=1470 afPositive=0 unresolved=0  [cum 49/59148, 28.7 min]
+E[47] sha=6c0a03aaf7f57678 trials=2611 afPositive=35 unresolved=0  [cum 84/61759, 30.8 min]
+E[48] sha=aa0a5e18e16b3d9c trials=239 afPositive=18 unresolved=0  [cum 102/61998, 31.6 min]
+E[49] sha=a1a34dd21d2fb6a5 trials=0 afPositive=0 unresolved=0  [cum 102/61998, 31.6 min]
+E[50] sha=5ac34c38e94d9cc5 trials=0 afPositive=0 unresolved=0  [cum 102/61998, 31.6 min]
+E[51] sha=a34731e7278ba96f trials=5000 (AT QUOTA) afPositive=1 unresolved=0  [cum 103/66998, 33.9 min]
+E[52] sha=fb33d7737e473462 trials=0 afPositive=0 unresolved=0  [cum 103/66998, 33.9 min]
+E[53] sha=526dc945aa1b49c3 trials=342 afPositive=0 unresolved=0  [cum 103/67340, 34.2 min]
+E[54] sha=fb463fa786811dc9 trials=5000 (AT QUOTA) afPositive=34 unresolved=0  [cum 137/72340, 39.4 min]
+E[55] sha=b7670f0299779209 trials=2760 afPositive=0 unresolved=0  [cum 137/75100, 40.9 min]
+E[56] sha=28195b59545bd459 trials=2 afPositive=0 unresolved=0  [cum 137/75102, 40.9 min]
+E[57] sha=af38501849f61cdf trials=0 afPositive=0 unresolved=0  [cum 137/75102, 40.9 min]
+E[58] sha=19fb46aa4f84d6c9 trials=9 afPositive=0 unresolved=0  [cum 137/75111, 40.9 min]
+E[59] sha=83e3e3945f199c17 trials=0 afPositive=0 unresolved=0  [cum 137/75111, 40.9 min]
+
+AF PASS {
+ "population": "RX",
+ "quota": 5000,
+ "eRepresented": 36,
+ "eAtQuota": 10,
+ "trials": 75111,
+ "distinctA": 74879,
+ "afPositive": 137,
+ "unresolved": 0,
+ "cappedRechecked": 6,
+ "eWithAFpositive": 17,
+ "seconds": 2454.2
+}

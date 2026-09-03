@@ -1,0 +1,49 @@
+{
+ "rows": [
+  {
+   "eIndex": 0,
+   "E_sha": "bbbbf8344484b388",
+   "asetSize": 26646
+  },
+  {
+   "eIndex": 1,
+   "E_sha": "9c4fdf00facdbbc2",
+   "asetSize": 50593
+  },
+  {
+   "eIndex": 2,
+   "E_sha": "6928cbc8f9892669",
+   "asetSize": 201
+  },
+  {
+   "eIndex": 3,
+   "E_sha": "ace3c9297a31653a",
+   "asetSize": 1435
+  },
+  {
+   "eIndex": 4,
+   "E_sha": "ab152988deea9d99",
+   "asetSize": 8778
+  },
+  {
+   "eIndex": 5,
+   "E_sha": "8302b3d44bc71de8",
+   "asetSize": 13821
+  },
+  {
+   "eIndex": 6,
+   "E_sha": "286e569e7a8de94b",
+   "asetSize": 3289
+  },
+  {
+   "eIndex": 7,
+   "E_sha": "e60344fc2913d994",
+   "asetSize": 3513
+  },
+  {
+   "eIndex": 8,
+   "E_sha": "6c03f4a51dab4ab1",
+   "asetSize": 3337
+  }
+ ]
+}

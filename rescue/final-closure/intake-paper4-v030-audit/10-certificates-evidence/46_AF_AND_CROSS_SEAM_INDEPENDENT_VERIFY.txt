@@ -1,0 +1,15 @@
+INDEPENDENT AF + CROSS-SEAM VERIFICATION
+A: len=40 Parikh=(15, 14, 11) expected=(15, 14, 11) PASS
+B: len=40 Parikh=(11, 12, 17) expected=(11, 12, 17) PASS
+C: len=40 Parikh=(10, 14, 16) expected=(10, 14, 16) PASS
+F: len=40 Parikh=(19, 11, 10) expected=(19, 11, 10) PASS
+AF_CYCLIC_WINDOWS_CHECKED=3120
+AF_CYCLIC_VIOLATIONS=0
+AF: violations=0
+FA: violations=0
+FAF: violations=0
+AFA: violations=0
+AC: violations=24
+  first=(39, 5, 'acccaaaccc', (2, 0, 3))
+FB: violations=2
+  first=(7, 23, 'aaabaaacccaabcccbbaaabbbacbbaaacaaabaaacccabbc', (11, 6, 6))

@@ -1,0 +1,9 @@
+{
+ "eCount": 60,
+ "totalAPairs": 261910,
+ "dpUnavoidable": 42355,
+ "dpEmpty": 42609,
+ "dpSurvives": 219301,
+ "fracKilledByDP": 0.162686,
+ "seconds": 227.1
+}

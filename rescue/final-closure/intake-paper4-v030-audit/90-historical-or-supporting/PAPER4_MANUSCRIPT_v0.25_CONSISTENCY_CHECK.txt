@@ -1,0 +1,10 @@
+version v0.25: PASS
+abstract 5151: PASS
+702 closure section: PASS
+positive 146 section: PASS
+pair CSP section: PASS
+current search order: PASS
+finite-zero remains open: PASS
+no solved claim: PASS
+novelty guarded: PASS
+OVERALL=PASS

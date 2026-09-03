@@ -1,0 +1,107 @@
+[
+  {
+    "h": 2,
+    "profile": "OLD",
+    "period": 1
+  },
+  {
+    "h": 2,
+    "profile": "2,0,0",
+    "period": 1
+  },
+  {
+    "h": 2,
+    "profile": "1,1,0",
+    "period": 1
+  },
+  {
+    "h": 3,
+    "profile": "OLD",
+    "period": 1
+  },
+  {
+    "h": 3,
+    "profile": "2,1,0",
+    "period": 1
+  },
+  {
+    "h": 3,
+    "profile": "1,1,1",
+    "period": 1
+  },
+  {
+    "h": 4,
+    "profile": "OLD",
+    "period": 1
+  },
+  {
+    "h": 4,
+    "profile": "2,1,1",
+    "period": 1
+  },
+  {
+    "h": 5,
+    "profile": "OLD",
+    "period": 1
+  },
+  {
+    "h": 5,
+    "profile": "3,2,0",
+    "period": 1
+  },
+  {
+    "h": 5,
+    "profile": "3,1,1",
+    "period": 1
+  },
+  {
+    "h": 5,
+    "profile": "2,2,1",
+    "period": 1
+  },
+  {
+    "h": 6,
+    "profile": "OLD",
+    "period": 1
+  },
+  {
+    "h": 6,
+    "profile": "3,2,1",
+    "period": 1
+  },
+  {
+    "h": 6,
+    "profile": "2,2,2",
+    "period": 1
+  },
+  {
+    "h": 6,
+    "profile": "4,1,1",
+    "period": 1
+  },
+  {
+    "h": 7,
+    "profile": "OLD",
+    "period": 1
+  },
+  {
+    "h": 7,
+    "profile": "4,2,1",
+    "period": 1
+  },
+  {
+    "h": 7,
+    "profile": "3,3,1",
+    "period": 1
+  },
+  {
+    "h": 7,
+    "profile": "3,2,2",
+    "period": 1
+  },
+  {
+    "h": 7,
+    "profile": "5,1,1",
+    "period": 1
+  }
+]

@@ -1,0 +1,296 @@
+[
+  {
+    "id": "E",
+    "description": "empty support",
+    "cardinality_formula": "1",
+    "size_L40": 1,
+    "coefficient_shape_spectrum": [
+      []
+    ]
+  },
+  {
+    "id": "Zs-A",
+    "description": "same-block, zero-curvature, all-active",
+    "cardinality_formula": "\u230a(L\u22123)\u00b2/4\u230b",
+    "size_L40": 342,
+    "coefficient_shape_spectrum": [
+      [
+        -2,
+        1
+      ],
+      [
+        -2,
+        1,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "Z-O",
+    "description": "full zero-curvature, one outer X",
+    "cardinality_formula": "L",
+    "size_L40": 40,
+    "coefficient_shape_spectrum": [
+      [],
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "Z-C",
+    "description": "full zero-curvature, centre X",
+    "cardinality_formula": "L",
+    "size_L40": 40,
+    "coefficient_shape_spectrum": [
+      [],
+      [
+        -2
+      ]
+    ]
+  },
+  {
+    "id": "Z-M",
+    "description": "full zero-curvature, centre+one outer X",
+    "cardinality_formula": "\u2308L\u00b2/2\u2309",
+    "size_L40": 800,
+    "coefficient_shape_spectrum": [
+      [],
+      [
+        -2
+      ],
+      [
+        -2,
+        1
+      ],
+      [
+        -1
+      ]
+    ]
+  },
+  {
+    "id": "Z-OO",
+    "description": "full zero-curvature, both outer X",
+    "cardinality_formula": "\u230a(L+1)\u00b2/4\u230b",
+    "size_L40": 420,
+    "coefficient_shape_spectrum": [
+      [],
+      [
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "Z-A",
+    "description": "full zero-curvature, all-active",
+    "cardinality_formula": "\u230a(L\u22121)\u00b2/4\u230b+1",
+    "size_L40": 381,
+    "coefficient_shape_spectrum": [
+      [],
+      [
+        -2,
+        1
+      ],
+      [
+        -2,
+        1,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "P-O",
+    "description": "full positive-curvature, one outer X",
+    "cardinality_formula": "L\u22121",
+    "size_L40": 39,
+    "coefficient_shape_spectrum": [
+      [],
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "P-C",
+    "description": "full positive-curvature, centre X",
+    "cardinality_formula": "\u230aL/2\u230b",
+    "size_L40": 20,
+    "coefficient_shape_spectrum": [
+      [
+        -2
+      ]
+    ]
+  },
+  {
+    "id": "P-M",
+    "description": "full positive-curvature, centre+one outer X",
+    "cardinality_formula": "\u230aL\u00b2/4\u230b",
+    "size_L40": 400,
+    "coefficient_shape_spectrum": [
+      [
+        -2
+      ],
+      [
+        -2,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "P-OO",
+    "description": "full positive-curvature, both outer X",
+    "cardinality_formula": "C(\u230aL/2\u230b+1,2)",
+    "size_L40": 210,
+    "coefficient_shape_spectrum": [
+      [],
+      [
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "P-A",
+    "description": "full positive-curvature, all-active",
+    "cardinality_formula": "C(\u230aL/2\u230b+1,2)",
+    "size_L40": 210,
+    "coefficient_shape_spectrum": [
+      [
+        -2
+      ],
+      [
+        -2,
+        1
+      ],
+      [
+        -2,
+        1,
+        1
+      ],
+      [
+        -2,
+        2
+      ]
+    ]
+  },
+  {
+    "id": "Pt-M",
+    "description": "short positive-curvature truncated mixed family",
+    "cardinality_formula": "\u230aL\u00b2/4\u230b\u22121",
+    "size_L40": 399,
+    "coefficient_shape_spectrum": [
+      [
+        -2
+      ],
+      [
+        -2,
+        1
+      ]
+    ]
+  },
+  {
+    "id": "M-O",
+    "description": "full negative-curvature, one outer X",
+    "cardinality_formula": "L\u22121",
+    "size_L40": 39,
+    "coefficient_shape_spectrum": [
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "M-C",
+    "description": "full negative-curvature, centre X",
+    "cardinality_formula": "\u230aL/2\u230b",
+    "size_L40": 20,
+    "coefficient_shape_spectrum": [
+      [],
+      [
+        -2
+      ]
+    ]
+  },
+  {
+    "id": "M-M",
+    "description": "full negative-curvature, centre+one outer X",
+    "cardinality_formula": "\u230aL\u00b2/4\u230b",
+    "size_L40": 400,
+    "coefficient_shape_spectrum": [
+      [
+        -2,
+        1
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  {
+    "id": "M-OO",
+    "description": "full negative-curvature, both outer X",
+    "cardinality_formula": "C(\u230aL/2\u230b+1,2)",
+    "size_L40": 210,
+    "coefficient_shape_spectrum": [
+      [
+        1,
+        1
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "M-A",
+    "description": "full negative-curvature, all-active",
+    "cardinality_formula": "C(\u230aL/2\u230b+1,2)",
+    "size_L40": 210,
+    "coefficient_shape_spectrum": [
+      [
+        -2,
+        1,
+        1
+      ],
+      [
+        -2,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2
+      ]
+    ]
+  },
+  {
+    "id": "Mt-M",
+    "description": "short negative-curvature truncated mixed family",
+    "cardinality_formula": "\u230aL\u00b2/4\u230b\u22121",
+    "size_L40": 399,
+    "coefficient_shape_spectrum": [
+      [
+        -2,
+        1
+      ],
+      [
+        1
+      ]
+    ]
+  }
+]

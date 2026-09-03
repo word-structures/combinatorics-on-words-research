@@ -1,0 +1,34 @@
+PAPER4 CURRENT GATE FACTOR TRACE v2
+
+[AF]
+af: PASS
+fa: PASS
+faf: PASS
+
+[AFD]
+ad: PASS
+df: PASS
+adf: PASS
+dfa: PASS
+fad: PASS
+
+[ABDF]
+fb: PASS
+bdf: PASS
+dfb: PASS
+fbd: PASS
+
+[C_SUPPORT]
+ac: PASS
+dc: PASS
+
+[FULL_C]
+bc: PASS
+cb: PASS
+cbc: PASS
+bdc: PASS
+cbd: PASS
+dcb: PASS
+
+bcb: ABSENT_AS_EXPECTED
+STATUS=PASS_ALL_CURRENT_GATES_TRACE_TO_ACTUAL_h6_FACTORS

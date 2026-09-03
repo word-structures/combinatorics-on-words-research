@@ -1,0 +1,14 @@
+{
+  "unique_dom_scc_status": "PASS",
+  "dom_period_status": "PASS",
+  "edge_eq_mismatches": 0,
+  "prof_cls_mismatches": 0,
+  "prof_edge_residuals": 0,
+  "max_poisson_res": 9.168221737354543e-13,
+  "ab_disagreement": 1.5137345266147406e-9,
+  "max_slope_spread": 1.0087670976322016e-9,
+  "max_r_res": 5.9261484608441606e-12,
+  "max_l_res": 0.024054154260544747,
+  "max_rs_res": 4.978240042419202e-12,
+  "max_st_res": 6.482314685030133e-14
+}

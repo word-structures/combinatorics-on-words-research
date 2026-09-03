@@ -1,0 +1,9 @@
+git status --short
+git branch --show-current
+git rev-parse HEAD
+git log --oneline --decorate -12
+git diff --stat
+node --stack-size=100000 scratch/profile-response-baseline-h2-h7-2026-08-25/run_1_repaired/generate_baseline_repaired.js
+node scratch/profile-response-baseline-h2-h7-2026-08-25/verify_encoding.js
+node tests/test.js
+node report_gen.js

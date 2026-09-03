@@ -1,0 +1,50 @@
+[
+  {
+    "core": 2,
+    "status": "EXHAUSTED",
+    "E_count": 12,
+    "E": [
+      "abbbaaaccbbbcabbcccaaaccbbaaabbbacbbbcca",
+      "abbbacbbbcccacbbbaaaccbaacaaabbbacbbbcca",
+      "abbbacbbbcccbbaacbccaaabacaaabbbacbbbcca",
+      "abbbcbabbbcccbbaacccabaaacaaabbbacbbbcca",
+      "abbbcbabbbcccbbaacccaabaacaaabbbacbbbcca",
+      "abbbcbabbbcccbbaacccaaabacaaabbbacbbbcca",
+      "abbbcbbabbcccbbaacccabaaacaaabbbacbbbcca",
+      "abbbcbbabbcccbbaacccaabaacaaabbbacbbbcca",
+      "abbbcbbabbcccbbaacccaaabacaaabbbacbbbcca",
+      "abbbcbbbabcccbbaacccabaaacaaabbbacbbbcca",
+      "abbbcbbbabcccbbaacccaabaacaaabbbacbbbcca",
+      "abbbcbbbabcccbbaacccaaabacaaabbbacbbbcca"
+    ],
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca",
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaacaabaaacccbcccacccbbaccbcccaaabbcc",
+    "Aold": "abbbaaabbcaaaccbaaabbbcbaaccbbbcccacbaac",
+    "sec": 17.237
+  },
+  {
+    "core": 3,
+    "status": "EXHAUSTED",
+    "E_count": 12,
+    "E": [
+      "abbbaaaccbbbcabbcccaaaccbbaaabbbacbbbcca",
+      "abbbacbbbcccacbbbaaaccbaacaaabbbacbbbcca",
+      "abbbacbbbcccbbaacbccaaabacaaabbbacbbbcca",
+      "abbbcbabbbcccbbaacccabaaacaaabbbacbbbcca",
+      "abbbcbabbbcccbbaacccaabaacaaabbbacbbbcca",
+      "abbbcbabbbcccbbaacccaaabacaaabbbacbbbcca",
+      "abbbcbbabbcccbbaacccabaaacaaabbbacbbbcca",
+      "abbbcbbabbcccbbaacccaabaacaaabbbacbbbcca",
+      "abbbcbbabbcccbbaacccaaabacaaabbbacbbbcca",
+      "abbbcbbbabcccbbaacccabaaacaaabbbacbbbcca",
+      "abbbcbbbabcccbbaacccaabaacaaabbbacbbbcca",
+      "abbbcbbbabcccbbaacccaaabacaaabbbacbbbcca"
+    ],
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca",
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "Aold": "abbbaaabbcaaaccbaaabbbcbaaccbbbcccacbaac",
+    "sec": 17.504
+  }
+]

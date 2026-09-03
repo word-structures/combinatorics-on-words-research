@@ -1,0 +1,9 @@
+base_23786=23786
+topF_meta700_new=2523
+intersection=0
+AF_pairs=120
+ABDEF_hits=0
+caps=0
+new_union=26309
+STATUS=PASS
+sha256=b3dbf0fe5d4086360d2bd7f68b5d1054455da9610ea1eff1b88e94dcbcf6ebc8

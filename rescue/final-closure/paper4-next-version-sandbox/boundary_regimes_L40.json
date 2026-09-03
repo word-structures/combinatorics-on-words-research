@@ -1,0 +1,374 @@
+{
+  "metadata": {
+    "status": "independent_exact_symbolic_regime_enumeration",
+    "L": 40,
+    "K_range": [
+      41,
+      100
+    ]
+  },
+  "eafea": {
+    "cover": "eafea",
+    "total_windows": 3600,
+    "regimes": [
+      {
+        "roles": [
+          "e",
+          "a",
+          "f"
+        ],
+        "macro": [
+          2,
+          -2,
+          0
+        ],
+        "macro_L1": 4,
+        "count": 380,
+        "Kmin": 41,
+        "Kmax": 59
+      },
+      {
+        "roles": [
+          "a",
+          "f",
+          "e"
+        ],
+        "macro": [
+          4,
+          -3,
+          -1
+        ],
+        "macro_L1": 8,
+        "count": 380,
+        "Kmin": 41,
+        "Kmax": 59
+      },
+      {
+        "roles": [
+          "e",
+          "f",
+          "a"
+        ],
+        "macro": [
+          4,
+          -3,
+          -1
+        ],
+        "macro_L1": 8,
+        "count": 800,
+        "Kmin": 61,
+        "Kmax": 99
+      },
+      {
+        "roles": [
+          "f",
+          "e",
+          "a"
+        ],
+        "macro": [
+          -6,
+          5,
+          1
+        ],
+        "macro_L1": 12,
+        "count": 380,
+        "Kmin": 41,
+        "Kmax": 59
+      },
+      {
+        "roles": [
+          "a",
+          "e",
+          "END"
+        ],
+        "macro": [
+          -6,
+          5,
+          1
+        ],
+        "macro_L1": 12,
+        "count": 20,
+        "Kmin": 61,
+        "Kmax": 80
+      },
+      {
+        "roles": [
+          "a",
+          "e",
+          "a"
+        ],
+        "macro": [
+          -21,
+          -9,
+          -10
+        ],
+        "macro_L1": 40,
+        "count": 400,
+        "Kmin": 41,
+        "Kmax": 79
+      },
+      {
+        "roles": [
+          "a",
+          "f",
+          "a"
+        ],
+        "macro": [
+          17,
+          13,
+          10
+        ],
+        "macro_L1": 40,
+        "count": 400,
+        "Kmin": 41,
+        "Kmax": 79
+      },
+      {
+        "roles": [
+          "e",
+          "a",
+          "e"
+        ],
+        "macro": [
+          21,
+          9,
+          10
+        ],
+        "macro_L1": 40,
+        "count": 400,
+        "Kmin": 41,
+        "Kmax": 79
+      },
+      {
+        "roles": [
+          "e",
+          "f",
+          "e"
+        ],
+        "macro": [
+          -9,
+          -19,
+          -12
+        ],
+        "macro_L1": 40,
+        "count": 400,
+        "Kmin": 41,
+        "Kmax": 79
+      },
+      {
+        "roles": [
+          "f",
+          "e",
+          "END"
+        ],
+        "macro": [
+          9,
+          19,
+          12
+        ],
+        "macro_L1": 40,
+        "count": 20,
+        "Kmin": 41,
+        "Kmax": 60
+      },
+      {
+        "roles": [
+          "e",
+          "f",
+          "END"
+        ],
+        "macro": [
+          19,
+          11,
+          10
+        ],
+        "macro_L1": 40,
+        "count": 20,
+        "Kmin": 81,
+        "Kmax": 100
+      }
+    ]
+  },
+  "fafea": {
+    "cover": "fafea",
+    "total_windows": 3600,
+    "regimes": [
+      {
+        "roles": [
+          "f",
+          "f",
+          "a"
+        ],
+        "macro": [
+          -2,
+          2,
+          0
+        ],
+        "macro_L1": 4,
+        "count": 800,
+        "Kmin": 61,
+        "Kmax": 99
+      },
+      {
+        "roles": [
+          "a",
+          "f",
+          "e"
+        ],
+        "macro": [
+          4,
+          -3,
+          -1
+        ],
+        "macro_L1": 8,
+        "count": 380,
+        "Kmin": 41,
+        "Kmax": 59
+      },
+      {
+        "roles": [
+          "f",
+          "a",
+          "f"
+        ],
+        "macro": [
+          -4,
+          3,
+          1
+        ],
+        "macro_L1": 8,
+        "count": 380,
+        "Kmin": 41,
+        "Kmax": 59
+      },
+      {
+        "roles": [
+          "f",
+          "e",
+          "a"
+        ],
+        "macro": [
+          -6,
+          5,
+          1
+        ],
+        "macro_L1": 12,
+        "count": 380,
+        "Kmin": 41,
+        "Kmax": 59
+      },
+      {
+        "roles": [
+          "a",
+          "e",
+          "END"
+        ],
+        "macro": [
+          -6,
+          5,
+          1
+        ],
+        "macro_L1": 12,
+        "count": 20,
+        "Kmin": 61,
+        "Kmax": 80
+      },
+      {
+        "roles": [
+          "a",
+          "e",
+          "a"
+        ],
+        "macro": [
+          -21,
+          -9,
+          -10
+        ],
+        "macro_L1": 40,
+        "count": 400,
+        "Kmin": 41,
+        "Kmax": 79
+      },
+      {
+        "roles": [
+          "a",
+          "f",
+          "a"
+        ],
+        "macro": [
+          17,
+          13,
+          10
+        ],
+        "macro_L1": 40,
+        "count": 400,
+        "Kmin": 41,
+        "Kmax": 79
+      },
+      {
+        "roles": [
+          "f",
+          "a",
+          "e"
+        ],
+        "macro": [
+          15,
+          14,
+          11
+        ],
+        "macro_L1": 40,
+        "count": 400,
+        "Kmin": 41,
+        "Kmax": 79
+      },
+      {
+        "roles": [
+          "f",
+          "e",
+          "END"
+        ],
+        "macro": [
+          9,
+          19,
+          12
+        ],
+        "macro_L1": 40,
+        "count": 20,
+        "Kmin": 41,
+        "Kmax": 60
+      },
+      {
+        "roles": [
+          "f",
+          "f",
+          "e"
+        ],
+        "macro": [
+          -15,
+          -14,
+          -11
+        ],
+        "macro_L1": 40,
+        "count": 400,
+        "Kmin": 41,
+        "Kmax": 79
+      },
+      {
+        "roles": [
+          "f",
+          "f",
+          "END"
+        ],
+        "macro": [
+          13,
+          16,
+          11
+        ],
+        "macro_L1": 40,
+        "count": 20,
+        "Kmin": 81,
+        "Kmax": 100
+      }
+    ]
+  }
+}

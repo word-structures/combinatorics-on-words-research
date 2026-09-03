@@ -1,0 +1,6 @@
+a bbbaaacaaabaaaccbcccaccbbbcabaacaabbbcbb
+b bbbaaacaabbccaaacccbcacccbbabbbccaccbccc
+c aaacccaaabbcbbbabbcccbbbccaabcbbacccbccc
+d aaacccbbbcccacccbcccaabccaaacccaabbcbbba
+e ccbbbabccaaacbbaaabbbcbbbabcaccbbabccaaa
+f bbacccaaacbbaaabbbaacbbaaacaaabaaacccabc

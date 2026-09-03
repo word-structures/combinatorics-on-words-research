@@ -1,0 +1,2 @@
+fea	38	23	bcccbbbabccaaacbbaaabbbcbbbabcaccbbabccaaabbba
+fea	37	24	abcccbbbabccaaacbbaaabbbcbbbabcaccbbabccaaabbbaa

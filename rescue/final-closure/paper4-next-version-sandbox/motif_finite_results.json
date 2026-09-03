@@ -1,0 +1,429 @@
+{
+ "stabilises": true,
+ "firstStableG1": null,
+ "rows": [],
+ "distinctFamilies": {
+  "L8": {
+   "typeSlots": 64,
+   "distinctFamilies": 29,
+   "nonEmpty": 28,
+   "rows": [
+    {
+     "g1": 1,
+     "delta": 0,
+     "chi": [
+      0,
+      1,
+      1
+     ],
+     "size": 32,
+     "count": 4
+    },
+    {
+     "g1": 1,
+     "delta": 0,
+     "chi": [
+      1,
+      0,
+      1
+     ],
+     "size": 20,
+     "count": 2
+    },
+    {
+     "g1": 1,
+     "delta": 1,
+     "chi": [
+      0,
+      1,
+      1
+     ],
+     "size": 16,
+     "count": 4
+    },
+    {
+     "g1": 2,
+     "delta": -1,
+     "chi": [
+      0,
+      1,
+      1
+     ],
+     "size": 16,
+     "count": 2
+    },
+    {
+     "g1": 0,
+     "delta": 1,
+     "chi": [
+      0,
+      1,
+      1
+     ],
+     "size": 15,
+     "count": 1
+    },
+    {
+     "g1": 0,
+     "delta": 1,
+     "chi": [
+      1,
+      1,
+      0
+     ],
+     "size": 15,
+     "count": 1
+    },
+    {
+     "g1": 1,
+     "delta": -1,
+     "chi": [
+      0,
+      1,
+      1
+     ],
+     "size": 15,
+     "count": 1
+    },
+    {
+     "g1": 1,
+     "delta": -1,
+     "chi": [
+      1,
+      1,
+      0
+     ],
+     "size": 15,
+     "count": 1
+    },
+    {
+     "g1": 1,
+     "delta": 0,
+     "chi": [
+      1,
+      1,
+      1
+     ],
+     "size": 13,
+     "count": 2
+    },
+    {
+     "g1": 0,
+     "delta": 1,
+     "chi": [
+      1,
+      0,
+      1
+     ],
+     "size": 10,
+     "count": 3
+    },
+    {
+     "g1": 0,
+     "delta": 1,
+     "chi": [
+      1,
+      1,
+      1
+     ],
+     "size": 10,
+     "count": 3
+    },
+    {
+     "g1": 1,
+     "delta": -1,
+     "chi": [
+      1,
+      0,
+      1
+     ],
+     "size": 10,
+     "count": 2
+    }
+   ]
+  },
+  "L10": {
+   "typeSlots": 64,
+   "distinctFamilies": 29,
+   "nonEmpty": 28,
+   "rows": [
+    {
+     "g1": 1,
+     "delta": 0,
+     "chi": [
+      0,
+      1,
+      1
+     ],
+     "size": 50,
+     "count": 4
+    },
+    {
+     "g1": 1,
+     "delta": 0,
+     "chi": [
+      1,
+      0,
+      1
+     ],
+     "size": 30,
+     "count": 2
+    },
+    {
+     "g1": 1,
+     "delta": 1,
+     "chi": [
+      0,
+      1,
+      1
+     ],
+     "size": 25,
+     "count": 4
+    },
+    {
+     "g1": 2,
+     "delta": -1,
+     "chi": [
+      0,
+      1,
+      1
+     ],
+     "size": 25,
+     "count": 2
+    },
+    {
+     "g1": 0,
+     "delta": 1,
+     "chi": [
+      0,
+      1,
+      1
+     ],
+     "size": 24,
+     "count": 1
+    },
+    {
+     "g1": 0,
+     "delta": 1,
+     "chi": [
+      1,
+      1,
+      0
+     ],
+     "size": 24,
+     "count": 1
+    },
+    {
+     "g1": 1,
+     "delta": -1,
+     "chi": [
+      0,
+      1,
+      1
+     ],
+     "size": 24,
+     "count": 1
+    },
+    {
+     "g1": 1,
+     "delta": -1,
+     "chi": [
+      1,
+      1,
+      0
+     ],
+     "size": 24,
+     "count": 1
+    },
+    {
+     "g1": 1,
+     "delta": 0,
+     "chi": [
+      1,
+      1,
+      1
+     ],
+     "size": 21,
+     "count": 2
+    },
+    {
+     "g1": 0,
+     "delta": 1,
+     "chi": [
+      1,
+      0,
+      1
+     ],
+     "size": 15,
+     "count": 3
+    },
+    {
+     "g1": 0,
+     "delta": 1,
+     "chi": [
+      1,
+      1,
+      1
+     ],
+     "size": 15,
+     "count": 3
+    },
+    {
+     "g1": 1,
+     "delta": -1,
+     "chi": [
+      1,
+      0,
+      1
+     ],
+     "size": 15,
+     "count": 2
+    }
+   ]
+  },
+  "L40": {
+   "typeSlots": 64,
+   "distinctFamilies": 29,
+   "nonEmpty": 28,
+   "rows": [
+    {
+     "g1": 1,
+     "delta": 0,
+     "chi": [
+      0,
+      1,
+      1
+     ],
+     "size": 800,
+     "count": 4
+    },
+    {
+     "g1": 1,
+     "delta": 0,
+     "chi": [
+      1,
+      0,
+      1
+     ],
+     "size": 420,
+     "count": 2
+    },
+    {
+     "g1": 1,
+     "delta": 1,
+     "chi": [
+      0,
+      1,
+      1
+     ],
+     "size": 400,
+     "count": 4
+    },
+    {
+     "g1": 2,
+     "delta": -1,
+     "chi": [
+      0,
+      1,
+      1
+     ],
+     "size": 400,
+     "count": 2
+    },
+    {
+     "g1": 0,
+     "delta": 1,
+     "chi": [
+      0,
+      1,
+      1
+     ],
+     "size": 399,
+     "count": 1
+    },
+    {
+     "g1": 0,
+     "delta": 1,
+     "chi": [
+      1,
+      1,
+      0
+     ],
+     "size": 399,
+     "count": 1
+    },
+    {
+     "g1": 1,
+     "delta": -1,
+     "chi": [
+      0,
+      1,
+      1
+     ],
+     "size": 399,
+     "count": 1
+    },
+    {
+     "g1": 1,
+     "delta": -1,
+     "chi": [
+      1,
+      1,
+      0
+     ],
+     "size": 399,
+     "count": 1
+    },
+    {
+     "g1": 1,
+     "delta": 0,
+     "chi": [
+      1,
+      1,
+      1
+     ],
+     "size": 381,
+     "count": 2
+    },
+    {
+     "g1": 0,
+     "delta": 0,
+     "chi": [
+      0,
+      1,
+      1
+     ],
+     "size": 342,
+     "count": 1
+    },
+    {
+     "g1": 0,
+     "delta": 0,
+     "chi": [
+      1,
+      0,
+      1
+     ],
+     "size": 342,
+     "count": 1
+    },
+    {
+     "g1": 0,
+     "delta": 0,
+     "chi": [
+      1,
+      1,
+      0
+     ],
+     "size": 342,
+     "count": 1
+    }
+   ]
+  }
+ },
+ "g1_ge2_all_equal": {
+  "checked": "L in {3..12,15,20,40}, g1 = 3..8 vs g1 = 2",
+  "failures": 0,
+  "sample": []
+ }
+}

@@ -1,0 +1,625 @@
+{
+  "status": "INDEPENDENT STRUCTURAL AUDIT \u2014 NO PAPER-4 SEARCH POPULATION DATA USED",
+  "L": 40,
+  "windows": {
+    "FAF": 3481,
+    "AFE": 3081
+  },
+  "cutpoint_arity": {
+    "FAF": {
+      "3": 684,
+      "2": 1617,
+      "1": 838,
+      "0": 342
+    },
+    "AFE": {
+      "0": 703,
+      "1": 1238,
+      "2": 798,
+      "3": 342
+    }
+  },
+  "free_variable_arity": {
+    "FAF": {
+      "2": 1516,
+      "3": 648,
+      "1": 953,
+      "0": 364
+    },
+    "AFE": {
+      "0": 724,
+      "1": 1275,
+      "2": 758,
+      "3": 324
+    }
+  },
+  "signatures": {
+    "FAF": 1561,
+    "AFE": 1161,
+    "AFE_subset_FAF": true,
+    "FAF_only": 400,
+    "FAF_only_equals_midpoint_family": true
+  },
+  "incremental_AFE": {
+    "cross_boundary": 1998,
+    "vacuous_profile_only": 2,
+    "F_dependent_windows": 1996,
+    "distinct_variable_signatures": 800,
+    "signature_arity": {
+      "2": 722,
+      "1": 78
+    }
+  },
+  "primal_graph": {
+    "affine_edges": 703,
+    "missing_adjacent_edges": 38,
+    "with_unit_steps": "K_39",
+    "treewidth": 38
+  },
+  "midpoint_direct_checks": 20000,
+  "general_L_structural_checks": {
+    "range": [
+      4,
+      80
+    ],
+    "all_pass": true,
+    "records": [
+      {
+        "L": 4,
+        "AFE_signatures": 9,
+        "FAF_signatures": 13,
+        "extra": 4,
+        "floor_L2_over_4": 4
+      },
+      {
+        "L": 5,
+        "AFE_signatures": 15,
+        "FAF_signatures": 21,
+        "extra": 6,
+        "floor_L2_over_4": 6
+      },
+      {
+        "L": 6,
+        "AFE_signatures": 22,
+        "FAF_signatures": 31,
+        "extra": 9,
+        "floor_L2_over_4": 9
+      },
+      {
+        "L": 7,
+        "AFE_signatures": 31,
+        "FAF_signatures": 43,
+        "extra": 12,
+        "floor_L2_over_4": 12
+      },
+      {
+        "L": 8,
+        "AFE_signatures": 41,
+        "FAF_signatures": 57,
+        "extra": 16,
+        "floor_L2_over_4": 16
+      },
+      {
+        "L": 9,
+        "AFE_signatures": 53,
+        "FAF_signatures": 73,
+        "extra": 20,
+        "floor_L2_over_4": 20
+      },
+      {
+        "L": 10,
+        "AFE_signatures": 66,
+        "FAF_signatures": 91,
+        "extra": 25,
+        "floor_L2_over_4": 25
+      },
+      {
+        "L": 11,
+        "AFE_signatures": 81,
+        "FAF_signatures": 111,
+        "extra": 30,
+        "floor_L2_over_4": 30
+      },
+      {
+        "L": 12,
+        "AFE_signatures": 97,
+        "FAF_signatures": 133,
+        "extra": 36,
+        "floor_L2_over_4": 36
+      },
+      {
+        "L": 13,
+        "AFE_signatures": 115,
+        "FAF_signatures": 157,
+        "extra": 42,
+        "floor_L2_over_4": 42
+      },
+      {
+        "L": 14,
+        "AFE_signatures": 134,
+        "FAF_signatures": 183,
+        "extra": 49,
+        "floor_L2_over_4": 49
+      },
+      {
+        "L": 15,
+        "AFE_signatures": 155,
+        "FAF_signatures": 211,
+        "extra": 56,
+        "floor_L2_over_4": 56
+      },
+      {
+        "L": 16,
+        "AFE_signatures": 177,
+        "FAF_signatures": 241,
+        "extra": 64,
+        "floor_L2_over_4": 64
+      },
+      {
+        "L": 17,
+        "AFE_signatures": 201,
+        "FAF_signatures": 273,
+        "extra": 72,
+        "floor_L2_over_4": 72
+      },
+      {
+        "L": 18,
+        "AFE_signatures": 226,
+        "FAF_signatures": 307,
+        "extra": 81,
+        "floor_L2_over_4": 81
+      },
+      {
+        "L": 19,
+        "AFE_signatures": 253,
+        "FAF_signatures": 343,
+        "extra": 90,
+        "floor_L2_over_4": 90
+      },
+      {
+        "L": 20,
+        "AFE_signatures": 281,
+        "FAF_signatures": 381,
+        "extra": 100,
+        "floor_L2_over_4": 100
+      },
+      {
+        "L": 21,
+        "AFE_signatures": 311,
+        "FAF_signatures": 421,
+        "extra": 110,
+        "floor_L2_over_4": 110
+      },
+      {
+        "L": 22,
+        "AFE_signatures": 342,
+        "FAF_signatures": 463,
+        "extra": 121,
+        "floor_L2_over_4": 121
+      },
+      {
+        "L": 23,
+        "AFE_signatures": 375,
+        "FAF_signatures": 507,
+        "extra": 132,
+        "floor_L2_over_4": 132
+      },
+      {
+        "L": 24,
+        "AFE_signatures": 409,
+        "FAF_signatures": 553,
+        "extra": 144,
+        "floor_L2_over_4": 144
+      },
+      {
+        "L": 25,
+        "AFE_signatures": 445,
+        "FAF_signatures": 601,
+        "extra": 156,
+        "floor_L2_over_4": 156
+      },
+      {
+        "L": 26,
+        "AFE_signatures": 482,
+        "FAF_signatures": 651,
+        "extra": 169,
+        "floor_L2_over_4": 169
+      },
+      {
+        "L": 27,
+        "AFE_signatures": 521,
+        "FAF_signatures": 703,
+        "extra": 182,
+        "floor_L2_over_4": 182
+      },
+      {
+        "L": 28,
+        "AFE_signatures": 561,
+        "FAF_signatures": 757,
+        "extra": 196,
+        "floor_L2_over_4": 196
+      },
+      {
+        "L": 29,
+        "AFE_signatures": 603,
+        "FAF_signatures": 813,
+        "extra": 210,
+        "floor_L2_over_4": 210
+      },
+      {
+        "L": 30,
+        "AFE_signatures": 646,
+        "FAF_signatures": 871,
+        "extra": 225,
+        "floor_L2_over_4": 225
+      },
+      {
+        "L": 31,
+        "AFE_signatures": 691,
+        "FAF_signatures": 931,
+        "extra": 240,
+        "floor_L2_over_4": 240
+      },
+      {
+        "L": 32,
+        "AFE_signatures": 737,
+        "FAF_signatures": 993,
+        "extra": 256,
+        "floor_L2_over_4": 256
+      },
+      {
+        "L": 33,
+        "AFE_signatures": 785,
+        "FAF_signatures": 1057,
+        "extra": 272,
+        "floor_L2_over_4": 272
+      },
+      {
+        "L": 34,
+        "AFE_signatures": 834,
+        "FAF_signatures": 1123,
+        "extra": 289,
+        "floor_L2_over_4": 289
+      },
+      {
+        "L": 35,
+        "AFE_signatures": 885,
+        "FAF_signatures": 1191,
+        "extra": 306,
+        "floor_L2_over_4": 306
+      },
+      {
+        "L": 36,
+        "AFE_signatures": 937,
+        "FAF_signatures": 1261,
+        "extra": 324,
+        "floor_L2_over_4": 324
+      },
+      {
+        "L": 37,
+        "AFE_signatures": 991,
+        "FAF_signatures": 1333,
+        "extra": 342,
+        "floor_L2_over_4": 342
+      },
+      {
+        "L": 38,
+        "AFE_signatures": 1046,
+        "FAF_signatures": 1407,
+        "extra": 361,
+        "floor_L2_over_4": 361
+      },
+      {
+        "L": 39,
+        "AFE_signatures": 1103,
+        "FAF_signatures": 1483,
+        "extra": 380,
+        "floor_L2_over_4": 380
+      },
+      {
+        "L": 40,
+        "AFE_signatures": 1161,
+        "FAF_signatures": 1561,
+        "extra": 400,
+        "floor_L2_over_4": 400
+      },
+      {
+        "L": 41,
+        "AFE_signatures": 1221,
+        "FAF_signatures": 1641,
+        "extra": 420,
+        "floor_L2_over_4": 420
+      },
+      {
+        "L": 42,
+        "AFE_signatures": 1282,
+        "FAF_signatures": 1723,
+        "extra": 441,
+        "floor_L2_over_4": 441
+      },
+      {
+        "L": 43,
+        "AFE_signatures": 1345,
+        "FAF_signatures": 1807,
+        "extra": 462,
+        "floor_L2_over_4": 462
+      },
+      {
+        "L": 44,
+        "AFE_signatures": 1409,
+        "FAF_signatures": 1893,
+        "extra": 484,
+        "floor_L2_over_4": 484
+      },
+      {
+        "L": 45,
+        "AFE_signatures": 1475,
+        "FAF_signatures": 1981,
+        "extra": 506,
+        "floor_L2_over_4": 506
+      },
+      {
+        "L": 46,
+        "AFE_signatures": 1542,
+        "FAF_signatures": 2071,
+        "extra": 529,
+        "floor_L2_over_4": 529
+      },
+      {
+        "L": 47,
+        "AFE_signatures": 1611,
+        "FAF_signatures": 2163,
+        "extra": 552,
+        "floor_L2_over_4": 552
+      },
+      {
+        "L": 48,
+        "AFE_signatures": 1681,
+        "FAF_signatures": 2257,
+        "extra": 576,
+        "floor_L2_over_4": 576
+      },
+      {
+        "L": 49,
+        "AFE_signatures": 1753,
+        "FAF_signatures": 2353,
+        "extra": 600,
+        "floor_L2_over_4": 600
+      },
+      {
+        "L": 50,
+        "AFE_signatures": 1826,
+        "FAF_signatures": 2451,
+        "extra": 625,
+        "floor_L2_over_4": 625
+      },
+      {
+        "L": 51,
+        "AFE_signatures": 1901,
+        "FAF_signatures": 2551,
+        "extra": 650,
+        "floor_L2_over_4": 650
+      },
+      {
+        "L": 52,
+        "AFE_signatures": 1977,
+        "FAF_signatures": 2653,
+        "extra": 676,
+        "floor_L2_over_4": 676
+      },
+      {
+        "L": 53,
+        "AFE_signatures": 2055,
+        "FAF_signatures": 2757,
+        "extra": 702,
+        "floor_L2_over_4": 702
+      },
+      {
+        "L": 54,
+        "AFE_signatures": 2134,
+        "FAF_signatures": 2863,
+        "extra": 729,
+        "floor_L2_over_4": 729
+      },
+      {
+        "L": 55,
+        "AFE_signatures": 2215,
+        "FAF_signatures": 2971,
+        "extra": 756,
+        "floor_L2_over_4": 756
+      },
+      {
+        "L": 56,
+        "AFE_signatures": 2297,
+        "FAF_signatures": 3081,
+        "extra": 784,
+        "floor_L2_over_4": 784
+      },
+      {
+        "L": 57,
+        "AFE_signatures": 2381,
+        "FAF_signatures": 3193,
+        "extra": 812,
+        "floor_L2_over_4": 812
+      },
+      {
+        "L": 58,
+        "AFE_signatures": 2466,
+        "FAF_signatures": 3307,
+        "extra": 841,
+        "floor_L2_over_4": 841
+      },
+      {
+        "L": 59,
+        "AFE_signatures": 2553,
+        "FAF_signatures": 3423,
+        "extra": 870,
+        "floor_L2_over_4": 870
+      },
+      {
+        "L": 60,
+        "AFE_signatures": 2641,
+        "FAF_signatures": 3541,
+        "extra": 900,
+        "floor_L2_over_4": 900
+      },
+      {
+        "L": 61,
+        "AFE_signatures": 2731,
+        "FAF_signatures": 3661,
+        "extra": 930,
+        "floor_L2_over_4": 930
+      },
+      {
+        "L": 62,
+        "AFE_signatures": 2822,
+        "FAF_signatures": 3783,
+        "extra": 961,
+        "floor_L2_over_4": 961
+      },
+      {
+        "L": 63,
+        "AFE_signatures": 2915,
+        "FAF_signatures": 3907,
+        "extra": 992,
+        "floor_L2_over_4": 992
+      },
+      {
+        "L": 64,
+        "AFE_signatures": 3009,
+        "FAF_signatures": 4033,
+        "extra": 1024,
+        "floor_L2_over_4": 1024
+      },
+      {
+        "L": 65,
+        "AFE_signatures": 3105,
+        "FAF_signatures": 4161,
+        "extra": 1056,
+        "floor_L2_over_4": 1056
+      },
+      {
+        "L": 66,
+        "AFE_signatures": 3202,
+        "FAF_signatures": 4291,
+        "extra": 1089,
+        "floor_L2_over_4": 1089
+      },
+      {
+        "L": 67,
+        "AFE_signatures": 3301,
+        "FAF_signatures": 4423,
+        "extra": 1122,
+        "floor_L2_over_4": 1122
+      },
+      {
+        "L": 68,
+        "AFE_signatures": 3401,
+        "FAF_signatures": 4557,
+        "extra": 1156,
+        "floor_L2_over_4": 1156
+      },
+      {
+        "L": 69,
+        "AFE_signatures": 3503,
+        "FAF_signatures": 4693,
+        "extra": 1190,
+        "floor_L2_over_4": 1190
+      },
+      {
+        "L": 70,
+        "AFE_signatures": 3606,
+        "FAF_signatures": 4831,
+        "extra": 1225,
+        "floor_L2_over_4": 1225
+      },
+      {
+        "L": 71,
+        "AFE_signatures": 3711,
+        "FAF_signatures": 4971,
+        "extra": 1260,
+        "floor_L2_over_4": 1260
+      },
+      {
+        "L": 72,
+        "AFE_signatures": 3817,
+        "FAF_signatures": 5113,
+        "extra": 1296,
+        "floor_L2_over_4": 1296
+      },
+      {
+        "L": 73,
+        "AFE_signatures": 3925,
+        "FAF_signatures": 5257,
+        "extra": 1332,
+        "floor_L2_over_4": 1332
+      },
+      {
+        "L": 74,
+        "AFE_signatures": 4034,
+        "FAF_signatures": 5403,
+        "extra": 1369,
+        "floor_L2_over_4": 1369
+      },
+      {
+        "L": 75,
+        "AFE_signatures": 4145,
+        "FAF_signatures": 5551,
+        "extra": 1406,
+        "floor_L2_over_4": 1406
+      },
+      {
+        "L": 76,
+        "AFE_signatures": 4257,
+        "FAF_signatures": 5701,
+        "extra": 1444,
+        "floor_L2_over_4": 1444
+      },
+      {
+        "L": 77,
+        "AFE_signatures": 4371,
+        "FAF_signatures": 5853,
+        "extra": 1482,
+        "floor_L2_over_4": 1482
+      },
+      {
+        "L": 78,
+        "AFE_signatures": 4486,
+        "FAF_signatures": 6007,
+        "extra": 1521,
+        "floor_L2_over_4": 1521
+      },
+      {
+        "L": 79,
+        "AFE_signatures": 4603,
+        "FAF_signatures": 6163,
+        "extra": 1560,
+        "floor_L2_over_4": 1560
+      },
+      {
+        "L": 80,
+        "AFE_signatures": 4721,
+        "FAF_signatures": 6321,
+        "extra": 1600,
+        "floor_L2_over_4": 1600
+      }
+    ]
+  },
+  "direct_compiler_selftest": {
+    "seed": 20260828,
+    "trials": 100,
+    "comparisons": 656200,
+    "genuine_squares_seen": 26265,
+    "branch_counts": {
+      "('afe', 0)": 72400,
+      "('afe', 1)": 127500,
+      "('afe', 2)": 75800,
+      "('afe', 3)": 32400,
+      "('faf', 0)": 36400,
+      "('faf', 1)": 95300,
+      "('faf', 2)": 151600,
+      "('faf', 3)": 64800
+    },
+    "status": "PASS"
+  }
+}

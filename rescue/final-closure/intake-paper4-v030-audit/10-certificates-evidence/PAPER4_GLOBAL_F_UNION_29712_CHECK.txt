@@ -1,0 +1,13 @@
+PAPER4 GLOBAL F UNION 29712 CHECK
+base_26309=26309
+new_F2_meta700=3403
+intersection=0
+AF_positive_F=77
+AF_pairs=325
+AF_cleanroom=325/325_PASS
+ABDEF_closed_pairs=325
+ABDEF_missing_pairs=0
+ABDEF_hits=0
+new_union=29712
+STATUS=PASS
+sha256=146bde99fed39f2457119e0812ac3c2dad0031e20994827787fe5413a860fe53

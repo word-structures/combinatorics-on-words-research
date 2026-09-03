@@ -1,0 +1,16 @@
+[
+  {
+    "command": "node tests/test.js",
+    "exit_code": 0,
+    "stdout_path": "TEST_STDOUT.txt",
+    "stderr_path": "TEST_STDERR.txt",
+    "passed": true
+  },
+  {
+    "command": "node tests/test-abelian-core.js",
+    "exit_code": 0,
+    "stdout_path": "TEST_STDOUT.txt",
+    "stderr_path": "TEST_STDERR.txt",
+    "passed": true
+  }
+]

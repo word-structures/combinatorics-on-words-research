@@ -1,0 +1,27 @@
+{
+ "runId": "bcdBIG_H",
+ "kind": "stages B/C/D on AF-positive A",
+ "population": "H",
+ "afPositiveA": 202,
+ "nodeCap": 20000000,
+ "unit": "(E,A) pairs whose A is AF-positive",
+ "codeSha": {
+  "gate": "387f469c14dfb063a56d10b178beaab3846eccd57f4ef0c50b9f6f60cfb60458",
+  "afe": "bd6964a90e5d570ca97dcbd786a73f37c67e776d7c6b588fc264295f1d768b0f",
+  "runner": "e99564c5f124dff5dcdc9c0d8e64d782e7339526bba81b66decf5b53de2fc5f8"
+ },
+ "host": "LAPTOP-0GD87QVT",
+ "startedUtc": "2026-08-28T11:42:17.655Z",
+ "status": "COMPLETED",
+ "finishedUtc": "2026-08-28T11:44:08.115Z",
+ "summary": {
+  "population": "H",
+  "afPositiveA": 202,
+  "pairs": 379,
+  "AFE_EXISTS": 99,
+  "AF_AND_AFE_EXISTS": 48,
+  "P40": 38,
+  "capped": 0,
+  "allExhaustive": true
+ }
+}

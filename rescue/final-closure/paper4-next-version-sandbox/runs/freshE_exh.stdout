@@ -1,0 +1,16 @@
+{
+ "eExamined": 60,
+ "eDuplicates": 0,
+ "eCanonicalSkipped": 0,
+ "aefK40Hits": 0,
+ "notInCanonical39": 0,
+ "strictDisjointTriples": 0,
+ "eWithACapped": 0,
+ "fLevelCapEvents": 0,
+ "maxANodes": 3489981,
+ "maxFNodes": 4368791,
+ "aCap": 40000000,
+ "fCap": 40000000,
+ "exhaustiveOverFullAandFProfileClasses": true,
+ "seconds": 1096.7
+}

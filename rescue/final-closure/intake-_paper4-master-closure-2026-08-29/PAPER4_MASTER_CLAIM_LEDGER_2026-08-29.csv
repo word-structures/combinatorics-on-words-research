@@ -1,0 +1,47 @@
+id,section,claim,classification,verified_this_session,evidence
+L01,3,Proposition 3.1 rank-one kernel preservation,PROVED,yes,proof read; six L=40 profiles reproduced from M_g3 + 10*1^T
+L02,2,Carpi rank condition forces commutatively bijective incidence,HYPOTHESIS,no,load-bearing claim with no precise citation; Carpi 1993 not obtained
+L03,4.1,K<=40 window meets at most three consecutive macro blocks,PROVED,yes,length <= 2L spans <= 3 blocks
+L04,4.2,long-period parent/template/ancestor gate,HYPOTHESIS,no,relies on external Rao-Rosenfeld framework; separate fail-closed certificate
+L05,5,Theorem 5.1 finite subset-factor gate,PROVED,yes,five-line proof; recommend demotion to lemma (infrastructure)
+L06,5,AF/AEF/no-C covers and ceilings 60/100/340,EXACT FINITE COMPUTATION,yes,ceiling arithmetic reproduced; individual no-C ceilings 100/260/340
+L07,7,carry recurrence i_{j+1}=i_j+r-Lc_j and b_{j+1}=b_j+q+c_j,PROVED,yes,Lemma 2.1 of the full proof document
+L08,7,delta = c1-c0 in {-1 0 +1},PROVED,yes,Lemma 2.2; two independent derivations
+L09,8,six carry domains exhaustive with exact integer inequalities,PROVED,yes,section 3 of full proof; exhaustive by (q c0 c1)
+L10,8,Z P M are the FULL lattice domains (realizability),PROVED,yes,Lemma 3.1 constructs q>=1 witnesses
+L11,8,P minus P_t = {(L-2 L-1 0)} and M minus M_t = {(L-1 0 1)},PROVED,yes,Lemma 4.1; also checked L=4..120 with 0 failures
+L12,8,exactly 34 physically realizable role/domain patterns,PROVED,yes,Proposition 5.1; verified at every L tested
+L13,8,34 -> 19 quotient with all merges justified,PROVED,yes,Theorem 6.3 via M1 trivial mask M2 outer symmetry M3 truncation transfer
+L14,8,only chi=110 truncates on P side and chi=011 on M side,PROVED,yes,Lemmas 6.1/6.2 with explicit rescuing witnesses (0 L-1 L-2) and (1 0 L-1)
+L15,8,the nineteen closed cardinality formulas,PROVED,yes,section 7 derivations; independently checked L=5..200 with 0 failures
+L16,8,pairwise distinctness of the nineteen families,PROVED BUT MANUSCRIPT PROOF INCOMPLETE,yes,cardinality half proved for all L; shape-spectrum half verified L=5..60 only
+L17,8.1,small-L counts 9 15 19 19 19 19 and L>=5 stability,PROVED,yes,Zs empty for L<=4 from r>=2 and a+2r<=L-1
+L18,9,Proposition 9.1 ternary/binary/unary decomposition,PROVED,yes,derived independently in Report 13
+L19,9,361 ternary / 419 binary / 380 unary independent of E,EXACT FINITE COMPUTATION,yes,identical across all 69 frozen E
+L20,9.1,Lemma 9.2 depth-one suffix obstruction,PROVED,yes,sufficient only; 0 violations in 469 E
+L21,9.2,canonical E nonemptiness is a selection effect,PROVED,yes,9/9 canonical E have a canonical A partner in the pools file
+L22,10,every AFE window is an affine condition sum alpha_i X_i in T,PROVED,yes,including the 703 arity-zero windows as the empty sum with T={0}
+L23,10,Theorem 10.1 path equivalence,PROVED,yes,matches solver closing-depth semantics exactly
+L24,11,Lemma 11.1 current-Parikh insufficiency,PROVED,yes,v0.33 K=2 example recomputed: (1,-1) vs (0,0) at depths 1 3 5
+L25,11,Theorem 11.2 frontier-state sufficiency,PROVED,yes,no minimality claimed
+L26,12,first-hit antichain and cylinder partition,PROVED,yes,
+L27,12,|W_h| = 40!/(19!11!10!) = 46305405961214400,EXACT FINITE COMPUTATION,yes,exact match
+L28,12.2,weighted frontier-DAG identity Z + sum M_d = |W_h|,PROVED,yes,clean-room verified over 360 systems including 90 UNSAT
+L29,12.2,frontier gives NO state compression at L=40 (multiplicity 1),EXACT FINITE COMPUTATION,yes,|A_d| = d for 38 of 40 depths; forced by the 342 ternary constraints alone
+L30,12.3,A_surv = sum S_d = E[T] under the stated censoring convention,PROVED,yes,convention is load-bearing and must remain stated
+L31,12.3,N_eff computable from quotient multiplicities via N w^2,PROVED,yes,clean-room verified against explicit prefix second moment
+L32,12.5,translation-invariant pure-square mass,PROVED,yes,Vandermonde argument correct
+L33,12.6,union-bound existence certificate,PROVED,yes,converse correctly disclaimed
+L34,13,RX 75111 trials / 137 AF+ / 0 AFE / 17 E / 0 unresolved,FINITE-POPULATION RESULT,yes,matches afexRX2 and bcdRX manifests exactly
+L35,13,H 31775 trials / 263 AF+ / 86 AFE / 44 joint / 34 P40,FINITE-POPULATION RESULT,yes,matches rx_vs_h_comparison.json exactly
+L36,13,strata RX-1000 45->0 H-1000 40->19 RX-5000 63->0 H-5000 78->36->24,FINITE-POPULATION RESULT,yes,all eight stratum numbers reconfirmed
+L37,13,joint AF_AND_AFE 263/263 two-solver agreement,INDEPENDENTLY REPLAYED,yes,Report 12; predicate correctly attributed in v0.33
+L38,13,AFE_EXISTS 263/263 agreement 86 positive 177 negative 0 unresolved,INDEPENDENTLY REPLAYED,yes,this session; AFE-only second solver; 42 AFE-pos/joint-neg control pairs
+L39,13,all 86 AFE witnesses valid by literal-word check,INDEPENDENTLY REPLAYED,yes,third solver-free route; profile (19 11 10) and no square K in [2 40]
+L40,13.2,0/137 is finite evidence not an impossibility theorem,PROVED,yes,correct epistemic framing; no probability language anywhere
+L41,14,static support / collision counts / extinction depth do not separate H from RX,FINITE-POPULATION RESULT,yes,Reports 10 and 12
+L42,16,six-domain/19-family novelty,NOVELTY_UNRESOLVED,partial,no equivalent found; Carpi 1993 not obtained; delta vs delta_j unresolved
+L43,16,generic first-hit/frontier/DAG machinery is not novel,KNOWN PRIOR ART,yes,explicitly disclaimed in v0.33
+L44,global,Makela's problem solved,FALSE / PROHIBITED,n/a,remains OPEN; no manuscript statement claims otherwise
+L45,global,length-40 impossibility theorem,FALSE / PROHIBITED,n/a,not established; no finite negative licenses it
+L46,global,complete six-block coding H,FALSE / PROHIBITED,n/a,not found

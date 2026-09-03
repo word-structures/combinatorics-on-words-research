@@ -1,0 +1,16 @@
+Component,Carpi_Has_It,Paper4_Uses_It,Derivable_From_Carpi,Novel_Content
+"Parikh prefix second differences (+1 -2 +1)",Yes,Yes,N/A - shared classical algebra,No
+"Uniform block length L",Yes (for uniform morphisms),Yes,N/A - shared hypothesis,No
+"Boundary/interior indicator delta_j = 1[i_j > 0]",Yes,No (not used),N/A - different variable,No
+"Carry bit c_j = floor((i_j+r)/L)",No,Yes,No - depends on K mod L,Yes (elementary)
+"Macro curvature Delta = c_1 - c_0 in {-1 0 +1}",No (implicit in AP constraint),Yes (explicit classification axis),No - Carpi does not classify by curvature sign,Yes (elementary)
+"Six carry domains Z_s P_t M_t Z P M",No,Yes,No - different partition axis from Carpi,Yes
+"Partial assignment / one unresolved role X",No,Yes,No - Carpi assumes fully specified morphism,Yes
+"Occurrence mask chi(b)",No,Yes,No - requires partial assignment concept,Yes
+"Block-coincidence consistency",No (not needed for full morphisms),Yes,No - requires chi + same-block constraint,Yes
+"34 realizable domain/mask patterns",No,Yes,No - requires six domains + chi + coincidence,Yes
+"Complete reduced support signature sigma",No,Yes,No - requires chi + prefix depths,Yes
+"Support-set equivalence quotient",No,Yes,No - requires complete sigma sets,Yes
+"19 support families",No,Yes,No - requires full 34-pattern quotient,Yes
+"Closed cardinality formulas for all 19 families",No,Yes,No,Yes
+"Support/target separation principle",No (not applicable),Yes,No,Yes

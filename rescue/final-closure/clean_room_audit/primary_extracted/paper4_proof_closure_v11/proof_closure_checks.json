@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "formula_checks": 1881,
+  "distinct_family_checks": 99,
+  "size_shape_fingerprint_checks": 99,
+  "direct_masks_tested": 384,
+  "direct_windows_classified": 179328,
+  "general_failures": [],
+  "direct_window_failures": [],
+  "critical_34_to_19_failures": [],
+  "small_L_realizable_family_counts": {
+    "2": 9,
+    "3": 15,
+    "4": 19,
+    "5": 19,
+    "6": 19,
+    "7": 19
+  }
+}

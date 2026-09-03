@@ -1,0 +1,27 @@
+[
+ {
+  "A": "aacaaabbbaacbccaaacbbaaabbbacbbbccabbccc",
+  "F": "aaabacbbbaaabcaaaccbcccabbbaaacabccaaaba",
+  "afId": "0aa7a3785187be5faa51acfbfc45eee6705ef1c90707d44939f941bd642035a9"
+ },
+ {
+  "A": "bbbaaacccaaabaacaabbbcbbbabbbcccbacccaaa",
+  "F": "cbbabbbcbbaaacaaabacbcccaabccaaabaaacaaa",
+  "afId": "3085b3d6a5738ebedf03a3728f2d276e19ac2a3e40efc549da83a91fa6540080"
+ },
+ {
+  "A": "bbbaaacccaaabacaaabbbcbbbabbbcccbacccaaa",
+  "F": "cbbabbbcbbaaacaaabacbcccaabccaaabaaacaaa",
+  "afId": "a66ef98afc120e1a746e0a9d5836c15cd24293d13e725cf39dd8deea044e22b4"
+ },
+ {
+  "A": "ccabbbcaaacccbaccbbbabbbcbbbaaacaaabaaac",
+  "F": "cbacccaabbcabaaacabcbbbaacbbaaacaaabaaac",
+  "afId": "a5aa367cbb25b17f474ecdc20d9d68eb636f1130341162a30dc8e076fced218c"
+ },
+ {
+  "A": "baaacccbccaabbccabcbbbabbbccaaabbcaabaaa",
+  "F": "cccabbcbbbacaaabbbaaacccaaabaaacaaabbcaa",
+  "afId": "782ec5f3eaf25320972838ad5f66be0cbff5ae62fb57169ccb89eb276d0213e8"
+ }
+]

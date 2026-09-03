@@ -1,0 +1,34 @@
+[
+  {
+    "h": 4,
+    "dL": null,
+    "dA": null,
+    "dC": null,
+    "can_mem": 5,
+    "our_mem": 7
+  },
+  {
+    "h": 5,
+    "dL": null,
+    "dA": null,
+    "dC": null,
+    "can_mem": 7,
+    "our_mem": 9
+  },
+  {
+    "h": 6,
+    "dL": null,
+    "dA": null,
+    "dC": null,
+    "can_mem": 9,
+    "our_mem": 11
+  },
+  {
+    "h": 7,
+    "dL": null,
+    "dA": null,
+    "dC": null,
+    "can_mem": 11,
+    "our_mem": 13
+  }
+]

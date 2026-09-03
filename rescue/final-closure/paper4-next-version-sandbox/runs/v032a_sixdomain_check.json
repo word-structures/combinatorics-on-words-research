@@ -1,0 +1,74 @@
+{
+ "L40": {
+  "patterns": 34,
+  "families": 19,
+  "sizes": [
+   1,
+   20,
+   20,
+   39,
+   39,
+   40,
+   40,
+   210,
+   210,
+   210,
+   210,
+   342,
+   381,
+   399,
+   399,
+   400,
+   400,
+   420,
+   800
+  ]
+ },
+ "byL": [
+  {
+   "L": 2,
+   "patterns": 34,
+   "families": 9
+  },
+  {
+   "L": 3,
+   "patterns": 34,
+   "families": 15
+  },
+  {
+   "L": 4,
+   "patterns": 34,
+   "families": 19
+  },
+  {
+   "L": 5,
+   "patterns": 34,
+   "families": 19
+  },
+  {
+   "L": 6,
+   "patterns": 34,
+   "families": 19
+  },
+  {
+   "L": 7,
+   "patterns": 34,
+   "families": 19
+  },
+  {
+   "L": 8,
+   "patterns": 34,
+   "families": 19
+  },
+  {
+   "L": 12,
+   "patterns": 34,
+   "families": 19
+  },
+  {
+   "L": 40,
+   "patterns": 34,
+   "families": 19
+  }
+ ]
+}

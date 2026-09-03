@@ -1,0 +1,50 @@
+{
+  "h_values": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "total_profile_classes": 23,
+  "most_balanced_positive_count": 5,
+  "most_balanced_total": 6,
+  "other_negative_count": 15,
+  "other_total": 17,
+  "per_h_q_sum_residuals": {
+    "2": 0,
+    "3": 2.7755575615628914e-17,
+    "4": 8.326672684688674e-17,
+    "5": 1.1102230246251565e-16,
+    "6": 1.3877787807814457e-17,
+    "7": 1.0408340855860843e-16
+  },
+  "per_h_profile_counts": {
+    "2": 2,
+    "3": 3,
+    "4": 3,
+    "5": 4,
+    "6": 5,
+    "7": 6
+  },
+  "per_h_rho_a_monotonicity": {
+    "2": "STRICTLY_DECREASING",
+    "3": "STRICTLY_DECREASING",
+    "4": "NEITHER",
+    "5": "NEITHER",
+    "6": "STRICTLY_DECREASING",
+    "7": "STRICTLY_DECREASING"
+  },
+  "per_h_rho_C_monotonicity": {
+    "2": "STRICTLY_INCREASING",
+    "3": "STRICTLY_INCREASING",
+    "4": "NEITHER",
+    "5": "NEITHER",
+    "6": "STRICTLY_INCREASING",
+    "7": "STRICTLY_INCREASING"
+  },
+  "h8_run": false,
+  "h2_interaction_a": -0.011182654951873705,
+  "h2_nonadditivity_status": "STRONG_NONADDITIVE"
+}

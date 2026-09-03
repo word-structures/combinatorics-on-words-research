@@ -1,0 +1,61 @@
+BLOCK ASSEMBLY CANDIDATE H — EXACT GATE S/L/K CHECK
+NO D40. NO h=8. Gate T is NOT checked here.
+
+Gate S — prescribed length-40 Parikh roles
+  a: len=40, Parikh=(15, 14, 11), expected=(15, 14, 11)
+  b: len=40, Parikh=(11, 12, 17), expected=(11, 12, 17)
+  c: len=40, Parikh=(10, 14, 16), expected=(10, 14, 16)
+  d: len=40, Parikh=(12, 10, 18), expected=(12, 10, 18)
+  e: len=40, Parikh=(13, 16, 11), expected=(13, 16, 11)
+  f: len=40, Parikh=(19, 11, 10), expected=(19, 11, 10)
+Gate S: PASS
+
+Gate L1 — internal periods 2..5
+  a: PASS
+  b: PASS
+  c: PASS
+  d: PASS
+  e: PASS
+  f: PASS
+Gate L1: PASS
+
+Gate L2 — 14 allowed seams, periods 2..5
+  ac: PASS
+  ad: PASS
+  af: PASS
+  bc: PASS
+  bd: PASS
+  cb: PASS
+  ce: PASS
+  dc: PASS
+  df: PASS
+  ea: PASS
+  eb: PASS
+  fa: PASS
+  fb: PASS
+  fe: PASS
+Gate L2: PASS
+
+Gate K — incidence / kernel
+  M_H = [[15, 11, 10, 12, 13, 19], [14, 12, 14, 10, 16, 11], [11, 17, 16, 18, 11, 10]]
+  expected affine lift = [[15, 11, 10, 12, 13, 19], [14, 12, 14, 10, 16, 11], [11, 17, 16, 18, 11, 10]]
+  exact RREF(M_g3) == RREF(M_H): PASS
+Gate K: PASS
+
+SUMMARY
+  Gate S: PASS
+  Gate L: PASS
+  Gate K: PASS
+  Gate T: NOT YET CERTIFIED
+CANDIDATE_STATUS = S_L_K_CERTIFIED__T_OPEN
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 772, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/connection.py", line 37, in get_or_create_client
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/daemon.py", line 124, in start_daemon
+TimeoutError: Timed out waiting for artifact tool daemon socket. Set ARTIFACT_TOOL_RPC_DAEMON_STARTUP_TIMEOUT_S=<seconds> to increase the limit.
+
+EXIT_CODE=0

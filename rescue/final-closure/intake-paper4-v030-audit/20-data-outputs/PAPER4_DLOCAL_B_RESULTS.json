@@ -1,0 +1,75 @@
+[
+  {
+    "idx": 1,
+    "D": "abbbaaabccaaacccbcccacccbbaccbcccaaabbcc",
+    "status": "EXHAUSTED",
+    "B_count": 0,
+    "B": [],
+    "sec": 33.768
+  },
+  {
+    "idx": 2,
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "status": "EXHAUSTED",
+    "B_count": 2,
+    "B": [
+      "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+      "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa"
+    ],
+    "sec": 17.586
+  },
+  {
+    "idx": 3,
+    "D": "bcbbaaacabaaacccbcccacccbbaccbcccaaabbcc",
+    "status": "EXHAUSTED",
+    "B_count": 0,
+    "B": [],
+    "sec": 23.457
+  },
+  {
+    "idx": 4,
+    "D": "bcbbaacaabaaacccbcccacccbbaccbcccaaabbcc",
+    "status": "EXHAUSTED",
+    "B_count": 0,
+    "B": [],
+    "sec": 15.162
+  },
+  {
+    "idx": 5,
+    "D": "bcbbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "status": "EXHAUSTED",
+    "B_count": 0,
+    "B": [],
+    "sec": 5.988
+  },
+  {
+    "idx": 6,
+    "D": "cbbbaaacabaaacccbcccacccbbaccbcccaaabbcc",
+    "status": "EXHAUSTED",
+    "B_count": 1,
+    "B": [
+      "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac"
+    ],
+    "sec": 41.707
+  },
+  {
+    "idx": 7,
+    "D": "cbbbaacaabaaacccbcccacccbbaccbcccaaabbcc",
+    "status": "EXHAUSTED",
+    "B_count": 1,
+    "B": [
+      "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac"
+    ],
+    "sec": 42.384
+  },
+  {
+    "idx": 8,
+    "D": "cbbbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "status": "EXHAUSTED",
+    "B_count": 1,
+    "B": [
+      "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac"
+    ],
+    "sec": 36.665
+  }
+]

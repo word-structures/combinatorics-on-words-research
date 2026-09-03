@@ -1,0 +1,10 @@
+version v0.26: PASS
+abstract 9693: PASS
+4242 replay section: PASS
+87 dual replay section: PASS
+9693 ledger section: PASS
+4544 pool exhausted: PASS
+finite-zero still open: PASS
+global problem open: PASS
+novelty guarded: PASS
+OVERALL=PASS

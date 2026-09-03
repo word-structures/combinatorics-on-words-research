@@ -1,0 +1,65 @@
+id,section,claim,classification,independently_checked,evidence,note
+C01,3,Proposition 3.1 rank-one kernel preservation ker M'=ker M,PROVED,yes,proof read line by line; algebra correct,proof is complete and elementary
+C02,3,six length-40 profiles from M_g3 + 10*1^T,COMPUTATIONALLY VERIFIED,yes,all six columns reproduced exactly; L'=40,A(15|14|11) B(11|12|17) C(10|14|16) D(12|10|18) E(13|16|11) F(19|11|10)
+C03,3,M_H d = M_g3 d for equal-length macro differences,PROVED,yes,follows from 1^T d = 0,correct
+C04,2,Carpi rank condition forces commutatively bijective incidence; impossible for 6 vectors in Z^3,SOURCE MISMATCH,no,no theorem number or precise statement given,load-bearing claim attributed to Carpi without exact citation
+C05,4.1,K<=40 window meets at most three consecutive macro blocks; B_3 gate exact,PROVED,yes,length <= 80 = 2L spans <= 3 blocks,correct
+C06,4.2,long-period parent/template/ancestor gate,HYPOTHESIS,no,relies on external Rao-Rosenfeld framework,correctly flagged as separate fail-closed certificate
+C07,5,Theorem 5.1 finite subset-factor gate,PROVED,yes,proof read; correct,elementary infrastructure rather than a headline theorem
+C08,5,Corollary 5.2 half-period ceiling K <= floor(Lr/2),PROVED,yes,trivial,correct
+C09,5,AF/AEF/no-C factor-maximal covers and ceilings 60/100/340,COMPUTATIONALLY VERIFIED,partial,ceiling arithmetic reproduced; covers cited as independently regenerated,individual no-C ceilings 100/260/340 confirmed
+C10,5+15,ADEF_complete stage appears in architecture but no cover is given,PROOF GAP,yes,ADEF occurs twice; never in the cover table,architecture promises a stage whose finite cover is not supplied
+C11,6,support geometry / affine target separation,PROVED,yes,derivation correct,zero signature correctly declared legitimate
+C12,7,carry recurrence and delta = c1 - c0 in {-1|0|+1},PROVED,yes,verified from 0 <= i_j < L,correct
+C13,7+8.2,rational mechanical word / rotation reading,KNOWN,n/a,correctly disclaimed as classical,no novelty claimed
+C14,8,Theorem 8.1 six carry domains exhaustive,PROVED,yes,c0|c1 in {0|1} times q=0 or q>=1,verified by independent enumeration
+C15,8,34 physically realizable domain/role patterns,PROVED,yes,2+4+4+8+8+8=34 reproduced at every L tested,exact
+C16,8,exactly 19 support families for L>=5,COMPUTATIONALLY VERIFIED,yes,independently reproduced 19 at L=5|6|7|8|12|40,written proof of the 34->19 collapse is a sketch
+C17,8,Table 1 the nineteen closed cardinalities,COMPUTATIONALLY VERIFIED,yes,all 19 values matched exactly at L=40 as a multiset,no derivation of any cardinality appears in the manuscript
+C18,8,pairwise distinctness of the 19 families,PROOF GAP,yes,distinctness holds computationally,text argues via coefficient-shape spectra + cardinalities without exhibiting it
+C19,8.1,small-L family counts 9|15|19|19|19|19,COMPUTATIONALLY VERIFIED,yes,reproduced exactly for L=2..7,my first attempt gave 8|14|18 due to my own key collision; fixed
+C20,8.1,"at L=4 the count has reached 19",PROVED BUT WORDING TOO STRONG,yes,at L=4 Z_s is empty so the 19 classes are not the same 19,should say the quotient has 19 classes but a different family list
+C21,9,Proposition 9.1 ternary/binary/unary decomposition,PROVED,yes,derived independently in Report 13,correct
+C22,9,361 ternary / 419 binary / 380 unary; independent of E,COMPUTATIONALLY VERIFIED,yes,identical counts across all 69 frozen E,exact
+C23,9,endpoint reductions k=m and m=40,PROVED,yes,x(0)=0 and x(40) fixed,correct
+C24,9,13800 random A validation across 69 E,COMPUTATIONALLY VERIFIED,yes,0 mismatches,implementation check not proof
+C25,9.1,Lemma 9.2 depth-one suffix obstruction,PROVED,yes,proof correct; 0 violations in 469 E,sufficient only; correctly stated
+C26,9.1,7 of 24 frozen and 52 of 400 adversarial firings,FINITE-POPULATION RESULT,yes,reproduced,correctly labelled
+C27,9.2,canonical E nonemptiness is a selection effect,PROVED,yes,9/9 canonical E have a canonical A partner,correctly deflationary
+C28,10,every AFE window is an affine condition sum alpha_i X_i in T,PROVED BUT WORDING TOO STRONG,yes,703 of 3081 windows are arity-0 (empty support),degenerate empty-sum case is real and unmentioned in section 10
+C29,10,Theorem 10.1 path equivalence,PROVED,yes,matches solver closing-depth semantics exactly,verified against stage_bcd.stageDFS
+C30,11,Lemma 11.1 current Parikh insufficient,PROVED,yes,worked example recomputed correctly,illustrating constraint has half-period 1 and is not an AFE constraint
+C31,11,Theorem 11.2 frontier-state sufficiency,PROVED,yes,proof correct,no minimality claimed; correct
+C32,12.1,Lemma 12.1 first-hit set is prefix-free,PROVED,yes,correct,
+C33,12.1,Theorem 12.2 first-hit cylinder partition,PROVED,yes,correct,
+C34,12.1,cylinder cardinality multinomial formula,PROVED,yes,correct,
+C35,12.1,|W_h| = 40!/(19!11!10!) = 46305405961214400,COMPUTATIONALLY VERIFIED,yes,exact match,
+C36,12.1,Corollary 12.3 exact UNSAT mass identity,PROVED,yes,follows from the partition,
+C37,12.2,Theorem 12.4 weighted frontier-DAG identity Z + sum M_d = |W_h|,PROVED,yes,clean-room verified on 360 systems incl. 90 UNSAT,claims A B C F all hold
+C38,12.2,blocked child mass may be multiplied by state multiplicity N,PROVED,yes,valid because X_d is part of the frontier state,tight: fails if X_d were dropped from the state
+C39,12.2,"permits exact first-hit geometry without enumerating every prefix",FALSE (for the actual L=40 system),yes,|A_d| = d for 38 of 40 depths; multiplicity is 1 throughout,ternary family alone forces the frontier to be the whole prefix
+C40,12.3,A_surv = sum_{d=0}^{39} S_d = E[T],PROVED,yes,clean-room verified; holds under the stated T=n convention,convention must stay stated or the identity fails
+C41,12.3,hazard lambda_d definition,PROVED,yes,definitional,
+C42,12.3,N_eff(d) computable from quotient multiplicities (N w^2),PROVED,yes,clean-room verified against explicit prefix second moment,
+C43,12.4,quotient-DAG UNSAT certificate sound when Z=0,PROVED,yes,clean-room verified,soundness only; no minimality claimed
+C44,12.5,Proposition 12.4 translation-invariant pure-square mass,PROVED,yes,Vandermonde argument correct,NUMBERING COLLISION with Theorem 12.4
+C45,12.6,Corollary 12.5 union-bound existence certificate,PROVED,yes,standard union bound,converse correctly disclaimed
+C46,12.7,full-trie UNSAT certificate soundness,PROVED,yes,correct,
+C47,13,RX Q=5000: 75111 trials / 36 E / 137 AF-positive / 0 AFE / 17 E,FINITE-POPULATION RESULT,yes,matches afexRX2 + bcdRX manifests exactly,0 unresolved; 6 capped re-decided
+C48,13,H Q=5000: 31775 trials / 9 E / 263 AF-positive / 86 AFE / 44 joint / 34 P40,FINITE-POPULATION RESULT,yes,matches rx_vs_h_comparison.json exactly,
+C49,13,strata RX-5000-EQ 63->0 and H-5000-EQ 78->36->24,FINITE-POPULATION RESULT,yes,exact match,
+C50,13,strata RX-1000-EQ 45->0 and H-1000-EQ 40->19->0,FINITE-POPULATION RESULT,yes,exact match,
+C51,13,"bucket-gate DFS and stage DFS agree on all 263/263 H pairs",SOURCE MISMATCH,yes,Report 12 states the agreement is sat <=> AF_AND_AFE_EXISTS,the headline AFE_EXISTS number (86) has no stated two-solver validation
+C52,13.1,AFE existence is the first strong observed separation,FINITE-POPULATION RESULT,yes,supported by the verified counts,correctly not called an impossibility theorem
+C53,13.2,0/137 is finite evidence not an impossibility theorem,PROVED,n/a,correct epistemic framing,
+C54,14,static support / collision counts / extinction depth do not separate,FINITE-POPULATION RESULT,yes,Reports 10 and 12,
+C55,14,depth-37 corridor (0|3|0) has cylinder mass 1,COMPUTATIONALLY VERIFIED,yes,remaining (0|2|0) gives 2!/2! = 1,matches Report 12 RX_DEEPEST
+C56,15,architecture ends with "Gate T",PROOF GAP,yes,term occurs exactly once and is never defined,dangling reference
+C57,16,novelty positioning,NOVELTY_UNRESOLVED,n/a,consistent with the supplied literature audits,cutset/frontier formalism should also be explicitly disclaimed as generic
+C58,refs,Eyidogan-Goral-Tanisali Math. Comp. 2026 DOI 10.1090/mcom/4246,NEEDS VERIFICATION,no,project deep-research report cites arXiv:2605.20504,journal/volume/DOI not verified in sandbox
+C59,refs,Keranen The Mathematica Journal 11 (2010),NEEDS VERIFICATION,no,project audits refer to Keranen 2002/2003 and 2009,title/volume/year unconfirmed
+C60,refs,Keranen ICALP 1992 lacks volume and pages,NEEDS VERIFICATION,no,commonly LNCS 623 pp. 41-52,incomplete entry
+C61,refs,Currie-Rampersad JCTA 119 (2012) 942-948,NEEDS VERIFICATION,no,plausible; not verified against primary source,
+C62,refs,Fici-Puzynina Comp. Sci. Review 47 (2023) 100532,NEEDS VERIFICATION,no,plausible; not verified,
+C63,refs,Rao-Rosenfeld SIAM J. Discrete Math 32 (2018) 2381-2397,NEEDS VERIFICATION,no,plausible; not verified,
+C64,9+afe_csp,1238 unary windows collapse to 443 distinct (depth|target) pairs,COMPUTATIONALLY VERIFIED,yes,measured on a real (A|E) pair,manuscript never distinguishes window counts from effective constraint counts

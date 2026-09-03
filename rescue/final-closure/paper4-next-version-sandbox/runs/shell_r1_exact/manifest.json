@@ -1,0 +1,26 @@
+{
+ "runId": "shell_r1_exact",
+ "kind": "radius-1 profile-preserving shell, EXACT closure",
+ "gateVersion": "subset-cover-2026-08-28/h6/L40/AF=faf,K<=60;AEF=eafea+fafea,K<=100",
+ "domain": "E at profile-preserving Hamming distance 2 from any of the 9 historical E, deduplicated (4670), reduced by the SOUND necessary condition 'E abelian-square-free for K=2..20' to 35. For each E: FULL Parikh(15,14,11) A class and FULL Parikh(19,11,10) F class searched exhaustively.",
+ "candidates": 35,
+ "nodeCap": 400000000,
+ "codeSha": {
+  "gate": "387f469c14dfb063a56d10b178beaab3846eccd57f4ef0c50b9f6f60cfb60458",
+  "runner": "37057c05bc70c1b2459568eea4ca70b4a38afd0cce1d1af311b55ef41c3ca87d"
+ },
+ "host": "LAPTOP-0GD87QVT",
+ "startedUtc": "2026-08-28T06:55:57.344Z",
+ "status": "COMPLETED",
+ "finishedUtc": "2026-08-28T07:16:00.236Z",
+ "summary": {
+  "candidates": 35,
+  "productiveE": 6,
+  "totalHits": 44,
+  "notInCanonical39": 20,
+  "strictDisjoint": 0,
+  "anyCap": true,
+  "exhaustive": false,
+  "seconds": 1202.9
+ }
+}

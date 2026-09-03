@@ -1,0 +1,62 @@
+[
+ {
+  "A": "ccaaabaaacaaabbbccabbcbbbaaabbbccabbccca",
+  "F": "cbabbcccaaabaaacabbcbbbaaacaaabaaaccbaac"
+ },
+ {
+  "A": "ccaaabaaacaaabbbccabbcbbbaaabbbccabbccca",
+  "F": "cbabbcccaaabaacaabbcbbbaaacaaabaaaccbaac"
+ },
+ {
+  "A": "ccaaabaaacaaabbbcbbaccbbbabbbcbaaacbccca",
+  "F": "cbabbcccaaabacaaabbcbbbaaacaaabaaaccbaac"
+ },
+ {
+  "A": "ccaaabaaacaaabbbccabbcbbbaaabbbccabbccca",
+  "F": "cbabbcccaaabacaaabbcbbbaaacaaabaaaccbaac"
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccabcccaaac",
+  "F": "cbbabbbcaaabaacccbbaaacccaaabaaacaaabbca"
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccacbccaaac",
+  "F": "cbbabbbcaaabaacccbbaaacccaaabaaacaaabbca"
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccaccbcaaac",
+  "F": "cbbabbbcaaabaacccbbaaacccaaabaaacaaabbca"
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccacccbaaac",
+  "F": "cbbabbbcaaabaacccbbaaacccaaabaaacaaabbca"
+ },
+ {
+  "A": "ccaaabaaacaaabbbcbbaccbbbabbbcbaaacbccca",
+  "F": "cbbabcccaaabacaaabbcbbbaaacaaabaaaccbaac"
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccabcccaaac",
+  "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccacbccaaac",
+  "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccaccbcaaac",
+  "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+ },
+ {
+  "A": "abbbcccaaabaaacaaabbbcbbbabbbccacccbaaac",
+  "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+ },
+ {
+  "A": "bcccaaabaaacaaabbbcbbbabbbcccabcaaabbcac",
+  "F": "ccbcaaaccbbbaaacaabccaaabaaacaaabbbaacbb"
+ },
+ {
+  "A": "bcccaaabaaacaaabbbcbbbabbbcccbacaaabbcac",
+  "F": "ccbcaaaccbbbaaacaabccaaabaaacaaabbbaacbb"
+ }
+]

@@ -1,0 +1,59 @@
+{
+ "runId": "fresh_s20260828",
+ "kind": "freshF->completeAF",
+ "gateVersion": "subset-cover-2026-08-28/h6/L40/AF=faf,K<=60;AEF=eafea+fafea,K<=100",
+ "seed": 20260828,
+ "numFRequested": 4000,
+ "aNodeCapPerF": 20000000,
+ "profiles": {
+  "A": [
+   15,
+   14,
+   11
+  ],
+  "E": [
+   13,
+   16,
+   11
+  ],
+  "F": [
+   19,
+   11,
+   10
+  ]
+ },
+ "blockLength": 40,
+ "afCover": [
+  "faf"
+ ],
+ "afKmax": [
+  60
+ ],
+ "aefCover": [
+  "eafea",
+  "fafea"
+ ],
+ "aefKmax": [
+  100,
+  100
+ ],
+ "fGeneration": "seeded DFS over profile-(19,11,10) words, F itself abelian-square-free for all K<=20 (K<=|F|/2); letter order shuffled per node by seeded PRNG; restart on exhaustion with next PRNG state",
+ "aSearch": "exhaustive DFS over profile-(15,14,11) words with incremental pruning on F.A (squares ending at each new position, K<=60); full H(faf)=F.A.F verified at completion; per-F node cap 20000000",
+ "codeSha": {
+  "gate": "387f469c14dfb063a56d10b178beaab3846eccd57f4ef0c50b9f6f60cfb60458",
+  "runner": "537c0d379516ac0675407f866e3c78a8b7b402fda9c0296ec70f3b884fc5bf4c",
+  "persist": "1ffd17df484a31e73550864e88f21f5209f00488650e637cb42d5f6f342ef45a",
+  "rng": "1ac35246a6efd9ad94c509ae6dc117852740fc42316c8b3b2cc16d0b524f9895"
+ },
+ "host": "LAPTOP-0GD87QVT",
+ "startedUtc": "2026-08-28T04:25:33.056Z",
+ "status": "VOID_DEFECTIVE_SAMPLER",
+ "finishedUtc": "2026-08-28T04:25:47.321Z",
+ "summary": {
+  "fGenerated": 54,
+  "fDuplicates": 3946,
+  "fWithCappedASearch": 0,
+  "completeAfHits": 0
+ },
+ "defect": "rng.js was a mangled xorshift128+ on 32-bit values with a short period; F sampler produced only 54 distinct words from 4000 draws (3946 duplicates). Superseded by run fresh_v2_s20260828. Retained as a record; NOT evidence."
+}

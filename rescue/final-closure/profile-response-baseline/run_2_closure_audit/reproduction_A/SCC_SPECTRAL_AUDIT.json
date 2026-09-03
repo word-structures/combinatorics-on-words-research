@@ -1,0 +1,272 @@
+[
+  {
+    "h": 2,
+    "type": "old",
+    "scc_total": 1,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 3,
+    "second_lambda": 0,
+    "dominance_gap": 3
+  },
+  {
+    "h": 2,
+    "type": "new",
+    "scc_total": 1,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 2.451109537473891,
+    "second_lambda": 0,
+    "dominance_gap": 2.451109537473891
+  },
+  {
+    "h": 2,
+    "type": "prof",
+    "scc_total": 1,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 2.9196395658394185,
+    "second_lambda": 0,
+    "dominance_gap": 2.9196395658394185
+  },
+  {
+    "h": 2,
+    "type": "prof",
+    "scc_total": 1,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 2.5920527923861667,
+    "second_lambda": 0,
+    "dominance_gap": 2.5920527923861667
+  },
+  {
+    "h": 3,
+    "type": "old",
+    "scc_total": 1,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 2.4511095374738896,
+    "second_lambda": 0,
+    "dominance_gap": 2.4511095374738896
+  },
+  {
+    "h": 3,
+    "type": "new",
+    "scc_total": 1,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 2.2288029012865453,
+    "second_lambda": 0,
+    "dominance_gap": 2.2288029012865453
+  },
+  {
+    "h": 3,
+    "type": "prof",
+    "scc_total": 1,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 2.3880082070799613,
+    "second_lambda": 0,
+    "dominance_gap": 2.3880082070799613
+  },
+  {
+    "h": 3,
+    "type": "prof",
+    "scc_total": 1,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 2.31075801390575,
+    "second_lambda": 0,
+    "dominance_gap": 2.31075801390575
+  },
+  {
+    "h": 4,
+    "type": "old",
+    "scc_total": 1,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 2.228802901286545,
+    "second_lambda": 0,
+    "dominance_gap": 2.228802901286545
+  },
+  {
+    "h": 4,
+    "type": "new",
+    "scc_total": 1,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 2.066634965729252,
+    "second_lambda": 0,
+    "dominance_gap": 2.066634965729252
+  },
+  {
+    "h": 4,
+    "type": "prof",
+    "scc_total": 1,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 2.066634965729252,
+    "second_lambda": 0,
+    "dominance_gap": 2.066634965729252
+  },
+  {
+    "h": 5,
+    "type": "old",
+    "scc_total": 1,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 2.066634965729245,
+    "second_lambda": 0,
+    "dominance_gap": 2.066634965729245
+  },
+  {
+    "h": 5,
+    "type": "new",
+    "scc_total": 271,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 1.9441605457400755,
+    "second_lambda": 0,
+    "dominance_gap": 1.9441605457400755
+  },
+  {
+    "h": 5,
+    "type": "prof",
+    "scc_total": 1,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 2.0616859514975423,
+    "second_lambda": 0,
+    "dominance_gap": 2.0616859514975423
+  },
+  {
+    "h": 5,
+    "type": "prof",
+    "scc_total": 271,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 2.008720792992813,
+    "second_lambda": 0,
+    "dominance_gap": 2.008720792992813
+  },
+  {
+    "h": 5,
+    "type": "prof",
+    "scc_total": 1,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 2.017396359849339,
+    "second_lambda": 0,
+    "dominance_gap": 2.017396359849339
+  },
+  {
+    "h": 6,
+    "type": "old",
+    "scc_total": 613,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 1.9441605457401225,
+    "second_lambda": 0,
+    "dominance_gap": 1.9441605457401225
+  },
+  {
+    "h": 6,
+    "type": "new",
+    "scc_total": 943,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 1.8483339781843036,
+    "second_lambda": 0,
+    "dominance_gap": 1.8483339781843036
+  },
+  {
+    "h": 6,
+    "type": "prof",
+    "scc_total": 817,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 1.8710974961591025,
+    "second_lambda": 0,
+    "dominance_gap": 1.8710974961591025
+  },
+  {
+    "h": 6,
+    "type": "prof",
+    "scc_total": 613,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 1.9336177637441065,
+    "second_lambda": 0,
+    "dominance_gap": 1.9336177637441065
+  },
+  {
+    "h": 6,
+    "type": "prof",
+    "scc_total": 739,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 1.9393947338649942,
+    "second_lambda": 0,
+    "dominance_gap": 1.9393947338649942
+  },
+  {
+    "h": 7,
+    "type": "old",
+    "scc_total": 2959,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 1.8483339781842052,
+    "second_lambda": 0,
+    "dominance_gap": 1.8483339781842052
+  },
+  {
+    "h": 7,
+    "type": "new",
+    "scc_total": 4723,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 1.7776384757456016,
+    "second_lambda": 0,
+    "dominance_gap": 1.7776384757456016
+  },
+  {
+    "h": 7,
+    "type": "prof",
+    "scc_total": 3217,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 1.845293193986182,
+    "second_lambda": 0,
+    "dominance_gap": 1.845293193986182
+  },
+  {
+    "h": 7,
+    "type": "prof",
+    "scc_total": 4117,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 1.8228818572662981,
+    "second_lambda": 0,
+    "dominance_gap": 1.8228818572662981
+  },
+  {
+    "h": 7,
+    "type": "prof",
+    "scc_total": 3181,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 1.8110420298735337,
+    "second_lambda": 0,
+    "dominance_gap": 1.8110420298735337
+  },
+  {
+    "h": 7,
+    "type": "prof",
+    "scc_total": 2977,
+    "recurrent_scc_total": 1,
+    "dominant_scc_count": 1,
+    "max_lambda": 1.8482889041329609,
+    "second_lambda": 0,
+    "dominance_gap": 1.8482889041329609
+  }
+]

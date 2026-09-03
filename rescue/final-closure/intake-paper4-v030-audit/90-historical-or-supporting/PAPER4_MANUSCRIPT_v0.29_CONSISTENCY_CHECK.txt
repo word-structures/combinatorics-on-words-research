@@ -1,0 +1,15 @@
+version_v0.29=PASS
+abstract_38118=PASS
+fresh10_closure=PASS
+factorization_section=PASS
+aef_best2_section=PASS
+aef_rigidity_section=PASS
+aef_best2=PASS
+two_swap_counts=PASS
+38118_search_architecture=PASS
+first_abdef_trigger=PASS
+global_open=PASS
+novelty_guarded=PASS
+no_solved_claim=PASS
+OVERALL=PASS
+sha256=1b10ad7f527b82a4efd4d37c6eaed7e7e912e0dd13311198d9a0a1d28d8ff76a

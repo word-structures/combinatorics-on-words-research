@@ -1,0 +1,34 @@
+{
+ "status": "VOID_CONCURRENT_WRITERS",
+ "runId": "afexRX",
+ "voidedUtc": "2026-08-28",
+ "retained": true,
+ "deleted": false,
+ "reason": "Two rx_run.js processes ran concurrently and appended to the same JSONL files. An earlier `nohup ... &` launch started a process despite its output redirect failing, and a second process was later launched via the background task runner. Both wrote to runs/afexRX/.",
+ "evidence": {
+  "af_pairs_rows": 42647,
+  "distinct_eIndex_rank_keys": 22564,
+  "keys_written_more_than_once": 18170,
+  "af_positive_rows": 12,
+  "af_positive_distinct_keys": 9,
+  "concurrent_pids": [27196, 31268],
+  "pid_start_times": ["2026-08-28 18:54:44", "2026-08-28 18:56:47"]
+ },
+ "what_is_still_valid": [
+  "Each individual row's `nodes` field is a genuine measurement of afExists for that (E,A); duplication does not corrupt individual measurements.",
+  "capped.jsonl is correct and demonstrates the preregistered fail-closed rule working: eIndex 12 rank 66 hit the 5e6 cap and the automatic 2e9 recheck resolved it AF-negative in 6,483,407 nodes.",
+  "Per-E mean node costs extracted from this run were used only as a cost model, never as a result."
+ ],
+ "what_is_NOT_valid": [
+  "All counts: trials, afPositive, per-E totals. Duplicated and partial.",
+  "All timings in afexRX.stdout: the log interleaves two processes with different start times, so elapsed figures are meaningless."
+ ],
+ "second_defect_found": {
+  "issue": "persist.js Appender calls fs.fsyncSync after every record. rx_run.js wrote one record per trial (~75k fsyncs), where Report 7's af_exists_run.js persisted only AF-positive rows (202 and 58). Per-record fsync, compounded by two processes contending on the same files, dominated runtime: ~640 ms/trial observed against ~45 ms/trial expected from node counts.",
+  "fix": "Re-run as a single process with an exclusive lock, persisting AF-positive and capped rows with fsync (few) and the per-trial audit log through a buffered stream flushed at each E boundary."
+ },
+ "superseded_by": "afexRX2",
+ "preregistration": "PREREGISTRATION_EXPOSURE_MATCHED_R_2026-08-28.md",
+ "preregistration_sha256": "bca2780f881ac23c9057d204f2e4cbc85f67945afd758bb9ef5abbe1e8d3463c",
+ "note": "No preregistered parameter changed. Quota Q=5000, AF cap 5e6, recheck cap 2e9, ordering rule and decision rules are all unchanged. Only the I/O implementation and process management changed."
+}

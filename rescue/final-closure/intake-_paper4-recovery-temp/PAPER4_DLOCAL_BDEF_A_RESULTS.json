@@ -1,0 +1,742 @@
+[
+  {
+    "k": 1,
+    "Eidx": 1,
+    "A": null,
+    "nodes": 3,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "bbbaaacaabbcccaccbbbabbbcbbbaaabbcaaaccc",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 2,
+    "A": null,
+    "nodes": 3,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "bbbaaacaabbccacccbbbabbbcbbbaaabbcaaaccc",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 3,
+    "A": null,
+    "nodes": 3,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "bbbaacaaabbcccaccbbbabbbcbbbaaabbcaaaccc",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 4,
+    "A": null,
+    "nodes": 3,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "bbbaacaaabbccacccbbbabbbcbbbaaabbcaaaccc",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 5,
+    "A": null,
+    "nodes": 46,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "bbbaaccbbbabbcccbacaaabbcbbbaaabbcaaaccc",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 6,
+    "A": null,
+    "nodes": 46,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "bbbaaccbbabbbcccbacaaabbcbbbaaabbcaaaccc",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 7,
+    "A": null,
+    "nodes": 28,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbaaaccbbbcabbcccaaaccbbaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 8,
+    "A": null,
+    "nodes": 48,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbacbbbcccacbbbaaaccbaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 9,
+    "A": null,
+    "nodes": 34,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbacbbbcccbbaacbccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 10,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbabbbcccbbaacccabaaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 11,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbabbbcccbbaacccaabaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 12,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbabbbcccbbaacccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 13,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbabbcccbbaacccabaaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 14,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbabbcccbbaacccaabaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 15,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbabbcccbbaacccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 16,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbbabcccbbaacccabaaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 17,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbbabcccbbaacccaabaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 18,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbbabcccbbaacccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 1,
+    "Eidx": 19,
+    "A": null,
+    "nodes": 3,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaca",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbaaacccaabbcccbbbabbbcbbbaaabbcaaaccc",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 1,
+    "A": null,
+    "nodes": 3,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "bbbaaacaabbcccaccbbbabbbcbbbaaabbcaaaccc",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 2,
+    "A": null,
+    "nodes": 3,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "bbbaaacaabbccacccbbbabbbcbbbaaabbcaaaccc",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 3,
+    "A": null,
+    "nodes": 3,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "bbbaacaaabbcccaccbbbabbbcbbbaaabbcaaaccc",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 4,
+    "A": null,
+    "nodes": 3,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "bbbaacaaabbccacccbbbabbbcbbbaaabbcaaaccc",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 5,
+    "A": null,
+    "nodes": 46,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "bbbaaccbbbabbcccbacaaabbcbbbaaabbcaaaccc",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 6,
+    "A": null,
+    "nodes": 46,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "bbbaaccbbabbbcccbacaaabbcbbbaaabbcaaaccc",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 7,
+    "A": null,
+    "nodes": 28,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbaaaccbbbcabbcccaaaccbbaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 8,
+    "A": null,
+    "nodes": 48,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbacbbbcccacbbbaaaccbaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 9,
+    "A": null,
+    "nodes": 34,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbacbbbcccbbaacbccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 10,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbabbbcccbbaacccabaaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 11,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbabbbcccbbaacccaabaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 12,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbabbbcccbbaacccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 13,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbabbcccbbaacccabaaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 14,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbabbcccbbaacccaabaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 15,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbabbcccbbaacccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 16,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbbabcccbbaacccabaaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 17,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbbabcccbbaacccaabaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 18,
+    "A": null,
+    "nodes": 21,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbbabcccbbaacccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 2,
+    "Eidx": 19,
+    "A": null,
+    "nodes": 3,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabcaa",
+    "D": "bbcbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbaaacccaabbcccbbbabbbcbbbaaabbcaaaccc",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 3,
+    "Eidx": 1,
+    "A": null,
+    "nodes": 126,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaaacabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbaaaccbbbcabbcccaaaccbbaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 3,
+    "Eidx": 2,
+    "A": null,
+    "nodes": 695,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaaacabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbacbbbcccacbbbaaaccbaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 3,
+    "Eidx": 3,
+    "A": null,
+    "nodes": 137,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaaacabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbacbbbcccbbaacbccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 3,
+    "Eidx": 4,
+    "A": null,
+    "nodes": 41,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaaacabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbabbbcccbbaacccabaaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 3,
+    "Eidx": 5,
+    "A": null,
+    "nodes": 41,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaaacabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbabbbcccbbaacccaabaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 3,
+    "Eidx": 6,
+    "A": null,
+    "nodes": 41,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaaacabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbabbbcccbbaacccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 3,
+    "Eidx": 7,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaaacabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbabbcccbbaacccabaaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 3,
+    "Eidx": 8,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaaacabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbabbcccbbaacccaabaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 3,
+    "Eidx": 9,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaaacabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbabbcccbbaacccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 3,
+    "Eidx": 10,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaaacabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbbabcccbbaacccabaaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 3,
+    "Eidx": 11,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaaacabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbbabcccbbaacccaabaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 3,
+    "Eidx": 12,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaaacabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbbabcccbbaacccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 4,
+    "Eidx": 1,
+    "A": null,
+    "nodes": 126,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaacaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbaaaccbbbcabbcccaaaccbbaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 4,
+    "Eidx": 2,
+    "A": null,
+    "nodes": 648,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaacaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbacbbbcccacbbbaaaccbaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 4,
+    "Eidx": 3,
+    "A": null,
+    "nodes": 137,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaacaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbacbbbcccbbaacbccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 4,
+    "Eidx": 4,
+    "A": null,
+    "nodes": 41,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaacaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbabbbcccbbaacccabaaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 4,
+    "Eidx": 5,
+    "A": null,
+    "nodes": 41,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaacaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbabbbcccbbaacccaabaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 4,
+    "Eidx": 6,
+    "A": null,
+    "nodes": 41,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaacaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbabbbcccbbaacccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 4,
+    "Eidx": 7,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaacaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbabbcccbbaacccabaaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 4,
+    "Eidx": 8,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaacaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbabbcccbbaacccaabaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 4,
+    "Eidx": 9,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaacaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbabbcccbbaacccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 4,
+    "Eidx": 10,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaacaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbbabcccbbaacccabaaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 4,
+    "Eidx": 11,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaacaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbbabcccbbaacccaabaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 4,
+    "Eidx": 12,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbaacaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbbabcccbbaacccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 5,
+    "Eidx": 1,
+    "A": null,
+    "nodes": 126,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbaaaccbbbcabbcccaaaccbbaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 5,
+    "Eidx": 2,
+    "A": null,
+    "nodes": 657,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbacbbbcccacbbbaaaccbaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 5,
+    "Eidx": 3,
+    "A": null,
+    "nodes": 137,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbacbbbcccbbaacbccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 5,
+    "Eidx": 4,
+    "A": null,
+    "nodes": 41,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbabbbcccbbaacccabaaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 5,
+    "Eidx": 5,
+    "A": null,
+    "nodes": 41,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbabbbcccbbaacccaabaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 5,
+    "Eidx": 6,
+    "A": null,
+    "nodes": 41,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbabbbcccbbaacccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 5,
+    "Eidx": 7,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbabbcccbbaacccabaaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 5,
+    "Eidx": 8,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbabbcccbbaacccaabaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 5,
+    "Eidx": 9,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbabbcccbbaacccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 5,
+    "Eidx": 10,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbbabcccbbaacccabaaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 5,
+    "Eidx": 11,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbbabcccbbaacccaabaacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  },
+  {
+    "k": 5,
+    "Eidx": 12,
+    "A": null,
+    "nodes": 40,
+    "B": "bbbaaacccabbcccbbbcabbcccacccbcccaaabaac",
+    "D": "cbbbacaaabaaacccbcccacccbbaccbcccaaabbcc",
+    "E": "abbbcbbbabcccbbaacccaaabacaaabbbacbbbcca",
+    "F": "cbbbabbcaaabaacccbbaaacccaaabaaacaaabbca"
+  }
+]

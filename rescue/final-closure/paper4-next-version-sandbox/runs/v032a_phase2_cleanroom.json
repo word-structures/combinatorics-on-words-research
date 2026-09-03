@@ -1,0 +1,11 @@
+{
+ "trials": 360,
+ "sat": 270,
+ "unsat": 90,
+ "failC": 0,
+ "failM": 0,
+ "failD": 0,
+ "failE": 0,
+ "failF": 0,
+ "samples": []
+}

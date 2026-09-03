@@ -1,0 +1,26 @@
+{
+ "runId": "dp_popH",
+ "kind": "full-eafea K=41..100 DP over real persisted populations",
+ "population": "POPULATION H: 9 historical E",
+ "eCount": 9,
+ "dpScope": "eafea only, K=41..100, 3600 windows; exact forbidden-prefix-state DAG over F",
+ "codeSha": {
+  "gate": "387f469c14dfb063a56d10b178beaab3846eccd57f4ef0c50b9f6f60cfb60458",
+  "dp": "05311d42511d3b5d5e19753d8c0064fe02ad396c84442b4fc4e61b8959d9ebe5",
+  "cleanroom": "98d3d986f1656c4bc356dfa26a0922990cab3684259a561e597f1c03d489b4a9",
+  "runner": "7acd4922b631263dbc9409b65440222765528dfd8acc2180dd84d8e494c1f982"
+ },
+ "host": "LAPTOP-0GD87QVT",
+ "startedUtc": "2026-08-28T08:46:12.552Z",
+ "status": "COMPLETED",
+ "finishedUtc": "2026-08-28T08:47:43.804Z",
+ "summary": {
+  "eCount": 9,
+  "totalAPairs": 111613,
+  "dpUnavoidable": 18969,
+  "dpEmpty": 18999,
+  "dpSurvives": 92614,
+  "fracKilledByDP": 0.170222,
+  "seconds": 91.2
+ }
+}

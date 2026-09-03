@@ -1,0 +1,59 @@
+{
+  "status": "EXACT_STRUCTURAL_PROTOTYPE__SOURCE_REALIZABILITY_NOT_YET_CHECKED",
+  "Q": [
+    [
+      0,
+      2,
+      -1,
+      -1,
+      0,
+      0
+    ],
+    [
+      1,
+      -1,
+      1,
+      0,
+      -1,
+      0
+    ],
+    [
+      1,
+      1,
+      -1,
+      0,
+      0,
+      -1
+    ]
+  ],
+  "factor_Q_ranges": [
+    [
+      -2,
+      2
+    ],
+    [
+      -2,
+      2
+    ],
+    [
+      -1,
+      1
+    ]
+  ],
+  "factor_difference_bounds": [
+    4,
+    4,
+    2
+  ],
+  "stack_det": 4980,
+  "boundary_options_per_slot": 67,
+  "boundary_triples": 300763,
+  "unique_boundary_corrections": 9418,
+  "nonempty_correction_classes": 677,
+  "boundary_triples_with_bounded_integer_solution": 21741,
+  "unique_parent_templates": 11023,
+  "unique_parent_boundary_letter_triples": 343,
+  "unique_d_vectors": 764,
+  "rao_rosenfeld_reported_at_most": 16214,
+  "elapsed_seconds": 12.375731
+}

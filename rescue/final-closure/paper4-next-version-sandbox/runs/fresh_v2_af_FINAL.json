@@ -1,0 +1,77 @@
+[
+ {
+  "A": "aacaaabbbaacbccaaacbbaaabbbacbbbccabbccc",
+  "F": "aaabacbbbaaabcaaaccbcccabbbaaacabccaaaba",
+  "afId": "0aa7a3785187be5faa51acfbfc45eee6705ef1c90707d44939f941bd642035a9"
+ },
+ {
+  "A": "bbbaaacccaaabaacaabbbcbbbabbbcccbacccaaa",
+  "F": "cbbabbbcbbaaacaaabacbcccaabccaaabaaacaaa",
+  "afId": "3085b3d6a5738ebedf03a3728f2d276e19ac2a3e40efc549da83a91fa6540080"
+ },
+ {
+  "A": "bbbaaacccaaabacaaabbbcbbbabbbcccbacccaaa",
+  "F": "cbbabbbcbbaaacaaabacbcccaabccaaabaaacaaa",
+  "afId": "a66ef98afc120e1a746e0a9d5836c15cd24293d13e725cf39dd8deea044e22b4"
+ },
+ {
+  "A": "ccabbbcaaacccbaccbbbabbbcbbbaaacaaabaaac",
+  "F": "cbacccaabbcabaaacabcbbbaacbbaaacaaabaaac",
+  "afId": "a5aa367cbb25b17f474ecdc20d9d68eb636f1130341162a30dc8e076fced218c"
+ },
+ {
+  "A": "baaacccbccaabbccabcbbbabbbccaaabbcaabaaa",
+  "F": "cccabbcbbbacaaabbbaaacccaaabaaacaaabbcaa",
+  "afId": "782ec5f3eaf25320972838ad5f66be0cbff5ae62fb57169ccb89eb276d0213e8"
+ },
+ {
+  "A": "caaabbbaaacccaabbbaaabbcbbabbbcccbacccaa",
+  "F": "acbcacbbabbbcbbaaacaaabaaacccabccaaabaaa",
+  "afId": "68b1f9073d4e946eb246b2a7b5b3d96377514f065a58c4f235222f6fd968f508"
+ },
+ {
+  "A": "caaabbbaaacccaabbbaaabbcbbbabbcccbacccaa",
+  "F": "acbcacbbabbbcbbaaacaaabaaacccabccaaabaaa",
+  "afId": "18ae46eabd5fdbebb758aa27cfe64eb35eb024e408b3e872b956c8b702a65d5e"
+ },
+ {
+  "A": "caaabbbaaacccaabbbaaabcbbbabbbcccbacccaa",
+  "F": "acbcacbbabbbcbbaaacaaabaaacccabccaaabaaa",
+  "afId": "b0ff6059bb588ac1284b4469ef7c19051271dbc1342430353cda1e1c10a52fb9"
+ },
+ {
+  "A": "aacccaaabbbacccaaacbaaabbbcbbbabbbcccbaa",
+  "F": "cccaaaccbbaaacbcacbbaaabbbaacbbaaacaaaba",
+  "afId": "1ff17a28a82ae690fad073d6da796e60436431903e0c40e503cbdaa6f60b5ea9"
+ },
+ {
+  "A": "aacccaaabbcccaabbbaaabcaabbcbbbabbcccbaa",
+  "F": "cccaaaccbbaaacbcacbbaaabbbaacbbaaacaaaba",
+  "afId": "e768748767a5e080affe99aa4e03c345f540e038d709c5891ee481e0e873446b"
+ },
+ {
+  "A": "bbbcbbbabccaabbcccbaacccaaabaaacaaabbbac",
+  "F": "bbbcccaabbbacaabccaaabaaacaaabbbaaacccaa",
+  "afId": "e5b1f651be6e3e04637a958d423930d36ad3ddd7874385fc8c9d7693e416ea50"
+ },
+ {
+  "A": "bbbaaacabcbbbabbbcccacbcccaaabacaaabbcaa",
+  "F": "bacccbbbabccaaabbbaacbbaaacaaabaaacccaaa",
+  "afId": "96dea6f5b803eb3a84a8cecf6bb6ad03bfd13b8141283cc32f82300b85e49a80"
+ },
+ {
+  "A": "bbbaaacabcbbbabbbcccacbcccaabaacaaabbcaa",
+  "F": "bacccbbbabccaaabbbaacbbaaacaaabaaacccaaa",
+  "afId": "7904a39eef38e376aaa67bfdc0e427029ce470a55d4f9d4575d6fdc34f5c2cc1"
+ },
+ {
+  "A": "ccaaabaacbbbabbcccbbaacbcccaaacbbaaabbba",
+  "F": "acbcccacbbaaacaaabaaacccaaabbcaabbbaaabb",
+  "afId": "05d2bfc103eabe0d101636605620b9f4543b1c89d705208572abba40a92c256f"
+ },
+ {
+  "A": "ccaaabcbbbabbbcccaccbbaaabbbaacaaabbccaa",
+  "F": "acbcccacbbaaacaaabaaacccaaabbcaabbbaaabb",
+  "afId": "100f24c7a13a64b6e881effc74e8e68ffc1c5d8604b7db871714747503489eba"
+ }
+]

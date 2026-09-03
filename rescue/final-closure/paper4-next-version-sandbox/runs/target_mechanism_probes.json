@@ -1,0 +1,1262 @@
+[
+ {
+  "label": "R_NEARMISS",
+  "E_sha": "933c0dee15dd32a3",
+  "A_sha": "8dfaaf7687802e0f",
+  "seconds": 4,
+  "targetGeometry": {
+   "activeSignatures": 1560,
+   "sharedSignatures": 1160,
+   "signaturesWithFAFAFEcollision": 842,
+   "totalCollidingTargetValues": 1233,
+   "meanUnionTargets": 1.9186,
+   "totalUnionTargets": 2993,
+   "meanFAFtargets": 1.4212,
+   "meanAFEtargets": 1.2878,
+   "singletonBuckets": 1183,
+   "multiTargetBuckets": 377,
+   "unionSizeHistogram": {
+    "1": 1183,
+    "2": 305,
+    "3": 3,
+    "4": 1,
+    "5": 4,
+    "6": 6,
+    "7": 5,
+    "8": 8,
+    "9": 1,
+    "10": 3,
+    "13": 1,
+    "15": 1,
+    "16": 1,
+    "17": 1,
+    "18": 1,
+    "19": 4,
+    "20": 1,
+    "23": 4,
+    "24": 5,
+    "25": 4,
+    "26": 6,
+    "27": 1,
+    "28": 5,
+    "29": 1,
+    "30": 2,
+    "31": 2,
+    "32": 1
+   }
+  },
+  "solve": {
+   "sat": false,
+   "witness": null,
+   "nodes": 154255,
+   "capped": false,
+   "deathDepth": 35,
+   "widths": [
+    1,
+    2,
+    5,
+    6,
+    10,
+    8,
+    12,
+    19,
+    33,
+    55,
+    84,
+    122,
+    161,
+    239,
+    353,
+    524,
+    727,
+    1011,
+    1255,
+    1556,
+    1777,
+    2343,
+    3091,
+    4224,
+    5782,
+    7384,
+    9618,
+    12499,
+    15164,
+    17410,
+    18126,
+    17377,
+    14429,
+    9783,
+    6342,
+    2723,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "rejectionsByDepth": [
+    1,
+    1,
+    9,
+    8,
+    22,
+    12,
+    17,
+    24,
+    44,
+    81,
+    130,
+    205,
+    244,
+    364,
+    535,
+    845,
+    1170,
+    1775,
+    2202,
+    2867,
+    2940,
+    3818,
+    4762,
+    6243,
+    8689,
+    10353,
+    13087,
+    17228,
+    20864,
+    23160,
+    22059,
+    20509,
+    15548,
+    9270,
+    6069,
+    2813,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "extinctionNodesByDepth": [
+    0,
+    0,
+    0,
+    0,
+    5,
+    0,
+    1,
+    0,
+    0,
+    3,
+    11,
+    12,
+    6,
+    21,
+    25,
+    64,
+    81,
+    154,
+    190,
+    283,
+    241,
+    395,
+    435,
+    596,
+    948,
+    1134,
+    1498,
+    2337,
+    3020,
+    4155,
+    5007,
+    5716,
+    5951,
+    4188,
+    3636,
+    2723,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "totalExtinctionNodes": 42836,
+   "rejectionFamily": {
+    "fafOnly": 7545,
+    "afeOnly": 1568,
+    "bothSameValue": 188855
+   },
+   "distinctKillerSignatures": 600,
+   "topKillers": [
+    {
+     "sig": "1*x26+-2*x28+1*x30",
+     "rejections": 8109,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x27+-2*x29+1*x31",
+     "rejections": 7623,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x25+-2*x27+1*x29",
+     "rejections": 7308,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x28+-2*x30+1*x32",
+     "rejections": 7262,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x24+-2*x26+1*x28",
+     "rejections": 6205,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x29+-2*x31+1*x33",
+     "rejections": 5211,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x23+-2*x25+1*x27",
+     "rejections": 4816,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x22+-2*x24+1*x26",
+     "rejections": 3878,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x30+-2*x32+1*x34",
+     "rejections": 3558,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x21+-2*x23+1*x25",
+     "rejections": 3052,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x24+-2*x27+1*x30",
+     "rejections": 2591,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x25+-2*x28+1*x31",
+     "rejections": 2582,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    }
+   ],
+   "topKillerSets": [
+    {
+     "killerSignatures": "1*x36",
+     "extinctionNodes": 1774
+    },
+    {
+     "killerSignatures": "1*x29+-2*x31+1*x33",
+     "extinctionNodes": 981
+    },
+    {
+     "killerSignatures": "1*x31+-2*x33+1*x35",
+     "extinctionNodes": 924
+    },
+    {
+     "killerSignatures": "1*x30+-2*x32+1*x34",
+     "extinctionNodes": 856
+    },
+    {
+     "killerSignatures": "1*x32+-2*x34+1*x36",
+     "extinctionNodes": 713
+    },
+    {
+     "killerSignatures": "1*x28+-2*x30+1*x32",
+     "extinctionNodes": 489
+    },
+    {
+     "killerSignatures": "1*x27+-2*x29+1*x31",
+     "extinctionNodes": 465
+    },
+    {
+     "killerSignatures": "1*x27+-2*x30+1*x33",
+     "extinctionNodes": 369
+    }
+   ],
+   "frontierSample": [
+    {
+     "depth": 20,
+     "prefix": "aaabaaacaaabbbaaacaa",
+     "kills": [
+      {
+       "c": "a",
+       "sig": "1*x3+-2*x12+1*x21",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 3,
+       "fafTargets": 1,
+       "afeTargets": 1
+      },
+      {
+       "c": "b",
+       "sig": "1*x5+-2*x13+1*x21",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 3,
+       "fafTargets": 1,
+       "afeTargets": 1
+      },
+      {
+       "c": "c",
+       "sig": "1*x17+-2*x19+1*x21",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 3,
+       "fafTargets": 1,
+       "afeTargets": 1
+      }
+     ]
+    },
+    {
+     "depth": 27,
+     "prefix": "aaabaaacaaabbbaaacccaaabaaa",
+     "kills": [
+      {
+       "c": "a",
+       "sig": "1*x24+-2*x26+1*x28",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 3,
+       "fafTargets": 1,
+       "afeTargets": 1
+      },
+      {
+       "c": "b",
+       "sig": "1*x22+-2*x25+1*x28",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 3,
+       "fafTargets": 1,
+       "afeTargets": 1
+      },
+      {
+       "c": "c",
+       "sig": "-2*x12+1*x28",
+       "value": "0,1,3",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 2,
+       "fafTargets": 1,
+       "afeTargets": 1
+      }
+     ]
+    },
+    {
+     "depth": 27,
+     "prefix": "aaabaaacaaabbbaaacccaaabacb",
+     "kills": [
+      {
+       "c": "a",
+       "sig": "1*x28",
+       "value": "17,6,5",
+       "inFAF": false,
+       "inAFE": true,
+       "arity": 1,
+       "fafTargets": 17,
+       "afeTargets": 21
+      },
+      {
+       "c": "b",
+       "sig": "1*x10+-2*x19+1*x28",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 3,
+       "fafTargets": 1,
+       "afeTargets": 1
+      },
+      {
+       "c": "c",
+       "sig": "1*x10+1*x28",
+       "value": "24,7,7",
+       "inFAF": true,
+       "inAFE": false,
+       "arity": 2,
+       "fafTargets": 1,
+       "afeTargets": 0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "label": "H_NEGATIVE",
+  "E_sha": "bbbbf8344484b388",
+  "A_sha": "3c206f1d7cff6e1d",
+  "seconds": 0.2,
+  "targetGeometry": {
+   "activeSignatures": 1560,
+   "sharedSignatures": 1160,
+   "signaturesWithFAFAFEcollision": 780,
+   "totalCollidingTargetValues": 1135,
+   "meanUnionTargets": 1.9801,
+   "totalUnionTargets": 3089,
+   "meanFAFtargets": 1.4256,
+   "meanAFEtargets": 1.2821,
+   "singletonBuckets": 1121,
+   "multiTargetBuckets": 439,
+   "unionSizeHistogram": {
+    "1": 1121,
+    "2": 363,
+    "3": 5,
+    "4": 5,
+    "5": 1,
+    "6": 6,
+    "7": 1,
+    "8": 6,
+    "9": 6,
+    "10": 3,
+    "12": 2,
+    "13": 2,
+    "14": 1,
+    "16": 1,
+    "17": 1,
+    "19": 1,
+    "20": 1,
+    "21": 4,
+    "22": 2,
+    "23": 1,
+    "24": 1,
+    "25": 5,
+    "26": 4,
+    "27": 6,
+    "28": 3,
+    "29": 2,
+    "30": 5,
+    "33": 1
+   }
+  },
+  "solve": {
+   "sat": false,
+   "witness": null,
+   "nodes": 7622,
+   "capped": false,
+   "deathDepth": 32,
+   "widths": [
+    1,
+    2,
+    3,
+    6,
+    9,
+    8,
+    10,
+    13,
+    24,
+    40,
+    76,
+    110,
+    143,
+    185,
+    175,
+    233,
+    243,
+    324,
+    361,
+    438,
+    555,
+    605,
+    725,
+    881,
+    738,
+    606,
+    362,
+    273,
+    223,
+    146,
+    60,
+    28,
+    16,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "rejectionsByDepth": [
+    1,
+    3,
+    3,
+    9,
+    19,
+    14,
+    17,
+    15,
+    32,
+    44,
+    118,
+    187,
+    244,
+    380,
+    292,
+    456,
+    405,
+    607,
+    640,
+    741,
+    1020,
+    1046,
+    1247,
+    1829,
+    1525,
+    1361,
+    720,
+    520,
+    462,
+    309,
+    84,
+    44,
+    32,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "extinctionNodesByDepth": [
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    1,
+    0,
+    2,
+    0,
+    7,
+    14,
+    21,
+    49,
+    16,
+    57,
+    29,
+    81,
+    62,
+    64,
+    107,
+    145,
+    118,
+    293,
+    246,
+    283,
+    132,
+    101,
+    99,
+    90,
+    36,
+    13,
+    16,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "totalExtinctionNodes": 2084,
+   "rejectionFamily": {
+    "fafOnly": 2897,
+    "afeOnly": 247,
+    "bothSameValue": 11282
+   },
+   "distinctKillerSignatures": 414,
+   "topKillers": [
+    {
+     "sig": "1*x20+-2*x22+1*x24",
+     "rejections": 510,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x24",
+     "rejections": 476,
+     "arity": 1,
+     "fafTargets": 21,
+     "afeTargets": 19
+    },
+    {
+     "sig": "1*x25",
+     "rejections": 459,
+     "arity": 1,
+     "fafTargets": 17,
+     "afeTargets": 18
+    },
+    {
+     "sig": "1*x21+-2*x23+1*x25",
+     "rejections": 435,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x19+-2*x21+1*x23",
+     "rejections": 400,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x26",
+     "rejections": 367,
+     "arity": 1,
+     "fafTargets": 19,
+     "afeTargets": 17
+    },
+    {
+     "sig": "1*x18+-2*x20+1*x22",
+     "rejections": 346,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x17+-2*x19+1*x21",
+     "rejections": 331,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x22+-2*x24+1*x26",
+     "rejections": 291,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x16+-2*x18+1*x20",
+     "rejections": 258,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x23+-2*x25+1*x27",
+     "rejections": 249,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x15+-2*x17+1*x19",
+     "rejections": 222,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    }
+   ],
+   "topKillerSets": [
+    {
+     "killerSignatures": "1*x21+-2*x23+1*x25 && 1*x25 && 1*x25",
+     "extinctionNodes": 26
+    },
+    {
+     "killerSignatures": "1*x16+-2*x20+1*x24 && 1*x20+-2*x22+1*x24 && 1*x24",
+     "extinctionNodes": 23
+    },
+    {
+     "killerSignatures": "-2*x9+1*x24 && 1*x24 && 1*x4+-2*x24",
+     "extinctionNodes": 23
+    },
+    {
+     "killerSignatures": "1*x20+-2*x22+1*x24 && 1*x24 && 1*x4+-2*x24",
+     "extinctionNodes": 22
+    },
+    {
+     "killerSignatures": "1*x16+-2*x21+1*x26 && 1*x22+-2*x24+1*x26 && 1*x26",
+     "extinctionNodes": 21
+    },
+    {
+     "killerSignatures": "1*x14+-2*x19+1*x24 && 1*x20+-2*x22+1*x24 && 1*x24",
+     "extinctionNodes": 21
+    },
+    {
+     "killerSignatures": "1*x17+-2*x21+1*x25 && 1*x21+-2*x23+1*x25 && 1*x25",
+     "extinctionNodes": 18
+    },
+    {
+     "killerSignatures": "-2*x8+1*x23 && 1*x15+-2*x19+1*x23 && 1*x19+-2*x21+1*x23",
+     "extinctionNodes": 18
+    }
+   ],
+   "frontierSample": [
+    {
+     "depth": 8,
+     "prefix": "aaabbccc",
+     "kills": [
+      {
+       "c": "a",
+       "sig": "-2*x2+1*x9",
+       "value": "0,2,3",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 2,
+       "fafTargets": 1,
+       "afeTargets": 1
+      },
+      {
+       "c": "b",
+       "sig": "-2*x1+1*x9",
+       "value": "1,3,3",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 2,
+       "fafTargets": 1,
+       "afeTargets": 1
+      },
+      {
+       "c": "c",
+       "sig": "1*x5+-2*x7+1*x9",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 3,
+       "fafTargets": 1,
+       "afeTargets": 1
+      }
+     ]
+    },
+    {
+     "depth": 13,
+     "prefix": "aaaccbbbabbbc",
+     "kills": [
+      {
+       "c": "a",
+       "sig": "1*x4+-2*x9+1*x14",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 3,
+       "fafTargets": 1,
+       "afeTargets": 1
+      },
+      {
+       "c": "b",
+       "sig": "1*x14",
+       "value": "4,7,3",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 1,
+       "fafTargets": 20,
+       "afeTargets": 19
+      },
+      {
+       "c": "c",
+       "sig": "1*x2+-2*x8+1*x14",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 3,
+       "fafTargets": 1,
+       "afeTargets": 1
+      }
+     ]
+    },
+    {
+     "depth": 13,
+     "prefix": "aaaccbbbabbcb",
+     "kills": [
+      {
+       "c": "a",
+       "sig": "1*x4+-2*x9+1*x14",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 3,
+       "fafTargets": 1,
+       "afeTargets": 1
+      },
+      {
+       "c": "b",
+       "sig": "1*x14",
+       "value": "4,7,3",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 1,
+       "fafTargets": 20,
+       "afeTargets": 19
+      },
+      {
+       "c": "c",
+       "sig": "1*x10+-2*x12+1*x14",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 3,
+       "fafTargets": 1,
+       "afeTargets": 1
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "label": "H_POSITIVE",
+  "E_sha": "bbbbf8344484b388",
+  "A_sha": "77b6a08e535d6dd5",
+  "seconds": 0.1,
+  "targetGeometry": {
+   "activeSignatures": 1560,
+   "sharedSignatures": 1160,
+   "signaturesWithFAFAFEcollision": 788,
+   "totalCollidingTargetValues": 1133,
+   "meanUnionTargets": 1.9628,
+   "totalUnionTargets": 3062,
+   "meanFAFtargets": 1.4135,
+   "meanAFEtargets": 1.2756,
+   "singletonBuckets": 1127,
+   "multiTargetBuckets": 433,
+   "unionSizeHistogram": {
+    "1": 1127,
+    "2": 357,
+    "3": 4,
+    "4": 9,
+    "6": 2,
+    "7": 7,
+    "8": 4,
+    "9": 5,
+    "10": 3,
+    "11": 1,
+    "15": 1,
+    "17": 1,
+    "18": 1,
+    "20": 1,
+    "21": 5,
+    "22": 7,
+    "23": 5,
+    "24": 4,
+    "25": 3,
+    "26": 1,
+    "27": 2,
+    "28": 3,
+    "29": 2,
+    "30": 1,
+    "31": 3,
+    "34": 1
+   }
+  },
+  "solve": {
+   "sat": true,
+   "witness": "bcccaaaccbaaabbbaacccaaabaaacaaabbbaacbb",
+   "nodes": 2868,
+   "capped": false,
+   "deathDepth": null,
+   "widths": [
+    1,
+    1,
+    1,
+    3,
+    5,
+    6,
+    11,
+    13,
+    18,
+    23,
+    30,
+    38,
+    45,
+    44,
+    52,
+    62,
+    71,
+    78,
+    98,
+    103,
+    162,
+    169,
+    214,
+    271,
+    242,
+    261,
+    212,
+    187,
+    197,
+    153,
+    72,
+    9,
+    6,
+    3,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "rejectionsByDepth": [
+    1,
+    2,
+    0,
+    4,
+    7,
+    5,
+    18,
+    21,
+    31,
+    38,
+    50,
+    67,
+    89,
+    79,
+    93,
+    114,
+    133,
+    134,
+    191,
+    147,
+    314,
+    278,
+    342,
+    530,
+    413,
+    495,
+    353,
+    254,
+    334,
+    273,
+    105,
+    13,
+    9,
+    5,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "extinctionNodesByDepth": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    2,
+    3,
+    3,
+    3,
+    12,
+    4,
+    9,
+    14,
+    12,
+    14,
+    24,
+    8,
+    38,
+    15,
+    26,
+    87,
+    51,
+    93,
+    61,
+    34,
+    68,
+    82,
+    64,
+    3,
+    3,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "totalExtinctionNodes": 736,
+   "rejectionFamily": {
+    "fafOnly": 510,
+    "afeOnly": 34,
+    "bothSameValue": 4400
+   },
+   "distinctKillerSignatures": 312,
+   "topKillers": [
+    {
+     "sig": "1*x24",
+     "rejections": 162,
+     "arity": 1,
+     "fafTargets": 18,
+     "afeTargets": 17
+    },
+    {
+     "sig": "1*x22+-2*x24+1*x26",
+     "rejections": 153,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x21+-2*x23+1*x25",
+     "rejections": 142,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x20+-2*x22+1*x24",
+     "rejections": 127,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x30",
+     "rejections": 120,
+     "arity": 1,
+     "fafTargets": 19,
+     "afeTargets": 15
+    },
+    {
+     "sig": "1*x19+-2*x21+1*x23",
+     "rejections": 116,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x23+-2*x25+1*x27",
+     "rejections": 102,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x17+-2*x19+1*x21",
+     "rejections": 100,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x26",
+     "rejections": 94,
+     "arity": 1,
+     "fafTargets": 17,
+     "afeTargets": 15
+    },
+    {
+     "sig": "1*x29",
+     "rejections": 89,
+     "arity": 1,
+     "fafTargets": 17,
+     "afeTargets": 16
+    },
+    {
+     "sig": "1*x24+-2*x26+1*x28",
+     "rejections": 86,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    },
+    {
+     "sig": "1*x25+-2*x27+1*x29",
+     "rejections": 79,
+     "arity": 3,
+     "fafTargets": 1,
+     "afeTargets": 1
+    }
+   ],
+   "topKillerSets": [
+    {
+     "killerSignatures": "1*x26+-2*x28+1*x30 && 1*x30",
+     "extinctionNodes": 19
+    },
+    {
+     "killerSignatures": "1*x27+-2*x29+1*x31 && 1*x31",
+     "extinctionNodes": 17
+    },
+    {
+     "killerSignatures": "1*x24+-2*x27+1*x30 && 1*x30",
+     "extinctionNodes": 15
+    },
+    {
+     "killerSignatures": "1*x23+-2*x27+1*x31",
+     "extinctionNodes": 15
+    },
+    {
+     "killerSignatures": "1*x31",
+     "extinctionNodes": 14
+    },
+    {
+     "killerSignatures": "1*x17+-2*x23+1*x29 && 1*x19+-2*x24+1*x29 && 1*x29",
+     "extinctionNodes": 12
+    },
+    {
+     "killerSignatures": "1*x21+-2*x23+1*x25 && 1*x9+-2*x17+1*x25",
+     "extinctionNodes": 11
+    },
+    {
+     "killerSignatures": "1*x23+-2*x27+1*x31 && 1*x27+-2*x29+1*x31",
+     "extinctionNodes": 11
+    }
+   ],
+   "frontierSample": [
+    {
+     "depth": 9,
+     "prefix": "bcaaabaaa",
+     "kills": [
+      {
+       "c": "a",
+       "sig": "1*x6+-2*x8+1*x10",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 3,
+       "fafTargets": 1,
+       "afeTargets": 1
+      },
+      {
+       "c": "b",
+       "sig": "1*x4+-2*x7+1*x10",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 3,
+       "fafTargets": 1,
+       "afeTargets": 1
+      },
+      {
+       "c": "c",
+       "sig": "-2*x5+1*x10",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 2,
+       "fafTargets": 1,
+       "afeTargets": 1
+      }
+     ]
+    },
+    {
+     "depth": 10,
+     "prefix": "bcaaabaacb",
+     "kills": [
+      {
+       "c": "a",
+       "sig": "1*x1+-2*x6+1*x11",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 3,
+       "fafTargets": 1,
+       "afeTargets": 1
+      },
+      {
+       "c": "b",
+       "sig": "-2*x4+1*x11",
+       "value": "1,2,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 2,
+       "fafTargets": 1,
+       "afeTargets": 1
+      },
+      {
+       "c": "c",
+       "sig": "1*x11",
+       "value": "5,3,3",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 1,
+       "fafTargets": 17,
+       "afeTargets": 17
+      }
+     ]
+    },
+    {
+     "depth": 16,
+     "prefix": "bcaaabaacccaabaa",
+     "kills": [
+      {
+       "c": "a",
+       "sig": "1*x1+-2*x9+1*x17",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 3,
+       "fafTargets": 1,
+       "afeTargets": 1
+      },
+      {
+       "c": "b",
+       "sig": "1*x13+-2*x15+1*x17",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 3,
+       "fafTargets": 1,
+       "afeTargets": 1
+      },
+      {
+       "c": "c",
+       "sig": "1*x3+-2*x10+1*x17",
+       "value": "0,0,0",
+       "inFAF": true,
+       "inAFE": true,
+       "arity": 3,
+       "fafTargets": 1,
+       "afeTargets": 1
+      }
+     ]
+    }
+   ]
+  }
+ }
+]

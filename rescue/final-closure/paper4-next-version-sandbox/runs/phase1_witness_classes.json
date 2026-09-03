@@ -1,0 +1,1577 @@
+[
+ {
+  "label": "CANONICAL39",
+  "id": "44daa453d4c0fdade0d705e9b320bff24bda079513ac9f2782efad0d2464e282",
+  "cover": "eafea",
+  "s": 21,
+  "K": 44,
+  "r": 4,
+  "roles": "eaf",
+  "offsets": [
+   21,
+   25,
+   29
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e21|a25|f29|M=2,-2,0",
+  "halfParikh": [
+   18,
+   14,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "0a631d88744ea99fb9ec84c01f9e2a7df4e1b4ee1d36fa09df65cefdd3c7401d",
+  "cover": "eafea",
+  "s": 24,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   24,
+   26,
+   28
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e24|a26|f28|M=2,-2,0",
+  "halfParikh": [
+   16,
+   14,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "1956385f65c658bc0ae70b484ab939fd95881caef116698b0534bf004bb54592",
+  "cover": "eafea",
+  "s": 24,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   24,
+   26,
+   28
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e24|a26|f28|M=2,-2,0",
+  "halfParikh": [
+   16,
+   14,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "7d6e4c442f333f9cb6a33eac2512d520c3e8d40fb84a97a0963fabc7eb6a694f",
+  "cover": "eafea",
+  "s": 21,
+  "K": 44,
+  "r": 4,
+  "roles": "eaf",
+  "offsets": [
+   21,
+   25,
+   29
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e21|a25|f29|M=2,-2,0",
+  "halfParikh": [
+   18,
+   14,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "86938c6d02aa2c01b207e2f7b3cd423f6cf7989519e2a0b3115e4f60d8707b61",
+  "cover": "eafea",
+  "s": 24,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   24,
+   26,
+   28
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e24|a26|f28|M=2,-2,0",
+  "halfParikh": [
+   16,
+   14,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "05fc9f2cb4e9975c09ac8b00af3dac2147974bc0fec10c9d9f133232549b6068",
+  "cover": "eafea",
+  "s": 24,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   24,
+   26,
+   28
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e24|a26|f28|M=2,-2,0",
+  "halfParikh": [
+   16,
+   14,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "087410b12b4bd3875aadb608b06228e1f49d9a930e2343c654b4d6a404abf93e",
+  "cover": "eafea",
+  "s": 21,
+  "K": 44,
+  "r": 4,
+  "roles": "eaf",
+  "offsets": [
+   21,
+   25,
+   29
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e21|a25|f29|M=2,-2,0",
+  "halfParikh": [
+   18,
+   14,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "8ca890df3db8a638802fda0e7f8355d280884f68957f8001c59dfa4a6a749853",
+  "cover": "eafea",
+  "s": 26,
+  "K": 41,
+  "r": 1,
+  "roles": "eaf",
+  "offsets": [
+   26,
+   27,
+   28
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e26|a27|f28|M=2,-2,0",
+  "halfParikh": [
+   16,
+   13,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "4f538ab0d3908b67cc09c2dcfb0581cc86148010924e30cfbc2eaadac0eb9c3d",
+  "cover": "eafea",
+  "s": 26,
+  "K": 41,
+  "r": 1,
+  "roles": "eaf",
+  "offsets": [
+   26,
+   27,
+   28
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e26|a27|f28|M=2,-2,0",
+  "halfParikh": [
+   16,
+   13,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "eedab03774bc02895d29cee48299bf2f26dca0bd0c683a584c5fa82bfcd221da",
+  "cover": "eafea",
+  "s": 21,
+  "K": 44,
+  "r": 4,
+  "roles": "eaf",
+  "offsets": [
+   21,
+   25,
+   29
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e21|a25|f29|M=2,-2,0",
+  "halfParikh": [
+   18,
+   14,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "822c7f84a0a5f9f22d0f16b634a57f6004729377ef225f6f692e6f734de9f120",
+  "cover": "eafea",
+  "s": 24,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   24,
+   26,
+   28
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e24|a26|f28|M=2,-2,0",
+  "halfParikh": [
+   16,
+   14,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "bfe4f4d0f73c0c79eca63c72569bb5750ae8469553f2e82c937462d1f0df30b8",
+  "cover": "eafea",
+  "s": 24,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   24,
+   26,
+   28
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e24|a26|f28|M=2,-2,0",
+  "halfParikh": [
+   16,
+   14,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "dffcc13bf23153e4763a605f4c37d8c498b931efb984f43670f208277178b3d4",
+  "cover": "eafea",
+  "s": 11,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   11,
+   13,
+   15
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e11|a13|f15|M=2,-2,0",
+  "halfParikh": [
+   15,
+   16,
+   11
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "c30102edf24a556dcd72f99349bcc4df8f5c56c953a7ca380e638c6d86131c0f",
+  "cover": "eafea",
+  "s": 11,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   11,
+   13,
+   15
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e11|a13|f15|M=2,-2,0",
+  "halfParikh": [
+   15,
+   16,
+   11
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "67b30452950af52ebe6dca57c11dd39690e33f4949e9d4f78204dc4a2abc96d5",
+  "cover": "eafea",
+  "s": 11,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   11,
+   13,
+   15
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e11|a13|f15|M=2,-2,0",
+  "halfParikh": [
+   15,
+   16,
+   11
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "2fcd791c628822f9dc255163bb2f7b5bfa26ea809df1db1aac78fab2f02a8ff7",
+  "cover": "eafea",
+  "s": 11,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   11,
+   13,
+   15
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e11|a13|f15|M=2,-2,0",
+  "halfParikh": [
+   15,
+   16,
+   11
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "aebd8c090738eb44e23390b303073c1e54b803955e1ea9be0a47fab334bf4efb",
+  "cover": "eafea",
+  "s": 11,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   11,
+   13,
+   15
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e11|a13|f15|M=2,-2,0",
+  "halfParikh": [
+   15,
+   16,
+   11
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "291fc1b973a28ec982fed18a424ece8d9dadc5dbcd5d0a6356f03af215e1012a",
+  "cover": "eafea",
+  "s": 11,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   11,
+   13,
+   15
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e11|a13|f15|M=2,-2,0",
+  "halfParikh": [
+   15,
+   16,
+   11
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "cc170d3eac36638cde133169b3bdf11577abafe0820bb72e4efa8f4037193850",
+  "cover": "eafea",
+  "s": 11,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   11,
+   13,
+   15
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e11|a13|f15|M=2,-2,0",
+  "halfParikh": [
+   15,
+   16,
+   11
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "fc85a7161f9a36a8ade318dc2a5979dfe44f5c79ec1c50655754debfd2f6e78c",
+  "cover": "eafea",
+  "s": 11,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   11,
+   13,
+   15
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e11|a13|f15|M=2,-2,0",
+  "halfParikh": [
+   15,
+   16,
+   11
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "d2e6d76afe4451e522540507f1e0f789935cffda138895423bd34430bc412668",
+  "cover": "eafea",
+  "s": 21,
+  "K": 44,
+  "r": 4,
+  "roles": "eaf",
+  "offsets": [
+   21,
+   25,
+   29
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e21|a25|f29|M=2,-2,0",
+  "halfParikh": [
+   18,
+   14,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "4cd3385d11f05ce8a62e411dd131afc08a3247454feee538ab629e4df3b38fb8",
+  "cover": "eafea",
+  "s": 26,
+  "K": 41,
+  "r": 1,
+  "roles": "eaf",
+  "offsets": [
+   26,
+   27,
+   28
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e26|a27|f28|M=2,-2,0",
+  "halfParikh": [
+   16,
+   13,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "be6ce4b2b7257b65d8c3cd1b6fa6e518f2bc200b755e13e557475f3e2a5e1841",
+  "cover": "eafea",
+  "s": 26,
+  "K": 41,
+  "r": 1,
+  "roles": "eaf",
+  "offsets": [
+   26,
+   27,
+   28
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e26|a27|f28|M=2,-2,0",
+  "halfParikh": [
+   16,
+   13,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "ebb4a66785bf6718630c2fcefe3cfe280d1dd7de04a3c0d084b84c28cb43eb9f",
+  "cover": "eafea",
+  "s": 11,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   11,
+   13,
+   15
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e11|a13|f15|M=2,-2,0",
+  "halfParikh": [
+   15,
+   16,
+   11
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "8df6779a8136c151835c8eef1c1a194249d871c47e38a9159fccf49a7925b750",
+  "cover": "eafea",
+  "s": 11,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   11,
+   13,
+   15
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e11|a13|f15|M=2,-2,0",
+  "halfParikh": [
+   15,
+   16,
+   11
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "bec36c697b4f43303dae91352a7ad55a9cfd43cfcdd765e2ab16bf8426857c41",
+  "cover": "eafea",
+  "s": 11,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   11,
+   13,
+   15
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e11|a13|f15|M=2,-2,0",
+  "halfParikh": [
+   15,
+   16,
+   11
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "0944f15774cbedd5458b3d8cab8b6be7a102c4da2bcbe96ca182004e4322b606",
+  "cover": "eafea",
+  "s": 11,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   11,
+   13,
+   15
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e11|a13|f15|M=2,-2,0",
+  "halfParikh": [
+   15,
+   16,
+   11
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "94c522eeb7df15ca8278039ac7fbd21e276ef8fb68692f7daacf849e43597313",
+  "cover": "eafea",
+  "s": 11,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   11,
+   13,
+   15
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e11|a13|f15|M=2,-2,0",
+  "halfParikh": [
+   15,
+   16,
+   11
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "c11bd490ddea5294ba2e1726ffa0f5ff3277a7aa472eeb0025b14139b05ddacb",
+  "cover": "eafea",
+  "s": 11,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   11,
+   13,
+   15
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e11|a13|f15|M=2,-2,0",
+  "halfParikh": [
+   15,
+   16,
+   11
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "d554e6b965b49b862f6e4c43259b17d399de917a0d017b3f4d73fdf8e881b89a",
+  "cover": "eafea",
+  "s": 11,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   11,
+   13,
+   15
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e11|a13|f15|M=2,-2,0",
+  "halfParikh": [
+   15,
+   16,
+   11
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "78b93e2ca68bc0a743616f2e71f573b18f9ce70ec9db3791134e492acef3d44f",
+  "cover": "eafea",
+  "s": 11,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   11,
+   13,
+   15
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e11|a13|f15|M=2,-2,0",
+  "halfParikh": [
+   15,
+   16,
+   11
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "600fd08b5b17721cfb917f19e59a2d80fbd3e478d062a9943479fb235f06462e",
+  "cover": "eafea",
+  "s": 7,
+  "K": 45,
+  "r": 5,
+  "roles": "eaf",
+  "offsets": [
+   7,
+   12,
+   17
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e7|a12|f17|M=2,-2,0",
+  "halfParikh": [
+   16,
+   16,
+   13
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "ffb1b2bfdd4e92b82a3bf9f9f1a4018f79aa0a877f5e014984d4e5d2a4a84305",
+  "cover": "eafea",
+  "s": 7,
+  "K": 45,
+  "r": 5,
+  "roles": "eaf",
+  "offsets": [
+   7,
+   12,
+   17
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e7|a12|f17|M=2,-2,0",
+  "halfParikh": [
+   16,
+   16,
+   13
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "458e998eb23849dae0097f380d8ce7936a459e5c8c821908d32689b01f29dfa0",
+  "cover": "eafea",
+  "s": 10,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   10,
+   12,
+   14
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e10|a12|f14|M=2,-2,0",
+  "halfParikh": [
+   14,
+   16,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "85b1e51a6771726854ac5c6c09fbde4258c33d42f6e0e88aaf600b60f70e240a",
+  "cover": "eafea",
+  "s": 10,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   10,
+   12,
+   14
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e10|a12|f14|M=2,-2,0",
+  "halfParikh": [
+   14,
+   16,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "b4e9c90de514f82f5605af8db7031e8522a836d02fad30b84448d695231411ec",
+  "cover": "eafea",
+  "s": 7,
+  "K": 45,
+  "r": 5,
+  "roles": "eaf",
+  "offsets": [
+   7,
+   12,
+   17
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e7|a12|f17|M=2,-2,0",
+  "halfParikh": [
+   16,
+   16,
+   13
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "d601136fb19b764b980cd96a19b1eae6c454e5d617b17641d4778d0656d8b357",
+  "cover": "eafea",
+  "s": 7,
+  "K": 45,
+  "r": 5,
+  "roles": "eaf",
+  "offsets": [
+   7,
+   12,
+   17
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e7|a12|f17|M=2,-2,0",
+  "halfParikh": [
+   16,
+   16,
+   13
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "b4450162328a83430f27fe3553fb3b9571cc2dfbab43c9187be2072127d5074c",
+  "cover": "eafea",
+  "s": 10,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   10,
+   12,
+   14
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e10|a12|f14|M=2,-2,0",
+  "halfParikh": [
+   14,
+   16,
+   12
+  ]
+ },
+ {
+  "label": "CANONICAL39",
+  "id": "3f57393fb82fed24d62403dec981339f8816a0a9a3b7504b3a2b7f88d7177fe3",
+  "cover": "eafea",
+  "s": 10,
+  "K": 42,
+  "r": 2,
+  "roles": "eaf",
+  "offsets": [
+   10,
+   12,
+   14
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e10|a12|f14|M=2,-2,0",
+  "halfParikh": [
+   14,
+   16,
+   12
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "01196145e519ddfdd326b390235d8173492a8ebbad3a0ffcd9230b2faa6eec1d",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "8e8728c6d1d57f7bead97b68feef297b95e0ba87ee89febd37d85d1750743811",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "600fd08b5b17721cfb917f19e59a2d80fbd3e478d062a9943479fb235f06462e",
+  "cover": "eafea",
+  "s": 7,
+  "K": 45,
+  "r": 5,
+  "roles": "eaf",
+  "offsets": [
+   7,
+   12,
+   17
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e7|a12|f17|M=2,-2,0",
+  "halfParikh": [
+   16,
+   16,
+   13
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "393cf45a0719bc83ea8149f676d9d1864c85b8ecaa7970d3803eded36e2a5403",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "936105f5013034910f5f2522fe8018ed047464f00d936c6dd215aaac16540a65",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "fb7aa605bb14dcfc12b24299e492bdbf9fac2656b0885c7b0ab479d732ec27b0",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "b8bd585f78b89cb9fcf673a9686d3d030980edeb52d4a7ee45147f4588c11d65",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "b4e9c90de514f82f5605af8db7031e8522a836d02fad30b84448d695231411ec",
+  "cover": "eafea",
+  "s": 7,
+  "K": 45,
+  "r": 5,
+  "roles": "eaf",
+  "offsets": [
+   7,
+   12,
+   17
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e7|a12|f17|M=2,-2,0",
+  "halfParikh": [
+   16,
+   16,
+   13
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "8888500c1e21cfe46d43ad3dbffd8686d42140f838b0bb446684da95c036162b",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "0e0579a3a0ce33c42d76b610de55d860c0dc00a9463a4721ed57c0a31551f572",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "a3f78835e8cb33beab1fc57e010af38416241d4e8d92fea68e7c49a4b6cc00a9",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "a8aecc56301f38d8c50f29156302227964b200d3d81bf61f7237f7bdde13317a",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "9bfaeb990d371cad576924514fbc06eae2ceceb249a1bd6f7342cae223d425c8",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "85c50f38a19e270bc65fb55946d992a25f9569c7afadf35bbfb88146f3e7fdad",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "ffb1b2bfdd4e92b82a3bf9f9f1a4018f79aa0a877f5e014984d4e5d2a4a84305",
+  "cover": "eafea",
+  "s": 7,
+  "K": 45,
+  "r": 5,
+  "roles": "eaf",
+  "offsets": [
+   7,
+   12,
+   17
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e7|a12|f17|M=2,-2,0",
+  "halfParikh": [
+   16,
+   16,
+   13
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "56c22afc0869890a8f70dd4876640b7ebed17abc5f393844a5539f83c0cc38ef",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "d1ab67982d353fd2d20016c4d3c64f917f91d85213ec5ea14cf365af92e1581d",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "c09386f37eb53baccf5310cbaa864c39871756bf6dfe6a29c1a8501b66055f76",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "6410d49a64702718c34155e59b73bd78fc5aadcd0eb4ff95a55fc40daaba4bc5",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "d601136fb19b764b980cd96a19b1eae6c454e5d617b17641d4778d0656d8b357",
+  "cover": "eafea",
+  "s": 7,
+  "K": 45,
+  "r": 5,
+  "roles": "eaf",
+  "offsets": [
+   7,
+   12,
+   17
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e7|a12|f17|M=2,-2,0",
+  "halfParikh": [
+   16,
+   16,
+   13
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "0d9fce3e497218139842843b1b0b58cc4c46d9522800e24eb9544e334df4116e",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "09fd2fe878bec1eaa8794349a7883fc5625a65b9f642b7836a3efdcf5ed73057",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "e4fdcdaf09cf8f191ea890c6b71c4c012c5aae3f6bfb0e58eaac1a2ee785e881",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ },
+ {
+  "label": "NEWBASINS24",
+  "id": "17b2e361e862b3473fa398d98cee59a1082d12a1d4ba0da16c63561d1174a7f0",
+  "cover": "eafea",
+  "s": 12,
+  "K": 47,
+  "r": 7,
+  "roles": "eaf",
+  "offsets": [
+   12,
+   19,
+   26
+  ],
+  "M": [
+   2,
+   -2,
+   0
+  ],
+  "key": "e12|a19|f26|M=2,-2,0",
+  "halfParikh": [
+   18,
+   15,
+   14
+  ]
+ }
+]

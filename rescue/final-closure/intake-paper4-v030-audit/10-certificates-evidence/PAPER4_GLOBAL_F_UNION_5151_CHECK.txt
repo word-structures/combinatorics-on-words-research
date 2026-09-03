@@ -1,0 +1,22 @@
+PAPER4 GLOBAL F UNION UPDATE
+base=3064
+outside_component_1: size=22 overlap_before=1 added=21
+outside_component_2: size=6 overlap_before=1 added=5
+outside_component_5: size=38 overlap_before=1 added=37
+outside_component_6: size=20 overlap_before=1 added=19
+outside_component_7: size=109 overlap_before=1 added=108
+outside_component_8: size=12 overlap_before=1 added=11
+outside_component_9: size=20 overlap_before=1 added=19
+outside_component_11: size=4 overlap_before=1 added=3
+outside_component_12: size=42 overlap_before=1 added=41
+outside_component_13: size=272 overlap_before=1 added=271
+outside_component_15: size=2 overlap_before=1 added=1
+outside_component_16: size=83 overlap_before=1 added=82
+outside_component_17: size=14 overlap_before=1 added=13
+outside_component_20: size=2 overlap_before=1 added=1
+outside_component_21: size=18 overlap_before=1 added=17
+outside_component_22: size=23 overlap_before=1 added=22
+outside_component_18: size=828 overlap_before=1 added=827
+outside_component_24: size=590 overlap_before=1 added=589
+final_union=5151
+STATUS=PASS

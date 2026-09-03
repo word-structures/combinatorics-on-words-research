@@ -1,0 +1,5 @@
+# Literature Search Queries
+
+- "Abelian square avoidance" variance OR "Parikh vector" variance (Google Scholar, arXiv)
+- "subshift of finite type" perturbation variance "forbidden word" (MathSciNet via Web)
+- "escape rate" "Markov measure" "cylinder holes" SFT (Semantic Scholar)

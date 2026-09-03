@@ -1,0 +1,7 @@
+version=PASS
+29712=PASS
+3403 closure=PASS
+ABDEF trigger=PASS
+global open=PASS
+novelty=PASS
+OVERALL=PASS

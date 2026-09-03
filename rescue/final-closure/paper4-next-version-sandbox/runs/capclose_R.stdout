@@ -1,0 +1,12 @@
+  idx 28983: lowNodes=5000001 -> AF-negative (nodes 9399553)
+  idx 59995: lowNodes=5000001 -> AF-negative (nodes 5213556)
+  idx 59997: lowNodes=5000001 -> AF-negative (nodes 5369236)
+{
+ "population": "R",
+ "scanned": 72454,
+ "cappedFound": 3,
+ "resolvedAFpositive": 0,
+ "resolvedAFnegative": 3,
+ "stillCapped": 0,
+ "seconds": 3758.4
+}
