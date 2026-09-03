@@ -96,7 +96,7 @@ irreversible rewrite.
 | Item | State |
 |---|---|
 | Route A length-7 exhaustion independent verification | carried over |
-| Route B (h8) algebraic exclusion verification | **BLOCKED** — H8_BLINDNESS_BREACH=NO |
+| Route B (h8) algebraic exclusion verification | **BLOCKED** — blocker restated 2026-09-03. This item concerns the *morphism* `h8` (8-letter alphabet, `MATH_CLAIMS.md` rows 88, 107), **not** the h=8 profile family whose holdout was breached; the two were conflated here. Needs its own scope decision |
 | Cut-and-Certify E1 -> E2 | ready; Gate A for its line |
 | Stage-B test structure and constraints (B22) | **PREREGISTERED / NOT EXECUTED** |
 | B16 golden-control pilot | ready |
