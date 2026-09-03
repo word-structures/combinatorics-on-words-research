@@ -25,7 +25,7 @@
 
 | Gate | Name | Status | Evidence |
 |---|---|---|---|
-| 0 | Discovery | **PASS** | scratch/structure-discovery-2026-08-29/ |
+| 0 | Discovery | **PASS** | `reproducibility/gate0/` — canonical since 2026-09-03; originally `scratch/structure-discovery-2026-08-29/` (untracked). See `reproducibility/gate0/README.md`, incl. a recorded stage-1 staleness found during promotion |
 | 1 | Claim Freeze | **PASS** | Claim 6 -> 34 -> 19 frozen in MATH_CLAIMS.md |
 | 2 | Proof Closure | **PASS** | PAPER4_SIX_DOMAIN_19_FAMILY_FULL_PROOF_2026-08-29.md (historical capture) |
 | 3 | Independent Kill | **PASS** | 19-family distinctness kill audit completed, zero failures |
