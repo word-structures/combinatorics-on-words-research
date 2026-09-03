@@ -1,0 +1,139 @@
+{
+  "Q": [
+    [
+      0,
+      -2,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      -1,
+      1,
+      -1,
+      0,
+      1,
+      0
+    ],
+    [
+      -1,
+      -1,
+      1,
+      0,
+      0,
+      1
+    ]
+  ],
+  "Q_Mh2_zero": true,
+  "bounds": [
+    4,
+    4,
+    2
+  ],
+  "fixed_g3": {
+    "raw_splits": 287496,
+    "unique_v": 9418,
+    "nonempty_v": 677,
+    "solution_witnesses": 23615,
+    "unique_parents": 9925
+  },
+  "roles": {
+    "a": {
+      "profile": [
+        5,
+        4,
+        1
+      ],
+      "literal_words": 1260,
+      "signatures": 541,
+      "signature_mismatches": 0,
+      "exact_parents": 15009,
+      "literal_parents": 15009,
+      "coarse_parents": 15477,
+      "missing": 0,
+      "spurious": 0,
+      "coarse_only": 468
+    },
+    "b": {
+      "profile": [
+        1,
+        2,
+        7
+      ],
+      "literal_words": 360,
+      "signatures": 541,
+      "signature_mismatches": 0,
+      "exact_parents": 13931,
+      "literal_parents": 13931,
+      "coarse_parents": 14393,
+      "missing": 0,
+      "spurious": 0,
+      "coarse_only": 462
+    },
+    "c": {
+      "profile": [
+        0,
+        4,
+        6
+      ],
+      "literal_words": 210,
+      "signatures": 541,
+      "signature_mismatches": 0,
+      "exact_parents": 13275,
+      "literal_parents": 13275,
+      "coarse_parents": 13466,
+      "missing": 0,
+      "spurious": 0,
+      "coarse_only": 191
+    },
+    "d": {
+      "profile": [
+        2,
+        0,
+        8
+      ],
+      "literal_words": 45,
+      "signatures": 541,
+      "signature_mismatches": 0,
+      "exact_parents": 12211,
+      "literal_parents": 12211,
+      "coarse_parents": 12356,
+      "missing": 0,
+      "spurious": 0,
+      "coarse_only": 145
+    },
+    "e": {
+      "profile": [
+        3,
+        6,
+        1
+      ],
+      "literal_words": 840,
+      "signatures": 541,
+      "signature_mismatches": 0,
+      "exact_parents": 14751,
+      "literal_parents": 14751,
+      "coarse_parents": 15211,
+      "missing": 0,
+      "spurious": 0,
+      "coarse_only": 460
+    },
+    "f": {
+      "profile": [
+        9,
+        1,
+        0
+      ],
+      "literal_words": 10,
+      "signatures": 541,
+      "signature_mismatches": 0,
+      "exact_parents": 11548,
+      "literal_parents": 11548,
+      "coarse_parents": 11641,
+      "missing": 0,
+      "spurious": 0,
+      "coarse_only": 93
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "source": "h6^6(a)",
+  "source_blocks": 729,
+  "scope": "RR bridge theorem test uses q>=1 / distinct source boundary occurrences",
+  "P0_fixed_completion": [
+    {
+      "L": 5,
+      "comparisons": 1100,
+      "mismatches": 0,
+      "first_mismatches": []
+    },
+    {
+      "L": 6,
+      "comparisons": 1560,
+      "mismatches": 0,
+      "first_mismatches": []
+    },
+    {
+      "L": 8,
+      "comparisons": 2720,
+      "mismatches": 0,
+      "first_mismatches": []
+    }
+  ],
+  "P0_q0_scope_control": [
+    {
+      "L": 5,
+      "cases": {
+        "all_same_occurrence": 10,
+        "same_01": 50,
+        "same_12": 50,
+        "three_distinct_occurrences": 40
+      },
+      "algebra_mismatches": {
+        "same_01": 50,
+        "same_12": 50
+      }
+    },
+    {
+      "L": 6,
+      "cases": {
+        "all_same_occurrence": 20,
+        "same_01": 80,
+        "same_12": 80,
+        "three_distinct_occurrences": 60
+      },
+      "algebra_mismatches": {
+        "same_01": 80,
+        "same_12": 80
+      }
+    },
+    {
+      "L": 8,
+      "cases": {
+        "all_same_occurrence": 60,
+        "same_01": 150,
+        "same_12": 150,
+        "three_distinct_occurrences": 120
+      },
+      "algebra_mismatches": {
+        "same_01": 150,
+        "same_12": 150
+      }
+    }
+  ],
+  "P1_P2_one_unresolved": [
+    {
+      "L": 5,
+      "unresolved_role": "a",
+      "profile": [
+        2,
+        1,
+        2
+      ],
+      "literal_words": 30,
+      "witnesses": 1650,
+      "literal_possible_witnesses": 250,
+      "parametric_possible_witnesses": 250,
+      "missing": 0,
+      "spurious": 0,
+      "excluded_by_parametric_sieve": 1400,
+      "excluded_pct": 84.84848484848484,
+      "unique_normalized_signatures": 35,
+      "literal_witness_word_candidate_pairs": 49500,
+      "reachable_precompute_word_evals": 1050,
+      "membership_queries": 1650,
+      "mean_unique_reachable_set_size": 6.485714285714286
+    },
+    {
+      "L": 6,
+      "unresolved_role": "a",
+      "profile": [
+        2,
+        2,
+        2
+      ],
+      "literal_words": 90,
+      "witnesses": 2340,
+      "literal_possible_witnesses": 461,
+      "parametric_possible_witnesses": 461,
+      "missing": 0,
+      "spurious": 0,
+      "excluded_by_parametric_sieve": 1879,
+      "excluded_pct": 80.2991452991453,
+      "unique_normalized_signatures": 45,
+      "literal_witness_word_candidate_pairs": 210600,
+      "reachable_precompute_word_evals": 4050,
+      "membership_queries": 2340,
+      "mean_unique_reachable_set_size": 8.777777777777779
+    },
+    {
+      "L": 8,
+      "unresolved_role": "a",
+      "profile": [
+        3,
+        2,
+        3
+      ],
+      "literal_words": 560,
+      "witnesses": 4080,
+      "literal_possible_witnesses": 838,
+      "parametric_possible_witnesses": 838,
+      "missing": 0,
+      "spurious": 0,
+      "excluded_by_parametric_sieve": 3242,
+      "excluded_pct": 79.46078431372548,
+      "unique_normalized_signatures": 80,
+      "literal_witness_word_candidate_pairs": 2284800,
+      "reachable_precompute_word_evals": 44800,
+      "membership_queries": 4080,
+      "mean_unique_reachable_set_size": 13.4
+    }
+  ],
+  "P3_two_unresolved": {
+    "L": 5,
+    "unresolved_roles": [
+      "a",
+      "b"
+    ],
+    "literal_words_each": {
+      "a": 30,
+      "b": 30
+    },
+    "cartesian_completions_per_witness": 900,
+    "witnesses": 660,
+    "literal_possible_witnesses": 130,
+    "minkowski_possible_witnesses": 130,
+    "missing": 0,
+    "spurious": 0
+  },
+  "P4_shared_word_control": {
+    "L": 5,
+    "profile": [
+      2,
+      1,
+      2
+    ],
+    "initial_words": 30,
+    "joint_constraints_selected": 4,
+    "literal_survivors": 3,
+    "parametric_shared_word_survivors": 3,
+    "solution_set_symmetric_difference": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "roles":  [
+                  "f",
+                  "d"
+              ],
+    "joint_constraints_eliminated":  438,
+    "accepted_verification_guided_pairs":  1,
+    "baseline_only":  0,
+    "guided_only":  0,
+    "cartesian_product_size":  450,
+    "accepted_literal_baseline_pairs":  1
+}

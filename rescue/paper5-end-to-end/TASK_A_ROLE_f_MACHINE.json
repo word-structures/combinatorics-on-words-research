@@ -1,0 +1,20 @@
+{
+  "baseline_prefix_nodes": 0,
+  "baseline_complete_words": 10,
+  "baseline_short_checks": 10,
+  "baseline_final_certificate_calls": 0,
+  "accepted": [],
+  "rejections": {
+    "aaaaaaaaab": "REJECTED_SHORT",
+    "aaaaaaaaba": "REJECTED_SHORT",
+    "aaaaaaabaa": "REJECTED_SHORT",
+    "aaaaaabaaa": "REJECTED_SHORT",
+    "aaaaabaaaa": "REJECTED_SHORT",
+    "aaaabaaaaa": "REJECTED_SHORT",
+    "aaabaaaaaa": "REJECTED_SHORT",
+    "aabaaaaaaa": "REJECTED_SHORT",
+    "abaaaaaaaa": "REJECTED_SHORT",
+    "baaaaaaaaa": "REJECTED_SHORT"
+  },
+  "baseline_wall_clock": 0.0009999275207519531
+}

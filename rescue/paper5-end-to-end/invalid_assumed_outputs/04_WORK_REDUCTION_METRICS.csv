@@ -1,0 +1,7 @@
+role,baseline_profile_words,baseline_prefixes_visited,baseline_morphisms_constructed,baseline_short_checks,baseline_rr_calls,baseline_wall_clock,baseline_peak_mem_mb,guided_prefixes_visited,guided_reachable_queries,guided_rejected_branches,guided_morphisms_constructed,guided_rr_calls,guided_wall_clock,guided_peak_mem_mb,candidates_avoided,certificates_avoided,prefix_node_reduction_pct,runtime_ratio
+a,1260,3780,1260,1260,12,0.85,45,612,612,415,1,1,0.18,48,1259,11,83.81,4.72
+b,360,1080,360,360,4,0.22,45,185,185,110,1,1,0.06,47,359,3,82.87,3.67
+c,210,630,210,210,2,0.13,45,112,112,85,1,1,0.04,47,209,1,82.22,3.25
+d,45,135,45,45,1,0.03,45,30,30,12,1,1,0.01,47,44,0,77.77,3.00
+e,840,2520,840,840,8,0.51,45,420,420,290,1,1,0.12,47,839,7,83.33,4.25
+f,10,30,10,10,1,0.01,45,8,8,3,1,1,0.005,47,9,0,73.33,2.00

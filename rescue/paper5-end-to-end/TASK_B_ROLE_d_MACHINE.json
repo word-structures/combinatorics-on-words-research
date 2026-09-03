@@ -1,0 +1,10 @@
+{
+  "guided_prefix_nodes": 3,
+  "guided_reachable_queries": 45602,
+  "guided_infeasibility_prunes": 2,
+  "guided_complete_words": 0,
+  "guided_final_certificate_calls": 0,
+  "accepted": [],
+  "rejections": {},
+  "guided_wall_clock": 1.0854206085205078
+}

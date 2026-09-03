@@ -1,0 +1,75 @@
+{
+  "valid": true,
+  "files": [
+    {
+      "filename": "partial_target_parent_cleanroom.py",
+      "expected_sha256": "b44be9fe0399fb05bd22540477dd67c8818ae65c652c397b38f6f538ee094435",
+      "actual_sha256": "b44be9fe0399fb05bd22540477dd67c8818ae65c652c397b38f6f538ee094435",
+      "match": true,
+      "size": 10536
+    },
+    {
+      "filename": "PARTIAL_TARGET_PARENT_CLEANROOM_RESULTS.json",
+      "expected_sha256": "c22930ec676a0d45285b5e631595e7bd2cccf01aa2c63fc955f667fc911698d6",
+      "actual_sha256": "c22930ec676a0d45285b5e631595e7bd2cccf01aa2c63fc955f667fc911698d6",
+      "match": true,
+      "size": 3776
+    },
+    {
+      "filename": "PARTIAL_TARGET_PARENT_CLEANROOM_REPORT_2026-08-29.md",
+      "expected_sha256": "ec7269eb18166150568f950b5a0b8c910e5e09fc5bd80459f1c26b09fa55a9d3",
+      "actual_sha256": "ec7269eb18166150568f950b5a0b8c910e5e09fc5bd80459f1c26b09fa55a9d3",
+      "match": true,
+      "size": 4855
+    },
+    {
+      "filename": "PARTIAL_TARGET_PARENT_THEOREM_v0.2_SCOPE_CORRECTED_2026-08-29.md",
+      "expected_sha256": "d85850b4fbf3ee4b0a4e82bb3de82965dfa6546822e497b7609d443300198b05",
+      "actual_sha256": "d85850b4fbf3ee4b0a4e82bb3de82965dfa6546822e497b7609d443300198b05",
+      "match": true,
+      "size": 2122
+    },
+    {
+      "filename": "FULL_RR_PARTIAL_TARGET_EXPERIMENT_REPORT_2026-08-29.md",
+      "expected_sha256": "d7ec167b3432728b17dcff48364795a1aeffbe2f9873045be19d3d87b59b3025",
+      "actual_sha256": "d7ec167b3432728b17dcff48364795a1aeffbe2f9873045be19d3d87b59b3025",
+      "match": true,
+      "size": 7273
+    },
+    {
+      "filename": "FULL_RR_PARTIAL_TARGET_RESULTS_2026-08-29.json",
+      "expected_sha256": "9fb485963b9d28fb05d4d34b2562c96a621908e9f625a84e09033103c681fcc1",
+      "actual_sha256": "9fb485963b9d28fb05d4d34b2562c96a621908e9f625a84e09033103c681fcc1",
+      "match": true,
+      "size": 7259
+    },
+    {
+      "filename": "REPRODUCED_COUNTS.json",
+      "expected_sha256": "9ff1a55efda6b389973608ccaa58eff49290b910b04ae4cc26d7b035ab5960d3",
+      "actual_sha256": "9ff1a55efda6b389973608ccaa58eff49290b910b04ae4cc26d7b035ab5960d3",
+      "match": true,
+      "size": 2384
+    },
+    {
+      "filename": "REPRODUCIBILITY_NOTE.md",
+      "expected_sha256": "0b23c3f1b95de59f3c5b36bc15f5d13c0ca47adb687abd727c510c295642a4fc",
+      "actual_sha256": "0b23c3f1b95de59f3c5b36bc15f5d13c0ca47adb687abd727c510c295642a4fc",
+      "match": true,
+      "size": 490
+    },
+    {
+      "filename": "REPRODUCTION_VALIDATION.txt",
+      "expected_sha256": "068c00eee9f3d528d532efb5c68b3d435dd5288c0b2d29b4d9db3945fe48b3f8",
+      "actual_sha256": "068c00eee9f3d528d532efb5c68b3d435dd5288c0b2d29b4d9db3945fe48b3f8",
+      "match": true,
+      "size": 83
+    },
+    {
+      "filename": "full_rr_partial_target_experiment.py",
+      "expected_sha256": "2e0b4b0c4d37a7a5c1742ae7570c62f8f4ba5c4011c7f65da4eacb0a256be2de",
+      "actual_sha256": "2e0b4b0c4d37a7a5c1742ae7570c62f8f4ba5c4011c7f65da4eacb0a256be2de",
+      "match": true,
+      "size": 6818
+    }
+  ]
+}

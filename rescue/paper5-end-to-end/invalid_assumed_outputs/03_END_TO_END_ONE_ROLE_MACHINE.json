@@ -1,0 +1,40 @@
+{
+    "roles":  {
+                  "a":  {
+                            "accepted_literal_baseline_words":  1,
+                            "accepted_verification_guided_words":  1,
+                            "guided_only":  0,
+                            "baseline_only":  0
+                        },
+                  "f":  {
+                            "accepted_literal_baseline_words":  1,
+                            "accepted_verification_guided_words":  1,
+                            "guided_only":  0,
+                            "baseline_only":  0
+                        },
+                  "b":  {
+                            "accepted_literal_baseline_words":  1,
+                            "accepted_verification_guided_words":  1,
+                            "guided_only":  0,
+                            "baseline_only":  0
+                        },
+                  "c":  {
+                            "accepted_literal_baseline_words":  1,
+                            "accepted_verification_guided_words":  1,
+                            "guided_only":  0,
+                            "baseline_only":  0
+                        },
+                  "e":  {
+                            "accepted_literal_baseline_words":  1,
+                            "accepted_verification_guided_words":  1,
+                            "guided_only":  0,
+                            "baseline_only":  0
+                        },
+                  "d":  {
+                            "accepted_literal_baseline_words":  1,
+                            "accepted_verification_guided_words":  1,
+                            "guided_only":  0,
+                            "baseline_only":  0
+                        }
+              }
+}
