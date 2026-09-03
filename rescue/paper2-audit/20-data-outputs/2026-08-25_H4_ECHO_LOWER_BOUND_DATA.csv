@@ -1,0 +1,16 @@
+quantity,value,role
+target_mass_singleton_start,0.6974644791189133,baseline target-conditioned
+target_mass_double_start,0.3025355208810862,baseline target-conditioned
+d2_lower_target_same_color,0.3424740576482585,continuation-exclusion lower bound
+d2_baseline_same_color,0.3146133215477813,baseline
+K2_lower,0.02786073610047718,difference
+K2_actual_diagnostic,0.07552688964382137,not used by bound
+d3_lower_target_same_color,0.36796997460557346,continuation-exclusion lower bound
+d3_baseline_same_color,0.33839384914979465,baseline
+K3_lower,0.029576125455778812,difference
+K3_actual_diagnostic,0.10013332542305459,not used by bound
+q_v,0.08797229660957216,baseline target probability
+anchored_negative_magnitude_lower,0.006737136828199846,(4 q/3)(K2_lower+K3_lower)
+pre_nonlocal_positive_margin,0.00900052651649684,earlier lag decomposition
+fraction_of_margin_explained_lower,0.7485269684891785,anchored lower / margin
+remaining_gap,0.002263389688296994,margin - anchored lower

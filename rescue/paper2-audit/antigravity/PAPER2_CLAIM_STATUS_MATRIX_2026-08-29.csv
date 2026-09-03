@@ -1,0 +1,7 @@
+Claim,Status,Classification
+"Continuation capacity asymptotic ratio Q_m -> P_ij",PROVED,KNOWN
+"Finite projective enclosure Q_m/R_m <= P_ij <= R_m Q_m",PROVED,PAPER 2 LEMMA
+"PEX-3 mechanism lower bounds selected placements",PROVED,PAPER 2 THEOREM
+"A""(0) <= C_rest - E_PEX",PROVED,PAPER 2 THEOREM
+"Dobrushin contraction bounds infinite delayed tail",PROVED,KNOWN
+"Time-domain tail bound and resolvent tail bound are identical",REFUTED,FALSE
