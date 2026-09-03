@@ -88,9 +88,18 @@ for (const { script, output, compare } of STAGES) {
     const G = new Set(gen), D = new Set(dag);
     const same = G.size === D.size && [...G].every(x => D.has(x));
     const stale = JSON.parse(fs.readFileSync(expected, 'utf8')).alphabet.length;
+    // The promoted active Stage-1 artifact must also match byte-for-byte.
+    const active = path.join(HERE, 'replayed', 'macro_alphabet.json');
+    const activeOk = fs.existsSync(active) && sha256(active) === sha256(produced);
+    if (!activeOk) {
+      console.log('  FAIL  ' + script + ' — replayed/macro_alphabet.json does not match this run');
+      failures++;
+      continue;
+    }
     if (same) {
       console.log('  OK    ' + script.padEnd(28) + '-> ' + G.size + ' blocks == transition_dag.json alphabet');
-      console.log('        (as-found macro_alphabet.json holds ' + stale + ' blocks and is KNOWN STALE — see README)');
+      console.log('        replayed/macro_alphabet.json reproduced byte-identically (authoritative Stage 1)');
+      console.log('        (as-found macro_alphabet.json holds ' + stale + ' blocks and is NOT authoritative — see README)');
     } else {
       console.log('  FAIL  ' + script + ' — replayed alphabet does not match the DAG alphabet');
       failures++;

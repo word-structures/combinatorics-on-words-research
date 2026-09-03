@@ -12,10 +12,23 @@ moved.**
 
 | Path | Role |
 |---|---|
-| `as-found/` | **Historical producer artifacts.** The three generator scripts and their three outputs, byte-identical to the originals. Not edited, not reformatted, not repaired |
-| `inputs/test_word_400.txt` | **Canonical copy of the external dependency** the producers read. Byte-identical to the original |
-| `replay_gate0.js` | **Canonical replay wrapper.** New file, not evidence |
+| `inputs/test_word_400.txt` | **INPUT.** Canonical copy of the external dependency the producers read. Byte-identical to the original |
+| `replayed/macro_alphabet.json` | **ACTIVE Stage-1 result** for this chain — 42 blocks, reproduced from the canonical input by the preserved producer |
+| `as-found/` | **HISTORICAL producer artifacts.** The three generator scripts and their three outputs, byte-identical to the originals. Not edited, not reformatted, not repaired. **`as-found/macro_alphabet.json` is stale for this chain — see below** |
+| `replay_gate0.js` | **Canonical replay wrapper.** New file, tooling, not evidence |
 | `SHA256SUMS.txt` | Hashes of everything above |
+
+### The three concepts, kept apart
+
+```
+INPUT                inputs/test_word_400.txt                         (400 letters)
+
+ACTIVE REPLAY CHAIN  replayed/macro_alphabet.json      42 blocks      <- authoritative Stage 1
+                       -> as-found/transition_dag.json  42 blocks
+                       -> as-found/paper4_compiled_system.json  42 profiles
+
+HISTORICAL           as-found/macro_alphabet.json      66 blocks      <- NOT authoritative here
+```
 
 The distinction matters: `as-found/` is evidence and must not be "cleaned up";
 `replay_gate0.js` is tooling and may be changed freely.
@@ -49,7 +62,7 @@ A pass means **packaging integrity**: the preserved producers, on the preserved
 input, still yield the preserved outputs. It is not new scientific evidence and
 does not re-derive the Paper 4 theorem — see `../README.md`, "Scientific Scope".
 
-## Stage 1 discrepancy — found by this packaging check, recorded not repaired
+## Stage-1 authority — which file governs, and which does not
 
 Replaying stage 1 exposed an inconsistency **inside the original evidence set**:
 
@@ -68,15 +81,33 @@ The conclusion supported by the evidence: **`as-found/macro_alphabet.json` is a
 stale artifact from a different, larger input**, while the two downstream
 outputs correspond to `test_word_400.txt` and reproduce byte-identically.
 
-It is preserved **unaltered** anyway, because an inconsistent artifact is
-evidence about how the work was done. `replay_gate0.js` therefore checks stage 1
-against the alphabet the DAG actually consumed, and prints the staleness every
-run rather than hiding it.
+**Resolved as follows — this is a settled authority question, not an open choice
+between 42 and 66:**
 
-**This does not adjudicate Gate 0's scientific status.** Gate 0 is *Discovery*;
-the `L ≥ 5` theorem is proved symbolically, not by this chain. Whether the stale
-file needs regeneration, or the discovery used a deliberately larger word, is an
-open question for the owner — recorded, not decided here.
+1. **`replayed/macro_alphabet.json` (42 blocks) is the active Stage-1 result** for
+   this Gate 0 chain. It is regenerated from `inputs/test_word_400.txt` by the
+   preserved producer, and its 42 blocks are **exactly** the alphabet that
+   `as-found/transition_dag.json` consumes. Reproduction is deterministic: repeated
+   runs give the identical file.
+2. **`as-found/macro_alphabet.json` (66 blocks) is preserved historical material and
+   is *not* authoritative for this chain.** It must **not** be substituted for the
+   42-block replay output in any future reproduction.
+3. **Keeping the stale file is deliberate forensic provenance**, not an unresolved
+   decision. An as-found inconsistency is evidence about how the work was done, and
+   deleting it would destroy that evidence.
+
+**What is *not* claimed.** The repository does not record which input produced the
+66-block file. It is a strict superset of the 42, which is *consistent with* a longer
+word, but no artifact here establishes that, and none is invented. Its origin is
+simply **unknown**.
+
+`replay_gate0.js` checks Stage 1 against both the DAG alphabet and
+`replayed/macro_alphabet.json`, and prints the staleness on every run rather than
+hiding it.
+
+**This does not adjudicate Gate 0's scientific status.** Gate 0 is *Discovery*; the
+`L ≥ 5` theorem is proved symbolically, not by this chain. Nothing here re-proves the
+Paper 4 theorem, and nothing here changes it.
 
 ## Provenance
 
@@ -101,6 +132,12 @@ Hashes, verified identical from the rescue ref to this directory:
 24989de287c8861ca51f6b8b7a1537f23b8eb9415252337761242d370f3870ce  as-found/compile_to_paper4_algebra.js
 a166af92c6780ccb774e107987569b2b4edf88bcb0c62ddb3e45fbc74942cdcd  as-found/paper4_compiled_system.json
 f1302159fbbe52eb056eb7e6c8c90de74a49846466fe34b5b770b8a652a10093  inputs/test_word_400.txt
+```
+
+Regenerated Stage-1 artifact (produced here, not preserved from the source):
+
+```
+37a68aeae3d46a4dfdd100e2a05b7ffa33a458d1a20fe45cd839ab328ba21ea5  replayed/macro_alphabet.json
 ```
 
 No third-party or copyrighted material is included, and no toolchain or

@@ -24,6 +24,30 @@ This directory contains the frozen replay and verification package for Paper 4.
   will fail on encoding alone — decode before diffing.
 * **`afe_263_run.js` reports a wall-clock `seconds` field** that necessarily differs
   between runs. Every other value is deterministic; compare on those.
+
+* **`afe_263_run.js` writes into `runs/`.** Running it overwrites
+  `runs/afe_263_crosscheck.json`, whose only volatile field is the same wall-clock
+  `seconds`. After a replay, `git status` will show that file modified; restore it
+  with `git restore` rather than committing the timing churn.
+
+### The two `afe_263_run` expected files
+
+`expected/` holds both `afe_263_run_output.txt` and `afe_263_run_output_NEW.txt`.
+The distinction is mechanically established, not guessed:
+
+* the two differ in **exactly one line** — `"seconds": 129.8` versus
+  `"seconds": 151.9`. Every scientific value is identical, including
+  `witnessFailures: 0`, `deadAFEinstances: 0`, `jointPositive: 44`, and the
+  `SUCCESS CONDITION (sec=86, agree=263, unresolved=0): true` line;
+* `PAPER4_REPRODUCIBILITY_MANIFEST_2026-08-29.json` names
+  `expectedfe_263_run_output.txt` as the `canonical_output`;
+* nothing in `checkers/`, `lib/` or the manifest references the `_NEW` file.
+
+So `_NEW` is a **second capture of the same run**, differing only in timing, and it
+is **not** an updated expectation. **The canonical expected output is
+`afe_263_run_output.txt`.** Both files are retained — a duplicate capture is
+harmless, and deleting evidence to tidy a directory is not a trade this project
+makes.
 * **Requirements:** Node.js (tested on v22.18).
 * **Expected outputs:** Compare the stdout of each command to the corresponding file in `expected/`.
 
