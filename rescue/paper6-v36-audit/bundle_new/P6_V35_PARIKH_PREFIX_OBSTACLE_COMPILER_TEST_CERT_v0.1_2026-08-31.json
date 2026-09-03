@@ -1,0 +1,97 @@
+{
+  "scalar": {
+    "pass": true,
+    "cases": [
+      {
+        "L": 2,
+        "trials": 50,
+        "pass": true
+      },
+      {
+        "L": 3,
+        "trials": 50,
+        "pass": true
+      },
+      {
+        "L": 4,
+        "trials": 50,
+        "pass": true
+      },
+      {
+        "L": 5,
+        "trials": 50,
+        "pass": true
+      },
+      {
+        "L": 6,
+        "trials": 50,
+        "pass": true
+      }
+    ]
+  },
+  "matrix_noncommutative": {
+    "pass": true,
+    "cases": [
+      {
+        "alph": "ab",
+        "L": 2,
+        "trials": 30,
+        "pass": true
+      },
+      {
+        "alph": "ab",
+        "L": 3,
+        "trials": 30,
+        "pass": true
+      },
+      {
+        "alph": "abc",
+        "L": 2,
+        "trials": 20,
+        "pass": true
+      },
+      {
+        "alph": "abc",
+        "L": 3,
+        "trials": 20,
+        "pass": true
+      },
+      {
+        "alph": "abc",
+        "L": 4,
+        "trials": 10,
+        "pass": true
+      }
+    ]
+  },
+  "selected_library_trie": {
+    "pass": true,
+    "cases": [
+      {
+        "name": "FULL_L4",
+        "blocks": 60,
+        "trials": 100,
+        "pass": true
+      },
+      {
+        "name": "INTERIOR_L5",
+        "blocks": 90,
+        "trials": 100,
+        "pass": true
+      }
+    ]
+  },
+  "update_nonclosure_safe_selected": {
+    "found": true,
+    "L": 4,
+    "history_blocks": 2,
+    "s": "aaabaaac",
+    "t": "abbbaaac",
+    "common_block": "aaab",
+    "same_current_theta": true,
+    "successor_theta_equal": false,
+    "s_and_t_globally_safe": true,
+    "both_extensions_globally_safe": true
+  },
+  "all_positive_tests_pass": true
+}

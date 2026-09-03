@@ -1,0 +1,47 @@
+{
+  "exhaustive": [
+    {
+      "pass": true,
+      "checked": 2044,
+      "alph": "ab",
+      "m": 2,
+      "p": 3,
+      "maxn": 8
+    },
+    {
+      "pass": true,
+      "checked": 2044,
+      "alph": "ab",
+      "m": 2,
+      "p": 4,
+      "maxn": 8
+    },
+    {
+      "pass": true,
+      "checked": 4088,
+      "alph": "ab",
+      "m": 3,
+      "p": 3,
+      "maxn": 8
+    }
+  ],
+  "random": [
+    {
+      "pass": true,
+      "alph": "abc",
+      "m": 4,
+      "p": 3,
+      "trials": 10000,
+      "seed": 3531
+    },
+    {
+      "pass": true,
+      "alph": "abc",
+      "m": 4,
+      "p": 4,
+      "trials": 10000,
+      "seed": 3541
+    }
+  ],
+  "pass": true
+}

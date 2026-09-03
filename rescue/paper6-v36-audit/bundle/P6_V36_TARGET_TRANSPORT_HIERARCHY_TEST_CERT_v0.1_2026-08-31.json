@@ -1,0 +1,97 @@
+{
+  "pointwise_qblock_transport": {
+    "pass": true,
+    "cases": [
+      {
+        "alph": "ab",
+        "L": 2,
+        "tested": 8407
+      },
+      {
+        "alph": "ab",
+        "L": 3,
+        "tested": 8169
+      },
+      {
+        "alph": "abc",
+        "L": 3,
+        "tested": 8084
+      },
+      {
+        "alph": "abc",
+        "L": 4,
+        "tested": 7872
+      },
+      {
+        "alph": "abc",
+        "L": 5,
+        "tested": 7571
+      }
+    ]
+  },
+  "one_block_target_update": {
+    "pass": true,
+    "cases": [
+      {
+        "alph": "ab",
+        "L": 2,
+        "trials": 5000,
+        "pass": true
+      },
+      {
+        "alph": "ab",
+        "L": 3,
+        "trials": 5000,
+        "pass": true
+      },
+      {
+        "alph": "abc",
+        "L": 2,
+        "trials": 5000,
+        "pass": true
+      },
+      {
+        "alph": "abc",
+        "L": 3,
+        "trials": 5000,
+        "pass": true
+      },
+      {
+        "alph": "abc",
+        "L": 4,
+        "trials": 5000,
+        "pass": true
+      },
+      {
+        "alph": "abc",
+        "L": 5,
+        "trials": 3000,
+        "pass": true
+      },
+      {
+        "alph": "abc",
+        "L": 6,
+        "trials": 2000,
+        "pass": true
+      }
+    ]
+  },
+  "selected_library": {
+    "pass": true,
+    "cases": [
+      {
+        "name": "FULL_L4",
+        "blocks": 60,
+        "trials": 500,
+        "pass": true
+      },
+      {
+        "name": "INTERIOR_L5",
+        "blocks": 90,
+        "trials": 500,
+        "pass": true
+      }
+    ]
+  },
+  "pass": true
+}
