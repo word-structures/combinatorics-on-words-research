@@ -1,0 +1,7 @@
+f1302159fbbe52eb056eb7e6c8c90de74a49846466fe34b5b770b8a652a10093 *./_EXTERNAL_DEPENDENCY/scratch/paper4-to-recordhunt-transfer-2026-08-29/test_word_400.txt
+24989de287c8861ca51f6b8b7a1537f23b8eb9415252337761242d370f3870ce *./structure-discovery-2026-08-29/compile_to_paper4_algebra.js
+4d4fe9616c17e08b4c5363df585bcde548e99ce6505bf72efe6554741d9b80f1 *./structure-discovery-2026-08-29/extract_transition_dag.js
+6e543a34d7936f2146a33544b48b21cc3859abc1741af9407df1a390c588f155 *./structure-discovery-2026-08-29/find_macro_alphabet.js
+1043b8476c6da3ad31730c21654a81e661f5a2223b8b55da6f7991abf3047c7a *./structure-discovery-2026-08-29/macro_alphabet.json
+a166af92c6780ccb774e107987569b2b4edf88bcb0c62ddb3e45fbc74942cdcd *./structure-discovery-2026-08-29/paper4_compiled_system.json
+3999e492e6422727a33af1fe41b6fe8e0a004f7ad90bbf2edbe7168850a86055 *./structure-discovery-2026-08-29/transition_dag.json
