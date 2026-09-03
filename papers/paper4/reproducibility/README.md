@@ -3,6 +3,9 @@
 This directory contains the frozen replay and verification package for Paper 4.
 
 ## Structure
+* `gate0/`: Gate 0 (Discovery) evidence — the structure-discovery producers, their
+  outputs, the canonical copy of their input, and a replay wrapper. Canonical since
+  2026-09-03; see `gate0/README.md`.
 * `checkers/`: The verified, standalone Node.js validation scripts.
 * `lib/`: Shared modules required by the checkers.
 * `fixtures/`: Static datasets required by the checkers.
@@ -16,6 +19,11 @@ This directory contains the frozen replay and verification package for Paper 4.
 
 ## Usage
 * **Working directory:** Navigate to `papers/paper4/reproducibility/checkers` before running commands.
+* **Expected-output encoding:** the files in `expected/` are UTF-16 LE with CRLF (they
+  were captured by PowerShell redirection). A byte comparison against fresh UTF-8 stdout
+  will fail on encoding alone — decode before diffing.
+* **`afe_263_run.js` reports a wall-clock `seconds` field** that necessarily differs
+  between runs. Every other value is deterministic; compare on those.
 * **Requirements:** Node.js (tested on v22.18).
 * **Expected outputs:** Compare the stdout of each command to the corresponding file in `expected/`.
 
