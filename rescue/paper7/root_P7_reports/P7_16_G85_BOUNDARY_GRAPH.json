@@ -1,0 +1,79 @@
+{
+  "N_feasible": 2269,
+  "N_reachable": 7,
+  "states": [
+    {
+      "id": "S_a_0_d_2",
+      "c1": "a",
+      "k1": 0,
+      "c2": "d",
+      "k2": 2,
+      "dW_prime": [0, 0, 0, 0],
+      "classification": "IMPOSSIBLE",
+      "reason": "Reduces to exact Abelian square prefix in X_0, forbidden by source theorem."
+    },
+    {
+      "id": "S_a_75_d_67",
+      "c1": "a",
+      "k1": 75,
+      "c2": "d",
+      "k2": 67,
+      "dW_prime": [-2, 1, 0, 0],
+      "classification": "IMPOSSIBLE",
+      "reason": "Reduces to near-square prefix in X_0 with difference [-2,1,0,0], which never occurs."
+    },
+    {
+      "id": "S_b_0_d_2",
+      "c1": "b",
+      "k1": 0,
+      "c2": "d",
+      "k2": 2,
+      "dW_prime": [0, 0, 0, 0],
+      "classification": "IMPOSSIBLE",
+      "reason": "Reduces to exact Abelian square prefix in X_0."
+    },
+    {
+      "id": "S_b_3_b_8",
+      "c1": "b",
+      "k1": 3,
+      "c2": "b",
+      "k2": 8,
+      "dW_prime": [0, 0, 0, 0],
+      "classification": "IMPOSSIBLE",
+      "reason": "Reduces to exact Abelian square prefix in X_0."
+    },
+    {
+      "id": "S_c_0_d_2",
+      "c1": "c",
+      "k1": 0,
+      "c2": "d",
+      "k2": 2,
+      "dW_prime": [0, 0, 0, 0],
+      "classification": "IMPOSSIBLE",
+      "reason": "Reduces to exact Abelian square prefix in X_0."
+    },
+    {
+      "id": "S_c_1_c_4",
+      "c1": "c",
+      "k1": 1,
+      "c2": "c",
+      "k2": 4,
+      "dW_prime": [0, 0, 0, 0],
+      "classification": "IMPOSSIBLE",
+      "reason": "Reduces to exact Abelian square prefix in X_0."
+    },
+    {
+      "id": "S_d_0_d_2",
+      "c1": "d",
+      "k1": 0,
+      "c2": "d",
+      "k2": 2,
+      "dW_prime": [0, 0, 0, 0],
+      "classification": "IMPOSSIBLE",
+      "reason": "Reduces to exact Abelian square prefix in X_0."
+    }
+  ],
+  "transitions": [],
+  "base_cases_verified": true,
+  "K_0_bound": 255
+}

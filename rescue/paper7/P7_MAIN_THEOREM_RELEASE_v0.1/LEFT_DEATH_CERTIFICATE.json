@@ -1,0 +1,57 @@
+{
+  "s": "abacabadc",
+  "extensions": [
+    {
+      "letter": "a",
+      "K": 1,
+      "square": "aa",
+      "u": "a",
+      "v": "a",
+      "parikh": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "letter": "b",
+      "K": 2,
+      "square": "baba",
+      "u": "ba",
+      "v": "ba",
+      "parikh": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "letter": "c",
+      "K": 4,
+      "square": "cabacaba",
+      "u": "caba",
+      "v": "caba",
+      "parikh": [
+        2,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "letter": "d",
+      "K": 5,
+      "square": "dabacabadc",
+      "u": "dabac",
+      "v": "abadc",
+      "parikh": [
+        2,
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

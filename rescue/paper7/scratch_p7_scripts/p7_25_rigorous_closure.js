@@ -1,0 +1,123 @@
+const { G85 } = require('../src/morphisms.js');
+const alphabet = ['a', 'b', 'c', 'd'];
+
+function getParikh(str) {
+    let p = [0,0,0,0];
+    for(let c of str) p[alphabet.indexOf(c)]++;
+    return p;
+}
+let M85 = [getParikh(G85['a']), getParikh(G85['b']), getParikh(G85['c']), getParikh(G85['d'])];
+function solve(y) {
+    for(let x0 = -10; x0 <= 10; x0++) {
+    for(let x1 = -10; x1 <= 10; x1++) {
+    for(let x2 = -10; x2 <= 10; x2++) {
+    for(let x3 = -10; x3 <= 10; x3++) {
+        if (x0*M85[0][0] + x1*M85[1][0] + x2*M85[2][0] + x3*M85[3][0] !== y[0]) continue;
+        if (x0*M85[0][1] + x1*M85[1][1] + x2*M85[2][1] + x3*M85[3][1] !== y[1]) continue;
+        if (x0*M85[0][2] + x1*M85[1][2] + x2*M85[2][2] + x3*M85[3][2] !== y[2]) continue;
+        if (x0*M85[0][3] + x1*M85[1][3] + x2*M85[2][3] + x3*M85[3][3] !== y[3]) continue;
+        return [x0, x1, x2, x3];
+    }}}}
+    return null;
+}
+
+let B = "ad";
+let Q_set = new Set();
+let Q = [];
+
+function addState(dW, c_mid, c_end) {
+    let key = `${dW.join(',')}|${c_mid}|${c_end}`;
+    if (!Q_set.has(key)) {
+        Q_set.add(key);
+        let state = { dW, c_mid, c_end };
+        Q.push(state);
+    }
+}
+
+for (let i = 0; i < B.length; i++) {
+    let p_U_start = getParikh(B.slice(i));
+    for (let c_mid of alphabet) {
+        for (let o_mid = 0; o_mid < 85; o_mid++) {
+            let p_U_end = getParikh(G85[c_mid].slice(0, o_mid));
+            let p_V_start = getParikh(G85[c_mid].slice(o_mid));
+            for (let c_end of alphabet) {
+                for (let o_end = 0; o_end < 85; o_end++) {
+                    let p_V_end = getParikh(G85[c_end].slice(0, o_end));
+                    let len_diff = (B.length - i) + o_mid - (85 - o_mid) - o_end;
+                    if (len_diff % 85 !== 0) continue;
+                    let y = [0,0,0,0];
+                    for(let k=0; k<4; k++) y[k] = p_V_start[k] + p_V_end[k] - p_U_start[k] - p_U_end[k];
+                    let dW = solve(y);
+                    if (dW !== null && dW[0]+dW[1]+dW[2]+dW[3] === -len_diff/85) {
+                        addState(dW, c_mid, c_end);
+                    }
+                }
+            }
+        }
+    }
+}
+
+let head = 0;
+while(head < Q.length) {
+    let state = Q[head++];
+    let q_target = state.dW;
+    let sum_q = q_target[0]+q_target[1]+q_target[2]+q_target[3];
+    let p_U_start = getParikh(B);
+    
+    // U is prefix of F_ad(W). It spans B. Then W_U blocks. Then c_mid at o_mid.
+    // So c_mid here corresponds to the FIRST character of state (which is state.c_mid in W)
+    // Wait, the state in W requires: W has prefix W_U, then state.c_mid, then W_V, then state.c_end.
+    // So c_mid in F_ad(W) MUST BE state.c_mid!
+    let c_mid = state.c_mid;
+    let g_mid = G85[c_mid];
+    for (let o_mid = 0; o_mid < 85; o_mid++) {
+        let p_U_end = getParikh(g_mid.slice(0, o_mid));
+        let p_V_start = getParikh(g_mid.slice(o_mid));
+        
+        let c_end = state.c_end;
+        let g_end = G85[c_end];
+        for (let o_end = 0; o_end < 85; o_end++) {
+            let p_V_end = getParikh(g_end.slice(0, o_end));
+            let len_diff = B.length + o_mid - (85 - o_mid) - o_end;
+            if ((len_diff - sum_q) % 85 !== 0) continue;
+            let num_blocks_diff = (sum_q - len_diff) / 85;
+            
+            let y = [0,0,0,0];
+            for(let k=0; k<4; k++) y[k] = q_target[k] - p_U_start[k] - p_U_end[k] + p_V_start[k] + p_V_end[k];
+            let dW = solve(y);
+            if (dW !== null && dW[0]+dW[1]+dW[2]+dW[3] === num_blocks_diff) {
+                // Here, what is the new state?
+                // The new state is a requirement on W.
+                // The required string in F_ad(W) has boundaries at o_mid in c_mid, and o_end in c_end.
+                // In W, W_U blocks before c_mid. W_V blocks before c_end.
+                // But wait! U starts at B. So W_U is a prefix of W!
+                // So in W, the prefix is W_U. Then the character is c_mid?
+                // NO! c_mid was the block we split in F_ad(W).
+                // Where does c_mid come from? It comes from W!
+                // So c_mid is the character in W after W_U!
+                // Wait, but c_mid was FIXED to state.c_mid!
+                // So the new c_mid is state.c_mid.
+                // But what is the new c_end?
+                // The new c_end is the character in W after W_V!
+                // But c_end was FIXED to state.c_end!
+                // So the new state just propagates!
+                // Wait! The loop over c_mid and c_end in F_ad(W) should be FREE!
+                // No! In F_ad(W), the square is U and V.
+                // The state `state` requires that P(U) - P(V) = state.dW.
+                // And U ends in state.c_mid, V ends in state.c_end.
+                // So U must end in state.c_mid! Thus the block in F_ad(W) is state.c_mid.
+                // But the block in F_ad(W) is generated by a character in W!
+                // So the character in W IS state.c_mid!
+                // This means the new state's c_mid IS state.c_mid.
+                // Let's just add it.
+                addState(dW, state.c_mid, state.c_end);
+            }
+        }
+    }
+}
+console.log(`Total rigorous states: ${Q.length}`);
+for(let st of Q) {
+    if (st.dW.join(',') === '0,0,0,0') {
+        console.log(`0,0,0,0 requires c_mid=${st.c_mid}, c_end=${st.c_end}`);
+    }
+}

@@ -1,0 +1,29 @@
+# Root File Classification
+
+- aa2fr-worker.js: SCRATCH / DISCARD
+- build_audit_part1.js: SCRATCH / DISCARD
+- build_canonical.js: SCRATCH / DISCARD
+- enumerate.js: SCRATCH / DISCARD
+- generate_report.js: SCRATCH / DISCARD
+- hash_gen.js: SCRATCH / DISCARD
+- hash_gen2.js: SCRATCH / DISCARD
+- report_gen.js: SCRATCH / DISCARD
+- run3.js: SCRATCH / DISCARD
+- run3d2.js: SCRATCH / DISCARD
+- run_both.js: SCRATCH / DISCARD
+- run_hash.js: SCRATCH / DISCARD
+- run_report.js: SCRATCH / DISCARD
+- run_repro2.js: SCRATCH / DISCARD
+- test_b.js: SCRATCH / DISCARD
+- test_baseline.js: SCRATCH / DISCARD
+- test_dp.js: SCRATCH / DISCARD
+- test_g.js: SCRATCH / DISCARD
+- test_generic.js: SCRATCH / DISCARD
+- test_generic2.js: SCRATCH / DISCARD
+- test_generic3.js: SCRATCH / DISCARD
+- test_k1.js: SCRATCH / DISCARD
+- test_syntax.js: SCRATCH / DISCARD
+- update_manifest.js: SCRATCH / DISCARD
+- wait_hash.js: SCRATCH / DISCARD
+- wait_repro.js: SCRATCH / DISCARD
+- write_artifacts.js: SCRATCH / DISCARD

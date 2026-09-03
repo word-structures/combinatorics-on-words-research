@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "L_tested": [
+    5,
+    100
+  ],
+  "message": "All 19 families distinct for all tested L"
+}

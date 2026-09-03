@@ -1,0 +1,12 @@
+const { execSync } = require('child_process');
+console.log('Running A...');
+execSync('node --stack-size=100000 scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/genA.js');
+console.log('Running B...');
+execSync('node --stack-size=100000 scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/genB.js');
+console.log('Done reproductions.');
+const fs = require('fs');
+const A = fs.readFileSync('scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/PROFILE_BASELINE_AUDITED.json');
+const B = fs.readFileSync('scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/PROFILE_BASELINE_AUDITED.json');
+const diff = A.equals(B) ? 'SUCCESS' : 'FAIL';
+fs.writeFileSync('scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/REPRODUCIBILITY_AUDIT.json', JSON.stringify({ REPRODUCIBILITY_STATUS: diff }));
+console.log('Reproducibility check finished:', diff);

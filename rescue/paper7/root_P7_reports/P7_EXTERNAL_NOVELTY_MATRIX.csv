@@ -1,0 +1,6 @@
+Prior Art,Claim/Result,Relationship to re(A4) \ le(A4) != empty,Verdict
+"Keränen (1992)","Existence of infinite ASF words over 4 letters via 85-uniform morphism","Proves A4 is infinite. Does not separate extendability classes.","ORTHOGONAL"
+"Keränen (2010)","Identified unfavourable factors (factors not in e(A4)) and posed open question of one-sided infinity","Posed the exact question resolved by this manuscript.","STRONGER FORM (Our witness is fully left-dead, not just unfavourable)"
+"Shur (2008+)","Growth rates of factorial languages are equal for L, re(L), e(L)","Establishes asymptotic growth equivalence, but does not rule out structural set difference.","RELATED BUT DISTINCT"
+"Carpi (1998)","Number of ASF words grows exponentially","Growth bounds only. Does not construct extreme asymmetric extendability.","ORTHOGONAL"
+"Korn (2003) / Currie (2004)","Maximal finite ASF words (no extensions in either direction)","Found words that are left-dead AND right-dead. We found left-dead but right-infinite.","RELATED BUT DISTINCT"

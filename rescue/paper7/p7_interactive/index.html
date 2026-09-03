@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Dead End That Goes Forever</title>
+    <style>
+        :root {
+            /* Adapting to a cleaner, more academic lab style (Word Structures Lab) */
+            --bg-color: #fafafa;
+            --text-color: #171717;
+            --text-muted: #525252;
+            --color-a: #ef4444; /* red */
+            --color-b: #3b82f6; /* blue */
+            --color-c: #10b981; /* green */
+            --color-d: #eab308; /* yellow */
+            --block-size: 3rem;
+            --border-color: #e5e5e5;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            margin-top: 4rem;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.03em;
+        }
+
+        p.subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            text-align: center;
+            margin: 0 auto 3rem auto;
+            line-height: 1.6;
+        }
+
+        /* SCENE 1: Left Wall */
+        #scene-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            transition: opacity 1s, transform 1s;
+        }
+
+        .word-container {
+            display: flex;
+            gap: 0.25rem;
+            margin: 2rem 0;
+            height: var(--block-size);
+            justify-content: center;
+            position: relative;
+        }
+
+        .letter {
+            width: var(--block-size);
+            height: var(--block-size);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 0.25rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .letter.a { background-color: var(--color-a); }
+        .letter.b { background-color: var(--color-b); }
+        .letter.c { background-color: var(--color-c); }
+        .letter.d { background-color: var(--color-d); }
+        .letter.empty { background-color: #f5f5f5; border: 2px dashed #d4d4d4; color: transparent; box-shadow: none; }
+
+        .letter.dimmed {
+            opacity: 0.3;
+            transform: scale(0.9);
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        button {
+            width: 4rem;
+            height: 4rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: transform 0.1s, filter 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        button.btn-a { background-color: var(--color-a); }
+        button.btn-b { background-color: var(--color-b); }
+        button.btn-c { background-color: var(--color-c); }
+        button.btn-d { background-color: var(--color-d); }
+
+        .analysis {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 200px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .message {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ef4444;
+            margin-bottom: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tally-container {
+            display: flex;
+            gap: 2rem;
+            opacity: 0;
+            transition: opacity 0.5s;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .tally-box {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            flex: 1;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .tally-box h3 {
+            margin: 0 0 1rem 0;
+            color: var(--text-muted);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tally-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .tally-color {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 0.25rem;
+        }
+        .tc-a { background-color: var(--color-a); }
+        .tc-b { background-color: var(--color-b); }
+        .tc-c { background-color: var(--color-c); }
+        .tc-d { background-color: var(--color-d); }
+
+        .next-section {
+            margin-top: 2rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 1s;
+            text-align: center;
+            padding-bottom: 4rem;
+        }
+        .next-section.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .btn-continue {
+            background: var(--text-color);
+            color: var(--bg-color);
+            width: auto;
+            height: auto;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            font-size: 1.25rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .divider {
+            width: 3px;
+            background: #ef4444;
+            height: 4rem;
+            position: absolute;
+            top: -0.5rem;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 10;
+        }
+
+        /* SCENE 2: Infinity / Canvas Zoom */
+        #scene-2 {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 2rem 0;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        
+        .story-text {
+            max-width: 600px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        #gen-label {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        canvas {
+            background-color: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-width: 90vw;
+        }
+
+        .canvas-container {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 5vw;
+            box-sizing: border-box;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .btn-next-gen {
+            background: var(--color-b);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            height: auto;
+            width: auto;
+        }
+
+        /* The proof machine transition */
+        #scene-3 {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 4rem 1rem;
+            background: #171717;
+            color: #fafafa;
+            margin-top: 4rem;
+        }
+
+        .slogan {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            max-width: 800px;
+            line-height: 1.2;
+            margin-bottom: 4rem;
+            background: -webkit-linear-gradient(45deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- SCENE 1: The Left Wall -->
+    <div id="scene-1">
+        <header>
+            <h1>A Dead End That Goes Forever</h1>
+            <p class="subtitle">Here is a seemingly ordinary 9-letter word. Try to add one letter to the left without creating an <b>Abelian square</b> (two adjacent blocks with the exact same ingredients).</p>
+        </header>
+
+        <div class="word-container" id="word-container"></div>
+
+        <div class="controls">
+            <button class="btn-a" onclick="tryLetter('a')" id="btn-a">A</button>
+            <button class="btn-b" onclick="tryLetter('b')" id="btn-b">B</button>
+            <button class="btn-c" onclick="tryLetter('c')" id="btn-c">C</button>
+            <button class="btn-d" onclick="tryLetter('d')" id="btn-d">D</button>
+        </div>
+
+        <div class="analysis">
+            <div class="message" id="message">Abelian Square Detected!</div>
+            <div class="tally-container" id="tally">
+                <div class="tally-box">
+                    <h3>Left Half</h3>
+                    <div id="left-tally"></div>
+                </div>
+                <div class="tally-box">
+                    <h3>Right Half</h3>
+                    <div id="right-tally"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="next-section" id="next-section">
+            <p class="subtitle" style="color: #ef4444; font-weight: bold;">There is nowhere to go left. The word is completely dead.</p>
+            <button class="btn-continue" onclick="revealRight()">What about the other direction? &rarr;</button>
+        </div>
+    </div>
+
+    <!-- SCENE 2: The Right Infinity -->
+    <div id="scene-2">
+        <div class="story-text" id="story-text">
+            To grow right, we add an anchor "db" (forming C). Then we apply a massive geometric expansion.
+        </div>
+        <div id="gen-label">Generation 0: 11 letters</div>
+        
+        <div class="canvas-container">
+            <canvas id="vizCanvas" width="800" height="60"></canvas>
+        </div>
+
+        <button class="btn-next-gen" id="btn-gen" onclick="nextGeneration()">Zoom Out: Generation 1</button>
+    </div>
+
+    <!-- SCENE 3: The Funnel -->
+    <div id="scene-3">
+        <div class="slogan">
+            "We did not check infinity.<br>We proved that infinity has only finitely many ways to cause trouble."
+        </div>
+        <p style="max-width: 600px; text-align: center; font-size: 1.2rem; line-height: 1.6; color: #a3a3a3;">
+            A million is not infinity. To prove this word extends forever without breaking the rule, we map every possible future collision into a finite geometric shadow.
+            <br><br>
+            <span style="color: #ef4444">99</span> boundary geometries &rarr; <span style="color: #3b82f6">35</span> residual states &rarr; <span style="color: #10b981">17</span> recursive loops &rarr; <span style="color: #eab308">190</span> letter base check.
+        </p>
+    </div>
+
+    <script>
+        /* --- SCENE 1 LOGIC --- */
+        const seed = "abacabadc";
+        const container = document.getElementById("word-container");
+        let tested = { a: false, b: false, c: false, d: false };
+
+        function renderWord(prepended = null) {
+            container.innerHTML = "";
+            
+            const slot = document.createElement("div");
+            if (prepended) {
+                slot.className = `letter ${prepended}`;
+                slot.textContent = prepended;
+            } else {
+                slot.className = "letter empty";
+                slot.textContent = "?";
+            }
+            container.appendChild(slot);
+
+            for (let i = 0; i < seed.length; i++) {
+                const l = document.createElement("div");
+                l.className = `letter ${seed[i]}`;
+                l.textContent = seed[i];
+                container.appendChild(l);
+            }
+            
+            const divider = document.createElement("div");
+            divider.className = "divider";
+            divider.id = "divider";
+            container.appendChild(divider);
+        }
+
+        renderWord();
+
+        function countParikh(str) {
+            let p = {a:0, b:0, c:0, d:0};
+            for (let c of str) p[c]++;
+            return p;
+        }
+
+        function renderTallyHTML(counts) {
+            let html = "";
+            ['a','b','c','d'].forEach(c => {
+                if (counts[c] > 0) {
+                    html += `<div class="tally-row"><div class="tally-color tc-${c}"></div><span>x ${counts[c]}</span></div>`;
+                }
+            });
+            return html;
+        }
+
+        function tryLetter(L) {
+            document.getElementById(`btn-${L}`).disabled = true;
+            tested[L] = true;
+            
+            renderWord(L);
+            const w = L + seed;
+            
+            let K = 0;
+            if (L === 'a') K = 1;
+            if (L === 'b') K = 2;
+            if (L === 'c') K = 4;
+            if (L === 'd') K = 5;
+
+            const leftHalf = w.substring(0, K);
+            const rightHalf = w.substring(K, 2*K);
+            
+            setTimeout(() => {
+                const children = container.querySelectorAll('.letter');
+                for (let i = 2*K; i < children.length; i++) {
+                    children[i].classList.add('dimmed');
+                }
+                
+                const divider = document.getElementById("divider");
+                // 3rem = 48px, gap = 4px. Total = 52px per block.
+                divider.style.left = `calc(${K} * (3rem + 0.25rem) - 0.125rem)`;
+                divider.style.opacity = 1;
+
+                document.getElementById("message").style.opacity = 1;
+                document.getElementById("left-tally").innerHTML = renderTallyHTML(countParikh(leftHalf));
+                document.getElementById("right-tally").innerHTML = renderTallyHTML(countParikh(rightHalf));
+                document.getElementById("tally").style.opacity = 1;
+                
+                if (tested.a && tested.b && tested.c && tested.d) {
+                    setTimeout(() => {
+                        document.getElementById("next-section").classList.add("visible");
+                    }, 1500);
+                }
+                
+                if (!(tested.a && tested.b && tested.c && tested.d)) {
+                    setTimeout(() => {
+                        renderWord();
+                        document.getElementById("message").style.opacity = 0;
+                        document.getElementById("tally").style.opacity = 0;
+                    }, 3000);
+                }
+            }, 300);
+        }
+
+        /* --- SCENE 2 LOGIC (Infinity Zoom) --- */
+        const G85 = {
+            'a': 'abcacdcbcdcadcdbdabacabadbabcbdbcbacbcdcacbabdabacadcbcdcacdbcbacbcdcacdcbdcdadbdcbca',
+            'b': 'bcdbdadcdadbadacabcbdbcbacbcdcacdcbdcdadbdcbcabcbdbadcdadbdacdcbdcdadbdadcadabacadcdb',
+            'c': 'cdacabadabacbabdbcdcacdcbdcdadbdadcadabacadcdbcdcacbadabacabdadcadabacabadbabcbdbadac',
+            'd': 'dabdbcbabcbdcbcacdadbdadcadabacabadbabcbdbadacdadbdcbabcbdbcabadbabcbdbcbacbcdcacbabd'
+        };
+        const C_str = "abacabadcdb";
+        
+        let genState = 0;
+        let currentString = C_str;
+
+        function morph(w) {
+            let res = "";
+            for(let i=0; i<w.length; i++) res += G85[w[i]];
+            return res;
+        }
+
+        const colors = {
+            'a': '#ef4444',
+            'b': '#3b82f6',
+            'c': '#10b981',
+            'd': '#eab308'
+        };
+
+        function drawString(str, blockWidth) {
+            const canvas = document.getElementById("vizCanvas");
+            const ctx = canvas.getContext("2d");
+            
+            // Adjust canvas width dynamically based on content (max 90vw)
+            const maxWidth = window.innerWidth * 0.9;
+            const neededWidth = str.length * blockWidth;
+            canvas.width = Math.min(neededWidth, maxWidth);
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < str.length; i++) {
+                // If we draw beyond the canvas width, stop to save performance
+                if (i * blockWidth > canvas.width) break; 
+                ctx.fillStyle = colors[str[i]];
+                ctx.fillRect(i * blockWidth, 0, blockWidth, canvas.height);
+            }
+        }
+
+        function revealRight() {
+            document.getElementById("scene-1").style.opacity = 0;
+            document.getElementById("scene-1").style.transform = "translateY(-50px)";
+            
+            setTimeout(() => {
+                document.getElementById("scene-1").style.display = "none";
+                const scene2 = document.getElementById("scene-2");
+                scene2.style.display = "flex";
+                // Trigger reflow
+                void scene2.offsetWidth;
+                scene2.style.opacity = 1;
+                
+                // Draw Gen 0
+                drawString(currentString, 48); // 48px per block
+            }, 1000);
+        }
+
+        function nextGeneration() {
+            const btn = document.getElementById("btn-gen");
+            const label = document.getElementById("gen-label");
+            const text = document.getElementById("story-text");
+
+            if (genState === 0) {
+                genState = 1;
+                currentString = C_str + morph(C_str); // W1
+                label.innerHTML = `Generation 1: ${currentString.length} letters`;
+                text.innerHTML = "By applying the 85-uniform morphism to the base, the structure explodes in size, perfectly preserving the anchor at the left.";
+                btn.innerHTML = "Zoom Out: Generation 2";
+                drawString(currentString, 2); // 2px per block
+            } 
+            else if (genState === 1) {
+                genState = 2;
+                currentString = C_str + morph(currentString); // W2
+                label.innerHTML = `Generation 2: ${currentString.length} letters`;
+                text.innerHTML = "The word is now over 80,000 letters long. The pattern expands infinitely. But how do we prove it never breaks?";
+                btn.innerHTML = "How can a finite computer prove infinity? &darr;";
+                drawString(currentString, 0.05); // Sub-pixel rendering creates dense rainbow moire
+            }
+            else if (genState === 2) {
+                // Reveal Scene 3
+                btn.style.display = 'none';
+                const scene3 = document.getElementById("scene-3");
+                scene3.style.display = "flex";
+                window.scrollTo({ top: scene3.offsetTop, behavior: 'smooth' });
+            }
+        }
+
+    </script>
+</body>
+</html>

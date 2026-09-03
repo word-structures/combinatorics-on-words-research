@@ -1,0 +1,12 @@
+{
+  "total_windows": 354,
+  "solution_set_mismatches": 0,
+  "layer_A_total_squares": 209,
+  "layer_B_total_squares": 209,
+  "layer_C_elided_windows": 116,
+  "layer_C_false_safes": 0,
+  "layer_D_elided_windows": 327,
+  "layer_D_false_safes": 0,
+  "windows_with_squares": 27,
+  "execution_time_ms": 22
+}

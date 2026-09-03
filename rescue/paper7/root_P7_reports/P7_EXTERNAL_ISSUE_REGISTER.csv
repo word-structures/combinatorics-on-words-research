@@ -1,0 +1,3 @@
+ID,Severity,Type,Location,Problem,Evidence,Required fix
+ISSUE-01,COSMETIC,COMPUTATION,verify_p7_main_theorem_v2.py,Long runtime for W2 check without feedback,"W2 check takes ~2-5s in Python due to 80k length, appearing hung",Add a simple progress print or elapsed time message
+ISSUE-02,MINOR,EXPOSITION,P7_MANUSCRIPT_v0.2.md,"Exact mathematical derivation of base window length 190 (or 193) is omitted","Verifier assumes 190, but exact derivation max(2j+1-sum(q)) yields 193 for boundary. W1 check is actually 946 length, so 190 vs 193 is safe, but unexplained.","Add 2-3 sentences in the Appendix explaining the geometric upper bound on the base window length"

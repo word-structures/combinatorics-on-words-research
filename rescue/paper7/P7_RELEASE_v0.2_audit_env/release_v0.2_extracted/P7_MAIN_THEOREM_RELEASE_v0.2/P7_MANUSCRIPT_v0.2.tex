@@ -1,0 +1,438 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{xurl}
+\usepackage{seqsplit}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\newcommand{\A}{\mathcal A_4}
+\newcommand{\Par}{P}
+\newcommand{\code}[1]{\texttt{#1}}
+
+\title{One-Sided Extendability in the Four-Letter Abelian-Square-Free Language}
+\author{[author placeholders]}
+\date{Draft v0.2 -- September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $\A$ be the language of finite Abelian-square-free words over a four-letter alphabet. We exhibit the explicit word
+\[
+s=\code{abacabadc}
+\]
+which cannot be extended by even one letter to the left while remaining Abelian-square-free, but which is a prefix of a right-infinite Abelian-square-free word. Thus
+\[
+s\in re(\A)\setminus le(\A),
+\]
+and in particular $re(\A)\setminus e(\A)\neq\varnothing$. The negative half of the proof is elementary. For the positive half we iterate an affine operation built from Ker\"anen's 85-uniform Abelian-square-free endomorphism. Boundary safety is reduced to an exact finite residual system consisting of 35 states and 17 recursive transition rows, together with a fixed 190-letter base certificate. A standalone exact verifier accompanies the proof. In the primary sources located, the corresponding one-sided-extension phenomenon was posed as open; we found no later equivalent resolution in the literature searched through 3 September 2026, so the novelty assessment remains provisional.
+\end{abstract}
+
+\section{Introduction}
+
+An \emph{Abelian square} is a word $uv$ with $|u|=|v|>0$ in which $u$ and $v$ have the same Parikh vector. Erd\H{o}s asked whether an infinite word over four letters can avoid Abelian squares. Ker\"anen answered this affirmatively by constructing an 85-uniform morphism $g$ which is itself Abelian-square-free: if $w$ is Abelian-square-free, then so is $g(w)$~\cite{Keranen1992}.
+
+The existence of infinite Abelian-square-free words does not imply that every finite Abelian-square-free word has an infinite continuation. Ker\"anen later studied \emph{unfavourable factors}, finite Abelian-square-free words which cannot occur as proper factors of an infinite Abelian-square-free word. In the 2010 account he noted that such a factor might nevertheless be extendable without bound in one direction, and stated that the existence of such factors remained open at that time~\cite{Keranen2010}.
+
+We prove the following concrete asymmetric phenomenon.
+
+\begin{quote}
+\textbf{Main theorem.} The word
+\[
+s=\code{abacabadc}
+\]
+is a prefix of a right-infinite Abelian-square-free word, but no letter can be prepended to $s$ without creating an Abelian square.
+\end{quote}
+
+In the notation for extendable parts of factorial languages used by Shur~\cite{Shur2008}, this gives
+\[
+\boxed{s\in re(\A)\setminus le(\A)}.
+\]
+Consequently,
+\[
+\boxed{re(\A)\setminus e(\A)\neq\varnothing}.
+\]
+
+The proof has deliberately asymmetric difficulty. Left unextendability is checked by four short Abelian squares. Right infinite extendability is obtained from a nested construction
+\[
+C,\quad Cg(C),\quad Cg(C)g^2(C),\quad\ldots,
+\]
+where $C=\code{abacabadcdb}$. The only nonclassical issue is to prevent new Abelian squares at the repeatedly introduced prefix boundary. We reduce this issue to a finite exact residual certificate.
+
+No claim of minimality is made for the length-9 witness. The historical novelty statement is also kept separate from correctness: in the sources we located the one-sided-extension question was posed as open, but the absence of a later resolution is not itself a proof of novelty.
+
+\section{Preliminaries}
+
+Let $\Sigma_4=\{a,b,c,d\}$. For a finite word $u$, write
+\[
+\Par(u)=(|u|_a,|u|_b,|u|_c,|u|_d)
+\]
+for its Parikh vector. Words $u,v$ are \emph{Abelian equivalent} if $\Par(u)=\Par(v)$. An \emph{Abelian square} is a factor $uv$ with $|u|=|v|>0$ and $\Par(u)=\Par(v)$. Let $\A$ denote the factorial language of finite words over $\Sigma_4$ containing no Abelian square.
+
+Following Shur~\cite{Shur2008}, the right-, left-, and two-sided extendable parts of a language $L$ consist of words having infinitely many corresponding extensions in $L$. Equivalently, for our finite alphabet,
+\begin{align*}
+w\in re(L)&\iff \forall n\ \exists v,\ |v|\ge n,\ wv\in L,\\
+w\in le(L)&\iff \forall n\ \exists u,\ |u|\ge n,\ uw\in L,\\
+w\in e(L)&\iff \forall n\ \exists u,v,\ |u|,|v|\ge n,\ uwv\in L.
+\end{align*}
+For a factorial language,
+\[
+e(L)\subseteq re(L)\cap le(L).
+\]
+When a nested infinite right extension is explicitly constructed, membership in $re(L)$ is immediate. Conversely, over a finite alphabet, arbitrarily long compatible finite right extensions yield a one-sided infinite extension by the usual finitely branching tree argument.
+
+\section{A word which is dead on the left}
+
+Set
+\[
+s=\code{abacabadc}.
+\]
+A direct check shows that $s\in\A$.
+
+\begin{lemma}
+No letter in $\Sigma_4$ can be prepended to $s$ while preserving Abelian-square-freeness.
+\end{lemma}
+
+\begin{proof}
+The following Abelian squares occur in the four possible extensions.
+
+\begin{center}
+\begin{tabular}{cclc}
+\toprule
+prepended letter & half-period & forbidden factor & Parikh vector\\
+\midrule
+$a$ & 1 & $a\mid a$ & $(1,0,0,0)$\\
+$b$ & 2 & $ba\mid ba$ & $(1,1,0,0)$\\
+$c$ & 4 & $caba\mid caba$ & $(2,1,1,0)$\\
+$d$ & 5 & $dabac\mid abadc$ & $(2,1,1,1)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus no length-1 left extension belongs to $\A$, and hence $s\notin le(\A)$.
+\end{proof}
+
+\section{Ker\"anen's morphism and the right-infinite construction}
+
+We use Ker\"anen's 85-uniform Abelian-square-free endomorphism $g$~\cite{Keranen1992}. Its four images are given in Appendix~\ref{app:g85}. The classical property used here is
+\[
+w\in\A\quad\Longrightarrow\quad g(w)\in\A.
+\tag{4.1}
+\]
+
+Let
+\[
+C=\code{abacabadcdb}
+\]
+and define $F(V)=C\,g(V)$. Starting from $W_0=C$, put
+\[
+W_{n+1}=F(W_n)=C\,g(W_n).
+\]
+Since $g$ is a morphism,
+\[
+W_n=C\,g(C)\,g^2(C)\cdots g^n(C),
+\tag{4.2}
+\]
+so $W_n$ is a prefix of $W_{n+1}$. Hence the limit
+\[
+W_\infty=C\,g(C)\,g^2(C)\cdots
+\tag{4.3}
+\]
+is well-defined. The only possible new squares under $F$ are those meeting the prefix $C$, because factors wholly contained in $g(V)$ are covered by (4.1).
+
+\section{Residual states}
+
+We use row Parikh vectors. Let $M$ be the incidence matrix of $g$: the row indexed by $x$ is $\Par(g(x))$. Directly from the four images,
+\[
+M=
+\begin{pmatrix}
+19&21&27&18\\
+18&19&21&27\\
+27&18&19&21\\
+21&27&18&19
+\end{pmatrix},
+\qquad
+\det M=43435\ne0.
+\tag{5.1}
+\]
+Thus $qM=r$ has at most one rational solution $q$, and integrality can be checked exactly.
+
+\begin{definition}[Residual occurrence]
+For $q\in\mathbb Z^4$ and $x,y\in\Sigma_4$, a residual state $R(q,x,y)$ occurs in a word $V$ if
+\[
+V=A\,x\,B\,y\,D
+\tag{5.2}
+\]
+for some words $A,B,D$, with the displayed occurrences of $x$ and $y$ distinct and in this order, and
+\[
+\Par(A)-\Par(B)=q.
+\tag{5.3}
+\]
+\end{definition}
+
+\subsection{States forced by a large crossing square}
+
+Suppose an Abelian square in $F(V)=Cg(V)$ is not contained wholly in $g(V)$. Its start is at a position $i\in\{0,\ldots,10\}$ of $C$. Let its half-period be $K\ge85$. We may write the relevant part of the source word as
+\[
+V=A\,x\,B\,y\,D,
+\]
+where the midpoint lies at offset $r\in\{0,\ldots,84\}$ of $g(x)$, and the end lies at offset $t\in\{0,\ldots,84\}$ of $g(y)$. An end exactly at the final boundary of an image may additionally be represented by $t=85$; the exact audit produces no additional integral state from this case.
+
+Equality of the two half-Parikh vectors gives
+\[
+qM=
+\Par(g(x)[r:])+\Par(g(y)[:t])
+-\Par(C[i:])-\Par(g(x)[:r]),
+\tag{5.4}
+\]
+where $q=\Par(A)-\Par(B)$.
+
+We define $Q$ to be the set of all integral triples $(q,x,y)$ obtained from (5.4) as the finite parameters vary. Exact integer inversion gives 99 valid parameter rows collapsing to
+\[
+|Q|=35
+\tag{5.5}
+\]
+unique residual states. Their complete list and the 99 geometric rows are supplied as machine-readable supplementary data.
+
+\begin{lemma}[Large crossing-square reduction]
+If $V$ is Abelian-square-free and $Cg(V)$ contains an Abelian square meeting $C$ with half-period at least 85, then $V$ contains a residual state from $Q$.
+\end{lemma}
+
+\begin{proof}
+Choose $i,x,r,y,t$ from the actual square and set $q=\Par(A)-\Par(B)$. Equation (5.4) holds. Since $q\in\mathbb Z^4$, this actual configuration is among the exact integral cases used to define $Q$. Hence $R(q,x,y)$ occurs in $V$.
+\end{proof}
+
+\section{Recursive closure of the residual states}
+
+Suppose $R(q,x,y)\in Q$ occurs in $Cg(V)$ and the two marked target letters lie in distinct image blocks $g(h)$ and $g(k)$, at offsets $r$ and $t$. Write the corresponding source factorization as
+\[
+V=A\,h\,B\,k\,D,
+\]
+and set $q'=\Par(A)-\Par(B)$. Expanding the target prefix and gap gives
+\[
+q'M=
+q-\Par(C)-\Par(g(h)[:r])+\Par(g(h)[r+1:])+\Par(g(k)[:t]).
+\tag{6.1}
+\]
+The omission of the marked target letter itself explains the suffix $g(h)[r+1:]$.
+
+Exact inversion of (6.1), over every state in $Q$ and every compatible choice of $h,r,k,t$, produces exactly 17 integral parameter rows. Every source triple $(q',h,k)$ belongs again to $Q$.
+
+\begin{lemma}[Recursive residual closure]
+If a state from $Q$ occurs in $Cg(V)$ with its marked letters in distinct image blocks beyond $C$, then a state from $Q$ occurs in $V$.
+\end{lemma}
+
+\begin{proof}
+For an actual occurrence, the source vector $q'=\Par(A)-\Par(B)$ is integral and satisfies (6.1). The exact finite inversion therefore includes the actual alignment; every integral source state produced by that enumeration lies in $Q$.
+\end{proof}
+
+\section{Base cases and strict descent}
+
+\begin{lemma}[Fixed base window]
+Every crossing Abelian square of half-period $K<85$, and every residual occurrence from $Q$ which does not fall under the recursive residual lemma, is contained in the first 190 letters of $Cg(V)$, provided that $V$ begins with $C$.
+\end{lemma}
+
+\begin{proof}
+A crossing square starts at $i<11$. If $K<85$, it ends before position $11+2\cdot84<190$.
+
+Now consider a residual occurrence
+\[
+Cg(V)=A\,x\,B\,y\,D
+\]
+with marked positions $j<k$. From $q=\Par(A)-\Par(B)$, taking coordinate sums gives
+\[
+\sum q=j-(k-j-1)=2j+1-k,
+\]
+so
+\[
+k=2j+1-\sum q.
+\tag{7.1}
+\]
+The 35-state certificate satisfies
+\[
+\sum q\in\{-1,0,1\}
+\tag{7.2}
+\]
+for every $q$ in $Q$. If the first marked letter lies in $C$, then $j<11$, so $k\le22$. If the first mark lies beyond $C$ but both marks lie in the same 85-letter image block, then $k-j\le84$. Combining this with (7.1) and (7.2) gives $j\le84$ and $k\le170$. These are precisely the cases not handled recursively. Hence a 190-letter prefix is a safe common base window.
+\end{proof}
+
+Because the invariant below requires $V$ to begin with $C$, the first 190 letters of $Cg(V)$ equal the first 190 letters of $W_1=Cg(C)$. The exact verifier checks that this fixed word is Abelian-square-free and contains no state from $Q$.
+
+The recursive step is well-founded without an approximate contraction estimate. If the first marked position in a recursive target occurrence is $j\ge11$, its containing source letter occurs at position
+\[
+a=\left\lfloor\frac{j-11}{85}\right\rfloor
+\]
+of $V$. Therefore $a<j$. Recursive desubstitution strictly decreases a nonnegative integer and cannot continue indefinitely.
+
+\section{The invariant and the infinite word}
+
+Define
+\[
+\mathcal C^*=\{V:\ C\text{ is a prefix of }V,\ V\in\A,\text{ and }V\text{ contains no state from }Q\}.
+\tag{8.1}
+\]
+The fixed-prefix condition is essential: it makes all short cases reduce to one fixed base window.
+
+\begin{proposition}[Invariance]
+If $V\in\mathcal C^*$, then $Cg(V)\in\mathcal C^*$.
+\end{proposition}
+
+\begin{proof}
+The word $Cg(V)$ begins with $C$. Since $V$ is Abelian-square-free, (4.1) implies that $g(V)$ is Abelian-square-free. Therefore any Abelian square in $Cg(V)$ must meet $C$. If its half-period is below 85, the fixed-base lemma places it in the 190-letter base window, which the certificate verifies to be Abelian-square-free. If its half-period is at least 85, the large crossing-square lemma would force a state from $Q$ in $V$, contrary to $V\in\mathcal C^*$.
+
+It remains to exclude states from $Q$ in $Cg(V)$. A nonrecursive occurrence lies in the fixed base window and is excluded by the certificate. A recursive occurrence would, by recursive residual closure, force a state from $Q$ in $V$, again a contradiction. Thus $Cg(V)\in\mathcal C^*$.
+\end{proof}
+
+\begin{proposition}
+The word $C$ belongs to $\mathcal C^*$.
+\end{proposition}
+
+\begin{proof}
+The exact finite verifier checks directly that $C$ is Abelian-square-free and contains none of the 35 states from $Q$.
+\end{proof}
+
+\begin{corollary}
+Every $W_n$ is Abelian-square-free, and the limit $W_\infty$ is a right-infinite Abelian-square-free word.
+\end{corollary}
+
+\begin{proof}
+The preceding propositions imply $W_n\in\mathcal C^*\subseteq\A$ for all $n$. Any finite factor of the nested limit $W_\infty$ occurs in some $W_n$, so the limit contains no Abelian square.
+\end{proof}
+
+\section{Main result}
+
+\begin{theorem}
+For $s=\code{abacabadc}$,
+\[
+\boxed{s\in re(\A)\setminus le(\A)}.
+\]
+\end{theorem}
+
+\begin{proof}
+The word $s$ is a prefix of $C$, hence a prefix of the right-infinite Abelian-square-free word $W_\infty$. Thus $s\in re(\A)$. The left-death lemma gives $s\notin le(\A)$.
+\end{proof}
+
+\begin{corollary}
+\[
+re(\A)\setminus e(\A)\ne\varnothing.
+\]
+\end{corollary}
+
+\begin{proof}
+Since $e(\A)\subseteq le(\A)$, the theorem gives the claim.
+\end{proof}
+
+\section{Computer-assisted part and reproducibility}
+
+The proof uses one classical external input, Ker\"anen's theorem (4.1), and one finite exact computation specific to the boundary $C$. The accompanying script \code{verify\_p7\_main\_theorem\_v2.py} recomputes from the displayed formulas:
+\begin{enumerate}
+\item the four immediate left-death witnesses;
+\item the incidence matrix $M$ and exact integer inversion;
+\item the 99 large-square seed alignments;
+\item the 35 unique residual states $Q$;
+\item the 17 integral recursive transition rows and closure back into $Q$;
+\item the bound $\sum q\in\{-1,0,1\}$;
+\item absence of Abelian squares and residual states in the fixed 190-letter base window;
+\item membership of $C$ in the invariant.
+\end{enumerate}
+It also performs direct regression checks on $W_1$ and on boundary-crossing squares in $W_2$. These finite long-word checks are not used as extrapolation in the all-depth proof.
+
+A representative successful run reports:
+\begin{verbatim}
+P7 V2 CERTIFICATE: PASS
+left death: 4/4
+seed parameter rows: 99
+residual states: 35
+recursive transition rows: 17
+base window: 190 letters - ASF and residual-free
+W1: 946 ASF
+W2: 80421 no crossing square
+\end{verbatim}
+The exact state and transition tables are supplied as machine-readable supplementary files.
+
+\section{Relation to previous work}
+
+Ker\"anen's 1992 construction established an Abelian-square-free endomorphism on four letters and therefore infinite four-letter Abelian-square-free words~\cite{Keranen1992}. Carpi later showed, among other results, exponential growth in the number of four-letter Abelian-square-free words~\cite{Carpi1998}.
+
+The finite extension problem has a distinct literature. Cummings and Mays constructed finite maximal Abelian-square-free words~\cite{CummingsMays2001}; Korn gave short maximal constructions and bounds~\cite{Korn2003}, later improved by Bullock~\cite{Bullock2004}. Those results concern words blocked on both sides and do not provide the right-infinite/left-dead combination used here.
+
+Ker\"anen's later work on unfavourable factors is closer to the present question. In the 2010 primary source located for this audit, he explicitly observed that an unfavourable factor might still be extendable without bound in one direction and stated that the existence of such factors remained open at that time~\cite{Keranen2010}. The theorem above realizes that phenomenon in a stronger form: the witness has a right-infinite continuation while admitting no legal one-letter extension on the left.
+
+Shur's framework makes the set-theoretic consequence transparent: despite general results comparing growth rates of extendable parts of factorial languages, the actual sets $re(\A)$ and $e(\A)$ need not coincide~\cite{Shur2008}.
+
+We found no later result equivalent to the theorem in the literature searched through 3 September 2026. This is a provisional literature conclusion, not a mathematical part of the theorem.
+
+\section{Discussion}
+
+The witness is small and its obstruction is completely local on the left, whereas the proof of infinite survival on the right is global and computer-assisted. Natural further questions include the minimum possible witness length, structural classification of left-unextendable/right-infinite words, and whether a shorter human proof of the right-infinite construction exists. No minimality or uniqueness claim is made for $s$, $C$, or the construction.
+
+\appendix
+\section{The 85-uniform morphism}\label{app:g85}
+\small
+\noindent $g(a)=$ \texttt{\seqsplit{abcacdcbcdcadcdbdabacabadbabcbdbcbacbcdcacbabdabacadcbcdcacdbcbacbcdcacdcbdcdadbdcbca}}\par
+\noindent $g(b)=$ \texttt{\seqsplit{bcdbdadcdadbadacabcbdbcbacbcdcacdcbdcdadbdcbcabcbdbadcdadbdacdcbdcdadbdadcadabacadcdb}}\par
+\noindent $g(c)=$ \texttt{\seqsplit{cdacabadabacbabdbcdcacdcbdcdadbdadcadabacadcdbcdcacbadabacabdadcadabacabadbabcbdbadac}}\par
+\noindent $g(d)=$ \texttt{\seqsplit{dabdbcbabcbdcbcacdadbdadcadabacabadbabcbdbadacdadbdcbabcbdbcabadbabcbdbcbacbcdcacbabd}}\par
+\normalsize
+
+\section{Finite certificate files}
+The supplementary proof data are \path{P7_V2_RESIDUAL_STATES.csv} (35 states), \path{P7_V2_SEED_ROWS.csv} (99 seed rows), \path{P7_V2_RECURSIVE_TRANSITIONS.csv} (17 recursive rows), and \path{verify_p7_main_theorem_v2.py}. The historical v0.1 residual package is not used by this proof.
+
+\begin{thebibliography}{99}
+\bibitem{Bullock2004}
+E.~M. Bullock,
+\newblock Improved bounds on the length of maximal Abelian square-free words,
+\newblock \emph{Electron. J. Combin.} 11(1) (2004), R17.
+\newblock \url{https://doi.org/10.37236/1770}.
+
+\bibitem{Carpi1998}
+A. Carpi,
+\newblock On the number of Abelian square-free words on four letters,
+\newblock \emph{Discrete Appl. Math.} 81 (1998), 155--167.
+\newblock \url{https://doi.org/10.1016/S0166-218X(97)88002-X}.
+
+\bibitem{CummingsMays2001}
+L.~J. Cummings and M. Mays,
+\newblock A one-sided Zimin construction,
+\newblock \emph{Electron. J. Combin.} 8(1) (2001), R27.
+\newblock \url{https://doi.org/10.37236/1571}.
+
+\bibitem{Keranen1992}
+V. Ker\"anen,
+\newblock Abelian squares are avoidable on 4 letters,
+\newblock in W. Kuich (ed.), \emph{ICALP '92}, Lecture Notes in Computer Science 623, Springer, 1992, pp. 41--52.
+\newblock \url{https://doi.org/10.1007/3-540-55719-9_62}.
+
+\bibitem{Keranen2010}
+V. Ker\"anen,
+\newblock Combinatorics on Words: Suppression of Unfavorable Factors in Pattern Avoidance,
+\newblock \emph{The Mathematica Journal} 11(3) (2010).
+\newblock \url{https://doi.org/10.3888/tmj.11.3-4}.
+
+\bibitem{Korn2003}
+M. Korn,
+\newblock Maximal Abelian square-free words of short length,
+\newblock \emph{J. Combin. Theory Ser. A} 102(1) (2003), 207--211.
+\newblock \url{https://doi.org/10.1016/S0097-3165(03)00016-5}.
+
+\bibitem{Shur2008}
+A.~M. Shur,
+\newblock Comparing complexity functions of a language and its extendable part,
+\newblock \emph{RAIRO Theor. Inf. Appl.} 42(3) (2008), 647--655.
+\newblock \url{https://doi.org/10.1051/ita:2008021}.
+\end{thebibliography}
+
+\end{document}
