@@ -1,0 +1,9 @@
+Tau: 4
+Num Min Covers: 2
+Distinct Signatures (D): 29
+Unique Masks: 24
+Antichain size: 4
+Local Tau=1: 0
+Local Tau=2: 0
+Local Tau=3: 0
+Local Tau=4: 7866918

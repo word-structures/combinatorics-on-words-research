@@ -1,0 +1,146 @@
+t | Side | |R_t| | Extinctions
+--------------------------------
+1 | R | 1 | 
+2 | L | 1 | 3 local kills. Max Kill K=6 vs k+22=23
+  Left states: c:2 
+3 | R | 1 | 
+4 | L | 3 | 2 local kills. Max Kill K=13 vs k+22=24 (CROSSED SEED!)
+  Left states: ac:5 bc:5 dc:4 
+5 | R | 3 | 
+6 | L | 3 | 11 local kills. Max Kill K=13 vs k+22=25 (CROSSED SEED!)
+  Left states: adc:3 cbc:8 dac:3 
+7 | R | 3 | 
+8 | L | 2 | 10 local kills. Max Kill K=6 vs k+22=26
+  Left states: adac:5 dadc:5 
+9 | R | 2 | 
+10 | L | 1 | 7 local kills. Max Kill K=13 vs k+22=27
+  Left states: cadac:8 
+11 | R | 1 | 
+12 | L | 1 | 3 local kills. Max Kill K=6 vs k+22=28
+  Left states: acadac:9 
+13 | R | 1 | 
+14 | L | 1 | 3 local kills. Max Kill K=4 vs k+22=29
+  Left states: bacadac:16 
+15 | R | 1 | 
+16 | L | 1 | 3 local kills. Max Kill K=6 vs k+22=30
+  Left states: abacadac:27 
+17 | R | 1 | 
+18 | L | 1 | 3 local kills. Max Kill K=7 vs k+22=31
+  Left states: dabacadac:54 
+19 | R | 1 | 
+20 | L | 2 | 2 local kills. Max Kill K=6 vs k+22=32
+  Left states: bdabacadac:68 cdabacadac:68 
+21 | R | 2 | 
+22 | L | 3 | 5 local kills. Max Kill K=14 vs k+22=33
+  Left states: abdabacadac:97 bcdabacadac:97 cbdabacadac:97 
+23 | R | 3 | 
+24 | L | 2 | 10 local kills. Max Kill K=16 vs k+22=34
+  Left states: babdabacadac:148 cbcdabacadac:148 
+25 | R | 2 | 
+26 | L | 1 | 7 local kills. Max Kill K=17 vs k+22=35
+  Left states: acbcdabacadac:225 
+27 | R | 1 | 
+28 | L | 1 | 3 local kills. Max Kill K=12 vs k+22=36
+  Left states: cacbcdabacadac:331 
+29 | R | 1 | 
+30 | L | 2 | 2 local kills. Max Kill K=2 vs k+22=37
+  Left states: bcacbcdabacadac:474 dcacbcdabacadac:474 
+31 | R | 2 | 
+32 | L | 4 | 4 local kills. Max Kill K=6 vs k+22=38
+  Left states: bdcacbcdabacadac:621 cbcacbcdabacadac:621 cdcacbcdabacadac:621 dbcacbcdabacadac:621 
+33 | R | 4 | 
+34 | L | 2 | 14 local kills. Max Kill K=19 vs k+22=39
+  Left states: abdcacbcdabacadac:768 adbcacbcdabacadac:768 
+35 | R | 2 | 
+36 | L | 2 | 6 local kills. Max Kill K=7 vs k+22=40
+  Left states: dabdcacbcdabacadac:793 dadbcacbcdabacadac:793 
+37 | R | 2 | 
+38 | L | 5 | 5 local kills. Max Kill K=23 vs k+22=41 (CROSSED SEED!)
+  Left states: adabdcacbcdabacadac:960 bdabdcacbcdabacadac:861 bdadbcacbcdabacadac:861 cdabdcacbcdabacadac:960 cdadbcacbcdabacadac:960 
+39 | R | 5 | 
+40 | L | 4 | 18 local kills. Max Kill K=30 vs k+22=42 (CROSSED SEED!)
+  Left states: dbdabdcacbcdabacadac:1004 dbdadbcacbcdabacadac:1004 dcdabdcacbcdabacadac:1167 dcdadbcacbcdabacadac:1167 
+41 | R | 4 | 
+42 | L | 6 | 14 local kills. Max Kill K=31 vs k+22=43 (CROSSED SEED!)
+  Left states: adcdabdcacbcdabacadac:1553 adcdadbcacbcdabacadac:1553 bdcdabdcacbcdabacadac:1530 bdcdadbcacbcdabacadac:1530 cdbdabdcacbcdabacadac:1336 cdbdadbcacbcdabacadac:1336 
+43 | R | 6 | 
+44 | L | 16 | 16 local kills. Max Kill K=32 vs k+22=44 (CROSSED SEED!)
+  Left states: abdcdabdcacbcdabacadac:1956 abdcdadbcacbcdabacadac:1956 acdbdabdcacbcdabacadac:1741 acdbdadbcacbcdabacadac:1741 badcdabdcacbcdabacadac:1981 badcdadbcacbcdabacadac:1981 bcdbdabdcacbcdabacadac:1703 bcdbdadbcacbcdabacadac:1703 cbdcdabdcacbcdabacadac:1951 cbdcdadbcacbcdabacadac:1951 dadcdabdcacbcdabacadac:1981 dadcdadbcacbcdabacadac:1981 dbdcdabdcacbcdabacadac:988 dbdcdadbcacbcdabacadac:988 dcdbdabdcacbcdabacadac:937 dcdbdadbcacbcdabacadac:937 
+45 | R | 16 | 
+46 | L | 14 | 58 local kills. Max Kill K=33 vs k+22=45 (CROSSED SEED!)
+  Left states: acbdcdadbcacbcdabacadac:2647 bcbdcdabdcacbcdabacadac:2629 bcbdcdadbcacbcdabacadac:2629 cabdcdadbcacbcdabacadac:2653 cacdbdabdcacbcdabacadac:2391 cacdbdadbcacbcdabacadac:2391 cbadcdadbcacbcdabacadac:2731 cbcdbdabdcacbcdabacadac:2328 cbcdbdadbcacbcdabacadac:2328 cdadcdabdcacbcdabacadac:2731 cdbdcdabdcacbcdabacadac:1352 cdbdcdadbcacbcdabacadac:1352 dcbdcdabdcacbcdabacadac:2407 dcbdcdadbcacbcdabacadac:2407 
+47 | R | 14 | 
+48 | L | 9 | 52 local kills. Max Kill K=34 vs k+22=46 (CROSSED SEED!)
+  Left states: acabdcdadbcacbcdabacadac:3831 acbadcdadbcacbcdabacadac:3917 cacbdcdadbcacbcdabacadac:3805 cdcbdcdabdcacbcdabacadac:3409 cdcbdcdadbcacbcdabacadac:3409 dcacdbdabdcacbcdabacadac:3461 dcacdbdadbcacbcdabacadac:3461 dcdbdcdabdcacbcdabacadac:1848 dcdbdcdadbcacbcdabacadac:1848 
+49 | R | 9 | 
+50 | L | 6 | 32 local kills. Max Kill K=29 vs k+22=47 (CROSSED SEED!)
+  Left states: adcdbdcdadbcacbcdabacadac:2434 bdcacdbdabdcacbcdabacadac:4275 bdcacdbdadbcacbcdabacadac:4275 cacbadcdadbcacbcdabacadac:5374 cdcacdbdabdcacbcdabacadac:4778 cdcacdbdadbcacbcdabacadac:4778 
+51 | R | 6 | 
+52 | L | 7 | 21 local kills. Max Kill K=25 vs k+22=48 (CROSSED SEED!)
+  Left states: acdcacdbdabdcacbcdabacadac:6093 acdcacdbdadbcacbcdabacadac:6093 bcdcacdbdabdcacbcdabacadac:3817 bcdcacdbdadbcacbcdabacadac:3817 cadcdbdcdadbcacbcdabacadac:3039 cbdcacdbdabdcacbcdabacadac:3811 cbdcacdbdadbcacbcdabacadac:3811 
+53 | R | 7 | 
+54 | L | 8 | 27 local kills. Max Kill K=38 vs k+22=49 (CROSSED SEED!)
+  Left states: acadcdbdcdadbcacbcdabacadac:4143 bcadcdbdcdadbcacbcdabacadac:4121 cbcdcacdbdabdcacbcdabacadac:5420 cbcdcacdbdadbcacbcdabacadac:5420 dbcdcacdbdabdcacbcdabacadac:5420 dbcdcacdbdadbcacbcdabacadac:5420 dcbdcacdbdabdcacbcdabacadac:5321 dcbdcacdbdadbcacbcdabacadac:5321 
+55 | R | 8 | 
+56 | L | 10 | 32 local kills. Max Kill K=39 vs k+22=50 (CROSSED SEED!)
+  Left states: bdbcdcacdbdabdcacbcdabacadac:6803 bdbcdcacdbdadbcacbcdabacadac:6803 cbcadcdbdcdadbcacbcdabacadac:5400 cdbcdcacdbdabdcacbcdabacadac:7009 cdbcdcacdbdadbcacbcdabacadac:7009 cdcbdcacdbdabdcacbcdabacadac:6931 cdcbdcacdbdadbcacbcdabacadac:6931 dbcadcdbdcdadbcacbcdabacadac:5474 dcbcdcacdbdabdcacbcdabacadac:7004 dcbcdcacdbdadbcacbcdabacadac:7004 
+57 | R | 10 | 
+58 | L | 10 | 39 local kills. Max Kill K=39 vs k+22=51 (CROSSED SEED!)
+  Left states: abdbcdcacdbdabdcacbcdabacadac:9451 abdbcdcacdbdadbcacbcdabacadac:9451 acbcadcdbdcdadbcacbcdabacadac:7479 adbcadcdbdcdadbcacbcdabacadac:7568 cdbcadcdbdcdadbcacbcdabacadac:7520 cdcbcdcacdbdabdcacbcdabacadac:9796 cdcbcdcacdbdadbcacbcdabacadac:9796 dcbcadcdbdcdadbcacbcdabacadac:7453 dcdbcdcacdbdabdcacbcdabacadac:9762 dcdbcdcacdbdadbcacbcdabacadac:9762 
+59 | R | 10 | 
+60 | L | 7 | 38 local kills. Max Kill K=40 vs k+22=52 (CROSSED SEED!)
+  Left states: acdcbcdcacdbdabdcacbcdabacadac:13273 acdcbcdcacdbdadbcacbcdabacadac:13273 bcdbcadcdbdcdadbcacbcdabacadac:9836 bdcbcadcdbdcdadbcacbcdabacadac:9700 cabdbcdcacdbdabdcacbcdabacadac:12631 cabdbcdcacdbdadbcacbcdabacadac:12631 cdcbcadcdbdcdadbcacbcdabacadac:10303 
+61 | R | 7 | 
+62 | L | 11 | 25 local kills. Max Kill K=41 vs k+22=53 (CROSSED SEED!)
+  Left states: acabdbcdcacdbdadbcacbcdabacadac:16527 bcabdbcdcacdbdabdcacbcdabacadac:15651 bcabdbcdcacdbdadbcacbcdabacadac:15651 bcdcbcadcdbdcdadbcacbcdabacadac:13057 cacdcbcdcacdbdabdcacbcdabacadac:17323 cacdcbcdcacdbdadbcacbcdabacadac:17323 cbcdbcadcdbdcdadbcacbcdabacadac:12872 cbdcbcadcdbdcdadbcacbcdabacadac:12732 dacdcbcdcacdbdabdcacbcdabacadac:17320 dacdcbcdcacdbdadbcacbcdabacadac:17320 dbdcbcadcdbdcdadbcacbcdabacadac:12766 
+63 | R | 11 | 
+64 | L | 12 | 42 local kills. Max Kill K=42 vs k+22=54 (CROSSED SEED!)
+  Left states: abcabdbcdcacdbdabdcacbcdabacadac:20762 abcabdbcdcacdbdadbcacbcdabacadac:20762 adacdcbcdcacdbdabdcacbcdabacadac:24050 adacdcbcdcacdbdadbcacbcdabacadac:24050 adbdcbcadcdbdcdadbcacbcdabacadac:18178 bacabdbcdcacdbdadbcacbcdabacadac:21658 bcbdcbcadcdbdcdadbcacbcdabacadac:16301 bdacdcbcdcacdbdabdcacbcdabacadac:23729 bdacdcbcdcacdbdadbcacbcdabacadac:23729 cbcabdbcdcacdbdabdcacbcdabacadac:21387 cbcabdbcdcacdbdadbcacbcdabacadac:21387 cbcdcbcadcdbdcdadbcacbcdabacadac:18530 
+65 | R | 12 | 
+66 | L | 9 | 47 local kills. Max Kill K=43 vs k+22=55 (CROSSED SEED!)
+  Left states: abacabdbcdcacdbdadbcacbcdabacadac:29545 babcabdbcdcacdbdabdcacbcdabacadac:26847 babcabdbcdcacdbdadbcacbcdabacadac:26847 badbdcbcadcdbdcdadbcacbcdabacadac:24918 dabcabdbcdcacdbdabdcacbcdabacadac:27953 dabcabdbcdcacdbdadbcacbcdabacadac:27953 dbacabdbcdcacdbdadbcacbcdabacadac:29439 dbdacdcbcdcacdbdabdcacbcdabacadac:32323 dbdacdcbcdcacdbdadbcacbcdabacadac:32323 
+67 | R | 9 | 
+68 | L | 6 | 34 local kills. Max Kill K=45 vs k+22=56 (CROSSED SEED!)
+  Left states: abadbdcbcadcdbdcdadbcacbcdabacadac:34352 adbdacdcbcdcacdbdabdcacbcdabacadac:43727 adbdacdcbcdcacdbdadbcacbcdabacadac:43727 cabacabdbcdcacdbdadbcacbcdabacadac:39990 cdbdacdcbcdcacdbdabdcacbcdabacadac:43524 cdbdacdcbcdcacdbdadbcacbcdabacadac:43524 
+69 | R | 6 | 
+70 | L | 4 | 24 local kills. Max Kill K=45 vs k+22=57 (CROSSED SEED!)
+  Left states: acdbdacdcbcdcacdbdadbcacbcdabacadac:62010 cadbdacdcbcdcacdbdadbcacbcdabacadac:62259 dcdbdacdcbcdcacdbdabdcacbcdabacadac:61596 dcdbdacdcbcdcacdbdadbcacbcdabacadac:61596 
+71 | R | 4 | 
+72 | L | 4 | 15 local kills. Max Kill K=46 vs k+22=58 (CROSSED SEED!)
+  Left states: acadbdacdcbcdcacdbdadbcacbcdabacadac:86579 bdcdbdacdcbcdcacdbdabdcacbcdabacadac:81365 bdcdbdacdcbcdcacdbdadbcacbcdabacadac:81365 cacdbdacdcbcdcacdbdadbcacbcdabacadac:85570 
+73 | R | 4 | 
+74 | L | 4 | 16 local kills. Max Kill K=47 vs k+22=59 (CROSSED SEED!)
+  Left states: bacadbdacdcbcdcacdbdadbcacbcdabacadac:119684 bcacdbdacdcbcdcacdbdadbcacbcdabacadac:117981 dbdcdbdacdcbcdcacdbdabdcacbcdabacadac:109902 dbdcdbdacdcbcdcacdbdadbcacbcdabacadac:109902 
+75 | R | 4 | 
+76 | L | 1 | 15 local kills. Max Kill K=15 vs k+22=60
+  Left states: abacadbdacdcbcdcacdbdadbcacbcdabacadac:166316 
+77 | R | 1 | 
+78 | L | 1 | 4 local kills. Max Kill K=49 vs k+22=61 (CROSSED SEED!)
+  Left states: dabacadbdacdcbcdcacdbdadbcacbcdabacadac:233187 
+79 | R | 1 | 
+80 | L | 2 | 3 local kills. Max Kill K=50 vs k+22=62 (CROSSED SEED!)
+  Left states: adabacadbdacdcbcdcacdbdadbcacbcdabacadac:324829 cdabacadbdacdcbcdcacdbdadbcacbcdabacadac:324773 
+81 | R | 2 | 
+82 | L | 1 | 8 local kills. Max Kill K=51 vs k+22=63 (CROSSED SEED!)
+  Left states: bcdabacadbdacdcbcdcacdbdadbcacbcdabacadac:445441 
+83 | R | 1 | 
+84 | L | 1 | 4 local kills. Max Kill K=52 vs k+22=64 (CROSSED SEED!)
+  Left states: cbcdabacadbdacdcbcdcacdbdadbcacbcdabacadac:611063 
+85 | R | 1 | 
+86 | L | 2 | 4 local kills. Max Kill K=53 vs k+22=65 (CROSSED SEED!)
+  Left states: acbcdabacadbdacdcbcdcacdbdadbcacbcdabacadac:840455 dcbcdabacadbdacdcbcdcacdbdadbcacbcdabacadac:838832 
+87 | R | 2 | 
+88 | L | 2 | 8 local kills. Max Kill K=54 vs k+22=66 (CROSSED SEED!)
+  Left states: bacbcdabacadbdacdcbcdcacdbdadbcacbcdabacadac:1150470 cacbcdabacadbdacdcbcdcacdbdadbcacbcdabacadac:1151995 
+89 | R | 2 | 
+90 | L | 2 | 8 local kills. Max Kill K=55 vs k+22=67 (CROSSED SEED!)
+  Left states: bcacbcdabacadbdacdcbcdcacdbdadbcacbcdabacadac:1578126 cbacbcdabacadbdacdcbcdcacdbdadbcacbcdabacadac:1576084 
+91 | R | 2 | 
+92 | L | 4 | 8 local kills. Max Kill K=56 vs k+22=68 (CROSSED SEED!)
+  Left states: bcbacbcdabacadbdacdcbcdcacdbdadbcacbcdabacadac:2012341 cbcacbcdabacadbdacdcbcdcacdbdadbcacbcdabacadac:2154638 dbcacbcdabacadbdacdcbcdcacdbdadbcacbcdabacadac:2151787 dcbacbcdabacadbdacdcbcdcacdbdadbcacbcdabacadac:2148032 
+93 | R | 4 | 
+94 | L | 2 | 16 local kills. Max Kill K=42 vs k+22=69 (CROSSED SEED!)
+  Left states: adbcacbcdabacadbdacdcbcdcacdbdadbcacbcdabacadac:2891689 adcbacbcdabacadbdacdcbcdcacdbdadbcacbcdabacadac:2887582 
+95 | R | 2 | 
+96 | L | 0 | 8 local kills. Max Kill K=11 vs k+22=70
+  Left states: 

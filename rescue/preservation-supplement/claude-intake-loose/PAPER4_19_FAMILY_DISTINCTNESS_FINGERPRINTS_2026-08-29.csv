@@ -1,0 +1,20 @@
+family,symbolic distinguishing fingerprint
+E,only zero signature
+Zs-A,all moments 0; zero absent; nonempty witness -2e2+e4
+Z-A,all moments 0; zero present; nonzero witness -2e1+e2
+P-A,all moments exactly -L
+M-A,all moments exactly +L
+Z-O,unary +1; zero present; e_(L-1) present
+P-O,unary +1; zero present; e_(L-1) absent
+M-O,unary +1; zero absent
+Z-C,unary -2; zero present; -2e_(L-1) present
+P-C,unary -2; zero absent
+M-C,unary -2; zero present; -2e_(L-1) absent
+Z-M,"mixed (+1,-2); moment range [-(L-1),0]"
+P-M,"mixed (+1,-2); moments <= -L; tau_P present"
+Pt-M,"mixed (+1,-2); moments <= -L; tau_P absent"
+M-M,"mixed (+1,-2); positive moments; e1 present"
+Mt-M,"mixed (+1,-2); positive moments; e1 absent"
+Z-OO,nonnegative OO; moments occur below and above L
+P-OO,nonnegative OO; every moment <= L-2
+M-OO,nonnegative OO; every moment >= L

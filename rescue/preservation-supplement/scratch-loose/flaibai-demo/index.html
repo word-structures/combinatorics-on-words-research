@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flaibai - Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e1e;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            margin-bottom: 5px;
+            color: #4CAF50;
+        }
+        p.instructions {
+            margin-bottom: 20px;
+            color: #ccc;
+            text-align: center;
+            max-width: 500px;
+        }
+        #game-board {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px);
+            gap: 5px;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .cell {
+            width: 50px;
+            height: 50px;
+            background-color: #444;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s ease;
+        }
+        .cell:hover { background-color: #555; }
+        .cell.selected {
+            border: 3px solid #ffeb3b;
+            box-sizing: border-box;
+            background-color: #666;
+        }
+        
+        /* Symbol Colors */
+        .symbol-a { color: #ff5252; text-shadow: 0 0 5px #ff5252; }
+        .symbol-b { color: #448aff; text-shadow: 0 0 5px #448aff; }
+        .symbol-c { color: #69f0ae; text-shadow: 0 0 5px #69f0ae; }
+        .symbol-square { color: #ffeb3b; text-shadow: 0 0 10px #ffeb3b; font-size: 30px; animation: pulse 1s infinite alternate;}
+        
+        .door { background-color: #795548; color: transparent; border: 2px dashed #ffeb3b;}
+        .door.open { background-color: #8bc34a; border: 2px solid #8bc34a; color: white;}
+        .wall { background-color: #222; cursor: not-allowed; }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        #message {
+            margin-top: 20px;
+            height: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffeb3b;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+
+    <h1>Flaibai</h1>
+    <p class="instructions">
+        Siirrä symboleita (A, B) tyhjiin ruutuihin klikkaamalla niitä ja sitten kohderuutua.<br>
+        Tavoite: Muodosta <strong>Abelin neliö</strong> (esim. AB vierekkäin BA) luodaksesi Neliön (🔲). Siirrä Neliö sitten Ovelle (Ruskea ruutu) voittaaksesi!
+    </p>
+
+    <div id="game-board"></div>
+    <div id="message"></div>
+    <button onclick="initLevel()">Nollaa Kenttä</button>
+
+    <script>
+        const BOARD_SIZE = 8;
+        let board = [];
+        let selectedCell = null;
+        
+        const initialMap = [
+            ['W','W','W','W','W','W','W','W'],
+            ['W','0','A','0','B','0','0','W'],
+            ['W','0','0','0','0','0','0','W'],
+            ['W','0','A','0','0','0','D','W'],
+            ['W','0','0','0','0','0','0','W'],
+            ['W','B','0','0','0','0','0','W'],
+            ['W','0','0','0','0','0','0','W'],
+            ['W','W','W','W','W','W','W','W'],
+        ];
+
+        function initLevel() {
+            board = JSON.parse(JSON.stringify(initialMap));
+            selectedCell = null;
+            document.getElementById('message').innerText = "";
+            renderBoard();
+        }
+
+        function renderBoard() {
+            const container = document.getElementById('game-board');
+            container.innerHTML = '';
+            for (let r = 0; r < BOARD_SIZE; r++) {
+                for (let c = 0; c < BOARD_SIZE; c++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'cell';
+                    
+                    const val = board[r][c];
+                    if (val === 'W') cell.classList.add('wall');
+                    else if (val === 'D') cell.classList.add('door');
+                    else if (val === 'A') { cell.innerText = 'A'; cell.classList.add('symbol-a'); }
+                    else if (val === 'B') { cell.innerText = 'B'; cell.classList.add('symbol-b'); }
+                    else if (val === 'S') { cell.innerText = '🔲'; cell.classList.add('symbol-square'); }
+
+                    if (selectedCell && selectedCell.r === r && selectedCell.c === c) {
+                        cell.classList.add('selected');
+                    }
+
+                    cell.onclick = () => handleCellClick(r, c);
+                    container.appendChild(cell);
+                }
+            }
+        }
+
+        function handleCellClick(r, c) {
+            const val = board[r][c];
+
+            if (selectedCell && selectedCell.r === r && selectedCell.c === c) {
+                selectedCell = null;
+                renderBoard();
+                return;
+            }
+
+            if (!selectedCell) {
+                if (['A', 'B', 'S'].includes(val)) {
+                    selectedCell = {r, c};
+                }
+            } 
+            else {
+                if (val === '0' || (val === 'D' && board[selectedCell.r][selectedCell.c] === 'S')) {
+                    const sr = selectedCell.r;
+                    const sc = selectedCell.c;
+                    const movedItem = board[sr][sc];
+
+                    if (val === 'D' && movedItem === 'S') {
+                        board[sr][sc] = '0';
+                        board[r][c] = '0';
+                        document.getElementById('message').innerText = "Taso läpäisty! Ovi aukesi neliön avulla.";
+                        selectedCell = null;
+                        renderBoard();
+                        const cells = document.querySelectorAll('.cell');
+                        cells[r * BOARD_SIZE + c].classList.add('open');
+                        cells[r * BOARD_SIZE + c].innerText = "✔";
+                        return;
+                    }
+
+                    board[r][c] = movedItem;
+                    board[sr][sc] = '0';
+                    selectedCell = null;
+                    checkForSymmetry();
+                } else if (['A', 'B', 'S'].includes(val)) {
+                    selectedCell = {r, c};
+                }
+            }
+            renderBoard();
+        }
+
+        function checkForSymmetry() {
+            let found = false;
+            for (let r = 0; r < BOARD_SIZE; r++) {
+                let rowStr = "";
+                for (let c = 0; c < BOARD_SIZE; c++) rowStr += (board[r][c] === '0' || board[r][c] === 'W' || board[r][c] === 'D' || board[r][c] === 'S') ? ' ' : board[r][c];
+                if(checkLine(rowStr, r, true)) found = true;
+            }
+            for (let c = 0; c < BOARD_SIZE; c++) {
+                let colStr = "";
+                for (let r = 0; r < BOARD_SIZE; r++) colStr += (board[r][c] === '0' || board[r][c] === 'W' || board[r][c] === 'D' || board[r][c] === 'S') ? ' ' : board[r][c];
+                if(checkLine(colStr, c, false)) found = true;
+            }
+            if (found) document.getElementById('message').innerText = "Täydellinen Abelin symmetria löydetty! Syntyi neliö.";
+        }
+
+        function checkLine(str, lineIndex, isRow) {
+            let sequence = [];
+            for (let i=0; i<str.length; i++) {
+                if (str[i] !== ' ') sequence.push({ char: str[i], pos: i });
+            }
+
+            for (let len = 2; len <= sequence.length; len += 2) {
+                for (let i = 0; i <= sequence.length - len; i++) {
+                    let isContiguous = true;
+                    for (let j = 0; j < len - 1; j++) {
+                        if (sequence[i+j+1].pos - sequence[i+j].pos !== 1) {
+                            isContiguous = false; break;
+                        }
+                    }
+                    if (!isContiguous) continue;
+
+                    const half = len / 2;
+                    const firstHalf = sequence.slice(i, i + half).map(s => s.char);
+                    const secondHalf = sequence.slice(i + half, i + len).map(s => s.char);
+
+                    if (isAbelianSquare(firstHalf, secondHalf)) {
+                        triggerShapeForging(sequence, i, len, lineIndex, isRow);
+                        return true; 
+                    }
+                }
+            }
+            return false;
+        }
+
+        function isAbelianSquare(arr1, arr2) {
+            const counts1 = {}; const counts2 = {};
+            arr1.forEach(c => counts1[c] = (counts1[c] || 0) + 1);
+            arr2.forEach(c => counts2[c] = (counts2[c] || 0) + 1);
+            const keys = new Set([...Object.keys(counts1), ...Object.keys(counts2)]);
+            for (let k of keys) {
+                if (counts1[k] !== counts2[k]) return false;
+            }
+            return true;
+        }
+
+        function triggerShapeForging(sequence, startIndex, length, lineIndex, isRow) {
+            for (let j = 0; j < length; j++) {
+                let pos = sequence[startIndex + j].pos;
+                if (isRow) board[lineIndex][pos] = '0';
+                else board[pos][lineIndex] = '0';
+            }
+            let midPos = sequence[startIndex + Math.floor(length/2) - 1].pos;
+            if (isRow) board[lineIndex][midPos] = 'S';
+            else board[midPos][lineIndex] = 'S';
+        }
+
+        initLevel();
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+COPIED: PAPER4_CURRENT_CANONICAL_CHECKPOINT_v0.30_2026-08-27.md -> paper4-v030-audit/00-canonical
+COPIED: PAPER4_CONTEXT_RECOVERY_MANIFEST_v2.3_2026-08-27.md -> paper4-v030-audit/00-canonical
+COPIED: PAPER4_AF_TO_ABDEF_FULL_NOC_EXPORT_ABFE_v3.cpp -> paper4-v030-audit/30-source-verifiers
+COPIED: PAPER4_DF_HAMMING4_D_POOL_v1.cpp -> paper4-v030-audit/30-source-verifiers
+COPIED: PAPER4_702_CHUNK_RESULTS.json -> paper4-v030-audit/20-data-outputs
+COPIED: PAPER4_702_151_200_SUB_RESULTS.json -> paper4-v030-audit/20-data-outputs
+COPIED: PAPER4_702_ABFE_DISTRIBUTION.txt -> paper4-v030-audit/20-data-outputs
+COPIED: PAPER4_BDFFIRST_CORE1_E100_OUTPUT.txt -> paper4-v030-audit/20-data-outputs
+COPIED: PAPER4_BDFFIRST_CORE1_E100_A_RESULTS.json -> paper4-v030-audit/20-data-outputs
+COPIED: PAPER4_BDFFIRST_UNIQ_CORE23_E_RESULTS.json -> paper4-v030-audit/20-data-outputs
+COPIED: PAPER4_BDFFIRST_UNIQ_CORE23_A_RESULTS.json -> paper4-v030-audit/20-data-outputs
+COPIED: PAPER4_DF_H4_DPOOL_RESULTS.json -> paper4-v030-audit/20-data-outputs
+COPIED: PAPER4_DLOCAL_B_RESULTS.json -> paper4-v030-audit/20-data-outputs
+COPIED: PAPER4_DLOCAL_BDF_E_RESULTS.json -> paper4-v030-audit/20-data-outputs
+COPIED: PAPER4_DLOCAL_BDEF_A_RESULTS.json -> paper4-v030-audit/20-data-outputs
+COPIED: PAPER4_DEFGRID_8x100_OUTPUT.txt -> paper4-v030-audit/20-data-outputs
+RECOVERY COPY DONE

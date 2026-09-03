@@ -1,0 +1,10 @@
+quantity,value,status
+alpha,0.4444444444444444,exact from uniform one-letter marginal
+A = ||pi_dot F||_1,0.19930788429058796,Float64 analytic perturbation
+beta = max row l1(P_dot),1.2002934382410961,Float64 analytic perturbation
+S_10,-0.020525648001916526,analytic derivative prefix
+S_15,-0.009312298559043069,analytic derivative prefix
+S_40,-0.007331884079098497,analytic derivative prefix
+S_80,-0.007337326059004186,analytic derivative prefix
+B_80 safe,0.002169750080719504,outward-rounded Dobrushin candidate
+S_80+B_80,-0.005167575978284682,strict negative margin
