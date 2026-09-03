@@ -1,0 +1,37 @@
+{
+  "battery_freeze_sha256": "caa71b1cd6180476734c3f1d9808a2f817b2cf07767e33129deef6136b5a5cb4",
+  "residual_stage_sha256": "b6254e879f39f22e8db6a221bf3be5403415fe609417ffbeb3e599e13fa5b888",
+  "stage": "PREDICTIONS_FROZEN_BEFORE_RESPONSE_REVEAL",
+  "h8_touched": false,
+  "decision_rule": "NEGATIVE_CERTIFIED only if certified E_PEXC4 > certified C_rest; otherwise INCONCLUSIVE",
+  "predictions": {
+    "H04": {
+      "prediction": "INCONCLUSIVE",
+      "E_PEXC4_lower_float64": 0.0011822147303235503,
+      "C_rest_prefix_0_140_float64": 0.005737578874372031,
+      "last20_abs_response_mass": 9.869097781830164e-12,
+      "rigorous_tail_bound_available": false,
+      "reason": "Frozen rule requires a rigorous residual upper bound. The current residual calculation is Float64 diagnostic only."
+    },
+    "H05": {
+      "prediction": "INCONCLUSIVE",
+      "E_PEXC4_lower_float64": 0.002125427761396339,
+      "C_rest_prefix_0_140_float64": -0.003028149448149657,
+      "last20_abs_response_mass": 7.415411062240662e-12,
+      "rigorous_tail_bound_available": false,
+      "reason": "Frozen rule requires a rigorous residual upper bound. The current residual calculation is Float64 diagnostic only."
+    },
+    "H06": {
+      "prediction": "INCONCLUSIVE",
+      "E_PEXC4_lower_float64": 0.00024437869108123327,
+      "C_rest_prefix_0_140_float64": -0.002044536648664485,
+      "last20_abs_response_mass": 1.0223521992469092e-12,
+      "rigorous_tail_bound_available": false,
+      "reason": "Frozen rule requires a rigorous residual upper bound. The current residual calculation is Float64 diagnostic only."
+    },
+    "H07": {
+      "prediction": "EMPTY_TARGET",
+      "reason": "Preregistered target has zero baseline mass; preserved, not substituted."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "battery_freeze_sha256": "a3d5fa59e7e61f818a19b4a7c885a61754cfbd98049f1405a9f3ffc5d9092ff6",
+  "stage": "PREDICTIONS_FROZEN_BEFORE_RESPONSE_REVEAL",
+  "h8_touched": false,
+  "decision_rule": "NEGATIVE_CERTIFIED only if a certified E_PEX lower bound exceeds a certified C_rest upper bound; otherwise INCONCLUSIVE",
+  "predictions": {
+    "H01": {
+      "target": "h6 profile (2,2,2), x0=x1",
+      "mechanism_artifact_sha256": "5069c92d8cac83343fa3cc7e7bc0619802b340d1cb62549233cf5f37673d3359",
+      "E_PEX_float64": 0.00042506304139939573,
+      "certified_residual_bound_available": false,
+      "prediction": "INCONCLUSIVE",
+      "reason": "Frozen protocol forbids upgrading a Float64 mechanism score without a certified residual closure."
+    },
+    "H02": {
+      "target": "h6 profile (3,2,1), x0=x1",
+      "mechanism_artifact_sha256": "57ca131f45792116f11893de7577772d080b5d301f3126a9fec594b302036c6a",
+      "E_PEX_float64": 0.001344429774658612,
+      "certified_residual_bound_available": false,
+      "prediction": "INCONCLUSIVE",
+      "reason": "No certified C_rest < E_PEX was established before reveal."
+    },
+    "H03": {
+      "target": "h6 profile (4,1,1), x0=x1",
+      "mechanism_artifact_sha256": "f0022f8c439c957d773ab1801edf5afee70abb6d5e73cc951d8d88090d289615",
+      "prediction": "EMPTY_TARGET",
+      "reason": "No baseline target edges satisfy the frozen positional subevent; target is preserved and not substituted."
+    }
+  }
+}

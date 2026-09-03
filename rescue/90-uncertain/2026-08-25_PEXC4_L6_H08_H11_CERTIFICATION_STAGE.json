@@ -1,0 +1,2942 @@
+{
+  "H08": {
+    "status": "CERTIFIED_STAGE_COMPLETE",
+    "profile": [
+      3,
+      2,
+      2
+    ],
+    "target_probability_proxy": 0.0042947792739518945,
+    "target_probability_reversed_proxy": 0.004294779273951899,
+    "target_edges_orig": 318,
+    "target_edges_rev": 318,
+    "placements_count": 56,
+    "positive_PEXC4_placements": 20,
+    "E_PEXC4_safe_lower": "0.0008298720953812291045316133797515149200000000000000000000000000000000001",
+    "selected_actual_mechanism_proxy": 0.0008743916117030038,
+    "C_rest_prefix400_proxy": 0.003335895471231393,
+    "C_rest_true_upper_candidate": "0.00408589547269290320775153536035666868822632726319067678539231916602468",
+    "criterion_response_upper_candidate": "0.003256023377311674103219921980605153768226327263190676785392319166024680",
+    "prediction": "INCONCLUSIVE",
+    "response_not_revealed": true,
+    "placements": [
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 0,
+        "post_target_distance": 2,
+        "cells": 372,
+        "conditional_same_floor_proxy": 0.25790885677674713,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.06635225466547245
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 1,
+        "post_target_distance": 3,
+        "cells": 780,
+        "conditional_same_floor_proxy": 0.33447187275958823,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.010210761317368644
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 2,
+        "post_target_distance": 4,
+        "cells": 1038,
+        "conditional_same_floor_proxy": 0.3284260159015787,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.004164904459359131
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 3,
+        "post_target_distance": 5,
+        "cells": 1770,
+        "conditional_same_floor_proxy": 0.28980921643561186,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.034451895006607725
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 4,
+        "post_target_distance": 6,
+        "cells": 2631,
+        "conditional_same_floor_proxy": 0.3082707925547734,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.015990318887446175
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 5,
+        "post_target_distance": 7,
+        "cells": 3402,
+        "conditional_same_floor_proxy": 0.3162118179485714,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.00804929349364819
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 6,
+        "post_target_distance": 8,
+        "cells": 4371,
+        "conditional_same_floor_proxy": 0.3111129918508359,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.013148119591383678
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 7,
+        "post_target_distance": 9,
+        "cells": 5250,
+        "conditional_same_floor_proxy": 0.31084828215467664,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.013412829287542949
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 8,
+        "post_target_distance": 10,
+        "cells": 6174,
+        "conditional_same_floor_proxy": 0.324358198303169,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 9.708686094939134e-05
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 9,
+        "post_target_distance": 11,
+        "cells": 6948,
+        "conditional_same_floor_proxy": 0.32135564087372226,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.002905470568497326
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 10,
+        "post_target_distance": 12,
+        "cells": 7206,
+        "conditional_same_floor_proxy": 0.3270969601263538,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.0028358486841342234
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 11,
+        "post_target_distance": 13,
+        "cells": 7275,
+        "conditional_same_floor_proxy": 0.32505633049212684,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.0007952190499072587
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 12,
+        "post_target_distance": 14,
+        "cells": 7290,
+        "conditional_same_floor_proxy": 0.3273266258604615,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.0030655144182419325
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 13,
+        "post_target_distance": 15,
+        "cells": 7299,
+        "conditional_same_floor_proxy": 0.32250750716580956,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.0017536042764100257
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 0,
+        "post_target_distance": 2,
+        "cells": 141,
+        "conditional_same_floor_proxy": 0.3999753495329371,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.07571423809071753
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 1,
+        "post_target_distance": 3,
+        "cells": 294,
+        "conditional_same_floor_proxy": 0.31970640165307657,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.004554709789143019
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 2,
+        "post_target_distance": 4,
+        "cells": 528,
+        "conditional_same_floor_proxy": 0.29877408374909536,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.02548702769312422
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 3,
+        "post_target_distance": 5,
+        "cells": 717,
+        "conditional_same_floor_proxy": 0.287827104186106,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.036434007256113565
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 4,
+        "post_target_distance": 6,
+        "cells": 999,
+        "conditional_same_floor_proxy": 0.31089913435464417,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.013361977087575416
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 5,
+        "post_target_distance": 7,
+        "cells": 1488,
+        "conditional_same_floor_proxy": 0.32693241633445214,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.002671304892232551
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 6,
+        "post_target_distance": 8,
+        "cells": 1959,
+        "conditional_same_floor_proxy": 0.30493466582070605,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.019326445621513533
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 7,
+        "post_target_distance": 9,
+        "cells": 2325,
+        "conditional_same_floor_proxy": 0.3048037567606663,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.019457354681553296
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 8,
+        "post_target_distance": 10,
+        "cells": 3789,
+        "conditional_same_floor_proxy": 0.31535665979119953,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.008904451651020051
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 9,
+        "post_target_distance": 11,
+        "cells": 4509,
+        "conditional_same_floor_proxy": 0.3074162594344367,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.016844852007782907
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 10,
+        "post_target_distance": 12,
+        "cells": 5760,
+        "conditional_same_floor_proxy": 0.33341460272426615,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.009153491282046566
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 11,
+        "post_target_distance": 13,
+        "cells": 6126,
+        "conditional_same_floor_proxy": 0.33629999661289933,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.012038885170679747
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 12,
+        "post_target_distance": 14,
+        "cells": 6861,
+        "conditional_same_floor_proxy": 0.31960791340971545,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.0046531980325041356
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 13,
+        "post_target_distance": 15,
+        "cells": 7176,
+        "conditional_same_floor_proxy": 0.32637499420251614,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.0021138827602965593
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 0,
+        "post_target_distance": 3,
+        "cells": 630,
+        "conditional_same_floor_proxy": 0.3153610395137066,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.016727661331948362
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 1,
+        "post_target_distance": 4,
+        "cells": 1461,
+        "conditional_same_floor_proxy": 0.3512127312807582,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.019124030435103245
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 2,
+        "post_target_distance": 5,
+        "cells": 1431,
+        "conditional_same_floor_proxy": 0.34050162691282904,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.008412926067174087
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 3,
+        "post_target_distance": 6,
+        "cells": 2880,
+        "conditional_same_floor_proxy": 0.3202133014224513,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.011875399423203647
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 4,
+        "post_target_distance": 7,
+        "cells": 3420,
+        "conditional_same_floor_proxy": 0.3241520325527346,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.007936668292920335
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 5,
+        "post_target_distance": 8,
+        "cells": 4371,
+        "conditional_same_floor_proxy": 0.3118558294430729,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.020232871402582064
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 6,
+        "post_target_distance": 9,
+        "cells": 5454,
+        "conditional_same_floor_proxy": 0.3116658267787088,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.02042287406694615
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 7,
+        "post_target_distance": 10,
+        "cells": 6237,
+        "conditional_same_floor_proxy": 0.31502192567704174,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.017066775168613213
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 8,
+        "post_target_distance": 11,
+        "cells": 6975,
+        "conditional_same_floor_proxy": 0.3251027335517763,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.0069859672938786255
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 9,
+        "post_target_distance": 12,
+        "cells": 7233,
+        "conditional_same_floor_proxy": 0.3310288415052943,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.001059859340360625
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 10,
+        "post_target_distance": 13,
+        "cells": 7338,
+        "conditional_same_floor_proxy": 0.33187442840875275,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.00021427243690219644
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 11,
+        "post_target_distance": 14,
+        "cells": 7365,
+        "conditional_same_floor_proxy": 0.33431687955884715,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.002228178713192197
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 12,
+        "post_target_distance": 15,
+        "cells": 7365,
+        "conditional_same_floor_proxy": 0.3352581523022631,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.00316945145660813
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 13,
+        "post_target_distance": 16,
+        "cells": 7371,
+        "conditional_same_floor_proxy": 0.3280381598492292,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.004050540996425767
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 0,
+        "post_target_distance": 3,
+        "cells": 225,
+        "conditional_same_floor_proxy": 0.44609677913605056,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.11400807829039561
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 1,
+        "post_target_distance": 4,
+        "cells": 573,
+        "conditional_same_floor_proxy": 0.3227245562776057,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.009364144568049237
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 2,
+        "post_target_distance": 5,
+        "cells": 735,
+        "conditional_same_floor_proxy": 0.33333670734924015,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.0012480065035851973
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 3,
+        "post_target_distance": 6,
+        "cells": 1173,
+        "conditional_same_floor_proxy": 0.312888360385282,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.019200340460372944
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 4,
+        "post_target_distance": 7,
+        "cells": 1434,
+        "conditional_same_floor_proxy": 0.33030401384617364,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.0017846869994813108
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 5,
+        "post_target_distance": 8,
+        "cells": 2484,
+        "conditional_same_floor_proxy": 0.3354603254507382,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.0033716246050832233
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 6,
+        "post_target_distance": 9,
+        "cells": 3051,
+        "conditional_same_floor_proxy": 0.30922991127665755,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.022858789568997395
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 7,
+        "post_target_distance": 10,
+        "cells": 3756,
+        "conditional_same_floor_proxy": 0.3217708467722155,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.010317854073439436
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 8,
+        "post_target_distance": 11,
+        "cells": 4872,
+        "conditional_same_floor_proxy": 0.32837226941937847,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.0037164314262764786
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 9,
+        "post_target_distance": 12,
+        "cells": 5952,
+        "conditional_same_floor_proxy": 0.3270296441848881,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.005059056660766836
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 10,
+        "post_target_distance": 13,
+        "cells": 6621,
+        "conditional_same_floor_proxy": 0.3419938275231972,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.00990512667754223
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 11,
+        "post_target_distance": 14,
+        "cells": 6765,
+        "conditional_same_floor_proxy": 0.32457504182121727,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.00751365902443768
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 12,
+        "post_target_distance": 15,
+        "cells": 7212,
+        "conditional_same_floor_proxy": 0.33762231754275795,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.005533616697103005
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 13,
+        "post_target_distance": 16,
+        "cells": 7311,
+        "conditional_same_floor_proxy": 0.3271392912350791,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.004949409610575828
+      }
+    ],
+    "selected_actual_proxy": [
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 1,
+        "K_actual_proxy": 0.010474730516559672
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 2,
+        "K_actual_proxy": 0.004560326702408246
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 8,
+        "K_actual_proxy": 0.0011667881159332372
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 10,
+        "K_actual_proxy": 0.003988791726844798
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 11,
+        "K_actual_proxy": 0.001987774157034383
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 12,
+        "K_actual_proxy": 0.004301937460510108
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 0,
+        "K_actual_proxy": 0.07571423809071753
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 5,
+        "K_actual_proxy": 0.002823461948449235
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 10,
+        "K_actual_proxy": 0.010291433324168375
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 11,
+        "K_actual_proxy": 0.013281646584054951
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 13,
+        "K_actual_proxy": 0.0032991986510151894
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 1,
+        "K_actual_proxy": 0.019768376668058862
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 2,
+        "K_actual_proxy": 0.008670344166813004
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 11,
+        "K_actual_proxy": 0.003472685074779047
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 12,
+        "K_actual_proxy": 0.004416002857041135
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 0,
+        "K_actual_proxy": 0.11400807829039566
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 2,
+        "K_actual_proxy": 0.0012480065035851973
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 5,
+        "K_actual_proxy": 0.003941128956118534
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 10,
+        "K_actual_proxy": 0.011173042042317338
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 12,
+        "K_actual_proxy": 0.0068031199973624945
+      }
+    ]
+  },
+  "H09": {
+    "status": "CERTIFIED_STAGE_COMPLETE",
+    "profile": [
+      3,
+      3,
+      1
+    ],
+    "target_probability_proxy": 0.004313964529063073,
+    "target_probability_reversed_proxy": 0.004313964529063076,
+    "target_edges_orig": 222,
+    "target_edges_rev": 222,
+    "placements_count": 56,
+    "positive_PEXC4_placements": 22,
+    "E_PEXC4_safe_lower": "0.001518527630110093295241191084094984066666666666666666666666666666666667",
+    "selected_actual_mechanism_proxy": 0.0015603572374644325,
+    "C_rest_prefix400_proxy": -0.0033129242007550568,
+    "C_rest_true_upper_candidate": "-0.00256292419929354659224846463964333131177367273680932321460768083397532",
+    "criterion_response_upper_candidate": "-0.004081451829403639887489655723738315378440339403475989881274347500641987",
+    "prediction": "NEGATIVE_CERTIFIED",
+    "response_not_revealed": true,
+    "placements": [
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 0,
+        "post_target_distance": 2,
+        "cells": 300,
+        "conditional_same_floor_proxy": 0.27074105504784196,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.053520056394377624
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 1,
+        "post_target_distance": 3,
+        "cells": 564,
+        "conditional_same_floor_proxy": 0.2994227222942861,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.02483838914793346
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 2,
+        "post_target_distance": 4,
+        "cells": 894,
+        "conditional_same_floor_proxy": 0.3113850213915477,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.012876090050671862
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 3,
+        "post_target_distance": 5,
+        "cells": 1401,
+        "conditional_same_floor_proxy": 0.35594509589760365,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.03168398445538406
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 4,
+        "post_target_distance": 6,
+        "cells": 2412,
+        "conditional_same_floor_proxy": 0.3785162261176373,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.054255114675417715
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 5,
+        "post_target_distance": 7,
+        "cells": 3372,
+        "conditional_same_floor_proxy": 0.31944584275502336,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.004815268687196228
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 6,
+        "post_target_distance": 8,
+        "cells": 4620,
+        "conditional_same_floor_proxy": 0.31659502723515426,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.007666084207065327
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 7,
+        "post_target_distance": 9,
+        "cells": 5313,
+        "conditional_same_floor_proxy": 0.311285703501215,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.012975407941004602
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 8,
+        "post_target_distance": 10,
+        "cells": 6042,
+        "conditional_same_floor_proxy": 0.31629410226301985,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.007967009179199736
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 9,
+        "post_target_distance": 11,
+        "cells": 6864,
+        "conditional_same_floor_proxy": 0.3200953319560381,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.0041657794861814645
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 10,
+        "post_target_distance": 12,
+        "cells": 7167,
+        "conditional_same_floor_proxy": 0.32375561514018675,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.0005054963020328374
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 11,
+        "post_target_distance": 13,
+        "cells": 7272,
+        "conditional_same_floor_proxy": 0.32323714532348885,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.0010239661187307347
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 12,
+        "post_target_distance": 14,
+        "cells": 7302,
+        "conditional_same_floor_proxy": 0.3272876044139312,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.003026492971711592
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 13,
+        "post_target_distance": 15,
+        "cells": 7299,
+        "conditional_same_floor_proxy": 0.3253478751762937,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.0010867637340741254
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 0,
+        "post_target_distance": 2,
+        "cells": 162,
+        "conditional_same_floor_proxy": 0.4225097018289451,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.09824859038672551
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 1,
+        "post_target_distance": 3,
+        "cells": 348,
+        "conditional_same_floor_proxy": 0.2987906214074019,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.02547049003481766
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 2,
+        "post_target_distance": 4,
+        "cells": 519,
+        "conditional_same_floor_proxy": 0.31238102779238863,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.011880083649830953
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 3,
+        "post_target_distance": 5,
+        "cells": 690,
+        "conditional_same_floor_proxy": 0.3172015666953413,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.00705954474687831
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 4,
+        "post_target_distance": 6,
+        "cells": 1179,
+        "conditional_same_floor_proxy": 0.3366005309292921,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.012339419487072512
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 5,
+        "post_target_distance": 7,
+        "cells": 1350,
+        "conditional_same_floor_proxy": 0.3512825505818516,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.02702143913963201
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 6,
+        "post_target_distance": 8,
+        "cells": 1947,
+        "conditional_same_floor_proxy": 0.36607129405137306,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.04181018260915348
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 7,
+        "post_target_distance": 9,
+        "cells": 2829,
+        "conditional_same_floor_proxy": 0.31648700121965406,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.007774110222565522
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 8,
+        "post_target_distance": 10,
+        "cells": 4197,
+        "conditional_same_floor_proxy": 0.3144572312403991,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.009803880201820492
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 9,
+        "post_target_distance": 11,
+        "cells": 5325,
+        "conditional_same_floor_proxy": 0.30542696825092563,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.01883414319129395
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 10,
+        "post_target_distance": 12,
+        "cells": 6018,
+        "conditional_same_floor_proxy": 0.321760514750995,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.002500596691224599
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 11,
+        "post_target_distance": 13,
+        "cells": 6348,
+        "conditional_same_floor_proxy": 0.32338111511104933,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.0008799963311702519
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 12,
+        "post_target_distance": 14,
+        "cells": 6972,
+        "conditional_same_floor_proxy": 0.31662003151254614,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.007641079929673444
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 13,
+        "post_target_distance": 15,
+        "cells": 7218,
+        "conditional_same_floor_proxy": 0.32728214137491873,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.0030210299326991485
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 0,
+        "post_target_distance": 3,
+        "cells": 561,
+        "conditional_same_floor_proxy": 0.30163340526013627,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.030455295585518682
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 1,
+        "post_target_distance": 4,
+        "cells": 885,
+        "conditional_same_floor_proxy": 0.31656438932557107,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.015524311520083878
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 2,
+        "post_target_distance": 5,
+        "cells": 1335,
+        "conditional_same_floor_proxy": 0.3331181999451918,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.001029499099536868
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 3,
+        "post_target_distance": 6,
+        "cells": 2235,
+        "conditional_same_floor_proxy": 0.3830642425401096,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.050975541694454674
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 4,
+        "post_target_distance": 7,
+        "cells": 3156,
+        "conditional_same_floor_proxy": 0.34429003506881717,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.012201334223162219
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 5,
+        "post_target_distance": 8,
+        "cells": 4446,
+        "conditional_same_floor_proxy": 0.3255274239063968,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.006561276939258176
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 6,
+        "post_target_distance": 9,
+        "cells": 5559,
+        "conditional_same_floor_proxy": 0.319059666826475,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.01302903401917993
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 7,
+        "post_target_distance": 10,
+        "cells": 6327,
+        "conditional_same_floor_proxy": 0.33005453900377024,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.0020341618418847074
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 8,
+        "post_target_distance": 11,
+        "cells": 6816,
+        "conditional_same_floor_proxy": 0.3202406528746658,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.01184804797098915
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 9,
+        "post_target_distance": 12,
+        "cells": 7194,
+        "conditional_same_floor_proxy": 0.33014935878208984,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.0019393420635651082
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 10,
+        "post_target_distance": 13,
+        "cells": 7344,
+        "conditional_same_floor_proxy": 0.33544596624702794,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.0033572654013729886
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 11,
+        "post_target_distance": 14,
+        "cells": 7368,
+        "conditional_same_floor_proxy": 0.32928973666994504,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.002798964175709906
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 12,
+        "post_target_distance": 15,
+        "cells": 7377,
+        "conditional_same_floor_proxy": 0.3342660127774979,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.0021773119318429512
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 13,
+        "post_target_distance": 16,
+        "cells": 7371,
+        "conditional_same_floor_proxy": 0.33269362356807763,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.000604922722422685
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 0,
+        "post_target_distance": 3,
+        "cells": 276,
+        "conditional_same_floor_proxy": 0.449795480098229,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.11770677925257406
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 1,
+        "post_target_distance": 4,
+        "cells": 573,
+        "conditional_same_floor_proxy": 0.3169218567910451,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.01516684405460983
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 2,
+        "post_target_distance": 5,
+        "cells": 795,
+        "conditional_same_floor_proxy": 0.334094088277459,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.002005387431804062
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 3,
+        "post_target_distance": 6,
+        "cells": 1056,
+        "conditional_same_floor_proxy": 0.3383643799741612,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.00627567912850624
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 4,
+        "post_target_distance": 7,
+        "cells": 1719,
+        "conditional_same_floor_proxy": 0.34364748291731756,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.01155878207166261
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 5,
+        "post_target_distance": 8,
+        "cells": 1962,
+        "conditional_same_floor_proxy": 0.3609789830178411,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.028890282172186144
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 6,
+        "post_target_distance": 9,
+        "cells": 3054,
+        "conditional_same_floor_proxy": 0.34464968034846266,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.012560979502807712
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 7,
+        "post_target_distance": 10,
+        "cells": 4107,
+        "conditional_same_floor_proxy": 0.32492324691341357,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.0071654539322413835
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 8,
+        "post_target_distance": 11,
+        "cells": 5262,
+        "conditional_same_floor_proxy": 0.31006015923644,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.02202854160921497
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 9,
+        "post_target_distance": 12,
+        "cells": 6420,
+        "conditional_same_floor_proxy": 0.324133218299155,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.00795548254649997
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 10,
+        "post_target_distance": 13,
+        "cells": 6765,
+        "conditional_same_floor_proxy": 0.3382781438492971,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.006189443003642159
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 11,
+        "post_target_distance": 14,
+        "cells": 6849,
+        "conditional_same_floor_proxy": 0.315381261239868,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.016707439605786967
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 12,
+        "post_target_distance": 15,
+        "cells": 7281,
+        "conditional_same_floor_proxy": 0.3319023076307582,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.00018639321489677396
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 13,
+        "post_target_distance": 16,
+        "cells": 7320,
+        "conditional_same_floor_proxy": 0.3316404180545331,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.00044828279112185676
+      }
+    ],
+    "selected_actual_proxy": [
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 3,
+        "K_actual_proxy": 0.03226584267868471
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 4,
+        "K_actual_proxy": 0.055390320524896286
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 12,
+        "K_actual_proxy": 0.004269214746514094
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 13,
+        "K_actual_proxy": 0.0023120006476550214
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 0,
+        "K_actual_proxy": 0.09824859038672551
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 4,
+        "K_actual_proxy": 0.012373511828321582
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 5,
+        "K_actual_proxy": 0.027134438523821802
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 6,
+        "K_actual_proxy": 0.04233118398213365
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 13,
+        "K_actual_proxy": 0.004234395709898475
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 2,
+        "K_actual_proxy": 0.0012983360057420845
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 3,
+        "K_actual_proxy": 0.05209736394227876
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 4,
+        "K_actual_proxy": 0.012668721522320792
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 10,
+        "K_actual_proxy": 0.004589647901639571
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 12,
+        "K_actual_proxy": 0.0034046083773189295
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 13,
+        "K_actual_proxy": 0.0018841788820944672
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 0,
+        "K_actual_proxy": 0.117706779252574
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 2,
+        "K_actual_proxy": 0.0020053874318040066
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 3,
+        "K_actual_proxy": 0.00630977146975531
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 4,
+        "K_actual_proxy": 0.011932928624937222
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 5,
+        "K_actual_proxy": 0.02961011199778768
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 6,
+        "K_actual_proxy": 0.013062517084338532
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 10,
+        "K_actual_proxy": 0.0074188505898935
+      }
+    ]
+  },
+  "H10": {
+    "status": "CERTIFIED_STAGE_COMPLETE",
+    "profile": [
+      4,
+      2,
+      1
+    ],
+    "target_probability_proxy": 0.0007769523236204597,
+    "target_probability_reversed_proxy": 0.0007769523236204592,
+    "target_edges_orig": 60,
+    "target_edges_rev": 60,
+    "placements_count": 56,
+    "positive_PEXC4_placements": 29,
+    "E_PEXC4_safe_lower": "0.0003226033348462279927915168975090270266666666666666666666666666666666667",
+    "selected_actual_mechanism_proxy": 0.00033086327578988684,
+    "C_rest_prefix400_proxy": -0.002483087352152222,
+    "C_rest_true_upper_candidate": "-0.00173308735069071179224846463964333131177367273680932321460768083397532",
+    "criterion_response_upper_candidate": "-0.002055690685536939785039981537152358338440339403475989881274347500641987",
+    "prediction": "NEGATIVE_CERTIFIED",
+    "response_not_revealed": true,
+    "placements": [
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 0,
+        "post_target_distance": 2,
+        "cells": 42,
+        "conditional_same_floor_proxy": 0.10589100158221894,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.21837010986000066
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 1,
+        "post_target_distance": 3,
+        "cells": 147,
+        "conditional_same_floor_proxy": 0.3691960407871734,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.0449349293449538
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 2,
+        "post_target_distance": 4,
+        "cells": 102,
+        "conditional_same_floor_proxy": 0.3183481078627741,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.005913003579445464
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 3,
+        "post_target_distance": 5,
+        "cells": 465,
+        "conditional_same_floor_proxy": 0.3207875663977473,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.0034735450444722815
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 4,
+        "post_target_distance": 6,
+        "cells": 489,
+        "conditional_same_floor_proxy": 0.32396203812186575,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.0002990733203538376
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 5,
+        "post_target_distance": 7,
+        "cells": 909,
+        "conditional_same_floor_proxy": 0.3296888319635273,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.0054277205213076885
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 6,
+        "post_target_distance": 8,
+        "cells": 1209,
+        "conditional_same_floor_proxy": 0.3045315588268451,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.019729552615374513
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 7,
+        "post_target_distance": 9,
+        "cells": 1266,
+        "conditional_same_floor_proxy": 0.3106281865835668,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.013632924858652806
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 8,
+        "post_target_distance": 10,
+        "cells": 2085,
+        "conditional_same_floor_proxy": 0.3598990010904586,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.035637889648238996
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 9,
+        "post_target_distance": 11,
+        "cells": 3588,
+        "conditional_same_floor_proxy": 0.33315367242863225,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.008892560986412668
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 10,
+        "post_target_distance": 12,
+        "cells": 5373,
+        "conditional_same_floor_proxy": 0.31758758217015715,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.0066735292720624395
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 11,
+        "post_target_distance": 13,
+        "cells": 6357,
+        "conditional_same_floor_proxy": 0.33840463130455145,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.014143519862331866
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 12,
+        "post_target_distance": 14,
+        "cells": 6462,
+        "conditional_same_floor_proxy": 0.32154902823838827,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.002712083203831317
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 13,
+        "post_target_distance": 15,
+        "cells": 7113,
+        "conditional_same_floor_proxy": 0.32580167829433276,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.0015405668521131788
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 0,
+        "post_target_distance": 2,
+        "cells": 27,
+        "conditional_same_floor_proxy": 0.37972173381953134,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.05546062237731175
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 1,
+        "post_target_distance": 3,
+        "cells": 54,
+        "conditional_same_floor_proxy": 0.0907550498304313,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.23350606161178827
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 2,
+        "post_target_distance": 4,
+        "cells": 216,
+        "conditional_same_floor_proxy": 0.3225883440382034,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.0016727674040161733
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 3,
+        "post_target_distance": 5,
+        "cells": 336,
+        "conditional_same_floor_proxy": 0.3148696419959817,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.009391469446237866
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 4,
+        "post_target_distance": 6,
+        "cells": 462,
+        "conditional_same_floor_proxy": 0.3436886807706799,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.019427569328460292
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 5,
+        "post_target_distance": 7,
+        "cells": 474,
+        "conditional_same_floor_proxy": 0.34041672212578455,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.01615561068356497
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 6,
+        "post_target_distance": 8,
+        "cells": 975,
+        "conditional_same_floor_proxy": 0.34035877621800986,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.016097664775790277
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 7,
+        "post_target_distance": 9,
+        "cells": 2055,
+        "conditional_same_floor_proxy": 0.3205947150836225,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.0036663963585971127
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 8,
+        "post_target_distance": 10,
+        "cells": 2259,
+        "conditional_same_floor_proxy": 0.30935495197096946,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.014906159471250124
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 9,
+        "post_target_distance": 11,
+        "cells": 3975,
+        "conditional_same_floor_proxy": 0.34040650769555447,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.016145396253334887
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 10,
+        "post_target_distance": 12,
+        "cells": 5223,
+        "conditional_same_floor_proxy": 0.3230595187179673,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.0012015927242522983
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 11,
+        "post_target_distance": 13,
+        "cells": 5535,
+        "conditional_same_floor_proxy": 0.32533900051718484,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.0010778890749652548
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 12,
+        "post_target_distance": 14,
+        "cells": 6858,
+        "conditional_same_floor_proxy": 0.32476864038196174,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.0005075289397421523
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 13,
+        "post_target_distance": 15,
+        "cells": 6984,
+        "conditional_same_floor_proxy": 0.32113212355610726,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.003128987886112322
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 0,
+        "post_target_distance": 3,
+        "cells": 75,
+        "conditional_same_floor_proxy": 0.33428199425067523,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.00219329340502028
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 1,
+        "post_target_distance": 4,
+        "cells": 189,
+        "conditional_same_floor_proxy": 0.4013023175669825,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.06921361672132753
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 2,
+        "post_target_distance": 5,
+        "cells": 198,
+        "conditional_same_floor_proxy": 0.3316326908098788,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.0004560100357761665
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 3,
+        "post_target_distance": 6,
+        "cells": 750,
+        "conditional_same_floor_proxy": 0.34110314209534115,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.0090144412496862
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 4,
+        "post_target_distance": 7,
+        "cells": 780,
+        "conditional_same_floor_proxy": 0.34487574522432907,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.012787044378674117
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 5,
+        "post_target_distance": 8,
+        "cells": 1365,
+        "conditional_same_floor_proxy": 0.3198697755688204,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.012218925276834547
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 6,
+        "post_target_distance": 9,
+        "cells": 1896,
+        "conditional_same_floor_proxy": 0.32836360601046016,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.0037250948351947866
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 7,
+        "post_target_distance": 10,
+        "cells": 2076,
+        "conditional_same_floor_proxy": 0.3436065167595676,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.011517815913912655
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 8,
+        "post_target_distance": 11,
+        "cells": 3096,
+        "conditional_same_floor_proxy": 0.3377297922179331,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.00564109137227814
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 9,
+        "post_target_distance": 12,
+        "cells": 4851,
+        "conditional_same_floor_proxy": 0.3207130390354069,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.011375661810248072
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 10,
+        "post_target_distance": 13,
+        "cells": 6375,
+        "conditional_same_floor_proxy": 0.32020249420279145,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.011886206642863495
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 11,
+        "post_target_distance": 14,
+        "cells": 6972,
+        "conditional_same_floor_proxy": 0.3382314185362966,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.006142717690641675
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 12,
+        "post_target_distance": 15,
+        "cells": 7107,
+        "conditional_same_floor_proxy": 0.3278934419402488,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.004195258905406174
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 13,
+        "post_target_distance": 16,
+        "cells": 7314,
+        "conditional_same_floor_proxy": 0.3307011754693957,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.0013875253762592465
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 0,
+        "post_target_distance": 3,
+        "cells": 60,
+        "conditional_same_floor_proxy": 0.5350978994010311,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.2030091985553762
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 1,
+        "post_target_distance": 4,
+        "cells": 105,
+        "conditional_same_floor_proxy": 0.32745385146642936,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.004634849379225592
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 2,
+        "post_target_distance": 5,
+        "cells": 336,
+        "conditional_same_floor_proxy": 0.3512980478691071,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.019209347023452172
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 3,
+        "post_target_distance": 6,
+        "cells": 591,
+        "conditional_same_floor_proxy": 0.350875126572243,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.018786425726588063
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 4,
+        "post_target_distance": 7,
+        "cells": 738,
+        "conditional_same_floor_proxy": 0.33388661718879403,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.0017979163431390832
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 5,
+        "post_target_distance": 8,
+        "cells": 810,
+        "conditional_same_floor_proxy": 0.34951740060686637,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.01742869976121142
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 6,
+        "post_target_distance": 9,
+        "cells": 1578,
+        "conditional_same_floor_proxy": 0.32495564248809644,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.007133058357558508
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 7,
+        "post_target_distance": 10,
+        "cells": 3123,
+        "conditional_same_floor_proxy": 0.3310158827865399,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.001072818059115077
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 8,
+        "post_target_distance": 11,
+        "cells": 3285,
+        "conditional_same_floor_proxy": 0.3367456384947375,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.004656937649082538
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 9,
+        "post_target_distance": 12,
+        "cells": 5403,
+        "conditional_same_floor_proxy": 0.3328907262790606,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.0008020254334056287
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 10,
+        "post_target_distance": 13,
+        "cells": 6141,
+        "conditional_same_floor_proxy": 0.33256468069221184,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.0004759798465568954
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 11,
+        "post_target_distance": 14,
+        "cells": 6354,
+        "conditional_same_floor_proxy": 0.31431767987379683,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.01777102097185812
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 12,
+        "post_target_distance": 15,
+        "cells": 7221,
+        "conditional_same_floor_proxy": 0.336816338239448,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.0047276373937930605
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 13,
+        "post_target_distance": 16,
+        "cells": 7278,
+        "conditional_same_floor_proxy": 0.3290779033632702,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.0030107974823847528
+      }
+    ],
+    "selected_actual_proxy": [
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 1,
+        "K_actual_proxy": 0.0449349293449538
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 5,
+        "K_actual_proxy": 0.005708545556581401
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 8,
+        "K_actual_proxy": 0.036596459694957395
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 9,
+        "K_actual_proxy": 0.00976945973054677
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 11,
+        "K_actual_proxy": 0.015197373568102746
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 13,
+        "K_actual_proxy": 0.0027260079743445242
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 0,
+        "K_actual_proxy": 0.05546062237731175
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 4,
+        "K_actual_proxy": 0.019427569328460237
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 5,
+        "K_actual_proxy": 0.01615561068356497
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 6,
+        "K_actual_proxy": 0.01665155679026653
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 9,
+        "K_actual_proxy": 0.01706672126952813
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 11,
+        "K_actual_proxy": 0.0022311799274049027
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 12,
+        "K_actual_proxy": 0.001659043835063101
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 0,
+        "K_actual_proxy": 0.00219329340502028
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 1,
+        "K_actual_proxy": 0.06921361672132748
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 3,
+        "K_actual_proxy": 0.0090144412496862
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 4,
+        "K_actual_proxy": 0.012816557041078869
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 7,
+        "K_actual_proxy": 0.01185824756379028
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 8,
+        "K_actual_proxy": 0.006563175710745883
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 11,
+        "K_actual_proxy": 0.007470923252797357
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 0,
+        "K_actual_proxy": 0.2030091985553762
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 2,
+        "K_actual_proxy": 0.019209347023452172
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 3,
+        "K_actual_proxy": 0.018786425726588007
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 4,
+        "K_actual_proxy": 0.0018602109282604418
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 5,
+        "K_actual_proxy": 0.018530450020307454
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 8,
+        "K_actual_proxy": 0.0051051351726336125
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 9,
+        "K_actual_proxy": 0.0019203495075838517
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 10,
+        "K_actual_proxy": 0.0015600645571144933
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 12,
+        "K_actual_proxy": 0.006074870860158066
+      }
+    ]
+  },
+  "H11": {
+    "status": "CERTIFIED_STAGE_COMPLETE",
+    "profile": [
+      5,
+      1,
+      1
+    ],
+    "target_probability_proxy": 2.6663981662879127e-05,
+    "target_probability_reversed_proxy": 2.666398166287905e-05,
+    "target_edges_orig": 6,
+    "target_edges_rev": 6,
+    "placements_count": 56,
+    "positive_PEXC4_placements": 29,
+    "E_PEXC4_safe_lower": "0.00003623676773238696498452264797073787060000000000000000000000000000000001",
+    "selected_actual_mechanism_proxy": 3.6402813997382466e-05,
+    "C_rest_prefix400_proxy": -0.0003613203228107137,
+    "C_rest_true_upper_candidate": "0.00038867967865079650775153536035666868822632726319067678539231916602468",
+    "criterion_response_upper_candidate": "0.0003524429109184095427670127123859308176263272631906767853923191660246800",
+    "prediction": "INCONCLUSIVE",
+    "response_not_revealed": true,
+    "placements": [
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 0,
+        "post_target_distance": 2,
+        "cells": 9,
+        "conditional_same_floor_proxy": 0.0856797539939129,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.2385813574483067
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 1,
+        "post_target_distance": 3,
+        "cells": 15,
+        "conditional_same_floor_proxy": 0.5031456156296139,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.17888450418739432
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 2,
+        "post_target_distance": 4,
+        "cells": 30,
+        "conditional_same_floor_proxy": 0.3464502650990066,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.02218915365678703
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 3,
+        "post_target_distance": 5,
+        "cells": 60,
+        "conditional_same_floor_proxy": 0.3480067521371829,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.02374564069496332
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 4,
+        "post_target_distance": 6,
+        "cells": 147,
+        "conditional_same_floor_proxy": 0.3269085240713885,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.0026474126291688993
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 5,
+        "post_target_distance": 7,
+        "cells": 270,
+        "conditional_same_floor_proxy": 0.31366523768854476,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.010595873753674823
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 6,
+        "post_target_distance": 8,
+        "cells": 546,
+        "conditional_same_floor_proxy": 0.35552879050018305,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.03126767905796346
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 7,
+        "post_target_distance": 9,
+        "cells": 888,
+        "conditional_same_floor_proxy": 0.3821804773363663,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.0579193658941467
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 8,
+        "post_target_distance": 10,
+        "cells": 1515,
+        "conditional_same_floor_proxy": 0.3746878637570571,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.05042675231483751
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 9,
+        "post_target_distance": 11,
+        "cells": 2364,
+        "conditional_same_floor_proxy": 0.2898629662062261,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.034398145235993494
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 10,
+        "post_target_distance": 12,
+        "cells": 3555,
+        "conditional_same_floor_proxy": 0.30600021200179106,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.018260899440428524
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 11,
+        "post_target_distance": 13,
+        "cells": 4887,
+        "conditional_same_floor_proxy": 0.3029037937416628,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.021357317700556766
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 12,
+        "post_target_distance": 14,
+        "cells": 6156,
+        "conditional_same_floor_proxy": 0.3259621901527578,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.0017010787105382064
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 13,
+        "post_target_distance": 15,
+        "cells": 6549,
+        "conditional_same_floor_proxy": 0.3175222979357696,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.006738813506450003
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 0,
+        "post_target_distance": 2,
+        "cells": 6,
+        "conditional_same_floor_proxy": 0.0,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.3242611114422196
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 1,
+        "post_target_distance": 3,
+        "cells": 6,
+        "conditional_same_floor_proxy": 0.0,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.3242611114422196
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 2,
+        "post_target_distance": 4,
+        "cells": 6,
+        "conditional_same_floor_proxy": 0.0856797539939129,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.2385813574483067
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 3,
+        "post_target_distance": 5,
+        "cells": 9,
+        "conditional_same_floor_proxy": 0.0856797539939129,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.2385813574483067
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 4,
+        "post_target_distance": 6,
+        "cells": 15,
+        "conditional_same_floor_proxy": 0.503145615629614,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.17888450418739443
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 5,
+        "post_target_distance": 7,
+        "cells": 30,
+        "conditional_same_floor_proxy": 0.34645026509900667,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.022189153656787086
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 6,
+        "post_target_distance": 8,
+        "cells": 60,
+        "conditional_same_floor_proxy": 0.34800675213718296,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.023745640694963377
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 7,
+        "post_target_distance": 9,
+        "cells": 147,
+        "conditional_same_floor_proxy": 0.32690852407138854,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.002647412629168955
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 8,
+        "post_target_distance": 10,
+        "cells": 270,
+        "conditional_same_floor_proxy": 0.3136652376885448,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.010595873753674767
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 9,
+        "post_target_distance": 11,
+        "cells": 546,
+        "conditional_same_floor_proxy": 0.3555287905001831,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.031267679057963516
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 10,
+        "post_target_distance": 12,
+        "cells": 888,
+        "conditional_same_floor_proxy": 0.38218047733636634,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.05791936589414676
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 11,
+        "post_target_distance": 13,
+        "cells": 1515,
+        "conditional_same_floor_proxy": 0.37468786375705715,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": 0.050426752314837564
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 12,
+        "post_target_distance": 14,
+        "cells": 2364,
+        "conditional_same_floor_proxy": 0.28986296620622615,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.03439814523599344
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 13,
+        "post_target_distance": 15,
+        "cells": 3555,
+        "conditional_same_floor_proxy": 0.3060002120017911,
+        "baseline_same_proxy": 0.3242611114422196,
+        "K_lower_proxy": -0.01826089944042847
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 0,
+        "post_target_distance": 3,
+        "cells": 15,
+        "conditional_same_floor_proxy": 0.3911098784373502,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.05902117759169523
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 1,
+        "post_target_distance": 4,
+        "cells": 27,
+        "conditional_same_floor_proxy": 0.4722114339372564,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.14012273309160145
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 2,
+        "post_target_distance": 5,
+        "cells": 60,
+        "conditional_same_floor_proxy": 0.3480067521371829,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.015918051291527957
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 3,
+        "post_target_distance": 6,
+        "cells": 147,
+        "conditional_same_floor_proxy": 0.3269085240713885,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.005180176774266465
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 4,
+        "post_target_distance": 7,
+        "cells": 252,
+        "conditional_same_floor_proxy": 0.32925184038700506,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.0028368604586498924
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 5,
+        "post_target_distance": 8,
+        "cells": 483,
+        "conditional_same_floor_proxy": 0.3040280481215807,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.028060652724074264
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 6,
+        "post_target_distance": 9,
+        "cells": 888,
+        "conditional_same_floor_proxy": 0.3821804773363663,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.05009177649071134
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 7,
+        "post_target_distance": 10,
+        "cells": 1515,
+        "conditional_same_floor_proxy": 0.3746878637570571,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.042599162911402144
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 8,
+        "post_target_distance": 11,
+        "cells": 2400,
+        "conditional_same_floor_proxy": 0.33790183604998564,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.005813135204330688
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 9,
+        "post_target_distance": 12,
+        "cells": 3525,
+        "conditional_same_floor_proxy": 0.32413730956098236,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.007951391284672593
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 10,
+        "post_target_distance": 13,
+        "cells": 4887,
+        "conditional_same_floor_proxy": 0.3029037937416628,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.02918490710399213
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 11,
+        "post_target_distance": 14,
+        "cells": 6156,
+        "conditional_same_floor_proxy": 0.3259621901527578,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.006126510692897158
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 12,
+        "post_target_distance": 15,
+        "cells": 6912,
+        "conditional_same_floor_proxy": 0.3397433172741352,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.007654616428480254
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 13,
+        "post_target_distance": 16,
+        "cells": 6993,
+        "conditional_same_floor_proxy": 0.32524686486640075,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.006841835979254196
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 0,
+        "post_target_distance": 3,
+        "cells": 6,
+        "conditional_same_floor_proxy": 1.0,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.667911299154345
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 1,
+        "post_target_distance": 4,
+        "cells": 6,
+        "conditional_same_floor_proxy": 0.0856797539939129,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.24640894685174206
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 2,
+        "post_target_distance": 5,
+        "cells": 9,
+        "conditional_same_floor_proxy": 0.0856797539939129,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.24640894685174206
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 3,
+        "post_target_distance": 6,
+        "cells": 15,
+        "conditional_same_floor_proxy": 0.39110987843735023,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.059021177591695284
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 4,
+        "post_target_distance": 7,
+        "cells": 27,
+        "conditional_same_floor_proxy": 0.47221143393725645,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.1401227330916015
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 5,
+        "post_target_distance": 8,
+        "cells": 60,
+        "conditional_same_floor_proxy": 0.34800675213718296,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.015918051291528013
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 6,
+        "post_target_distance": 9,
+        "cells": 147,
+        "conditional_same_floor_proxy": 0.32690852407138854,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.0051801767742664095
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 7,
+        "post_target_distance": 10,
+        "cells": 252,
+        "conditional_same_floor_proxy": 0.3292518403870051,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.002836860458649837
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 8,
+        "post_target_distance": 11,
+        "cells": 483,
+        "conditional_same_floor_proxy": 0.3040280481215807,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.028060652724074264
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 9,
+        "post_target_distance": 12,
+        "cells": 888,
+        "conditional_same_floor_proxy": 0.38218047733636634,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.05009177649071139
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 10,
+        "post_target_distance": 13,
+        "cells": 1515,
+        "conditional_same_floor_proxy": 0.37468786375705715,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.0425991629114022
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 11,
+        "post_target_distance": 14,
+        "cells": 2400,
+        "conditional_same_floor_proxy": 0.33790183604998564,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": 0.005813135204330688
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 12,
+        "post_target_distance": 15,
+        "cells": 3525,
+        "conditional_same_floor_proxy": 0.3241373095609824,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.007951391284672538
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 13,
+        "post_target_distance": 16,
+        "cells": 4887,
+        "conditional_same_floor_proxy": 0.3029037937416629,
+        "baseline_same_proxy": 0.33208870084565495,
+        "K_lower_proxy": -0.029184907103992075
+      }
+    ],
+    "selected_actual_proxy": [
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 1,
+        "K_actual_proxy": 0.17888450418739432
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 2,
+        "K_actual_proxy": 0.022189153656787086
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 3,
+        "K_actual_proxy": 0.02374564069496332
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 4,
+        "K_actual_proxy": 0.0026474126291688993
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 6,
+        "K_actual_proxy": 0.03185104672813083
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 7,
+        "K_actual_proxy": 0.058357078716252564
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 8,
+        "K_actual_proxy": 0.05095259997905072
+      },
+      {
+        "lag": 15,
+        "orientation": "orig",
+        "target_position": 12,
+        "K_actual_proxy": 0.003063167161271141
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 4,
+        "K_actual_proxy": 0.17888450418739443
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 5,
+        "K_actual_proxy": 0.022189153656787086
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 6,
+        "K_actual_proxy": 0.023745640694963432
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 7,
+        "K_actual_proxy": 0.0026474126291690103
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 9,
+        "K_actual_proxy": 0.03185104672813088
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 10,
+        "K_actual_proxy": 0.058357078716252564
+      },
+      {
+        "lag": 15,
+        "orientation": "rev",
+        "target_position": 11,
+        "K_actual_proxy": 0.05095259997905072
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 0,
+        "K_actual_proxy": 0.05902117759169523
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 1,
+        "K_actual_proxy": 0.14012273309160145
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 2,
+        "K_actual_proxy": 0.015918051291527957
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 6,
+        "K_actual_proxy": 0.0505294893128172
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 7,
+        "K_actual_proxy": 0.04312501057561535
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 8,
+        "K_actual_proxy": 0.006673569080701436
+      },
+      {
+        "lag": 16,
+        "orientation": "orig",
+        "target_position": 12,
+        "K_actual_proxy": 0.008855080611629706
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 0,
+        "K_actual_proxy": 0.667911299154345
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 3,
+        "K_actual_proxy": 0.059021177591695284
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 4,
+        "K_actual_proxy": 0.1401227330916015
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 5,
+        "K_actual_proxy": 0.015918051291528068
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 9,
+        "K_actual_proxy": 0.0505294893128172
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 10,
+        "K_actual_proxy": 0.04312501057561535
+      },
+      {
+        "lag": 16,
+        "orientation": "rev",
+        "target_position": 11,
+        "K_actual_proxy": 0.006673569080701436
+      }
+    ]
+  }
+}

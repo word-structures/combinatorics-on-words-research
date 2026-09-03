@@ -1,0 +1,489 @@
+﻿{
+    "schema":  "paper4-repro-capture-v1",
+    "created_utc":  "2026-08-29T09:45:30.5727809Z",
+    "repo_root":  "C:\\abc-worktrees\\profile-response-baseline-h2-h7-2026-08-25",
+    "environment":  {
+                        "os":  "Microsoft Windows NT 10.0.26200.0",
+                        "powershell":  "5.1.26100.9168",
+                        "node":  "v22.18.0",
+                        "python":  null,
+                        "git_head":  "fea6be4126ec19c4bbdb5b18e0cf12efbd60390f",
+                        "git_worktree_dirty_entries":  [
+                                                           "?? 2026-08-27_CLAUDE_PROFILE_RESPONSE_RESEARCH_INTAKE_UPDATED_2026-08-25.md",
+                                                           "?? BUG_AUDIT.md",
+                                                           "?? CLAIMS_LEDGER_PROPOSAL.md",
+                                                           "?? PAPER4_171_PAIR_DISTINCTNESS_MATRIX_2026-08-29.csv",
+                                                           "?? PAPER4_19_FAMILY_DISTINCTNESS_CHECK_RESULTS_2026-08-29.json",
+                                                           "?? RAW_STDOUT.txt",
+                                                           "?? ROOT_FILE_CLASSIFICATION.md",
+                                                           "?? ROOT_OWNER_ACTIONS.md",
+                                                           "?? build_audit_part1.js",
+                                                           "?? build_canonical.js",
+                                                           "?? check_c.js",
+                                                           "?? check_repro.js",
+                                                           "?? count_c.js",
+                                                           "?? do_csv.js",
+                                                           "?? do_hash.js",
+                                                           "?? do_integ_debug.js",
+                                                           "?? do_integ_fix.js",
+                                                           "?? do_manifest.js",
+                                                           "?? do_norm.js",
+                                                           "?? do_pack.js",
+                                                           "?? do_parts_1_3.js",
+                                                           "?? do_parts_4_6.js",
+                                                           "?? do_raw.js",
+                                                           "?? do_repro.js",
+                                                           "?? do_sign.js",
+                                                           "?? do_val.js",
+                                                           "?? enumerate.js",
+                                                           "?? errA.txt",
+                                                           "?? errB.txt",
+                                                           "?? fix_verify.js",
+                                                           "?? fix_verify2.js",
+                                                           "?? fix_verify3.js",
+                                                           "?? fix_verify4.js",
+                                                           "?? fix_writes.js",
+                                                           "?? gen3.js",
+                                                           "?? generate_report.js",
+                                                           "?? hash_gen.js",
+                                                           "?? hash_gen2.js",
+                                                           "?? huang_mao.json",
+                                                           "?? lind.json",
+                                                           "?? make_sign.js",
+                                                           "?? outA.txt",
+                                                           "?? outB.txt",
+                                                           "?? patch_enum.js",
+                                                           "?? patch_gen.js",
+                                                           "?? patch_gen2.js",
+                                                           "?? patch_gen3.js",
+                                                           "?? ramsey.json",
+                                                           "?? report_gen.js",
+                                                           "?? rukhin.json",
+                                                           "?? rukhin_abstract.json",
+                                                           "?? run3.js",
+                                                           "?? run3d2.js",
+                                                           "?? run_both.js",
+                                                           "?? run_enum.js",
+                                                           "?? run_hash.js",
+                                                           "?? run_report.js",
+                                                           "?? run_repro2.js",
+                                                           "?? run_repros3c.js",
+                                                           "?? run_repros_fix.js",
+                                                           "?? run_tests3c.js",
+                                                           "?? scratch/SANDBOX_REPORT_INDEPENDENT_SIX_DOMAIN_AUDIT_2026-08-28.md",
+                                                           "?? scratch/claude-intake/",
+                                                           "?? scratch/clean_room_audit/",
+                                                           "?? scratch/organize_log.txt",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/PROFILE_BASELINE.csv",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/PROFILE_BASELINE.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/SHA256SUMS.txt",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/SUMMARY.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/generate_baseline.js",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_0_previous_unaccepted/",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_1_repaired/",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/REPRODUCIBILITY_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/EDGE_EQUIVALENCE_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/H2_NONADDITIVITY_AUDIT.md",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/H4_LINEAR_RESPONSE_STATUS.md",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/HISTORICAL_COUNT_AND_SIGN_CORRECTION.md",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/LITERATURE_STATUS_CORRECTION.md",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/PARRY_CHAIN_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/PERRON_RESIDUAL_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/PRESENTATION_INVARIANCE_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/PROFILE_BASELINE_AUDITED.csv",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/PROFILE_BASELINE_AUDITED.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/PROFILE_CLASSIFICATION_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/Q_PARTITION_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/RHO_ORDERING_AUDIT.md",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/SCC_SPECTRAL_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/SUMMARY_AUDITED.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/VARIANCE_METHOD_AGREEMENT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/VARIANCE_METHOD_A_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_A/VARIANCE_METHOD_B_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/EDGE_EQUIVALENCE_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/FAMILY_DEFINITION_AUDIT.md",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/H2_NONADDITIVITY_AUDIT.md",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/H4_LINEAR_RESPONSE_STATUS.md",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/HISTORICAL_COUNT_AND_SIGN_CORRECTION.md",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/LITERATURE_STATUS_CORRECTION.md",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/PARRY_CHAIN_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/PERRON_RESIDUAL_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/PRESENTATION_INVARIANCE_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/PROFILE_BASELINE_AUDITED.csv",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/PROFILE_BASELINE_AUDITED.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/PROFILE_CLASSIFICATION_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/Q_PARTITION_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/RHO_ORDERING_AUDIT.md",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/SCC_SPECTRAL_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/SUMMARY_AUDITED.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/VARIANCE_METHOD_AGREEMENT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/VARIANCE_METHOD_A_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_2_closure_audit/reproduction_B/VARIANCE_METHOD_B_AUDIT.json",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_3_formula_correction/",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_3b_integrity_audit/",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_3c_durable_recovery/",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_3d2_profile_certificate_repair/",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/run_3d_profile_identity_crosscheck/",
+                                                           "?? scratch/profile-response-baseline-h2-h7-2026-08-25/verify_encoding.js",
+                                                           "?? scratch/recovery_log.txt",
+                                                           "?? sign_test.js",
+                                                           "?? test_b.js",
+                                                           "?? test_baseline.js",
+                                                           "?? test_dp.js",
+                                                           "?? test_g.js",
+                                                           "?? test_generic.js",
+                                                           "?? test_generic2.js",
+                                                           "?? test_generic3.js",
+                                                           "?? test_k1.js",
+                                                           "?? test_syntax.js",
+                                                           "?? update_manifest.js",
+                                                           "?? verify_final_report.js",
+                                                           "?? verify_integrity.js",
+                                                           "?? wait_and_wrap.js",
+                                                           "?? wait_hash.js",
+                                                           "?? wait_repro.js",
+                                                           "?? wrap_manifest.js",
+                                                           "?? write_artifacts.js"
+                                                       ]
+                    },
+    "exact_file_records":  [
+                               {
+                                   "category":  "theorem",
+                                   "role":  "master six-domain checker",
+                                   "path":  "scratch\\claude-intake\\_paper4-master-closure-2026-08-29\\work\\sixdomain_full.js",
+                                   "sha256":  "23bf4a7c5621f1063b9dd0768edae756e8020010ae01ab13760c936ccc1ed523",
+                                   "bytes":  10365,
+                                   "last_write_utc":  "2026-08-29T07:52:39.4758121Z"
+                               },
+                               {
+                                   "category":  "theorem",
+                                   "role":  "master six-domain output",
+                                   "path":  "scratch\\claude-intake\\_paper4-master-closure-2026-08-29\\runs\\sixdomain_full.json",
+                                   "sha256":  "31b1214135bfc10ca4e28816cae778d47a0e64bba6946b5a8de88f33d8317b29",
+                                   "bytes":  7827,
+                                   "last_write_utc":  "2026-08-29T07:53:09.1391518Z"
+                               },
+                               {
+                                   "category":  "theorem",
+                                   "role":  "v0.32a independent six-domain checker",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\work\\v032a_sixdomain_check.js",
+                                   "sha256":  "6964239ef71d9005799e517b2c913ef465ad2c2314d1bafc69fb6f4605d070be",
+                                   "bytes":  4817,
+                                   "last_write_utc":  "2026-08-29T06:19:54.1455846Z"
+                               },
+                               {
+                                   "category":  "theorem",
+                                   "role":  "v0.32a independent six-domain output",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\v032a_sixdomain_check.json",
+                                   "sha256":  "99dd1fd86586b03ec4acdb2513b669bc25b0ee6bb7ecf917ddddc74f1995e598",
+                                   "bytes":  739,
+                                   "last_write_utc":  "2026-08-29T06:19:54.3769627Z"
+                               },
+                               {
+                                   "category":  "implementation",
+                                   "role":  "AFE implementation semantics checker",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\work\\v032a_impl_semantics.js",
+                                   "sha256":  "c8a38e4e00d61bb1c030d4ef7fccac3df7f89e19391dc66233a7a6ef9111fc08",
+                                   "bytes":  5602,
+                                   "last_write_utc":  "2026-08-29T06:16:43.2513722Z"
+                               },
+                               {
+                                   "category":  "implementation",
+                                   "role":  "AFE implementation semantics output",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\v032a_impl_semantics.json",
+                                   "sha256":  "175e29b9c972b35c07f94f157448edc70b0a80004b2d43d2abc105f3bc6f21e7",
+                                   "bytes":  409,
+                                   "last_write_utc":  "2026-08-29T06:16:49.3291056Z"
+                               },
+                               {
+                                   "category":  "afe_crosscheck",
+                                   "role":  "AFE-only crosscheck",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\work\\afe_only_crosscheck.js",
+                                   "sha256":  "3cf12977d9d48416418a2333d7d9b8d7a04ed7a1260a0e2d59630f25938e9af3",
+                                   "bytes":  4536,
+                                   "last_write_utc":  "2026-08-29T06:54:13.1413389Z"
+                               },
+                               {
+                                   "category":  "afe_crosscheck",
+                                   "role":  "AFE controls",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\work\\afe_controls.js",
+                                   "sha256":  "b9d12407fb96537a10a05b8413e70fe46dfb834cf57d69750fd9da743f4de9cf",
+                                   "bytes":  4248,
+                                   "last_write_utc":  "2026-08-29T06:54:39.1371635Z"
+                               },
+                               {
+                                   "category":  "afe_crosscheck",
+                                   "role":  "AFE 263 runner",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\work\\afe_263_run.js",
+                                   "sha256":  "744050b0dec720c13b9db7688676ea41643d2cca02e39e83e1b342ecd7f1cab5",
+                                   "bytes":  5346,
+                                   "last_write_utc":  "2026-08-29T06:57:09.2438157Z"
+                               },
+                               {
+                                   "category":  "afe_crosscheck",
+                                   "role":  "AFE controls output",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\afe_controls.json",
+                                   "sha256":  "4d9bf9423aa2a84c67f48095f37bacf382c402974063013b11b4f5a22f576986",
+                                   "bytes":  2838,
+                                   "last_write_utc":  "2026-08-29T06:56:03.4827245Z"
+                               },
+                               {
+                                   "category":  "afe_crosscheck",
+                                   "role":  "AFE 263 output",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\afe_263_crosscheck.json",
+                                   "sha256":  "9fe54166a64d5294814d0fd5bbe7df585ba6cde5c51e7242eab93939bf98ff2c",
+                                   "bytes":  95286,
+                                   "last_write_utc":  "2026-08-29T06:59:01.6476539Z"
+                               },
+                               {
+                                   "category":  "afe_crosscheck",
+                                   "role":  "AFE preregistration",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\AFE_EXISTS_263_CROSSCHECK_PROTOCOL_2026-08-29.md",
+                                   "sha256":  "e56c3e2d4e33df84090ad53159cb5761de80da81427ddfe726401e5d38479641",
+                                   "bytes":  7854,
+                                   "last_write_utc":  "2026-08-29T06:53:30.7350731Z"
+                               },
+                               {
+                                   "category":  "afe_crosscheck",
+                                   "role":  "AFE preregistration frozen hash",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\PROTOCOL_AFE_263.sha256",
+                                   "sha256":  "0c91fd66078cebd2e619febc9163847dd6bff153848d313900a3662d93125743",
+                                   "bytes":  115,
+                                   "last_write_utc":  "2026-08-29T06:53:39.2321567Z"
+                               },
+                               {
+                                   "category":  "rx_h",
+                                   "role":  "Aset-size feasibility checker",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\work\\aset_sizes.js",
+                                   "sha256":  "021b7a62e4295be9515352a1a364e1d17c468c40798845bbbbb6e5bad0e5cee9",
+                                   "bytes":  3272,
+                                   "last_write_utc":  "2026-08-28T15:51:00.2300626Z"
+                               },
+                               {
+                                   "category":  "rx_h",
+                                   "role":  "Aset-size RX output",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\aset_sizes_R.json",
+                                   "sha256":  "8e0dacfbee6f4a1c3bd137d15053d2c05290afe26db1d2a8c967969c4538125a",
+                                   "bytes":  5791,
+                                   "last_write_utc":  "2026-08-28T15:51:11.7243865Z"
+                               },
+                               {
+                                   "category":  "rx_h",
+                                   "role":  "Aset-size H output",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\aset_sizes_H.json",
+                                   "sha256":  "18b9b7bb5b5be41ee0b2be175a69990f066784bb19a557927b7622899e3fe9fe",
+                                   "bytes":  711,
+                                   "last_write_utc":  "2026-08-28T15:51:41.6488842Z"
+                               },
+                               {
+                                   "category":  "rx_h",
+                                   "role":  "RX AF runner",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\work\\rx_run.js",
+                                   "sha256":  "61b224882a660cb2ab6ff349241bb81bc81f7ec96c70f08b3c81c27807391308",
+                                   "bytes":  7904,
+                                   "last_write_utc":  "2026-08-28T20:04:45.3849813Z"
+                               },
+                               {
+                                   "category":  "rx_h",
+                                   "role":  "RX downstream checker",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\work\\rx_bcd.js",
+                                   "sha256":  "26e01f6b195a0fa7d15309a0ff6f6f818079f53d028936e94c2c00ee486c57a4",
+                                   "bytes":  4643,
+                                   "last_write_utc":  "2026-08-28T20:48:15.5270896Z"
+                               },
+                               {
+                                   "category":  "rx_h",
+                                   "role":  "H quota derivation",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\work\\rx_h_matched.js",
+                                   "sha256":  "29597de9fa6e09c304243964adffc6951c5415fbcdcbea717a557a6a1bcaaf3f",
+                                   "bytes":  4953,
+                                   "last_write_utc":  "2026-08-28T15:57:49.2458490Z"
+                               },
+                               {
+                                   "category":  "rx_h",
+                                   "role":  "H quota output",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\h_matched_quota.json",
+                                   "sha256":  "011a5e9fb138581161c41848dd50348998198e47080368ace50d0fce6fa29c41",
+                                   "bytes":  34245,
+                                   "last_write_utc":  "2026-08-28T15:57:57.0857106Z"
+                               },
+                               {
+                                   "category":  "rx_h",
+                                   "role":  "population comparison",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\work\\rx_compare.js",
+                                   "sha256":  "a70e69ac192fc8147747ba899ecbd1cfc3d71297120e8bf889e060db3f7ae36e",
+                                   "bytes":  4522,
+                                   "last_write_utc":  "2026-08-28T20:49:36.1097231Z"
+                               },
+                               {
+                                   "category":  "rx_h",
+                                   "role":  "population comparison output",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\rx_vs_h_comparison.json",
+                                   "sha256":  "0e27415e0decb2c7e86b1764f69ec6de1ba522fd56334bdaaa1ac8915cfe1b7e",
+                                   "bytes":  70871,
+                                   "last_write_utc":  "2026-08-28T20:49:36.2694052Z"
+                               },
+                               {
+                                   "category":  "rx_h",
+                                   "role":  "population per-E table",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\rx_vs_h_perE.csv",
+                                   "sha256":  "a1d0ea9a57a2b8eb83358401670810f9a63a6f43e0308679146349673d5d3a55",
+                                   "bytes":  3211,
+                                   "last_write_utc":  "2026-08-28T20:49:36.2724054Z"
+                               },
+                               {
+                                   "category":  "rx_h",
+                                   "role":  "RX preregistration",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\PREREGISTRATION_EXPOSURE_MATCHED_R_2026-08-28.md",
+                                   "sha256":  "bca2780f881ac23c9057d204f2e4cbc85f67945afd758bb9ef5abbe1e8d3463c",
+                                   "bytes":  8480,
+                                   "last_write_utc":  "2026-08-28T15:53:41.6338773Z"
+                               },
+                               {
+                                   "category":  "rx_h",
+                                   "role":  "RX preregistration hash",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\PREREG_EXPOSURE_MATCHED_R.sha256",
+                                   "sha256":  "9bb70c287b9bce17a157b40776df60edcc66be189b59d298016d4cdc6944e0fe",
+                                   "bytes":  115,
+                                   "last_write_utc":  "2026-08-28T15:53:48.5131278Z"
+                               },
+                               {
+                                   "category":  "rx_h",
+                                   "role":  "RX deviation note",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\PREREGISTRATION_EXPOSURE_MATCHED_R_DEVIATION_NOTE_2026-08-28.md",
+                                   "sha256":  "c7ec1c25533e001bc231402056c8730830e0284a7f0dbabe6e41c47b3355f82c",
+                                   "bytes":  5603,
+                                   "last_write_utc":  "2026-08-28T20:07:01.6644435Z"
+                               },
+                               {
+                                   "category":  "e_to_a",
+                                   "role":  "E-level frozen input/output",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\aset_E_frozen.json",
+                                   "sha256":  "bb63aeadf390aef6d1e9346bbd8a846eafb029bfb9d77a7f5049f75380dcaebe",
+                                   "bytes":  24496,
+                                   "last_write_utc":  "2026-08-28T21:10:47.1842989Z"
+                               },
+                               {
+                                   "category":  "e_to_a",
+                                   "role":  "deep-shaving output",
+                                   "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\aset_deep_shave.json",
+                                   "sha256":  "887d7f98a9a539806d8a3f0d3c11fd6a1486f8cb916c2de18f9e9614280bb63a",
+                                   "bytes":  677,
+                                   "last_write_utc":  "2026-08-28T21:31:51.7858667Z"
+                               }
+                           ],
+    "run_directory_records":  [
+                                  {
+                                      "category":  "rx_h",
+                                      "role":  "clean RX run; authoritative",
+                                      "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\afexRX2",
+                                      "file_count":  6,
+                                      "tree_sha256":  "52c89c04ce304cb1c28553172d87276228dbae14aa2186349a43448f00489ca1",
+                                      "entries":  [
+                                                      {
+                                                          "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\afexRX2\\af_pairs.jsonl",
+                                                          "sha256":  "4974273de559683222cc6801aeab69ec7029bdc74d49c7a369908bfe65e97468",
+                                                          "bytes":  9461928
+                                                      },
+                                                      {
+                                                          "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\afexRX2\\af_positive.jsonl",
+                                                          "sha256":  "1ab4e399a4b5f35b97ccd315d8ead3490dd9e78385ee25479da6d5de6df46d65",
+                                                          "bytes":  47642
+                                                      },
+                                                      {
+                                                          "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\afexRX2\\capped.jsonl",
+                                                          "sha256":  "62d98c5b3aabbdb2c3fe6e535d2bb361c3a2e2ff0613e9ae6605b4d6641076f4",
+                                                          "bytes":  2598
+                                                      },
+                                                      {
+                                                          "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\afexRX2\\manifest.json",
+                                                          "sha256":  "8916ad13abe5d866bc0b1c11b17da0bff8140ab18a261614625d2e8761c73ebf",
+                                                          "bytes":  10670
+                                                      },
+                                                      {
+                                                          "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\afexRX2\\perE_af.json",
+                                                          "sha256":  "3fa057b9634819017615996bd15f3b40b517c6017f96f1b21db10187b2cba9c0",
+                                                          "bytes":  9022
+                                                      },
+                                                      {
+                                                          "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\afexRX2\\perE_partial.json",
+                                                          "sha256":  "3fa057b9634819017615996bd15f3b40b517c6017f96f1b21db10187b2cba9c0",
+                                                          "bytes":  9022
+                                                      }
+                                                  ]
+                                  },
+                                  {
+                                      "category":  "rx_h",
+                                      "role":  "voided concurrent-writer RX run; NEVER SCIENTIFIC EVIDENCE",
+                                      "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\afexRX",
+                                      "file_count":  5,
+                                      "tree_sha256":  "ee3c58574519913332a0077571eaf46328bc5467ebe4a01c508fc196feb78eb9",
+                                      "entries":  [
+                                                      {
+                                                          "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\afexRX\\af_pairs.jsonl",
+                                                          "sha256":  "550520dcaeb6442453b388a5cba543ed7695b3e3a787d8bd73f7d6f882911412",
+                                                          "bytes":  5351797
+                                                      },
+                                                      {
+                                                          "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\afexRX\\af_positive.jsonl",
+                                                          "sha256":  "48ff9ede88d3a76ed415e9f9e329b4bd813309d498a15ff18e455ea586bcced6",
+                                                          "bytes":  4154
+                                                      },
+                                                      {
+                                                          "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\afexRX\\capped.jsonl",
+                                                          "sha256":  "44e8f2cf3835fce13a63ec5aca048a19be0bbd4ba226c5c556eb58629bfbe5e7",
+                                                          "bytes":  433
+                                                      },
+                                                      {
+                                                          "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\afexRX\\manifest.json",
+                                                          "sha256":  "5881c4a6822aafccff1965fbd24df5ebc2025538a319de01a88d58d759bf9d68",
+                                                          "bytes":  843
+                                                      },
+                                                      {
+                                                          "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\afexRX\\VOID.json",
+                                                          "sha256":  "1eda942bd834c82c1e3afbc9eb839c4c1c0d88c4f64293032ca60caaf2cfbfce",
+                                                          "bytes":  2407
+                                                      }
+                                                  ]
+                                  },
+                                  {
+                                      "category":  "rx_h",
+                                      "role":  "RX downstream run",
+                                      "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\bcdRX",
+                                      "file_count":  2,
+                                      "tree_sha256":  "65610ea10398561884ec72c56fe2cf0d23627d81853ed6647bd2132c76e0561b",
+                                      "entries":  [
+                                                      {
+                                                          "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\bcdRX\\manifest.json",
+                                                          "sha256":  "7b67414a4c9397945df98d566a125669917e2276da281ca45cd9142b639ddd48",
+                                                          "bytes":  901
+                                                      },
+                                                      {
+                                                          "path":  "scratch\\claude-intake\\_paper4-next-version-sandbox\\runs\\bcdRX\\pairs.jsonl",
+                                                          "sha256":  "55a4fbd4955b1c0b1462552f6c6f34161437946fdde184a2ba4a1a9835573fcc",
+                                                          "bytes":  44979
+                                                      }
+                                                  ]
+                                  }
+                              ],
+    "missing":  [
+
+                ],
+    "ambiguous":  [
+
+                  ],
+    "frozen_claim_anchors":  {
+                                 "paper4_v033_manuscript_sha256":  "bf06dea9c8f10f7c4afb6da0cb69aa949e9d51f5c7dafa229dbdb04aa4a0e82d",
+                                 "rx_preregistration_sha256":  "bca2780f881ac23c9057d204f2e4cbc85f67945afd758bb9ef5abbe1e8d3463c",
+                                 "afe263_protocol_sha256":  "e56c3e2d4e33df84090ad53159cb5761de80da81427ddfe726401e5d38479641",
+                                 "carpi_nonidentifiability_lemma_sha256":  "e397ef3285187aabb6bbd4a5fec4e51c056294cba400249ebc88053a8ad829dd",
+                                 "distinctness_symbolic_proof_sha256":  "efc5d5ec9bd1b51fb7814c7f76dee99b0b13328b6e1f8866a2d929ceb427f856"
+                             },
+    "scientific_blacklist":  [
+                                 {
+                                     "name":  "afexRX",
+                                     "reason":  "VOID_CONCURRENT_WRITERS",
+                                     "use":  "Never use counts/timings as scientific result; retained only for provenance/cost-model history."
+                                 }
+                             ]
+}

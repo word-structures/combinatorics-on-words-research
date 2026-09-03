@@ -1,0 +1,14 @@
+{
+  "physical_domain_mismatches": 0,
+  "role_mask_mismatches": 0,
+  "signature_mismatches": 0,
+  "bulk_target_mismatches": 0,
+  "algebra_decomposition_mismatches": 0,
+  "no_family_match": 0,
+  "multiple_family_matches": 0,
+  "wrong_family_assignments": 0,
+  "exercised_physical_patterns": 34,
+  "unexercised_patterns": 0,
+  "false_safe_elisions": 0,
+  "checked_windows": 3370
+}

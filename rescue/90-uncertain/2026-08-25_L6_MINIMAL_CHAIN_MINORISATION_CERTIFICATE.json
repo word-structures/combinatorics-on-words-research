@@ -1,0 +1,17 @@
+{
+  "baseline": "L6 minimal memory-11 presentation",
+  "states": 10128,
+  "orbits": 1688,
+  "quotient_positive_power": 23,
+  "quotient_power_min_entry": 1,
+  "quotient_power_max_entry": 5981,
+  "continuation_depth": 300,
+  "projective_residual_delta_decimal": "6.9884158139168004949862715514303362461016821194636008757783993039824477003519603E-31",
+  "projective_E_calculated": "1.0000000000000000000000000020902351699425150280503938232166247324154988946697314",
+  "projective_E_used": "1+3e-27",
+  "proxy_40step_common_mass_lower_float": 0.9882571136822208,
+  "true_40step_common_mass_lower_decimal": "0.98825711368222080022150054865776607847327905886914597350313253401649538076836797",
+  "certified_simple_common_mass_lower": "0.988",
+  "certified_simple_dobrushin_upper": "0.012",
+  "h8_touched": false
+}

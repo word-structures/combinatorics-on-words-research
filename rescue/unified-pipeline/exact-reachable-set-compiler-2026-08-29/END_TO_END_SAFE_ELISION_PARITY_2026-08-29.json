@@ -1,0 +1,7 @@
+{
+  "false_safe_elisions": 0,
+  "true_safe_elisions": 327,
+  "danger_zone_queries": 27,
+  "total_queries": 354,
+  "witnessed_negatives_control": 0
+}

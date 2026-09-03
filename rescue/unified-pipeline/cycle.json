@@ -1,0 +1,33 @@
+{
+  "L": 10,
+  "cycleLength": 4,
+  "generatorWord": "cabcccbbbabcbbbaaabcccaaabaaacabbbcaaacc",
+  "generatorBlocks": [
+    "cabcccbbba",
+    "bcbbbaaabc",
+    "ccaaabaaac",
+    "abbbcaaacc"
+  ],
+  "profiles": [
+    {
+      "a": 2,
+      "b": 4,
+      "c": 4
+    },
+    {
+      "a": 3,
+      "b": 5,
+      "c": 2
+    },
+    {
+      "a": 6,
+      "b": 1,
+      "c": 3
+    },
+    {
+      "a": 4,
+      "b": 3,
+      "c": 3
+    }
+  ]
+}

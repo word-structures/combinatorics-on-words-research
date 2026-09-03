@@ -1,0 +1,14 @@
+﻿
+
+Algorithm : SHA256
+Hash      : 2695F4582B7FF5D2210E398C27C3A657E9A9329500A4BD6C17123B1FA0F4AF35
+Path      : C:\abc-worktrees\profile-response-baseline-h2-h7-2026-08-25\scratch\claude-intake\finalpaper4\PAPER4_MANUSC
+            RIPT_SUBMISSION_CANDIDATE_v1.3_CLAUDE_2026-08-29.md
+
+Algorithm : SHA256
+Hash      : 8B0107DB6BEDAD2565A06512F93C2BD1647EF709B6C678AB508FAE339136F9EA
+Path      : C:\abc-worktrees\profile-response-baseline-h2-h7-2026-08-25\scratch\claude-intake\finalpaper4\PAPER4_CLAUDE
+            _EDIT_REPORT_v1.3_2026-08-29.md
+
+
+

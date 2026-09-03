@@ -1,0 +1,15 @@
+{
+  "baseline": {
+    "time": 139,
+    "solutions": [],
+    "checks": 49872
+  },
+  "paper4": {
+    "time": 193,
+    "solutions": [],
+    "checks": 40198,
+    "trivialKills": 9674,
+    "fractionalKills": 0
+  },
+  "parity": true
+}

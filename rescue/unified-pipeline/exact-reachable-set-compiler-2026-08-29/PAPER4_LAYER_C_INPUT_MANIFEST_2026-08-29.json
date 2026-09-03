@@ -1,0 +1,29 @@
+{
+  "frozen_inputs": [
+    {
+      "role": "six physical domains / 34 patterns / 19 complete reduced support families",
+      "path": "scratch/claude-intake/_paper4-master-closure-2026-08-29/runs/sixdomain_full.json",
+      "sha256": "31b1214135bfc10ca4e28816cae778d47a0e64bba6946b5a8de88f33d8317b29"
+    },
+    {
+      "role": "generator script for six domains and 19 families",
+      "path": "scratch/claude-intake/_paper4-master-closure-2026-08-29/work/sixdomain_full.js",
+      "sha256": "23bf4a7c5621f1063b9dd0768edae756e8020010ae01ab13760c936ccc1ed523"
+    },
+    {
+      "role": "all-L>=5 19-family distinctness proof output",
+      "path": "PAPER4_19_FAMILY_DISTINCTNESS_CHECK_RESULTS_2026-08-29.json",
+      "sha256": "0f42414547a4eeec42eb46f8ba48e64e22bf26cc59134e1cf520c854bcd6e953"
+    },
+    {
+      "role": "all-L>=5 19-family distinctness proof independent checker",
+      "path": "scratch/claude-intake/paper4-audit/antigravity/19-family-distinctness-kill/PAPER4_19_FAMILY_DISTINCTNESS_INDEPENDENT_CHECKER.js",
+      "sha256": "d2ffba989bca6fc55f280cb5d823216e135d90643f77459f1a0d96001a209abc"
+    }
+  ],
+  "environment": {
+    "git_head": "fea6be4126ec19c4bbdb5b18e0cf12efbd60390f",
+    "node_version": "v22.18.0",
+    "python_version": "Python 3.9.13"
+  }
+}
