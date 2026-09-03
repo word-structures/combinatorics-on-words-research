@@ -1,0 +1,18 @@
+{
+  "pid": 3,
+  "profile": [
+    4,
+    3,
+    1
+  ],
+  "H_quotient_states": 4614,
+  "s3_orbits": 1538,
+  "trivial_dim": 1538,
+  "standard_dim": 3076,
+  "cross_A0_maxabs": 0.0,
+  "cross_B_maxabs": 0.0,
+  "Atri_nnz": 2595,
+  "Astd_nnz": 7862,
+  "Btri_nnz": 75,
+  "Bstd_nnz": 220
+}

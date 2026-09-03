@@ -1,0 +1,144 @@
+{
+  "profile": [
+    4,
+    3,
+    1
+  ],
+  "K": 4614,
+  "E": 8010,
+  "mult_all_one": true,
+  "binary_export_exact_match": true,
+  "class_size_sum": 104520,
+  "target_degree_353": {
+    "min": 0,
+    "max": 158,
+    "chosen_cap": 158,
+    "cap_safe": true
+  },
+  "a_count_44": {
+    "min": 4,
+    "max": 29,
+    "claimed_min": 4,
+    "claimed_max": 29,
+    "claim_exact": true
+  },
+  "centered_score_44": {
+    "min_num_over3": -32,
+    "max_num_over3": 43,
+    "M_num_over3": 43,
+    "oscillation": 25
+  },
+  "hard_scc_count": 199,
+  "hard_components_top": [
+    {
+      "component": 156,
+      "size": 4416,
+      "internal_edges": 7548,
+      "has_cycle": true,
+      "rho": 1.7744800344323401
+    },
+    {
+      "component": 0,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 1,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 2,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 3,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 4,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 5,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 6,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 7,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 8,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 9,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 10,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    }
+  ],
+  "hard_unique_dominant_cyclic_scc": true,
+  "tropical_forward": {
+    "min": 0,
+    "max": 3,
+    "hist": {
+      "0": 7773,
+      "1": 219,
+      "2": 15,
+      "3": 3
+    },
+    "zero_scc_giant_size": 4416,
+    "distance_max": 2
+  },
+  "tropical_reverse": {
+    "min": 0,
+    "max": 3,
+    "hist": {
+      "0": 7773,
+      "1": 222,
+      "2": 12,
+      "3": 3
+    },
+    "zero_scc_giant_size": 4416,
+    "distance_max": 2
+  },
+  "PASS": true
+}

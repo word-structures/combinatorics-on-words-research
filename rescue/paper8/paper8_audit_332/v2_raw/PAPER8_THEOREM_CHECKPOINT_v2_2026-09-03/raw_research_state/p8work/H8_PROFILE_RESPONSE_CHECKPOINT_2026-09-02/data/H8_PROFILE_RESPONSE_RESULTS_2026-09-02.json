@@ -1,0 +1,121 @@
+{
+  "status": "EXPLORATORY_DISCOVERY",
+  "baseline_h8_transition": {
+    "h": 8,
+    "memory": 15,
+    "valid_states": 120084,
+    "baseline_scc_count": 15565,
+    "largest_baseline_scc": 104520,
+    "largest_baseline_scc_edges": 184200,
+    "lambda": 1.777638475745576,
+    "a_green_kubo": 0.08282382651724188,
+    "a_moment_dp": 0.08282382651785156
+  },
+  "profiles": [
+    {
+      "profile": [
+        3,
+        3,
+        2
+      ],
+      "B": 0.6666666666666666,
+      "S": 6,
+      "J": -0.07407407407407407,
+      "deleted_edges": 4434,
+      "q_v": 0.03325653041137478,
+      "lambda_target": 1.728401823927138,
+      "a_green_kubo": 0.10008631167209171,
+      "a_moment_dp": 0.10008631168631837,
+      "delta_green_kubo": 0.017262485154849835,
+      "delta_over_q": 0.5190705386676634
+    },
+    {
+      "profile": [
+        4,
+        2,
+        2
+      ],
+      "B": 2.6666666666666665,
+      "S": 0,
+      "J": 0.5925925925925926,
+      "deleted_edges": 516,
+      "q_v": 0.00258498287867271,
+      "lambda_target": 1.7734419995470145,
+      "a_green_kubo": 0.07983193821757752,
+      "a_moment_dp": 0.07983193821302847,
+      "delta_green_kubo": -0.002991888299664361,
+      "delta_over_q": -1.157411263474434
+    },
+    {
+      "profile": [
+        4,
+        3,
+        1
+      ],
+      "B": 4.666666666666667,
+      "S": -6,
+      "J": -0.7407407407407407,
+      "deleted_edges": 480,
+      "q_v": 0.0023260611384147926,
+      "lambda_target": 1.7744800344313993,
+      "a_green_kubo": 0.07787961323342157,
+      "a_moment_dp": 0.07787961323105265,
+      "delta_green_kubo": -0.0049442132838203035,
+      "delta_over_q": -2.125573228565169
+    },
+    {
+      "profile": [
+        5,
+        2,
+        1
+      ],
+      "B": 8.666666666666666,
+      "S": -18,
+      "J": 2.5925925925925926,
+      "deleted_edges": 72,
+      "q_v": 0.000521669813083945,
+      "lambda_target": 1.7770014215169132,
+      "a_green_kubo": 0.0806424032244952,
+      "a_moment_dp": 0.08064240322477417,
+      "delta_green_kubo": -0.002181423292746676,
+      "delta_over_q": -4.1816168734219055
+    }
+  ],
+  "finite_family_observations_h2_h8": {
+    "profile_total": 19,
+    "minimum_B_positive": 7,
+    "nonminimum_B_negative": 12,
+    "noncritical_signS_matches": "16/16",
+    "S_zero_cases": [
+      {
+        "h": 2,
+        "profile": [
+          1,
+          1,
+          0
+        ],
+        "sign": "positive"
+      },
+      {
+        "h": 6,
+        "profile": [
+          3,
+          2,
+          1
+        ],
+        "sign": "negative"
+      },
+      {
+        "h": 8,
+        "profile": [
+          4,
+          2,
+          2
+        ],
+        "sign": "negative"
+      }
+    ]
+  },
+  "critical_h8_soft_derivative_at_zero_approx": -0.003597601106245657,
+  "full_shift_exact_local_response": "d a / d epsilon at epsilon=0 = (4/9) q_v S(v)"
+}

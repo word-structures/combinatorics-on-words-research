@@ -1,0 +1,81 @@
+{
+  "THEOREM_ID": "P8-H8-521-CONTINUUM-SIGN-1",
+  "STATUS": "COMPUTER_ASSISTED_THEOREM_PASS",
+  "NOVELTY_STATUS": "NOT_ESTABLISHED",
+  "profile": [
+    5,
+    2,
+    1
+  ],
+  "h": 8,
+  "statement": "For the H8 profile (5,2,1), C_521(x)>0 for every x in [0,1]. Consequently a(x) is strictly increasing from hard deletion x=0 to baseline x=1, so hard-deletion Delta_a=a(0)-a(1)<0.",
+  "finite_context_exact": {
+    "L": 180,
+    "subdivision": 20,
+    "C180_lower_num": "6233660658519963868026181636263772085303768114950517474343586554579695189262781499081872706915523497981247355828932525975781683207287623366912275844991952582437028518696058016863359024094920380475786232925782016000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "C180_lower_den": "1133586051847055009544702635035042112530980374697220707652164414443678899757096381762238879450707766037067030147108073396863261186596065621975553325968015839543588329626255299802548500088102429502010552915015890210033307616289007814474235177107514086623342364500957334739303182489964942329227914333879806863742858706287339478842817573149953559056622292118203740386057373",
+    "C180_lower_decimal": 5.499062597288395,
+    "bernstein_global_positive": true,
+    "source": "L180_exact_subdivision_20.json"
+  },
+  "mixing_certificate": {
+    "block_length": 36,
+    "forward_reverse_interval_cover_complete": true,
+    "intervals_total": 460,
+    "observed_certified_global_alpha36_lower": 0.8905641208011343,
+    "alpha36_used_exact": "89/100",
+    "tau36_used_exact": "11/100",
+    "score_a_count_range_36": [
+      3,
+      24
+    ],
+    "centered_score_range_36": [
+      "-9",
+      "12"
+    ],
+    "M_abs": 12,
+    "oscillation_R": 21,
+    "interval_lemma_source": "INTERVAL_ALPHA36_LEMMA.md"
+  },
+  "tail_lemma": {
+    "n_full_blocks_each_side": 5,
+    "D_exact": "2100/89",
+    "K_exact": "3511652400/704969",
+    "tail_formula": "4*K*tau^5",
+    "tail_upper_num": "1413887826681",
+    "tail_upper_den": "4406056250000",
+    "tail_upper_decimal": 0.3208964539844447,
+    "lemma_source": "FINITE_TO_INFINITE_TAIL_LEMMA.md"
+  },
+  "infinite_conclusion": {
+    "C_infinite_lower_num": "25863095985649074557235519442129110024264461773165529528812466576178371986490433054397193887870238575912739967603828345291560204369339306052949602582785484799660242013885587124729125036892661054573802187465658671434755502073783210066803197970769777784189529690411545708841540401596916733598246442217752232066750582806533334273953277480692457423069351322776296197547992192974853830987",
+    "C_infinite_lower_den": "4994643908653540768898246699487616268930329398562031156580241844287161689267877994715898628796787519471156919848603946215708102346584011159115524079089663489920024507176822327790642584741309260147517984237161481909231067730922784687263044366064419363329819020999221195711448907854800596430584209625255709780787120995704246406627139135787185066091174754076737329101365501165231250000",
+    "C_infinite_lower_decimal": 5.178166143303951,
+    "C_positive_all_x": true,
+    "hard_deletion_delta_sign": "negative"
+  },
+  "endpoint_branch": {
+    "hard_x0_simple_isolated_perron_branch": true,
+    "note": "Hard deletion has one dominant Perron SCC; all other SCCs are singleton/no-internal-edge transient pieces in the audited structure, giving continuity/analytic continuation of the Perron branch at x=0."
+  },
+  "arithmetic_safety": {
+    "interval_float_outward_relative_pad": "2e-10",
+    "alpha_truncation_margin": 0.0005641208011343268,
+    "note": "The interval theorem uses arbitrary positive midpoint vectors, so they need not be rigorously enclosed Perron vectors. All nonnegative 36-step recurrences are outward padded; the final theorem then truncates alpha from >0.890564 to exactly 0.89."
+  },
+  "sources": [
+    "fwd200_000_050.json",
+    "fwd200_050_100.json",
+    "fwd200_100_150.json",
+    "fwd200_150_200.json",
+    "rev500_000_050.json",
+    "rev500_050_100.json",
+    "rev200_040_090.json",
+    "rev200_090_140.json",
+    "rev200_140_190.json",
+    "rev200_190_200.json",
+    "finite_context_exact_pid4_L180_bernstein.json",
+    "L180_exact_subdivision_20.json",
+    "hard_endpoint_structure.json"
+  ]
+}

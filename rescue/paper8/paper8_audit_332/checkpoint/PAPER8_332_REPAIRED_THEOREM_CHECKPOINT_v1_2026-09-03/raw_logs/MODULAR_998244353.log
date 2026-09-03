@@ -1,0 +1,23 @@
+	Command being timed: "env OMP_NUM_THREADS=8 ./modular_burned_giant_staged_fast ./PAPER8_THEOREM_CHECKPOINT_v4_2026-09-03/theorem_332/data/pid1_edges.bin ./pid1_sizes_giant.bin ./pid1_giant_mask.bin 220 308 558 705 998244353 ./mod_fast_998244353.txt"
+	User time (seconds): 93.85
+	System time (seconds): 2.07
+	Percent of CPU this job got: 176%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:54.44
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 147984
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 55475
+	Voluntary context switches: 42085
+	Involuntary context switches: 15736
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 56
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

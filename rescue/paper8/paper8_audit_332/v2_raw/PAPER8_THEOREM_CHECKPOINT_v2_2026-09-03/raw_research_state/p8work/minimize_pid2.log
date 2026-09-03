@@ -1,0 +1,17 @@
+iter 0 classes 19
+iter 1 classes 439
+iter 2 classes 2685
+iter 3 classes 5838
+iter 4 classes 7923
+iter 5 classes 8922
+iter 6 classes 9420
+iter 7 classes 9564
+iter 8 classes 9612
+iter 9 classes 9618
+iter 10 classes 9618
+iter 11 classes 9618
+iter 12 classes 9618
+iter 13 classes 9618
+iter 14 classes 9618
+iter 15 classes 9618
+{'profile': [4, 2, 2], 'original_states': 104520, 'quotient_states': 9618, 'class_history': [19, 439, 2685, 5838, 7923, 8922, 9420, 9564, 9612, 9618, 9618, 9618, 9618, 9618, 9618, 9618], 'min_class': 1, 'max_class': 112, 'singleton_classes': 708}

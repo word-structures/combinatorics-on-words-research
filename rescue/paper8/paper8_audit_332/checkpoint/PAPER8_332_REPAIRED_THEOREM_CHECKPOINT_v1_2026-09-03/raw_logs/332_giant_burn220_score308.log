@@ -1,0 +1,27 @@
+K 10191 E 18858 burn 220 scored 308 total 1057 nscore 617 Dmid 558 Dfull 705
+den done 516.693
+num done 1127.71
+total_sec 1128.41 Fdeg 1408 Gdeg 0
+	Command being timed: "env OMP_NUM_THREADS=4 /mnt/data/PAPER8_BURN_REPAIR/exact_burned_context_gmp_giant_staged /mnt/data/PAPER8_BURN_REPAIR/PAPER8_THEOREM_CHECKPOINT_v4_2026-09-03/theorem_332/data/pid1_edges.bin /mnt/data/PAPER8_BURN_REPAIR/pid1_sizes_giant.bin /mnt/data/PAPER8_BURN_REPAIR/pid1_giant_mask.bin 220 308 558 705 /mnt/data/PAPER8_BURN_REPAIR/332_giant_burn220_score308_poly.txt"
+	User time (seconds): 3675.76
+	System time (seconds): 29.84
+	Percent of CPU this job got: 328%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 18:48.60
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3311060
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1343608
+	Voluntary context switches: 21366
+	Involuntary context switches: 41528
+	Swaps: 0
+	File system inputs: 8
+	File system outputs: 1384
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

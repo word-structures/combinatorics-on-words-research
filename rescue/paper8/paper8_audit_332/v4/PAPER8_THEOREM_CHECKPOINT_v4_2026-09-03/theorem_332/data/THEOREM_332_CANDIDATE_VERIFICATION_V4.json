@@ -1,0 +1,20 @@
+{
+  "profile": [
+    3,
+    3,
+    2
+  ],
+  "status": "COMPUTER_ASSISTED_THEOREM_PASS",
+  "failures": [],
+  "finite_negC_lower_float": 0.5696556495537533,
+  "tail_float": 0.2753860082304527,
+  "infinite_negC_margin_float": 0.29426964132330063,
+  "cover_min_alpha44_lower": 0.9039882776677982,
+  "roundoff_stress_min_alpha": 0.9016227666453128,
+  "audit_boundary": [
+    "independent derivation/review of 4*K*tau^B",
+    "fully directed-rounding or ball-arithmetic replay of interval generator",
+    "external code review/replay"
+  ],
+  "PASS": true
+}

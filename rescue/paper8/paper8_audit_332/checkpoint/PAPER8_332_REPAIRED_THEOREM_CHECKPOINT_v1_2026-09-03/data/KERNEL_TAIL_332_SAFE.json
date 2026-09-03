@@ -1,0 +1,51 @@
+{
+  "profile": [
+    3,
+    3,
+    2
+  ],
+  "block_length": 44,
+  "tau_num": 1,
+  "tau_den": 10,
+  "event_support_length": 16,
+  "score_radius": 308,
+  "left_distance_included": 293,
+  "right_distance_included": 308,
+  "same_side_constant_num": 4,
+  "same_side_constant_den": 3,
+  "cross_constant_num": 5,
+  "cross_constant_den": 3,
+  "components": {
+    "same_left": {
+      "num": 28307,
+      "den": 607500,
+      "float": 0.046595884773662555
+    },
+    "same_right": {
+      "num": 13053647,
+      "den": 607500000,
+      "float": 0.021487484773662552
+    },
+    "inside_left": {
+      "num": 68,
+      "den": 84375,
+      "float": 0.000805925925925926
+    },
+    "inside_right": {
+      "num": 431,
+      "den": 2109375,
+      "float": 0.00020432592592592593
+    },
+    "cross": {
+      "num": 91846092673,
+      "den": 24300000000000,
+      "float": 0.003779674595596708
+    }
+  },
+  "tail_num": 1770821092673,
+  "tail_den": 24300000000000,
+  "tail_float": 0.07287329599477366,
+  "status": "DERIVED_BOUND_REVIEWED",
+  "note": "Uses forward/reverse 44-step Dobrushin contraction <= 0.1. Polynomial shell factor is explicit; no pure tau^B continuation claim.",
+  "proof_document": "KERNEL_TAIL_LEMMA.md"
+}

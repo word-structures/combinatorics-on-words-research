@@ -1,0 +1,123 @@
+{
+  "profile": [
+    4,
+    3,
+    1
+  ],
+  "L": 220,
+  "D": 196,
+  "G_exact_zero": true,
+  "modular": [
+    {
+      "prime": 1000000007,
+      "checks": {
+        "F": {
+          "lengths_equal": true,
+          "coefficients_equal": true,
+          "n": 391
+        },
+        "G": {
+          "lengths_equal": true,
+          "coefficients_equal": true,
+          "n": 1
+        },
+        "N0": {
+          "lengths_equal": true,
+          "coefficients_equal": true,
+          "n": 197
+        },
+        "D0": {
+          "lengths_equal": true,
+          "coefficients_equal": true,
+          "n": 197
+        }
+      },
+      "PASS": true
+    },
+    {
+      "prime": 1000000009,
+      "checks": {
+        "F": {
+          "lengths_equal": true,
+          "coefficients_equal": true,
+          "n": 391
+        },
+        "G": {
+          "lengths_equal": true,
+          "coefficients_equal": true,
+          "n": 1
+        },
+        "N0": {
+          "lengths_equal": true,
+          "coefficients_equal": true,
+          "n": 197
+        },
+        "D0": {
+          "lengths_equal": true,
+          "coefficients_equal": true,
+          "n": 197
+        }
+      },
+      "PASS": true
+    },
+    {
+      "prime": 998244353,
+      "checks": {
+        "F": {
+          "lengths_equal": true,
+          "coefficients_equal": true,
+          "n": 391
+        },
+        "G": {
+          "lengths_equal": true,
+          "coefficients_equal": true,
+          "n": 1
+        },
+        "N0": {
+          "lengths_equal": true,
+          "coefficients_equal": true,
+          "n": 197
+        },
+        "D0": {
+          "lengths_equal": true,
+          "coefficients_equal": true,
+          "n": 197
+        }
+      },
+      "PASS": true
+    },
+    {
+      "prime": 1004535809,
+      "checks": {
+        "F": {
+          "lengths_equal": true,
+          "coefficients_equal": true,
+          "n": 391
+        },
+        "G": {
+          "lengths_equal": true,
+          "coefficients_equal": true,
+          "n": 1
+        },
+        "N0": {
+          "lengths_equal": true,
+          "coefficients_equal": true,
+          "n": 197
+        },
+        "D0": {
+          "lengths_equal": true,
+          "coefficients_equal": true,
+          "n": 197
+        }
+      },
+      "PASS": true
+    }
+  ],
+  "PASS": true,
+  "sha256": {
+    "../L220_poly.txt": "76cd8448af79bbdda0099578f7b622bc4bb6f9f76b456c18d7de9ed5d7b62a23",
+    "modular_crosscheck_outgoing.cpp": "ce55cf546b53b0f7d3eee74ae0d1ecb2f20a82ca8e139349b76bf0db63fd0b83",
+    "../pid3_edges.bin": "521a34d8a18ccc7abf04f58bfc158c252ffd91907963e370bfeca5102eb95ee3",
+    "../pid3_sizes.bin": "dead600a80a173a4831ea5b371b96a8814d49a677768542321bd861a9e49cc70"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "gmp_poly": "./332_giant_burn220_score308_poly.txt",
+  "gmp_sha256": "c23dfa7818c309aa20f6a1c6fab7c4499567da25ea30644c51a3e87866fb0d60",
+  "modular_runs": [
+    {
+      "prime": 1000000007,
+      "file": "./mod_fast_1000000007.txt",
+      "sha256": "fb23bad149a3422e4acb59567b71e0eb5bfd6375e82b1d774c32531c6fff81be",
+      "sections": {
+        "F": {
+          "gmp_count": 1409,
+          "modular_count": 1409,
+          "PASS": true,
+          "first_mismatches": []
+        },
+        "G": {
+          "gmp_count": 1,
+          "modular_count": 1,
+          "PASS": true,
+          "first_mismatches": []
+        },
+        "N0": {
+          "gmp_count": 706,
+          "modular_count": 706,
+          "PASS": true,
+          "first_mismatches": []
+        },
+        "D0": {
+          "gmp_count": 706,
+          "modular_count": 706,
+          "PASS": true,
+          "first_mismatches": []
+        }
+      },
+      "PASS": true
+    },
+    {
+      "prime": 1000000009,
+      "file": "./mod_fast_1000000009.txt",
+      "sha256": "ff0e5812f62e082f1d701c6786264efedd8514da6074c35f34ff77ddf913169b",
+      "sections": {
+        "F": {
+          "gmp_count": 1409,
+          "modular_count": 1409,
+          "PASS": true,
+          "first_mismatches": []
+        },
+        "G": {
+          "gmp_count": 1,
+          "modular_count": 1,
+          "PASS": true,
+          "first_mismatches": []
+        },
+        "N0": {
+          "gmp_count": 706,
+          "modular_count": 706,
+          "PASS": true,
+          "first_mismatches": []
+        },
+        "D0": {
+          "gmp_count": 706,
+          "modular_count": 706,
+          "PASS": true,
+          "first_mismatches": []
+        }
+      },
+      "PASS": true
+    },
+    {
+      "prime": 998244353,
+      "file": "./mod_fast_998244353.txt",
+      "sha256": "09a97ac5ee393e0153e98b9e29de29512595575fc321001b32ee1eac17dbce86",
+      "sections": {
+        "F": {
+          "gmp_count": 1409,
+          "modular_count": 1409,
+          "PASS": true,
+          "first_mismatches": []
+        },
+        "G": {
+          "gmp_count": 1,
+          "modular_count": 1,
+          "PASS": true,
+          "first_mismatches": []
+        },
+        "N0": {
+          "gmp_count": 706,
+          "modular_count": 706,
+          "PASS": true,
+          "first_mismatches": []
+        },
+        "D0": {
+          "gmp_count": 706,
+          "modular_count": 706,
+          "PASS": true,
+          "first_mismatches": []
+        }
+      },
+      "PASS": true
+    },
+    {
+      "prime": 1004535809,
+      "file": "./mod_fast_1004535809.txt",
+      "sha256": "43ac9731837a9ecde506b1f57660951c889d3b3fc19b3bf01ee85b3b7452a105",
+      "sections": {
+        "F": {
+          "gmp_count": 1409,
+          "modular_count": 1409,
+          "PASS": true,
+          "first_mismatches": []
+        },
+        "G": {
+          "gmp_count": 1,
+          "modular_count": 1,
+          "PASS": true,
+          "first_mismatches": []
+        },
+        "N0": {
+          "gmp_count": 706,
+          "modular_count": 706,
+          "PASS": true,
+          "first_mismatches": []
+        },
+        "D0": {
+          "gmp_count": 706,
+          "modular_count": 706,
+          "PASS": true,
+          "first_mismatches": []
+        }
+      },
+      "PASS": true
+    }
+  ],
+  "prime_count": 4,
+  "PASS": true
+}

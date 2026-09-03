@@ -1,0 +1,39 @@
+{
+  "profile": [
+    3,
+    3,
+    2
+  ],
+  "block_length": 44,
+  "tau": "1/10",
+  "burn_blocks": 5,
+  "burn_steps": 220,
+  "score_radius": 308,
+  "observed_one_block_projective_rho_upper": {
+    "left": 1.0443249625756679,
+    "right": 1.0772235341787708
+  },
+  "theorem_one_block_bounds": {
+    "left": "107/100",
+    "right": "11/10"
+  },
+  "one_percent_stress_pass": true,
+  "contracted_rho_left": "1000007/1000000",
+  "contracted_rho_right": "100001/100000",
+  "rho_total": "100001700007/100000000000",
+  "tv_upper_via_rho_minus_1_over_4": "1700007/400000000000",
+  "score_square_osc_upper": "329476/9",
+  "burn_error_num": 46675958861,
+  "burn_error_den": 150000000000,
+  "burn_error_float": 0.3111730590733333,
+  "kernel_tail_num": 1770821092673,
+  "kernel_tail_den": 24300000000000,
+  "kernel_tail_float": 0.07287329599477366,
+  "combined_error_num": 1866465285631,
+  "combined_error_den": 4860000000000,
+  "combined_error_float": 0.38404635506810697,
+  "PASS_NUMERICAL_HYPOTHESES": true,
+  "note": "One-block projective certificate inherits the interval-generator directed-rounding audit item. Algebraic burn contraction and TV conversion are independent of the rejected old 4K tau^B tail lemma.",
+  "orientation_note": "forward tropical record (reverse=false) certifies RIGHT boundary; reverse tropical record (reverse=true) certifies LEFT boundary.",
+  "orientation_correction_note": "2026-09-03: corrected left/right labels only; product rho_total and burn_error are unchanged."
+}

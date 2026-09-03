@@ -1,0 +1,30 @@
+{
+  "profile": [
+    5,
+    2,
+    1
+  ],
+  "original_states": 104520,
+  "quotient_states": 8076,
+  "class_history": [
+    16,
+    259,
+    2115,
+    4932,
+    6687,
+    7560,
+    7926,
+    8022,
+    8064,
+    8076,
+    8076,
+    8076,
+    8076,
+    8076,
+    8076,
+    8076
+  ],
+  "min_class": 1,
+  "max_class": 133,
+  "singleton_classes": 288
+}

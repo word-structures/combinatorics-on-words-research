@@ -1,0 +1,23 @@
+{
+  "profile": [
+    3,
+    3,
+    2
+  ],
+  "x": 1.0,
+  "n_edges": 4434,
+  "n_orbits": 739,
+  "orbit_sizes": {
+    "6": 739
+  },
+  "orbit_avg_min": -1.4871656329632252,
+  "orbit_avg_max": 2.2377722587837154,
+  "orbit_avg_q10": -1.1774565223889994,
+  "orbit_avg_median": -0.6915688558038842,
+  "orbit_avg_q90": 0.2792246969512814,
+  "frac_orbits_positive": 0.16914749661705006,
+  "frac_orbits_negative": 0.8308525033829499,
+  "mass_fraction_positive_orbits": 0.11606233190355601,
+  "mass_fraction_negative_orbits": 0.883937668096444,
+  "weighted_orbit_average": -0.5696569677714145
+}

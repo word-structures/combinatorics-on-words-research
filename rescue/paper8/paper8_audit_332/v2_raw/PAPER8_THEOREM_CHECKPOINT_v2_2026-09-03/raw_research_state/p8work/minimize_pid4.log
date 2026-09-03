@@ -1,0 +1,17 @@
+iter 0 classes 16
+iter 1 classes 259
+iter 2 classes 2115
+iter 3 classes 4932
+iter 4 classes 6687
+iter 5 classes 7560
+iter 6 classes 7926
+iter 7 classes 8022
+iter 8 classes 8064
+iter 9 classes 8076
+iter 10 classes 8076
+iter 11 classes 8076
+iter 12 classes 8076
+iter 13 classes 8076
+iter 14 classes 8076
+iter 15 classes 8076
+{'profile': [5, 2, 1], 'original_states': 104520, 'quotient_states': 8076, 'class_history': [16, 259, 2115, 4932, 6687, 7560, 7926, 8022, 8064, 8076, 8076, 8076, 8076, 8076, 8076, 8076], 'min_class': 1, 'max_class': 133, 'singleton_classes': 288}

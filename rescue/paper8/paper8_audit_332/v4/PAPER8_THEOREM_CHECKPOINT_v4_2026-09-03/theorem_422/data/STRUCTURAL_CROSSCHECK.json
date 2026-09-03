@@ -1,0 +1,123 @@
+{
+  "profile": [
+    4,
+    2,
+    2
+  ],
+  "K": 4809,
+  "E": 8541,
+  "mult_all_one": true,
+  "binary_export_exact_match": true,
+  "class_size_sum": 104520,
+  "target_degree_441": {
+    "min": 0,
+    "max": 111,
+    "chosen_cap": 111,
+    "cap_safe": true
+  },
+  "a_count_44": {
+    "min": 4,
+    "max": 29,
+    "claim_exact": true
+  },
+  "centered_score_44": {
+    "min_num_over3": -32,
+    "max_num_over3": 43,
+    "M_num_over3": 43,
+    "oscillation": 25
+  },
+  "hard_scc_count": 28,
+  "hard_components_top": [
+    {
+      "component": 27,
+      "size": 4782,
+      "internal_edges": 8334,
+      "has_cycle": true,
+      "rho": 1.7734419995475037
+    },
+    {
+      "component": 0,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 1,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 2,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 3,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 4,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 5,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 6,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 7,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    },
+    {
+      "component": 8,
+      "size": 1,
+      "internal_edges": 0,
+      "has_cycle": false,
+      "rho": 0.0
+    }
+  ],
+  "tropical_forward": {
+    "min": 0,
+    "max": 1,
+    "hist": {
+      "0": 8361,
+      "1": 180
+    },
+    "giant": 4782,
+    "distance_max": 1
+  },
+  "tropical_reverse": {
+    "min": 0,
+    "max": 1,
+    "hist": {
+      "0": 8364,
+      "1": 177
+    },
+    "giant": 4782,
+    "distance_max": 0
+  },
+  "PASS": true
+}

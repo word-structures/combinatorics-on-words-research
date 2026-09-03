@@ -1,0 +1,68 @@
+{
+  "archive_hashes": {
+    "PAPER8_THEOREM_CHECKPOINT_v2_2026-09-03.zip": {
+      "expected": "5b8a4881b3aa29534f0208fd1a78daaa316f9cd9d727db2cb23afaeb7988935c",
+      "actual": "5b8a4881b3aa29534f0208fd1a78daaa316f9cd9d727db2cb23afaeb7988935c",
+      "PASS": true
+    },
+    "PAPER8_THEOREM_CHECKPOINT_v3_2026-09-03.zip": {
+      "expected": "97982664d1c1c491994118421e7b9d2f7995ad6fccfec9b2516836a4b1314ab1",
+      "actual": "97982664d1c1c491994118421e7b9d2f7995ad6fccfec9b2516836a4b1314ab1",
+      "PASS": true
+    },
+    "PAPER8_THEOREM_CHECKPOINT_v4_2026-09-03.zip": {
+      "expected": "974fe207dfb2e55b73b6d544541f4ef626329eee5ea8c3712f690336a7db0782",
+      "actual": "974fe207dfb2e55b73b6d544541f4ef626329eee5ea8c3712f690336a7db0782",
+      "PASS": true
+    },
+    "PAPER8_332_REPAIRED_THEOREM_CHECKPOINT_v1_2026-09-03.zip": {
+      "expected": "1de45d3583e65945f5fd35667d2aa7ad6a622203e27ac2ff870effabbc000f3c",
+      "actual": "1de45d3583e65945f5fd35667d2aa7ad6a622203e27ac2ff870effabbc000f3c",
+      "PASS": true
+    }
+  },
+  "checkpoint_fast_replay": {
+    "v2_root": {
+      "returncode": 0,
+      "PASS": true,
+      "tail": "THEOREM_521_CHECKPOINT_VERIFICATION = PASS\nC180 lower = 5.499062597288395\nmin stored alpha36 = 0.8905641208011343\ntail upper = 0.3208964539844447\nC_infinite lower = 5.178166143303951"
+    },
+    "v2_hash": {
+      "returncode": 0,
+      "PASS": true,
+      "tail": "PACKAGE_HASH_VERIFICATION = PASS"
+    },
+    "v3_root": {
+      "returncode": 0,
+      "PASS": true,
+      "tail": "      4,\n      2,\n      2\n    ],\n    \"finite_lower\": 0.9272878857676629,\n    \"tail_upper\": 0.4552711467305119,\n    \"infinite_lower\": 0.472016739037151,\n    \"alpha\": \"89/100\",\n    \"PASS\": true\n  },\n  \"PAPER8_V3_VERIFICATION\": \"PASS\"\n}"
+    },
+    "v4_root": {
+      "returncode": 0,
+      "PASS": true,
+      "tail": "    \"422_to_431\": 0.31325087799420787,\n    \"431_to_521\": 2.325867583511379\n  },\n  \"audit_boundary\": [\n    \"common 4*K*tau^B derivation external audit pending\",\n    \"fully directed-rounding / ball-arithmetic interval replay pending\",\n    \"external code review/replay pending\"\n  ],\n  \"novelty_status\": \"NOT_ESTABLISHED\",\n  \"H9_opened\": false,\n  \"PASS\": true\n}"
+    },
+    "v4_hash": {
+      "returncode": 0,
+      "PASS": true,
+      "tail": "PASS files= 138"
+    },
+    "repaired332_root": {
+      "returncode": 0,
+      "PASS": true,
+      "tail": "{\n  \"checkpoint\": \"PAPER8_332_REPAIRED_THEOREM_CHECKPOINT_v1_2026-09-03\",\n  \"status\": \"INTERNAL_COMPUTER_ASSISTED_THEOREM_PASS\",\n  \"final_C_upper_margin_num\": 563534714369,\n  \"final_C_upper_margin_den\": 4860000000000,\n  \"final_statement\": \"C_332(x) < -563534714369/4860000000000 < 0 for all x in [0,1]\",\n  \"external_audit_pending\": [\n    \"directed-rounding/ball-arithmetic replay of interval generator\"\n  ],\n  \"issues\": [],\n  \"PASS\": true\n}"
+    },
+    "repaired332_hash": {
+      "returncode": 0,
+      "PASS": true,
+      "tail": "PASS files=49"
+    }
+  },
+  "canonical_warning": {
+    "v4_generic_4K_tauB_tail": "REJECTED_NOT_USED",
+    "v2_v3_v4_PASS_labels": "HISTORICAL_PACKAGE_PASS_NOT_CURRENT_INFINITE_VOLUME_PROOF",
+    "current_repaired_infinite_volume_profile": "(3,3,2)_ONLY"
+  },
+  "issues": [],
+  "PASS": true
+}

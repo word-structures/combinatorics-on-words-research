@@ -1,0 +1,9 @@
+{'profile': [4, 2, 2], 'pid': 2, 'x': 1.0, 'curvature_original': 0.08282382746305217, 'curvature_quotient': 0.08282382779611908, 'abs_diff': 3.3306690738754696e-10}
+{'profile': [4, 2, 2], 'pid': 2, 'x': 0.1, 'curvature_original': 0.0800833558356473, 'curvature_quotient': 0.0800833558356473, 'abs_diff': 0.0}
+{'profile': [4, 2, 2], 'pid': 2, 'x': 0.01, 'curvature_original': 0.0798566689441671, 'curvature_quotient': 0.07985666805598868, 'abs_diff': 8.881784197001252e-10}
+{'profile': [4, 3, 1], 'pid': 3, 'x': 1.0, 'curvature_original': 0.08282382746305217, 'curvature_quotient': 0.08282382846225289, 'abs_diff': 9.992007221626409e-10}
+{'profile': [4, 3, 1], 'pid': 3, 'x': 0.1, 'curvature_original': 0.07819153302612847, 'curvature_quotient': 0.07819153335919538, 'abs_diff': 3.3306690738754696e-10}
+{'profile': [4, 3, 1], 'pid': 3, 'x': 0.01, 'curvature_original': 0.07790927358808375, 'curvature_quotient': 0.07790927336603914, 'abs_diff': 2.220446049250313e-10}
+{'profile': [5, 2, 1], 'pid': 4, 'x': 1.0, 'curvature_original': 0.08282382746305217, 'curvature_quotient': 0.08282382601976224, 'abs_diff': 1.4432899320127035e-09}
+{'profile': [5, 2, 1], 'pid': 4, 'x': 0.1, 'curvature_original': 0.08077114488358461, 'curvature_quotient': 0.08077114510562922, 'abs_diff': 2.220446049250313e-10}
+{'profile': [5, 2, 1], 'pid': 4, 'x': 0.01, 'curvature_original': 0.0806544333542547, 'curvature_quotient': 0.08065443379834392, 'abs_diff': 4.440892098500626e-10}

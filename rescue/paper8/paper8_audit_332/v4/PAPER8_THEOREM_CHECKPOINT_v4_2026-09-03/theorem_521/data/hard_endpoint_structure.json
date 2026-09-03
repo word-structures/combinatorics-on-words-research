@@ -1,0 +1,78 @@
+[
+  {
+    "profile": [
+      3,
+      3,
+      2
+    ],
+    "scc_count": 2635,
+    "dominant_states": 101886,
+    "transient_states": 2634,
+    "non_dominant_sccs": 2634,
+    "all_nondominant_singleton": true,
+    "nondominant_internal_same_scc_edges": 0,
+    "transient_dag_acyclic": true,
+    "transient_longest_edge_path": 8,
+    "edges_gg": 174750,
+    "edges_gt": 1854,
+    "edges_tg": 1854,
+    "edges_tt": 1308
+  },
+  {
+    "profile": [
+      4,
+      2,
+      2
+    ],
+    "scc_count": 367,
+    "dominant_states": 104154,
+    "transient_states": 366,
+    "non_dominant_sccs": 366,
+    "all_nondominant_singleton": true,
+    "nondominant_internal_same_scc_edges": 0,
+    "transient_dag_acyclic": true,
+    "transient_longest_edge_path": 4,
+    "edges_gg": 183072,
+    "edges_gt": 168,
+    "edges_tg": 168,
+    "edges_tt": 276
+  },
+  {
+    "profile": [
+      4,
+      3,
+      1
+    ],
+    "scc_count": 1261,
+    "dominant_states": 103260,
+    "transient_states": 1260,
+    "non_dominant_sccs": 1260,
+    "all_nondominant_singleton": true,
+    "nondominant_internal_same_scc_edges": 0,
+    "transient_dag_acyclic": true,
+    "transient_longest_edge_path": 6,
+    "edges_gg": 181530,
+    "edges_gt": 588,
+    "edges_tg": 588,
+    "edges_tt": 1014
+  },
+  {
+    "profile": [
+      5,
+      2,
+      1
+    ],
+    "scc_count": 223,
+    "dominant_states": 104298,
+    "transient_states": 222,
+    "non_dominant_sccs": 222,
+    "all_nondominant_singleton": true,
+    "nondominant_internal_same_scc_edges": 0,
+    "transient_dag_acyclic": true,
+    "transient_longest_edge_path": 2,
+    "edges_gg": 183720,
+    "edges_gt": 144,
+    "edges_tg": 144,
+    "edges_tt": 120
+  }
+]

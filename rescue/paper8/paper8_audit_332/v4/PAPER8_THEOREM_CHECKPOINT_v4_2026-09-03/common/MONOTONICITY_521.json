@@ -1,0 +1,21 @@
+{
+  "profile": [
+    5,
+    2,
+    1
+  ],
+  "L": 180,
+  "F_degree": 160,
+  "derivative_numerator_degree": 320,
+  "G_exact_zero": true,
+  "N_nonnegative": true,
+  "D_nonnegative": true,
+  "bernstein_derivative_negative_count": 0,
+  "bernstein_derivative_zero_count": 0,
+  "C_prime_strictly_positive": true,
+  "C0_float": 5.971801558229859,
+  "C1_float": 6.2336677462562164,
+  "min_bernstein_index": 0,
+  "PASS": true,
+  "seconds": 0.07234978675842285
+}

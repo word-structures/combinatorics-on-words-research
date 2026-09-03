@@ -1,0 +1,17 @@
+iter 0 classes 19
+iter 1 classes 865
+iter 2 classes 6111
+iter 3 classes 12747
+iter 4 classes 17118
+iter 5 classes 19110
+iter 6 classes 20010
+iter 7 classes 20250
+iter 8 classes 20370
+iter 9 classes 20382
+iter 10 classes 20382
+iter 11 classes 20382
+iter 12 classes 20382
+iter 13 classes 20382
+iter 14 classes 20382
+iter 15 classes 20382
+{'profile': [3, 3, 2], 'original_states': 104520, 'quotient_states': 20382, 'class_history': [19, 865, 6111, 12747, 17118, 19110, 20010, 20250, 20370, 20382, 20382, 20382, 20382, 20382, 20382, 20382], 'min_class': 1, 'max_class': 100, 'singleton_classes': 4476}

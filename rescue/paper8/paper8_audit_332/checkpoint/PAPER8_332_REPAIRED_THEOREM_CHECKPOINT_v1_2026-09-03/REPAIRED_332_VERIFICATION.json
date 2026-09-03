@@ -1,0 +1,12 @@
+{
+  "checkpoint": "PAPER8_332_REPAIRED_THEOREM_CHECKPOINT_v1_2026-09-03",
+  "status": "INTERNAL_COMPUTER_ASSISTED_THEOREM_PASS",
+  "final_C_upper_margin_num": 563534714369,
+  "final_C_upper_margin_den": 4860000000000,
+  "final_statement": "C_332(x) < -563534714369/4860000000000 < 0 for all x in [0,1]",
+  "external_audit_pending": [
+    "directed-rounding/ball-arithmetic replay of interval generator"
+  ],
+  "issues": [],
+  "PASS": true
+}

@@ -1,0 +1,95 @@
+{
+  "profile": [
+    3,
+    3,
+    2
+  ],
+  "K": 10191,
+  "E": 18858,
+  "mult_all_one": true,
+  "binary_export_exact_match": true,
+  "class_size_sum": 104520,
+  "target_degree_441": {
+    "min": 0,
+    "max": 294,
+    "chosen_cap": 294,
+    "cap_safe": true
+  },
+  "a_count_44": {
+    "min": 4,
+    "max": 29,
+    "claim_exact": true
+  },
+  "centered_score_44": {
+    "min_num_over3": -32,
+    "max_num_over3": 43,
+    "M_num_over3": 43,
+    "oscillation": 25
+  },
+  "hard_scc_count": 436,
+  "hard_component_sizes_top": [
+    [
+      9756,
+      384
+    ],
+    [
+      1,
+      435
+    ],
+    [
+      1,
+      434
+    ],
+    [
+      1,
+      433
+    ],
+    [
+      1,
+      432
+    ],
+    [
+      1,
+      431
+    ],
+    [
+      1,
+      430
+    ],
+    [
+      1,
+      429
+    ],
+    [
+      1,
+      428
+    ],
+    [
+      1,
+      427
+    ]
+  ],
+  "tropical_forward": {
+    "min": 0,
+    "max": 2,
+    "hist": {
+      "0": 17127,
+      "1": 1716,
+      "2": 15
+    },
+    "giant": 9756,
+    "distance_max": 1
+  },
+  "tropical_reverse": {
+    "min": 0,
+    "max": 2,
+    "hist": {
+      "0": 17229,
+      "1": 1617,
+      "2": 12
+    },
+    "giant": 9756,
+    "distance_max": 1
+  },
+  "PASS": true
+}

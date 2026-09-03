@@ -1,0 +1,14 @@
+{
+  "pid": 3,
+  "profile": [
+    4,
+    3,
+    1
+  ],
+  "quotient_states": 9228,
+  "s3_orbits": 1538,
+  "orbit_size_counts": {
+    "6": 1538
+  },
+  "free_orbits": 1538
+}

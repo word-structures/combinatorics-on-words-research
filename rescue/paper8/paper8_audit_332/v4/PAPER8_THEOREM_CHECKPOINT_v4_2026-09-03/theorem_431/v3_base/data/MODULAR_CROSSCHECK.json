@@ -1,0 +1,132 @@
+{
+  "method": "independent outgoing-edge modular DP",
+  "primes": [
+    1000000007,
+    1000000009,
+    998244353,
+    1004535809
+  ],
+  "records": [
+    {
+      "prime": 1000000007,
+      "families": {
+        "F": {
+          "length_exact": 315,
+          "length_mod": 315,
+          "match": true,
+          "first_mismatch": null
+        },
+        "G": {
+          "length_exact": 1,
+          "length_mod": 1,
+          "match": true,
+          "first_mismatch": null
+        },
+        "N0": {
+          "length_exact": 157,
+          "length_mod": 157,
+          "match": true,
+          "first_mismatch": null
+        },
+        "D0": {
+          "length_exact": 159,
+          "length_mod": 159,
+          "match": true,
+          "first_mismatch": null
+        }
+      },
+      "PASS": true
+    },
+    {
+      "prime": 1000000009,
+      "families": {
+        "F": {
+          "length_exact": 315,
+          "length_mod": 315,
+          "match": true,
+          "first_mismatch": null
+        },
+        "G": {
+          "length_exact": 1,
+          "length_mod": 1,
+          "match": true,
+          "first_mismatch": null
+        },
+        "N0": {
+          "length_exact": 157,
+          "length_mod": 157,
+          "match": true,
+          "first_mismatch": null
+        },
+        "D0": {
+          "length_exact": 159,
+          "length_mod": 159,
+          "match": true,
+          "first_mismatch": null
+        }
+      },
+      "PASS": true
+    },
+    {
+      "prime": 998244353,
+      "families": {
+        "F": {
+          "length_exact": 315,
+          "length_mod": 315,
+          "match": true,
+          "first_mismatch": null
+        },
+        "G": {
+          "length_exact": 1,
+          "length_mod": 1,
+          "match": true,
+          "first_mismatch": null
+        },
+        "N0": {
+          "length_exact": 157,
+          "length_mod": 157,
+          "match": true,
+          "first_mismatch": null
+        },
+        "D0": {
+          "length_exact": 159,
+          "length_mod": 159,
+          "match": true,
+          "first_mismatch": null
+        }
+      },
+      "PASS": true
+    },
+    {
+      "prime": 1004535809,
+      "families": {
+        "F": {
+          "length_exact": 315,
+          "length_mod": 315,
+          "match": true,
+          "first_mismatch": null
+        },
+        "G": {
+          "length_exact": 1,
+          "length_mod": 1,
+          "match": true,
+          "first_mismatch": null
+        },
+        "N0": {
+          "length_exact": 157,
+          "length_mod": 157,
+          "match": true,
+          "first_mismatch": null
+        },
+        "D0": {
+          "length_exact": 159,
+          "length_mod": 159,
+          "match": true,
+          "first_mismatch": null
+        }
+      },
+      "PASS": true
+    }
+  ],
+  "PASS": true
+}

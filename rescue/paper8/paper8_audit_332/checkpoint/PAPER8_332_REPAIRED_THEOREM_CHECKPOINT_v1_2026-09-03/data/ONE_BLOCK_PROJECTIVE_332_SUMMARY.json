@@ -1,0 +1,21 @@
+{
+  "profile": [
+    3,
+    3,
+    2
+  ],
+  "hard_dominant_scc_size": 9756,
+  "hard_two_sided_support_after_44": 9756,
+  "outside_giant_after_44": 0,
+  "missing_giant_after_44": 0,
+  "observed_one_block": {
+    "left": 1.0443249625756679,
+    "right": 1.0772235341787708
+  },
+  "theorem_bounds": {
+    "left": "107/100",
+    "right": "11/10"
+  },
+  "one_percent_stress_pass": true,
+  "PASS": true
+}

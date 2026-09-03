@@ -1,0 +1,17 @@
+{
+  "pid": 1,
+  "profile": [
+    3,
+    3,
+    2
+  ],
+  "x": 1e-08,
+  "K": 10191,
+  "m": 16,
+  "alpha_all_columns": 0.0,
+  "max_minor_col": 0.0,
+  "positive_minor_columns": 0,
+  "pf_err": 4.796163466380676e-14,
+  "lambda": 1.7284018243305748,
+  "seconds": 6.848451137542725
+}

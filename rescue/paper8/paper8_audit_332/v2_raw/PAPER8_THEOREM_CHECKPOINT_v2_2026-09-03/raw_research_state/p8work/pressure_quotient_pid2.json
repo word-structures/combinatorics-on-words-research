@@ -1,0 +1,34 @@
+{
+  "pid": 2,
+  "profile": [
+    4,
+    2,
+    2
+  ],
+  "original_states": 104520,
+  "quotient_states": 4809,
+  "quotient_edges_aggregated": 8541,
+  "history": [
+    23,
+    255,
+    1197,
+    2829,
+    3924,
+    4457,
+    4714,
+    4788,
+    4808,
+    4809,
+    4809,
+    4809,
+    4809,
+    4809,
+    4809,
+    4809,
+    4809,
+    4809
+  ],
+  "min_class": 2,
+  "max_class": 224,
+  "singletons": 0
+}

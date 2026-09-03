@@ -1,0 +1,59 @@
+{
+  "profile": [
+    5,
+    2,
+    1
+  ],
+  "L": 180,
+  "D": 87,
+  "G_exact_zero": true,
+  "modular": [
+    {
+      "prime": 1000000007,
+      "checks": {
+        "F": true,
+        "G": true,
+        "N0": true,
+        "D0": true
+      },
+      "PASS": true
+    },
+    {
+      "prime": 1000000009,
+      "checks": {
+        "F": true,
+        "G": true,
+        "N0": true,
+        "D0": true
+      },
+      "PASS": true
+    },
+    {
+      "prime": 998244353,
+      "checks": {
+        "F": true,
+        "G": true,
+        "N0": true,
+        "D0": true
+      },
+      "PASS": true
+    },
+    {
+      "prime": 1004535809,
+      "checks": {
+        "F": true,
+        "G": true,
+        "N0": true,
+        "D0": true
+      },
+      "PASS": true
+    }
+  ],
+  "PASS": true,
+  "sha256": {
+    "L180_poly.txt": "8e3d4858c5e30b690a22279257a667a2706b5fc051f8877e6bfdd2f671a2c5b8",
+    "modular_crosscheck_outgoing.cpp": "ce55cf546b53b0f7d3eee74ae0d1ecb2f20a82ca8e139349b76bf0db63fd0b83",
+    "pid4_edges.bin": "a36f9ee078ba348f67d3af4b61fdf607fe05c2175c751fb31b254fc166c9195f",
+    "pid4_sizes.bin": "011dd428b858ea84b0266268eefcb7507f55c9d167f8065a6116c723343bfc89"
+  }
+}

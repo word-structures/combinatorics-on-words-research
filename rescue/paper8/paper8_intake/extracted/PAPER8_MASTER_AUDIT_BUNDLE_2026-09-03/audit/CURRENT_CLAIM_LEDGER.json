@@ -1,0 +1,15 @@
+{
+  "bundle_date": "2026-09-03",
+  "canonical_status": {
+    "v4_generic_4K_tauB_tail": "REJECTED_NOT_USED",
+    "repaired_332_continuum_sign": "INTERNAL_COMPUTER_ASSISTED_THEOREM_PASS_EXTERNAL_DIRECTED_ROUNDING_AUDIT_PENDING",
+    "repaired_422": "OPEN",
+    "repaired_431": "OPEN",
+    "repaired_521": "OPEN",
+    "repaired_H8_4of4_ordering": "OPEN",
+    "H9": "NOT_RUN",
+    "novelty": "NOT_ESTABLISHED"
+  },
+  "repaired_332_statement": "C_332(x) < -563534714369/4860000000000 < 0 for all x in [0,1]",
+  "critical_external_audit_gate": "independent directed-rounding/ball-arithmetic replay of one-block projective interval certificate"
+}

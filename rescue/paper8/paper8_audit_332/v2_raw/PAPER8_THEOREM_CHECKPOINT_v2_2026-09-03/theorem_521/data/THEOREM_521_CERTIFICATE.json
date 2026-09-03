@@ -1,0 +1,71 @@
+{
+  "theorem": "H8 profile (5,2,1) infinite-volume continuum sign certificate",
+  "status": "PASS",
+  "profile": [
+    5,
+    2,
+    1
+  ],
+  "parameter": "x = exp(-epsilon) in [0,1]",
+  "finite_context": {
+    "L": 150,
+    "bernstein_degree": 133,
+    "bernstein_all_positive": true,
+    "G_nonzero_count": 0,
+    "C150_exact_lower_num": "351309986017211653390340806712740564181458675060823714641883101562478903265946556602268910667007318616882099667765366193227711227737472216574161867435750263",
+    "C150_exact_lower_den": "190420543981273103390069756153065887136483880240170123260486766201493710791510138772214737195377226106038961087784450571077087822234003745064920161717654920",
+    "C150_exact_lower_decimal": "1.8449164080308541299908191178348790301837088611146990912046761976028047088044140"
+  },
+  "interval_cover": {
+    "forward_intervals": 200,
+    "reverse_intervals": 260,
+    "forward_min_alpha36_lower": 0.9039531922234946,
+    "reverse_min_alpha36_lower": 0.8905641208011343,
+    "global_min_alpha36_lower": 0.8905641208011343,
+    "alpha36_used_in_theorem": "0.8905",
+    "tau36_used": "0.1095",
+    "forward_cover": "200 intervals [i/200,(i+1)/200], i=0..199",
+    "reverse_cover": "[i/500,(i+1)/500], i=0..99, plus [i/200,(i+1)/200], i=40..199"
+  },
+  "block_score": {
+    "block_length": 36,
+    "a_count_min": 3,
+    "a_count_max": 24,
+    "centered_score_min": "-9",
+    "centered_score_max": "12",
+    "M_abs": "12",
+    "oscillation_range": "21"
+  },
+  "tail_bound": {
+    "D": "23.582257158899494665918023582257158899494665918023582257158899494665918023582257",
+    "K": "3090.1507305252358247586001154836397255696245751804580540559444323407308961178619",
+    "n_full_blocks_each_side": 4,
+    "formula": "4*K*tau^4",
+    "E_tail_upper": "1.7770356147285794965499019812681777077989762345513196427668026838124604696080454"
+  },
+  "conclusion": {
+    "C_infinite_lower": "0.0678807933022746334409171365667013223847326265633794484378735137903442391963686",
+    "C_521_positive_all_x": true,
+    "dloglambda_dx_positive_for_x_in_(0,1]": true,
+    "da_dx_positive_all_x_in_(0,1]": true,
+    "hard_deletion_delta_a_sign": "negative"
+  },
+  "roundoff_policy": {
+    "interval_calculator_relative_outward_pad": "2e-10",
+    "note": "Nonnegative 36-step sparse recurrences have <=3 terms per row; 2e-10 outward padding dominates IEEE-754 accumulation error by orders of magnitude. The theorem further truncates the observed global alpha lower from >0.890564 to 0.8905."
+  },
+  "source_files": [
+    "fwd200_000_050.json",
+    "fwd200_050_100.json",
+    "fwd200_100_150.json",
+    "fwd200_150_200.json",
+    "rev500_000_050.json",
+    "rev500_050_100.json",
+    "rev200_040_090.json",
+    "rev200_090_140.json",
+    "rev200_140_190.json",
+    "rev200_190_200.json",
+    "finite_context_exact_pid4_L150_bernstein.json",
+    "gmp_L150.json"
+  ]
+}

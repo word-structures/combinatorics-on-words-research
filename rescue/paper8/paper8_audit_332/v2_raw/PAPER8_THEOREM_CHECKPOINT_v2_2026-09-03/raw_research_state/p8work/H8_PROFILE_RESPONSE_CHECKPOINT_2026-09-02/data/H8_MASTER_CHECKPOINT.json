@@ -1,0 +1,31 @@
+{
+  "status": "EXPLORATORY_DISCOVERY",
+  "h8_blind_holdout": false,
+  "h9_opened": false,
+  "novelty_status": "NOT_ESTABLISHED",
+  "baseline": {
+    "h": 8,
+    "baseline_language": "L7",
+    "memory": 15,
+    "valid_states": 120084,
+    "scc_count": 15565,
+    "dominant_states": 104520,
+    "dominant_edges": 184200,
+    "lambda": 1.7776384757455823,
+    "a": 0.08282382651723189,
+    "V16": 1.862298121616395,
+    "Bc": 1.3967235912122962
+  },
+  "profiles": [
+    {"profile":[3,3,2],"edges":4434,"B":0.6666666666666667,"q":0.03325653041136892,"local":0.03237221375090959,"Gamma":-0.013427443317538992,"soft_derivative":0.018944770433370596,"hard_delta":0.017262485154849835},
+    {"profile":[4,2,2],"edges":516,"B":2.6666666666666665,"q":0.002584982878671712,"local":-0.004377041475916327,"Gamma":0.0007795817808082372,"soft_derivative":-0.00359745969510809,"hard_delta":-0.002991888299664361},
+    {"profile":[4,3,1],"edges":480,"B":4.666666666666667,"q":0.0023260611384149383,"local":-0.010141450016857916,"Gamma":0.002775806461786416,"soft_derivative":-0.0073656435550715,"hard_delta":-0.0049442132838203035},
+    {"profile":[5,2,1],"edges":72,"B":8.666666666666668,"q":0.0005216698130840425,"local":-0.0050566797937385485,"Gamma":0.0018047635057421955,"soft_derivative":-0.003251916287996353,"hard_delta":-0.002181423292746676}
+  ],
+  "key_formula": "a'_v(0) = q_v [V_2h(L_{h-1}) - (4/3) B(v)] + Gamma_v",
+  "gamma_formula": "Gamma_v = -q_v * sum_{(r,s) notin I^2} K_v(r,s)",
+  "resolvent_formula": "a'(0) = pi P' v + 2 <w, P' u>_pi",
+  "numerical_gamma_dominance": true,
+  "gamma_dominance_max_ratio": 0.41478298088779025,
+  "soft_grid_all_secants_preserve_sign": true
+}

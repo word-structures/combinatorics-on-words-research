@@ -1,0 +1,41 @@
+{
+  "PAPER8_V4_VERIFICATION": "PASS",
+  "failures": [],
+  "min_alpha": {
+    "332": 0.9039882776677982,
+    "422": 0.8910440039974096,
+    "431": 0.913352001287192,
+    "521": 0.8905641208011343
+  },
+  "infinite_envelopes": {
+    "332": [
+      -0.932222673347501,
+      -0.29426964132330063
+    ],
+    "422": [
+      0.6891830380225021,
+      1.846947557746915
+    ],
+    "431": [
+      2.160198435741123,
+      3.325037520734035
+    ],
+    "521": [
+      5.650905104245414,
+      6.5545642002406606
+    ]
+  },
+  "ordering_gaps": {
+    "332_to_422": 0.9834526793458027,
+    "422_to_431": 0.31325087799420787,
+    "431_to_521": 2.325867583511379
+  },
+  "audit_boundary": [
+    "common 4*K*tau^B derivation external audit pending",
+    "fully directed-rounding / ball-arithmetic interval replay pending",
+    "external code review/replay pending"
+  ],
+  "novelty_status": "NOT_ESTABLISHED",
+  "H9_opened": false,
+  "PASS": true
+}
