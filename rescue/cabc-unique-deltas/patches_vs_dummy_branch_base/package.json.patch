@@ -1,0 +1,13 @@
+diff --git a/package.json b/package.json
+index 00f9426..051b3fb 100644
+--- a/package.json
++++ b/package.json
+@@ -1,6 +1,7 @@
+ {
+   "dependencies": {
+     "jsdom": "^29.1.1",
+-    "mathjs": "^15.2.0"
++    "mathjs": "^15.2.0",
++    "pdf-parse": "^1.1.1"
+   }
+ }
