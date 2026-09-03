@@ -47,10 +47,43 @@ A finite computational observation over h=2,...,7 does not establish a universal
 Therefore, no inference from the 15-case sign split to arbitrary bounds or structural causation is authorized without an explicit mathematical derivation or a new preregistered empirical test.
 
 Explicitly:
-- **H8_RUN = NO**
-- **H8_BLINDNESS_BREACH = NO**
+- **H8_RUN = YES** — an h=8 computation was performed (2026-09-02/03) without the
+  preregistration this section required.
+- **H8_BLINDNESS_BREACH = YES** — recorded by owner adjudication 2026-09-03.
 
-h=8 may only begin after a separate preregistration is committed.
+### Owner decision 2026-09-03 — the h=8 holdout is contaminated
+
+This section reserved h=8 as a **blind holdout**: the family whose outcome was to
+test, unseen, whether `B` is causal or merely a proxy. On 2026-08-25 it recorded
+`H8_RUN = NO`, `H8_BLINDNESS_BREACH = NO`, and *"h=8 may only begin after a
+separate preregistration is committed."*
+
+The Paper 8 work computed the four-profile h=8 family — `(3,3,2)`, `(4,2,2)`,
+`(4,3,1)`, `(5,2,1)` — on 2026-09-02/03. **No h=8 preregistration was ever
+committed**, on any branch, at any time; every preregistration in repository
+history belongs to h=7, Paper 4, or Paper 6.
+
+Therefore, by owner adjudication:
+
+- **h=8 can no longer serve as this project's blind holdout.** Blindness, once
+  spent, cannot be restored, and **no retrospective preregistration may be
+  written to repair it.** None has been.
+- The existing h=8 artifacts are **retained in full** as *post-hoc exploratory*
+  evidence. They are preserved on `rescue/paper8-raw-preservation-2026-09-03`
+  and nothing is deleted, relabelled invalid, or rerun to repair this.
+- **No claim may cite h=8 as blind, unseen, preregistered, or independent
+  holdout validation** of the `B`-causality mechanism. Any such phrasing is an
+  overclaim, whatever the arithmetic shows.
+- This adjudicates **experimental design only.** It is *not* a finding about the
+  mathematical correctness of Paper 8, which is a separate and still-open
+  question — see `docs/program/OWNER_DECISIONS_REQUIRED.md` OD-14.
+
+The `CRITICAL CONSTRAINT` above is unchanged and now load-bearing: **B causality
+remains unestablished**, and the experiment that was designed to test it blind is
+no longer available to do so.
+
+Re-establishing a blind test of `B`-causality now requires a *different* unseen
+family, preregistered before it is computed.
 
 ---
 
@@ -96,7 +129,9 @@ task produced.
 ## Do not start
 
 ```text
-Any h=8 computation                     H8_BLINDNESS_BREACH = NO
+Further h=8 work                        H8_BLINDNESS_BREACH = YES (breach recorded
+                                        2026-09-03); the holdout is spent, so no
+                                        further h=8 run can restore blindness
 Git-history remediation                 OD-1 — separate decision, six prerequisites
 Any D40 compilation, audit, or search   OD-2 — status RIGHTS_AND_PROVENANCE_UNRESOLVED
 Removal of the dataset from the tree    OD-2 — TASK-0001's output now exists; the

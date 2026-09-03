@@ -625,4 +625,8 @@ Do the resolvent/group-inverse and pattern-automaton/correlation-matrix formulat
 - **Finite family only**: 15 cases.
 - **B causality not established**: Do not claim B(v) is the causal driver without explicit mathematical derivation.
 - **Novelty not established**: Do not claim novelty for this broad response method.
-- **No h=8 computation**: H8_RUN = NO and H8_BLINDNESS_BREACH = NO.
+- **h=8 holdout contaminated**: H8_RUN = YES and H8_BLINDNESS_BREACH = YES
+  (owner adjudication 2026-09-03, `CURRENT_FOCUS.md`). The h=8 family was
+  computed without the required preregistration, so it may not be cited as blind
+  or holdout validation of B-causality. Its artifacts are retained as post-hoc
+  exploratory evidence.

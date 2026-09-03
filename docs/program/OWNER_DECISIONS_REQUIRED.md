@@ -4,7 +4,8 @@
 **Produced:** 2026-08-06
 **Instruction source:** `docs/program/AI_PROGRAM_BOOTSTRAP_AND_FIRST_WORK_ORDER.md` §8.4
 **Status:** OD-1…OD-9 revised after Wave 1 owner review; OD-10 and OD-11 added by
-Wave 2, both open — six decided, five open
+Wave 2, both open — six decided, five open; OD-12, OD-13 and OD-14 added later
+(OD-14 records the 2026-09-03 h=8 blindness adjudication)
 
 Only decisions that cannot safely be delegated are listed.
 
@@ -867,6 +868,48 @@ replaced by vendoring later if the organization does not materialize.
 **Cost of postponing implementation:** rises the moment a record is published citing
 the engine, because the provenance chain would reference software nobody can obtain or
 rebuild. That is a gate on publication, not on the current work.
+
+---
+
+## OD-14 — The h=8 blind holdout was breached: how is Paper 8 gated?
+
+**Status: DECIDED (blindness) 2026-09-03 / OPEN (Paper 8 disposition).**
+
+**What happened.** `CURRENT_FOCUS.md` reserved the h=8 profile family as a **blind
+holdout** on 2026-08-25 (`H8_RUN = NO`, `H8_BLINDNESS_BREACH = NO`, *"h=8 may only
+begin after a separate preregistration is committed"*). The Paper 8 work computed the
+four-profile h=8 family on 2026-09-02/03. **No h=8 preregistration exists in
+repository history on any ref** — every preregistration ever committed belongs to
+h=7, Paper 4, or Paper 6.
+
+**Owner decision (blindness axis) — DECIDED.** The holdout is **contaminated**.
+h=8 can no longer serve as the project's blind test of `B`-causality; blindness once
+spent cannot be restored; **no retrospective preregistration may be written**, and
+none has been. Recorded in `CURRENT_FOCUS.md` as `H8_RUN = YES`,
+`H8_BLINDNESS_BREACH = YES`.
+
+**What this decision does *not* say.** It makes no finding about whether Paper 8's
+mathematics is correct. Its certificates, checkpoints, audits and numerical results
+are retained unaltered on `rescue/paper8-raw-preservation-2026-09-03`, are **not**
+relabelled invalid, and are **not** to be rerun to repair the breach.
+
+**The two gates Paper 8 currently sits behind.** Recorded here rather than in a
+paper-status file, because Paper 8 has no canonical directory and creating one would
+imply a promotion that has not happened:
+
+| # | Gate | State |
+|---|---|---|
+| 1 | **H8 HOLDOUT CONTAMINATED** | breach recorded; any blind/holdout/preregistered framing of the h=8 evidence is an overclaim |
+| 2 | **VERIFICATION INCOMPLETE — COMPONENT A PENDING** | Paper 8's own external audit reports the one-block projective certificate (302-interval directed rounding) as `PENDING`, while its summary states *"the proof holds"*. Components B (Burn Bridge), C (kernel tail) and D (Bernstein, 1410 coefficients) are `PASS` |
+
+**Still open, for the owner.** (A) Does Paper 8 proceed as a post-hoc exploratory
+result with the breach disclosed in the manuscript? (B) Is it held until component A
+completes? (C) Is a *different*, genuinely unseen family preregistered to recover a
+blind test of `B`-causality? These are not decided here, and no option has been acted
+on.
+
+**Not authorized by this record:** promoting Paper 8 into `papers/`, adding its
+theorem to `MATH_CLAIMS.md`, running component A, or rerunning h=8.
 
 ---
 
