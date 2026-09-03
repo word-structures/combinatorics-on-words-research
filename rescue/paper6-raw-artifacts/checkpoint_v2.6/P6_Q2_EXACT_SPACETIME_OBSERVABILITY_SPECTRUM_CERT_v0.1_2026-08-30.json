@@ -1,0 +1,73 @@
+{
+  "date": "2026-08-30",
+  "system": {
+    "library": "FULL_L4_AA2FR",
+    "block_length": 4,
+    "Q": 2,
+    "Kmax": 11,
+    "raw_histories": 218298,
+    "equitable_states": 2691,
+    "count_classes": 2689,
+    "exact_future_dimension_Q": 1179,
+    "transient_dimension": 12,
+    "persistent_dimension": 1167
+  },
+  "definition": {
+    "M_m": "raw-history family-sum measurement by m most recent recency-gauged true-grid L4 Parikh profiles",
+    "O_m_t": "vertical stack of M_m Q^j for j=0..t-1 restricted to V_cnt",
+    "observability_index": "least t with rational rank 1179"
+  },
+  "spectrum": [
+    {
+      "m": 1,
+      "families": 6,
+      "row_count_lower_bound": 197,
+      "certifying_time_slices": 197,
+      "rank_mod_65521": 1179,
+      "exact_observability_index_Q": 197,
+      "proof": "For t<=196 row count <=1176<1179; full modular rank at t=197 plus exact target dimension gives rational full rank."
+    },
+    {
+      "m": 2,
+      "families": 51,
+      "row_count_lower_bound": 24,
+      "certifying_time_slices": 24,
+      "rank_mod_65521": 1179,
+      "exact_observability_index_Q": 24,
+      "proof": "For t<=23 row count <=1173<1179; full modular rank at t=24 plus exact target dimension."
+    },
+    {
+      "m": 3,
+      "families": 345,
+      "row_count_lower_bound": 4,
+      "ranks_mod_65521_by_time_slices": [
+        329,
+        651,
+        973,
+        1179
+      ],
+      "exact_observability_index_Q": 4,
+      "proof": "At most 1035 rows for t=3; full modular rank at t=4 plus exact target dimension."
+    },
+    {
+      "m": 4,
+      "families": 1796,
+      "exact_static_rank_Q": 1144,
+      "exact_static_hidden_dimension_Q": 35,
+      "rank_stack_M_MQ_mod_65521": 1179,
+      "rank_stack_M_MQ_mod_65519": 1179,
+      "exact_observability_index_Q": 2,
+      "proof": "Static rank is independently exact 1144<1179. Two-time stack has full rank modulo two primes; exact target dimension is1179."
+    }
+  ],
+  "corollaries": {
+    "one_step_latent_sector": "H4=V_cnt\u2229ker(M4) has exact dimension35 and H4\u2229ker(M4 Q)={0}.",
+    "minimal_static_repair": "At least35 added rows are necessary; an exact 35 phase-contrast repair attains full rank.",
+    "time_optimal_depths": [
+      1,
+      2,
+      3
+    ]
+  },
+  "novelty_boundary": "General observability theory is classical. Claimed contribution is the exact selected-Abelian spectrum and certified structural phenomena."
+}

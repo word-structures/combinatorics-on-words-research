@@ -1,0 +1,24 @@
+{
+  "m=4 true grid (baseline)": {
+    "families": 1796,
+    "static_rank": 1144
+  },
+  "m=4 true grid + phase bit": {
+    "families": 3024,
+    "static_rank": 1179
+  },
+  "m=3 true grid": {
+    "families": 345,
+    "static_rank": 329
+  },
+  "m=3 true grid + phase bit": {
+    "families": 609,
+    "static_rank": 552
+  },
+  "phase bit alone": {
+    "families": 2,
+    "static_rank": 2
+  },
+  "phase_mixed_families": 1228,
+  "total_m4_families": 1796
+}

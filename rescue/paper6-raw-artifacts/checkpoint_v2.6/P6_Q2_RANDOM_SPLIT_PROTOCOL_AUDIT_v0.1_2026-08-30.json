@@ -1,0 +1,91 @@
+{
+  "date": "2026-08-30",
+  "system": "FULL_L4_Q2",
+  "purpose": "Resolve ambiguity between Claude audit random-family control and raw-history nonempty split protocol.",
+  "claude_reported_control": {
+    "source": "Pasted markdown(20260830-135216).md, section 6.2",
+    "statement": "arbitrary split of 287 randomly chosen families, seeds 1\u20135 -> 2083 groups, rank 1144 x5",
+    "reconstruction_status": "UNDER-SPECIFIED IN REPORT: selection universe and within-family split rule are not defined precisely enough to reproduce uniquely."
+  },
+  "protocols_tested_end_to_end_cpp_rank_mod_65521": {
+    "A_random_287_grid_families_random_nonempty_raw_history_split": {
+      "definition": "Choose 287 of the 1796 grid families uniformly without replacement. Within every chosen family, randomly partition its raw-history members into two nonempty subsets. Unchosen families remain intact.",
+      "seeds_1_to_5": [
+        {
+          "seed": 1,
+          "groups": 2083,
+          "rank": 1179
+        },
+        {
+          "seed": 2,
+          "groups": 2083,
+          "rank": 1179
+        },
+        {
+          "seed": 3,
+          "groups": 2083,
+          "rank": 1179
+        },
+        {
+          "seed": 4,
+          "groups": 2083,
+          "rank": 1179
+        },
+        {
+          "seed": 5,
+          "groups": 2083,
+          "rank": 1179
+        }
+      ],
+      "verdict": "Does NOT reproduce Claude's 1144 result; gives full rank in all five seeds."
+    },
+    "B_same_287_epsilon_splittable_family_set_random_nonempty_raw_split": {
+      "definition": "Use exactly the 287 grid families on which epsilon varies, but replace epsilon labels by an arbitrary random nonempty raw-history split.",
+      "seeds_11_to_13": [
+        {
+          "seed": 11,
+          "groups": 2083,
+          "rank": 1179
+        },
+        {
+          "seed": 12,
+          "groups": 2083,
+          "rank": 1179
+        },
+        {
+          "seed": 13,
+          "groups": 2083,
+          "rank": 1179
+        }
+      ],
+      "verdict": "Matches Claude's qualitative conclusion that arbitrary labels on the epsilon-selected family SET remain full rank."
+    },
+    "C_random_287_grid_families_use_epsilon_as_split_bit": {
+      "definition": "Choose 287 random grid families but split only according to the actual epsilon bit. Families where epsilon is constant do not actually split.",
+      "seeds_1_to_3": [
+        {
+          "seed": 1,
+          "groups": 1839,
+          "rank": 1151
+        },
+        {
+          "seed": 2,
+          "groups": 1845,
+          "rank": 1154
+        },
+        {
+          "seed": 3,
+          "groups": 1841,
+          "rank": 1152
+        }
+      ],
+      "verdict": "Also does not match the reported 2083-group control; actual group count is much lower."
+    }
+  },
+  "conclusion": [
+    "The natural raw-history interpretation of 'arbitrary split of 287 randomly chosen families' gives full rank, not 1144.",
+    "The Claude report does not provide enough protocol detail to identify why its control remained rank 1144.",
+    "Do not treat either protocol as a theorem about random refinement. Preserve the discrepancy as an audit item unless the original control code is supplied.",
+    "Independent of this ambiguity, exact grid rank 1144 and exact 15/16 anchor-policy ranks remain valid."
+  ]
+}

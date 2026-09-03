@@ -1,0 +1,41 @@
+[
+  {
+    "library": "BAL3_L4_AA2FR",
+    "Kmax": 4,
+    "raw_states": 78,
+    "profiles": 3,
+    "profile_future_rank_mod": 16,
+    "trivial_isotypic_rank_mod": 5,
+    "sign_isotypic_rank_mod": 1,
+    "standard_isotypic_rank_mod": 10,
+    "standard_multiplicity_candidate": 5,
+    "exact_unary_krylov_rank": 3,
+    "trivial_sector_minus_unary": 2
+  },
+  {
+    "library": "BAL3_L4_AA2FR",
+    "Kmax": 6,
+    "raw_states": 210,
+    "profiles": 3,
+    "profile_future_rank_mod": 64,
+    "trivial_isotypic_rank_mod": 12,
+    "sign_isotypic_rank_mod": 10,
+    "standard_isotypic_rank_mod": 42,
+    "standard_multiplicity_candidate": 21,
+    "exact_unary_krylov_rank": 7,
+    "trivial_sector_minus_unary": 5
+  },
+  {
+    "library": "INTERIOR_L5_AA2FR",
+    "Kmax": 5,
+    "raw_states": 438,
+    "profiles": 6,
+    "profile_future_rank_mod": 154,
+    "trivial_isotypic_rank_mod": 28,
+    "sign_isotypic_rank_mod": 24,
+    "standard_isotypic_rank_mod": 102,
+    "standard_multiplicity_candidate": 51,
+    "exact_unary_krylov_rank": 27,
+    "trivial_sector_minus_unary": 1
+  }
+]

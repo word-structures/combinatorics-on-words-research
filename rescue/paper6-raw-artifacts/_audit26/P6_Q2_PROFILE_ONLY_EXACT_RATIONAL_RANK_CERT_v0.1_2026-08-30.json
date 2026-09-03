@@ -1,0 +1,40 @@
+{
+  "date": "2026-08-30",
+  "system": "FULL_L4_Q2",
+  "measurement": "four recency-gauged grid-aligned whole-block profiles",
+  "measurement_family_count": 1796,
+  "certified_independent_row_relations": 652,
+  "independence_argument": "Each relation has a nonzero coefficient on its own unique dependent family row and uses only the fixed 1144 pivot-family rows otherwise; hence the 652 relations are linearly independent over Q.",
+  "upper_bound_rank_Q": 1144,
+  "modular_lower_bound_rank": 1144,
+  "modular_lower_bound_primes": [
+    65521,
+    65519,
+    1000003,
+    999983,
+    2147483647
+  ],
+  "conclusion_rank_Q": 1144,
+  "future_columns_exactly_checked": 1179,
+  "exact_relation_residual_nonzeros": 0,
+  "exact_max_abs_residual": 0,
+  "relation_count": 652,
+  "total_family_coefficients": 3433,
+  "max_family_coefficient_decimal_digits": 27,
+  "max_quotient_support_per_relation": 136,
+  "max_future_value_decimal_digits_encountered": 673,
+  "crt_primes_used": [
+    65521,
+    1000000009,
+    1000001011,
+    1000002043,
+    1000003051,
+    1000004059
+  ],
+  "crt_modulus_decimal_digits": 50,
+  "artifacts": {
+    "P6_Q2_PROFILE_ONLY_ROW_RELATIONS_RECONSTRUCTED_v0.1_2026-08-30.json": "893705e5138c20d861d2bdb5e4dee9b7754a649c06bb08f150c50da4911baf47",
+    "P6_Q2_RECENCY_PROFILE_NO_BIT_GROUP_TO_QUOTIENT_v0.1_2026-08-30.npz": "33ea5c2ccc00b6a4ad2d9106f8dfc2ad415df9ef55929ffadc7d71c6d1015e7d",
+    "P6_Q2_EQUITABLE_QUOTIENT_SPARSE_v0.1_2026-08-30.json": "b6ff456af3350527ca8301e1feb818cf7e3ebafffd11e8deba1d03f89569ca77"
+  }
+}

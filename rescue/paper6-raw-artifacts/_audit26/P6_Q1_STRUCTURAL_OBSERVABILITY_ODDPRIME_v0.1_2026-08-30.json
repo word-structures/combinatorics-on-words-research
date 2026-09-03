@@ -1,0 +1,63 @@
+{
+  "date": "2026-08-30",
+  "Q1_exact_rational_dimensions": {
+    "full": 153,
+    "persistent": 146
+  },
+  "primes": {
+    "65521": {
+      "response_orbit": {
+        "groups": 135,
+        "full_rank": 132,
+        "persistent_rank": 128
+      },
+      "last4_profiles": {
+        "groups": 156,
+        "full_rank": 144,
+        "persistent_rank": 141
+      },
+      "response_plus_D1": {
+        "groups": 225,
+        "full_rank": 153,
+        "persistent_rank": 146
+      },
+      "response_plus_last4_profiles": {
+        "groups": 241,
+        "full_rank": 153,
+        "persistent_rank": 146
+      },
+      "exact_current_response": {
+        "groups": 206,
+        "full_rank": 153,
+        "persistent_rank": 146
+      }
+    },
+    "65519": {
+      "response_orbit": {
+        "groups": 135,
+        "full_rank": 132,
+        "persistent_rank": 128
+      },
+      "last4_profiles": {
+        "groups": 156,
+        "full_rank": 144,
+        "persistent_rank": 141
+      },
+      "response_plus_D1": {
+        "groups": 225,
+        "full_rank": 153,
+        "persistent_rank": 146
+      },
+      "response_plus_last4_profiles": {
+        "groups": 241,
+        "full_rank": 153,
+        "persistent_rank": 146
+      },
+      "exact_current_response": {
+        "groups": 206,
+        "full_rank": 153,
+        "persistent_rank": 146
+      }
+    }
+  }
+}

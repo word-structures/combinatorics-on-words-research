@@ -1,0 +1,10 @@
+{
+  "groups": 345,
+  "ranks_by_number_of_time_slices": [
+    329,
+    651,
+    973,
+    1179
+  ],
+  "observability_index_mod65521": 4
+}

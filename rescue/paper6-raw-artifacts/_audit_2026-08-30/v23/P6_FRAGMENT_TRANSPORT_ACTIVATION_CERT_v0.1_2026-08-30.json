@@ -1,0 +1,24 @@
+{
+  "date": "2026-08-30",
+  "transport_identity_random_tests": 67500,
+  "activation_identity_random_tests": 13500,
+  "raw_Q2_states_checked_for_epsilon_S2": 218298,
+  "epsilon_S2_identity": "In recency gauge: S2=(2,0,0) iff last two literal characters equal, otherwise S2=(1,1,0).",
+  "Q2_exact_onebit_observability": {
+    "future_dimension_Q": 1179,
+    "persistent_dimension_Q": 1167,
+    "profile_plus_S2_groups": 2083,
+    "full_rank_mod_65521": 1179,
+    "full_rank_mod_65519": 1179,
+    "persistent_rank_mod_65521": 1167,
+    "persistent_rank_mod_65519": 1167,
+    "rational_status": "EXACT: modular full-rank minor plus independently exact rational target dimension."
+  },
+  "profile_only_Q2_status": {
+    "full_rank_mod_65521": 1144,
+    "full_rank_mod_65519": 1144,
+    "persistent_rank_mod_65521": 1138,
+    "persistent_rank_mod_65519": 1138,
+    "rational_upper_bound_status": "NOT YET CERTIFIED. These are replicated modular ranks, not an exact rational rank upper bound."
+  }
+}

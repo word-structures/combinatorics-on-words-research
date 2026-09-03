@@ -1,0 +1,12 @@
+base profile families: 1796;  eps splits 287 of them
+eps (FT2 S_2)                                groups= 2083 ranks=[1179, 1179]
+matched arbitrary split seed=1               groups= 2083 ranks=[1144, 1144]
+matched arbitrary split seed=2               groups= 2083 ranks=[1144, 1144]
+matched arbitrary split seed=3               groups= 2083 ranks=[1144, 1144]
+matched arbitrary split seed=4               groups= 2083 ranks=[1144, 1144]
+matched arbitrary split seed=5               groups= 2083 ranks=[1144, 1144]
+same-families arbitrary bit seed=11          groups= 2083 ranks=[1179, 1179]
+same-families arbitrary bit seed=12          groups= 2081 ranks=[1179, 1179]
+same-families arbitrary bit seed=13          groups= 2083 ranks=[1179, 1179]
+
+target dimension 1179; profiles-only baseline 1144

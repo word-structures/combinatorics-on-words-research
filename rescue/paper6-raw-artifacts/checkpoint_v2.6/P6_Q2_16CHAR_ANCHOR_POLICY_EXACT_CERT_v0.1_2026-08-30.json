@@ -1,0 +1,204 @@
+{
+  "date": "2026-08-30",
+  "system": "FULL_L4_Q2",
+  "definition": {
+    "state_memory": "reachable raw suffix states of length <=21, generated at block boundaries",
+    "recency_gauge": "canonicalize alphabet by most-recent distinct-symbol order with abc fallback",
+    "policy": "(a0,a1) in {0,1,2,3}^2. For raw history phase len(s) mod 4 = 0 use anchor a0; for phase=1 use anchor a1. From that anchor take consecutive length-4 windows and retain the last four Parikh profiles, left-padding missing windows by None.",
+    "true_block_grid_policy": [
+      0,
+      1
+    ],
+    "future_target_dimension_Q": 1179
+  },
+  "rank_implementation": {
+    "language": "C++",
+    "source": "rank_mod_u16.cpp",
+    "prime": 65521,
+    "independence_note": "Separate from the Python rank_mod routine shared by earlier replays; descriptor matrices generated in Python from raw histories, rank eliminated in C++."
+  },
+  "results": [
+    {
+      "policy": [
+        0,
+        0
+      ],
+      "groups": 2452,
+      "rank_mod_65521_cpp": 1179,
+      "rank_Q": 1179,
+      "rational_status": "EXACT_Q because modular rank equals independently exact rational future dimension 1179",
+      "grid_consistent": false
+    },
+    {
+      "policy": [
+        0,
+        1
+      ],
+      "groups": 1796,
+      "rank_mod_65521_cpp": 1144,
+      "rank_Q": 1144,
+      "rational_status": "EXACT_Q via 652 independent exact integer row relations + modular lower bound",
+      "grid_consistent": true
+    },
+    {
+      "policy": [
+        0,
+        2
+      ],
+      "groups": 4033,
+      "rank_mod_65521_cpp": 1179,
+      "rank_Q": 1179,
+      "rational_status": "EXACT_Q because modular rank equals independently exact rational future dimension 1179",
+      "grid_consistent": false
+    },
+    {
+      "policy": [
+        0,
+        3
+      ],
+      "groups": 3410,
+      "rank_mod_65521_cpp": 1179,
+      "rank_Q": 1179,
+      "rational_status": "EXACT_Q because modular rank equals independently exact rational future dimension 1179",
+      "grid_consistent": false
+    },
+    {
+      "policy": [
+        1,
+        0
+      ],
+      "groups": 4547,
+      "rank_mod_65521_cpp": 1179,
+      "rank_Q": 1179,
+      "rational_status": "EXACT_Q because modular rank equals independently exact rational future dimension 1179",
+      "grid_consistent": false
+    },
+    {
+      "policy": [
+        1,
+        1
+      ],
+      "groups": 4646,
+      "rank_mod_65521_cpp": 1179,
+      "rank_Q": 1179,
+      "rational_status": "EXACT_Q because modular rank equals independently exact rational future dimension 1179",
+      "grid_consistent": false
+    },
+    {
+      "policy": [
+        1,
+        2
+      ],
+      "groups": 4046,
+      "rank_mod_65521_cpp": 1179,
+      "rank_Q": 1179,
+      "rational_status": "EXACT_Q because modular rank equals independently exact rational future dimension 1179",
+      "grid_consistent": false
+    },
+    {
+      "policy": [
+        1,
+        3
+      ],
+      "groups": 4371,
+      "rank_mod_65521_cpp": 1179,
+      "rank_Q": 1179,
+      "rational_status": "EXACT_Q because modular rank equals independently exact rational future dimension 1179",
+      "grid_consistent": false
+    },
+    {
+      "policy": [
+        2,
+        0
+      ],
+      "groups": 3533,
+      "rank_mod_65521_cpp": 1179,
+      "rank_Q": 1179,
+      "rational_status": "EXACT_Q because modular rank equals independently exact rational future dimension 1179",
+      "grid_consistent": false
+    },
+    {
+      "policy": [
+        2,
+        1
+      ],
+      "groups": 3679,
+      "rank_mod_65521_cpp": 1179,
+      "rank_Q": 1179,
+      "rational_status": "EXACT_Q because modular rank equals independently exact rational future dimension 1179",
+      "grid_consistent": false
+    },
+    {
+      "policy": [
+        2,
+        2
+      ],
+      "groups": 4034,
+      "rank_mod_65521_cpp": 1179,
+      "rank_Q": 1179,
+      "rational_status": "EXACT_Q because modular rank equals independently exact rational future dimension 1179",
+      "grid_consistent": false
+    },
+    {
+      "policy": [
+        2,
+        3
+      ],
+      "groups": 3196,
+      "rank_mod_65521_cpp": 1179,
+      "rank_Q": 1179,
+      "rational_status": "EXACT_Q because modular rank equals independently exact rational future dimension 1179",
+      "grid_consistent": false
+    },
+    {
+      "policy": [
+        3,
+        0
+      ],
+      "groups": 2224,
+      "rank_mod_65521_cpp": 1179,
+      "rank_Q": 1179,
+      "rational_status": "EXACT_Q because modular rank equals independently exact rational future dimension 1179",
+      "grid_consistent": false
+    },
+    {
+      "policy": [
+        3,
+        1
+      ],
+      "groups": 2422,
+      "rank_mod_65521_cpp": 1179,
+      "rank_Q": 1179,
+      "rational_status": "EXACT_Q because modular rank equals independently exact rational future dimension 1179",
+      "grid_consistent": false
+    },
+    {
+      "policy": [
+        3,
+        2
+      ],
+      "groups": 3922,
+      "rank_mod_65521_cpp": 1179,
+      "rank_Q": 1179,
+      "rational_status": "EXACT_Q because modular rank equals independently exact rational future dimension 1179",
+      "grid_consistent": false
+    },
+    {
+      "policy": [
+        3,
+        3
+      ],
+      "groups": 3237,
+      "rank_mod_65521_cpp": 1179,
+      "rank_Q": 1179,
+      "rational_status": "EXACT_Q because modular rank equals independently exact rational future dimension 1179",
+      "grid_consistent": false
+    }
+  ],
+  "headline": "15 of 16 phase-anchor policies have exact rational rank 1179; the unique failure is the true block-grid-consistent policy (0,1), whose exact rational rank is 1144.",
+  "interpretation_limits": [
+    "This does not prove boundary-straddling is the causal reason for full observability.",
+    "Random raw-history refinements of the grid partition can also recover the 35-dimensional hidden space with high probability at comparable granularity.",
+    "The result is a finite-system descriptor degeneracy theorem, not a general Abelian-geometry theorem."
+  ]
+}

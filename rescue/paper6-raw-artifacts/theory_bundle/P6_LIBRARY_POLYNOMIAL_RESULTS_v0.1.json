@@ -1,0 +1,63 @@
+{
+  "full_recoding": [
+    {
+      "L": 4,
+      "Kmax": 4,
+      "full_memory_states": 414,
+      "library_blocks": 60,
+      "all_words": 81,
+      "unsafe_internal_words": 21,
+      "unsafe_words_with_nonzero_operator": [],
+      "MB_equals_A_power_L_on_all_full_memory_states": true,
+      "mismatch_states": 0
+    },
+    {
+      "L": 4,
+      "Kmax": 6,
+      "full_memory_states": 2802,
+      "library_blocks": 60,
+      "all_words": 81,
+      "unsafe_internal_words": 21,
+      "unsafe_words_with_nonzero_operator": [],
+      "MB_equals_A_power_L_on_all_full_memory_states": true,
+      "mismatch_states": 0
+    },
+    {
+      "L": 5,
+      "Kmax": 5,
+      "full_memory_states": 1146,
+      "library_blocks": 126,
+      "all_words": 243,
+      "unsafe_internal_words": 117,
+      "unsafe_words_with_nonzero_operator": [],
+      "MB_equals_A_power_L_on_all_full_memory_states": true,
+      "mismatch_states": 0
+    }
+  ],
+  "selected_profile_decomposition": {
+    "library": "BAL3_L4_AA2FR",
+    "Kmax": 4,
+    "full_memory_states": 414,
+    "selected_blocks": 30,
+    "profiles": [
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "profile_components_sum_to_selected_operator": true,
+    "profile_sum_mismatch_states": 0,
+    "selected_operator_differs_from_full_A_power_on_states": 414
+  }
+}

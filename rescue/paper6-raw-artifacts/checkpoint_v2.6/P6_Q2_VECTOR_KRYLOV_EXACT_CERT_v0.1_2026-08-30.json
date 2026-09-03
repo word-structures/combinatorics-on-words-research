@@ -1,0 +1,16 @@
+{
+  "date": "2026-08-30",
+  "library": "ALL_L4_AA2FR",
+  "Q": 2,
+  "Kmax": 11,
+  "equitable_classes": 2691,
+  "polynomial_degree": 1179,
+  "vector_polynomial_identity": "Q^d 1 + C[1] Q^(d-1)1 + ... + C[d] 1 = 0",
+  "nonzero_coordinates": 0,
+  "max_abs_residual": 0,
+  "exact_vector_krylov_rank_conclusion": 1179,
+  "lower_bound_reason": "scalar Hankel rank is exactly 1179, hence vector Krylov rank >=1179",
+  "upper_bound_reason": "exact integer vector polynomial annihilation gives vector Krylov rank <=1179",
+  "elapsed_seconds": 3.4666671752929688,
+  "max_intermediate_decimal_digits_sampled": 674
+}

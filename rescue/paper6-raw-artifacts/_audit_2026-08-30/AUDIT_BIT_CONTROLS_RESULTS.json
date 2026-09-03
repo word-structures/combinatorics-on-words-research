@@ -1,0 +1,58 @@
+{
+  "profiles_only": {
+    "groups": 1796,
+    "ranks": [
+      1144,
+      1144
+    ]
+  },
+  "profiles + eps[s-1=s-2] (FT2)": {
+    "groups": 2083,
+    "ranks": [
+      1179,
+      1179
+    ]
+  },
+  "profiles + eps[s-1=s-3]": {
+    "groups": 2165,
+    "ranks": [
+      1179,
+      1179
+    ]
+  },
+  "profiles + eps[s-2=s-3]": {
+    "groups": 1985,
+    "ranks": [
+      1179,
+      1179
+    ]
+  },
+  "profiles + S2 fragment": {
+    "groups": 2083,
+    "ranks": [
+      1179,
+      1179
+    ]
+  },
+  "profiles + S3 fragment": {
+    "groups": 2072,
+    "ranks": [
+      1179,
+      1179
+    ]
+  },
+  "profiles + null hash bit": {
+    "groups": 3588,
+    "ranks": [
+      1179,
+      1179
+    ]
+  },
+  "profiles + marginal-matched bit": {
+    "groups": 3585,
+    "ranks": [
+      1179,
+      1179
+    ]
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "date": "2026-08-30",
+  "library": "ALL_L4_AA2FR",
+  "block_length": 4,
+  "block_range_Q": 2,
+  "equivalent_character_Kmax": 11,
+  "raw_states": 218298,
+  "stable_weighted_equitable_classes": 2691,
+  "exact_all_horizon_count_classes": 2689,
+  "proof_method": "Compute coarsest stable weighted equitable quotient (2691 states). Count-prefix signatures separate all but two pairs by horizon 5. For each candidate pair, exact integer values of Q^n 1 were checked equal for n=0..2690. Cayley-Hamilton on the 2691x2691 quotient then forces equality for all n. The resulting 2689 count partition is not equitable; outgoing multiplicities into count classes differ.",
+  "candidate_pairs": [
+    {
+      "equitable_class_A_index": 224,
+      "equitable_class_B_index": 1021,
+      "class_A_size": 54,
+      "class_B_size": 102,
+      "representative_A": "aaabaaacabcbbbabcccab",
+      "representative_B": "aaabacccbabbbcbaaacb",
+      "future_count_prefix_A": [
+        1,
+        5,
+        24,
+        108,
+        313,
+        1337,
+        4565,
+        17383,
+        63060,
+        237827,
+        879007,
+        3281006
+      ],
+      "future_count_prefix_B": [
+        1,
+        5,
+        24,
+        108,
+        313,
+        1337,
+        4565,
+        17383,
+        63060,
+        237827,
+        879007,
+        3281006
+      ],
+      "exact_equal_horizons_checked": 2691,
+      "outgoing_multiplicity_differences_into_exact_count_classes": [
+        {
+          "count_class": 930,
+          "from_A": 1,
+          "from_B": 0
+        },
+        {
+          "count_class": 933,
+          "from_A": 1,
+          "from_B": 0
+        },
+        {
+          "count_class": 1507,
+          "from_A": 0,
+          "from_B": 1
+        },
+        {
+          "count_class": 2032,
+          "from_A": 0,
+          "from_B": 1
+        }
+      ],
+      "row_sum_A": 5,
+      "row_sum_B": 5
+    },
+    {
+      "equitable_class_A_index": 1645,
+      "equitable_class_B_index": 2244,
+      "class_A_size": 48,
+      "class_B_size": 6,
+      "representative_A": "aaabcacccbcabcbbbaaac",
+      "representative_B": "aabcacccbbba",
+      "future_count_prefix_A": [
+        1,
+        18,
+        64,
+        219,
+        682,
+        2893,
+        10672,
+        39663,
+        145071,
+        539250,
+        2012830,
+        7466478
+      ],
+      "future_count_prefix_B": [
+        1,
+        18,
+        64,
+        219,
+        682,
+        2893,
+        10672,
+        39663,
+        145071,
+        539250,
+        2012830,
+        7466478
+      ],
+      "exact_equal_horizons_checked": 2691,
+      "outgoing_multiplicity_differences_into_exact_count_classes": [
+        {
+          "count_class": 1198,
+          "from_A": 1,
+          "from_B": 0
+        },
+        {
+          "count_class": 1385,
+          "from_A": 0,
+          "from_B": 1
+        },
+        {
+          "count_class": 2147,
+          "from_A": 1,
+          "from_B": 0
+        },
+        {
+          "count_class": 2243,
+          "from_A": 0,
+          "from_B": 1
+        }
+      ],
+      "row_sum_A": 18,
+      "row_sum_B": 18
+    }
+  ],
+  "count_signature_history": [
+    1,
+    22,
+    536,
+    2336,
+    2684,
+    2689,
+    2689,
+    2689,
+    2689,
+    2689
+  ],
+  "conclusion": "First tested Abelian-avoidance automaton in this project with exact count equivalence strictly coarser than stable weighted/equitable equivalence."
+}

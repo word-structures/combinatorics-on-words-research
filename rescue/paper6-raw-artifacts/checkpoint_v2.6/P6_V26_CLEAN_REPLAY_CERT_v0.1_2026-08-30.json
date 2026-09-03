@@ -1,0 +1,96 @@
+{
+  "date": "2026-08-30",
+  "workspace": "Fresh clean directory created by unpacking PAPER6_ESSENTIAL_RESEARCH_CHECKPOINT_v2.6_2026-08-30.zip.",
+  "q2_replay": {
+    "script": "p6_v26_q2_spacetime_observability_replay.py",
+    "status": "PASS",
+    "results": {
+      "m1": {
+        "families": 6,
+        "time_slices": 197,
+        "rank_mod65521": 1179
+      },
+      "m2": {
+        "families": 51,
+        "time_slices": 24,
+        "rank_mod65521": 1179
+      },
+      "m3": {
+        "families": 345,
+        "time_slices": 4,
+        "rank_mod65521": 1179
+      },
+      "m4": {
+        "families": 1796,
+        "time_slices": 2,
+        "rank_mod65521": 1179
+      }
+    }
+  },
+  "cross_instance_replay": {
+    "script": "p6_v26_cross_instance_spacetime_replay.py",
+    "status": "PASS",
+    "primes": [
+      65521,
+      65519
+    ],
+    "results": {
+      "BAL3_L4_Q1": {
+        "m1": {
+          "families": 3,
+          "t1_rank": 3,
+          "t2_rank": 4
+        },
+        "m2": {
+          "families": 8,
+          "t1_rank": 4
+        }
+      },
+      "FULL_L4_Q1": {
+        "m1": {
+          "families": 6,
+          "t25_rank": 150,
+          "t26_rank": 153
+        },
+        "m2": {
+          "families": 51,
+          "t2_rank": 102,
+          "t3_rank": 153
+        },
+        "m3": {
+          "families": 345,
+          "t1_rank": 153
+        }
+      },
+      "INTERIOR_L5_Q1": {
+        "m1": {
+          "families": 5,
+          "t14_rank": 70,
+          "t15_rank": 72
+        },
+        "m2": {
+          "families": 26,
+          "t2_rank": 51,
+          "t3_rank": 72
+        },
+        "m3": {
+          "families": 98,
+          "t1_rank": 72
+        }
+      },
+      "HASH30_L4_K5": {
+        "m1": {
+          "families": 11,
+          "t4_rank": 44,
+          "t5_rank": 47
+        },
+        "m2": {
+          "families": 71,
+          "t1_rank": 47
+        }
+      }
+    },
+    "note": "All listed cross-instance ranks reproduced identically over both odd primes."
+  },
+  "replay_bug_status": "The v2.5 P/parikh name-shadowing bug is absent from the v2.6 q2 replay."
+}

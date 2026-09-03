@@ -1,0 +1,204 @@
+{
+  "A_class": 28,
+  "B_class": 47,
+  "A_state": "aaabaaacaaabbbcabccca",
+  "B_state": "aaabaaacaaabbbcbaccca",
+  "last5_profiles": [
+    [
+      1,
+      0,
+      3
+    ],
+    [
+      1,
+      2,
+      1
+    ],
+    [
+      2,
+      2,
+      0
+    ],
+    [
+      3,
+      0,
+      1
+    ],
+    [
+      3,
+      1,
+      0
+    ]
+  ],
+  "legal_blocks": [
+    "aaba",
+    "aabb",
+    "aabc",
+    "aacb",
+    "aacc"
+  ],
+  "counts_A_h12_h14": [
+    6867627,
+    25468722,
+    94642975
+  ],
+  "counts_B_h12_h14": [
+    8737466,
+    32446851,
+    120488590
+  ],
+  "current_affine_requirement_differences": [
+    {
+      "geometry": [
+        3,
+        1
+      ],
+      "old_chars": 5,
+      "A_requirement": [
+        "A",
+        [
+          -1,
+          1,
+          1
+        ]
+      ],
+      "B_requirement": [
+        "A",
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "A_mask_count": 0,
+      "B_mask_count": 20,
+      "B_mask_is_fully_redundant_against_common_core": true
+    },
+    {
+      "geometry": [
+        4,
+        3
+      ],
+      "old_chars": 5,
+      "A_requirement": [
+        "A",
+        [
+          -1,
+          1,
+          3
+        ]
+      ],
+      "B_requirement": [
+        "A",
+        [
+          0,
+          0,
+          3
+        ]
+      ],
+      "A_mask_count": 0,
+      "B_mask_count": 2,
+      "B_mask_is_fully_redundant_against_common_core": true
+    },
+    {
+      "geometry": [
+        6,
+        1
+      ],
+      "old_chars": 11,
+      "both_masks_currently_empty": true
+    },
+    {
+      "geometry": [
+        7,
+        2
+      ],
+      "old_chars": 12,
+      "both_masks_currently_empty": true
+    },
+    {
+      "geometry": [
+        8,
+        3
+      ],
+      "old_chars": 13,
+      "both_masks_currently_empty": true
+    },
+    {
+      "geometry": [
+        9,
+        4
+      ],
+      "old_chars": 14,
+      "both_masks_currently_empty": true
+    }
+  ],
+  "current_forbidden_mask_summary": {
+    "common_core_forbidden_blocks": 55,
+    "A_unique_fringe_blocks": 0,
+    "B_unique_fringe_blocks": 0,
+    "exact_legal_set_equal": true
+  },
+  "one_matched_block_activation": [
+    {
+      "first_block": "aaba",
+      "A_next_legal_count": 6,
+      "B_next_legal_count": 7,
+      "B_extra_blocks": [
+        "cccb"
+      ],
+      "A_only_forbidding_geometry": [
+        6,
+        3
+      ],
+      "old_chars": 9,
+      "extra_branch_next_legal_count": {
+        "cccb": 3
+      }
+    },
+    {
+      "first_block": "aabc",
+      "A_next_legal_count": 2,
+      "B_next_legal_count": 3,
+      "B_extra_blocks": [
+        "accc"
+      ],
+      "A_only_forbidding_geometry": [
+        6,
+        3
+      ],
+      "old_chars": 9,
+      "extra_branch_next_legal_count": {
+        "accc": 2
+      }
+    },
+    {
+      "first_block": "aacb",
+      "A_next_legal_count": 8,
+      "B_next_legal_count": 11,
+      "B_extra_blocks": [
+        "accc",
+        "cacb",
+        "cacc"
+      ],
+      "A_only_forbidding_geometry": [
+        6,
+        3
+      ],
+      "old_chars": 9,
+      "extra_branch_next_legal_count": {
+        "accc": 1,
+        "cacb": 2,
+        "cacc": 2
+      }
+    },
+    {
+      "first_block": "aabb",
+      "responses_remain_equal": true
+    },
+    {
+      "first_block": "aacc",
+      "responses_remain_equal_and_sterile": true
+    }
+  ]
+}

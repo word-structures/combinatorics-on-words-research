@@ -1,0 +1,244 @@
+{
+  "date": "2026-08-30",
+  "purpose": "Exact cross-instance replication of the Paper-6 space-time profile observability spectrum.",
+  "definition": {
+    "V_cnt": "Exact rational statewise continuation-count Krylov space span{1,Q1,Q^2 1,...}.",
+    "M_m": "Raw-history family-sum measurement by the m most recent block Parikh profiles, using the valid library symmetry gauge (recency gauge for S3-invariant libraries; fixed a,b,c orientation for asymmetric HASH30).",
+    "O_m_t": "Vertical stack [M_m; M_m Q; ...; M_m Q^(t-1)] restricted to V_cnt.",
+    "nu_m": "Least t for which rank_Q O_m_t = dim_Q V_cnt.",
+    "lower_bound": "nu_m >= ceil(dim(V_cnt)/number_of_realized_measurement_families)."
+  },
+  "instances": [
+    {
+      "name": "BAL3_L4_Q1",
+      "library_symmetry": "S3",
+      "raw_histories": 354,
+      "equitable_states": 10,
+      "exact_future_dimension": 4,
+      "exact_dimension_certificate": "P6_CROSS_INSTANCE_EXACT_VECTOR_DIMENSION_CERT_v0.1_2026-08-30.json",
+      "profile_depths": [
+        {
+          "m": 1,
+          "families": 3,
+          "row_count_lower_bound": 2,
+          "rank_mod_65521_at_t1_t2": [
+            3,
+            4
+          ],
+          "rank_mod_65519_at_t1_t2": [
+            3,
+            4
+          ],
+          "exact_observability_index": 2,
+          "row_count_optimal": true
+        },
+        {
+          "m": 2,
+          "families": 8,
+          "row_count_lower_bound": 1,
+          "rank_mod_65521_at_t1": 4,
+          "rank_mod_65519_at_t1": 4,
+          "exact_observability_index": 1,
+          "row_count_optimal": true
+        },
+        {
+          "m": 3,
+          "families": 16,
+          "row_count_lower_bound": 1,
+          "rank_mod_65521_at_t1": 4,
+          "rank_mod_65519_at_t1": 4,
+          "exact_observability_index": 1,
+          "row_count_optimal": true
+        }
+      ]
+    },
+    {
+      "name": "FULL_L4_Q1",
+      "library_symmetry": "S3",
+      "raw_histories": 10782,
+      "equitable_states": 252,
+      "exact_future_dimension": 153,
+      "exact_dimension_certificate": "P6_FULL_L4_Q1_EXACT_VECTOR_DIMENSION_CERT_v0.1_2026-08-30.json",
+      "dimension_proof": "Exact scalar Hankel rank 153 plus exact vector annihilation p(Q)1=0 at order 153.",
+      "profile_depths": [
+        {
+          "m": 1,
+          "families": 6,
+          "row_count_lower_bound": 26,
+          "rank_mod_65521_at_t25_t26": [
+            150,
+            153
+          ],
+          "rank_mod_65519_at_t25_t26": [
+            150,
+            153
+          ],
+          "exact_observability_index": 26,
+          "row_count_optimal": true
+        },
+        {
+          "m": 2,
+          "families": 51,
+          "row_count_lower_bound": 3,
+          "rank_mod_65521_at_t2_t3": [
+            102,
+            153
+          ],
+          "rank_mod_65519_at_t2_t3": [
+            102,
+            153
+          ],
+          "exact_observability_index": 3,
+          "row_count_optimal": true
+        },
+        {
+          "m": 3,
+          "families": 345,
+          "row_count_lower_bound": 1,
+          "rank_mod_65521_at_t1": 153,
+          "rank_mod_65519_at_t1": 153,
+          "exact_observability_index": 1,
+          "row_count_optimal": true
+        }
+      ]
+    },
+    {
+      "name": "INTERIOR_L5_Q1",
+      "library_symmetry": "S3",
+      "raw_histories": 5496,
+      "equitable_states": 119,
+      "exact_future_dimension": 72,
+      "exact_dimension_certificate": "P6_CROSS_INSTANCE_EXACT_VECTOR_DIMENSION_CERT_v0.1_2026-08-30.json",
+      "profile_depths": [
+        {
+          "m": 1,
+          "families": 5,
+          "row_count_lower_bound": 15,
+          "rank_mod_65521_at_t14_t15": [
+            70,
+            72
+          ],
+          "rank_mod_65519_at_t14_t15": [
+            70,
+            72
+          ],
+          "exact_observability_index": 15,
+          "row_count_optimal": true
+        },
+        {
+          "m": 2,
+          "families": 26,
+          "row_count_lower_bound": 3,
+          "rank_mod_65521_at_t2_t3": [
+            51,
+            72
+          ],
+          "rank_mod_65519_at_t2_t3": [
+            51,
+            72
+          ],
+          "exact_observability_index": 3,
+          "row_count_optimal": true
+        },
+        {
+          "m": 3,
+          "families": 98,
+          "row_count_lower_bound": 1,
+          "rank_mod_65521_at_t1": 72,
+          "rank_mod_65519_at_t1": 72,
+          "exact_observability_index": 1,
+          "row_count_optimal": true
+        }
+      ]
+    },
+    {
+      "name": "HASH30_L4_K5_ASYMMETRIC",
+      "library_symmetry": "identity only",
+      "measurement_orientation": "fixed a,b,c; no S3/recency quotient",
+      "raw_histories": 323,
+      "equitable_states": 76,
+      "exact_future_dimension": 47,
+      "exact_dimension_certificate": "P6_CROSS_INSTANCE_EXACT_VECTOR_DIMENSION_CERT_v0.1_2026-08-30.json",
+      "profile_depths": [
+        {
+          "m": 1,
+          "families": 11,
+          "row_count_lower_bound": 5,
+          "rank_mod_65521_at_t4_t5": [
+            44,
+            47
+          ],
+          "exact_observability_index": 5,
+          "row_count_optimal": true
+        },
+        {
+          "m": 2,
+          "families": 71,
+          "row_count_lower_bound": 1,
+          "rank_mod_65521_at_t1": 47,
+          "exact_observability_index": 1,
+          "row_count_optimal": true
+        }
+      ]
+    },
+    {
+      "name": "FULL_L4_Q2_MAIN",
+      "library_symmetry": "S3",
+      "raw_histories": 218298,
+      "equitable_states": 2691,
+      "count_classes": 2689,
+      "exact_future_dimension": 1179,
+      "exact_dimension_certificate": "P6_Q2_VECTOR_KRYLOV_EXACT_CERT_v0.1_2026-08-30.json",
+      "profile_depths": [
+        {
+          "m": 1,
+          "families": 6,
+          "row_count_lower_bound": 197,
+          "rank_mod_65521_at_t197": 1179,
+          "exact_observability_index": 197,
+          "row_count_optimal": true
+        },
+        {
+          "m": 2,
+          "families": 51,
+          "row_count_lower_bound": 24,
+          "rank_mod_65521_at_t24": 1179,
+          "exact_observability_index": 24,
+          "row_count_optimal": true
+        },
+        {
+          "m": 3,
+          "families": 345,
+          "row_count_lower_bound": 4,
+          "ranks_mod_65521_t1_to_t4": [
+            329,
+            651,
+            973,
+            1179
+          ],
+          "exact_observability_index": 4,
+          "row_count_optimal": true
+        },
+        {
+          "m": 4,
+          "families": 1796,
+          "row_count_lower_bound": 1,
+          "exact_static_rank": 1144,
+          "exact_static_hidden_dimension": 35,
+          "rank_mod_65521_t2": 1179,
+          "rank_mod_65519_t2": 1179,
+          "exact_observability_index": 2,
+          "row_count_optimal": false,
+          "exception": "Exact 35-dimensional true-grid static degeneracy."
+        }
+      ]
+    }
+  ],
+  "headline": {
+    "tested_profile_depth_pairs": 15,
+    "row_count_optimal_pairs": 14,
+    "sole_exception": "FULL_L4_Q2, m=4",
+    "interpretation": "Across five exact selected-library calibrations and both symmetric and asymmetric libraries, every tested profile-depth pair except the known FULL-L4/Q2 four-profile grid degeneracy attains the elementary row-count lower bound exactly."
+  },
+  "epistemic_status": "Exact finite-instance theorem package. This does NOT yet prove a universal row-count-optimality theorem for arbitrary L,Q,B."
+}

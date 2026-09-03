@@ -1,0 +1,11 @@
+{
+  "date": "2026-08-30",
+  "prime": 65521,
+  "grid_groups": 1796,
+  "selected_phase_split_families": 35,
+  "refined_groups": 1831,
+  "rank_mod_65521_cpp": 1179,
+  "target_exact_future_dimension_Q": 1179,
+  "rational_status": "EXACT_Q full rank because modular rank equals independently exact rational target dimension",
+  "minimality": "At least 35 added measurement rows are necessary because exact grid rank is 1144 and exact target dimension is 1179; this construction adds exactly 35 and reaches full rank, so 35 is minimal among refinements measured by added family rows."
+}

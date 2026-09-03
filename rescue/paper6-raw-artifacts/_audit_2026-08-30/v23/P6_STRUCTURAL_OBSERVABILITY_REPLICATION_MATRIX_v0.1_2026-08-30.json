@@ -1,0 +1,335 @@
+{
+  "date": "2026-08-30",
+  "purpose": "Cross-instance replication / falsification of Paper-6 structural observability after the literature audit.",
+  "primes": [
+    65521,
+    65519
+  ],
+  "instances": [
+    {
+      "name": "BAL3_L4_Q1",
+      "library_definition": "Full L4 aa2fr blocks with all three letters present; 30 blocks.",
+      "alphabet_symmetry_group_size": 6,
+      "alphabet_symmetry_group": [
+        "abc",
+        "acb",
+        "bac",
+        "bca",
+        "cab",
+        "cba"
+      ],
+      "L": 4,
+      "Kmax": 7,
+      "Q_complete": 1,
+      "raw_states": 354,
+      "equitable_states": 10,
+      "exact_vector_future_dimension": 4,
+      "zero_root_multiplicity": 2,
+      "persistent_dimension": 2,
+      "measurements": [
+        {
+          "descriptor": "recency frame + 1 recent block profile",
+          "groups": 3,
+          "full_rank": [
+            3,
+            3
+          ],
+          "persistent_rank": [
+            2,
+            2
+          ]
+        },
+        {
+          "descriptor": "recency frame + 1 recent block profile + adjacency bit",
+          "groups": 4,
+          "full_rank": [
+            4,
+            4
+          ],
+          "persistent_rank": [
+            2,
+            2
+          ]
+        },
+        {
+          "descriptor": "recency frame + 2 recent block profiles",
+          "groups": 8,
+          "full_rank": [
+            4,
+            4
+          ],
+          "persistent_rank": [
+            2,
+            2
+          ]
+        }
+      ],
+      "conclusion": "Full future is already observable from two recent profiles without the bit; alternatively one profile plus the bit suffices. The bit is not universally necessary."
+    },
+    {
+      "name": "FULL_L4_Q1",
+      "library_definition": "All 60 L4 aa2fr blocks.",
+      "alphabet_symmetry_group_size": 6,
+      "alphabet_symmetry_group": [
+        "abc",
+        "acb",
+        "bac",
+        "bca",
+        "cab",
+        "cba"
+      ],
+      "L": 4,
+      "Kmax": 7,
+      "Q_complete": 1,
+      "raw_states": 10782,
+      "equitable_states": 252,
+      "exact_vector_future_dimension": 153,
+      "zero_root_multiplicity": 7,
+      "persistent_dimension": 146,
+      "measurements": [
+        {
+          "descriptor": "recency frame + 1 recent block profile",
+          "groups": 6,
+          "full_rank": [
+            6,
+            6
+          ],
+          "persistent_rank": [
+            6,
+            6
+          ]
+        },
+        {
+          "descriptor": "recency frame + 2 recent block profiles",
+          "groups": 51,
+          "full_rank": [
+            51,
+            51
+          ],
+          "persistent_rank": [
+            51,
+            51
+          ]
+        },
+        {
+          "descriptor": "recency frame + 2 recent block profiles + adjacency bit",
+          "groups": 63,
+          "full_rank": [
+            62,
+            62
+          ],
+          "persistent_rank": [
+            61,
+            61
+          ]
+        },
+        {
+          "descriptor": "recency frame + 3 recent block profiles",
+          "groups": 345,
+          "full_rank": [
+            153,
+            153
+          ],
+          "persistent_rank": [
+            146,
+            146
+          ]
+        }
+      ],
+      "conclusion": "Three recent recency-canonicalized block profiles are the first tested profile-window depth with complete full/persistent observability. The adjacency bit does not rescue depth two."
+    },
+    {
+      "name": "FULL_L4_Q2",
+      "library_definition": "All 60 L4 aa2fr blocks.",
+      "alphabet_symmetry_group_size": 6,
+      "alphabet_symmetry_group": [
+        "abc",
+        "acb",
+        "bac",
+        "bca",
+        "cab",
+        "cba"
+      ],
+      "L": 4,
+      "Kmax": 11,
+      "Q_complete": 2,
+      "raw_states": 218298,
+      "equitable_states": 2691,
+      "exact_vector_future_dimension": 1179,
+      "zero_root_multiplicity": 12,
+      "persistent_dimension": 1167,
+      "measurements": [
+        {
+          "descriptor": "recency frame + 4 recent block profiles",
+          "groups": 1796,
+          "full_rank": [
+            1144,
+            1144
+          ],
+          "persistent_rank": "not complete"
+        },
+        {
+          "descriptor": "recency frame + 4 recent block profiles + adjacency bit",
+          "groups": 2083,
+          "full_rank": [
+            1179,
+            1179
+          ],
+          "persistent_rank": [
+            1167,
+            1167
+          ]
+        },
+        {
+          "descriptor": "recency frame + 4 recent block profiles + full age_b in {1,2,3}",
+          "groups": 2226,
+          "full_rank": [
+            1179,
+            1179
+          ],
+          "persistent_rank": [
+            1167,
+            1167
+          ]
+        }
+      ],
+      "conclusion": "At Q2, four profiles alone miss 35 full-future dimensions; one adjacency bit is sufficient and full age information adds no rank."
+    },
+    {
+      "name": "INTERIOR_L5_Q1",
+      "library_definition": "All 90 L5 aa2fr blocks containing all three letters.",
+      "alphabet_symmetry_group_size": 6,
+      "alphabet_symmetry_group": [
+        "abc",
+        "acb",
+        "bac",
+        "bca",
+        "cab",
+        "cba"
+      ],
+      "L": 5,
+      "Kmax": 9,
+      "Q_complete": 1,
+      "raw_states": 5496,
+      "equitable_states": 119,
+      "exact_vector_future_dimension": 72,
+      "zero_root_multiplicity": 8,
+      "persistent_dimension": 64,
+      "measurements": [
+        {
+          "descriptor": "recency frame + 1 recent block profile",
+          "groups": 5,
+          "full_rank": [
+            5,
+            5
+          ],
+          "persistent_rank": [
+            5,
+            5
+          ]
+        },
+        {
+          "descriptor": "recency frame + 2 recent block profiles",
+          "groups": 26,
+          "full_rank": [
+            26,
+            26
+          ],
+          "persistent_rank": [
+            25,
+            25
+          ]
+        },
+        {
+          "descriptor": "recency frame + 2 recent block profiles + adjacency bit",
+          "groups": 36,
+          "full_rank": [
+            34,
+            34
+          ],
+          "persistent_rank": [
+            33,
+            33
+          ]
+        },
+        {
+          "descriptor": "recency frame + 3 recent block profiles",
+          "groups": 98,
+          "full_rank": [
+            72,
+            72
+          ],
+          "persistent_rank": [
+            64,
+            64
+          ]
+        }
+      ],
+      "conclusion": "Cross-block-length replication: three recent profiles give complete exact observability; the bit is not required."
+    },
+    {
+      "name": "HASH30_L4_K5_ASYMMETRIC_CONTROL",
+      "library_definition": "30 full-L4 aa2fr blocks with lexicographically smallest SHA-256 digest.",
+      "alphabet_symmetry_group_size": 1,
+      "alphabet_symmetry_group": [
+        "abc"
+      ],
+      "L": 4,
+      "Kmax": 5,
+      "Q_complete": null,
+      "raw_states": 323,
+      "equitable_states": 76,
+      "exact_vector_future_dimension": 47,
+      "zero_root_multiplicity": 5,
+      "persistent_dimension": 42,
+      "measurements": [
+        {
+          "descriptor": "recency canonicalization + 2 recent block profiles",
+          "groups": 44,
+          "full_rank": [
+            41,
+            41
+          ],
+          "persistent_rank": [
+            39,
+            39
+          ]
+        },
+        {
+          "descriptor": "recency canonicalization + 2 recent block profiles + adjacency bit",
+          "groups": 55,
+          "full_rank": [
+            44,
+            44
+          ],
+          "persistent_rank": [
+            41,
+            41
+          ]
+        },
+        {
+          "descriptor": "fixed a,b,c orientation + 2 recent block profiles",
+          "groups": 71,
+          "full_rank": [
+            47,
+            47
+          ],
+          "persistent_rank": [
+            42,
+            42
+          ]
+        }
+      ],
+      "conclusion": "Strong negative control: quotienting alphabet orientation by a symmetry the selected library does not possess loses exact future information. Keeping the actual trivial symmetry gauge restores full observability."
+    }
+  ],
+  "main_findings": [
+    "Structural observability replicates across L=4 and L=5 and across multiple selected libraries.",
+    "The exact descriptor is not universal: required profile depth and the need for the adjacency bit depend on the selected library and block range.",
+    "The one-bit correction is specific to the harder FULL_L4_Q2 calibration among the tested S3-invariant instances; it is not a universal axiom.",
+    "Alphabet gauge must respect the actual automorphism group G_B of the selected library. Full S3 recency canonicalization is unsound as a generic measurement compression for asymmetric HASH30.",
+    "In the tested S3-invariant Q1 systems, a small recent-profile window alone gives complete full and persistent observability: depth 2 for BAL3 L4 and depth 3 for FULL L4 and INTERIOR L5.",
+    "FULL_L4 exhibits a real Q1 -> Q2 increase in structural measurement complexity: 3 profiles at Q1 versus 4 profiles plus one adjacency bit at Q2."
+  ],
+  "novelty_implication": "The v2.0 theorem should not be universalized as 'four profiles plus one bit always suffice'. The more credible research direction is a library/range-dependent structural measurement theorem whose gauge is the actual alphabet symmetry group and whose required depth/decorations are derived from the Abelian boundary geometry."
+}

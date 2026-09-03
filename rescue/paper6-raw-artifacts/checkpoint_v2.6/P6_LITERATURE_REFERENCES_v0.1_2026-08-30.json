@@ -1,0 +1,167 @@
+[
+  {
+    "id": "BallePanangadenPrecup2015",
+    "authors": "Balle, Panangaden, Precup",
+    "year": 2015,
+    "title": "A Canonical Form for Weighted Automata and Applications to Approximate Minimization",
+    "venue": "LICS 2015",
+    "url": "https://arxiv.org/abs/1501.06841",
+    "role": "Weighted automata, Hankel rank, minimality"
+  },
+  {
+    "id": "SinghJamesRudary2004",
+    "authors": "Singh, James, Rudary",
+    "year": 2004,
+    "title": "Predictive State Representations: A New Theory for Modeling Dynamical Systems",
+    "venue": "UAI 2004",
+    "url": "https://faculty.cc.gatech.edu/~isbell/reading/papers/uai2004psr.pdf",
+    "role": "PSR, core tests, linear dimension"
+  },
+  {
+    "id": "ThonJaeger2015",
+    "authors": "Thon, Jaeger",
+    "year": 2015,
+    "title": "Links Between Multiplicity Automata, Observable Operator Models and Predictive State Representations — a Unified Learning Framework",
+    "venue": "JMLR 16:103-147",
+    "url": "https://www.jmlr.org/papers/v16/thon15a.html",
+    "role": "WFA/OOM/PSR common framework"
+  },
+  {
+    "id": "QuattoniCarrerasGalle2017",
+    "authors": "Quattoni, Carreras, Gallé",
+    "year": 2017,
+    "title": "A Maximum Matching Algorithm for Basis Selection in Spectral Learning",
+    "venue": "PMLR 54:1477-1485",
+    "url": "https://proceedings.mlr.press/v54/quattoni17a.html",
+    "role": "Hankel basis selection"
+  },
+  {
+    "id": "Carpi1993",
+    "authors": "Carpi",
+    "year": 1993,
+    "title": "On Abelian Power-Free Morphisms",
+    "venue": "International Journal of Algebra and Computation 3(2)",
+    "doi": "10.1142/S0218196793000123",
+    "role": "Abelian morphisms"
+  },
+  {
+    "id": "CurrieRampersad2012",
+    "authors": "Currie, Rampersad",
+    "year": 2012,
+    "title": "Fixed Points Avoiding Abelian k-Powers",
+    "venue": "JCTA 119(5):942-948",
+    "doi": "10.1016/j.jcta.2012.01.006",
+    "role": "Abelian template method"
+  },
+  {
+    "id": "RaoRosenfeld2018",
+    "authors": "Rao, Rosenfeld",
+    "year": 2018,
+    "title": "Avoiding Two Consecutive Blocks of Same Size and Same Sum over Z^2",
+    "venue": "SIAM J. Discrete Math. 32(4):2381-2397",
+    "doi": "10.1137/17M1149377",
+    "url": "https://www.lirmm.fr/~mrosenfeld/M114937.pdf",
+    "role": "Templates, additive powers, parent relations"
+  },
+  {
+    "id": "EyidoganGoralTanisali2026",
+    "authors": "Eyidoğan, Göral, Tanısalı",
+    "year": 2026,
+    "title": "Box Progressions, Abelian Power-Free Morphisms and A Sieve Technique for the Template Method",
+    "venue": "arXiv:2605.20504; announced to appear in Mathematics of Computation",
+    "url": "https://arxiv.org/abs/2605.20504",
+    "role": "Current template sieve/compression"
+  },
+  {
+    "id": "FiciPuzynina2023",
+    "authors": "Fici, Puzynina",
+    "year": 2023,
+    "title": "Abelian Combinatorics on Words: a Survey",
+    "venue": "Computer Science Review 47, 100532",
+    "url": "https://arxiv.org/abs/2207.09937",
+    "role": "Survey"
+  },
+  {
+    "id": "Currie2004",
+    "authors": "Currie",
+    "year": 2004,
+    "title": "The Number of Binary Words Avoiding Abelian Fourth Powers Grows Exponentially",
+    "venue": "Theoretical Computer Science 319:441-446",
+    "doi": "10.1016/j.tcs.2004.02.005",
+    "role": "Counting/exponential growth"
+  },
+  {
+    "id": "Keranen2009",
+    "authors": "Keränen",
+    "year": 2009,
+    "title": "A Powerful Abelian Square-Free Substitution over 4 Letters",
+    "venue": "Theoretical Computer Science 410:3893-3900",
+    "doi": "10.1016/j.tcs.2009.05.027",
+    "role": "Multiple image words / Abelian-square-free substitution"
+  },
+  {
+    "id": "CurrieMolRampersadShallit2024",
+    "authors": "Currie, Mol, Rampersad, Shallit",
+    "year": 2024,
+    "title": "Extending Dekking's Construction of an Infinite Binary Word Avoiding Abelian 4-Powers",
+    "venue": "SIAM J. Discrete Math. 38(4):2913-2925",
+    "doi": "10.1137/23M1558513",
+    "url": "https://arxiv.org/abs/2111.07857",
+    "role": "Multi-valued substitutions and counting lower bounds"
+  },
+  {
+    "id": "SamsonovShur2012",
+    "authors": "Samsonov, Shur",
+    "year": 2012,
+    "title": "On Abelian Repetition Threshold",
+    "venue": "RAIRO - Theoretical Informatics and Applications 46(1):147-163",
+    "url": "https://www.numdam.org/item/ITA_2012__46_1_147_0/",
+    "role": "Abelian growth rates"
+  },
+  {
+    "id": "Shur2010",
+    "authors": "Shur",
+    "year": 2010,
+    "title": "Growth Rates of Complexity of Power-Free Languages",
+    "venue": "Theoretical Computer Science 411:3209-3223",
+    "role": "Growth/regular approximations"
+  },
+  {
+    "id": "Mitchell2024",
+    "authors": "Mitchell",
+    "year": 2024,
+    "title": "On Word Complexity and Topological Entropy of Random Substitution Subshifts",
+    "venue": "Proceedings of the AMS",
+    "doi": "10.1090/proc/16893",
+    "url": "https://arxiv.org/abs/2305.04817",
+    "role": "Random substitution entropy"
+  },
+  {
+    "id": "GohlkeMitchellRustSamuel2023",
+    "authors": "Gohlke, Mitchell, Rust, Samuel",
+    "year": 2023,
+    "title": "Measure Theoretic Entropy of Random Substitution Subshifts",
+    "venue": "Annales Henri Poincaré",
+    "url": "https://arxiv.org/abs/2105.11224",
+    "role": "Random substitution entropy"
+  },
+  {
+    "id": "ShenShangguanLinGe2024",
+    "authors": "Shen, Shangguan, Lin, Ge",
+    "year": 2024,
+    "title": "Constrained Coding Upper Bounds via Goulden-Jackson Cluster Theorem",
+    "venue": "arXiv:2407.16449",
+    "url": "https://arxiv.org/abs/2407.16449",
+    "role": "Constrained coding/cardinality/capacity"
+  },
+  {
+    "id": "BentleySleatorTarjanWei1986",
+    "authors": "Bentley, Sleator, Tarjan, Wei",
+    "year": 1986,
+    "title": "A Locally Adaptive Data Compression Scheme",
+    "venue": "Communications of the ACM 29(4):320-330",
+    "doi": "10.1145/5684.5688",
+    "url": "https://www.cs.cmu.edu/~sleator/papers/Adaptive-data-compression.htm",
+    "role": "Move-to-front / recency ranking"
+  }
+]

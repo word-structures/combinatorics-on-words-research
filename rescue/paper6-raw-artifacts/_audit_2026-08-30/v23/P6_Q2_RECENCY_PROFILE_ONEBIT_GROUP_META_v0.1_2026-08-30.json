@@ -1,0 +1,18 @@
+{
+  "date": "2026-08-30",
+  "raw_states": 218298,
+  "equitable_classes": 2691,
+  "no_bit_groups": 1796,
+  "one_bit_groups": 2083,
+  "no_bit_nnz": 5164,
+  "one_bit_nnz": 5258,
+  "inputs": {
+    "P6_Q2_RAW_STATES_S21.npy": "8e6103c30d688223815b9f24e5718ddcbce61653ecc222e69648ad99538d58f2",
+    "P6_Q2_RAW_TO_EQUITABLE_CLASS_U16.npy": "6aaaf0f45e92da2450a80a1fd8d2b8d12eb1e75efd7267cb2bf803931bc3fe95",
+    "P6_Q2_EQUITABLE_QUOTIENT_SPARSE_v0.1_2026-08-30.json": "b6ff456af3350527ca8301e1feb818cf7e3ebafffd11e8deba1d03f89569ca77"
+  },
+  "group_files": {
+    "no_bit": "33ea5c2ccc00b6a4ad2d9106f8dfc2ad415df9ef55929ffadc7d71c6d1015e7d",
+    "one_bit": "45cc2b318e9312ce0227cae819699477783572e7ac1ab53a810c74bed7aa286f"
+  }
+}

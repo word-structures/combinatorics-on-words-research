@@ -1,0 +1,87 @@
+[
+  {
+    "library": "BAL3_L4_AA2FR",
+    "L": 4,
+    "Kmax": 4,
+    "full_memory_states": 414,
+    "blocks": 30,
+    "trie_nodes": 61,
+    "trie_edges": 60,
+    "trie_apply_matches_explicit": true,
+    "target_profiles": [
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "profile_dp_char_applications": 36,
+    "profile_dp_matches_explicit": true,
+    "all_possible_profiles": 15
+  },
+  {
+    "library": "INTERIOR_L5_AA2FR",
+    "L": 5,
+    "Kmax": 5,
+    "full_memory_states": 1146,
+    "blocks": 90,
+    "trie_nodes": 178,
+    "trie_edges": 177,
+    "trie_apply_matches_explicit": true,
+    "target_profiles": [
+      [
+        1,
+        1,
+        3
+      ],
+      [
+        1,
+        2,
+        2
+      ],
+      [
+        1,
+        3,
+        1
+      ],
+      [
+        2,
+        1,
+        2
+      ],
+      [
+        2,
+        2,
+        1
+      ],
+      [
+        3,
+        1,
+        1
+      ]
+    ],
+    "profile_dp_char_applications": 75,
+    "profile_dp_matches_explicit": true,
+    "all_possible_profiles": 21
+  },
+  {
+    "library": "HASH30_L4_AA2FR",
+    "L": 4,
+    "Kmax": 5,
+    "full_memory_states": 1146,
+    "blocks": 30,
+    "trie_nodes": 62,
+    "trie_edges": 61,
+    "trie_apply_matches_explicit": true
+  }
+]

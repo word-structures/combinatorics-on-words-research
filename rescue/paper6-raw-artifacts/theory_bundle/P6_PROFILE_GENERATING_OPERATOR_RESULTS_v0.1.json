@@ -1,0 +1,18 @@
+[
+  {
+    "L": 4,
+    "Kmax": 4,
+    "full_memory_states": 414,
+    "profiles_possible": 15,
+    "coefficient_dp_matches_literal_enumeration_all_states": true,
+    "mismatch_states": 0
+  },
+  {
+    "L": 5,
+    "Kmax": 5,
+    "full_memory_states": 1146,
+    "profiles_possible": 21,
+    "coefficient_dp_matches_literal_enumeration_all_states": true,
+    "mismatch_states": 0
+  }
+]

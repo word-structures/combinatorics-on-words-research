@@ -1,0 +1,25 @@
+{
+  "date": "2026-08-29",
+  "claim": "For L>=2, the Delta_(k,j) family through Kmax requires every suffix Parikh length 1..2*Kmax-1; the complete suffix-Parikh ladder is injective to the literal suffix.",
+  "machine_sanity": {
+    "tested_block_lengths": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      40
+    ],
+    "tested_Kmax_range": [
+      2,
+      20
+    ],
+    "all_required_length_sets_equal_full_interval": true
+  },
+  "proof_basis": {
+    "odd_m": "m=2k-1 occurs as S_(2k-j) with j=1",
+    "even_m": "m=2k-2 occurs as S_(2k-j) with j=2",
+    "m_1": "S_1 occurs as S_(k-j) in Delta_(2,1)",
+    "injectivity": "S_m-S_(m-1) is the one-hot vector of the m-th symbol from the end"
+  }
+}

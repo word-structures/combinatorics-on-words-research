@@ -1,0 +1,39 @@
+{
+  "date": "2026-08-30",
+  "files": {
+    "PAPER6_LITERATURE_NOVELTY_AUDIT_v0.1_2026-08-30.md": {
+      "sha256": "f6e69f2ef9aed9bff13cc3ae2a5d359aed3ae61eabe72ad9e3db7a86c39a6c51",
+      "bytes": 28425
+    },
+    "P6_LITERATURE_CLAIM_MATRIX_v0.1_2026-08-30.json": {
+      "sha256": "fb7ce41c94128c4178fa78b3f99ac39dbd5968171f10550ac7e14b0cf5f490fd",
+      "bytes": 4691
+    },
+    "P6_LITERATURE_REFERENCES_v0.1_2026-08-30.json": {
+      "sha256": "73bb4adfdd80b3d99673d3fc83457015dc33ba324828c67db6ed2f9ee710720f",
+      "bytes": 5957
+    },
+    "PAPER6_THEORY_CORE_STATUS_v2.1_2026-08-30.md": {
+      "sha256": "a4a234ff0c0690ffde588f681a10ea7524be5231dd71ace8220f741ef71ccf26",
+      "bytes": 3702
+    },
+    "PAPER6_LITERATURE_REVIEW_BUNDLE_v0.1_2026-08-30.zip": {
+      "sha256": "2d2193ac9a189ff24d70921926f74aa602c8d2773b60f99ecb46230139c5c432",
+      "bytes": 17108
+    },
+    "PAPER6_ESSENTIAL_RESEARCH_CHECKPOINT_v2.1_2026-08-30.zip": {
+      "sha256": "26e4deadcf6fd26bd8ff306c6e27defd213f913a4e4dabc3974916f2078a6e60",
+      "bytes": 973247
+    }
+  },
+  "integrity": {
+    "PAPER6_LITERATURE_REVIEW_BUNDLE_v0.1_2026-08-30.zip": {
+      "testzip": "PASS",
+      "file_count": 4
+    },
+    "PAPER6_ESSENTIAL_RESEARCH_CHECKPOINT_v2.1_2026-08-30.zip": {
+      "testzip": "PASS",
+      "file_count": 41
+    }
+  }
+}

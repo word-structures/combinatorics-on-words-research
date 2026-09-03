@@ -1,0 +1,95 @@
+{
+  "date": "2026-08-30",
+  "system": "FULL L4 aa2fr selected library",
+  "block_length": 4,
+  "field_status": "K7-K10 ranks are replicated modulo 65521 and 65519; K11 one-bit full/persistent observability is exact over Q via modular full-rank minor + exact future-dimension certificate.",
+  "rows": [
+    {
+      "Kmax": 7,
+      "equitable_states": 252,
+      "future_rank_mod_primes": 153,
+      "profile_window_3_rank": [
+        153,
+        153
+      ],
+      "profile_window_3_plus_S2_rank": [
+        153,
+        153
+      ],
+      "interpretation": "3 profiles already complete."
+    },
+    {
+      "Kmax": 8,
+      "equitable_states": 427,
+      "future_rank_mod_primes": 241,
+      "profile_window_3_rank": [
+        241,
+        241
+      ],
+      "profile_window_3_plus_S2_rank": [
+        241,
+        241
+      ],
+      "interpretation": "3 profiles remain complete."
+    },
+    {
+      "Kmax": 9,
+      "equitable_states": 617,
+      "future_rank_mod_primes": 337,
+      "profile_window_3_rank": [
+        277,
+        277
+      ],
+      "profile_window_3_plus_S2_rank": [
+        294,
+        294
+      ],
+      "profile_window_4_rank": [
+        337,
+        337
+      ],
+      "interpretation": "First tested cutoff where a fourth whole-block profile layer is needed."
+    },
+    {
+      "Kmax": 10,
+      "equitable_states": 1162,
+      "future_rank_mod_primes": 605,
+      "profile_window_3_rank": [
+        316,
+        316
+      ],
+      "profile_window_3_plus_S2_rank": [
+        355,
+        355
+      ],
+      "profile_window_4_rank": [
+        605,
+        605
+      ],
+      "interpretation": "4 profiles complete; S2 does not replace the missing fourth profile."
+    },
+    {
+      "Kmax": 11,
+      "equitable_states": 2691,
+      "exact_future_dimension_Q": 1179,
+      "profile_window_4_rank_mod_primes": [
+        1144,
+        1144
+      ],
+      "profile_window_4_plus_S2_rank": [
+        1179,
+        1179
+      ],
+      "exact_persistent_dimension_Q": 1167,
+      "profile_window_4_persistent_rank_mod_primes": [
+        1138,
+        1138
+      ],
+      "profile_window_4_plus_S2_persistent_rank": [
+        1167,
+        1167
+      ],
+      "interpretation": "The first nontrivial recency-gauged fragment S2 closes the full and persistent observability gap."
+    }
+  ]
+}

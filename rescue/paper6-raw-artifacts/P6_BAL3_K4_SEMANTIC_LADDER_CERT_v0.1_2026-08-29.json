@@ -1,0 +1,132 @@
+{
+  "date": "2026-08-29",
+  "library": "BAL3_L4_AA2FR",
+  "Kmax": 4,
+  "semantic_ladder": {
+    "raw_suffix_states": 78,
+    "literal_right_context_classes": 19,
+    "profile_conditioned_state_classes": 16,
+    "total_count_state_classes": 5,
+    "total_count_linear_dimension_exact": 3
+  },
+  "literal_to_profile_strict_witness": {
+    "state_s": "abbbaca",
+    "state_t": "abcb",
+    "s_legal_t_illegal": "bacc",
+    "t_legal_s_illegal": "abcc",
+    "common_block_profile": [
+      1,
+      1,
+      2
+    ],
+    "profile_conditioned_equivalent": true
+  },
+  "profile_to_total_strict_witness": {
+    "state_u": "aabc",
+    "state_v": "aacb",
+    "u_one_step_profile_counts": {
+      "(1,1,2)": 2,
+      "(1,2,1)": 1
+    },
+    "v_one_step_profile_counts": {
+      "(1,1,2)": 1,
+      "(1,2,1)": 2
+    },
+    "all_horizon_total_count_equivalent": true,
+    "common_future_count_prefix": [
+      1,
+      3,
+      8,
+      22,
+      60
+    ]
+  },
+  "total_count_quotient": {
+    "representatives": [
+      "aabc",
+      "abac",
+      "abacabb",
+      "abbbaca",
+      "abca"
+    ],
+    "Q": [
+      [
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "exact_linear_relations": [
+      "-2*f(aabc) + f(abac) + f(abacabb) = 0",
+      "f(aabc) - 2*f(abac) + f(abbbaca) = 0"
+    ],
+    "minimal_recurrence_polynomial": "x*(x^2 - 2*x - 2)",
+    "assembly_recurrence": "A[n+3] = 2*A[n+2] + 2*A[n+1]",
+    "assembly_count_prefix": [
+      30,
+      60,
+      168,
+      456,
+      1248,
+      3408
+    ],
+    "dominant_growth_root": "1 + sqrt(3)"
+  },
+  "larger_profile_linear_rank_candidates": [
+    {
+      "library": "BAL3_L4_AA2FR",
+      "Kmax": 6,
+      "profile_state_classes": 91,
+      "profile_linear_rank_candidate": 64,
+      "total_count_classes": 16,
+      "unary_rank_exact": 7
+    },
+    {
+      "library": "INTERIOR_L5_AA2FR",
+      "Kmax": 5,
+      "profile_state_classes": 193,
+      "profile_linear_rank_candidate": 154,
+      "total_count_classes": 34,
+      "unary_rank_exact": 27
+    },
+    {
+      "library": "ALL_L4_AA2FR",
+      "Kmax": 6,
+      "profile_state_classes": 907,
+      "profile_linear_rank_candidate": 661,
+      "total_count_classes": 152,
+      "unary_rank_exact": 97
+    }
+  ],
+  "caveat": "The 64/154/661 profile-linear ranks are modular candidates/lower bounds pending exact rational certification. BAL3 K=4 profile rank 16 is exact because it equals the full 16-dimensional profile state space."
+}

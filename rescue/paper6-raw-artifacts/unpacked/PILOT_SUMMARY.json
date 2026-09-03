@@ -1,0 +1,201 @@
+{
+  "date": "2026-08-29",
+  "block_length": 4,
+  "alphabet": "abc",
+  "forbid4": [
+    "abbc",
+    "accb",
+    "baac",
+    "bcca",
+    "caab",
+    "cbba"
+  ],
+  "modes": {
+    "aa2f": {
+      "block_count": 66,
+      "block_window_sft": {
+        "2": {
+          "states": 66,
+          "edges": 1572,
+          "spectral_radius": 24.546768001198593,
+          "normalized_root_upper_bound": 0.37192072729088776
+        },
+        "3": {
+          "states": 1572,
+          "edges": 20454,
+          "spectral_radius": 14.244834804487962,
+          "normalized_root_upper_bound": 0.2158308303710297
+        }
+      },
+      "halfperiod_cutoff_sft": {
+        "2": {
+          "states": 27,
+          "edges": 663,
+          "spectral_radius": 36.095318587629144,
+          "normalized_root_upper_bound": 0.5468987664792294,
+          "counts": [
+            66,
+            2382,
+            85974,
+            3103266,
+            112013388,
+            4043158926
+          ]
+        },
+        "3": {
+          "states": 228,
+          "edges": 5574,
+          "spectral_radius": 24.676675927492624,
+          "normalized_root_upper_bound": 0.3738890292044337,
+          "counts": [
+            66,
+            1728,
+            42942,
+            1057992,
+            26107968,
+            644278746
+          ]
+        },
+        "4": {
+          "states": 852,
+          "edges": 14502,
+          "spectral_radius": 18.24127085720843,
+          "normalized_root_upper_bound": 0.2763828917758853,
+          "counts": [
+            66,
+            1572,
+            26892,
+            499092,
+            9057774,
+            165488952
+          ]
+        },
+        "5": {
+          "states": 4596,
+          "edges": 63660,
+          "spectral_radius": 14.28658737824035,
+          "normalized_root_upper_bound": 0.2164634451248538,
+          "counts": [
+            66,
+            1572,
+            21390,
+            309996,
+            4401318,
+            62961462
+          ]
+        },
+        "6": {
+          "states": 12426,
+          "edges": 147924,
+          "spectral_radius": 11.671368711808453,
+          "normalized_root_upper_bound": 0.17683891987588565,
+          "counts": [
+            66,
+            1572,
+            20454,
+            238548,
+            2759526,
+            32264706
+          ]
+        }
+      }
+    },
+    "aa2fr": {
+      "block_count": 60,
+      "block_window_sft": {
+        "2": {
+          "states": 60,
+          "edges": 696,
+          "spectral_radius": 12.435741945688324,
+          "normalized_root_upper_bound": 0.20726236576147208
+        },
+        "3": {
+          "states": 696,
+          "edges": 4350,
+          "spectral_radius": 7.048903841278078,
+          "normalized_root_upper_bound": 0.11748173068796795
+        }
+      },
+      "halfperiod_cutoff_sft": {
+        "2": {
+          "states": 27,
+          "edges": 507,
+          "spectral_radius": 20.329827893239763,
+          "normalized_root_upper_bound": 0.3388304648873294,
+          "counts": [
+            60,
+            1200,
+            24360,
+            495192,
+            10067136,
+            204663144
+          ]
+        },
+        "3": {
+          "states": 186,
+          "edges": 2130,
+          "spectral_radius": 11.809839175298235,
+          "normalized_root_upper_bound": 0.19683065292163723,
+          "counts": [
+            60,
+            744,
+            8988,
+            105786,
+            1248522,
+            14747166
+          ]
+        },
+        "4": {
+          "states": 474,
+          "edges": 3924,
+          "spectral_radius": 9.08912093955979,
+          "normalized_root_upper_bound": 0.15148534899266317,
+          "counts": [
+            60,
+            696,
+            5604,
+            53490,
+            477816,
+            4363158
+          ]
+        },
+        "5": {
+          "states": 1788,
+          "edges": 12354,
+          "spectral_radius": 7.279099471764232,
+          "normalized_root_upper_bound": 0.12131832452940386,
+          "counts": [
+            60,
+            696,
+            4554,
+            34830,
+            247836,
+            1818558
+          ]
+        },
+        "6": {
+          "states": 3402,
+          "edges": 20292,
+          "spectral_radius": 5.6443395659587186,
+          "normalized_root_upper_bound": 0.09407232609931197,
+          "counts": [
+            60,
+            696,
+            4350,
+            24648,
+            134466,
+            766080
+          ]
+        }
+      }
+    }
+  },
+  "calibration": {
+    "aa2f_A1": 66,
+    "aa2f_A2_exact": 1572,
+    "aa2f_A3_exact": 20454,
+    "aa2fr_A1": 60,
+    "aa2fr_A2_exact": 696,
+    "aa2fr_A3_exact": 4350
+  }
+}

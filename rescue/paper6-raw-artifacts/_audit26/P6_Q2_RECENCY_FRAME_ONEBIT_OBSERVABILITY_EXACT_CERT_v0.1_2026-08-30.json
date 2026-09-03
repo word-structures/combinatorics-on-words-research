@@ -1,0 +1,52 @@
+{
+  "date": "2026-08-30",
+  "system": {
+    "library": "ALL_L4_AA2FR",
+    "block_length": 4,
+    "Q": 2,
+    "Kmax": 11,
+    "raw_reachable_histories": 218298,
+    "equitable_classes": 2691,
+    "exact_full_future_dimension_Q": 1179,
+    "exact_persistent_future_dimension_Q": 1167,
+    "persistent_shift": 12
+  },
+  "descriptor": {
+    "recency_frame": "Scan history right-to-left; rename most-recent distinct letter a, second b, third c.",
+    "profile_component": "Ordered Parikh profiles of four most recent complete L4 blocks after recency-frame canonicalization.",
+    "extra_bit": "epsilon(s)=1 iff the last two literal characters are equal.",
+    "age_equivalence": "epsilon is equivalent to distinguishing age_b=1 from age_b>=2; reachable age_b values are {1,2,3}.",
+    "no_bit_groups": 1796,
+    "one_bit_groups": 2083,
+    "full_age_groups": 2226
+  },
+  "full_future_rank": {
+    "no_bit": {
+      "65521": 1144,
+      "65519": 1144
+    },
+    "one_bit": {
+      "65521": 1179,
+      "65519": 1179
+    },
+    "full_age_b": {
+      "65521": 1179,
+      "65519": 1179
+    }
+  },
+  "persistent_future_rank": {
+    "one_bit": {
+      "65521": 1167,
+      "65519": 1167
+    }
+  },
+  "rational_certificate_logic": [
+    "The family-to-state aggregation matrix and Krylov future matrix are integer matrices.",
+    "Rank 1179 modulo an odd prime implies a nonzero integer 1179x1179 minor.",
+    "The exact rational future dimension is independently certified as 1179.",
+    "Therefore the rational measurement rank is exactly 1179.",
+    "The same logic with the shifted persistent Krylov block gives exact rational rank 1167."
+  ],
+  "minimality_scope": "Within the recency-frame + capped-age_b augmentation family: no extra age bit is insufficient (rank 1144), one binary adjacency bit is sufficient (rank 1179). This is not a universal information-theoretic minimality claim.",
+  "novelty_status": "NOT YET AUDITED. General observability/Hankel/PSR/OOM principles are classical; the Abelian-specific structural descriptor requires literature review."
+}

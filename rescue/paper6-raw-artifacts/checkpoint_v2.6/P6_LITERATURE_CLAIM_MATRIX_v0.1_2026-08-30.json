@@ -1,0 +1,147 @@
+[
+  {
+    "claim": "Finite cutoff weighted transfer matrix and Perron growth",
+    "status": "CLASSICAL",
+    "prior_art_risk": "HIGH",
+    "closest_areas": [
+      "constrained coding",
+      "symbolic dynamics",
+      "weighted automata"
+    ],
+    "safe_positioning": "Standard machinery; no novelty claim."
+  },
+  {
+    "claim": "Hankel/Krylov minimal exact future dimension",
+    "status": "CLASSICAL",
+    "prior_art_risk": "HIGH",
+    "closest_areas": [
+      "rational series",
+      "weighted automata",
+      "spectral learning"
+    ],
+    "safe_positioning": "Claim only the exact value/certificate for this Abelian system."
+  },
+  {
+    "claim": "Observable / dual measurement coordinates",
+    "status": "CLASSICAL GENERAL PRINCIPLE",
+    "prior_art_risk": "HIGH",
+    "closest_areas": [
+      "PSR",
+      "OOM",
+      "Hankel basis selection"
+    ],
+    "safe_positioning": "Specific combinatorial Abelian family may be novel; framework is not."
+  },
+  {
+    "claim": "Long Abelian bulk + bounded boundary correction",
+    "status": "CLOSE PRIOR ART",
+    "prior_art_risk": "HIGH",
+    "closest_areas": [
+      "Currie-Rampersad templates",
+      "Rao-Rosenfeld parent relations"
+    ],
+    "safe_positioning": "Uniform-block specialization; sharp bound may be a technical lemma."
+  },
+  {
+    "claim": "Cut-profile family compiler",
+    "status": "POSSIBLE SYNTHESIS CONTRIBUTION",
+    "prior_art_risk": "MEDIUM",
+    "closest_areas": [
+      "template methods",
+      "coefficient extraction",
+      "weighted automata"
+    ],
+    "safe_positioning": "Emphasize exact selected-library interface and machine replay."
+  },
+  {
+    "claim": "Counting/exponential growth of Abelian-free words",
+    "status": "CLASSICAL",
+    "prior_art_risk": "HIGH",
+    "closest_areas": [
+      "Currie 2004",
+      "Carpi",
+      "Samsonov-Shur"
+    ],
+    "safe_positioning": "Do not claim."
+  },
+  {
+    "claim": "Multiple safe equal-length block/image choices",
+    "status": "KNOWN",
+    "prior_art_risk": "HIGH",
+    "closest_areas": [
+      "multi-valued substitutions",
+      "Keranen 2009",
+      "Currie et al. 2024"
+    ],
+    "safe_positioning": "Distinguish external ambient codebook survival from substitution preservation."
+  },
+  {
+    "claim": "Arbitrary external selected-library relative survival",
+    "status": "NO EXACT MATCH FOUND",
+    "prior_art_risk": "MEDIUM",
+    "closest_areas": [
+      "multi-valued substitutions",
+      "random substitutions",
+      "constrained coding"
+    ],
+    "safe_positioning": "Distinct formulation in current search; novelty not proven."
+  },
+  {
+    "claim": "Q2 exact hierarchy 2691 -> 2689 -> 1179",
+    "status": "PLAUSIBLY NEW SYSTEM-SPECIFIC",
+    "prior_art_risk": "LOW exact duplication / MEDIUM generality",
+    "closest_areas": [
+      "general WFA minimization theory"
+    ],
+    "safe_positioning": "Certified exact theorem for the selected Abelian system."
+  },
+  {
+    "claim": "Natural count-equivalent but non-equitable Q2 pairs",
+    "status": "PLAUSIBLY NEW SYSTEM-SPECIFIC",
+    "prior_art_risk": "LOW exact duplication",
+    "closest_areas": [
+      "weighted bisimulation vs linear equivalence"
+    ],
+    "safe_positioning": "Explicit Abelian examples/certificates; general possibility is classical."
+  },
+  {
+    "claim": "Signed response cocycle",
+    "status": "CLASSICAL LINEAR CRITERION + POSSIBLE NEW ABELIAN GENERATOR",
+    "prior_art_risk": "MEDIUM",
+    "closest_areas": [
+      "weighted automata equivalence",
+      "linear bisimulation"
+    ],
+    "safe_positioning": "Novelty only in combinatorial response construction and system witnesses."
+  },
+  {
+    "claim": "Latent persistent-injection witness",
+    "status": "NO EXACT PRIOR FOUND",
+    "prior_art_risk": "LOW-MEDIUM",
+    "closest_areas": [
+      "state aggregation / hidden memory in general"
+    ],
+    "safe_positioning": "Explicit Abelian no-go theorem/counterexample."
+  },
+  {
+    "claim": "Alphabet recency frame",
+    "status": "CLASSICAL IDEA",
+    "prior_art_risk": "HIGH if claimed alone",
+    "closest_areas": [
+      "move-to-front",
+      "recency ranking"
+    ],
+    "safe_positioning": "Canonical gauge tool, not novelty."
+  },
+  {
+    "claim": "Four recent profiles + recency frame + one adjacency bit gives exact Q2 future observability",
+    "status": "STRONGEST CURRENT POTENTIAL NOVELTY",
+    "prior_art_risk": "MEDIUM until citation-chain audit and replication",
+    "closest_areas": [
+      "PSR core tests in general",
+      "Hankel basis selection",
+      "move-to-front recency in isolation"
+    ],
+    "safe_positioning": "Exact Abelian-specific structural observability theorem; do not universalize yet."
+  }
+]

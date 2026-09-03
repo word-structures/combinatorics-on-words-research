@@ -1,0 +1,9 @@
+{
+  "system": "FULL_L4_Q1",
+  "equitable_states": 252,
+  "scalar_hankel_rank_exact": 153,
+  "vector_annihilation_order": 153,
+  "vector_residual_nonzero_coordinates": 0,
+  "vector_residual_max_abs": "0",
+  "conclusion": "scalar exact rank 153 gives vector dimension >=153; exact p(Q)1=0 gives <=153; therefore exact vector future dimension=153."
+}

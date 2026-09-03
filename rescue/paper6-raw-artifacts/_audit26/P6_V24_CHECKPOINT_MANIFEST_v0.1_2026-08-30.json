@@ -1,0 +1,104 @@
+{
+  "date": "2026-08-30",
+  "status": "v2.4 post-referee descriptor-degeneracy checkpoint",
+  "files": {
+    "PAPER6_ESSENTIAL_CHECKPOINT_INDEX_v2.4_2026-08-30.md": {
+      "sha256": "29adfb535e2c06e969d344935f4b6c68b92a4d714d8a787b43f0e6291277e9b7",
+      "bytes": 1223
+    },
+    "PAPER6_THEORY_CORE_STATUS_v2.4_2026-08-30.md": {
+      "sha256": "9edf69722205314a188952ec916d8e83a3887786cc88df89bbfed69bcdd457b8",
+      "bytes": 3430
+    },
+    "PAPER6_GRID_ALIGNMENT_DEGENERACY_AND_MINIMAL_REPAIR_v0.1_2026-08-30.md": {
+      "sha256": "e7cb1fe52135e3cce6e4542122dcd9c95457828eb2426a73ee076baee21ed5ef",
+      "bytes": 12603
+    },
+    "PAPER6_FRAGMENT_TRANSPORT_LEMMAS_v0.2_2026-08-30.md": {
+      "sha256": "46de343b06105a1752d8ced331645d8f7d74490e794c845f77a40b9bc409e54e",
+      "bytes": 2442
+    },
+    "CLAUDE_ADVERSARIAL_REFEREE_AUDIT_v2.3_2026-08-30.md": {
+      "sha256": "6ce99c11ba724b1d47c827fb95ce3463379a644fc3d07241584da9c15670cfc3",
+      "bytes": 27004
+    },
+    "P6_Q2_PROFILE_ONLY_EXACT_RATIONAL_RANK_CERT_v0.1_2026-08-30.json": {
+      "sha256": "7cc966f9554ca01a7cf57f92956f3c77960c4bb3171539ac22594d6d955d9386",
+      "bytes": 1537
+    },
+    "P6_Q2_PROFILE_ONLY_ROW_RELATIONS_RECONSTRUCTED_v0.1_2026-08-30.json": {
+      "sha256": "893705e5138c20d861d2bdb5e4dee9b7754a649c06bb08f150c50da4911baf47",
+      "bytes": 98479
+    },
+    "p6_verify_profile_row_relations_exact.py": {
+      "sha256": "06c2516e080d73e51665a1deeeeb7569135156e43e97a7ac8b0c8f2a91f4ed7d",
+      "bytes": 3446
+    },
+    "P6_Q2_16CHAR_ANCHOR_POLICY_EXACT_CERT_v0.1_2026-08-30.json": {
+      "sha256": "c85ae7b86aa4046c949c2a51e1020c0e7a7f65abd6c99311f337fab3954b5af4",
+      "bytes": 6050
+    },
+    "P6_Q2_ANCHOR_POLICY_MATRIX_META_v0.1_2026-08-30.json": {
+      "sha256": "9df3324fe3e4ec2009f4d12a2c3ae047c54eb8c821d73d36ea1535564400f95c",
+      "bytes": 2194
+    },
+    "gen_anchor_mats.py": {
+      "sha256": "ca41b0760aba348e046eaa7452a8618eee30903ced5b81322c55a954abec6346",
+      "bytes": 1680
+    },
+    "rank_mod_u16.cpp": {
+      "sha256": "dffd2d26ac0047101f9ad2314cb6529ec22db784fd9ed236eca140308231fb44",
+      "bytes": 1217
+    },
+    "P6_Q2_PHASE_ALIASING_AND_MINIMAL_REPAIR_EXACT_CERT_v0.1_2026-08-30.json": {
+      "sha256": "5764d22fe265b0ddcc282fc3bcac90e8794f8f802240fa7d16b755db0dadd799",
+      "bytes": 15179
+    },
+    "P6_Q2_MINIMAL_35_PHASE_REFINEMENT_BASIS_MOD65521_v0.1_2026-08-30.json": {
+      "sha256": "3c64635e37f92994af4ed8868d15774f30d80f640ee38a436dc505d1bb233e7c",
+      "bytes": 2712
+    },
+    "P6_Q2_MINIMAL_35_PHASE_REFINEMENT_EXACT_CERT_v0.1_2026-08-30.json": {
+      "sha256": "db28418e75f643741cd6fe1c34705eb364de0a6f5ec8a74a5111a010367bbb7b",
+      "bytes": 580
+    },
+    "P6_Q2_ANCHOR_POLICY_GRID_SPLIT_INVARIANT_v0.1_2026-08-30.json": {
+      "sha256": "78dbfb93c6a779b39e9670c79497b9af62d9351e154497fe4a188af2c3cad9cc",
+      "bytes": 19181
+    },
+    "P6_Q2_RANDOM_SPLIT_PROTOCOL_AUDIT_v0.1_2026-08-30.json": {
+      "sha256": "9d21913f6857573a1d21263c752cbe2449d522499753ca574c020dee8dcacdc2",
+      "bytes": 3349
+    },
+    "P6_Q2_GRID_HIDDEN_GAP_RANDOM_REFINEMENT_SWEEP_v0.2_2026-08-30.json": {
+      "sha256": "694fe5b4b781eefae30dde326210918288ae83fc5335a953016a7c9ec005f7d9",
+      "bytes": 15303
+    },
+    "P6_Q2_GRID_HIDDEN_STATE_VECTORS_MOD65521.npy": {
+      "sha256": "4dedec9dd8566074196050848faea6d6f3848ab5ea83e09dd2f3fa74602f04bb",
+      "bytes": 188498
+    },
+    "P6_Q2_GRID_PROFILE_HIDDEN_KERNEL_MOD65521.npy": {
+      "sha256": "4dc7200f28faf91abbe8d8355b28350bd4941d1bab177486b3e6c8397fa82449",
+      "bytes": 82658
+    },
+    "p6_v24_descriptor_degeneracy_replay.py": {
+      "sha256": "dc7f690281c0d9b2de6ee100c2eacdf8950e0f1f92a9ef8f80ed08a787af1a60",
+      "bytes": 6554
+    }
+  },
+  "zips": {
+    "PAPER6_POST_REFEREE_DESCRIPTOR_DEGENERACY_BUNDLE_v0.1_2026-08-30.zip": {
+      "sha256": "bad0d795b6490a2135d7bfd3efbd16485e028cf8038418490545a6435c124798",
+      "bytes": 234394,
+      "files": 21,
+      "integrity": "PASS"
+    },
+    "PAPER6_ESSENTIAL_RESEARCH_CHECKPOINT_v2.4_2026-08-30.zip": {
+      "sha256": "a67346fae95c5dccf17564ea1fb9989e90bd4d611d9483e7609eda157f94de28",
+      "bytes": 1230897,
+      "files": 75,
+      "integrity": "PASS"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+[
+  {
+    "library": "BAL3_L4_AA2FR",
+    "Kmax": 6,
+    "blocks": 30,
+    "raw_states": 210,
+    "library_S3_invariant": true,
+    "S3_orbits": 35,
+    "orbit_size_hist": {
+      "6": 35
+    },
+    "operator_equivariant": true,
+    "equivariance_transition_checks": 2484,
+    "count_classes": 16,
+    "orbits_crossing_count_classes": 0,
+    "exact_unary_krylov_rank": 7,
+    "raw_to_orbit": 6.0,
+    "orbit_to_count": 2.1875,
+    "count_to_linear": 2.2857142857142856
+  },
+  {
+    "library": "INTERIOR_L5_AA2FR",
+    "Kmax": 5,
+    "blocks": 90,
+    "raw_states": 438,
+    "library_S3_invariant": true,
+    "S3_orbits": 73,
+    "orbit_size_hist": {
+      "6": 73
+    },
+    "operator_equivariant": true,
+    "equivariance_transition_checks": 14688,
+    "count_classes": 34,
+    "orbits_crossing_count_classes": 0,
+    "exact_unary_krylov_rank": 27,
+    "raw_to_orbit": 6.0,
+    "orbit_to_count": 2.1470588235294117,
+    "count_to_linear": 1.2592592592592593
+  },
+  {
+    "library": "ALL_L4_AA2FR",
+    "Kmax": 6,
+    "blocks": 60,
+    "raw_states": 3402,
+    "library_S3_invariant": true,
+    "S3_orbits": 567,
+    "orbit_size_hist": {
+      "6": 567
+    },
+    "operator_equivariant": true,
+    "equivariance_transition_checks": 121752,
+    "count_classes": 152,
+    "orbits_crossing_count_classes": 0,
+    "exact_unary_krylov_rank": 97,
+    "raw_to_orbit": 6.0,
+    "orbit_to_count": 3.7302631578947367,
+    "count_to_linear": 1.5670103092783505
+  },
+  {
+    "library": "HASH30_L4_AA2FR",
+    "Kmax": 5,
+    "blocks": 30,
+    "raw_states": 323,
+    "library_S3_invariant": false,
+    "count_classes": 76,
+    "exact_unary_krylov_rank": 47,
+    "count_to_linear": 1.6170212765957446
+  }
+]

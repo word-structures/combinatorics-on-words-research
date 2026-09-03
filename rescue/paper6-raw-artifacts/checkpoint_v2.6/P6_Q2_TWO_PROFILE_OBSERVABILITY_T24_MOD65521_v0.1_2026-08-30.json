@@ -1,0 +1,7 @@
+{
+  "groups": 51,
+  "time_slices": 24,
+  "row_count": 1224,
+  "rank_mod65521": 1179,
+  "row_count_lower_bound_on_index": 24
+}

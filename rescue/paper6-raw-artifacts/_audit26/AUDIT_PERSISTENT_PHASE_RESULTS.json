@@ -1,0 +1,17 @@
+{
+  "m=4 true grid": {
+    "families": 1796,
+    "full_rank": 1144,
+    "full_gap": 35,
+    "persistent_rank": 1138,
+    "persistent_gap": 29
+  },
+  "m=4 true grid + phase bit": {
+    "families": 3024,
+    "full_rank": 1179,
+    "full_gap": 0,
+    "persistent_rank": 1167,
+    "persistent_gap": 0
+  },
+  "m=4 two-time stack, persistent": 1167
+}

@@ -1,0 +1,130 @@
+[
+  {
+    "a0": 0,
+    "a1": 0,
+    "groups": 2452,
+    "rows": 2452,
+    "cols": 1179,
+    "file": "/mnt/data/anchor_mats/A_0_0.u16"
+  },
+  {
+    "a0": 0,
+    "a1": 1,
+    "groups": 1796,
+    "rows": 1796,
+    "cols": 1179,
+    "file": "/mnt/data/anchor_mats/A_0_1.u16"
+  },
+  {
+    "a0": 0,
+    "a1": 2,
+    "groups": 4033,
+    "rows": 4033,
+    "cols": 1179,
+    "file": "/mnt/data/anchor_mats/A_0_2.u16"
+  },
+  {
+    "a0": 0,
+    "a1": 3,
+    "groups": 3410,
+    "rows": 3410,
+    "cols": 1179,
+    "file": "/mnt/data/anchor_mats/A_0_3.u16"
+  },
+  {
+    "a0": 1,
+    "a1": 0,
+    "groups": 4547,
+    "rows": 4547,
+    "cols": 1179,
+    "file": "/mnt/data/anchor_mats/A_1_0.u16"
+  },
+  {
+    "a0": 1,
+    "a1": 1,
+    "groups": 4646,
+    "rows": 4646,
+    "cols": 1179,
+    "file": "/mnt/data/anchor_mats/A_1_1.u16"
+  },
+  {
+    "a0": 1,
+    "a1": 2,
+    "groups": 4046,
+    "rows": 4046,
+    "cols": 1179,
+    "file": "/mnt/data/anchor_mats/A_1_2.u16"
+  },
+  {
+    "a0": 1,
+    "a1": 3,
+    "groups": 4371,
+    "rows": 4371,
+    "cols": 1179,
+    "file": "/mnt/data/anchor_mats/A_1_3.u16"
+  },
+  {
+    "a0": 2,
+    "a1": 0,
+    "groups": 3533,
+    "rows": 3533,
+    "cols": 1179,
+    "file": "/mnt/data/anchor_mats/A_2_0.u16"
+  },
+  {
+    "a0": 2,
+    "a1": 1,
+    "groups": 3679,
+    "rows": 3679,
+    "cols": 1179,
+    "file": "/mnt/data/anchor_mats/A_2_1.u16"
+  },
+  {
+    "a0": 2,
+    "a1": 2,
+    "groups": 4034,
+    "rows": 4034,
+    "cols": 1179,
+    "file": "/mnt/data/anchor_mats/A_2_2.u16"
+  },
+  {
+    "a0": 2,
+    "a1": 3,
+    "groups": 3196,
+    "rows": 3196,
+    "cols": 1179,
+    "file": "/mnt/data/anchor_mats/A_2_3.u16"
+  },
+  {
+    "a0": 3,
+    "a1": 0,
+    "groups": 2224,
+    "rows": 2224,
+    "cols": 1179,
+    "file": "/mnt/data/anchor_mats/A_3_0.u16"
+  },
+  {
+    "a0": 3,
+    "a1": 1,
+    "groups": 2422,
+    "rows": 2422,
+    "cols": 1179,
+    "file": "/mnt/data/anchor_mats/A_3_1.u16"
+  },
+  {
+    "a0": 3,
+    "a1": 2,
+    "groups": 3922,
+    "rows": 3922,
+    "cols": 1179,
+    "file": "/mnt/data/anchor_mats/A_3_2.u16"
+  },
+  {
+    "a0": 3,
+    "a1": 3,
+    "groups": 3237,
+    "rows": 3237,
+    "cols": 1179,
+    "file": "/mnt/data/anchor_mats/A_3_3.u16"
+  }
+]

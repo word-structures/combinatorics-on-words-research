@@ -1,0 +1,16 @@
+{
+  "date": "2026-08-30",
+  "integrity": {
+    "PAPER6_SPACETIME_CROSS_INSTANCE_GENERALIZATION_BUNDLE_v0.1_2026-08-30.zip": {
+      "files": 20,
+      "testzip": "PASS"
+    },
+    "PAPER6_ESSENTIAL_RESEARCH_CHECKPOINT_v2.6_2026-08-30.zip": {
+      "files": 93,
+      "testzip": "PASS"
+    }
+  },
+  "v25_replay_bug_fixed": true,
+  "cross_instance_certificate": "P6_SPACETIME_OBSERVABILITY_CROSS_INSTANCE_EXACT_CERT_v0.1_2026-08-30.json",
+  "focused_claude_prompt": "CLAUDE_FOCUSED_SPACETIME_THEOREM_AUDIT_PROMPT_v0.1_2026-08-30.md"
+}

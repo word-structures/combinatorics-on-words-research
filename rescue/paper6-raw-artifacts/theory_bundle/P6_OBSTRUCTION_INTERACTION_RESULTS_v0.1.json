@@ -1,0 +1,150 @@
+[
+  {
+    "library": "BAL3_L4_AA2FR",
+    "Kmax": 6,
+    "block_count": 30,
+    "states": 210,
+    "structural_coordinates": 20,
+    "coordinate_names": [
+      "D_2_1",
+      "D_2_2",
+      "D_2_3",
+      "D_3_1",
+      "D_3_2",
+      "D_3_3",
+      "D_3_4",
+      "D_4_1",
+      "D_4_2",
+      "D_4_3",
+      "D_4_4",
+      "D_5_1",
+      "D_5_2",
+      "D_5_3",
+      "D_5_4",
+      "D_6_1",
+      "D_6_2",
+      "D_6_3",
+      "D_6_4",
+      "last3"
+    ],
+    "results": [
+      {
+        "degree": 0,
+        "feature_rank_mod": 1,
+        "krylov_vectors_contained": 1,
+        "krylov_rank_mod": 7
+      },
+      {
+        "degree": 1,
+        "feature_rank_mod": 122,
+        "partition_indicator_columns_generated": 256,
+        "krylov_vectors_contained": 1,
+        "krylov_rank_mod": 7
+      },
+      {
+        "degree": 2,
+        "feature_rank_mod": 210,
+        "partition_indicator_columns_generated": 7245,
+        "krylov_vectors_contained": 7,
+        "krylov_rank_mod": 7
+      }
+    ]
+  },
+  {
+    "library": "INTERIOR_L5_AA2FR",
+    "Kmax": 5,
+    "block_count": 90,
+    "states": 438,
+    "structural_coordinates": 19,
+    "coordinate_names": [
+      "D_2_1",
+      "D_2_2",
+      "D_2_3",
+      "D_3_1",
+      "D_3_2",
+      "D_3_3",
+      "D_3_4",
+      "D_3_5",
+      "D_4_1",
+      "D_4_2",
+      "D_4_3",
+      "D_4_4",
+      "D_4_5",
+      "D_5_1",
+      "D_5_2",
+      "D_5_3",
+      "D_5_4",
+      "D_5_5",
+      "last3"
+    ],
+    "results": [
+      {
+        "degree": 0,
+        "feature_rank_mod": 1,
+        "krylov_vectors_contained": 1,
+        "krylov_rank_mod": 27
+      },
+      {
+        "degree": 1,
+        "feature_rank_mod": 240,
+        "partition_indicator_columns_generated": 331,
+        "krylov_vectors_contained": 1,
+        "krylov_rank_mod": 27
+      },
+      {
+        "degree": 2,
+        "feature_rank_mod": 438,
+        "partition_indicator_columns_generated": 12226,
+        "krylov_vectors_contained": 27,
+        "krylov_rank_mod": 27
+      }
+    ]
+  },
+  {
+    "library": "HASH30_L4_AA2FR",
+    "Kmax": 5,
+    "block_count": 30,
+    "states": 323,
+    "structural_coordinates": 16,
+    "coordinate_names": [
+      "D_2_1",
+      "D_2_2",
+      "D_2_3",
+      "D_3_1",
+      "D_3_2",
+      "D_3_3",
+      "D_3_4",
+      "D_4_1",
+      "D_4_2",
+      "D_4_3",
+      "D_4_4",
+      "D_5_1",
+      "D_5_2",
+      "D_5_3",
+      "D_5_4",
+      "last3"
+    ],
+    "results": [
+      {
+        "degree": 0,
+        "feature_rank_mod": 1,
+        "krylov_vectors_contained": 1,
+        "krylov_rank_mod": 47
+      },
+      {
+        "degree": 1,
+        "feature_rank_mod": 174,
+        "partition_indicator_columns_generated": 264,
+        "krylov_vectors_contained": 1,
+        "krylov_rank_mod": 47
+      },
+      {
+        "degree": 2,
+        "feature_rank_mod": 321,
+        "partition_indicator_columns_generated": 6737,
+        "krylov_vectors_contained": 47,
+        "krylov_rank_mod": 47
+      }
+    ]
+  }
+]

@@ -1,0 +1,149 @@
+[
+  {
+    "library": "BAL3_L4_AA2FR",
+    "Kmax": 6,
+    "blocks": 30,
+    "quotient_classes": 16,
+    "exact_krylov_rank": 7,
+    "recurrence_x_valuation": 2,
+    "tail_krylov_rank_mod": 5,
+    "nonzero_recurrence_degree": 5,
+    "Q_power_ranks": [
+      13,
+      10,
+      10,
+      10
+    ],
+    "stable_image_rank_mod": 10,
+    "rational_factor_degrees_after_removing_x": [
+      [
+        1,
+        1,
+        "x - 1"
+      ],
+      [
+        1,
+        1,
+        "x + 1"
+      ],
+      [
+        3,
+        1,
+        null
+      ]
+    ],
+    "recurrence_coefficients_integral": true
+  },
+  {
+    "library": "INTERIOR_L5_AA2FR",
+    "Kmax": 5,
+    "blocks": 90,
+    "quotient_classes": 34,
+    "exact_krylov_rank": 27,
+    "recurrence_x_valuation": 3,
+    "tail_krylov_rank_mod": 24,
+    "nonzero_recurrence_degree": 24,
+    "Q_power_ranks": [
+      27,
+      25,
+      24,
+      24,
+      24
+    ],
+    "stable_image_rank_mod": 24,
+    "rational_factor_degrees_after_removing_x": [
+      [
+        24,
+        1,
+        null
+      ]
+    ],
+    "recurrence_coefficients_integral": true
+  },
+  {
+    "library": "HASH30_L4_AA2FR",
+    "Kmax": 5,
+    "blocks": 30,
+    "quotient_classes": 76,
+    "exact_krylov_rank": 47,
+    "recurrence_x_valuation": 5,
+    "tail_krylov_rank_mod": 42,
+    "nonzero_recurrence_degree": 42,
+    "Q_power_ranks": [
+      56,
+      48,
+      45,
+      43,
+      42,
+      42,
+      42
+    ],
+    "stable_image_rank_mod": 42,
+    "rational_factor_degrees_after_removing_x": [
+      [
+        42,
+        1,
+        null
+      ]
+    ],
+    "recurrence_coefficients_integral": true
+  },
+  {
+    "library": "ALL_L4_AA2FR",
+    "Kmax": 5,
+    "blocks": 60,
+    "quotient_classes": 73,
+    "exact_krylov_rank": 53,
+    "recurrence_x_valuation": 3,
+    "tail_krylov_rank_mod": 50,
+    "nonzero_recurrence_degree": 50,
+    "Q_power_ranks": [
+      57,
+      52,
+      50,
+      50,
+      50
+    ],
+    "stable_image_rank_mod": 50,
+    "rational_factor_degrees_after_removing_x": [
+      [
+        50,
+        1,
+        null
+      ]
+    ],
+    "recurrence_coefficients_integral": true
+  },
+  {
+    "library": "ALL_L4_AA2FR",
+    "Kmax": 6,
+    "blocks": 60,
+    "quotient_classes": 152,
+    "exact_krylov_rank": 97,
+    "recurrence_x_valuation": 4,
+    "tail_krylov_rank_mod": 93,
+    "nonzero_recurrence_degree": 93,
+    "Q_power_ranks": [
+      116,
+      104,
+      98,
+      96,
+      96,
+      96
+    ],
+    "stable_image_rank_mod": 96,
+    "rational_factor_degrees_after_removing_x": [
+      [
+        1,
+        1,
+        "x - 1"
+      ],
+      [
+        92,
+        1,
+        null
+      ]
+    ],
+    "recurrence_coefficients_integral": true
+  }
+]

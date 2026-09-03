@@ -1,0 +1,15 @@
+{
+  "date": "2026-08-30",
+  "outputs": {
+    "PAPER6_STRUCTURAL_OBSERVABILITY_REPLICATION_BUNDLE_v0.1_2026-08-30.zip": {
+      "sha256": "147d745d26e1cda3d2ac9306ecfeac4903c2522b1af2f477a87eaeaf924369db",
+      "files": 9,
+      "integrity": "PASS"
+    },
+    "PAPER6_ESSENTIAL_RESEARCH_CHECKPOINT_v2.2_2026-08-30.zip": {
+      "sha256": "1b1cc662e7ec7d0879c52ad40c0d0e37889232bb18463cf920005aef764f0d97",
+      "files": 47,
+      "integrity": "PASS"
+    }
+  }
+}
