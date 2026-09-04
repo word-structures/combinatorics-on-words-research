@@ -22,6 +22,7 @@ proposing anything.
 
 | Date | # | Final? | What collapsed | In one sentence |
 |---|---|---|---|---|
+| 2026-09-04 | [§38](#38-a-novelty-verdict-reached-from-an-invalid-three-source-identity-chain) | **NECESSARY** (the provenance failure) | A Paper 5 novelty verdict built on three wrong source records (**not** a mathematical refutation) | All three bibliographic entries failed identity checking — one unrelated paper, one already known here under its correct identity, one with a title and DOI that resolve to nothing — so *"no matching construction was located"* establishes neither novelty nor its absence. Paper 5's mathematics is unaffected; the comparison must be rebuilt. See `LITERATURE_COVERAGE.md` section 2f — no claim row, by design. |
 | 2026-09-04 | [§37](#37-paper-6-standalone-novelty-claims-for-the-obstacle-hierarchy-and-the-counting-compiler) | **CONTEXTUAL** | Two Paper 6 standalone novelty claims (literature boundary, **not** a refutation) | Two preserved Paper 6 novelty audits report the bounded-defect decomposition as sitting inside an established Abelian-template line and the counting compiler inside an established counting literature, so neither is novel standing alone; the mathematics is untouched and broader Paper 6 novelty stays unassessed. Canonical entry: `LITERATURE_COVERAGE.md` section 2e -- no claim row, by design. |
 | 2026-09-04 | [§36](#36-one-step-response-aliasing-as-sufficient-for-future-equivalence) | **NECESSARY** | One-step response aliasing as sufficient for future equivalence | Two clean-room reconstructions from definitions kill it from different directions: `same one-step response -> same count` stays false, and an obstruction unattainable now can become attainable later, so the state is not Markov-sufficient. Row 131. |
 | 2026-09-04 | [§35](#35-profile-incidence-rank-collapse-as-the-direct-semantic-mechanism) | **CONTEXTUAL** | Profile-incidence rank collapse as the semantic mechanism | Dead states and rational aliasing account for much of it -- **298** two-row proportional relations over just **72** pivot rows, not the historical "197", which belongs to a different object entirely. Row 130. |
@@ -1015,3 +1016,69 @@ canonical source claim is made.
 source reading can move in either direction.
 
 **MATH_CLAIMS ROW: none, by design.** See `LITERATURE_COVERAGE.md` section 2e.
+
+---
+
+## 38. A novelty verdict reached from an invalid three-source identity chain
+
+> **METHODOLOGICAL / PROVENANCE FAILURE — NOT A MATHEMATICAL REFUTATION.**
+> Nothing here says any Paper 5 mathematics is wrong. This entry has **no
+> `MATH_CLAIMS.md` row on purpose**: what failed is a literature comparison, so
+> it belongs on the provenance and novelty axes, not in the claim ledger
+> (`EPISTEMIC_DISCIPLINE.md` section 13). The novelty consequences are recorded
+> in `LITERATURE_COVERAGE.md` section 2f.
+
+*Logged 2026-09-04. Historical evidence preserved unchanged on
+`rescue/paper5-end-to-end-raw-2026-09-03` (`c24dbe5`):
+`rescue/paper5-end-to-end/07_NOVELTY_AUDIT.md`. The corrected source records
+are in `LITERATURE_COVERAGE.md` section 2, and the reconstructed novelty
+position in section 2f.*
+
+**WHAT FAILED.** The 2026-08-29 Paper 5 novelty audit reached the verdict *"No
+matching construction was located in the searched sources"* from a three-source
+literature comparison in which **all three bibliographic records were wrong**.
+
+**HOW IT FAILED.** Each identifier was opened on 2026-09-04. This is an
+`INVALID_SOURCE_CHAIN`: three for three, and each failure of a different kind.
+
+- One identifier was **unrelated work**: it was cited as a Currie/Rampersad
+  abelian-pattern paper and is in fact Lu & Peng, on random hypergraphs.
+- One was a **Rao & Rosenfeld paper this repository had already opened under its
+  correct identity** on 2026-08-01, cited here under a different title with a
+  parent-graph section it does not contain. The repository even carried a
+  regression test naming the correct identity — and could not fire, because it
+  scanned only `tests/*.md` while the audit lived in `scratch/`.
+- One combined a title matching no record with a DOI that **does not resolve**
+  (Crossref returned 404). The genuine paper's content, checked by keyword
+  census of its full text, contains none of the abelian or Parikh-avoidance
+  material the audit attributed to it.
+
+**SCOPE.** The literature comparison and its verdict. Nothing else.
+
+**WHAT SURVIVES / WHAT IS NOT CLAIMED.** The Paper 5 mathematical artifacts are
+**unaffected**: the partial-target parent bridge, the `q=0` scope correction it
+found adversarially, and the exact literal-versus-parametric parity results
+(0 missing, 0 spurious) never depended on the bibliography. Equally, **this
+entry does not say Paper 5 is unoriginal.** A verdict reached from sources that
+were not read establishes neither novelty nor its absence; the honest position
+is that the comparison must be **rebuilt from zero**, which is what
+`LITERATURE_COVERAGE.md` section 2f begins.
+
+**Why this is worth canonical memory.** The audit's *form* was impeccable —
+numbered entries, exact-overlap and exact-difference fields, an identifier per
+source. Every field was populated and none was checked. This is the third entry
+of its kind, after section 21 (a verifier that never ran its verification) and
+section 24 (a figure that travelled out of the run that produced it), and it
+has the same shape: **a rigorous-looking artifact whose inputs nobody opened.**
+The durable lesson is narrow and mechanical — a citation is not evidence until
+the source is opened — and it is now enforced by the citation-identity guard in
+`tests/test.js`, which scans the tracked text corpus rather than one directory.
+
+**Novelty:** NOT CLAIMED; see `LITERATURE_COVERAGE.md` section 2f.
+
+**Finality: NECESSARY** for the provenance failure itself — the identifiers
+were opened and the mismatches are exhibited, and no further compute reopens
+that. **Deliberately not final** on Paper 5's novelty, which is `UNRESOLVED`
+and is not adjudicated here in either direction.
+
+**MATH_CLAIMS ROW: none, by design.**
