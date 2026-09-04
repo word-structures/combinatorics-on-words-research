@@ -168,6 +168,11 @@ A retracted row is never deleted, so it does not get added again.
 | B16 pairs: 8 symmetry classes, max p(16)=6,410,640 (24.5% of all-9) | Computed with a buggy engine (boundary-bigram indexing bug, fixed 2026-08-02, commit 90b7052); correct figures are 6 classes, max 2,852,290 (39.7%) — see row 90/94 | 87 |
 | B16 growth-rate: All-9 rate at n=16 is 2.867 | Same engine bug as row 87; correct rate is 2.5818 — no corrected growth-rate analysis has been redone yet | 89 |
 | Golden Six and All-9 lack finite Hankel rank up to k=12 | The cited script (`scratch/b16-hankel.js`) never computed the Hankel determinant of either sequence — it ran the test only on a Fibonacci control and on the unrelated S=empty aa2f sequence (row 27/86), not on p_G6(n) or p_All9(n) at all. Found on inspection while repairing unrelated file corruption in the same session | 105 |
+| Paper 7 v0.1: the 36-configuration residual class is closed under `F_C(V) = C g85(V)` | Counterexample `V = b`: `C g85(b)` carries `bb` at zero-based position 10. Does not adjudicate v0.2/v0.4 | 122 |
+| Paper 3: `eta_v = -(4/3) B(v) + Xi_v` holds as an exact identity | The preserved audit records cross-terms in `P_3 = sum_c v_c^3` and `h`-dependent factors. Only the exact identity under the raw conventions is rejected | 123 |
+| Paper 2 and Paper 3 prove the same tail lemma, so it can be cross-cited | Distinct architectures: time-domain Dobrushin sums versus frequency-domain resolvent estimates. Neither bound is rejected | 124 |
+| Paper 4: `S = (family_id, target_class, bounded_history)` determines the legal future of an AA2FR word | Candidate descriptor withdrawn on a distinguishability sketch with no exhibited witness block. **Not** a universal impossibility theorem | 125 |
+| Paper 4: the v0.33 frontier identity gives a compression benefit | Measured defect D2 at `L = 40`: the quotient DAG is the full legal prefix trie. The identity is retained for accounting | 126 |
 
 ---
 
