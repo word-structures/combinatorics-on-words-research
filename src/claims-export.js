@@ -205,6 +205,39 @@ function build() {
   };
 }
 
+/**
+ * Every claim ID must name exactly one claim.
+ *
+ * IDs are strings, not integers -- `6a`, `6b`, `6c` and `7b` are all valid, and
+ * `6` itself is deliberately absent because that claim was split.
+ *
+ * This exists because a duplicate ID does not fail loudly, it fails *inconsistently*:
+ * a Map built as `new Map(rows.map(r => [r.id, r]))` keeps the LAST row with a given
+ * id, while `rows.find(r => r.id === x)` returns the FIRST. Two callers then read the
+ * same id as two different claims. That is not hypothetical -- IDs 97 (2026-08-02) and
+ * 84 (2026-08-04) both collided when concurrent sessions wrote independent rows in the
+ * same shared worktree, and nothing in this file noticed either time.
+ */
+function assertUniqueIds(rows) {
+  const firstSeen = new Map();
+  const duplicates = [];
+  rows.forEach((r, i) => {
+    if (firstSeen.has(r.id)) duplicates.push({ id: r.id, first: firstSeen.get(r.id), again: i });
+    else firstSeen.set(r.id, i);
+  });
+  if (duplicates.length) {
+    const detail = duplicates
+      .map(d => `"${d.id}" (table positions ${d.first} and ${d.again})`)
+      .join('; ');
+    throw new Error(
+      `duplicate claim ID(s): ${detail}. Every claim ID must name exactly one claim. ` +
+      `Renumber the later duplicate to the next free ID and record the move inside the ` +
+      `row itself, as row 98 does for the "row 97" collision -- keep both claims, delete nothing.`
+    );
+  }
+  return rows.length;
+}
+
 function runControls() {
   const notes = [];
   const data = build();
@@ -221,6 +254,10 @@ function runControls() {
     }
   }
   notes.push(`all ${data.rowCount} rows carry a claim, a source, a status and two dates`);
+
+  // 1b. Every claim ID names exactly one claim (see assertUniqueIds).
+  assertUniqueIds(data.rows);
+  notes.push(`all ${data.rowCount} rows have distinct claim IDs`);
 
   // 2. Retractions are never quotable. This is the register's whole point.
   const rejected = data.rows.filter(r => r.status === 'REJECTED').map(r => r.id);
@@ -329,5 +366,5 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { parseLedger, parseQuotable, verifyQuotable, build, runControls, syncedHtml, verifyHtmlBindings, VALID_STATUS };
+module.exports = { parseLedger, parseQuotable, verifyQuotable, assertUniqueIds, build, runControls, syncedHtml, verifyHtmlBindings, VALID_STATUS };
 

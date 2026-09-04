@@ -358,7 +358,7 @@ option, not attempted here).**
 
 ## 22. Route A Exhaustion Up to Length 7 by Prefix Scan
 
-*Logged 2026-08-04. See `MATH_CLAIMS.md` row 84 (new), `src/cegis-scanner.js`.*
+*Logged 2026-08-04. See `MATH_CLAIMS.md` row 121 (renumbered from a duplicate row 84 on 2026-09-04), `src/cegis-scanner.js`.*
 
 **Hypothesis:** Route A of the project roadmap seeks a direct, non-uniform ternary morphism $h: \{a,b,c\} \to \{a,b,c\}^*$ that avoids abelian squares of period $K \ge 2$, with image lengths up to 7. A full CEGIS loop with exact algebraic verifications (Proposition 9 / Jordan decomposition) would find or rule out candidates.
 
