@@ -1413,11 +1413,46 @@ test("Table library: affine keying is exact, a hit costs no search, tampering is
 // ----------------------------------------------------
 // 36. LEDGER EXPORT AND QUOTABLE FIGURES (claims-export.js, MATH_CLAIMS row 61)
 // ----------------------------------------------------
+test("Every claim ID names exactly one claim; suffixed IDs stay valid", () => {
+  const ce = require('../src/claims-export.js');
+  const fs = require('fs');
+  const path = require('path');
+
+  const rows = ce.parseLedger(fs.readFileSync(path.join(__dirname, '..', 'MATH_CLAIMS.md'), 'utf8'));
+
+  // 1. The live ledger satisfies the invariant.
+  assert.strictEqual(ce.assertUniqueIds(rows), rows.length, "live ledger must have unique claim IDs");
+  assert.strictEqual(new Set(rows.map(r => r.id)).size, rows.length,
+    "distinct-ID count must equal row count");
+
+  // 2. IDs are strings, not integers: the suffixed rows must survive parsing.
+  //    Row 6 was split into 6a/6b, with 6c retained as the REJECTED original.
+  for (const id of ["6a", "6b", "6c", "7b"]) {
+    assert.ok(rows.some(r => r.id === id), "suffixed claim ID " + id + " must still parse");
+  }
+
+  // 3. A duplicate must be refused, and the message must name the offending ID.
+  //    This is the check that was missing when 97 (2026-08-02) and 84 (2026-08-04)
+  //    each collided; both went unnoticed because nothing looked.
+  const withDup = rows.concat([Object.assign({}, rows[0], { claim: "a second claim wearing an existing ID" })]);
+  assert.throws(
+    () => ce.assertUniqueIds(withDup),
+    new RegExp('duplicate claim ID\\(s\\): "' + rows[0].id + '"'),
+    "a duplicate claim ID must be refused, naming the ID");
+
+  // 4. A duplicated suffixed ID is caught too, not just numeric ones.
+  const suffixRow = rows.find(r => r.id === "6a");
+  assert.throws(
+    () => ce.assertUniqueIds(rows.concat([Object.assign({}, suffixRow)])),
+    /duplicate claim ID/,
+    "a duplicated suffixed ID must also be refused");
+});
+
 test("Ledger exports cleanly; a figure not in its row cannot be published", () => {
   const ce = require('../src/claims-export.js');
 
   const { notes, data } = ce.runControls();
-  assert.strictEqual(notes.length, 5, "runControls must report 5 control groups");
+  assert.strictEqual(notes.length, 6, "runControls must report 6 control groups");
   assert.ok(data.rowCount >= 60, "fewer than 60 rows parsed; the table format changed");
   assert.ok(data.quotable.length > 0, "at least one quotable figure must be declared");
 
