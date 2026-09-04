@@ -54,8 +54,9 @@ Only these have been opened and searched. Everything else is unopened.
 | Lietard, *Évitabilité de puissances additives*, PhD thesis, Univ. de Lorraine 2020 | 2026-07-30 | PDF `docnum.univ-lorraine.fr`, text extracted, keyword search (row 65) |
 | Keränen, *Suppression of Unfavourable Factors*, IMS 2006 | earlier | PDF (row 38) |
 | ACR 2004, *The Number of Ternary Words Avoiding Abelian Cubes* | earlier | row 48 |
+| Adamczewski, *Balances for fixed points of primitive substitutions*, Theoret. Comput. Sci. **307**(1):47–75 (2003), DOI `10.1016/S0304-3975(03)00092-6` | 2026-09-04 | PDF from the author's page, extracted with `pdftotext -layout`. Opened to settle a source-identity correction, not as prior art — see the note below |
 | Rao & Rosenfeld, "Avoidability of long k-abelian repetitions", Math. Comput. 85(302):3051–3060 (2016), arXiv:1507.02581 | 2026-08-01 | PDF, text extracted with `pdftotext -layout` (not an AI summary), Theorem 2 and the h2 morphism quoted directly (row 84) — this is Fici & Puzynina Theorem 65's reference [124], the source of the ternary 2-abelian construction |
-| Currie & Rampersad, *Fixed points avoiding Abelian k-powers*, JCTA 119(5):942–948 (2012), arXiv:1106.1842 | 2026-08-14 | **Listing page and abstract only.** The full text was **not** extracted: the only attempt returned an AI-mediated summary, which does not meet this section's standard. See the split-status note below |
+| Currie & Rampersad, *Fixed points avoiding Abelian k-powers*, JCTA 119(5):942–948 (2012), arXiv:1106.1842 | 2026-08-14 (abstract), **2026-09-04 (full text)** | PDF fetched from arXiv and extracted with `pdftotext -layout`, **not** an AI summary. Section 3 read directly. The 2026-08-14 abstract-only status stood for three weeks and is recorded below rather than overwritten |
 
 **On Currie & Rampersad (added 2026-08-14) — evidence status is split, and the
 two halves must not be merged.**
@@ -71,21 +72,37 @@ Dekking's result with the template method of Currie and Rampersad, we develop
 a sieve technique…"*. This matters here because the project's Rao–Rosenfeld
 Proposition 9/11 machinery (rows 30, 31, 45) sits downstream of that method.
 
-**(B) Internal content of the paper: UNVERIFIED** under this section's
-opened-source standard. The template definition, the ancestor computation and
-any finiteness argument have **not** been checked. The only full-text read was
-an AI-mediated extraction; `EPISTEMIC_DISCIPLINE.md` §1 warns by name against
-treating confident-sounding specifics from such a read as verified, and this
-section's own convention distinguishes text extraction from an AI summary. No
-definition, theorem number or lemma from this paper may be quoted or relied on
-until it is opened directly.
+**(B) Internal content of the paper: VERIFIED 2026-09-04.** This half was
+`UNVERIFIED` from 2026-08-14 until 2026-09-04, on the grounds that the only
+full-text read had been an AI-mediated extraction; that chronology is kept
+here deliberately rather than rewritten. The PDF has now been fetched and
+extracted with `pdftotext -layout`, and **section 3, "Ancestors and
+k-templates", was read directly**. Confirmed in the source: the k-template
+definition as a (2k)-tuple `[a_1,...,a_{k+1}, d_1,...,d_{k-1}]`; the parent
+relation, quoted verbatim — *"We say that $t_2$ is a parent of $t_1$ if"* —
+carrying the constraint `ψ(a_{i+1}a_{i+2}) - ψ(a_i a_{i+1}) + D_i M = d_i`;
+**Lemma 3.3**, *"Given a k-template $t_1$, we may calculate all of its
+parents"*; the inverse-matrix form `D_i = (d_i + ψ(a_i a_{i+1}) -
+ψ(a_{i+1}a_{i+2})) M^{-1}`; and *"Let ancestor be the transitive closure of
+the parent relation."* Remark 3.4 records that some k-templates have no
+parents at all, which is an integrality test rather than an enumeration.
+
+**Scope of what that verifies, stated precisely.** The paper's setting is a
+**fixed, fully specified morphism**: Lemma 3.3's proof turns on the candidate
+set being *"finite, and may be searched exhaustively"*. So:
+
+- **KNOWN, and now sourced:** fixed morphism plus template / parent / ancestor
+  machinery, including parent computation and the ancestor closure.
+- **NOT established by this source:** feasibility for a **partially specified**
+  target morphism, i.e. whether a parent witness is realizable by *some*
+  profile-compatible completion. That question is not asked in this paper, and
+  this entry does **not** claim the paper answers it.
 
 **Consequence.** Currie & Rampersad and row 80's Parikh-difference condition
-belong to the same broad linear/Parikh algebraic family. **Any substantive
-comparison — including whether that paper does or does not subsume the
-project's own bounded finite-window formulation (`OPEN_RESEARCH_QUESTIONS.md`
-B22) — remains pending a direct source audit, and no novelty conclusion in
-either direction may be drawn from the present state of verification.**
+belong to the same broad linear/Parikh algebraic family. The direct source
+audit that was pending is now done for section 3 only; the subsumption
+question against `OPEN_RESEARCH_QUESTIONS.md` B22 remains open, and no novelty
+conclusion in either direction is drawn here.
 
 **Not opened:** Brown & Freedman, *"Arithmetic progressions in lacunary
 sets"*, Rocky Mountain J. Math. 17(3):587–596, 1987 — **the citation is now
@@ -99,6 +116,30 @@ third, distinct paper (3-abelian squares under a finer equivalence) —
 opening it does NOT satisfy row 84's citation; it remains genuinely
 unopened.** Also unopened: Halbeisen & Hungerbühler (2000), Dekking (1979), Justin (1972),
 Pirillo & Varricchio (1994).
+
+**On Adamczewski (added 2026-09-04) — an identity correction, not prior art.**
+The paper was opened to resolve a citation defect, and the record above is
+taken from the article's own header, which prints the DOI
+`10.1016/S0304-3975(03)00092-6` on page 1. Its subject is a *balance* measure:
+the abstract states that for fixed points of primitive substitutions *"the
+asymptotic behaviour of this measure is in part ruled by the spectrum"* of the
+incidence matrix. Section 4 is titled **"Main results"**.
+
+**Source-specific negative check.** A keyword census of the extracted full text
+returns **zero** occurrences of `abelian`, `Parikh`, `square-free`, `avoid`,
+`template`, `parent`, `ancestor`, `Minkowski` or `reachable`. The overlap that
+the preserved 2026-08-29 Paper 5 novelty audit attributed to this author —
+bounding *"the Abelian complexity of morphic words"* — **was not found in this
+opened source**, and that audit additionally gave a title and a DOI that
+resolve to nothing (`NEGATIVE_RESULTS.md` section 38).
+
+**This entry does not make Adamczewski prior art for Paper 5.** The correct
+citation was in fact already inside this repository: the Fici & Puzynina survey
+extract at `scratch/fici_puzynina_2207.09937.txt` lists it correctly in its
+bibliography and says only that *"The balance function of primitive morphic
+words has been characterized by Adamczewski"*. Balance asymptotics are
+conceptual background at most; nothing here bears on abelian-power avoidance
+or on morphism synthesis.
 
 ### 2b. Material and visualization sources — NOT citable for claims
 
@@ -205,6 +246,86 @@ has opened. Reaching `REVIEWED_RESIDUAL_RISK` for the Paper 6 line requires open
 queued works under section 5's maintenance rule and running the subsumption attack; that is
 separate evidence work and is not done here.
 
+## 2f. Paper 5 — verification-guided morphism synthesis (novelty review)
+
+**NOVELTY_STATUS = UNDER_REVIEW**
+A fresh adversarial review was performed on 2026-09-04: the three sources named
+by the preserved 2026-08-29 Paper 5 novelty audit were opened and their
+identities falsified, the intended parent/template source was reconstructed and
+opened, a recent close source was opened in full, and four candidate novelty
+objects were separately attacked for subsumption. The review is **incomplete**,
+so this does not reach `REVIEWED_RESIDUAL_RISK`; and it is a real documented
+review, so it is no longer the `NOT_ESTABLISHED` default.
+
+**The four candidate objects are kept separate on purpose.** Bundling them is
+how a technical refinement gets sold as a theorem.
+
+| # | Candidate novelty object | Current adversarial verdict |
+|---|---|---|
+| A | Profile-parametric parent feasibility for a **partially specified** morphism: decide whether a parent witness is realizable by *any* profile-compatible completion | **UNRESOLVED**, leaning *technical refinement* |
+| B | Exact prefix-Parikh reachable sets, combined across independent roles by **Minkowski sum** | **STRAIGHTFORWARD COMBINATION** |
+| C | Polynomial reachable-state enumeration, `O(m L^{2(k-1)})` at fixed alphabet size `k` and arity `m` | **DIRECT COROLLARY** |
+| D | Synthesis-time integration — *certify-while-constructing* pruning | **UNRESOLVED** |
+
+*(These verdicts are prose classifications for this review. They are not
+repository-wide status tokens, and `NOVELTY_STATUS` above remains the only
+enum in play.)*
+
+**Overall: novelty unresolved.** Stated explicitly, because each of these has
+been conflated with another at some point in this project's history:
+
+- **No novelty claim is currently authorized for Paper 5**, in any of A–D.
+- This says **nothing against the mathematics.** The partial-target parent
+  bridge, its `q=0` scope correction, and the exact literal-versus-parametric
+  parity results are unaffected by a bibliography failure.
+- The historical `07_NOVELTY_AUDIT.md` verdict — *"No matching construction was
+  located in the searched sources"* — **carries no novelty weight**, because
+  the searched sources were not the papers it named.
+- **A and D require a further subsumption attack**, A against Currie &
+  Rampersad's parent computation and D against the arXiv:2605.20504 sieve.
+- **B and C must not be sold as standalone novelty.** B is a specialisation of
+  established semilinear/Parikh machinery; C follows from
+  `binom(d+k-1, k-1) ∈ O(L^{k-1})` over `m` depths by inspection.
+- The **practical solver contribution is not established** (see below).
+
+**Documented search scope (2026-09-04).** Opened directly: **arXiv:1409.1174 —
+which is Lu & Peng on random hypergraphs, IDENTITY_MISMATCH against the Paper 5
+audit that cited it as a Currie/Rampersad abelian-pattern source, and not a
+source for anything here**; arXiv:1507.02581, whose correct identity was
+already recorded above; arXiv:1106.1842 (section 3); arXiv:2605.20504 (full
+text); Adamczewski TCS 307(1) (full text); Crossref queried for both
+Adamczewski DOIs, one of which **does not resolve**.
+Searched but not opened: the Parikh-image / semilinear-set / constraint-
+propagation literature, where the general machinery behind object B lives.
+
+**Residual leads, none opened.** The semilinear/Parikh-membership and
+constraint-programming literature for object B; any morphism-synthesis or
+CSP/SAT/ILP formulation that prunes on partial assignments for objects A and D;
+and the citation graph around arXiv:2605.20504, which is recent enough that
+follow-up work may already exist. These are the reason this section is
+`UNDER_REVIEW` and not stronger.
+
+**Practical value — the audit's distinctions, preserved.**
+
+- The theoretical complexity result is **real under its stated assumptions**;
+  the preserved theorem artifact itself notes that overall polynomiality holds
+  *"ONLY IF"* template arity and parent length are fixed, and that the joint
+  shared-word resolution remains a CSP.
+- The measured parent-count reduction over a coarse profile relaxation was
+  **0.80%–3.21%** — the experiment's own headline negative.
+- The reported **2.3×–21.0× figures are Python microbenchmarks, not end-to-end
+  solver speedups**, as the source report says in those words.
+- **No memory benefit** is established.
+- The strongest surviving framing is conceptual: *certify-while-constructing*,
+  i.e. avoiding literal completion enumeration.
+- **One end-to-end synthesis benchmark is still required** before any strong
+  solver-contribution claim.
+
+The stronger *">80% of branches eliminated"* figure is **deliberately not
+imported**: it lives in a directory the project itself named
+`invalid_assumed_outputs/`, and no reason for that invalidation is recorded
+anywhere in the preserved corpus.
+
 ## 3. Coverage table
 
 The **"Space"** column states exactly what has been swept, not just yes/no.
@@ -230,18 +351,38 @@ The **"Space"** column states exactly what has been swept, not just yes/no.
 | 14 | k-abelian hierarchy | **yes** (Fici & Puzynina Thm 65) | the 2-abelian ternary case is solved | no module | a possible yardstick |
 | 15 | Proportion/density of morphisms satisfying Theorem 2.4's affine condition in the search space | **not found in checked sources** | Semantic Scholar's full citation graph for both source papers (2408.15390: 1 citer; 2111.07857: 2 citers) + targeted search terms ("affine morphism fraction/density eligibility additive powers", "how many morphisms affine eigenvalue decidable power-free") | row 73 | **yes — this is a gap if the check holds** |
 
-**Row 15's side observation, traced but not built on:** the search found a
-recent (2026-05, rev. 2026-07) paper, **Eyidoğan, Göral & Tanısalı, "Box
-Progressions, Abelian Power-Free Morphisms and A Sieve Technique for the
-Template Method", arXiv:2605.20504** — abstract read and quoted, the full
-paper not opened. It does not measure the same quantity: it concerns
-**abelian** (not additive) power-freeness over a **binary** alphabet, and
-its "sieve" reduces **ancestor-computation cost** in the template method,
-not the proportion of eligible morphisms in the search space. So it does
-not answer row 73's question, but it is a possible lead for speeding up
-`additive-affine-decision.js`'s own ancestor computation at larger k, if
-and when that becomes necessary. **Not to be cited substantively until the
-full paper is opened.**
+**Row 15's side observation — source now opened in full (2026-09-04):** the
+search found a recent (2026-05, rev. 2026-07) paper, **Eyidoğan, Göral &
+Tanısalı, "Box Progressions, Abelian Power-Free Morphisms and A Sieve
+Technique for the Template Method", arXiv:2605.20504**. It was abstract-only
+until 2026-09-04, when the PDF was fetched and extracted with
+`pdftotext -layout`. Verified from the source itself:
+
+- it builds on the Currie–Rampersad template method — *"Combining Dekking's
+  result with the template method of Currie and Rampersad, we develop a sieve
+  technique"*;
+- the sieve's effect, quoted: *"our technique reduces the number of parents and
+  ancestors of the morphism in Proposition 3.6 from 1953162 and 1953289 to 8
+  and 224, respectively"*;
+- its task is **verification of a given morphism** and of its fixed point, over
+  a **binary** alphabet — not synthesis, and not additive powers.
+
+**Source-specific negative check.** A keyword census of the extracted full text
+found **no occurrence in this opened source** of `Minkowski`, `reachable`,
+`prefix-Parikh`, or `partially specified`. That is a statement about this
+paper only, and must never be restated as *"does not exist in the
+literature"*: the wider subsumption question is open (section 2f).
+
+It still does not answer row 73's question — it measures a different quantity —
+but it is now citable substantively, and it is the closest known prior work to
+the Paper 5 pruning objects.
+
+**A methodological note on how it was read.** The first automated read of this
+paper reported that it "operates on partially specified morphisms" and
+"employs Parikh reachable sets". Extracting the actual text disproved both;
+the summariser had confabulated in response to a leading question. The claim
+above rests on the extracted text, not on that summary — `AGENTS.md` rule 1
+and `EPISTEMIC_DISCIPLINE.md` §1 exist for exactly this.
 
 ---
 

@@ -406,29 +406,227 @@ test("Perron-Frobenius Exact Frequencies & Characteristic Polynomial", () => {
 });
 
 // ----------------------------------------------------
-// 13. CITATION DRIFT GUARD (MATH_CLAIMS.md #6)
+// 13. CITATION-IDENTITY GUARD (AGENTS.md rule 1)
 // ----------------------------------------------------
-test("Citation Guard: h6/g3 construction is not attributed to arXiv:1507.02581", () => {
-  const FABRICATED = "On Mäkelä's Conjectures: deciding if a morphic word avoids long abelian-powers";
-  const docs = fs.readdirSync(__dirname).filter(f => f.endsWith('.md'));
-  const offenders = [];
+//
+// WHY THIS EXISTS, AND WHY IT IS BROADER THAN IT WAS
+// --------------------------------------------------
+// The original version of this test guarded exactly one fabricated title and
+// scanned exactly one directory: the .md files inside tests/. That was enough
+// for the 2026-07-28 h6/g3 incident it was written for, and useless for the
+// next one.
+//
+// On 2026-09-04 a forensic audit of the preserved Paper 5 novelty audit
+// (`rescue/paper5-end-to-end-raw-2026-09-03`, 07_NOVELTY_AUDIT.md) found that
+// ALL THREE of its literature records were bibliographically wrong:
+//
+//   - arXiv:1409.1174 was cited as a Currie/Rampersad abelian-pattern paper.
+//     It is Lu & Peng, on random hypergraphs.
+//   - arXiv:1507.02581 was cited as "Abelian square-free words over four
+//     letters" with a parent-graph section. It is Rao & Rosenfeld,
+//     "Avoidability of long k-abelian repetitions" -- which THIS REPOSITORY
+//     had already verified and which the old version of this very test
+//     already named in its own failure message.
+//   - Adamczewski's paper was cited under a title that does not exist, with a
+//     DOI that does not resolve.
+//
+// The old guard could not have caught any of it: the file lived in scratch/,
+// not in tests/. So the rule table below is shared, and the scan covers the
+// tracked text corpus rather than one directory.
+//
+// WHAT THIS DOES NOT DO
+// ---------------------
+// It does not verify bibliography over the network, and it must not start to:
+// a CI job that depends on arxiv.org being reachable is a flaky gate, and a
+// citation checker that silently passes when the network is down is worse
+// than none. This guard only refuses KNOWN-FALSE source identities that this
+// project has already opened the real source for. Everything else is rule 1's
+// job, performed by a person or an agent before the citation is written.
 
-  for (const d of docs) {
-    const txt = fs.readFileSync(path.join(__dirname, d), 'utf8');
-    if (!txt.includes(FABRICATED)) continue;
-    // The title may only survive inside an explicit retraction / warning context.
-    const retracted = /RETRACTED|eri paperi|different Rao|must not be reused|ei vastaa|not a source/i.test(txt);
-    if (!retracted) offenders.push(d);
+/**
+ * Known-false source identities. Each rule is a string or pair that must not
+ * appear in tracked claim-bearing text except inside an explicit retraction or
+ * warning context -- because this repository must be able to DOCUMENT the
+ * failure (NEGATIVE_RESULTS.md section 38 does exactly that) without the
+ * documentation itself tripping the guard.
+ */
+const CITATION_IDENTITY_RULES = [
+  {
+    id: 'h6g3-fabricated-title',
+    needle: "On Mäkelä's Conjectures: deciding if a morphic word avoids long abelian-powers",
+    why: 'IDENTITY_MISMATCH: matches no arXiv record (checked 2026-07-28). arXiv:1507.02581 is ' +
+         '"Avoidability of long k-abelian repetitions"; the h6/g3 construction is arXiv:1511.05875',
+  },
+  {
+    id: 'paper5-currie-rampersad-title',
+    needle: 'A new approach to finding words avoiding abelian patterns',
+    why: 'IDENTITY_MISMATCH: matches no arXiv record under this title (checked 2026-09-04). The real template/parent/ancestor ' +
+         'source is Currie & Rampersad, "Fixed points avoiding Abelian k-powers", arXiv:1106.1842',
+  },
+  {
+    id: 'paper5-rao-rosenfeld-title',
+    needle: 'Abelian square-free words over four letters',
+    why: 'IDENTITY_MISMATCH: is not the title of arXiv:1507.02581, which is "Avoidability of long k-abelian repetitions" ' +
+         '(opened 2026-08-01). The parent/ancestor machinery is Currie & Rampersad arXiv:1106.1842 section 3, ' +
+         'specialised by Rao & Rosenfeld arXiv:1511.05875',
+  },
+  {
+    id: 'paper5-adamczewski-title',
+    needle: 'Balance properties of morphisms',
+    why: 'IDENTITY_MISMATCH: matches no record under this title (checked 2026-09-04). The real paper is "Balances for fixed ' +
+         'points of primitive substitutions", Theoret. Comput. Sci. 307(1):47-75 (2003)',
+  },
+  {
+    id: 'paper5-adamczewski-doi',
+    needle: '10.1016/S0304-3975(02)00827-X',
+    why: 'IDENTITY_MISMATCH: does not resolve (Crossref returned 404 on 2026-09-04). The Adamczewski DOI is ' +
+         '10.1016/S0304-3975(03)00092-6',
+  },
+  {
+    // An identifier that is legitimate elsewhere is guarded as a PAIRING, not
+    // as a banned string: 1409.1174 is a real arXiv record and may be cited
+    // for what it actually is.
+    id: 'paper5-1409-miscast',
+    needle: '1409.1174',
+    alsoRequires: /abelian|template|Currie|Rampersad/i,
+    why: 'IDENTITY_MISMATCH: is Lu & Peng, "High-order Phase Transition in Random Hypergrpahs" (checked 2026-09-04). ' +
+         'It is not a source for abelian patterns, templates, or Currie/Rampersad',
+  },
+];
+
+/**
+ * An occurrence is permitted only where the text marks it as wrong -- and the
+ * marking has to be NEAR the occurrence.
+ *
+ * The first version of this guard asked only whether a marker appeared
+ * anywhere in the same file. Measured against this repository that let 35 of
+ * 479 tracked files off entirely, including AGENTS.md, MATH_CLAIMS.md,
+ * LITERATURE_COVERAGE.md, NEGATIVE_RESULTS.md and README.md -- precisely the
+ * documents where a false citation would do the most damage, because they are
+ * long and all of them discuss retractions somewhere. A deliberately injected
+ * false citation in RESEARCH_CONTEXT.md passed that version. Proximity fixes
+ * it: a retraction three hundred lines away is not a retraction of this line.
+ */
+const RETRACTION_CONTEXT =
+  /RETRACTED|INVALID_SOURCE_CHAIN|IDENTITY_MISMATCH|CONTENT_MISMATCH|known-false|does not resolve|must not be reused|not a source|not the source|provenance failure|matches no arXiv record|fabricated|eri paperi|different Rao|ei vastaa/i;
+
+/** Lines of context on each side within which a retraction marker counts. */
+const CONTEXT_LINES = 12;
+
+/**
+ * Pure evaluator, so the rules can be exercised on synthetic text without
+ * touching the filesystem. Returns the ids of the rules a text violates.
+ */
+function citationIdentityViolations(text) {
+  const lines = text.split(/\r?\n/);
+  const violated = new Set();
+
+  for (const r of CITATION_IDENTITY_RULES) {
+    if (!text.includes(r.needle)) continue;
+    if (r.alsoRequires && !r.alsoRequires.test(text)) continue;
+    for (let i = 0; i < lines.length; i++) {
+      if (!lines[i].includes(r.needle)) continue;
+      const from = Math.max(0, i - CONTEXT_LINES);
+      const near = lines.slice(from, i + CONTEXT_LINES + 1).join('\n');
+      if (!RETRACTION_CONTEXT.test(near)) { violated.add(r.id); break; }
+    }
+  }
+  return [...violated];
+}
+
+test("Citation-identity guard: known-false source identities stay out of tracked text", () => {
+  // --- focused cases, no filesystem ---------------------------------------
+  assert.deepStrictEqual(
+    citationIdentityViolations('See Rao & Rosenfeld, "Abelian square-free words over four letters".'),
+    ['paper5-rao-rosenfeld-title'],
+    "a known-false title must be refused");
+
+  assert.deepStrictEqual(
+    citationIdentityViolations(
+      'Rao & Rosenfeld, "Avoidability of long k-abelian repetitions", arXiv:1507.02581.'),
+    [],
+    "the correct identity for the same identifier must be accepted");
+
+  assert.deepStrictEqual(
+    citationIdentityViolations(
+      'The 2026-08-29 audit cited "Balance properties of morphisms"; that title matches no arXiv record ' +
+      'and the entry is RETRACTED.'),
+    [],
+    "an explicit retraction context must remain representable");
+
+  assert.deepStrictEqual(
+    citationIdentityViolations('Lu & Peng, arXiv:1409.1174, on random hypergraphs.'),
+    [],
+    "a real identifier cited for what it actually is must be accepted");
+
+  assert.deepStrictEqual(
+    citationIdentityViolations('Currie & Rampersad, arXiv:1409.1174, template method.'),
+    ['paper5-1409-miscast'],
+    "the same identifier miscast as an abelian/template source must be refused");
+
+  assert.deepStrictEqual(
+    citationIdentityViolations('Adamczewski, DOI 10.1016/S0304-3975(02)00827-X.'),
+    ['paper5-adamczewski-doi'],
+    "a non-resolving DOI must be refused");
+
+  // Proximity, not mere presence: a retraction far away must not license a
+  // false citation. This is the case that broke the file-level version.
+  const FAR = 'Some unrelated line RETRACTED here.\n' + 'filler\n'.repeat(40) +
+              'See Rao & Rosenfeld, \"Abelian square-free words over four letters\".';
+  assert.deepStrictEqual(
+    citationIdentityViolations(FAR),
+    ['paper5-rao-rosenfeld-title'],
+    "a retraction marker far from the occurrence must not license it");
+
+  const NEAR = 'This title is IDENTITY_MISMATCH and must not be reused:\n' +
+               'Rao & Rosenfeld, \"Abelian square-free words over four letters\".';
+  assert.deepStrictEqual(
+    citationIdentityViolations(NEAR), [],
+    "a retraction marker adjacent to the occurrence must license it");
+
+  // --- live corpus ---------------------------------------------------------
+  // Tracked text only. Binary and generated payloads are excluded by
+  // extension, and five bulk data files (one 94 MB word dump, four large JSON
+  // result sets) are excluded by size: they carry no prose, and reading them
+  // on every CI run would cost ~111 MB for nothing. Recorded as a deliberate,
+  // stated gap rather than a silent one.
+  const MAX_BYTES = 2 * 1024 * 1024;
+  const SKIP_EXT = /\.(png|jpe?g|gif|svg|pdf|zip|ico|woff2?|ttf|eot|npy|npz|exe|obj|bin)$/i;
+  const root = path.join(__dirname, '..');
+  // This file is excluded on purpose: it IS the rule table, so scanning it
+  // for the identities it declares proves nothing and only invites
+  // contortions in the rule text. Its correctness is covered by the focused
+  // cases above, which run on synthetic strings.
+  const SELF = 'tests/test.js';
+  const tracked = require('child_process')
+    .execSync('git ls-files', { cwd: root, maxBuffer: 1 << 28 })
+    .toString().split('\n').filter(Boolean)
+    .filter(f => !SKIP_EXT.test(f) && f !== SELF);
+
+  const offenders = [];
+  let scanned = 0;
+  for (const rel of tracked) {
+    const abs = path.join(root, rel);
+    let st;
+    try { st = fs.statSync(abs); } catch (e) { continue; }
+    if (!st.isFile() || st.size > MAX_BYTES) continue;
+    const txt = fs.readFileSync(abs, 'utf8');
+    scanned++;
+    for (const id of citationIdentityViolations(txt)) offenders.push(`${rel} [${id}]`);
   }
 
+  const detail = CITATION_IDENTITY_RULES.map(r => `  - "${r.needle}" ${r.why}`).join('\n');
   assert.deepStrictEqual(offenders, [],
-    `These docs cite the title "${FABRICATED}", which matches no arXiv record (checked 2026-07-28). ` +
-    `arXiv:1507.02581 is "Avoidability of long k-abelian repetitions"; the h6/g3 construction is arXiv:1511.05875. ` +
-    `Offending files: ${offenders.join(', ')}`);
+    `Known-false source identities appeared in tracked text without a retraction context.\n${detail}\n` +
+    `Offenders: ${offenders.join(', ')}`);
 
-  const claims = fs.readFileSync(path.join(__dirname, '../MATH_CLAIMS.md'), 'utf8');
+  // The positive half of the h6/g3 invariant, kept from the original guard.
+  const claims = fs.readFileSync(path.join(root, 'MATH_CLAIMS.md'), 'utf8');
   assert.ok(claims.includes('1511.05875'),
     "MATH_CLAIMS.md must record arXiv:1511.05875 as the preprint for the h6/g3 construction");
+
+  console.log(`       ${CITATION_IDENTITY_RULES.length} known-false identities guarded across ${scanned} tracked text files`);
+  console.log(`       retraction context stays representable, so the failure can be documented`);
 });
 
 // ----------------------------------------------------
