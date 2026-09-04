@@ -22,6 +22,12 @@ proposing anything.
 
 | Date | # | Final? | What collapsed | In one sentence |
 |---|---|---|---|---|
+| 2026-09-04 | [§37](#37-paper-6-standalone-novelty-claims-for-the-obstacle-hierarchy-and-the-counting-compiler) | **CONTEXTUAL** | Two Paper 6 standalone novelty claims (literature boundary, **not** a refutation) | The bounded-defect decomposition sits in the Carpi / Currie-Rampersad / Rao-Rosenfeld line and the counting compiler in an established counting literature, so neither is novel standing alone; the mathematics is untouched and broader Paper 6 novelty stays unassessed. Canonical entry: `LITERATURE_COVERAGE.md` section 2e -- no claim row, by design. |
+| 2026-09-04 | [§36](#36-one-step-response-aliasing-as-sufficient-for-future-equivalence) | **NECESSARY** | One-step response aliasing as sufficient for future equivalence | Two clean-room reconstructions from definitions kill it from different directions: `same one-step response -> same count` stays false, and an obstruction unattainable now can become attainable later, so the state is not Markov-sufficient. Row 131. |
+| 2026-09-04 | [§35](#35-profile-incidence-rank-collapse-as-the-direct-semantic-mechanism) | **CONTEXTUAL** | Profile-incidence rank collapse as the semantic mechanism | Dead states and rational aliasing account for much of it -- **298** two-row proportional relations over just **72** pivot rows, not the historical "197", which belongs to a different object entirely. Row 130. |
+| 2026-09-04 | [§34](#34-the-35-dimensional-hidden-sector-as-a-startup-artefact) | **BOUNDED** | The 35-dimensional hidden sector as a startup artefact | Removing startup does not remove the deficiency: 1796 groups at rank 1144 against target 1179, and the persistent system still shows 1138 against 1167. The historical 850/1176/326 figures are withdrawn as unsupported. Row 129. |
+| 2026-09-04 | [§33](#33-the-adjacency-decoration-as-the-required-descriptor-and-the-gap-as-abelian-geometry) | **NECESSARY** (necessity) / **CONTEXTUAL** (interpretation) | The adjacency decoration as the required descriptor, and the gap as Abelian geometry | Four grid-misaligned offset-0 windows carrying no decoration, and blind to the last character, reach exact 1179/1179 over five primes -- necessity refuted; but a granularity-matched control added exactly zero rank, so `epsilon` is **not** generic either. Row 128. |
+| 2026-09-04 | [§32](#32-a-large-exact-future-count-dimension-as-a-structural-theorem-in-itself) | **CONTEXTUAL** | A large exact future dimension as a theorem in itself | The preserved referee audit marks the weighted-automaton and Hankel/Krylov apparatus `CLASSICAL`; a large exact rank is what that machinery produces, and carries no combinatorial theorem on its own. Row 127. |
 | 2026-09-04 | [§31](#31-a-bounded-state-descriptor-for-the-aa2fr-legal-future-and-the-paper-4-frontier-compression-benefit) | **BOUNDED** (descriptor) / **NECESSARY** (frontier) | A bounded-state descriptor for the AA2FR legal future, and Paper 4 frontier compression | The preserved kill report gives a distinguishability argument with no exhibited witness block, so the candidate state `S = (family_id, target_class, bounded_history)` is **withdrawn rather than proved impossible**; separately, the v0.33 frontier is measured to be the full legal prefix trie (`max \|A_d\| = 38`, `A_d = {1,...,d}` at 38 of 40 depths). See `MATH_CLAIMS.md` rows 125 and 126. |
 | 2026-09-04 | [§30](#30-the-time-domain-and-resolvent-tail-bounds-are-the-same-lemma) | **NECESSARY** | "Paper 2 and Paper 3 prove the same tail lemma" | They do not: time-domain Dobrushin sums on the unperturbed `P` versus frequency-domain Banach-valued Cauchy estimates on resolvents `B(t)^-1` - the preserved audit records both bounds as standing, while the shortcut of cross-citing one as the other does not. |
 | 2026-09-04 | [§29](#29-paper-3s-eta_v---43-bv--xi_v-factorisation) | **NECESSARY** | Paper 3's `eta_v = -(4/3) B(v) + Xi_v` exact factorisation | The preserved audit records that exact evaluation of `H_tt` makes `O_1` also emit cross-terms in `P_3 = sum v_c^3` and `h`-dependent factors, so the identity fails under the stated conventions; the preserved audit records a surviving decomposition that defines `Xi_v` structurally instead of by subtraction. |
@@ -729,3 +735,272 @@ in its own section 5 that it is an internal audit rather than external review.
   `L = 40` frontier it measured and does not reopen with more compute.
   **CONTEXTUAL** for prefix-local pruning: not impossible, merely without a useful rule
   in the unconstrained-DFS setting that was tested.
+
+---
+
+## 32. A large exact future-count dimension as a structural theorem in itself
+
+*Logged 2026-09-04. Canonical claim: `MATH_CLAIMS.md` row 127 (`REJECTED`). Evidence
+preserved on `rescue/paper6-raw-artifacts-2026-09-03` (`79cd7b9`):
+`rescue/paper6-raw-artifacts/checkpoint_v2.6/CLAUDE_ADVERSARIAL_REFEREE_AUDIT_v2.3_2026-08-30.md` section 8, and
+`rescue/paper6-raw-artifacts/checkpoint_v2.6/PAPER6_LITERATURE_NOVELTY_AUDIT_v0.1_2026-08-30.md`.*
+
+> **PROVENANCE NOTE FOR THE WHOLE PAPER 6 BLOCK (sections 32-37).** These entries do not
+> restore the 2026-08-31 Paper 6 harvest prose, and deliberately so. In that harvest
+> **ten of eleven** candidate sections carried
+> `docs/research/intakes/2026-08-27_CLAUDE_PROFILE_RESPONSE_MECHANISM_INTAKE.md` in their
+> `Evidence:` field -- a **Paper 3** h=2..7 profile-response intake, cited for Paper 6
+> results *because it happened to be tracked*. The harvest audit corrected itself
+> (`docs/research/PAPER4_6_NEGATIVE_RESULTS_HARVEST_AUDIT_2026-08-31.md`) and blocked all
+> eleven candidates. **This is an audit and provenance failure, not a mathematical
+> result**, and it is recorded here rather than as a claim: a tracked file is not
+> supporting evidence merely because it is tracked. Two candidates additionally carried
+> figures the preserved corpus does not support; those are corrected in sections 34 and
+> 35 rather than repeated. Three further candidates remain **blocked for missing
+> evidence** and are deliberately absent below.
+
+**WHAT FAILED.** That the Paper 6 system's large exact future-count dimension is, on its
+own, a structural theorem -- a new combinatorial constraint on words rather than a
+measurement of one.
+
+**HOW IT FAILED.** The preserved referee audit classifies the apparatus that produces the
+number: weighted cutoff transfer matrices with Perron growth, and Hankel/Krylov minimal
+future dimension, are both marked `CLASSICAL`; observable/dual measurement coordinates
+and the recency alphabet frame likewise. Only the *specific* exact hierarchy is marked
+`PLAUSIBLY NEW (system-specific)`. A large exact rank is what linear algebra over a
+weighted automaton yields; the theorem, if there is one, has to be about *which*
+coordinates are complete, not about the size of the number.
+
+**SCOPE.** The interpretive claim only.
+
+**WHAT SURVIVES / WHAT IS NOT CLAIMED.** The exact finite dimension is **not** rejected.
+The preserved Paper 6 audit records an exactly certified hierarchy for the FULL-L4/Q2
+system and calls it the checkpoint's strongest asset; **that result holds no canonical
+ledger row and is not promoted here.** Nothing in this entry says Paper 6 lacks a
+theorem; it says this particular route to one does not work.
+
+**EVIDENCE.** As in the dateline. The audit rebuilt the apparatus in JavaScript from the
+theorem statements alone: the derivation, algorithm, language and data-representation
+axes differ from the original Python, while model/vendor, source corpus and human
+reviewer are shared (`EPISTEMIC_DISCIPLINE.md` section 5). Implementation-independent
+recomputation, not an external verification channel.
+
+**FINALITY: CONTEXTUAL.** A statement about which apparatus is standard, not a
+mathematical impossibility.
+
+**MATH_CLAIMS ROW: 127.**
+
+---
+
+## 33. The adjacency decoration as the required descriptor, and the gap as Abelian geometry
+
+*Logged 2026-09-04. Canonical claim: `MATH_CLAIMS.md` row 128 (`REJECTED`). Evidence
+preserved on `rescue/paper6-raw-artifacts-2026-09-03` (`79cd7b9`):
+`rescue/paper6-raw-artifacts/checkpoint_v2.6/CLAUDE_ADVERSARIAL_REFEREE_AUDIT_v2.3_2026-08-30.md` sections 6.1, 6.2, 6.3, 7 and 12, and
+`rescue/paper6-raw-artifacts/checkpoint_v2.6/P6_Q2_EXACT_SPACETIME_OBSERVABILITY_SPECTRUM_CERT_v0.1_2026-08-30.json`.
+Provenance note: section 32.*
+
+**WHAT FAILED.** That the four recency-gauged profiles plus the adjacency decoration
+`S_2` (equivalently `epsilon`) are *the* required structural descriptor of the FULL-L4/Q2
+future space -- and therefore that the observability gap reflects a special Abelian
+geometry.
+
+**HOW IT FAILED.** By exhibited counterexample, not by absence of proof. Four length-4
+windows anchored at offset 0 of the stored 21-character suffix attain exact rank 1179 of
+1179 and 1167 of 1167 with **no decoration at all**. That descriptor is deliberately
+misaligned with the block grid and cannot see the last character of a length-21 state,
+and it was checked over five primes -- 65521, 65519, 1000003, 999983, 2147483647 --
+against an independently exact rational target, so the result is exact rather than
+modular evidence. Two further decorations the fragment theory does not predict also close
+the gap, one with fewer groups than `epsilon`. Necessity is refuted, not merely unproved.
+
+**SCOPE.** The necessity claim and the geometric reading of the gap, for FULL-L4/Q2.
+
+**WHAT SURVIVES / WHAT IS NOT CLAIMED.** Emphatically **not** that `epsilon` is generic,
+and **not** that generic linear algebra explains the phenomenon. The preserved audit ran
+a granularity-matched null control -- an arbitrary split of 287 randomly chosen families
+at the same 2083 group count, seeds 1 to 5 -- and it added **exactly zero** rank, 1144
+five times over. `epsilon` is therefore *not* a generic refinement. What the audit also
+found is that splitting the same 287 families with an arbitrary bit does reach 1179, so
+`epsilon`'s content is *which* families need refining, not *how*. The honest reading is
+that the gap tracks the choice of 16-character window rather than Abelian geometry.
+
+**EVIDENCE.** As in the dateline; independence axes as in section 32.
+
+**FINALITY: NECESSARY** for the necessity claim -- a counter-descriptor is exhibited and
+verified against an exact target, and no further compute reopens it. **CONTEXTUAL** for
+the broader interpretation -- a systematic study of which windowings attain 1179 could
+still find a structural invariant, and the preserved audit recommends exactly that.
+
+**MATH_CLAIMS ROW: 128.**
+
+---
+
+## 34. The 35-dimensional hidden sector as a startup artefact
+
+*Logged 2026-09-04. Canonical claim: `MATH_CLAIMS.md` row 129 (`REJECTED`). Evidence
+preserved on `rescue/paper6-raw-artifacts-2026-09-03` (`79cd7b9`):
+`rescue/paper6-raw-artifacts/checkpoint_v2.6/P6_Q2_MINIMAL_35_PHASE_REFINEMENT_EXACT_CERT_v0.1_2026-08-30.json` and
+`rescue/paper6-raw-artifacts/checkpoint_v2.6/CLAUDE_ADVERSARIAL_REFEREE_AUDIT_v2.3_2026-08-30.md` section 6.3. Provenance note: section 32.*
+
+**WHAT FAILED.** That the 35-dimensional hidden sector of the FULL-L4/Q2 static profile
+measurement is merely a startup or transient artefact, removable by discarding the
+startup sequence.
+
+**HOW IT FAILED.** The deficiency is a property of the measurement, not of a transient.
+Certified: the true grid gives **1796** measurement groups at profile-only rank **1144**
+against exact target dimension **1179** -- a gap of exactly **35** -- and the certificate
+records that at least 35 added measurement rows are necessary. Removing startup does not
+help: on the persistent system the profiles-only rank is **1138** against **1167**, still
+a gap of **29**.
+
+**SCOPE.** Bounded to these two exact preserved finite systems at `L=4`/Q2. Nothing is
+claimed for other block lengths, libraries or quotients.
+
+**WHAT SURVIVES / WHAT IS NOT CLAIMED.** The exact certificates stand and are not
+promoted here. **Figures deliberately withdrawn:** the historical form of this candidate
+cited "rank 850 vs space 1176, or 326 hidden dimensions". Those are not used, because
+they are not supported -- `850` and `326` appear in no Markdown anywhere in the preserved
+corpus, only as incidental integers inside large JSON arrays, and `1176` there names a
+different object, the rank of exact-current-response difference behaviours. The correct
+preserved persistent comparison is 1138 against 1167.
+
+**EVIDENCE.** As in the dateline; independence axes as in section 32.
+
+**FINALITY: BOUNDED.** Exhaustive only inside the measured systems. A different
+measurement design could genuinely reopen the question, and this entry should be read as
+an unfinished measurement rather than a closed door.
+
+**MATH_CLAIMS ROW: 129.**
+
+---
+
+## 35. Profile-incidence rank collapse as the direct semantic mechanism
+
+*Logged 2026-09-04. Canonical claim: `MATH_CLAIMS.md` row 130 (`REJECTED`). Evidence
+preserved on `rescue/paper6-raw-artifacts-2026-09-03` (`79cd7b9`):
+`rescue/paper6-raw-artifacts/proportional_relations.json` and
+`rescue/paper6-raw-artifacts/checkpoint_v2.6/P6_Q2_PROFILE_ONLY_ROW_RELATIONS_RECONSTRUCTED_v0.1_2026-08-30.json`.
+Provenance note: section 32.*
+
+**WHAT FAILED.** That the rank collapse of the profile-to-state incidence matrix is
+itself the direct semantic mechanism of future equivalence.
+
+**HOW IT FAILED.** The collapse is substantially accounted for by structural dead states
+and by rational two-row proportional aliasing rather than by deep right-context
+equivalence. The preserved relation set holds **298** two-row proportional relations,
+spread over **298** distinct dependent rows but only **72** distinct pivot rows -- a
+concentration that is itself the point. The reconstructed row-relation certificate
+resolves the profile-only system into **1144** pivot rows and **652** dependent rows over
+six primes.
+
+**SCOPE.** The semantic-mechanism interpretation.
+
+**WHAT SURVIVES / WHAT IS NOT CLAIMED.** The raw rank and relation data are not rejected;
+the incidence matrix still measures the constrained subspace it was built to measure.
+**Figure deliberately withdrawn:** the historical form said "exactly 197 two-row raw
+proportional relations were found". The preserved artifact holds 298, counted directly in
+this session; no subset of it totals 197; and 197 is the one-profile observability index
+of a *different* object in the same programme, with its own certificate file. It must not
+be imported here. This is the same failure mode as section 24 -- a figure travelling out
+of the run that produced it.
+
+**EVIDENCE.** As in the dateline. The 298 was obtained by parsing the preserved JSON, not
+read from a summary.
+
+**FINALITY: CONTEXTUAL.** What fails is an explanatory reading of exact data that itself
+stands.
+
+**MATH_CLAIMS ROW: 130.**
+
+---
+
+## 36. One-step response aliasing as sufficient for future equivalence
+
+*Logged 2026-09-04. Canonical claim: `MATH_CLAIMS.md` row 131 (`REJECTED`). Evidence
+preserved on `rescue/paper6-raw-artifacts-2026-09-03` (`79cd7b9`):
+`rescue/paper6-raw-artifacts/PAPER6_SEMANTICS_HIERARCHY_AUDIT_v0.1_2026-08-29.md` and
+`rescue/paper6-raw-artifacts/theory_bundle/PAPER6_LATENT_OBSTRUCTION_MEMORY_KILL_v0.1_2026-08-29.md`.
+Provenance note: section 32.*
+
+**WHAT FAILED.** That equality or linear dependence of the complete one-step legal-next-
+block response sets is sufficient to determine equality of future counts, and therefore
+future equivalence.
+
+**HOW IT FAILED.** Along two separate preserved paths.
+- *Algebraically.* The semantics-hierarchy audit rebuilt the finite cutoff automata from
+  definitions only -- alphabet, `aa2f` and `aa2fr` rules, suffix memory, weighted block
+  transitions -- and records that `same profile -> same count` and `same one-step response
+  -> same count` **both remain false**. The correct chain runs literal suffix state, then
+  future-language semantics, then stable weighted/equitable semantics, then all-horizon
+  count semantics, then Krylov/Hankel linear semantics.
+- *Geometrically.* The latent-obstruction-memory kill test (gate P6-C4) reaches the
+  analogue: an affine obstruction value unattainable at the present step can shift into an
+  attainable one after future blocks, so a state keeping only currently-triggerable
+  requirements is **not Markov-sufficient**.
+
+**SCOPE.** The *sufficiency* of one-step response.
+
+**WHAT SURVIVES / WHAT IS NOT CLAIMED.** The preserved audit records the one-step
+response space as remaining a valid super-kernel -- every frozen semantic relation tested
+continues to annihilate it. That is recorded, not promoted; it holds no ledger row.
+
+**EVIDENCE.** As in the dateline. The best-evidenced item of this batch: two clean-room
+reconstructions from definitions rather than one, reaching the same negative from
+different directions, with the semantics audit independently reproducing the earlier
+headline collapses 210 to 91 to 16 and 474 to 186 to 31. Both remain internal to this
+project -- corroboration across two derivations, not an external verification channel
+(`EPISTEMIC_DISCIPLINE.md` section 5).
+
+**FINALITY: NECESSARY.** A sufficiency claim refuted by exhibited counterexample structure
+does not reopen with more compute.
+
+**MATH_CLAIMS ROW: 131.**
+
+---
+
+## 37. Paper 6 standalone novelty claims for the obstacle hierarchy and the counting compiler
+
+> **NOVELTY / LITERATURE BOUNDARY -- NOT A MATHEMATICAL REFUTATION.** Nothing here says
+> any Paper 6 mathematics is wrong. This entry has **no `MATH_CLAIMS.md` row on purpose**:
+> novelty is a statement about the literature, so its canonical home is
+> `LITERATURE_COVERAGE.md` section 2e, not the claim ledger
+> (`EPISTEMIC_DISCIPLINE.md` section 13).
+
+*Logged 2026-09-04. Canonical entry: `LITERATURE_COVERAGE.md` section 2e. Evidence
+preserved on `rescue/paper6-raw-artifacts-2026-09-03` (`79cd7b9`):
+`rescue/paper6-raw-artifacts/checkpoint_v2.6/PAPER6_BOUNDED_DEFECT_NOVELTY_AUDIT_v0.1_2026-08-30.md`,
+`rescue/paper6-raw-artifacts/checkpoint_v2.6/PAPER6_COUNTING_NOVELTY_UPDATE_v0.1_2026-08-30.md`,
+`rescue/paper6-raw-artifacts/checkpoint_v2.6/P6_LITERATURE_REFERENCES_v0.1_2026-08-30.json` (18 references with URLs).
+Provenance note: section 32.*
+
+**WHAT WAS WITHDRAWN.** Two standalone novelty claims, each on its own:
+1. that formulating Abelian-square long-root obstructions as a hierarchy of
+   second-difference bounded target layers is novel in itself;
+2. that counting safe continuations via a Parikh-composition dynamic program is a novel
+   algorithmic compiler technique in itself.
+
+**ON WHAT BASIS.** The preserved Paper 6 novelty audits name the overlapping work rather
+than gesturing at it. For (1) the bounded-defect decomposition -- linear bulk term plus
+bounded prefix/suffix corrections -- is placed in the Carpi / Currie-Rampersad /
+Rao-Rosenfeld line, with the audit stating outright that this must not be claimed as a
+first discovery. For (2) counting repetition-avoiding words and proving exponential growth
+are recorded as established themes, and the audit cites work by Currie (2004) and by
+Currie, Mol, Rampersad and Shallit (2024) including an improved counting lower bound.
+
+**WHAT IS NOT CLAIMED.** Not that Paper 6 "has no novelty" -- broader Paper 6 novelty is
+**unassessed**, which is a different statement from unfavourable. The v3.6 graded-
+transport theorem seed is explicitly **not adjudicated** here; the preserved v3.6
+checkpoint labels itself `EXACT GENERAL THEOREM SEED -- NOVELTY UNASSESSED` and names its
+own next gate. And the mathematics is untouched: both audits record the identities and
+derivations as correct.
+
+**CITATION DISCIPLINE.** The works above are recorded as **what the preserved Paper 6
+audits cite**. They have not been opened under this repository's standard in this
+session, so under `AGENTS.md` rule 1 they enter `LITERATURE_COVERAGE.md` section 2e as an
+audit queue, not as verified primary sources.
+
+**FINALITY: CONTEXTUAL.** A boundary drawn against known work, which further primary-
+source reading can move in either direction.
+
+**MATH_CLAIMS ROW: none, by design.** See `LITERATURE_COVERAGE.md` section 2e.

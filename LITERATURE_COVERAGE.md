@@ -155,6 +155,42 @@ The following literature leads were identified during the profile-response resea
 | Drazin / group-inverse | Sensitivity and generalized inverses | **AUDIT-QUEUE** |
 | Multivariate pattern correlation | Cumulant literature | **AUDIT-QUEUE** |
 
+## 2e. Targeted primary-source audit queue (Paper 6 bounded-defect and counting line)
+
+**NOVELTY_STATUS = UNDER_REVIEW**
+Two standalone Paper 6 novelty claims were **withdrawn** on 2026-09-04: that the bounded
+second-difference Parikh-obstacle hierarchy is novel merely by being formulated in bounded
+form, and that the Parikh-composition dynamic-programming extension compiler is a novel
+algorithm merely by being constructed. The preserved Paper 6 novelty audits place the
+bounded-defect decomposition -- linear bulk plus bounded prefix/suffix corrections -- in
+the Carpi / Currie-Rampersad / Rao-Rosenfeld line, and place the counting work inside an
+established literature on counting repetition-avoiding words and their growth rates.
+
+**This is a withdrawal of two specific claims, not a verdict on Paper 6.** Broader Paper 6
+novelty is *unassessed*, which is not the same as unfavourable, and the later v3.6
+graded-transport theorem seed is **not adjudicated here** -- it labels itself
+`NOVELTY UNASSESSED` and names its own next gate, a direct equivalence attack against
+classical Abelian-template ancestor machinery. The mathematics is untouched: both audits
+record the identities and derivations as correct. See `NEGATIVE_RESULTS.md` section 37.
+
+The leads below are **what the preserved Paper 6 audits cite**, recorded on
+`rescue/paper6-raw-artifacts-2026-09-03` (`79cd7b9`) in
+`rescue/paper6-raw-artifacts/checkpoint_v2.6/PAPER6_BOUNDED_DEFECT_NOVELTY_AUDIT_v0.1_2026-08-30.md`,
+`rescue/paper6-raw-artifacts/checkpoint_v2.6/PAPER6_COUNTING_NOVELTY_UPDATE_v0.1_2026-08-30.md` and
+`rescue/paper6-raw-artifacts/checkpoint_v2.6/P6_LITERATURE_REFERENCES_v0.1_2026-08-30.json` (18 references with URLs).
+**They have not been opened under this repository's standard**, so under `AGENTS.md`
+rule 1 they sit in the queue rather than in section 2.
+
+| Lead / Tradition | Topic / Relevance | Status |
+|---|---|---|
+| Carpi (1993), *On Abelian Power-Free Morphisms* | Second differences of Parikh vectors of image prefixes; the bulk-plus-bounded-correction mechanism | **AUDIT-QUEUE** |
+| Currie-Rampersad / Rao-Rosenfeld template line | Abelian template and ancestor methods the obstacle hierarchy specialises | **AUDIT-QUEUE** |
+| Currie (2004), TCS 319 | Exponential growth for binary words avoiding Abelian fourth powers | **AUDIT-QUEUE** |
+| Currie, Mol, Rampersad, Shallit (2024), SIAM J. Discrete Math. 38(4) | Extending Dekking's construction; additive-power decision method and an improved counting lower bound | **AUDIT-QUEUE** |
+| Weighted automata / Hankel-rank minimality (Balle-Panangaden-Precup and related) | The apparatus the referee audit marks `CLASSICAL`; see `MATH_CLAIMS.md` row 127 | **AUDIT-QUEUE** |
+| PSR / OOM / spectral-learning line (Singh-James-Rudary, Thon-Jaeger, and related) | Observable/dual measurement coordinates and basis selection | **AUDIT-QUEUE** |
+| Entropy of square-free and repetition-avoiding languages | Growth-rate tradition adjacent to the counting claim | **AUDIT-QUEUE** |
+
 ## 3. Coverage table
 
 The **"Space"** column states exactly what has been swept, not just yes/no.

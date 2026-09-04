@@ -173,6 +173,11 @@ A retracted row is never deleted, so it does not get added again.
 | Paper 2 and Paper 3 prove the same tail lemma, so it can be cross-cited | Distinct architectures: time-domain Dobrushin sums versus frequency-domain resolvent estimates. Neither bound is rejected | 124 |
 | Paper 4: `S = (family_id, target_class, bounded_history)` determines the legal future of an AA2FR word | Candidate descriptor withdrawn on a distinguishability sketch with no exhibited witness block. **Not** a universal impossibility theorem | 125 |
 | Paper 4: the v0.33 frontier identity gives a compression benefit | Measured defect D2 at `L = 40`: the quotient DAG is the full legal prefix trie. The identity is retained for accounting | 126 |
+| Paper 6: a large exact future-count dimension is by itself a structural theorem | The preserved referee audit marks the weighted-automaton and Hankel/Krylov apparatus `CLASSICAL`; the exact dimension itself is not rejected | 127 |
+| Paper 6: `S_2` / `epsilon` is the required descriptor, so the observability gap is Abelian geometry | Four grid-misaligned offset-0 windows with no decoration reach exact 1179/1179 over five primes. Note: `epsilon` is **not** generic either | 128 |
+| Paper 6: the 35-dimensional hidden sector is a startup artefact | 1796 groups, rank 1144, target 1179; the persistent system still shows 1138 against 1167. Historical 850/1176/326 figures withdrawn | 129 |
+| Paper 6: profile-incidence rank collapse is the direct semantic mechanism | Dead states and rational aliasing: 298 two-row proportional relations over 72 pivot rows. The historical "197" belongs to a different object | 130 |
+| Paper 6: one-step response aliasing is sufficient for future equivalence | Two clean-room kills; latent obstruction memory means the state is not Markov-sufficient | 131 |
 
 ---
 
