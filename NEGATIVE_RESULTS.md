@@ -22,9 +22,9 @@ proposing anything.
 
 | Date | # | Final? | What collapsed | In one sentence |
 |---|---|---|---|---|
-| 2026-09-04 | [§31](#31-finite-state-compression-of-the-aa2f-legal-future-and-the-paper-4-frontier-compression-benefit) | **NECESSARY** / CONTEXTUAL | Finite-state compression of the aa2f legal future, and Paper 4 frontier compression | A bounded state cannot separate two deep histories sharing a local suffix, so no Markovian automaton exists; and the v0.33 frontier is the full legal prefix trie (`max |A_d| = 38`, `A_d = {1,...,d}` at 38 of 40 depths) - but the earlier "prefix-local pruning is impossible" claim was itself retracted as overreach. |
-| 2026-09-04 | [§30](#30-the-time-domain-and-resolvent-tail-bounds-are-the-same-lemma) | **NECESSARY** | "Paper 2 and Paper 3 prove the same tail lemma" | They do not: time-domain Dobrushin sums on the unperturbed `P` versus frequency-domain Banach-valued Cauchy estimates on resolvents `B(t)^-1` - both bounds stand, the shortcut of cross-citing one as the other does not. |
-| 2026-09-04 | [§29](#29-paper-3s-eta_v--43-bv-xi_v-factorisation) | **NECESSARY** | Paper 3's `eta_v = -(4/3) B(v) + Xi_v` exact factorisation | Exact evaluation of `H_tt` shows `O_1` also emits cross-terms in `P_3 = sum v_c^3` and `h`-dependent factors, so the identity fails under the stated conventions; the surviving decomposition defines `Xi_v` structurally instead of by subtraction. |
+| 2026-09-04 | [§31](#31-a-bounded-state-descriptor-for-the-aa2fr-legal-future-and-the-paper-4-frontier-compression-benefit) | **BOUNDED** (descriptor) / **NECESSARY** (frontier) | A bounded-state descriptor for the AA2FR legal future, and Paper 4 frontier compression | The preserved kill report gives a distinguishability argument with no exhibited witness block, so the candidate state `S = (family_id, target_class, bounded_history)` is **withdrawn rather than proved impossible**; separately, the v0.33 frontier is measured to be the full legal prefix trie (`max \|A_d\| = 38`, `A_d = {1,...,d}` at 38 of 40 depths). See `MATH_CLAIMS.md` rows 125 and 126. |
+| 2026-09-04 | [§30](#30-the-time-domain-and-resolvent-tail-bounds-are-the-same-lemma) | **NECESSARY** | "Paper 2 and Paper 3 prove the same tail lemma" | They do not: time-domain Dobrushin sums on the unperturbed `P` versus frequency-domain Banach-valued Cauchy estimates on resolvents `B(t)^-1` - the preserved audit records both bounds as standing, while the shortcut of cross-citing one as the other does not. |
+| 2026-09-04 | [§29](#29-paper-3s-eta_v---43-bv--xi_v-factorisation) | **NECESSARY** | Paper 3's `eta_v = -(4/3) B(v) + Xi_v` exact factorisation | The preserved audit records that exact evaluation of `H_tt` makes `O_1` also emit cross-terms in `P_3 = sum v_c^3` and `h`-dependent factors, so the identity fails under the stated conventions; the preserved audit records a surviving decomposition that defines `Xi_v` structurally instead of by subtraction. |
 | 2026-09-04 | [§28](#28-paper-7-v01s-residual-closure-lemma-36-state-kernel) | **NECESSARY** | Paper 7 v0.1's 36-state residual-closure lemma | `V = b` is Abelian-square-free and passes the residual condition vacuously, yet `C g85(b)` contains `bb` at position 10 - one two-letter square at the seam refutes the closure the whole v0.1 proof rested on. |
 | 2026-08-14 | [§24](#24-a-headline-aggregate-computed-somewhere-else-without-the-hand-off-being-recorded) | **CONTEXTUAL** | A pipeline script's own headline aggregate | `multinomial4`'s factorial table stops at `4!`, so at L=5 the Stage-A filter printed `NaN` for its total-codings line, and the figure actually used (3,316,540,933,500) came from a different script with the substitution recorded nowhere. |
 | 2026-08-04 | [§23](#23-route-b-intermediate-alphabet-mathematically-excluded-for-h_8) | **NECESSARY** | Route B (intermediate alphabet) for $h_8$ | $M_{h_8}$'s expanding subspace has dimension 4 and any ternary $M_g$ has kernel dimension $\ge 5$, so by Grassmann the intersection is non-trivial for *every* ternary $g$ — Prop 9's decision procedure is inapplicable to $h_8$ (independent verification still pending per the entry's own note). |
@@ -509,10 +509,11 @@ infinite aa2f word, giving Mäkelä's conjecture by Route C at `L = 6`.
 
 ## 28. Paper 7 v0.1's residual-closure lemma (36-state kernel)
 
-*Logged 2026-09-04. Evidence preserved on `rescue/paper7-raw-preservation-2026-09-03`
-(`7c235b5`): the failed lemma in `P7_MAIN_THEOREM_RELEASE_v0.1/PROOF.md` and
-`RESIDUAL_STATE_DEFINITION.md`; the refutation in
-`CODEX_INDEPENDENT_AUDIT/P7_CODEX_HIGH_FINAL_AUDIT.md`.*
+*Logged 2026-09-04. Canonical claim: `MATH_CLAIMS.md` row 122 (`REJECTED`). Evidence
+preserved on `rescue/paper7-raw-preservation-2026-09-03` (`7c235b5`): the failed lemma
+in `rescue/paper7/P7_MAIN_THEOREM_RELEASE_v0.1/PROOF.md` and
+`rescue/paper7/P7_MAIN_THEOREM_RELEASE_v0.1/RESIDUAL_STATE_DEFINITION.md`; the
+refutation in `rescue/paper7/CODEX_INDEPENDENT_AUDIT/P7_CODEX_HIGH_FINAL_AUDIT.md`.*
 
 **Hypothesis:** for `C = abacabadcdb` and Keranen's 85-uniform `g85`, there is an
 invariant class `C_C` inside `A4` consisting of the words avoiding a fixed set of
@@ -553,11 +554,15 @@ invariant class `C_C` inside `A4` consisting of the words avoiding a fixed set o
 
 ## 29. Paper 3's `eta_v = -(4/3) B(v) + Xi_v` factorisation
 
-*Logged 2026-09-04. Evidence preserved on `rescue/paper3-audit-raw-2026-09-03`
-(`3180c6a`): the pre-refutation candidate in
-`antigravity/xi-closure/XI_CURRENT_CLAIM_FREEZE_2026-08-29.md`, the refutation in
-`PAPER3_XI_CLOSURE_THEOREM_2026-08-29.md`, and the machine-readable verdict row in
-`PAPER3_XI_STATUS_MATRIX_2026-08-29.csv`.*
+*Logged 2026-09-04. Canonical claim: `MATH_CLAIMS.md` row 123 (`REJECTED`). Evidence
+preserved on `rescue/paper3-audit-raw-2026-09-03` (`3180c6a`): the derivation itself in
+`rescue/paper3-audit/antigravity/xi-closure/PHASE_A_DERIVATION.md`, the pre-refutation
+candidate in
+`rescue/paper3-audit/antigravity/xi-closure/XI_CURRENT_CLAIM_FREEZE_2026-08-29.md`, the
+refutation in
+`rescue/paper3-audit/antigravity/xi-closure/PAPER3_XI_CLOSURE_THEOREM_2026-08-29.md`,
+and the machine-readable verdict row in
+`rescue/paper3-audit/antigravity/xi-closure/PAPER3_XI_STATUS_MATRIX_2026-08-29.csv`.*
 
 **Hypothesis:** the hard-response curvature factorises exactly as
 `eta_v = -(4/3) B(v) + Xi_v`, with `B(v) = sum_c (v_c - h/3)^2 = h^2 (d_1(v) - 1/3)`,
@@ -565,9 +570,10 @@ i.e. the `O_1` short-contact overlap extracts **exactly** `-(4/3) B(v)` under sc
 and `Xi_v` is defined as the remainder by subtraction.
 
 **Why it was shot down:**
-- Exact algebraic evaluation of the scalar recurrence `H_tt` shows the `O_1` overlap
-  terms also produce **cross-terms proportional to `P_3 = sum_c v_c^3`** together with
-  `h`-dependent structural scaling factors.
+- The preserved Paper 3 audit records that exact algebraic evaluation of the scalar
+  recurrence `H_tt` yields, from the `O_1` overlap terms, **cross-terms proportional to
+  `P_3 = sum_c v_c^3`** together with `h`-dependent structural scaling factors. That
+  evaluation has not been re-derived in this project.
 - The status matrix records the outcome as reproduced-but-not-matching:
   *"Exact operator trace yields h-dependent polynomials. -4/3 B(v) rejected as exact
   identity under raw conventions."*
@@ -577,12 +583,14 @@ and `Xi_v` is defined as the remainder by subtraction.
 **Conclusion:**
 - The factorisation is **not an exact identity** under the conventions in force. A
   remainder defined by subtracting a term that is itself wrong inherits the error.
-- **What this does not kill.** The surviving object is a *different* decomposition,
-  `eta_v = eta_short(v) + eta_return(v)`, in which `Xi_v` is defined **structurally**
-  through the operators `A_v` and `E_v` rather than by subtraction - which is what
-  bypasses the discrepancy rather than papering over it. The exact `(B, J, U)`
-  reduction of the short-contact operator and the finite-depth interval certifier are
-  untouched.
+- **What this does not kill.** The preserved Paper 3 audit records a *different*
+  decomposition as surviving, `eta_v = eta_short(v) + eta_return(v)`, in which `Xi_v`
+  is defined **structurally** through the operators `A_v` and `E_v` rather than by
+  subtraction - which is what bypasses the discrepancy rather than papering over it -
+  and records the exact `(B, J, U)` reduction of the short-contact operator and the
+  finite-depth interval certifier as untouched. **None of those positives is promoted
+  here:** they hold no canonical ledger row, and row 123 adjudicates only the rejected
+  exact identity.
 - **Provenance caveat, per `EPISTEMIC_DISCIPLINE.md` section 5.** The derivation and its
   refutation both come from the `antigravity/` working context - a second AI. That is
   **corroboration, not an independent verification channel**. What is well-evidenced
@@ -598,10 +606,12 @@ and `Xi_v` is defined as the remainder by subtraction.
 
 ## 30. "The time-domain and resolvent tail bounds are the same lemma"
 
-*Logged 2026-09-04. Evidence preserved on `rescue/paper2-audit-raw-2026-09-03`
-(`6a2681e`): the `REFUTED` row in
-`antigravity/PAPER2_CLAIM_STATUS_MATRIX_2026-08-29.csv` and the analysis in
-`antigravity/SANDBOX_REPORT_PAPER2_CLEANROOM_AUDIT_2026-08-29.md` section 2.*
+*Logged 2026-09-04. Canonical claim: `MATH_CLAIMS.md` row 124 (`REJECTED`). Evidence
+preserved on `rescue/paper2-audit-raw-2026-09-03` (`6a2681e`): the `REFUTED` row in
+`rescue/paper2-audit/antigravity/PAPER2_CLAIM_STATUS_MATRIX_2026-08-29.csv` and the
+analysis in
+`rescue/paper2-audit/antigravity/SANDBOX_REPORT_PAPER2_CLEANROOM_AUDIT_2026-08-29.md`
+section 2.*
 
 **Hypothesis:** Paper 2's tail bound and Paper 3's tail bound are the same result in
 different notation, so one lemma could be proved once and cross-cited by both.
@@ -619,10 +629,14 @@ status matrix records the identity claim as `REFUTED / FALSE` without qualificat
 **Conclusion:**
 - The identity is **false**. The explicit consequence recorded by the audit is
   operational: *do not merge or cross-cite them as the same lemma.*
-- **What this does not kill.** Both bounds stand. Neither paper loses a result; what is
-  lost is the shortcut of proving one and claiming the other. The resolvent machinery
-  remains available to Paper 2 as an *interpretation*, which is a different and weaker
-  relationship than identity.
+- **What this does not kill.** The preserved Paper 2 audit records both bounds as
+  standing - its claim matrix marks the surrounding Paper 2 statements `PROVED` - and
+  this entry adjudicates only the proposed identity between them. Neither paper loses a
+  result here, and neither gains one: what is lost is the shortcut of proving one and
+  claiming the other. The audit records the resolvent machinery as remaining available
+  to Paper 2 as an *interpretation*, which is a different and weaker relationship than
+  identity. **No Paper 2 or Paper 3 positive is promoted by this entry;** none holds a
+  canonical ledger row.
 - **Why this is worth canonical memory:** a false lemma-identity is the cheapest way to
   create a citation that looks supported and is not. Two bounds that agree numerically
   on the cases tested are still two bounds.
@@ -634,43 +648,63 @@ status matrix records the identity claim as `REFUTED / FALSE` without qualificat
 
 ---
 
-## 31. Finite-state compression of the aa2f legal future, and the Paper 4 frontier-compression benefit
+## 31. A bounded-state descriptor for the AA2FR legal future, and the Paper 4 frontier-compression benefit
 
-*Logged 2026-09-04. Evidence preserved on
-`rescue/paper4-recordhunt-transfer-raw-2026-09-03` (`1040048`):
-`PAPER4_STATE_COMPRESSION_KILL_REPORT_2026-08-29.md` and
-`PAPER4_TO_VEIKKO_TRANSFER_CORRECTION_2026-08-29.md`; and on
-`rescue/final-closure-artifacts-2026-09-03` (`2fde076`):
-`paper4-next-version-sandbox/PAPER4_v033_FINAL_PROMOTION_AUDIT_2026-08-29.md`,
+*Logged 2026-09-04. **Two separate canonical claims:** `MATH_CLAIMS.md` row 125
+(`REJECTED`, the bounded-state descriptor) and row 126 (`REJECTED`, the frontier
+benefit). Evidence preserved on `rescue/paper4-recordhunt-transfer-raw-2026-09-03`
+(`1040048`):
+`rescue/paper4-recordhunt-transfer/PAPER4_STATE_COMPRESSION_KILL_REPORT_2026-08-29.md`
+and
+`rescue/paper4-recordhunt-transfer/PAPER4_TO_VEIKKO_TRANSFER_CORRECTION_2026-08-29.md`;
+and on `rescue/final-closure-artifacts-2026-09-03` (`2fde076`):
+`rescue/final-closure/paper4-next-version-sandbox/PAPER4_v033_FINAL_PROMOTION_AUDIT_2026-08-29.md`,
 defect **D2**.*
 
-**Hypothesis (two forms, both tested):**
-1. the 19 support families, augmented with finite information, form a state
-   `S = (family_id, target_class, bounded_history)` that determines the legal infinite
-   continuations - i.e. a Markovian automaton for aa2f generation;
-2. the Paper 4 frontier identity delivers a **compression** benefit in search.
+**Two candidates, tested separately and killed separately:**
+1. **(row 125)** the 19 support families, augmented with finite information, form a
+   state `S = (family_id, target_class, bounded_history)` that determines the legal
+   infinite continuations of an **AA2FR** word - a bounded-state descriptor for the
+   legal future;
+2. **(row 126)** the Paper 4 v0.33 frontier identity delivers a **compression** benefit
+   in search.
 
-**Why (1) was shot down - structurally, not by measurement:** an abelian square at
+**Why (1) was withdrawn - an argument, not a completed proof:** an abelian square at
 position `N` can be created against *any* earlier start `i < N`, so roughly `N/2`
-threats are live at once, each demanding a specific target Parikh vector. A bounded
-state cannot separate two deep histories that share a local suffix but differ far back;
-appending a suitable length-`N` block completes a square for one and not the other, so
-their legal futures differ while their states agree. **State compression to a finite
-automaton is impossible**, and the 19 families classify the *geometric support* of a
-square without erasing history-dependence of the Parikh vectors.
+threats are live at once, each demanding a specific target Parikh vector. The preserved
+kill report argues that a bounded state therefore cannot separate two deep histories
+that share a local suffix but differ far back: appending a suitable length-`N` block
+would complete a square for one and not the other, so their legal futures would differ
+while their states agree. **This is a distinguishability sketch, not a proof.** No
+witness block is exhibited anywhere in the preserved material and no bound on `N` is
+given, so what is recorded here is the **withdrawal of this candidate descriptor**, not
+a universal finite-state impossibility theorem. The preserved report's own verdict line
+reads `STATE COMPRESSION DEAD-END (PROVEN)`; that wording is stronger than the argument
+beneath it and is deliberately not imported. What survives intact is the narrower
+reading the report also gives: the 19 families classify the *geometric support* of a
+square without erasing the history-dependence of the Parikh vectors.
+
+**Scope note (`AGENTS.md` mathematical rule 14).** The kill report states its objective
+for **AA2FR**; its verdict line then widens to abelian-square-free generation in
+general. This entry and row 125 follow the objective. Nothing here transfers to AA2F,
+or to unrestricted abelian-square-free generation, without a fresh argument.
 
 **Why (2) was shot down - by measurement:** the v0.33 audit recorded defect D2, a
-*false frontier-compression benefit*. Measured: `A_d = {1,...,d}` for **38 of 40
-depths**, `max |A_d| = 38`, forced by the 342 ternary constraints, multiplicity 1, and
-the quotient DAG is **the full legal prefix trie** - "maximally history-dependent". The
-identity is retained for canonical accounting; it compresses nothing.
+*false frontier-compression benefit*. Measured at `L = 40`: `A_d = {1,...,d}` for **38
+of 40 depths**, `max |A_d| = 38`, forced by the 342 ternary constraints, multiplicity 1,
+and the quotient DAG is **the full legal prefix trie** - "maximally history-dependent".
+The identity is retained for canonical accounting; it compresses nothing. The audit
+records having checked these figures against its own frontier measurement, and records
+in its own section 5 that it is an internal audit rather than external review.
 
 **Conclusion:**
-- No finite-state automaton, and no frontier compression. The search state shatters
-  rather than compresses.
-- This **corroborates an existing canonical non-claim**: `papers/paper4/PAPER_STATUS.md`
-  already records that *"the 19 families are not automaton states"*. This entry supplies
-  the argument and the measurement behind that sentence.
+- The proposed bounded-state descriptor is withdrawn, and the frontier identity carries
+  no measured compression benefit. Under the tested formulation the search state
+  shatters rather than compresses.
+- This is **consistent with an existing canonical non-claim**:
+  `papers/paper4/PAPER_STATUS.md` already records that *"the 19 families are not
+  automaton states"*. That is a disclaimer, and this entry does not upgrade it into an
+  impossibility theorem.
 - **What this does not kill, and a retraction that belongs here.** The accompanying
   transfer correction withdrew three earlier statements as *overreach in the negative
   direction*, and they must not be re-imported from this entry:
@@ -687,7 +721,11 @@ identity is retained for canonical accounting; it compresses nothing.
     no complexity class changed. Any solver speedup claim needs an A/B benchmark that
     has not been run.
 - **Novelty:** NOT CLAIMED.
-- **Finality: NECESSARY** for the impossibility of finite-state compression (an
-  exhibited distinguishability argument) and for D2's measurement of the frontier.
+- **Finality, one label per half - they are not the same kind of result.**
+  **BOUNDED** for the bounded-state descriptor (row 125): the argument is unfinished,
+  and a completed proof with an exhibited witness block, or a different descriptor,
+  could genuinely reopen it. This is an unfinished argument, not a closed door.
+  **NECESSARY** for the frontier benefit (row 126): D2's measurement is exact at the
+  `L = 40` frontier it measured and does not reopen with more compute.
   **CONTEXTUAL** for prefix-local pruning: not impossible, merely without a useful rule
   in the unconstrained-DFS setting that was tested.
