@@ -22,11 +22,11 @@ proposing anything.
 
 | Date | # | Final? | What collapsed | In one sentence |
 |---|---|---|---|---|
-| 2026-09-04 | [§37](#37-paper-6-standalone-novelty-claims-for-the-obstacle-hierarchy-and-the-counting-compiler) | **CONTEXTUAL** | Two Paper 6 standalone novelty claims (literature boundary, **not** a refutation) | The bounded-defect decomposition sits in the Carpi / Currie-Rampersad / Rao-Rosenfeld line and the counting compiler in an established counting literature, so neither is novel standing alone; the mathematics is untouched and broader Paper 6 novelty stays unassessed. Canonical entry: `LITERATURE_COVERAGE.md` section 2e -- no claim row, by design. |
+| 2026-09-04 | [§37](#37-paper-6-standalone-novelty-claims-for-the-obstacle-hierarchy-and-the-counting-compiler) | **CONTEXTUAL** | Two Paper 6 standalone novelty claims (literature boundary, **not** a refutation) | Two preserved Paper 6 novelty audits report the bounded-defect decomposition as sitting inside an established Abelian-template line and the counting compiler inside an established counting literature, so neither is novel standing alone; the mathematics is untouched and broader Paper 6 novelty stays unassessed. Canonical entry: `LITERATURE_COVERAGE.md` section 2e -- no claim row, by design. |
 | 2026-09-04 | [§36](#36-one-step-response-aliasing-as-sufficient-for-future-equivalence) | **NECESSARY** | One-step response aliasing as sufficient for future equivalence | Two clean-room reconstructions from definitions kill it from different directions: `same one-step response -> same count` stays false, and an obstruction unattainable now can become attainable later, so the state is not Markov-sufficient. Row 131. |
 | 2026-09-04 | [§35](#35-profile-incidence-rank-collapse-as-the-direct-semantic-mechanism) | **CONTEXTUAL** | Profile-incidence rank collapse as the semantic mechanism | Dead states and rational aliasing account for much of it -- **298** two-row proportional relations over just **72** pivot rows, not the historical "197", which belongs to a different object entirely. Row 130. |
 | 2026-09-04 | [§34](#34-the-35-dimensional-hidden-sector-as-a-startup-artefact) | **BOUNDED** | The 35-dimensional hidden sector as a startup artefact | Removing startup does not remove the deficiency: 1796 groups at rank 1144 against target 1179, and the persistent system still shows 1138 against 1167. The historical 850/1176/326 figures are withdrawn as unsupported. Row 129. |
-| 2026-09-04 | [§33](#33-the-adjacency-decoration-as-the-required-descriptor-and-the-gap-as-abelian-geometry) | **NECESSARY** (necessity) / **CONTEXTUAL** (interpretation) | The adjacency decoration as the required descriptor, and the gap as Abelian geometry | Four grid-misaligned offset-0 windows carrying no decoration, and blind to the last character, reach exact 1179/1179 over five primes -- necessity refuted; but a granularity-matched control added exactly zero rank, so `epsilon` is **not** generic either. Row 128. |
+| 2026-09-04 | [§33](#33-the-adjacency-decoration-as-the-required-descriptor-and-the-gap-as-abelian-geometry) | **NECESSARY** (necessity) / **CONTEXTUAL** (interpretation) | The adjacency decoration as the required descriptor, and the gap as Abelian geometry | Four grid-misaligned offset-0 windows carrying no decoration, and blind to the last character, reach exact 1179/1179 over five primes -- necessity refuted, and the inference from the gap to an Abelian-geometric mechanism blocked; but a granularity-matched control added exactly zero rank, so `epsilon` is **not** generic either, and no replacement mechanism is claimed. Row 128. |
 | 2026-09-04 | [§32](#32-a-large-exact-future-count-dimension-as-a-structural-theorem-in-itself) | **CONTEXTUAL** | A large exact future dimension as a theorem in itself | The preserved referee audit marks the weighted-automaton and Hankel/Krylov apparatus `CLASSICAL`; a large exact rank is what that machinery produces, and carries no combinatorial theorem on its own. Row 127. |
 | 2026-09-04 | [§31](#31-a-bounded-state-descriptor-for-the-aa2fr-legal-future-and-the-paper-4-frontier-compression-benefit) | **BOUNDED** (descriptor) / **NECESSARY** (frontier) | A bounded-state descriptor for the AA2FR legal future, and Paper 4 frontier compression | The preserved kill report gives a distinguishability argument with no exhibited witness block, so the candidate state `S = (family_id, target_class, bounded_history)` is **withdrawn rather than proved impossible**; separately, the v0.33 frontier is measured to be the full legal prefix trie (`max \|A_d\| = 38`, `A_d = {1,...,d}` at 38 of 40 depths). See `MATH_CLAIMS.md` rows 125 and 126. |
 | 2026-09-04 | [§30](#30-the-time-domain-and-resolvent-tail-bounds-are-the-same-lemma) | **NECESSARY** | "Paper 2 and Paper 3 prove the same tail lemma" | They do not: time-domain Dobrushin sums on the unperturbed `P` versus frequency-domain Banach-valued Cauchy estimates on resolvents `B(t)^-1` - the preserved audit records both bounds as standing, while the shortcut of cross-citing one as the other does not. |
@@ -822,14 +822,18 @@ a granularity-matched null control -- an arbitrary split of 287 randomly chosen 
 at the same 2083 group count, seeds 1 to 5 -- and it added **exactly zero** rank, 1144
 five times over. `epsilon` is therefore *not* a generic refinement. What the audit also
 found is that splitting the same 287 families with an arbitrary bit does reach 1179, so
-`epsilon`'s content is *which* families need refining, not *how*. The honest reading is
-that the gap tracks the choice of 16-character window rather than Abelian geometry.
+`epsilon`'s content is *which* families need refining, not *how*. **What this entry
+establishes is a blocked inference, not a cause.** The exhibited alternative descriptor
+refutes the necessity of the `epsilon` decoration and blocks the inference from the
+observed gap to the proposed Abelian-geometric mechanism. No positive claim is made here
+about what actually produces the gap; that would be a new mechanism, and it has no
+ledger authority.
 
 **EVIDENCE.** As in the dateline; independence axes as in section 32.
 
 **FINALITY: NECESSARY** for the necessity claim -- a counter-descriptor is exhibited and
 verified against an exact target, and no further compute reopens it. **CONTEXTUAL** for
-the broader interpretation -- a systematic study of which windowings attain 1179 could
+the broader interpretation -- a systematic study of which descriptors attain 1179 could
 still find a structural invariant, and the preserved audit recommends exactly that.
 
 **MATH_CLAIMS ROW: 128.**
@@ -980,13 +984,16 @@ Provenance note: section 32.*
 2. that counting safe continuations via a Parikh-composition dynamic program is a novel
    algorithmic compiler technique in itself.
 
-**ON WHAT BASIS.** The preserved Paper 6 novelty audits name the overlapping work rather
-than gesturing at it. For (1) the bounded-defect decomposition -- linear bulk term plus
-bounded prefix/suffix corrections -- is placed in the Carpi / Currie-Rampersad /
-Rao-Rosenfeld line, with the audit stating outright that this must not be claimed as a
-first discovery. For (2) counting repetition-avoiding words and proving exponential growth
-are recorded as established themes, and the audit cites work by Currie (2004) and by
-Currie, Mol, Rampersad and Shallit (2024) including an improved counting lower bound.
+**ON WHAT BASIS.** Two preserved Paper 6 novelty audits, each naming specific overlapping
+work rather than gesturing at it. For (1) the bounded-defect decomposition -- linear bulk
+term plus bounded prefix/suffix corrections -- is reported as sitting inside an
+established Abelian-template line, with the audit stating outright that this must not be
+claimed as a first discovery. For (2) counting repetition-avoiding words and proving
+exponential growth are reported as established themes, with named prior work including an
+improved counting lower bound. **The works those audits name are deliberately not
+reproduced here**: this project has not opened them, and `AGENTS.md` rule 1 is triggered
+by writing such a citation at all, not by how it is labelled afterwards. They are queued
+in `LITERATURE_COVERAGE.md` section 2e, which is where the audit artifacts are cited.
 
 **WHAT IS NOT CLAIMED.** Not that Paper 6 "has no novelty" -- broader Paper 6 novelty is
 **unassessed**, which is a different statement from unfavourable. The v3.6 graded-
@@ -995,10 +1002,14 @@ checkpoint labels itself `EXACT GENERAL THEOREM SEED -- NOVELTY UNASSESSED` and 
 own next gate. And the mathematics is untouched: both audits record the identities and
 derivations as correct.
 
-**CITATION DISCIPLINE.** The works above are recorded as **what the preserved Paper 6
-audits cite**. They have not been opened under this repository's standard in this
-session, so under `AGENTS.md` rule 1 they enter `LITERATURE_COVERAGE.md` section 2e as an
-audit queue, not as verified primary sources.
+**CITATION DISCIPLINE.** What is canonical here is that *the preserved audits reached this
+conclusion*, not that this project has confirmed it from sources. Those sources have not
+been opened under this repository's standard, so their author/year/journal details are
+not written into canonical files at all -- `AGENTS.md` rule 1 forbids writing the citation
+before opening the source, and labelling it `AUDIT-QUEUE` afterwards does not satisfy the
+rule. `LITERATURE_COVERAGE.md` section 2e cites the preserved audit artifacts themselves
+and records the external works as an unverified queue that must be opened before any
+canonical source claim is made.
 
 **FINALITY: CONTEXTUAL.** A boundary drawn against known work, which further primary-
 source reading can move in either direction.
