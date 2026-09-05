@@ -434,6 +434,45 @@ test("Perron-Frobenius Exact Frequencies & Characteristic Polynomial", () => {
 // not in tests/. So the rule table below is shared, and the scan covers the
 // tracked text corpus rather than one directory.
 //
+// PHASE 2B.6b.2/3 (2026-09-05): a forensic audit of MATH_CLAIMS.md row 88
+// found that the ORIGINAL suppression mechanism -- "a retraction word
+// anywhere within +/-12 physical lines of the occurrence" -- was itself
+// broken. In this ledger one claim row is one physical line, so a "nearby
+// retraction" in an unrelated row could silently clear a completely
+// different row's bad citation. That is exactly what let row 88 pass: rows
+// 86 and 87, two unrelated REJECTED claims, happened to contain the word
+// "RETRACTED" within the +/-12-line window, and row 88's own bad cross-check
+// citation was never examined at all. A prior (unauthorized, non-owner-
+// approved) session's attempted fix made this worse by adding a suppression
+// comment to row 6c -- a row that was not the problem -- instead of fixing
+// row 88. That attempt was discarded, not merged; see the PHASE 2B.6b.3
+// repair report.
+//
+// The proximity heuristic is retired entirely. Suppression now works like
+// this:
+//
+//   - A rule is violated on a given physical LINE if that line contains the
+//     rule's needle and does not ALSO contain an explicit, rule-scoped
+//     marker: `<!-- citation-identity-allow: RULE_ID -->` (RULE_ID must name
+//     the exact rule; a marker for a different rule does not clear this one).
+//   - The marker must be on the SAME line as the occurrence. There is no
+//     window, no paragraph heuristic, and no generic word ("RETRACTED",
+//     "historical", "wrong", ...) that clears anything by itself any more.
+//   - Because this ledger's table rows are one physical line each, "same
+//     line" and "same row" coincide exactly: a marker in row 6c can never
+//     clear an occurrence in row 88, or in row 86, or in any other row. For
+//     multi-line prose files (docs/historical/*.md) the same rule is in
+//     effect stricter than a paragraph- or bullet-scoped rule would be,
+//     which is why every legitimate historical mention in this repository
+//     now carries its own explicit marker rather than relying on a nearby
+//     retraction sentence.
+//
+// A suppression marker is added ONLY where the surrounding text is
+// genuinely, legitimately documenting a known bad identity (a retraction
+// record, an audit note, a "do not reuse this title" warning). It is never
+// added to make an active, affirmative citation pass; an active bad citation
+// is fixed by removing the bad identity, not by marking it.
+//
 // WHAT THIS DOES NOT DO
 // ---------------------
 // It does not verify bibliography over the network, and it must not start to:
@@ -445,17 +484,20 @@ test("Perron-Frobenius Exact Frequencies & Characteristic Polynomial", () => {
 
 /**
  * Known-false source identities. Each rule is a string or pair that must not
- * appear in tracked claim-bearing text except inside an explicit retraction or
- * warning context -- because this repository must be able to DOCUMENT the
- * failure (NEGATIVE_RESULTS.md section 38 does exactly that) without the
- * documentation itself tripping the guard.
+ * appear in tracked claim-bearing text except on a line that also carries an
+ * explicit `<!-- citation-identity-allow: RULE_ID -->` marker naming this
+ * exact rule (see the discussion above -- there is no other way to suppress
+ * a match, and a marker naming a different rule id does not count).
  */
 const CITATION_IDENTITY_RULES = [
   {
     id: 'h6g3-fabricated-title',
     needle: "On Mäkelä's Conjectures: deciding if a morphic word avoids long abelian-powers",
     why: 'IDENTITY_MISMATCH: matches no arXiv record (checked 2026-07-28). arXiv:1507.02581 is ' +
-         '"Avoidability of long k-abelian repetitions"; the h6/g3 construction is arXiv:1511.05875',
+         '"Avoidability of long k-abelian repetitions"; the h6/g3 construction is arXiv:1511.05875. ' +
+         'Guarded diacritic-insensitively (see stripDiacritics below) so an ASCII "Makela" respelling ' +
+         'of the same fabricated title cannot evade this rule -- found live in src/morphisms.js, ' +
+         'PHASE 2B.6b.2, 2026-09-05.',
   },
   {
     id: 'paper5-currie-rampersad-title',
@@ -495,64 +537,97 @@ const CITATION_IDENTITY_RULES = [
 ];
 
 /**
- * An occurrence is permitted only where the text marks it as wrong -- and the
- * marking has to be NEAR the occurrence.
- *
- * The first version of this guard asked only whether a marker appeared
- * anywhere in the same file. Measured against this repository that let 35 of
- * 479 tracked files off entirely, including AGENTS.md, MATH_CLAIMS.md,
- * LITERATURE_COVERAGE.md, NEGATIVE_RESULTS.md and README.md -- precisely the
- * documents where a false citation would do the most damage, because they are
- * long and all of them discuss retractions somewhere. A deliberately injected
- * false citation in RESEARCH_CONTEXT.md passed that version. Proximity fixes
- * it: a retraction three hundred lines away is not a retraction of this line.
+ * Strips combining diacritical marks (Unicode NFD, then drop U+0300-U+036F)
+ * so "Mäkelä" and an ASCII "Makela" respelling of the same identity compare
+ * equal. This is the ONLY normalization applied -- no case-folding, no
+ * whitespace collapsing -- so it cannot accidentally widen a needle to match
+ * unrelated text. Confirmed live gap it closes: src/morphisms.js spelled the
+ * fabricated title as "On Makela's Conjectures..." (ASCII apostrophe, no
+ * diaeresis), which the pre-2026-09-05 guard, matching the literal "Mäkelä"
+ * needle, never saw at all (PHASE 2B.6b.2 forensic audit).
  */
-const RETRACTION_CONTEXT =
-  /RETRACTED|INVALID_SOURCE_CHAIN|IDENTITY_MISMATCH|CONTENT_MISMATCH|known-false|does not resolve|must not be reused|not a source|not the source|provenance failure|matches no arXiv record|fabricated|eri paperi|different Rao|ei vastaa/i;
+function stripDiacritics(s) {
+  return s.normalize('NFD').replace(/[̀-ͯ]/g, '');
+}
 
-/** Lines of context on each side within which a retraction marker counts. */
-const CONTEXT_LINES = 12;
+/**
+ * Rule-ids named in a `<!-- citation-identity-allow: id[, id...] -->` marker
+ * ANYWHERE on the given physical line. Multiple ids may be comma- or
+ * whitespace-separated inside one marker, or given as separate markers.
+ */
+function suppressedRuleIdsOnLine(line) {
+  const ids = new Set();
+  const re = /<!--\s*citation-identity-allow:\s*([^>]*?)\s*-->/g;
+  let m;
+  while ((m = re.exec(line))) {
+    for (const tok of m[1].split(/[,\s]+/)) {
+      if (tok) ids.add(tok.trim());
+    }
+  }
+  return ids;
+}
 
 /**
  * Pure evaluator, so the rules can be exercised on synthetic text without
  * touching the filesystem. Returns the ids of the rules a text violates.
+ *
+ * A rule is checked LINE BY LINE. A given line violates the rule if it
+ * contains the rule's needle (diacritic-insensitively) and does not itself
+ * carry a `citation-identity-allow` marker naming this rule's id. No other
+ * line's content -- not a neighbouring table row, not a nearby paragraph --
+ * can clear it. See the file-header discussion above for why this replaced
+ * the old +/-12-line proximity heuristic.
  */
 function citationIdentityViolations(text) {
   const lines = text.split(/\r?\n/);
+  const normLines = lines.map(stripDiacritics);
+  const normText = normLines.join('\n');
   const violated = new Set();
 
   for (const r of CITATION_IDENTITY_RULES) {
-    if (!text.includes(r.needle)) continue;
-    if (r.alsoRequires && !r.alsoRequires.test(text)) continue;
+    const normNeedle = stripDiacritics(r.needle);
+    if (!normText.includes(normNeedle)) continue;
+    if (r.alsoRequires && !r.alsoRequires.test(normText)) continue;
     for (let i = 0; i < lines.length; i++) {
-      if (!lines[i].includes(r.needle)) continue;
-      const from = Math.max(0, i - CONTEXT_LINES);
-      const near = lines.slice(from, i + CONTEXT_LINES + 1).join('\n');
-      if (!RETRACTION_CONTEXT.test(near)) { violated.add(r.id); break; }
+      if (!normLines[i].includes(normNeedle)) continue;
+      if (!suppressedRuleIdsOnLine(lines[i]).has(r.id)) {
+        violated.add(r.id);
+        break;
+      }
     }
   }
   return [...violated];
 }
 
-test("Citation-identity guard: known-false source identities stay out of tracked text", () => {
-  // --- focused cases, no filesystem ---------------------------------------
+test("Citation-identity guard: rule-specific suppression semantics (focused cases)", () => {
+  // --- A: a known-false identity with no marker at all must be refused ----
   assert.deepStrictEqual(
     citationIdentityViolations('See Rao & Rosenfeld, "Abelian square-free words over four letters".'),
     ['paper5-rao-rosenfeld-title'],
-    "a known-false title must be refused");
+    "A: a known-false title with no suppression marker must be refused");
 
+  // --- D: an explicit, rule-matching marker on the SAME line clears it ----
+  assert.deepStrictEqual(
+    citationIdentityViolations(
+      'See Rao & Rosenfeld, "Abelian square-free words over four letters". ' +
+      '<!-- citation-identity-allow: paper5-rao-rosenfeld-title -->'),
+    [],
+    "D: an explicit rule-specific marker on the exact occurrence must clear it");
+
+  // --- E: a marker naming a DIFFERENT rule must not clear this one --------
+  assert.deepStrictEqual(
+    citationIdentityViolations(
+      'See Rao & Rosenfeld, "Abelian square-free words over four letters". ' +
+      '<!-- citation-identity-allow: paper5-adamczewski-title -->'),
+    ['paper5-rao-rosenfeld-title'],
+    "E: a suppression naming a different rule id must not clear this occurrence");
+
+  // --- F: the correct identity for the same identifier must be accepted ---
   assert.deepStrictEqual(
     citationIdentityViolations(
       'Rao & Rosenfeld, "Avoidability of long k-abelian repetitions", arXiv:1507.02581.'),
     [],
-    "the correct identity for the same identifier must be accepted");
-
-  assert.deepStrictEqual(
-    citationIdentityViolations(
-      'The 2026-08-29 audit cited "Balance properties of morphisms"; that title matches no arXiv record ' +
-      'and the entry is RETRACTED.'),
-    [],
-    "an explicit retraction context must remain representable");
+    "F: the correct identity for the same identifier must be accepted");
 
   assert.deepStrictEqual(
     citationIdentityViolations('Lu & Peng, arXiv:1409.1174, on random hypergraphs.'),
@@ -569,22 +644,73 @@ test("Citation-identity guard: known-false source identities stay out of tracked
     ['paper5-adamczewski-doi'],
     "a non-resolving DOI must be refused");
 
-  // Proximity, not mere presence: a retraction far away must not license a
-  // false citation. This is the case that broke the file-level version.
-  const FAR = 'Some unrelated line RETRACTED here.\n' + 'filler\n'.repeat(40) +
-              'See Rao & Rosenfeld, \"Abelian square-free words over four letters\".';
+  // --- G: the diacritic-bearing form of the fabricated title must fail ----
+  const MAKELA_UNICODE =
+    'Cross-checked against the preprint "On Mäkelä\'s Conjectures: deciding if a morphic word ' +
+    'avoids long abelian-powers".';
   assert.deepStrictEqual(
-    citationIdentityViolations(FAR),
+    citationIdentityViolations(MAKELA_UNICODE),
+    ['h6g3-fabricated-title'],
+    "G: the diacritic-bearing ('Mäkelä') fabricated title must be refused with no marker present");
+
+  // --- H: an ASCII respelling of the SAME identity must ALSO fail ---------
+  // This is the exact live gap PHASE 2B.6b.2 found in src/morphisms.js: the
+  // needle is written with 'ä', so a plain-ASCII "Makela" respelling of the
+  // identical fabricated title used to sail through unseen.
+  const MAKELA_ASCII =
+    'Cross-checked against the preprint "On Makela\'s Conjectures: deciding if a morphic word ' +
+    'avoids long abelian-powers".';
+  assert.deepStrictEqual(
+    citationIdentityViolations(MAKELA_ASCII),
+    ['h6g3-fabricated-title'],
+    "H: an ASCII 'Makela' respelling of the same fabricated title must be refused, not evade the rule");
+
+  // A marked occurrence must clear in either spelling, since normalization
+  // applies before the needle search and the marker text itself is plain
+  // ASCII either way.
+  assert.deepStrictEqual(
+    citationIdentityViolations(MAKELA_ASCII + ' <!-- citation-identity-allow: h6g3-fabricated-title -->'),
+    [],
+    "a marked ASCII-form occurrence must clear exactly like a marked Unicode-form one");
+});
+
+test("Citation-identity guard: table-row / line isolation (regression for the row-88 false-clear bug)", () => {
+  // B: the exact failure mode the forensic audit found. Two UNRELATED
+  // MATH_CLAIMS.md-shaped rows carry the word "RETRACTED"; a third row two
+  // lines away carries a bad citation with no marker of its own. Under the
+  // retired +/-12-line proximity heuristic this passed, because "RETRACTED"
+  // appeared somewhere inside the window regardless of which row it was in.
+  const ROW_86 = '| 86 | some earlier claim | some source | `REJECTED` (superseded) | 2026-08-02 | 2026-08-02 | RETRACTED 2026-08-02, see row 94. |';
+  const ROW_87 = '| 87 | a different earlier claim | some source | `REJECTED` | 2026-08-05 | 2026-08-05 | RETRACTED 2026-08-05, superseded by a corrected measurement. |';
+  const ROW_88 = '| 88 | h8 morphism claim | Rao & Rosenfeld, "Abelian square-free words over four letters", arXiv:X | `PRIMARY` | 2026-08-01 | 2026-08-01 | no marker on this row at all. |';
+  const TABLE = [ROW_86, ROW_87, ROW_88].join('\n');
+  assert.deepStrictEqual(
+    citationIdentityViolations(TABLE),
     ['paper5-rao-rosenfeld-title'],
-    "a retraction marker far from the occurrence must not license it");
+    "B: an unrelated row's RETRACTED word must not clear a different row's unmarked bad citation");
 
-  const NEAR = 'This title is IDENTITY_MISMATCH and must not be reused:\n' +
-               'Rao & Rosenfeld, \"Abelian square-free words over four letters\".';
+  // C: shrink the gap to well inside the old +/-12-line window and confirm
+  // it still fails -- proximity, however close, is no longer authorization.
+  const NEAR_BUT_WRONG_ROW =
+    'This entire paragraph is RETRACTED, 2026-08-02, for an unrelated reason.\n' +
+    'filler line 1\nfiller line 2\nfiller line 3\n' +
+    'See Rao & Rosenfeld, "Abelian square-free words over four letters".';
   assert.deepStrictEqual(
-    citationIdentityViolations(NEAR), [],
-    "a retraction marker adjacent to the occurrence must license it");
+    citationIdentityViolations(NEAR_BUT_WRONG_ROW),
+    ['paper5-rao-rosenfeld-title'],
+    "C: a retraction word a few physical lines away must not license an unmarked occurrence");
 
-  // --- live corpus ---------------------------------------------------------
+  // The positive counterpart: a marker ON THE SAME LINE as the occurrence,
+  // even inside an otherwise identical table, clears only that row.
+  const ROW_88_MARKED = '| 88 | h8 morphism claim | Rao & Rosenfeld, "Abelian square-free words over four letters", arXiv:X ' +
+    '<!-- citation-identity-allow: paper5-rao-rosenfeld-title --> | `PRIMARY` | 2026-08-01 | 2026-08-01 | note. |';
+  assert.deepStrictEqual(
+    citationIdentityViolations([ROW_86, ROW_87, ROW_88_MARKED].join('\n')),
+    [],
+    "a same-line marker clears its own row without needing any neighbouring row's text");
+});
+
+test("Citation-identity guard: live tracked corpus has zero unsuppressed known-false identities", () => {
   // Tracked text only. Binary and generated payloads are excluded by
   // extension, and five bulk data files (one 94 MB word dump, four large JSON
   // result sets) are excluded by size: they carry no prose, and reading them
@@ -617,7 +743,7 @@ test("Citation-identity guard: known-false source identities stay out of tracked
 
   const detail = CITATION_IDENTITY_RULES.map(r => `  - "${r.needle}" ${r.why}`).join('\n');
   assert.deepStrictEqual(offenders, [],
-    `Known-false source identities appeared in tracked text without a retraction context.\n${detail}\n` +
+    `Known-false source identities appeared in tracked text without a rule-specific suppression marker.\n${detail}\n` +
     `Offenders: ${offenders.join(', ')}`);
 
   // The positive half of the h6/g3 invariant, kept from the original guard.
@@ -625,8 +751,45 @@ test("Citation-identity guard: known-false source identities stay out of tracked
   assert.ok(claims.includes('1511.05875'),
     "MATH_CLAIMS.md must record arXiv:1511.05875 as the preprint for the h6/g3 construction");
 
+  // I: row 88's citation, specifically -- PASSES because the bad identity is
+  // GONE, not because it is suppressed. A marker on this exact row would be
+  // a suppression of an active claim, which PHASE 2B.6b.3 explicitly forbids.
+  const claimsLines = claims.split(/\r?\n/);
+  const row88Line = claimsLines.find(l => l.startsWith('| 88 |'));
+  assert.ok(row88Line, "row 88 must still exist in MATH_CLAIMS.md");
+  assert.ok(!stripDiacritics(row88Line).includes(stripDiacritics(
+      "On Mäkelä's Conjectures: deciding if a morphic word avoids long abelian-powers")),
+    "row 88 must no longer contain the fabricated title in any spelling");
+  assert.ok(!/citation-identity-allow/.test(row88Line),
+    "row 88 must carry no suppression marker -- the bad citation was removed, not hidden");
+  assert.ok(row88Line.includes('arXiv:1511.05875'),
+    "row 88 must still cite the verified arXiv:1511.05875 source");
+
+  // J: src/morphisms.js's H8 sourceNote, specifically -- same requirement.
+  const morphSrc = fs.readFileSync(path.join(root, 'src/morphisms.js'), 'utf8');
+  assert.ok(!stripDiacritics(morphSrc).includes(stripDiacritics("Makela's Conjectures")),
+    "src/morphisms.js must no longer contain any spelling of the fabricated title");
+  const h8NoteLine = morphSrc.split(/\r?\n/).find(l => l.includes(
+    "audited character-by-character against the full arXiv:1511.05875v2"));
+  assert.ok(h8NoteLine, "the H8 sourceNote line must still exist");
+  assert.ok(!/citation-identity-allow/.test(h8NoteLine),
+    "the H8 sourceNote must carry no suppression marker -- the bad identity was removed, not hidden");
+
+  // K: row 6c's historical retraction -- PASSES through a legitimate,
+  // rule-specific, same-line marker, exactly the Case B this guard exists to
+  // represent.
+  const row6cLine = claimsLines.find(l => l.startsWith('| 6c |'));
+  assert.ok(row6cLine, "row 6c must still exist in MATH_CLAIMS.md");
+  assert.ok(stripDiacritics(row6cLine).includes(stripDiacritics(
+      "On Mäkelä's Conjectures: deciding if a morphic word avoids long abelian-powers")),
+    "row 6c must still document the fabricated title verbatim -- it is the historical record of the error");
+  assert.ok(/citation-identity-allow:\s*h6g3-fabricated-title/.test(row6cLine),
+    "row 6c must carry an explicit, rule-specific suppression marker");
+  assert.deepStrictEqual(citationIdentityViolations(row6cLine), [],
+    "row 6c, read on its own, must violate no rule -- its marker is self-sufficient and needs no neighbour");
+
   console.log(`       ${CITATION_IDENTITY_RULES.length} known-false identities guarded across ${scanned} tracked text files`);
-  console.log(`       retraction context stays representable, so the failure can be documented`);
+  console.log(`       suppression is rule-specific and line-scoped; no proximity heuristic remains`);
 });
 
 // ----------------------------------------------------

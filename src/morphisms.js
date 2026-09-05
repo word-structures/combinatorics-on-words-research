@@ -83,7 +83,7 @@ const MORPHISM_METADATA = {
     verificationLevel: 'LEVEL_2_VERIFIED_SOURCE',
     badgeText: '🟢 Level 2: Verified Source (Rao & Rosenfeld, arXiv:1511.05875, Thm 5)',
     status: 'PRIMARY — words in h8^infinity (e.g. infinite fixed points of (h8)^2) are abelian-square-free: Rao & Rosenfeld arXiv:1511.05875 THEOREM 5. NOTE h8 has NO fixed point of its own (no letter x has h8(x) starting with x); the abelian-square-free word is a fixed point of (h8)^2, and the paper names e as such a starting letter.',
-    sourceNote: 'Images audited character-by-character against the full arXiv:1511.05875v2 PDF, Section 5.1 p.15, on 2026-08-01, and independently against the 2015-09-15 preprint "On Makela\'s Conjectures: deciding if a morphic word avoids long abelian-powers" p.15 (same authors, same morphism, IDENTICAL images). WARNING FOR FUTURE SESSIONS: the two versions RENUMBER their theorems. h8 is Theorem 5 in BOTH, but g3 is Theorem 9 in v2 and Theorem 6 in v1, and Propositions 9/10/11 in v2 are Propositions 10/11/12 in v1. This repository uses v2 numbering throughout. Do not "correct" a v2 number against the v1 preprint.',
+    sourceNote: 'Images audited character-by-character against the full arXiv:1511.05875v2 PDF, Section 5.1 p.15, on 2026-08-01. Historical project notes recorded an alternate numbering convention for this construction (a second document, reportedly consulted the same day, is not preserved and its identity is unresolved -- see MATH_CLAIMS.md row 88). Use the verified arXiv:1511.05875 Section 5.1 / Theorem 5 citation as the canonical source.',
     doi: 'arXiv:1511.05875'
   },
   g3: {

@@ -288,7 +288,7 @@ been conflated with another at some point in this project's history:
   `binom(d+k-1, k-1) ∈ O(L^{k-1})` over `m` depths by inspection.
 - The **practical solver contribution is not established** (see below).
 
-**Documented search scope (2026-09-04).** Opened directly: **arXiv:1409.1174 —
+**Documented search scope (2026-09-04).** Opened directly: **arXiv:1409.1174 <!-- citation-identity-allow: paper5-1409-miscast --> —
 which is Lu & Peng on random hypergraphs, IDENTITY_MISMATCH against the Paper 5
 audit that cited it as a Currie/Rampersad abelian-pattern source, and not a
 source for anything here**; arXiv:1507.02581, whose correct identity was
